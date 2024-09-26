@@ -42,7 +42,7 @@ Money is in liquid form:
 We derive the $IS$ curve using the **four quadrant approach**. And we do the same for the $LM$ curves.
 
 - the ISLM framework is also used to understand the policies
-	- $IS$ -> Fiscal policy (revenue and expenditure of the government)
+	- $IS$ -> [[Fiscal policy]] (revenue and expenditure of the government)
 	- $LM$ -> Monetary policy (money supply)
 
 To summarize:
@@ -71,8 +71,13 @@ $$
 
 Till now we didn’t discuss what is the **investment** (we were given, it was exogenous). But, now we will see that it is not autonomous, rather induced and it is endogenous.
 
-Predominently, it depends on the ROI^[Rate of Interest] 
-$$\tag{3}i = \phi(r)$$.
+Predominantly, it depends on the ROI^[Rate of Interest] 
+
+$$
+\tag{3}
+i = \phi(r)
+$$
+
 - Cost of borrowing is high so it will **discourage borrowing for investments**
 - Present Discount Value, **PDV for our returns will reduce**.
 
@@ -84,12 +89,13 @@ r \downarrow \implies i \uparrow
 $$
 
 $$
-\begin{align*}
+\begin{gather*}
 \tag{4}
-y &= c(y - t(y)) + g + i(r)\\
+y = c(y - t(y)) + g + i(r)\\
+\\
 \tag{5}
-i(r) &= s(y) 
-\end{align*}
+i(r) = s(y) 
+\end{gather*}
 $$
 
 Equation (5) forms the **basis for forming the IS curve**
@@ -120,7 +126,7 @@ The $IS$ curve can be derived by looking at the savings -> goods market ->
 > All the relationships discussed so far, that contribute the location of **equilibrium pairs of $r$ and $y$**, in the product market are summarized in the FQ^[Four quadrant: SE, SW, NW, NE] diagram.
 > - SE^[South East]: It reflects the *upside-down* version of $s+t$ as a function of level of income $y$.
 > - NW: It reflects government spending and investment which is a decreasing function of rate of interest.
-> - SW: It reflects the $45\degree$  which is used to equate $s+t$ (from the **SE** Quad.) and $i+g$ (from the **NW** Quad.) and this is the equilibrium condition for the product market.
+> - SW: It reflects the $45\degree$  which is used to ==equate $s+t$ (from the **SE** Quad.) and $i+g$ (from the **NW** Quad.)== and this is the [[equilibrium]] condition for the product market. [[savings and investments]]
 > - NE: It reflects the $IS$ curve representing the equilibrium values of $r$ and $y$
 > ![[IS-LM Framework 2024-09-10 10.06.46.excalidraw.light.svg]]
 

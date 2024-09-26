@@ -19,6 +19,7 @@ longform:
     - Steady State - Balanced Growth Model
     - Kinked Demand Curve Model
     - Cob-web Market Model
+    - Industrial Agriculture Recap
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

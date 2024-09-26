@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Academic/Actuarial Science/!Exam 5.md",
+  "selectedDraftVaultPath": "Academic/Economics/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-09-26T03:01:36.200Z",
-      "total": 0,
+      "total": 24,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -64,9 +64,9 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 0,
+          "total": 11,
           "scenes": {
-            "IS-LM Framework": 0,
+            "IS-LM Framework": 4,
             "Monopoly": 0,
             "Market Differentiation": 0,
             "Monetarist School of Economic Thought": 0,
@@ -79,7 +79,26 @@
             "India's Investment Function Simulation": 0,
             "Steady State - Balanced Growth Model": 0,
             "Kinked Demand Curve Model": 0,
-            "Cob-web Market Model": 0
+            "Cob-web Market Model": 0,
+            "Industrial Agriculture Recap": 7
+          }
+        },
+        "Academic/actuarial/Index.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "Academic/Actuarial Science/abc/Index.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "Academic/Actuarial Science/abc/index.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "Academic/Actuarial Science/index.md": {
+          "total": 13,
+          "scenes": {
+            "Higher Exams": 13
           }
         }
       }

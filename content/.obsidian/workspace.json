@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8fcae58bf8d37b6a",
+        "id": "6451fea9e115b2db",
         "type": "tabs",
         "children": [
           {
-            "id": "bf8c25f1e1152452",
+            "id": "9e5f8148b9f290c8",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -20,8 +20,33 @@
               },
               "pinned": true
             }
+          },
+          {
+            "id": "a814a89be084edd3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academic/Economics/IS-LM Framework.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "90b866c5a14952de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/savings and investments.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -60,26 +85,28 @@
             }
           },
           {
-            "id": "560880055fbf6258",
-            "type": "leaf",
-            "state": {
-              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
-              "state": {}
-            }
-          },
-          {
             "id": "7de75e0a52d49db2",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "a3d370bbf107eb34",
+            "type": "leaf",
+            "state": {
+              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 283.5,
+    "collapsed": true
   },
   "right": {
     "id": "5390f986a74ef251",
@@ -95,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "Academic/Economics/IS-LM Framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "Academic/Economics/IS-LM Framework.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "Academic/Economics/IS-LM Framework.md"
               }
             }
           }
@@ -162,14 +189,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf8c25f1e1152452",
+  "active": "a814a89be084edd3",
   "lastOpenFiles": [
+    "notes/savings and investments.md",
+    "Academic/Economics/IS-LM Framework.md",
+    "index.md",
+    "notes/Fiscal policy.md",
+    "Academic/Economics/index.md",
+    "Academic/Economics/Kinked Demand Curve Model.md",
+    "Academic/Economics/Industrial Agriculture Recap.md",
+    "Academic/Actuarial Science/Higher Exams.md",
+    "Academic/Actuarial Science/index.md",
+    "Academic/index.md",
+    "Academic/Actuarial Science/abc",
+    "Academic/Actuarial Science/Ratemaking.md",
+    "Academic/actuarial/Index.md",
+    "Academic/actuarial",
     "Academic/Actuarial Science/!Exam 5.md",
     "templates/note.md",
     "Academic/Actuarial Science/Univariate Classification (Traditional).md",
     "notes/Loss Ratio.md",
     "Academic/Actuarial Science/Risk Classification Fundamentals.md",
-    "index.md",
     "notes/Pure Premium.md",
     "explorations/Ray Dalio's Economic Machine.md",
     "Music/Modal Mixture Common Tone Enharmonic Double Chromatic Mediant Modulation.md",
@@ -185,21 +225,10 @@
     "attachments/Arc_PKjWJ5ZZb5.jpg",
     "explorations/index.md",
     "thoughts/index.md",
-    "Academic/Economics/Cob-web Market Model.md",
-    "attachments/Cob-web Market Model 2024-09-25 09.41.32.excalidraw.md",
-    "attachments/Cob-web Market Model 2024-09-25 09.53.29.excalidraw.md",
-    "attachments/Cob-web Market Model 2024-09-25 09.54.56.excalidraw.md",
     "attachments/Cob-web Market Model 2024-09-25 09.54.56.excalidraw.light.svg",
     "attachments/Cob-web Market Model 2024-09-25 09.54.56.excalidraw.dark.svg",
     "attachments/Cob-web Market Model 2024-09-25 09.53.29.excalidraw.light.svg",
     "attachments/Cob-web Market Model 2024-09-25 09.53.29.excalidraw.dark.svg",
-    "Academic/Economics/index.md",
-    "Academic/Economics/Kinked Demand Curve Model.md",
-    "notes/Nostalgia note.md",
-    "notes/modal mixture.md",
-    "notes/parallel minor.md",
-    "notes/relative minor.md",
-    "Music/index.md",
     "templates",
     "public/tags/finance.html",
     "public/tags/SEMINAR.html",
@@ -207,8 +236,6 @@
     "public/tags/doubt.html",
     "public/tags/pneumonic.html",
     "public/tags/EXAM5.html",
-    "public/notes/equity.html",
-    "public/notes/creditor.html",
-    "public/notes/Underwriting.html"
+    "public/notes/equity.html"
   ]
 }
