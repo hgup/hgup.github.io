@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6ca57f34cc60d693",
+            "id": "bf8c25f1e1152452",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -20,21 +20,8 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "cfcad331db39c65a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "explorations/Ray Dalio's Economic Machine.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 251.5
   },
   "right": {
     "id": "5390f986a74ef251",
@@ -108,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "explorations/Ray Dalio's Economic Machine.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "explorations/Ray Dalio's Economic Machine.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "explorations/Ray Dalio's Economic Machine.md"
+                "file": "index.md"
               }
             }
           }
@@ -175,9 +162,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cfcad331db39c65a",
+  "active": "bf8c25f1e1152452",
   "lastOpenFiles": [
+    "Academic/Actuarial Science/!Exam 5.md",
+    "templates/note.md",
+    "Academic/Actuarial Science/Univariate Classification (Traditional).md",
+    "notes/Loss Ratio.md",
+    "Academic/Actuarial Science/Risk Classification Fundamentals.md",
     "index.md",
+    "notes/Pure Premium.md",
     "explorations/Ray Dalio's Economic Machine.md",
     "Music/Modal Mixture Common Tone Enharmonic Double Chromatic Mediant Modulation.md",
     "attachments/Arc_7Fnqii7ups.gif",
@@ -207,11 +200,6 @@
     "notes/parallel minor.md",
     "notes/relative minor.md",
     "Music/index.md",
-    "attachments/Kinked Demand Curve Model 2024-09-24 10.50.46.excalidraw.md",
-    "notes/duopolist.md",
-    "Academic/Economics/Duopoly Markets contd..md",
-    "attachments/Steady State - Balanced Growth Model 2024-09-24 09.50.21.excalidraw.md",
-    "Academic/Economics/Steady State - Balanced Growth Model.md",
     "templates",
     "public/tags/finance.html",
     "public/tags/SEMINAR.html",

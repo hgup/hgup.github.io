@@ -17,10 +17,11 @@ longform:
     - Development
     - Overall Rate Level Indications
     - Risk Classification
-    - Traditional Risk Classification
+    - Risk Classification Fundamentals
     - Trending in Ratemaking
     - Chain Ladder Method
     - Addressing Anomalies in Loss Data
+    - Univariate Classification (Traditional)
   sceneTemplate: templates/exam5 note.md
   ignoredFiles:
     - index
@@ -45,7 +46,7 @@ There are two parts to this exam, [[Ratemaking]] and [[Reserving]].
 	- [[Expenses and Profits]]
 	- [[Overall Rate Level Indications]]
 - [[Risk Classification]]
-	- [[Traditional Risk Classification]]
+	- [[Risk Classification Funda[[Univariate Classification (Traditional)]]assification]]
 	- [[Multivariate Classification]]
 	- [[Special Classification]]
 	- [[Credibility]]

@@ -1,13 +1,92 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "explorations/index.md",
+  "selectedDraftVaultPath": "Academic/Actuarial Science/!Exam 5.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
+      "start": "2024-09-26T03:01:36.200Z",
+      "total": 0,
+      "drafts": {
+        "thoughts/index.md": {
+          "total": 0,
+          "scenes": {
+            "Starting a new Exam": 0
+          }
+        },
+        "Music/index.md": {
+          "total": 0,
+          "scenes": {
+            "The Art of Conducting": 0,
+            "Transposition": 0,
+            "Exercises for Band": 0,
+            "Good Unison Sound for Band": 0,
+            "Modal Mixture Common Tone Enharmonic Double Chromatic Mediant Modulation": 0
+          }
+        },
+        "LABS/index.md": {
+          "total": 0,
+          "scenes": {
+            "Posting with Quartz": 0,
+            "Svelte.js": 0,
+            "Enhancing my Digital Garden": 0
+          }
+        },
+        "explorations/index.md": {
+          "total": 0,
+          "scenes": {
+            "Moai": 0,
+            "CSS Display Stuff": 0,
+            "Ray Dalio's Economic Machine": 0
+          }
+        },
+        "Academic/Actuarial Science/!Exam 5.md": {
+          "total": 0,
+          "scenes": {
+            "Ratemaking": 0,
+            "Reserving": 0,
+            "Ratemaking Principles": 0,
+            "Should you go for negative profit in FIE": 0,
+            "Expenses and Profits": 0,
+            "Ratemaking Methods": 0,
+            "Reporting Pattern": 0,
+            "Fundamental Insurance Equation": 0,
+            "Insurance Basics": 0,
+            "Development": 0,
+            "Overall Rate Level Indications": 0,
+            "Risk Classification": 0,
+            "Risk Classification Fundamentals": 0,
+            "Trending in Ratemaking": 0,
+            "Chain Ladder Method": 0,
+            "Addressing Anomalies in Loss Data": 0,
+            "Univariate Classification (Traditional)": 0
+          }
+        },
+        "Academic/Economics/index.md": {
+          "total": 0,
+          "scenes": {
+            "IS-LM Framework": 0,
+            "Monopoly": 0,
+            "Market Differentiation": 0,
+            "Monetarist School of Economic Thought": 0,
+            "Time Series Data Analysis in R": 0,
+            "Growth Theories & Models": 0,
+            "Duopoly Markets": 0,
+            "Roles of Operations of Banks": 0,
+            "Difference Equations": 0,
+            "Duopoly Markets contd.": 0,
+            "India's Investment Function Simulation": 0,
+            "Steady State - Balanced Growth Model": 0,
+            "Kinked Demand Curve Model": 0,
+            "Cob-web Market Model": 0
+          }
+        }
+      }
+    },
+    {
       "start": "2024-09-25T03:34:32.832Z",
-      "total": 1063,
+      "total": 2203,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -42,7 +121,7 @@
           }
         },
         "Academic/Actuarial Science/!Exam 5.md": {
-          "total": 0,
+          "total": 1140,
           "scenes": {
             "Ratemaking": 0,
             "Reserving": 0,
@@ -56,10 +135,11 @@
             "Development": 0,
             "Overall Rate Level Indications": 0,
             "Risk Classification": 0,
-            "Traditional Risk Classification": 0,
+            "Risk Classification Fundamentals": 686,
             "Trending in Ratemaking": 0,
             "Chain Ladder Method": 0,
-            "Addressing Anomalies in Loss Data": 0
+            "Addressing Anomalies in Loss Data": 0,
+            "Univariate Classification (Traditional)": 454
           }
         },
         "Academic/Economics/index.md": {
