@@ -132,12 +132,14 @@ The $IS$ curve can be derived by looking at the savings -> goods market ->
 
 
 ### Situations, if $s\uparrow$ or $r\uparrow$ 
+
+When **savings increase**, then there is a reduce in the demand for goods and services. This leads to a **decrease in output.**[^output-income] With lower income, consumers have less disposable income to spend, leading them to spend less on goods and services. This lowers the confidence of companies to invest in newer projects and thus they decide to **reduce planned investments**. Now, since there is a reduce...
+
 $$
 s\uparrow \implies y \downarrow \implies i \downarrow \implies r\uparrow
 $$
-
 $$
-r\uparrow \implies i \downarrow \implies y \downarrow \implies s\uparrow
+r\uparrow \implies i \downarrow \implies y \downarrow \implies  s\uparrow
 $$
 
 
@@ -241,8 +243,7 @@ $$
 >  The four quadrant approach gives us the money market equilibrium and thereby helps us to derive the $LM$ curve.
 >  - The `SE` quadrant reflects the transaction demand for money
 
-![[IS-LM-Framework-2024-09-10-11.17.57.excalidraw.light.svg]]
-
+![[IS-LM Framework 2024-09-10 11.17.57.excalidraw.light.svg]]
 # Joint Equilibrium
 
 - Product and Money Market
@@ -253,7 +254,7 @@ $$
 $$
 mm/p = l(r) + k(y_+)
 $$
-![[IS-LM-Framework-2024-09-13-10.02.49.excalidraw.light.svg]]
+![[IS-LM Framework 2024-09-13 10.02.49.excalidraw.light.svg]]
 ## Effectiveness of the policies
 
 > [!NOTE] Motives
@@ -263,17 +264,17 @@ $$
 > [!important] Assumption
 > We assume a closed economy
 
-![[IS-LM-Framework-2024-09-13-10.07.31.excalidraw.light.svg]]
+![[IS-LM Framework 2024-09-13 10.07.31.excalidraw.light.svg]]
 
 $$
 r\downarrow \implies i \uparrow \implies y \uparrow \implies r \uparrow
 $$
 
-![[IS-LM-Framework-2024-09-13-10.21.27.excalidraw.light.svg]]
+![[IS-LM Framework 2024-09-13 10.21.27.excalidraw.light.svg]]
 
 > [!NOTE] Scenario
 > What if your investment is not so sensitive?
-> ![[IS-LM-Framework-2024-09-13-10.36.33.excalidraw.light.svg]]
+> ![[IS-LM Framework 2024-09-13 10.36.33.excalidraw.light.svg]]
 
 > [!NOTE] Effectiveness of the Fiscal Policy taking into account the slope of the $LM$ curve
 > ![[IS-LM Framework 2024-09-13 10.47.57.excalidraw.light.svg]]
@@ -300,3 +301,5 @@ $$
 > ![[IS-LM Framework 2024-09-13 11.11.01.excalidraw.light.svg]]
 > To conclude, the fiscal policy becomes effective at lower levels of income whereas the monetary policy becomes effective at high levels of income
 
+
+[^output-income]: or, This leads to firms and companies reduce production and thus lay off employees, **reducing the aggregate income**.

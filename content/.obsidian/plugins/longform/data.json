@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-09-26T03:01:36.200Z",
-      "total": 24,
+      "total": 135,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -64,9 +64,9 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 11,
+          "total": 122,
           "scenes": {
-            "IS-LM Framework": 4,
+            "IS-LM Framework": 115,
             "Monopoly": 0,
             "Market Differentiation": 0,
             "Monetarist School of Economic Thought": 0,
