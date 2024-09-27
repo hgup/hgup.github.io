@@ -133,13 +133,13 @@ The $IS$ curve can be derived by looking at the savings -> goods market ->
 
 ### Situations, if $s\uparrow$ or $r\uparrow$ 
 
-When **savings increase**, then there is a reduce in the demand for goods and services. This leads to a **decrease in output.**[^output-income] With lower income, consumers have less disposable income to spend, leading them to spend less on goods and services. This lowers the confidence of companies to invest in newer projects and thus they decide to **reduce planned investments**. Now, since there is a reduce...
+When **savings increase**, then there is a reduce in the demand for goods and services. This leads to a **decrease in output.**[^output-income] With lower income, consumers have less disposable income to spend, leading them to spend less on goods and **services**. This lowers the confidence of companies to invest in newer projects and thus they decide to **reduce planned investments**. Now, since there is a reduce in investments, the central bank **reduces the rate of interest** to encourage investments.
 
 $$
-s\uparrow \implies y \downarrow \implies i \downarrow \implies r\uparrow
+s\uparrow \implies y \downarrow \implies i \downarrow \implies r\downarrow
 $$
 $$
-r\uparrow \implies i \downarrow \implies y \downarrow \implies  s\uparrow
+r\uparrow \implies i \downarrow \implies y \downarrow \implies  s\downarrow
 $$
 
 
@@ -149,12 +149,13 @@ The benefit of using the $IS$ curve is the cascading effect that it provides.
 
 > [!note]  Shift in the $IS$ curve due to increase in the government expenditure
 > - Rise in $g$ from $g_0$ to $g_1$ would lead to outward shift of the $i+g$ curve in the NW Quad.
-> - Rise in $g$ would lead to a rise in $y$ through the multiplier process, assuming investment is unchanged.
-> - Thus, rise in $g$ from $g_0$ to $g_1$ would rise the level of income from $y_0$ to $y_1$ at the initial rate of interest $r_1$
+> - Rise in $g$ would lead to a rise in $y$ through the **multiplier process**, ==assuming investment is unchanged==. (the green curve shifts left because of $g$ alone.)
+> - Thus, rise in $g$ from $g_0$ to $g_1$ would rise the level of income from $y_0$ to $y_1$ at the initial rate of interest $r_0$
 > - Since, $r$ is constant and $i$ depends on $r$, the investment is also constant.
 > - Thus, rise in $g$^[expansionary fiscal policy] **shifts the $IS$-curve to the right.**
 >   ![[IS-LM Framework 2024-09-10 10.09.10.excalidraw.light.svg]]
 - Why people don’t want to hold money as money?
+- #todo connect why $r$ is not crowded out (and how do we say that it could have been?)
 
 # Money
 
@@ -200,7 +201,7 @@ $$
 r \uparrow \implies P_B \downarrow \implies M^d \downarrow
 $$
 
-![[IS-LM-Framework-2024-09-10-10.35.02.excalidraw.light.svg]]
+![[IS-LM Framework 2024-09-10 10.35.02.excalidraw.light.svg]]
 
 **Liquidity Trap** is a situation where the interest rates don’t drop beyond this point. Any amount of money that you try to pump in is getting trapped.
 
@@ -230,7 +231,8 @@ $$
 
 
 > [!NOTE] Money Market Equilibrium
-> - where the money supply is fixed exogenously at $M^S_0$ and the money demand curve is sloping downwards which depends on the level of income ($y$) and the rate of interest ($r$).
+> >[!tldr] Why when $y\uparrow \implies r\uparrow$?
+> - Money market Equilibrium, where the money supply is fixed exogenously at $M^S_0$ and the money demand curve is sloping downwards which depends on the level of income ($y$) and the rate of interest ($r$).
 > - Now, originally $M_S$ and $M_d$ were in equilibrium
 > - and if the level of income rises from $y_0$ to $y_1$ to $y_2$, the money market equilibrium interest rate should also increase from $r_0$ to $r_1$ to $r_2$ in order to equilibriate the money market.
 > - Thus, for every rise in the level of income The interest rate needs to rise or increase.
@@ -241,9 +243,19 @@ $$
 
 > [!NOTE] Four Quad Approach go u
 >  The four quadrant approach gives us the money market equilibrium and thereby helps us to derive the $LM$ curve.
->  - The `SE` quadrant reflects the transaction demand for money
+>  - The `SE` quadrant reflects the **transaction** demand for money
+>  - The `NW` reflects the **speculative** demand for money
+>  - The `SW` reflects the money market equilibrium $M^d = M^S$: In this quadrant, we use a $45\degree$ triangle where $T^d + S^d = M^d = M^S$ ($M^S$ is fixed exogenously)
+>  - The last quadrant `NE` houses the pairs of $r$ and $y$ which maintains the  money market equilibrium and helps us to derive the LM curve.
 
 ![[IS-LM Framework 2024-09-10 11.17.57.excalidraw.light.svg]]
+
+> [!NOTE] Explanation
+> Given $y_0$, we can find the $T^d$ from $k(y)$
+> - We subtract this $T^d$ from the total money demand to see what level of speculative demand implies given the money supply
+> - this level of $S^d$ shows us in turn the level of interest rate, $r_0$ that will maintain the money market in equilibrium with the level of income $y_0$.
+> - Thus, the money market equilibrium pairs are $r_0$ and $y_0$ leading to / deriving the $L-M$ curve
+
 # Joint Equilibrium
 
 - Product and Money Market

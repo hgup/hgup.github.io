@@ -81,7 +81,7 @@ So, a phillips curve in the long run is **Vertical**
 > - We will be using the phillips curve to understand this phenomena. The Phillip’s curve shows the negative relationship between unemployment rate $U$ and inflation $\Pi$
 > - **Short run**
 > 	- Suppose the economy has a natural unemployment rate $U$ of $6\%$ and correspondingly inflation of $0$.
-> 	![[Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw.light.svg]]
+> 	![[Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw]]
 > 	- If the monetary authorities want to bring down the unemployment rate and as a result increase the money supply from $3\%$ to $5\%$.
 > 	- Due to this, the economy moves from point $A$ to point $B$. Thereby, reducing the unemployment $U = 6\% \to 4\%$ but at a higher inflation rate of $\Pi = 0\% \to 2\%$.
 > 	- Thus, in the short run, the monetary authorities are able to reduce the unemployment rate from its natural level.
@@ -92,7 +92,7 @@ So, a phillips curve in the long run is **Vertical**
 > 	- Thus, in the short run, the economy moved from $A \to B$, but in the long run the economy moved from $B \to C$. At, point $C$, the unemployment rate $U = 6\%$  but at a higher rate of inflation $\Pi = 2\%$
 > 	- Suppose the money supply further increases to $5\% \to 7\% \to 9\% \to 11\%$ resulting in **temperory reduction** in the unemployment rates from $6\% \to 4\%$ i.e., point $C \to D$, $E \to F$, $G \to H$ but in the longer run, we *simply move up* in the vertical Phillip’s curve i.e., $A \to C$, $C \to E$, $E \to G$, $G \to I$.
 > 	- Thus, in the long run **the Phillip’s curve is vertical**
-> 	![[Monetarist-School-of-Economic-Thought-2024-09-17-11.30.35.excalidraw.light.svg]]
+> 	![[Monetarist School of Economic Thought 2024-09-17 11.30.35.excalidraw.light.svg]]
 > **Policy Inference**: The policy makers want to reduce the unemployment rates, so it keeps on increasing the money supply, $M^S$. But the economy ends up at a higher inflation $\Pi=8\%$ with same $6\%$ of unemployment.
 > **Policy Implication**: The policy makers cannot peg the unemployment rate at some arbitrarily determined target rate. Attempts to lower the unemployment rate by the monetary authorities will work out only in the short run.
 

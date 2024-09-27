@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9e5f8148b9f290c8",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "preview",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
             "id": "a814a89be084edd3",
             "type": "leaf",
             "state": {
@@ -36,27 +22,31 @@
           {
             "id": "15f0ebbe71f97500",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "attachments/IS-LM Framework 2024-09-13 10.02.49.excalidraw.md"
-              }
+                "file": "index.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true
             }
           },
           {
-            "id": "712b30ad5990c7ae",
+            "id": "4a641f116f731b84",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/interest.md",
+                "file": "Academic/Economics/Steady State - Balanced Growth Model.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "unti",
+                "query": "tag:#PECO102  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +100,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -130,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Economics/IS-LM Framework.md",
+                "file": "Academic/Economics/Steady State - Balanced Growth Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Economics/IS-LM Framework.md",
+                "file": "Academic/Economics/Steady State - Balanced Growth Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Economics/IS-LM Framework.md"
+                "file": "Academic/Economics/Steady State - Balanced Growth Model.md"
               }
             }
           }
@@ -197,18 +188,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a814a89be084edd3",
+  "active": "4a641f116f731b84",
   "lastOpenFiles": [
-    "attachments/IS-LM Framework 2024-09-13 10.02.49.excalidraw.md",
+    "Academic/Economics/Growth Theories & Models.md",
+    "Academic/Economics/Monetarist School of Economic Thought.md",
+    "attachments/Monetarist School of Economic Thought 2024-09-17 11.30.35.excalidraw.md",
+    "notes/Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw.md",
     "Academic/Economics/IS-LM Framework.md",
-    "notes/interest.md",
+    "attachments/IS-LM Framework 2024-09-13 10.36.33.excalidraw.md",
+    "attachments/IS-LM Framework 2024-09-13 10.36.33.excalidraw.dark.svg",
+    "attachments/IS-LM Framework 2024-09-13 10.36.33.excalidraw.light.svg",
+    "attachments/IS-LM Framework 2024-09-13 10.47.57.excalidraw.md",
+    "attachments/IS-LM Framework 2024-09-13 10.07.31.excalidraw.md",
     "attachments/IS-LM Framework 2024-09-10 11.17.57.excalidraw.md",
+    "Academic/Economics/Monopoly.md",
+    "Academic/Economics/index.md",
     "index.md",
+    "attachments/IS-LM Framework 2024-09-13 10.02.49.excalidraw.md",
+    "notes/interest.md",
     "notes/IS-LM-Framework-2024-09-10-11.17.57.excalidraw.md",
     "notes/Lecture- ISLM refresher.md",
     "notes/savings and investments.md",
     "notes/Fiscal policy.md",
-    "Academic/Economics/index.md",
     "Academic/Economics/Kinked Demand Curve Model.md",
     "Academic/Economics/Industrial Agriculture Recap.md",
     "Academic/Actuarial Science/Higher Exams.md",
@@ -219,24 +220,14 @@
     "Academic/actuarial/Index.md",
     "Academic/actuarial",
     "Academic/Actuarial Science/!Exam 5.md",
-    "templates/note.md",
-    "Academic/Actuarial Science/Univariate Classification (Traditional).md",
-    "notes/Loss Ratio.md",
-    "Academic/Actuarial Science/Risk Classification Fundamentals.md",
-    "notes/Pure Premium.md",
-    "explorations/Ray Dalio's Economic Machine.md",
-    "Music/Modal Mixture Common Tone Enharmonic Double Chromatic Mediant Modulation.md",
     "attachments/Arc_7Fnqii7ups.gif",
     "attachments/Pasted image 20240925123545.png",
-    "notes/debitor.md",
     "attachments/Pasted image 20240925122658.png",
     "attachments/Pasted image 20240925122916.png",
     "attachments/Pasted image 20240925115020.png",
     "attachments/Arc_PKjWJ5ZZb5.jpg",
     "attachments/Cob-web Market Model 2024-09-25 09.54.56.excalidraw.light.svg",
     "attachments/Cob-web Market Model 2024-09-25 09.54.56.excalidraw.dark.svg",
-    "attachments/Cob-web Market Model 2024-09-25 09.53.29.excalidraw.light.svg",
-    "attachments/Cob-web Market Model 2024-09-25 09.53.29.excalidraw.dark.svg",
     "templates",
     "public/tags/finance.html",
     "public/tags/SEMINAR.html",

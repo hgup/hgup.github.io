@@ -36,7 +36,7 @@ date: 2024-09-24 09:18
 > $$
 > \dfrac{\Delta{L}}{L} = n
 > $$
-> - We assume that $I = sY$
+> - We assume that $I = sy$
 > - We assume that constant fraction $d$ of the existing capital stock, depreciates each period.
 > 	- So the total depreciation is $dk$.
 
