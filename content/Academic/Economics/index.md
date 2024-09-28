@@ -20,6 +20,7 @@ longform:
     - Kinked Demand Curve Model
     - Cob-web Market Model
     - Industrial Agriculture Recap
+    - Quants Summary
   ignoredFiles: []
 title: Economics
 date: 2024-09-10
