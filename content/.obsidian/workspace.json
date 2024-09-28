@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/Tips for Reading Music.md",
+                "file": "Academic/Actuarial Science/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/Tips for Reading Music.md",
+                "file": "Academic/Actuarial Science/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/Tips for Reading Music.md",
+                "file": "Academic/Actuarial Science/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/Tips for Reading Music.md"
+                "file": "Academic/Actuarial Science/index.md"
               }
             }
           }
@@ -192,8 +192,10 @@
   },
   "active": "77ecc9fe88fd1465",
   "lastOpenFiles": [
-    "Music/index.md",
+    "Academic/Economics/Industrial Agriculture Unit-III recap.md",
+    "Academic/Economics/index.md",
     "Music/Tips for Reading Music.md",
+    "Music/index.md",
     "index.md",
     "Academic/Economics/Quants Summary.md",
     "Academic/Economics/Steady State - Balanced Growth Model.md",
@@ -209,7 +211,6 @@
     "attachments/IS-LM Framework 2024-09-13 10.07.31.excalidraw.md",
     "attachments/IS-LM Framework 2024-09-10 11.17.57.excalidraw.md",
     "Academic/Economics/Monopoly.md",
-    "Academic/Economics/index.md",
     "attachments/IS-LM Framework 2024-09-13 10.02.49.excalidraw.md",
     "notes/interest.md",
     "notes/IS-LM-Framework-2024-09-10-11.17.57.excalidraw.md",
@@ -217,7 +218,6 @@
     "notes/savings and investments.md",
     "notes/Fiscal policy.md",
     "Academic/Economics/Kinked Demand Curve Model.md",
-    "Academic/Economics/Industrial Agriculture Recap.md",
     "Academic/Actuarial Science/Higher Exams.md",
     "Academic/Actuarial Science/index.md",
     "Academic/Actuarial Science/abc",
