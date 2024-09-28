@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Music/index.md",
+  "selectedDraftVaultPath": "Academic/Actuarial Science/DISC/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-09-28T03:29:20.275Z",
-      "total": 1207,
+      "total": 1266,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -89,6 +89,16 @@
             "Cob-web Market Model": 0,
             "Industrial Agriculture Unit-III recap": 738,
             "Quants Summary": 282
+          }
+        },
+        "Academic/Actuarial Science/DISC/Index.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "Academic/Actuarial Science/DISC/index.md": {
+          "total": 59,
+          "scenes": {
+            "CAS-DISC-DA": 59
           }
         }
       }
