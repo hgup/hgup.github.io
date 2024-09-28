@@ -1,10 +1,12 @@
 ---
 title: The Art of Conducting
 draft: false
-tags: 
+tags:
+  - conducting
 date: 2024-09-11
 ---
 ![[1328.jpg]]
+
 # History
 ## Two Schools of Thought
 - Felix **Mendelssohn** -> Elegant || Apollonian

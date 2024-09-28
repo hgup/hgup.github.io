@@ -1,7 +1,8 @@
 ---
 title: Exercises for Band
 draft: true
-tags: 
+tags:
+  - Band
 date: 2024-09-21
 ---
 

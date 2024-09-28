@@ -17,10 +17,10 @@ Whenever, I come across something new I make it a point to find out what it is a
 
 This digital garden is a place for me (and you) to grow and learn. I hope you enjoy  it as much as I enjoy creating it. I encourage you to leave comments or ask questions. I'd love to hear your thoughts and insights.
 
----
+%% ---
 
 ## 🌎 Tour
 
 Sometimes, you will find some notes with a [[mathpad]] where some calculations are performed. You can quickly open up [numbr.dev](https://numbr.dev/#new) to paste these calculations there to verify them (or just for fun).
 
-![[Duopoly Markets contd.#^b6f6d4]]
+![[Duopoly Markets contd.#^b6f6d4]] %%

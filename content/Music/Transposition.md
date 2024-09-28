@@ -1,7 +1,9 @@
 ---
 title: Transposition
 draft: false
-tags: 
+tags:
+  - Band
+  - theory
 date: 2024-09-14
 ---
 
