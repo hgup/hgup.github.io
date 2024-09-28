@@ -1,0 +1,1 @@
+extent to which production of a particular good or service is confined to a few large firms.

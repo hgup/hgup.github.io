@@ -4,6 +4,8 @@ draft: false
 tags: 
 date: 2024-09-14
 ---
+
+
 > **Clarinets** are in $B^\flat$, **Trumpets** and **Tenors (Sax)** too
 > 
 > **Bases**^[Trombones, Euphonium, Tuba, Sousaphone] mostly are $C$ but there’s no rule
