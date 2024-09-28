@@ -10,6 +10,7 @@ longform:
     - Exercises for Band
     - Good Unison Sound for Band
     - Modal Mixture Common Tone Enharmonic Double Chromatic Mediant Modulation
+    - Tips for Reading Music
   ignoredFiles: []
 title: Music
 date: 2024-09-17

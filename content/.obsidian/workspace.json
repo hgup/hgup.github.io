@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "15f0ebbe71f97500",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "preview",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
             "id": "f5a7bdc7e099cf13",
             "type": "leaf",
             "pinned": true,
@@ -36,12 +22,26 @@
             }
           },
           {
-            "id": "2bfc9f852b4082e4",
+            "id": "e6a9e702003c26ab",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "77ecc9fe88fd1465",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Economics/Quants Summary.md",
+                "file": "Music/Tips for Reading Music.md",
                 "mode": "source",
                 "source": false
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Economics/Quants Summary.md",
+                "file": "Music/Tips for Reading Music.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Economics/Quants Summary.md",
+                "file": "Music/Tips for Reading Music.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Economics/Quants Summary.md"
+                "file": "Music/Tips for Reading Music.md"
               }
             }
           }
@@ -190,8 +190,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2bfc9f852b4082e4",
+  "active": "77ecc9fe88fd1465",
   "lastOpenFiles": [
+    "Music/index.md",
+    "Music/Tips for Reading Music.md",
     "index.md",
     "Academic/Economics/Quants Summary.md",
     "Academic/Economics/Steady State - Balanced Growth Model.md",
@@ -218,9 +220,7 @@
     "Academic/Economics/Industrial Agriculture Recap.md",
     "Academic/Actuarial Science/Higher Exams.md",
     "Academic/Actuarial Science/index.md",
-    "Academic/index.md",
     "Academic/Actuarial Science/abc",
-    "Academic/Actuarial Science/Ratemaking.md",
     "Academic/actuarial",
     "attachments/Arc_7Fnqii7ups.gif",
     "attachments/Pasted image 20240925123545.png",
