@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Music/Tips for Reading Music.md",
+                "file": "Music/Good Unison Sound for Band.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Music/Tips for Reading Music.md",
+                "file": "Music/Good Unison Sound for Band.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Music/Tips for Reading Music.md",
+                "file": "Music/Good Unison Sound for Band.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Music/Tips for Reading Music.md"
+                "file": "Music/Good Unison Sound for Band.md"
               }
             }
           }
@@ -178,6 +178,9 @@
   },
   "active": "fb4d2f653348e478",
   "lastOpenFiles": [
+    "attachments/Symphony.jpg",
+    "Music/Tips for Reading Music.md",
+    "attachments/music-schumann-etude-3-1913.jpg",
     "Music/Modal Mixture Common Tone Enharmonic Double Chromatic Mediant Modulation.md",
     "Music/Good Unison Sound for Band.md",
     "Music/Exercises for Band.md",
@@ -201,7 +204,6 @@
     "attachments/Industrial Agriculture Unit-III recap 2024-09-28 11.46.47.excalidraw.dark.svg",
     "Academic/index.md",
     "Academic/Actuarial Science/index.md",
-    "Music/Tips for Reading Music.md",
     "Academic/Economics/Quants Summary.md",
     "Academic/Economics/Steady State - Balanced Growth Model.md",
     "Academic/Economics/Growth Theories & Models.md",
@@ -209,13 +211,11 @@
     "attachments/Monetarist School of Economic Thought 2024-09-17 11.30.35.excalidraw.md",
     "notes/Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw.md",
     "Academic/Economics/IS-LM Framework.md",
-    "attachments/IS-LM Framework 2024-09-13 10.36.33.excalidraw.md",
     "attachments/IS-LM Framework 2024-09-13 10.36.33.excalidraw.dark.svg",
     "attachments/IS-LM Framework 2024-09-13 10.36.33.excalidraw.light.svg",
     "Academic/Actuarial Science/abc",
     "Academic/actuarial",
     "attachments/Arc_7Fnqii7ups.gif",
-    "attachments/Pasted image 20240925123545.png",
     "templates",
     "public/tags/finance.html",
     "public/tags/SEMINAR.html",

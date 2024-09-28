@@ -6,7 +6,7 @@ date: 2024-09-28 11:15
 ---
 Read this fast:
 
-![Schumann](https://i.imgur.com/waNmwWj.jpeg)
+![[music-schumann-etude-3-1913.jpg]]
 
 Assuming you already know the basics of reading music, this is a way to make reading faster. Some of these tips apply more to piano because in other instruments, you are already comfortable with exact notes.
 

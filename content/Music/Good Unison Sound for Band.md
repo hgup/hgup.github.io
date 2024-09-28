@@ -6,7 +6,7 @@ tags:
   - Band
 date: 2024-09-22
 ---
-![Orchestra](https://i.imgur.com/c9pixs3.jpeg)
+![[Symphony.jpg]]
 
 Say, you are trying to play a scale with your section, you are all in tune, but there is no [[unison]]. It gets worse when all the sections play together since there is now a difference in the sound dynamics of each instrument.
 
