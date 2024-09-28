@@ -4,7 +4,7 @@ draft: false
 tags: 
 date: 2024-09-11
 ---
-![Leonard Bernstien](https://i.imgur.com/KjA4Jy0.jpeg)
+![[1328.jpg]]
 # History
 ## Two Schools of Thought
 - Felix **Mendelssohn** -> Elegant || Apollonian
