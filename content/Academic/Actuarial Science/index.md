@@ -4,8 +4,7 @@ longform:
   title: Actuarial Science
   workflow: Default Workflow
   sceneFolder: /
-  scenes:
-    - Higher Exams
+  scenes: []
   sceneTemplate: templates/note.md
   ignoredFiles:
     - "!Exam 5"

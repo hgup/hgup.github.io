@@ -8,4 +8,6 @@ longform:
     - CAS-DISC-DA
   ignoredFiles: []
 title: CAS DISCs
+tags:
+  - online-course
 ---

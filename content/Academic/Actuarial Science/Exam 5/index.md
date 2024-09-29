@@ -5,29 +5,30 @@ longform:
   workflow: Default Workflow
   sceneFolder: /
   scenes:
-    - Ratemaking
-    - Reserving
-    - Ratemaking Principles
-    - Should you go for negative profit in FIE
-    - Expenses and Profits
-    - Ratemaking Methods
-    - Reporting Pattern
-    - Fundamental Insurance Equation
-    - Insurance Basics
+    - Higher Exams
+    - Addressing Anomalies in Loss Data
+    - Chain Ladder Method
     - Development
+    - Expenses and Profits
+    - Fundamental Insurance Equation
+    - Univariate Classification (Traditional)
+    - Insurance Basics
     - Overall Rate Level Indications
+    - Ratemaking
+    - Ratemaking Methods
+    - Ratemaking Principles
+    - Reporting Pattern
+    - Reserving
     - Risk Classification
     - Risk Classification Fundamentals
+    - Should you go for negative profit in FIE
     - Trending in Ratemaking
-    - Chain Ladder Method
-    - Addressing Anomalies in Loss Data
-    - Univariate Classification (Traditional)
   sceneTemplate: templates/exam5 note.md
   ignoredFiles:
     - index
-title: "!Exam 5"
+title: Exam 5
 tags:
-  - actuarialExam
+  - actuarial-exam
 date: 2024-09-20
 ---
 There are two parts to this exam, [[Ratemaking]] and [[Reserving]].
@@ -46,7 +47,8 @@ There are two parts to this exam, [[Ratemaking]] and [[Reserving]].
 	- [[Expenses and Profits]]
 	- [[Overall Rate Level Indications]]
 - [[Risk Classification]]
-	- [[Risk Classification Funda[[Univariate Classification (Traditional)]]assification]]
+	- [[Risk Classification Fundamentals]]
+	- [[Univariate Classification (Traditional)]]
 	- [[Multivariate Classification]]
 	- [[Special Classification]]
 	- [[Credibility]]

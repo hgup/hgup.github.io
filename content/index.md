@@ -9,7 +9,7 @@ A place where I share my thoughts and ideas. It's like a personal library, a dig
 
 I am learning to take notes on my laptop during my [[Academic/Economics/index|economics]] classes and make them as efficient as my paper-notebook notes (and better, searchable).
 
-At present, I am preparing for my [[Academic/Actuarial Science/index|Actuarial]] exams, and I post my understanding of its concepts here periodically, starting from [[!Exam 5|Exam 5]].
+At present, I am preparing for my [[Academic/Actuarial Science/index|Actuarial]] exams, and I post my understanding of its concepts here periodically, starting from [[Academic/Actuarial Science/Exam 5/index|Exam 5]].
 
 Apart from these there is a vast domain of things that interest me, I [[explorations/index|explore]] them to expand my view about the world. One of my fascinations and young love, [[Music/index|music]] is something I love to write about.
 
