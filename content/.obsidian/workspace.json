@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LABS/Projects/index.md",
+                "file": "LABS/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LABS/Projects/index.md",
+                "file": "LABS/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LABS/Projects/index.md",
+                "file": "LABS/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LABS/Projects/index.md"
+                "file": "LABS/index.md"
               }
             }
           }
@@ -189,6 +189,8 @@
   },
   "active": "6cdcef3e8baca0b2",
   "lastOpenFiles": [
+    "LABS/Projects/index.md",
+    "LABS/index.md",
     "Academic/Actuarial Science/index.md",
     "Academic/Actuarial Science/DISC/index.md",
     "Academic/Actuarial Science/DISC/CAS-DISC-DA.md",
@@ -217,7 +219,6 @@
     "attachments/Pasted image 20240930131822.png",
     "LABS/Projects/Cashless.md",
     "attachments/Cashless 2024-09-29 13.59.10.excalidraw.md",
-    "LABS/Projects/index.md",
     "LABS/Projects",
     "LABS/Projects/Untitled.md",
     "Academic/Actuarial Science/Exam 5/Addressing Anomalies in Loss Data.md",
