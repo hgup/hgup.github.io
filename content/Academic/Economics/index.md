@@ -21,6 +21,7 @@ longform:
     - Cob-web Market Model
     - Industrial Agriculture Unit-III recap
     - Quants Summary
+    - Market under Perfect Competition
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

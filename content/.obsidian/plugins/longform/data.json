@@ -1,13 +1,116 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Academic/Actuarial Science/Exam 5/index.md",
+  "selectedDraftVaultPath": "Academic/Economics/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
+      "start": "2024-09-30T02:49:18.698Z",
+      "total": 572,
+      "drafts": {
+        "thoughts/index.md": {
+          "total": 0,
+          "scenes": {
+            "Starting a new Exam": 0
+          }
+        },
+        "Music/index.md": {
+          "total": 0,
+          "scenes": {
+            "The Art of Conducting": 0,
+            "Transposition": 0,
+            "Exercises for Band": 0,
+            "Good Unison Sound for Band": 0,
+            "Modal Mixture Common Tone Enharmonic Double Chromatic Mediant Modulation": 0,
+            "Tips for Reading Music": 0
+          }
+        },
+        "explorations/index.md": {
+          "total": 188,
+          "scenes": {
+            "Moai": 0,
+            "CSS Display Stuff": 0,
+            "Ray Dalio's Economic Machine": 0,
+            "Learn Regex": 169,
+            "Mastering Data Cleaning using Regex": 11,
+            "Using Svelte and D3 to make visualizations": 8
+          }
+        },
+        "LABS/Projects/Index.md": {
+          "total": 0,
+          "scenes": {
+            "Cashless": 0
+          }
+        },
+        "LABS/index.md": {
+          "total": 0,
+          "scenes": {
+            "Posting with Quartz": 0,
+            "Svelte.js": 0,
+            "Enhancing my Digital Garden": 0
+          }
+        },
+        "Academic/Actuarial Science/DISC/index.md": {
+          "total": 0,
+          "scenes": {
+            "CAS-DISC-DA": 0
+          }
+        },
+        "Academic/Actuarial Science/Exam 5/index.md": {
+          "total": 0,
+          "scenes": {
+            "Higher Exams": 0,
+            "Addressing Anomalies in Loss Data": 0,
+            "Chain Ladder Method": 0,
+            "Development": 0,
+            "Expenses and Profits": 0,
+            "Fundamental Insurance Equation": 0,
+            "Univariate Classification (Traditional)": 0,
+            "Insurance Basics": 0,
+            "Overall Rate Level Indications": 0,
+            "Ratemaking": 0,
+            "Ratemaking Methods": 0,
+            "Ratemaking Principles": 0,
+            "Reporting Pattern": 0,
+            "Reserving": 0,
+            "Risk Classification": 0,
+            "Risk Classification Fundamentals": 0,
+            "Should you go for negative profit in FIE": 0,
+            "Trending in Ratemaking": 0
+          }
+        },
+        "Academic/Actuarial Science/index.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "Academic/Economics/index.md": {
+          "total": 384,
+          "scenes": {
+            "IS-LM Framework": 0,
+            "Monopoly": 0,
+            "Market Differentiation": 0,
+            "Monetarist School of Economic Thought": 0,
+            "Time Series Data Analysis in R": 0,
+            "Growth Theories & Models": 0,
+            "Duopoly Markets": 0,
+            "Roles of Operations of Banks": 0,
+            "Difference Equations": 0,
+            "Duopoly Markets contd.": 0,
+            "India's Investment Function Simulation": 0,
+            "Steady State - Balanced Growth Model": 0,
+            "Kinked Demand Curve Model": 0,
+            "Cob-web Market Model": 0,
+            "Industrial Agriculture Unit-III recap": 0,
+            "Quants Summary": 0,
+            "Market under Perfect Competition": 384
+          }
+        }
+      }
+    },
+    {
       "start": "2024-09-29T04:27:45.209Z",
-      "total": 3510,
+      "total": 3523,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -138,6 +241,12 @@
             "Risk Classification Fundamentals": 684,
             "Should you go for negative profit in FIE": 72,
             "Trending in Ratemaking": 24
+          }
+        },
+        "LABS/Projects/Index.md": {
+          "total": 13,
+          "scenes": {
+            "Cashless": 13
           }
         }
       }
