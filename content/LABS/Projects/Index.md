@@ -1,4 +1,5 @@
 ---
+date: 2024-09-30 18:57
 longform:
   format: scenes
   title: Projects
@@ -7,4 +8,7 @@ longform:
   scenes:
     - Cashless
   ignoredFiles: []
+title: Projects
 ---
+
+

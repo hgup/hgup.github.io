@@ -32,9 +32,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6cdcef3e8baca0b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LABS/Projects/index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -88,8 +100,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -109,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "explorations/Learn Regex.md",
+                "file": "LABS/Projects/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "explorations/Learn Regex.md",
+                "file": "LABS/Projects/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "explorations/Learn Regex.md"
+                "file": "LABS/Projects/index.md"
               }
             }
           }
@@ -176,19 +187,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "283e35bfabb6d59f",
+  "active": "6cdcef3e8baca0b2",
   "lastOpenFiles": [
+    "Academic/Actuarial Science/index.md",
+    "Academic/Actuarial Science/DISC/index.md",
+    "Academic/Actuarial Science/DISC/CAS-DISC-DA.md",
+    "explorations/index.md",
+    "index.md",
+    "explorations/Learn Regex.md",
     "attachments/Pasted image 20240930185100.png",
     "attachments/Pasted image 20240930185033.png",
     "attachments/Pasted image 20240930184926.png",
-    "explorations/index.md",
-    "index.md",
     "Academic/Economics/The Ecochamber.md",
     "Academic/Economics/Market under Perfect Competition.md",
     "notes/Old Pension scheme Vs New Pension Scheme.md",
     "notes/Provident fund.md",
     "Academic/Economics/index.md",
-    "explorations/Learn Regex.md",
     "Academic/Economics/Quants Summary.md",
     "attachments/Pasted image 20240930135423.png",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.md",
@@ -203,15 +217,11 @@
     "attachments/Pasted image 20240930131822.png",
     "LABS/Projects/Cashless.md",
     "attachments/Cashless 2024-09-29 13.59.10.excalidraw.md",
-    "attachments/Cashless 2024-09-29 13.59.10.excalidraw.light.svg",
-    "LABS/Projects/Index.md",
+    "LABS/Projects/index.md",
     "LABS/Projects",
     "LABS/Projects/Untitled.md",
     "Academic/Actuarial Science/Exam 5/Addressing Anomalies in Loss Data.md",
     "Academic/Actuarial Science/Exam 5/index.md",
-    "Academic/Actuarial Science/index.md",
-    "Academic/Actuarial Science/DISC/CAS-DISC-DA.md",
-    "Academic/Actuarial Science/DISC/index.md",
     "notes/Risk Classification Funda[[Univariate Classification (Traditional).md",
     "Academic/Actuarial Science/Exam 5/Fundamental Insurance Equation.md",
     "Academic/Actuarial Science/Exam 5/Insurance Basics.md",
