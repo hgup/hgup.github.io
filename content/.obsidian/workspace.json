@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "64890b247062941f",
+            "id": "283e35bfabb6d59f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,21 +32,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "1ee2c508a01bfd6d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Academic/Economics/Market under Perfect Competition.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Economics/Market under Perfect Competition.md",
+                "file": "explorations/Learn Regex.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Economics/Market under Perfect Competition.md",
+                "file": "explorations/Learn Regex.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Economics/Market under Perfect Competition.md"
+                "file": "explorations/Learn Regex.md"
               }
             }
           }
@@ -188,30 +176,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ee2c508a01bfd6d",
+  "active": "283e35bfabb6d59f",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240930185100.png",
+    "attachments/Pasted image 20240930185033.png",
+    "attachments/Pasted image 20240930184926.png",
+    "explorations/index.md",
+    "index.md",
+    "Academic/Economics/The Ecochamber.md",
+    "Academic/Economics/Market under Perfect Competition.md",
+    "notes/Old Pension scheme Vs New Pension Scheme.md",
+    "notes/Provident fund.md",
+    "Academic/Economics/index.md",
+    "explorations/Learn Regex.md",
+    "Academic/Economics/Quants Summary.md",
     "attachments/Pasted image 20240930135423.png",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.md",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.light.svg",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.dark.svg",
-    "Academic/Economics/Market under Perfect Competition.md",
-    "explorations/Learn Regex.md",
-    "index.md",
     "attachments/Pasted image 20240930133704.png",
     "attachments/Pasted image 20240930133651.png",
     "attachments/Pasted image 20240930132533.png",
-    "Academic/Economics/index.md",
     "explorations/Mastering Data Cleaning using Regex.md",
     "notes/Regex.md",
     "explorations/Using Svelte and D3 to make visualizations.md",
     "attachments/Pasted image 20240930131822.png",
-    "explorations/index.md",
     "LABS/Projects/Cashless.md",
     "attachments/Cashless 2024-09-29 13.59.10.excalidraw.md",
     "attachments/Cashless 2024-09-29 13.59.10.excalidraw.light.svg",
-    "attachments/Cashless 2024-09-29 13.59.10.excalidraw.dark.svg",
-    "attachments/Pasted Image 20240929135911_919.png",
-    "attachments/Pasted Image 20240929135911_878.png",
     "LABS/Projects/Index.md",
     "LABS/Projects",
     "LABS/Projects/Untitled.md",
@@ -224,11 +216,7 @@
     "Academic/Actuarial Science/Exam 5/Fundamental Insurance Equation.md",
     "Academic/Actuarial Science/Exam 5/Insurance Basics.md",
     "Academic/Actuarial Science/Exam 5",
-    "notes/Planning an Insurer Data Modeling Project.md",
-    "attachments/Planning an Insurer Data Modeling Project 2024-09-28 20.46.32.excalidraw.md",
-    "Music/The Art of Conducting.md",
     "Academic/Actuarial Science/DISC",
-    "Music/Transposition.md",
     "Academic/Actuarial Science/abc",
     "Academic/actuarial",
     "templates",

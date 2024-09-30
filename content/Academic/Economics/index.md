@@ -22,6 +22,7 @@ longform:
     - Industrial Agriculture Unit-III recap
     - Quants Summary
     - Market under Perfect Competition
+    - The Ecochamber
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Academic/Economics/index.md",
+  "selectedDraftVaultPath": "explorations/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-09-30T02:49:18.698Z",
-      "total": 572,
+      "total": 1140,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -27,12 +27,12 @@
           }
         },
         "explorations/index.md": {
-          "total": 188,
+          "total": 749,
           "scenes": {
             "Moai": 0,
             "CSS Display Stuff": 0,
             "Ray Dalio's Economic Machine": 0,
-            "Learn Regex": 169,
+            "Learn Regex": 730,
             "Mastering Data Cleaning using Regex": 11,
             "Using Svelte and D3 to make visualizations": 8
           }
@@ -85,7 +85,7 @@
           "scenes": {}
         },
         "Academic/Economics/index.md": {
-          "total": 384,
+          "total": 391,
           "scenes": {
             "IS-LM Framework": 0,
             "Monopoly": 0,
@@ -103,7 +103,8 @@
             "Cob-web Market Model": 0,
             "Industrial Agriculture Unit-III recap": 0,
             "Quants Summary": 0,
-            "Market under Perfect Competition": 384
+            "Market under Perfect Competition": 384,
+            "The Ecochamber": 7
           }
         }
       }
