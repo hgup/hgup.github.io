@@ -27,24 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Economics/Monetarist School of Economic Thought.md",
+                "file": "Academic/Economics/Steady State - Balanced Growth Model.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "18d690074742ce31",
+            "id": "4f50bc67a9a9a071",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.md"
+                "file": "Academic/Economics/Endogenous Growth Model.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -103,7 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 337.5
   },
   "right": {
     "id": "5390f986a74ef251",
@@ -119,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Economics/Monetarist School of Economic Thought.md",
+                "file": "Academic/Economics/Endogenous Growth Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Economics/Monetarist School of Economic Thought.md",
+                "file": "Academic/Economics/Endogenous Growth Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Economics/Monetarist School of Economic Thought.md"
+                "file": "Academic/Economics/Endogenous Growth Model.md"
               }
             }
           }
@@ -186,20 +188,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "78e32fb19372d1f2",
+  "active": "4f50bc67a9a9a071",
   "lastOpenFiles": [
-    "notes/Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw.md",
-    "Academic/Economics/Monetarist School of Economic Thought.md",
-    "Academic/Economics/Existence of Equilibrium.md",
-    "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.md",
     "index.md",
+    "Academic/Economics/Steady State - Balanced Growth Model.md",
+    "Academic/Economics/Endogenous Growth Model.md",
+    "Academic/Economics/Cob-web Market Model.md",
+    "Academic/Economics/Industrial Agriculture Unit-III recap.md",
+    "Academic/Economics/Quants Summary.md",
+    "Academic/Economics/Market under Perfect Competition.md",
+    "Academic/Economics/The Ecochamber.md",
+    "Academic/Economics/Existence of Equilibrium.md",
+    "notes/R&D.md",
+    "Academic/Economics/Monetarist School of Economic Thought.md",
+    "Academic/Economics/India's Investment Function Simulation.md",
+    "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.md",
+    "notes/GDP vs GVA.md",
+    "notes/NDP.md",
+    "notes/NFIFA.md",
+    "notes/Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.light.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.dark.svg",
     "Academic/Economics/index.md",
     "LABS/Cashless.md",
     "LABS/Projects/index.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.md",
-    "Academic/Economics/Market under Perfect Competition.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.light.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.dark.svg",
     "LABS/index.md",
@@ -207,24 +220,13 @@
     "Academic/Actuarial Science/DISC/index.md",
     "Academic/Actuarial Science/DISC/CAS-DISC-DA.md",
     "explorations/index.md",
-    "explorations/Learn Regex.md",
     "attachments/Pasted image 20240930185100.png",
     "attachments/Pasted image 20240930185033.png",
     "attachments/Pasted image 20240930184926.png",
-    "Academic/Economics/The Ecochamber.md",
-    "notes/Old Pension scheme Vs New Pension Scheme.md",
-    "notes/Provident fund.md",
-    "Academic/Economics/Quants Summary.md",
     "attachments/Pasted image 20240930135423.png",
-    "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.md",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.light.svg",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.dark.svg",
-    "explorations/Mastering Data Cleaning using Regex.md",
-    "notes/Regex.md",
-    "explorations/Using Svelte and D3 to make visualizations.md",
-    "attachments/Cashless 2024-09-29 13.59.10.excalidraw.md",
     "LABS/Projects",
-    "LABS/Projects/Untitled.md",
     "Academic/Actuarial Science/Exam 5",
     "Academic/Actuarial Science/DISC",
     "Academic/Actuarial Science/abc",

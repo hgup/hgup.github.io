@@ -24,6 +24,7 @@ longform:
     - Market under Perfect Competition
     - The Ecochamber
     - Existence of Equilibrium
+    - Endogenous Growth Model
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

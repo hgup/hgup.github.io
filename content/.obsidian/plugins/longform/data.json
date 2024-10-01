@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-01T03:41:37.669Z",
-      "total": 499,
+      "total": 743,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -85,7 +85,7 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 499,
+          "total": 743,
           "scenes": {
             "IS-LM Framework": 0,
             "Monopoly": 0,
@@ -97,15 +97,16 @@
             "Roles of Operations of Banks": 0,
             "Difference Equations": 0,
             "Duopoly Markets contd.": 0,
-            "India's Investment Function Simulation": 0,
-            "Steady State - Balanced Growth Model": 0,
+            "India's Investment Function Simulation": 67,
+            "Steady State - Balanced Growth Model": 8,
             "Kinked Demand Curve Model": 0,
             "Cob-web Market Model": 0,
             "Industrial Agriculture Unit-III recap": 0,
             "Quants Summary": 0,
             "Market under Perfect Competition": 2,
             "The Ecochamber": 0,
-            "Existence of Equilibrium": 487
+            "Existence of Equilibrium": 487,
+            "Endogenous Growth Model": 169
           }
         }
       }
