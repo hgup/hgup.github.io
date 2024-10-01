@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "88ee2409589b8f57",
+            "id": "283e35bfabb6d59f",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -22,31 +22,19 @@
             }
           },
           {
-            "id": "283e35bfabb6d59f",
+            "id": "6b0ba542a3cf4e48",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "explorations/Learn Regex.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6cdcef3e8baca0b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LABS/index.md",
+                "file": "LABS/Projects/Cashless.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -120,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LABS/index.md",
+                "file": "LABS/Projects/Cashless.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LABS/index.md",
+                "file": "LABS/Projects/Cashless.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LABS/index.md"
+                "file": "LABS/Projects/Cashless.md"
               }
             }
           }
@@ -187,15 +175,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6cdcef3e8baca0b2",
+  "active": "6b0ba542a3cf4e48",
   "lastOpenFiles": [
-    "LABS/Projects/index.md",
+    "index.md",
     "LABS/index.md",
+    "LABS/Projects/index.md",
     "Academic/Actuarial Science/index.md",
     "Academic/Actuarial Science/DISC/index.md",
     "Academic/Actuarial Science/DISC/CAS-DISC-DA.md",
     "explorations/index.md",
-    "index.md",
     "explorations/Learn Regex.md",
     "attachments/Pasted image 20240930185100.png",
     "attachments/Pasted image 20240930185033.png",
