@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LABS/Projects/Cashless.md",
+                "file": "LABS/Projects/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LABS/Projects/Cashless.md",
+                "file": "LABS/Projects/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LABS/Projects/Cashless.md",
+                "file": "LABS/Projects/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LABS/Projects/Cashless.md"
+                "file": "LABS/Projects/index.md"
               }
             }
           }
@@ -177,6 +177,7 @@
   },
   "active": "6b0ba542a3cf4e48",
   "lastOpenFiles": [
+    "LABS/Projects/Cashless.md",
     "index.md",
     "LABS/index.md",
     "LABS/Projects/index.md",
@@ -205,7 +206,6 @@
     "notes/Regex.md",
     "explorations/Using Svelte and D3 to make visualizations.md",
     "attachments/Pasted image 20240930131822.png",
-    "LABS/Projects/Cashless.md",
     "attachments/Cashless 2024-09-29 13.59.10.excalidraw.md",
     "LABS/Projects",
     "LABS/Projects/Untitled.md",
