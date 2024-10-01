@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-01T03:41:37.669Z",
-      "total": 213,
+      "total": 489,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -85,7 +85,7 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 213,
+          "total": 489,
           "scenes": {
             "IS-LM Framework": 0,
             "Monopoly": 0,
@@ -105,7 +105,7 @@
             "Quants Summary": 0,
             "Market under Perfect Competition": 2,
             "The Ecochamber": 0,
-            "Existence of Equilibrium": 211
+            "Existence of Equilibrium": 487
           }
         }
       }

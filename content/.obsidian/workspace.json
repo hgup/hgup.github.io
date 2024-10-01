@@ -22,14 +22,24 @@
             }
           },
           {
-            "id": "aab001be86918ac9",
+            "id": "78e32fb19372d1f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LABS/Cashless.md",
-                "mode": "preview",
+                "file": "Academic/Economics/Existence of Equilibrium.md",
+                "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "18d690074742ce31",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.md"
               }
             }
           }
@@ -88,7 +98,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -108,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LABS/Cashless.md",
+                "file": "Academic/Economics/Existence of Equilibrium.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LABS/Cashless.md",
+                "file": "Academic/Economics/Existence of Equilibrium.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LABS/Cashless.md"
+                "file": "Academic/Economics/Existence of Equilibrium.md"
               }
             }
           }
@@ -175,17 +186,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aab001be86918ac9",
+  "active": "78e32fb19372d1f2",
   "lastOpenFiles": [
+    "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.md",
     "Academic/Economics/Existence of Equilibrium.md",
-    "LABS/Projects/index.md",
     "index.md",
+    "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.light.svg",
+    "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.dark.svg",
+    "Academic/Economics/index.md",
+    "LABS/Cashless.md",
+    "LABS/Projects/index.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.md",
     "Academic/Economics/Market under Perfect Competition.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.light.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.dark.svg",
-    "Academic/Economics/index.md",
-    "LABS/Cashless.md",
     "LABS/index.md",
     "Academic/Actuarial Science/index.md",
     "Academic/Actuarial Science/DISC/index.md",
@@ -203,8 +217,6 @@
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.md",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.light.svg",
     "attachments/Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.dark.svg",
-    "attachments/Pasted image 20240930133704.png",
-    "attachments/Pasted image 20240930133651.png",
     "explorations/Mastering Data Cleaning using Regex.md",
     "notes/Regex.md",
     "explorations/Using Svelte and D3 to make visualizations.md",
@@ -212,7 +224,6 @@
     "LABS/Projects",
     "LABS/Projects/Untitled.md",
     "Academic/Actuarial Science/Exam 5/Addressing Anomalies in Loss Data.md",
-    "Academic/Actuarial Science/Exam 5/index.md",
     "Academic/Actuarial Science/Exam 5",
     "Academic/Actuarial Science/DISC",
     "Academic/Actuarial Science/abc",
