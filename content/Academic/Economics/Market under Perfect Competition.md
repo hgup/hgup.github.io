@@ -58,5 +58,5 @@ $$
 
 
 [^1]: A.k.a Market demand and market supply
-[^2]: ![[Market under Perfect Competition 2024-09-30 13.49.53.excalidraw]]
+[^2]: ![[Market under Perfect Competition 2024-09-30 13.49.53.excalidraw.light.svg]]
 [^3]: $i^{th}$ firm supplies $S_i$
