@@ -23,4 +23,4 @@ This digital garden is a place for me (and you) to grow and learn. I hope you en
 
 Sometimes, you will find some notes with a [[mathpad]] where some calculations are performed. You can quickly open up [numbr.dev](https://numbr.dev/#new) to paste these calculations there to verify them (or just for fun).
 
-![[Duopoly Markets contd.#^b6f6d4]] %%
+![[Collusion Model#^b6f6d4]] %%

@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-01T03:41:37.669Z",
-      "total": 743,
+      "total": 3789,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -85,28 +85,32 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 743,
+          "total": 3789,
           "scenes": {
+            "India's Investment Function Simulation": 67,
             "IS-LM Framework": 0,
             "Monopoly": 0,
             "Market Differentiation": 0,
             "Monetarist School of Economic Thought": 10,
             "Time Series Data Analysis in R": 0,
             "Growth Theories & Models": 0,
-            "Duopoly Markets": 0,
+            "Duopoly Markets": 18,
+            "Quasi-Competitive Solution": 333,
+            "Collusion Model": 1188,
+            "Cournot Model": 938,
+            "Stackelberg Model": 569,
+            "Kinked Demand Curve Model": 0,
             "Roles of Operations of Banks": 0,
             "Difference Equations": 0,
-            "Duopoly Markets contd.": 0,
-            "India's Investment Function Simulation": 67,
             "Steady State - Balanced Growth Model": 8,
-            "Kinked Demand Curve Model": 0,
             "Cob-web Market Model": 0,
             "Industrial Agriculture Unit-III recap": 0,
             "Quants Summary": 0,
             "Market under Perfect Competition": 2,
             "The Ecochamber": 0,
             "Existence of Equilibrium": 487,
-            "Endogenous Growth Model": 169
+            "Endogenous Growth Model": 169,
+            "Cournot Model 1": 0
           }
         }
       }

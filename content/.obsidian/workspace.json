@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "283e35bfabb6d59f",
+            "id": "78e32fb19372d1f2",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -22,31 +22,19 @@
             }
           },
           {
-            "id": "78e32fb19372d1f2",
+            "id": "6c5593e9fba91a9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Economics/Steady State - Balanced Growth Model.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4f50bc67a9a9a071",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Academic/Economics/Endogenous Growth Model.md",
+                "file": "Academic/Economics/Duopoly Markets.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Economics/Endogenous Growth Model.md",
+                "file": "Academic/Economics/Duopoly Markets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Economics/Endogenous Growth Model.md",
+                "file": "Academic/Economics/Duopoly Markets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Economics/Endogenous Growth Model.md"
+                "file": "Academic/Economics/Duopoly Markets.md"
               }
             }
           }
@@ -188,38 +176,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4f50bc67a9a9a071",
+  "active": "6c5593e9fba91a9b",
   "lastOpenFiles": [
-    "index.md",
-    "Academic/Economics/Steady State - Balanced Growth Model.md",
-    "Academic/Economics/Endogenous Growth Model.md",
+    "Academic/Economics/Collusion Model.md",
+    "Academic/Economics/Quasi-Competitive Solution.md",
+    "Academic/Economics/Duopoly Markets.md",
+    "Academic/Economics/Kinked Demand Curve Model.md",
     "Academic/Economics/Cob-web Market Model.md",
+    "Academic/Economics/Steady State - Balanced Growth Model.md",
+    "Academic/Economics/Difference Equations.md",
+    "Academic/Economics/Roles of Operations of Banks.md",
+    "Academic/Economics/Stackelberg Model.md",
+    "Academic/Economics/Cournot Model.md",
+    "index.md",
+    "Academic/Economics/Duopoly Markets contd. 1.md",
+    "notes/Cournot Model.md",
+    "Academic/Economics/India's Investment Function Simulation.md",
     "Academic/Economics/Industrial Agriculture Unit-III recap.md",
     "Academic/Economics/Quants Summary.md",
     "Academic/Economics/Market under Perfect Competition.md",
+    "Academic/Economics/Endogenous Growth Model.md",
     "Academic/Economics/The Ecochamber.md",
     "Academic/Economics/Existence of Equilibrium.md",
     "notes/R&D.md",
     "Academic/Economics/Monetarist School of Economic Thought.md",
-    "Academic/Economics/India's Investment Function Simulation.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.md",
     "notes/GDP vs GVA.md",
     "notes/NDP.md",
     "notes/NFIFA.md",
-    "notes/Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.light.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.dark.svg",
-    "Academic/Economics/index.md",
-    "LABS/Cashless.md",
-    "LABS/Projects/index.md",
-    "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.light.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.dark.svg",
-    "LABS/index.md",
-    "Academic/Actuarial Science/index.md",
-    "Academic/Actuarial Science/DISC/index.md",
-    "Academic/Actuarial Science/DISC/CAS-DISC-DA.md",
-    "explorations/index.md",
     "attachments/Pasted image 20240930185100.png",
     "attachments/Pasted image 20240930185033.png",
     "attachments/Pasted image 20240930184926.png",

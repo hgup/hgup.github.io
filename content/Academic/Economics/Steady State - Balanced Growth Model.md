@@ -38,7 +38,7 @@ date: 2024-09-24 09:18
 > - We assume that constant fraction $d$ of the existing capital stock, depreciates each period.
 > 	- So the total depreciation is $dk$.
 
-## Explanation
+# Explanation
 
 The steady state balanced growth is defined to be a situation where $y, k, L$ are growing at the same rate over a period of time.
 $$
