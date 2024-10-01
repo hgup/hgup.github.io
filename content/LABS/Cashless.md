@@ -1,7 +1,8 @@
 ---
 title: Cashless
 draft: false
-tags: 
+tags:
+  - "#project"
 date: 2024-09-29 13:58
 ---
 # Understanding the flow:
