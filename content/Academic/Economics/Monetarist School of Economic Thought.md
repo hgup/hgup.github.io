@@ -81,7 +81,7 @@ So, a phillips curve in the long run is **Vertical**
 > - We will be using the phillips curve to understand this phenomena. The Phillip’s curve shows the negative relationship between unemployment rate $U$ and inflation $\Pi$
 > - **Short run**
 > 	- Suppose the economy has a natural unemployment rate $U$ of $6\%$ and correspondingly inflation of $0$.
-> 	![[Monetarist-School-of-Economic-Thought-2024-09-17-11.22.34.excalidraw]]
+> 	 ![[Monetarist School of Economic Thought 2024-09-17 11.22.34.excalidraw.light.svg]]
 > 	- If the monetary authorities want to bring down the unemployment rate and as a result increase the money supply from $3\%$ to $5\%$.
 > 	- Due to this, the economy moves from point $A$ to point $B$. Thereby, reducing the unemployment $U = 6\% \to 4\%$ but at a higher inflation rate of $\Pi = 0\% \to 2\%$.
 > 	- Thus, in the short run, the monetary authorities are able to reduce the unemployment rate from its natural level.

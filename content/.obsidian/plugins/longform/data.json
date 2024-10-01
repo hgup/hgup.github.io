@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-01T03:41:37.669Z",
-      "total": 489,
+      "total": 499,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -85,12 +85,12 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 489,
+          "total": 499,
           "scenes": {
             "IS-LM Framework": 0,
             "Monopoly": 0,
             "Market Differentiation": 0,
-            "Monetarist School of Economic Thought": 0,
+            "Monetarist School of Economic Thought": 10,
             "Time Series Data Analysis in R": 0,
             "Growth Theories & Models": 0,
             "Duopoly Markets": 0,
