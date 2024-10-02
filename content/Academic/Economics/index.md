@@ -26,9 +26,9 @@ longform:
     - Quants Summary
     - Market under Perfect Competition
     - The Ecochamber
-    - Existence of Equilibrium
+    - Equilibrium
     - Endogenous Growth Model
-    - Cournot Model 1
+    - Marshallian Static Stability
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

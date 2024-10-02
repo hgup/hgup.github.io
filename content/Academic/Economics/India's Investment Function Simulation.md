@@ -16,3 +16,13 @@ all variables should be in the same scale. (current or constant)
 	- due to unavailability of data
 
 IIP is a proxy for GDP (but doesn’t contain all, only 17 major industries) for monthly data.
+
+### Macroeconomic Indicators
+
+- **GDP:** Gross Domestic Product provides a measure of overall economic activity.  
+    
+- **Investment Rates:** Data on investment as a percentage of GDP indicates the level of capital expenditure in the economy.
+- **Savings Rates:** High savings rates often correlate with increased investment potential.
+- **Inflation:** High inflation can erode the purchasing power of investments.  
+    
+- **Interest Rates:** Interest rates influence the cost of borrowing and can impact investment decisions.
