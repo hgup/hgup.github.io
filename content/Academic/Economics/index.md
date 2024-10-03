@@ -29,6 +29,7 @@ longform:
     - Equilibrium
     - Endogenous Growth Model
     - Marshallian Static Stability
+    - Dynamic Stability
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Academic/Data Science/index.md",
+  "selectedDraftVaultPath": "Academic/Economics/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-10-03T06:42:42.391Z",
-      "total": 35,
+      "total": 487,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -47,7 +47,7 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 0,
+          "total": 446,
           "scenes": {
             "India's Investment Function Simulation": 0,
             "IS-LM Framework": 0,
@@ -65,14 +65,15 @@
             "Roles of Operations of Banks": 0,
             "Difference Equations": 0,
             "Steady State - Balanced Growth Model": 0,
-            "Cob-web Market Model": 0,
+            "Cob-web Market Model": 1,
             "Industrial Agriculture Unit-III recap": 0,
             "Quants Summary": 0,
             "Market under Perfect Competition": 0,
             "The Ecochamber": 0,
             "Equilibrium": 0,
             "Endogenous Growth Model": 0,
-            "Marshallian Static Stability": 0
+            "Marshallian Static Stability": 0,
+            "Dynamic Stability": 445
           }
         },
         "Academic/Actuarial Science/index.md": {
@@ -113,9 +114,9 @@
           "scenes": {}
         },
         "Academic/Data Science/index.md": {
-          "total": 35,
+          "total": 41,
           "scenes": {
-            "Journey": 35
+            "Journey": 41
           }
         }
       }

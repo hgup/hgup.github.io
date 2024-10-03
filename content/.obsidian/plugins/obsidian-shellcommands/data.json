@@ -179,8 +179,8 @@
         "default": "start cmd /c \"jupyter notebook D:/analysis\""
       },
       "shells": {},
-      "alias": "Actuarial Notebook",
-      "icon": "sigma",
+      "alias": "nb",
+      "icon": "book",
       "confirm_execution": false,
       "ignore_error_codes": [],
       "input_contents": {

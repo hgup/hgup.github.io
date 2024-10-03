@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c4d80255260c9459",
+            "id": "94f934894578d9a9",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -22,31 +22,50 @@
             }
           },
           {
-            "id": "94f934894578d9a9",
+            "id": "fbb8a4dc0e70e5e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "explorations/Unknown Economic Jargons.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4aea52b13b951c3a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Academic/Data Science/Journey.md",
+                "file": "Academic/Economics/Dynamic Stability.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
+      },
+      {
+        "id": "e647e557993414d5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c1d867fe0369d0a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academic/Economics/Difference Equations.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9c8a0d8dfa5887db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academic/Economics/Cob-web Market Model.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +124,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 337.5,
+    "collapsed": true
   },
   "right": {
     "id": "5390f986a74ef251",
@@ -121,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Data Science/Journey.md",
+                "file": "Academic/Economics/Dynamic Stability.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +158,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Data Science/Journey.md",
+                "file": "Academic/Economics/Dynamic Stability.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Data Science/Journey.md"
+                "file": "Academic/Economics/Dynamic Stability.md"
               }
             }
           }
@@ -188,11 +208,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4aea52b13b951c3a",
+  "active": "fbb8a4dc0e70e5e9",
   "lastOpenFiles": [
-    "explorations/Unknown Economic Jargons.md",
-    "index.md",
+    "Academic/Economics/Cob-web Market Model.md",
+    "Academic/Economics/Dynamic Stability.md",
+    "attachments/Pasted image 20241003140032.png",
+    "Academic/Economics/Difference Equations.md",
+    "attachments/Pasted image 20241003135551.png",
+    "attachments/Pasted image 20241003135529.png",
+    "notes/Differential Equations.md",
+    "Academic/Economics/Equilibrium.md",
+    "Academic/Economics/Endogenous Growth Model.md",
+    "Academic/Economics/Marshallian Static Stability.md",
+    "Academic/Economics/Kinked Demand Curve Model.md",
+    "Academic/Economics/Time Series Data Analysis in R.md",
+    "Academic/Economics/Duopoly Markets.md",
+    "Academic/Economics/Roles of Operations of Banks.md",
+    "Academic/Economics/index.md",
     "Academic/Data Science/Journey.md",
+    "index.md",
+    "explorations/Unknown Economic Jargons.md",
     "Academic/Data Science/index.md",
     "Academic/Economics/India's Investment Function Simulation.md",
     "Academic/Data Science",
@@ -200,33 +235,17 @@
     "notes/GDP vs GVA.md",
     "explorations/index.md",
     "LABS/Cashless.md",
-    "Academic/Economics/Marshallian Static Stability.md",
     "attachments/Marshallian Static Stability 2024-10-01 13.36.58.excalidraw.md",
     "attachments/Marshallian Static Stability 2024-10-01 13.36.58.excalidraw.light.svg",
     "attachments/Marshallian Static Stability 2024-10-01 13.36.58.excalidraw.dark.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.md",
-    "Academic/Economics/Equilibrium.md",
-    "Academic/Economics/Endogenous Growth Model.md",
     "Academic/Economics/Growth Theories & Models.md",
-    "Academic/Economics/Duopoly Markets.md",
     "Academic/Economics/Collusion Model.md",
-    "Academic/Economics/Quasi-Competitive Solution.md",
-    "Academic/Economics/Kinked Demand Curve Model.md",
-    "Academic/Economics/Cob-web Market Model.md",
-    "Academic/Economics/Steady State - Balanced Growth Model.md",
-    "Academic/Economics/Difference Equations.md",
-    "Academic/Economics/Roles of Operations of Banks.md",
-    "Academic/Economics/Stackelberg Model.md",
-    "Academic/Economics/Cournot Model.md",
-    "Academic/Economics/Duopoly Markets contd. 1.md",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.light.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.dark.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.light.svg",
     "attachments/Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.dark.svg",
     "attachments/Pasted image 20240930185100.png",
-    "attachments/Pasted image 20240930185033.png",
-    "attachments/Pasted image 20240930184926.png",
-    "attachments/Pasted image 20240930135423.png",
     "LABS/Projects",
     "Academic/Actuarial Science/Exam 5",
     "Academic/Actuarial Science/DISC",

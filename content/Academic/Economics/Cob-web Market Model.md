@@ -61,6 +61,8 @@ There are three cases:
 | $II$  | <br>$\left\|\dfrac{\delta}{\beta}\right\| \gt 1$ $;\quad\delta \gt \beta$. | ![[Cob-web Market Model 2024-09-25 09.53.29.excalidraw.light.svg]] |
 | $III$ | <br>$\left\|\dfrac{\delta}{\beta}\right\| \gt 1$ $;\quad\delta \gt \beta$. | ![[Cob-web Market Model 2024-09-25 09.54.56.excalidraw.light.svg]] |
 
+^5021fd
+
 1. The time path is convergent and the market is dynamically stable.
 2. The current path $P_t$ will diverge more from the equilibrium price. The [[time path]] is divergent and the market is not dynamically stable
 3. In equation (4), the difference between $P_t$ and $P_e$ will remain same
