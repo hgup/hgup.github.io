@@ -11,6 +11,7 @@ longform:
     - Learn Regex
     - Mastering Data Cleaning using Regex
     - Using Svelte and D3 to make visualizations
+    - Unknown Economic Jargons
   ignoredFiles: []
 title: Explorations
 date: 2024-09-17
