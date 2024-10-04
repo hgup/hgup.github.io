@@ -47,22 +47,6 @@
           }
         ],
         "currentTab": 2
-      },
-      {
-        "id": "0483eceb8dea56a8",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "48ef457f855576c1",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md"
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -138,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
+                "file": "Academic/Economics/Expectations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
+                "file": "Academic/Economics/Expectations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md"
+                "file": "Academic/Economics/Expectations.md"
               }
             }
           }
@@ -205,9 +189,49 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48ef457f855576c1",
+  "floating": {
+    "id": "bc429f9960176e70",
+    "type": "floating",
+    "children": [
+      {
+        "id": "fda6589e2efe94a1",
+        "type": "window",
+        "children": [
+          {
+            "id": "2d9ea8a97d29dc3a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "67f5074970856414",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "attachments/Expectations 2024-10-04 11.49.35.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 256,
+        "y": 8,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0.5
+      }
+    ]
+  },
+  "active": "eb49e8333b815bff",
   "lastOpenFiles": [
+    "attachments/Expectations 2024-10-04 11.49.35.excalidraw.md",
     "Academic/Economics/Expectations.md",
+    "notes/expec.md",
+    "attachments/Expectations 2024-10-04 11.49.35.excalidraw.light.svg",
+    "attachments/Expectations 2024-10-04 11.49.35.excalidraw.dark.svg",
+    "notes/Policy Ineffectiveness Proposition.md",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
     "notes/Expectational Error.md",
     "notes/Inflation.md",
@@ -233,17 +257,12 @@
     "notes/Regex.md",
     "Academic/Data Science/Journey.md",
     "notes/spurious relationships.md",
-    "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.md",
-    "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.md",
     "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.light.svg",
     "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.dark.svg",
     "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.light.svg",
     "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.dark.svg",
-    "Academic/Data Science/index.md",
     "debug.log",
     "attachments/Pasted image 20241003140032.png",
-    "attachments/Pasted image 20241003135551.png",
-    "attachments/Pasted image 20241003135529.png",
     "Academic/Data Science",
     "LABS/Projects",
     "Academic/Actuarial Science/Exam 5",

@@ -32,6 +32,31 @@ For example[^8],
 - if $\lambda = 1$, we are over-correcting
 - if $\lambda = 0.7$, we are giving $70\%$ weightage for past mistakes.
 
+## Rational Expectations 
+
+We first discuss the limitations of Adaptive Expectations[^10]
+
+Rational expectations[^12] , where agents never make systematic errors and therefore the long run equilibrium position is always achieved and sustained except for random (non-systematic errors). Government intervention is powerless to affect the economy even in the short run[^16]
+
+### Assumptions[^11]
+
+1. Wages and prices are fully flexible
+2. Economic agents are rational, i.e. they intelligently pursue their self-interest.
+3. Perfectly competitive markets
+
+- When forming expectations, the individuals see all the available information[^13].[^11]
+- [[Muth]] in 1961 contributed to Rational Expectation.[^15]
+- PIP by Sargent and Wallace[^14]
+
+![[Expectations 2024-10-04 11.49.35.excalidraw.light.svg]]
+
+Assuming rational expectations, increasing money supply would shift the aggregate demand from $AD_1$ to $AD_2$ without reaction from the supply side. Thus equilibrium is at $E_2$.
+
+Later, when households realize that the **real-wage has fallen**, the Aggregate Supply curve will shift backward from $AS_1$ to $AS_2$ leading the equilibrium $E_3$, where the output $Y$ remains at the original level. Thus [[Neutrality of Money|money is neutral]].
+
+
+[^16]
+
 [^1]: [[Expectations]] are subjective in nature and they are assumptions about the events that are going to happen in the future.
 [^2]: Households form an expectations that price of commodities in the future will rise up and so the rational decision (to maximize the value of money spent) is to buy more of that product and store it for future use (when the rates will be high)
 [^3]: Producers may want to produce more in order to meet a rise in demand that they expect.
@@ -50,4 +75,19 @@ For example[^8],
 [^8]: That quantifies the Magnitude of correction. $\lambda$ is what percentage of mistakes are you giving to the past errors that you have made.
 	- $\lambda = 0 = 0\%$ you are not accounting for any correction
 	- $\lambda = 1 = 100\%$
-[^9]: Backward looking, recency bias, error always exists
+[^9]: Major limitations of Adaptive Expectations:
+	- There will always be +ve Expectational Error (there is an error so let me correct myself)
+	- 
+[^10]: Say the price of tomatoes have come up to $70$, farmers will expect a growth to $100$ and so all farmers start to sow tomatoes, so after 2 months we have a market which is flooded with tomatoes. Because of this the market price of tomatoes fall to $10$. So, the farmers now think that there is no profit in growing tomatoes and thus they stop growing, and the prices of the tomatoes come up to $70$ again. This happened because the farmers were not literate to understand the reason for why this price fluctuation was happening. Literacy is critical. We are entangled into the cob-web model.
+	- the reason was *scarcity*, which the farmers didn’t realize
+[^11]: Individuals form expectations based on available information.
+	- we have a set of information $\theta_t$
+	- **most important assumption**: Full and Free information (perfect competition, [[Classical Model]] assumptions).
+[^12]: This is closely associated to [[Neo-classical school of economic thought]]
+[^13]:  When information is free, there is no price for information. (Like trying to sell sand in the desert). And there is no scope for error (full information)
+[^14]: In rational expectations, the policies are not effective ([[Classical Model]]). Proved by [[Sargant]] and [[Wallace]] ([[Policy Ineffectiveness Proposition|PIP]])
+[^15]: This was developed by [[Muth]] in the 1960s.
+[^16]: In a normal scenario, we will notice that $M^S \to Y\uparrow$ (output rises due to increased money supply)
+	- $M^S\uparrow \to r\downarrow \to I\uparrow \to Y\uparrow$
+	- or with lag effect $M^S\uparrow \to P\uparrow \to \textrm{Profits}\uparrow \to \textrm{AS}\uparrow \to Y\uparrow$.
+	- or $M^S\uparrow \to r\downarrow \to \textrm{AD}\uparrow \to Y\uparrow$
