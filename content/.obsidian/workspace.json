@@ -34,6 +34,18 @@
             }
           },
           {
+            "id": "291c1eb7f4cced81",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/Base Shifting.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "8c7361cc6ba5560c",
             "type": "leaf",
             "state": {
@@ -58,7 +70,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -117,7 +129,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 337.5,
+    "collapsed": true
   },
   "right": {
     "id": "5390f986a74ef251",
@@ -133,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Economics/I M.A. Assignments.md",
+                "file": "notes/Base Shifting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Economics/I M.A. Assignments.md",
+                "file": "notes/Base Shifting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,11 +186,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Economics/I M.A. Assignments.md"
+                "file": "notes/Base Shifting.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -198,9 +212,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f93f2e655cb2dd00",
+  "active": "16f51fd493874b66",
   "lastOpenFiles": [
     "Academic/Economics/Duopoly Markets.md",
+    "notes/Base Shifting.md",
     "Academic/Economics/I M.A. Assignments.md",
     "notes/Duopoly.md",
     "Academic/Economics/Cournot Model.md",
@@ -227,7 +242,6 @@
     "attachments/Expectations 2024-10-04 11.49.35.excalidraw.dark.svg",
     "notes/Policy Ineffectiveness Proposition.md",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
-    "notes/Expectational Error.md",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.light.svg",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.dark.svg",
     "attachments/Pasted image 20241003190102.png",
