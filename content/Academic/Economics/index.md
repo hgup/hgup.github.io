@@ -6,7 +6,7 @@ longform:
   sceneFolder: /
   scenes:
     - Industrial Agriculture Unit-III recap
-    - Microeconomics Focus
+    - I M.A. Assignments
     - India's Investment Function Simulation
     - Market Differentiation
     - Monopoly
