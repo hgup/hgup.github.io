@@ -38,10 +38,14 @@ IIP is a proxy for GDP (but doesn’t contain all, only 17 major industries) for
 	- CPI for IW
 
 Useful regex
-```
+```regex
 (?<!\d{3,3}\ +)(?<=\ )\d{3,3}(?=\ )(?=\ +\d{3,3})
 ```
 First row of data
 
+For GFCF
+```regex
+(?<=^\d{4}-\d{2}\ +)[0-9.]+
+```
 
 - we will need to do a little bit of [[Base Shifting]]

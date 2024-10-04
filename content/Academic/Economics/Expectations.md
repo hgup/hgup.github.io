@@ -36,13 +36,14 @@ For example[^8],
 
 We first discuss the limitations of Adaptive Expectations[^10]
 
-Rational expectations[^12] , where agents never make systematic errors and therefore the long run equilibrium position is always achieved and sustained except for random (non-systematic errors). Government intervention is powerless to affect the economy even in the short run[^16]
-
 ### Assumptions[^11]
 
 1. Wages and prices are fully flexible
 2. Economic agents are rational, i.e. they intelligently pursue their self-interest.
 3. Perfectly competitive markets
+
+
+Rational expectations[^12] , where agents never make systematic errors and therefore the long run equilibrium position is always achieved and sustained except for random (non-systematic errors). Government intervention is powerless to affect the economy even in the short run[^16]
 
 - When forming expectations, the individuals see all the available information[^13].[^11]
 - [[Muth]] in 1961 contributed to Rational Expectation.[^15]
