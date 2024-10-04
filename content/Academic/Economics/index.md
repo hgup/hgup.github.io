@@ -6,6 +6,7 @@ longform:
   sceneFolder: /
   scenes:
     - Industrial Agriculture Unit-III recap
+    - Microeconomics Focus
     - India's Investment Function Simulation
     - Market Differentiation
     - Monopoly
@@ -31,6 +32,7 @@ longform:
       - Dynamic Stability
     - Endogenous Growth Model
     - Expectations
+    - Permanent Income Hypothesis
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

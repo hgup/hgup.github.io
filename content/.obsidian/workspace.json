@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a549efe2b2dfb31f",
+            "id": "09f10310d1d36908",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -22,12 +22,36 @@
             }
           },
           {
-            "id": "09f10310d1d36908",
+            "id": "f93f2e655cb2dd00",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Economics/Expectations.md",
+                "file": "Academic/Economics/Microeconomics Focus.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8c7361cc6ba5560c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academic/Economics/Duopoly Markets.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "198fc032a7c2eb2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academic/Economics/Dynamic Stability.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Economics/Expectations.md",
+                "file": "Academic/Economics/Microeconomics Focus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Economics/Expectations.md",
+                "file": "Academic/Economics/Microeconomics Focus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,17 +173,15 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Economics/Expectations.md"
+                "file": "Academic/Economics/Microeconomics Focus.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,12 +198,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "09f10310d1d36908",
+  "active": "f93f2e655cb2dd00",
   "lastOpenFiles": [
     "Academic/Economics/Duopoly Markets.md",
+    "Academic/Economics/Microeconomics Focus.md",
+    "notes/Duopoly.md",
+    "Academic/Economics/Cournot Model.md",
+    "Academic/Economics/Dynamic Stability.md",
+    "index.md",
+    "Academic/Economics/Cob-web Market Model.md",
+    "Academic/Economics/Permanent Income Hypothesis.md",
+    "Academic/Economics/index.md",
+    "explorations/How to use RBI Database.md",
+    "explorations/Learn Regex.md",
+    "explorations/Moai.md",
+    "explorations/CSS Display Stuff.md",
+    "explorations/Ray Dalio's Economic Machine.md",
+    "explorations/Mastering Data Cleaning using Regex.md",
+    "explorations/Using Svelte and D3 to make visualizations.md",
+    "explorations/Unknown Economic Jargons.md",
+    "explorations/index.md",
+    "Academic/Economics/Expectations.md",
     "Academic/Economics/India's Investment Function Simulation.md",
     "Academic/Economics/Industrial Agriculture Unit-III recap.md",
-    "Academic/Economics/Expectations.md",
     "attachments/Expectations 2024-10-04 11.49.35.excalidraw.md",
     "notes/expec.md",
     "attachments/Expectations 2024-10-04 11.49.35.excalidraw.light.svg",
@@ -189,26 +228,9 @@
     "notes/Policy Ineffectiveness Proposition.md",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
     "notes/Expectational Error.md",
-    "notes/Inflation.md",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.light.svg",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.dark.svg",
-    "Academic/Economics/Monetarist School of Economic Thought.md",
-    "Academic/Economics/IS-LM Framework.md",
-    "Academic/Economics/Monopoly.md",
-    "Academic/Economics/Market Differentiation.md",
-    "Academic/Economics/Cob-web Market Model.md",
-    "Academic/Economics/Growth Theories & Models.md",
-    "Academic/Economics/Endogenous Growth Model.md",
-    "Academic/Economics/index.md",
-    "notes/Base Shifting.md",
-    "index.md",
-    "LABS/index.md",
-    "explorations/Learn Regex.md",
-    "LABS/Using Regex to Extract info from PDF.md",
     "attachments/Pasted image 20241003190102.png",
-    "explorations/index.md",
-    "notes/Regex.md",
-    "Academic/Data Science/Journey.md",
     "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.light.svg",
     "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.dark.svg",
     "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.light.svg",

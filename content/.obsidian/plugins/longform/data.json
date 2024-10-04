@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-04T04:48:57.413Z",
-      "total": 1105,
+      "total": 1188,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -37,7 +37,7 @@
           }
         },
         "explorations/index.md": {
-          "total": 0,
+          "total": 46,
           "scenes": {
             "Moai": 0,
             "CSS Display Stuff": 0,
@@ -45,7 +45,8 @@
             "Learn Regex": 0,
             "Mastering Data Cleaning using Regex": 0,
             "Using Svelte and D3 to make visualizations": 0,
-            "Unknown Economic Jargons": 0
+            "Unknown Economic Jargons": 0,
+            "How to use RBI Database": 46
           }
         },
         "Academic/Data Science/index.md": {
@@ -55,9 +56,10 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 1105,
+          "total": 1142,
           "scenes": {
             "Industrial Agriculture Unit-III recap": 0,
+            "Microeconomics Focus": 37,
             "India's Investment Function Simulation": 21,
             "Market Differentiation": 0,
             "Monopoly": 0,
@@ -82,7 +84,8 @@
             "Marshallian Static Stability": 0,
             "Dynamic Stability": 0,
             "Endogenous Growth Model": 0,
-            "Expectations": 1084
+            "Expectations": 1084,
+            "Permanent Income Hypothesis": 0
           }
         },
         "Academic/Actuarial Science/index.md": {
