@@ -26,3 +26,22 @@ IIP is a proxy for GDP (but doesn’t contain all, only 17 major industries) for
 - **Inflation:** High inflation can erode the purchasing power of investments.  
     
 - **Interest Rates:** Interest rates influence the cost of borrowing and can impact investment decisions.
+
+
+- gross fixed capital formation
+
+	- interest rates
+		- call money rate
+	- inflation
+	- market capitalization (have to calculate) (proxy: equity price
+- WPI and CPI (end o fthe page)
+	- CPI for IW
+
+Useful regex
+```
+(?<!\d{3,3}\ +)(?<=\ )\d{3,3}(?=\ )(?=\ +\d{3,3})
+```
+First row of data
+
+
+- we will need to do a little bit of [[Base Shifting]]

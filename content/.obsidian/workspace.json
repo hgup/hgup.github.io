@@ -4,18 +4,61 @@
     "type": "split",
     "children": [
       {
-        "id": "ca40ff7bc206baad",
+        "id": "b425bda9143b031f",
         "type": "tabs",
         "children": [
           {
-            "id": "522b6f5a1bc95a61",
+            "id": "a549efe2b2dfb31f",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "09f10310d1d36908",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Data Science/Journey.md",
+                "file": "Academic/Economics/Duopoly Markets.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "eb49e8333b815bff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academic/Economics/Expectations.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "0483eceb8dea56a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48ef457f855576c1",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md"
               }
             }
           }
@@ -78,7 +121,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 337.5,
+    "collapsed": true
   },
   "right": {
     "id": "5390f986a74ef251",
@@ -94,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Data Science/Journey.md",
+                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Data Science/Journey.md",
+                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Data Science/Journey.md"
+                "file": "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md"
               }
             }
           }
@@ -161,8 +205,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "522b6f5a1bc95a61",
+  "active": "48ef457f855576c1",
   "lastOpenFiles": [
+    "Academic/Economics/Expectations.md",
+    "attachments/Expectations 2024-10-04 10.38.20.excalidraw.md",
+    "notes/Expectational Error.md",
+    "notes/Inflation.md",
+    "attachments/Expectations 2024-10-04 10.38.20.excalidraw.light.svg",
+    "attachments/Expectations 2024-10-04 10.38.20.excalidraw.dark.svg",
+    "Academic/Economics/Duopoly Markets.md",
+    "Academic/Economics/Monetarist School of Economic Thought.md",
+    "Academic/Economics/IS-LM Framework.md",
+    "Academic/Economics/Monopoly.md",
+    "Academic/Economics/Market Differentiation.md",
+    "Academic/Economics/Cob-web Market Model.md",
+    "Academic/Economics/Growth Theories & Models.md",
+    "Academic/Economics/Endogenous Growth Model.md",
+    "Academic/Economics/index.md",
+    "notes/Base Shifting.md",
+    "index.md",
+    "LABS/index.md",
+    "Academic/Economics/India's Investment Function Simulation.md",
+    "explorations/Learn Regex.md",
+    "LABS/Using Regex to Extract info from PDF.md",
+    "attachments/Pasted image 20241003190102.png",
+    "explorations/index.md",
+    "notes/Regex.md",
+    "Academic/Data Science/Journey.md",
     "notes/spurious relationships.md",
     "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.md",
     "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.md",
@@ -170,36 +239,12 @@
     "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.dark.svg",
     "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.light.svg",
     "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.dark.svg",
-    "Academic/Data Science/Journey.md",
     "Academic/Data Science/index.md",
     "debug.log",
-    "Academic/Economics/Difference Equations.md",
-    "Academic/Economics/Cob-web Market Model.md",
-    "index.md",
-    "Academic/Economics/Dynamic Stability.md",
     "attachments/Pasted image 20241003140032.png",
     "attachments/Pasted image 20241003135551.png",
     "attachments/Pasted image 20241003135529.png",
-    "notes/Differential Equations.md",
-    "Academic/Economics/Equilibrium.md",
-    "Academic/Economics/Endogenous Growth Model.md",
-    "Academic/Economics/Marshallian Static Stability.md",
-    "Academic/Economics/Kinked Demand Curve Model.md",
-    "Academic/Economics/Time Series Data Analysis in R.md",
-    "Academic/Economics/Duopoly Markets.md",
-    "Academic/Economics/Roles of Operations of Banks.md",
-    "Academic/Economics/index.md",
-    "explorations/Unknown Economic Jargons.md",
-    "Academic/Economics/India's Investment Function Simulation.md",
     "Academic/Data Science",
-    "Academic/Untitled.md",
-    "notes/GDP vs GVA.md",
-    "explorations/index.md",
-    "LABS/Cashless.md",
-    "attachments/Marshallian Static Stability 2024-10-01 13.36.58.excalidraw.md",
-    "attachments/Marshallian Static Stability 2024-10-01 13.36.58.excalidraw.light.svg",
-    "attachments/Marshallian Static Stability 2024-10-01 13.36.58.excalidraw.dark.svg",
-    "attachments/Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.light.svg",
     "LABS/Projects",
     "Academic/Actuarial Science/Exam 5",
     "Academic/Actuarial Science/DISC",

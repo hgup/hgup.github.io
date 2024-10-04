@@ -5,13 +5,15 @@ longform:
   workflow: Default Workflow
   sceneFolder: /
   scenes:
+    - Industrial Agriculture Unit-III recap
     - India's Investment Function Simulation
-    - IS-LM Framework
-    - Monopoly
     - Market Differentiation
+    - Monopoly
+    - IS-LM Framework
     - Monetarist School of Economic Thought
     - Time Series Data Analysis in R
     - Growth Theories & Models
+    - - Steady State - Balanced Growth Model
     - Duopoly Markets
     - - Quasi-Competitive Solution
       - Collusion Model
@@ -20,16 +22,15 @@ longform:
       - Kinked Demand Curve Model
     - Roles of Operations of Banks
     - Difference Equations
-    - Steady State - Balanced Growth Model
     - Cob-web Market Model
-    - Industrial Agriculture Unit-III recap
     - Quants Summary
     - Market under Perfect Competition
     - The Ecochamber
     - Equilibrium
+    - - Marshallian Static Stability
+      - Dynamic Stability
     - Endogenous Growth Model
-    - Marshallian Static Stability
-    - Dynamic Stability
+    - Expectations
   ignoredFiles: []
 title: Economics
 date: 2024-09-10
