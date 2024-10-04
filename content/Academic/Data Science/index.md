@@ -6,6 +6,7 @@ longform:
   sceneFolder: /
   scenes:
     - Journey
+    - Time Series
   ignoredFiles: []
 title: Data Science
 ---

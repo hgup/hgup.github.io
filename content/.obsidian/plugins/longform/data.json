@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Academic/Economics/index.md",
+  "selectedDraftVaultPath": "Academic/Data Science/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-10-04T04:48:57.413Z",
-      "total": 1619,
+      "total": 1638,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -52,15 +52,16 @@
         "Academic/Data Science/index.md": {
           "total": 0,
           "scenes": {
-            "Journey": 0
+            "Journey": 0,
+            "Time Series": 0
           }
         },
         "Academic/Economics/index.md": {
-          "total": 1573,
+          "total": 1592,
           "scenes": {
             "Industrial Agriculture Unit-III recap": 0,
             "I M.A. Assignments": 47,
-            "India's Investment Function Simulation": 442,
+            "India's Investment Function Simulation": 461,
             "Market Differentiation": 0,
             "Monopoly": 0,
             "IS-LM Framework": 0,

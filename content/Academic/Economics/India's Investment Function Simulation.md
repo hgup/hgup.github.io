@@ -1,7 +1,8 @@
 ---
 title: India's Investment Function Simulation
 draft: false
-tags: 
+tags:
+  - PECO102
 date: 2024-09-24 08:09
 ---
 # Background work
@@ -95,4 +96,5 @@ Period: 1979 to 2023
 
 # Methodology
 
-- Since there is high multicollinearity in the data and this is a time series data, we know that there is a very significant effect of trending here
+- Since there is high multicollinearity in the data and this is a time series data, we know that there is a very significant effect of trending here.
+- Suggestion was to use the first difference of the data to eliminate the trend and [[unit root test]]
