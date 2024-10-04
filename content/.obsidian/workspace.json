@@ -4,73 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b425bda9143b031f",
+        "id": "e379925a504a70fd",
         "type": "tabs",
         "children": [
           {
-            "id": "09f10310d1d36908",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "preview",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "f93f2e655cb2dd00",
+            "id": "f8c797e775500a23",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Economics/I M.A. Assignments.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "291c1eb7f4cced81",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/Base Shifting.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8c7361cc6ba5560c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Academic/Economics/Duopoly Markets.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "198fc032a7c2eb2f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Academic/Economics/Dynamic Stability.md",
+                "file": "Academic/Economics/India's Investment Function Simulation.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -129,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5,
-    "collapsed": true
+    "width": 337.5
   },
   "right": {
     "id": "5390f986a74ef251",
@@ -146,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Base Shifting.md",
+                "file": "Academic/Economics/India's Investment Function Simulation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Base Shifting.md",
+                "file": "Academic/Economics/India's Investment Function Simulation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Base Shifting.md"
+                "file": "Academic/Economics/India's Investment Function Simulation.md"
               }
             }
           }
@@ -212,15 +160,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "16f51fd493874b66",
+  "active": "f8c797e775500a23",
   "lastOpenFiles": [
-    "Academic/Economics/Duopoly Markets.md",
-    "notes/Base Shifting.md",
     "Academic/Economics/I M.A. Assignments.md",
+    "Academic/Economics/Industrial Agriculture Unit-III recap.md",
+    "Academic/Economics/Dynamic Stability.md",
+    "Academic/Economics/Duopoly Markets.md",
+    "index.md",
+    "notes/Base Shifting.md",
     "notes/Duopoly.md",
     "Academic/Economics/Cournot Model.md",
-    "Academic/Economics/Dynamic Stability.md",
-    "index.md",
     "Academic/Economics/Cob-web Market Model.md",
     "Academic/Economics/Permanent Income Hypothesis.md",
     "Academic/Economics/index.md",
@@ -235,7 +184,6 @@
     "explorations/index.md",
     "Academic/Economics/Expectations.md",
     "Academic/Economics/India's Investment Function Simulation.md",
-    "Academic/Economics/Industrial Agriculture Unit-III recap.md",
     "attachments/Expectations 2024-10-04 11.49.35.excalidraw.md",
     "notes/expec.md",
     "attachments/Expectations 2024-10-04 11.49.35.excalidraw.light.svg",

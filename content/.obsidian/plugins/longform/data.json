@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-04T04:48:57.413Z",
-      "total": 1198,
+      "total": 1619,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -56,11 +56,11 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 1152,
+          "total": 1573,
           "scenes": {
             "Industrial Agriculture Unit-III recap": 0,
             "I M.A. Assignments": 47,
-            "India's Investment Function Simulation": 21,
+            "India's Investment Function Simulation": 442,
             "Market Differentiation": 0,
             "Monopoly": 0,
             "IS-LM Framework": 0,
