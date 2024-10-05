@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Data Science/Time Series.md",
+                "file": "explorations/Fontsource fonts in TailwindCSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Data Science/Time Series.md",
+                "file": "explorations/Fontsource fonts in TailwindCSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Data Science/Time Series.md",
+                "file": "explorations/Fontsource fonts in TailwindCSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Data Science/Time Series.md"
+                "file": "explorations/Fontsource fonts in TailwindCSS.md"
               }
             }
           }
@@ -175,8 +175,12 @@
   },
   "active": "5c0414d068a78abb",
   "lastOpenFiles": [
-    "Academic/Data Science/index.md",
+    "explorations/SvelteKit.md",
+    "explorations/Fontsource fonts in TailwindCSS.md",
+    "explorations/index.md",
+    "LABS/index.md",
     "Academic/Data Science/Time Series.md",
+    "Academic/Data Science/index.md",
     "notes/unit root test.md",
     "Academic/Economics/India's Investment Function Simulation.md",
     "Academic/Economics/I M.A. Assignments.md",
@@ -197,10 +201,6 @@
     "explorations/Ray Dalio's Economic Machine.md",
     "explorations/Mastering Data Cleaning using Regex.md",
     "explorations/Using Svelte and D3 to make visualizations.md",
-    "explorations/Unknown Economic Jargons.md",
-    "explorations/index.md",
-    "Academic/Economics/Expectations.md",
-    "attachments/Expectations 2024-10-04 11.49.35.excalidraw.md",
     "attachments/Expectations 2024-10-04 11.49.35.excalidraw.light.svg",
     "attachments/Expectations 2024-10-04 11.49.35.excalidraw.dark.svg",
     "attachments/Expectations 2024-10-04 10.38.20.excalidraw.light.svg",
