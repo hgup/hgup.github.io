@@ -1,52 +1,39 @@
 {
   "main": {
-    "id": "ebc987e539fb2a0d",
+    "id": "6d7d2a586d404122",
     "type": "split",
     "children": [
       {
-        "id": "e379925a504a70fd",
+        "id": "c199881306aa348f",
         "type": "tabs",
         "children": [
           {
-            "id": "f8c797e775500a23",
+            "id": "2f1dd0f1a41e71e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Economics/India's Investment Function Simulation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5c0414d068a78abb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "explorations/Fontsource fonts in TailwindCSS.md",
+                "file": "Academic/Actuarial Science/Exam 5/index.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "a6b41e16005a5560",
+    "id": "78b541aa9047cccf",
     "type": "split",
     "children": [
       {
-        "id": "bfdfe25f81757d06",
+        "id": "a64af836b3246a6f",
         "type": "tabs",
         "children": [
           {
-            "id": "5ebc7f06b4cb5c3b",
+            "id": "a601a5e02c603136",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,22 +43,22 @@
             }
           },
           {
-            "id": "1e44244526188bed",
+            "id": "e688f45dd8137397",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "proxy",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "byCreatedTime"
+                "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "7de75e0a52d49db2",
+            "id": "880f9ae2f37042b8",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -79,35 +66,35 @@
             }
           },
           {
-            "id": "a3d370bbf107eb34",
+            "id": "f8f9bf85299a6509",
             "type": "leaf",
             "state": {
               "type": "VIEW_TYPE_LONGFORM_EXPLORER",
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "5390f986a74ef251",
+    "id": "3c10cf3923d54a73",
     "type": "split",
     "children": [
       {
-        "id": "be0e6b56609eeebb",
+        "id": "4efe109be7f2e96d",
         "type": "tabs",
         "children": [
           {
-            "id": "5f65aceb93d8f863",
+            "id": "41123dc4420b4032",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "explorations/Fontsource fonts in TailwindCSS.md",
+                "file": "Academic/Actuarial Science/Exam 5/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,19 +106,19 @@
             }
           },
           {
-            "id": "46886fee1d4722e2",
+            "id": "480119fd7846ab04",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "explorations/Fontsource fonts in TailwindCSS.md",
+                "file": "Academic/Actuarial Science/Exam 5/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "42ff1d5eaf7f56fa",
+            "id": "4857c80541054349",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -142,84 +129,53 @@
             }
           },
           {
-            "id": "16f51fd493874b66",
+            "id": "a8f091a3bed73495",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "explorations/Fontsource fonts in TailwindCSS.md"
+                "file": "Academic/Actuarial Science/Exam 5/index.md"
               }
             }
+          },
+          {
+            "id": "2c30a277bc18337c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-shellcommands:Shell commands: Custom variables": false,
-      "homepage:Open homepage": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "homepage:Open homepage": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-importer:Open Importer": false
     }
   },
-  "active": "5c0414d068a78abb",
+  "active": "2f1dd0f1a41e71e8",
   "lastOpenFiles": [
-    "explorations/SvelteKit.md",
-    "explorations/Fontsource fonts in TailwindCSS.md",
-    "explorations/index.md",
-    "LABS/index.md",
-    "Academic/Data Science/Time Series.md",
-    "Academic/Data Science/index.md",
-    "notes/unit root test.md",
-    "Academic/Economics/India's Investment Function Simulation.md",
-    "Academic/Economics/I M.A. Assignments.md",
-    "Academic/Economics/Industrial Agriculture Unit-III recap.md",
-    "Academic/Economics/Dynamic Stability.md",
-    "Academic/Economics/Duopoly Markets.md",
-    "index.md",
-    "notes/Base Shifting.md",
-    "notes/Duopoly.md",
-    "Academic/Economics/Cournot Model.md",
-    "Academic/Economics/Cob-web Market Model.md",
-    "Academic/Economics/Permanent Income Hypothesis.md",
+    "Academic/Actuarial Science/Exam 5/Addressing Anomalies in Loss Data.md",
+    "Academic/Actuarial Science/index.md",
     "Academic/Economics/index.md",
-    "explorations/How to use RBI Database.md",
-    "explorations/Learn Regex.md",
-    "explorations/Moai.md",
-    "explorations/CSS Display Stuff.md",
-    "explorations/Ray Dalio's Economic Machine.md",
-    "explorations/Mastering Data Cleaning using Regex.md",
-    "explorations/Using Svelte and D3 to make visualizations.md",
-    "attachments/Expectations 2024-10-04 11.49.35.excalidraw.light.svg",
-    "attachments/Expectations 2024-10-04 11.49.35.excalidraw.dark.svg",
-    "attachments/Expectations 2024-10-04 10.38.20.excalidraw.light.svg",
-    "attachments/Expectations 2024-10-04 10.38.20.excalidraw.dark.svg",
-    "attachments/Pasted image 20241003190102.png",
-    "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.light.svg",
-    "attachments/spurious relationships 2024-10-03 15.32.08.excalidraw.dark.svg",
-    "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.light.svg",
-    "attachments/spurious relationship 2024-10-03 15.25.41.excalidraw.dark.svg",
-    "debug.log",
-    "attachments/Pasted image 20241003140032.png",
-    "Academic/Data Science",
-    "LABS/Projects",
-    "Academic/Actuarial Science/Exam 5",
-    "Academic/Actuarial Science/DISC",
-    "Academic/Actuarial Science/abc",
-    "Academic/actuarial",
-    "templates",
-    "public/tags/finance.html",
-    "public/tags/SEMINAR.html"
+    "Untitled.md"
   ]
 }

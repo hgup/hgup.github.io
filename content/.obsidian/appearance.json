@@ -1,8 +1,5 @@
 {
   "cssTheme": "Minimal",
   "theme": "moonstone",
-  "accentColor": "",
-  "textFontFamily": "Inter",
-  "monospaceFontFamily": "JetBrainsMono Nerd Font Mono",
-  "baseFontSize": 17
+  "accentColor": "#5cabf5"
 }

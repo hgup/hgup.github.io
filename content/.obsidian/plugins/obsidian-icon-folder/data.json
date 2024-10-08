@@ -7,120 +7,36 @@
     "iconColor": null,
     "recentlyUsedIcons": [
       "BoBxNote",
-      "BoBxConversation",
-      "BoBxMusic",
-      "BoBxsPiano",
-      "BoBxsFlask"
+      "LiCloudFog",
+      "LiMusic3",
+      "LiMusic4",
+      "BoBxsGraduation"
     ],
     "recentlyUsedIconsSize": 5,
-    "rules": [
-      {
-        "rule": " - Maps of Content",
-        "icon": "BoBxGlobeAlt",
-        "for": "folders",
-        "order": 0
-      },
-      {
-        "rule": " - Projects",
-        "icon": "BoBxsPen",
-        "for": "folders",
-        "order": 1
-      },
-      {
-        "rule": " - Areas",
-        "icon": "BoBxsPackage",
-        "for": "folders",
-        "order": 2
-      },
-      {
-        "rule": " - Resources",
-        "icon": "BoBxsBook",
-        "for": "folders",
-        "order": 3
-      },
-      {
-        "rule": " - Fleeting",
-        "icon": "BoBxsPencil",
-        "for": "folders",
-        "order": 4
-      },
-      {
-        "rule": "- Daily",
-        "icon": "BoBxCalendarEvent",
-        "for": "folders",
-        "order": 5
-      },
-      {
-        "rule": "- Meta",
-        "icon": "BoBxSelection",
-        "for": "folders",
-        "order": 6
-      },
-      {
-        "rule": "- Templates",
-        "icon": "BoBxRuler",
-        "for": "everything",
-        "order": 7
-      },
-      {
-        "rule": "- Permanent",
-        "icon": "BoBxsFile",
-        "for": "everything",
-        "order": 8
-      },
-      {
-        "rule": "- Archives",
-        "icon": "BoBxsArchive",
-        "for": "folders",
-        "order": 9
-      }
-    ],
+    "rules": [],
     "extraMargin": {
       "top": 0,
-      "right": 2,
+      "right": 4,
       "bottom": 0,
       "left": 0
     },
     "iconInTabsEnabled": false,
     "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
     "iconInFrontmatterEnabled": false,
-    "iconsBackgroundCheckEnabled": false,
-    "iconsInNotesEnabled": true,
     "iconInFrontmatterFieldName": "icon",
     "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
     "iconsInLinksEnabled": true,
     "iconIdentifier": ":",
-    "debugMode": false,
-    "iconInTitlePosition": "above",
-    "lucideIconPackType": "native"
+    "lucideIconPackType": "native",
+    "debugMode": false
   },
-  "03 - Actuaries": "BoBxsDetail",
-  "03 - Actuaries/Exam 5": "BoBxsSquare",
-  "07 - Resources": "BoBxsBook",
-  "09 - Daily": "BoBxCalendar",
-  "04 - Music": "BoBxMusic",
-  "05 - Random": "BoBxsMemoryCard",
-  "03 - Actuaries/Economics": "BoBxSquare",
-  "202407301421 Demand Analysis.md": "BoBxLemon",
-  "99 - Meta/Attachments/Brochure.pdf": "BoBxText",
-  "economics": "BoBxsGraduation",
-  "talks": "BoBxPodcast",
-  "music": "BoBxsPiano",
-  "content": "BoBxBookContent",
-  "docs": "BoBxDotsVerticalRounded",
-  "node_modules": "BoBxsShapes",
-  "content/notes": "BoBxNote",
-  "content/Academic": "BoBxsGraduation",
-  "content/explorations": "BoBxsTree",
-  "content/Music": "BoBxMusic",
-  "content/LABS": "BoBxsFlask",
-  "content/thoughts": "BoBxConversation",
-  "content/index.md": "BoBxHomeAlt",
   "Academic": "BoBxsGraduation",
-  "attachments": "BoBxsFile",
   "explorations": "BoBxsTree",
   "LABS": "BoBxsFlask",
-  "Music": "BoBxMusic",
-  "thoughts": "BoBxConversation",
+  "Music": "LiMusic3",
+  "thoughts": "LiCloudFog",
   "notes": "BoBxNote"
 }

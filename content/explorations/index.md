@@ -13,7 +13,7 @@ longform:
     - Using Svelte and D3 to make visualizations
     - Unknown Economic Jargons
     - How to use RBI Database
-    - SvelteKit
+    - Svelte 5 Examples
     - Fontsource fonts in TailwindCSS
   ignoredFiles: []
 title: Explorations
