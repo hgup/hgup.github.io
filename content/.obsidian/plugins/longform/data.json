@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-11T21:13:31.108Z",
-      "total": 3311,
+      "total": 0,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -129,10 +129,8 @@
           "scenes": {}
         },
         "Academic/Actuarial Science/Exam 6/index.md": {
-          "total": 3311,
-          "scenes": {
-            "Source Text": 3311
-          }
+          "total": 0,
+          "scenes": {}
         }
       }
     },

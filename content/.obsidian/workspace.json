@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 6/Source Text.md",
+                "file": "Academic/Actuarial Science/Exam 6/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 6/Source Text.md",
+                "file": "Academic/Actuarial Science/Exam 6/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 6/Source Text.md",
+                "file": "Academic/Actuarial Science/Exam 6/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 6/Source Text.md"
+                "file": "Academic/Actuarial Science/Exam 6/index.md"
               }
             }
           },
@@ -183,11 +183,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "09c3a812241a22e6",
+  "active": "a601a5e02c603136",
   "lastOpenFiles": [
-    "index.md",
-    "Academic/Actuarial Science/Exam 6/index.md",
     "Academic/Actuarial Science/Exam 6/Source Text.md",
+    "Academic/Actuarial Science/Exam 6/index.md",
+    "index.md",
     "templates/exam6 note.md",
     "templates/exam5 note.md",
     "Academic/Actuarial Science/Exam 6/Complete Text References.md",
