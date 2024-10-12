@@ -4,22 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "c199881306aa348f",
+        "id": "6a81c47944f464f0",
         "type": "tabs",
         "children": [
           {
-            "id": "2f1dd0f1a41e71e8",
+            "id": "a6a7ce11a49277f0",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "09c3a812241a22e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 5/index.md",
+                "file": "Academic/Actuarial Science/Exam 6/Source Text.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3c10cf3923d54a73",
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 5/index.md",
+                "file": "Academic/Actuarial Science/Exam 6/Source Text.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 5/index.md",
+                "file": "Academic/Actuarial Science/Exam 6/Source Text.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academic/Actuarial Science/Exam 5/index.md"
+                "file": "Academic/Actuarial Science/Exam 6/Source Text.md"
               }
             }
           },
@@ -161,18 +175,25 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-advanced-slides:Show Slide Preview": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "homepage:Open homepage": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "obsidian-shellcommands:Shell commands: Custom variables": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-importer:Open Importer": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "2f1dd0f1a41e71e8",
+  "active": "09c3a812241a22e6",
   "lastOpenFiles": [
+    "index.md",
+    "Academic/Actuarial Science/Exam 6/index.md",
+    "Academic/Actuarial Science/Exam 6/Source Text.md",
+    "templates/exam6 note.md",
+    "templates/exam5 note.md",
+    "Academic/Actuarial Science/Exam 6/Complete Text References.md",
+    "Academic/Actuarial Science/Untitled.md",
+    "Academic/Actuarial Science/Exam 6",
+    "Academic/Actuarial Science/Exam 5/index.md",
     "Academic/Actuarial Science/Exam 5/Addressing Anomalies in Loss Data.md",
     "Academic/Actuarial Science/index.md",
     "Academic/Economics/index.md",
