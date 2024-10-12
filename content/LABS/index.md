@@ -15,5 +15,6 @@ title: LABS
 date: 2024-09-17
 aliases:
   - experiment
+  - LABS
 ---
 ![[experiments--learning--laboratory.svg]]

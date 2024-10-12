@@ -3,19 +3,19 @@ title: Hursh Gupta's Digital Garden
 ---
 ![[garden.svg]]
 
-# Welcome to my Digital Garden!
+# A Digital Garden of Thoughts
 
-A place where I share my thoughts and ideas. It's like a personal library, a digital sketchbook, and a thought laboratory all rolled into one.
+Hey there, I am Hursh and this is my Digital Garden.
 
-I am learning to take notes on my laptop during my [[Academic/Economics/index|economics]] classes and make them as efficient as my paper-notebook notes (and better, searchable).
+I take notes and publish them here. Themes are various, but I mostly focus on
 
-At present, I am preparing for my [[Academic/Actuarial Science/index|Actuarial]] exams, and I post my understanding of its concepts here periodically, starting from [[Academic/Actuarial Science/Exam 5/index|Exam 5]].
+- [[Academic/index|Academics]] from the books
+- [[explorations/index|Explorations]] from beyond
+- [[LABS/index|LABS]] as in “a place where experiments take birth”
+- [[Music/index|Music]] because its a young love
 
-Apart from these there is a vast domain of things that interest me, I [[explorations/index|explore]] them to expand my view about the world. One of my fascinations and young love, [[Music/index|music]] is something I love to write about.
+Have fun exploring :)
 
-Whenever, I come across something new I make it a point to find out what it is and [[notes/index|note]] it down immediately as a habit. When these notes connect into ideas, I write my [[thoughts/index|thoughts]] on them.
-
-This digital garden is a place for me (and you) to grow and learn. I hope you enjoy  it as much as I enjoy creating it. I encourage you to leave comments or ask questions. I'd love to hear your thoughts and insights.
 
 %% ---
 

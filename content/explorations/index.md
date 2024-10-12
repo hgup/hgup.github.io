@@ -18,5 +18,7 @@ longform:
   ignoredFiles: []
 title: Explorations
 date: 2024-09-17
+aliases:
+  - Explorations
 ---
 ![[exploration-adventure-mystry.svg]]
