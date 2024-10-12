@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "09c3a812241a22e6",
+            "id": "d654f9dfc2a73e35",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,11 +183,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a601a5e02c603136",
+  "active": "d654f9dfc2a73e35",
   "lastOpenFiles": [
-    "Academic/Actuarial Science/Exam 6/Source Text.md",
+    "LABS/index.md",
     "Academic/Actuarial Science/Exam 6/index.md",
     "index.md",
+    "Academic/Actuarial Science/Exam 6/Source Text.md",
     "templates/exam6 note.md",
     "templates/exam5 note.md",
     "Academic/Actuarial Science/Exam 6/Complete Text References.md",

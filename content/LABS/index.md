@@ -13,5 +13,7 @@ longform:
   ignoredFiles: []
 title: LABS
 date: 2024-09-17
+aliases:
+  - experiment
 ---
 ![[experiments--learning--laboratory.svg]]

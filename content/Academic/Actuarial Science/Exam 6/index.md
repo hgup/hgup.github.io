@@ -9,10 +9,6 @@ longform:
   ignoredFiles: []
 title: Exam 6
 ---
-## The plan
-
-I will be reading each of the materials available (10 pages per day, not more not less) and create a 10-pagely summary. When I am done, I move on to the next material and repeat the process.
-
 ## Coverage (0/37)
 
 | Topic                                           | Link                                                                                      | Portion to Read                                                                                                                                                                                                                       |
