@@ -37,11 +37,11 @@ There are two parts to this exam, [[Ratemaking]] and [[Reserving]].
 
 - [[Insurance Basics]]
 	- [[Fundamental Insurance Equation]]
-	- [[Policies, Coverages & Claims]]
-	- [[Understanding Insurance Data]]
+	- Policies, Coverages & Claims
+	- Understanding Insurance Data
 - [[Ratemaking Process]]
 	- [[Addressing Anomalies in Loss Data]]
-	- [[Rate and Benefit Changes]]
+	- Rate and Benefit Changes
 	- [[Development]]
 	- [[Trending in Ratemaking|Trending]]
 	- [[Expenses and Profits]]
@@ -49,24 +49,24 @@ There are two parts to this exam, [[Ratemaking]] and [[Reserving]].
 - [[Risk Classification]]
 	- [[Risk Classification Fundamentals]]
 	- [[Univariate Classification (Traditional)]]
-	- [[Multivariate Classification]]
-	- [[Special Classification]]
-	- [[Credibility]]
-- [[Implementation]]
-	- [[Constraints and Considerations]]
-	- [[Finalizing Rates]]
-- [[Other Ratemaking Topics]]
-	- [[Claims-Made Policies]]
-	- [[Commercial Lines Ratemaking]]
-- [[Reserving Methods]]
-	- [[Goals of Reserving]]
-	- [[Chain Ladder Method]]
-	- [[Expected Claims Method]]
-	- [[Bornhuetter-Ferguson Technique]] & [[Benktander Methods]]
-	- [[Cape Cod Method]]
-	- [[Frequency-Severity Techniques]]
-	- [[Case Outstanding Techniques]]
-- [[Evaluating Reserving Techniques]]
-	- [[Berquist-Sherman Techniques]]
-	- [[Evaluating Reserving Techniques]]
-- [[Other Reserving Topics]]
+	- Multivariate Classification
+	- Special Classification
+	- Credibility
+- Implementation
+	- Constraints and Considerations
+	- Finalizing Rates
+- Other Ratemaking Topics
+	- Claims-Made Policies
+	- Commercial Lines Ratemaking
+- Reserving Methods
+	- Goals of Reserving
+	- Chain Ladder Method
+	- Expected Claims Method
+	- [[Bornhuetter-Ferguson Technique]] & Benktander Methods
+	- Cape Cod Method
+	- Frequency-Severity Techniques
+	- Case Outstanding Techniques
+- Evaluating Reserving Techniques
+	- Berquist-Sherman Techniques
+	- Evaluating Reserving Techniques
+- Other Reserving Topics

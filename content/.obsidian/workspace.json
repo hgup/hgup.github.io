@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d654f9dfc2a73e35",
+            "id": "053b2433b517bd7b",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -22,12 +22,12 @@
             }
           },
           {
-            "id": "b0f3ea0f971a21d6",
+            "id": "e9d5923630d30897",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Academic/Actuarial Science/Exam 5/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -88,7 +88,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -108,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "Academic/Actuarial Science/Exam 5/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "Academic/Actuarial Science/Exam 5/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "Academic/Actuarial Science/Exam 5/index.md"
               }
             }
           },
@@ -183,12 +184,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b0f3ea0f971a21d6",
+  "active": "e9d5923630d30897",
   "lastOpenFiles": [
-    "Music/index.md",
     "index.md",
-    "LABS/index.md",
+    "explorations/A blunder.md",
     "explorations/index.md",
+    "Music/index.md",
+    "LABS/index.md",
     "Academic/Actuarial Science/Exam 6/index.md",
     "Academic/Actuarial Science/Exam 6/Source Text.md",
     "templates/exam6 note.md",
