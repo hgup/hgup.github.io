@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Academic/Actuarial Science/Exam 5/index.md",
+  "selectedDraftVaultPath": "Academic/Economics/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-10-14T03:39:56.513Z",
-      "total": 0,
+      "total": 2124,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -53,7 +53,7 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 0,
+          "total": 2124,
           "scenes": {
             "Industrial Agriculture Unit-III recap": 0,
             "I M.A. Assignments": 0,
@@ -71,7 +71,7 @@
             "Cournot Model": 0,
             "Stackelberg Model": 0,
             "Kinked Demand Curve Model": 0,
-            "Roles of Operations of Banks": 0,
+            "Roles & operations of Banks": 2020,
             "Difference Equations": 0,
             "Cob-web Market Model": 0,
             "Quants Summary": 0,
@@ -82,7 +82,9 @@
             "Dynamic Stability": 0,
             "Endogenous Growth Model": 0,
             "Expectations": 0,
-            "Permanent Income Hypothesis": 0
+            "Permanent Income Hypothesis": 0,
+            "Financial Markets Presentations": 0,
+            "Stock Exchange of India": 104
           }
         },
         "Academic/Data Science/index.md": {

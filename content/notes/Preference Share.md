@@ -1,0 +1,1 @@
+- don’t have voting rights like [[Ordinary Share]]

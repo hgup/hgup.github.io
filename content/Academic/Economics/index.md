@@ -21,7 +21,7 @@ longform:
       - Cournot Model
       - Stackelberg Model
       - Kinked Demand Curve Model
-    - Roles of Operations of Banks
+    - Roles & operations of Banks
     - Difference Equations
     - Cob-web Market Model
     - Quants Summary
@@ -33,6 +33,9 @@ longform:
     - Endogenous Growth Model
     - Expectations
     - Permanent Income Hypothesis
+    - Financial Markets Presentations
+    - - Stock Exchange of India
+  sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Economics
 date: 2024-09-10

@@ -1,4 +1,6 @@
 {
   "showRibbon": false,
-  "vimMode": true
+  "vimMode": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "notes"
 }

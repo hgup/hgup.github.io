@@ -17,10 +17,3 @@ I take notes and publish them here. Themes are various, but I mostly focus on
 Have fun exploring :)
 
 
-%% ---
-
-## 🌎 Tour
-
-Sometimes, you will find some notes with a [[mathpad]] where some calculations are performed. You can quickly open up [numbr.dev](https://numbr.dev/#new) to paste these calculations there to verify them (or just for fun).
-
-![[Collusion Model#^b6f6d4]] %%

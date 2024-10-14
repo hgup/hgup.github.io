@@ -75,12 +75,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 332.5
   },
   "right": {
     "id": "3c10cf3923d54a73",
@@ -173,8 +172,25 @@
   },
   "active": "e9d5923630d30897",
   "lastOpenFiles": [
-    "thoughts/index.md",
+    "notes/Follow-on Public Offering.md",
+    "notes/Ordinary Share.md",
+    "tags/PECO105.md",
+    "tags/PECO104.md",
+    "tags/PECO103.md",
+    "tags/PECO102.md",
+    "tags/PECO101.md",
+    "Academic/Economics/Roles & operations of Banks.md",
+    "tags",
     "index.md",
+    "Academic/Economics/Stock Exchange of India.md",
+    "notes/Right Issue.md",
+    "notes/Initial Public Offering.md",
+    "notes/Preference Share.md",
+    "Academic/Economics/Financial Markets Presentations.md",
+    "Academic/Economics/index.md",
+    "Academic/Economics/Financial Markets.md",
+    "templates/note.md",
+    "thoughts/index.md",
     "Academic/Actuarial Science/Exam 5/index.md",
     "explorations/A blunder.md",
     "explorations/index.md",
@@ -183,13 +199,6 @@
     "Academic/Actuarial Science/Exam 6/index.md",
     "Academic/Actuarial Science/Exam 6/Source Text.md",
     "templates/exam6 note.md",
-    "templates/exam5 note.md",
-    "Academic/Actuarial Science/Exam 6/Complete Text References.md",
-    "Academic/Actuarial Science/Untitled.md",
-    "Academic/Actuarial Science/Exam 6",
-    "Academic/Actuarial Science/Exam 5/Addressing Anomalies in Loss Data.md",
-    "Academic/Actuarial Science/index.md",
-    "Academic/Economics/index.md",
-    "Untitled.md"
+    "Academic/Actuarial Science/Exam 6"
   ]
 }
