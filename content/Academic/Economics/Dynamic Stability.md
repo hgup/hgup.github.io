@@ -73,7 +73,7 @@ Due to damped oscillation[^1], there will be dynamic stability as $P_t$ will slo
 This leads to explosive oscillation, and $\therefore$  this leads to unstable equilibrium.
 ### Case 3: Slope(supply) = Slope(demand)
 
-> Suppose $\left|\dfrac{A}{a}\right| = 1$, then $\left(\dfrac{A}{a}\right)^t\to \infty$  as $t\to 1$.
+> Suppose $\left|\dfrac{A}{a}\right| = 1$, then $\left(\dfrac{A}{a}\right)^t\to 1$  as $t\to 1$.
 
 The oscillation will be of equal magnitude and equilibrium will be unstable.
 

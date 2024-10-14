@@ -35,6 +35,7 @@ longform:
     - Permanent Income Hypothesis
     - Financial Markets Presentations
     - - Stock Exchange of India
+    - Agricultural Marketing in India
   sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Economics

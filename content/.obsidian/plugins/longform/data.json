@@ -7,7 +7,7 @@
   "sessions": [
     {
       "start": "2024-10-14T03:39:56.513Z",
-      "total": 2124,
+      "total": 2948,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -53,7 +53,7 @@
           }
         },
         "Academic/Economics/index.md": {
-          "total": 2124,
+          "total": 2948,
           "scenes": {
             "Industrial Agriculture Unit-III recap": 0,
             "I M.A. Assignments": 0,
@@ -84,7 +84,8 @@
             "Expectations": 0,
             "Permanent Income Hypothesis": 0,
             "Financial Markets Presentations": 0,
-            "Stock Exchange of India": 104
+            "Stock Exchange of India": 104,
+            "Agricultural Marketing in India": 824
           }
         },
         "Academic/Data Science/index.md": {

@@ -59,7 +59,7 @@ There are three cases:
 | ----- | -------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | $I$   | $\left\|\dfrac{\delta}{\beta}\right\| \lt 1$ $;\quad\delta \lt \beta$.     | ![[Cob-web Market Model 2024-09-25 09.41.32.excalidraw.light.svg]] |
 | $II$  | <br>$\left\|\dfrac{\delta}{\beta}\right\| \gt 1$ $;\quad\delta \gt \beta$. | ![[Cob-web Market Model 2024-09-25 09.53.29.excalidraw.light.svg]] |
-| $III$ | <br>$\left\|\dfrac{\delta}{\beta}\right\| \gt 1$ $;\quad\delta \gt \beta$. | ![[Cob-web Market Model 2024-09-25 09.54.56.excalidraw.light.svg]] |
+| $III$ | <br>$\left\|\dfrac{\delta}{\beta}\right\| = 1$ $;\quad\delta = \beta$.     | ![[Cob-web Market Model 2024-09-25 09.54.56.excalidraw.light.svg]] |
 
 ^5021fd
 
