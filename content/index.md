@@ -3,7 +3,7 @@ title: Hursh Gupta's Digital Garden
 ---
 ![[garden.svg]]
 
-# A Digital Garden of Thoughts
+# A Digital Garden of [[thoughts/index|Thoughts]]
 
 Hey there, I am Hursh and this is my Digital Garden.
 
