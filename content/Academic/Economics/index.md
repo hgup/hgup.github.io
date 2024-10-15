@@ -37,6 +37,7 @@ longform:
     - - Stock Exchange of India
     - Agricultural Marketing in India
     - Welfare Economics
+    - Business Cycles
   sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Economics

@@ -58,7 +58,7 @@ $$
 $$
 MRCS of both consumers must be equal. This can be executed to the extended to $n$ commodities and $n$ consumers
 
-![[Welfare Economics 2024-10-15 09.48.34.excalidraw]]
+![[Welfare Economics 2024-10-15 09.48.34.excalidraw.light.svg]]
 
 ## Pareto Optimality in Production
 Suppose there are two producers using two inputs to produce two outputs with production function given by 

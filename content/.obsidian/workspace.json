@@ -22,12 +22,14 @@
             }
           },
           {
-            "id": "a1f342ea745d6f0e",
+            "id": "1893d791a250463d",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.md"
+                "file": "Academic/Economics/Business Cycles.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -86,7 +88,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -106,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.md",
+                "file": "attachments/Business Cycles 2024-10-15 11.51.53.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.md",
+                "file": "attachments/Business Cycles 2024-10-15 11.51.53.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.md"
+                "file": "attachments/Business Cycles 2024-10-15 11.51.53.excalidraw.md"
               }
             }
           },
@@ -181,15 +184,71 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a1f342ea745d6f0e",
+  "floating": {
+    "id": "f5384e8ca193d064",
+    "type": "floating",
+    "children": [
+      {
+        "id": "1ab29657c260687c",
+        "type": "window",
+        "children": [
+          {
+            "id": "af56b52140bfe0f2",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "296c1f1163b91322",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "attachments/Business Cycles 2024-10-15 11.51.53.excalidraw.md"
+                  }
+                }
+              },
+              {
+                "id": "ea24454df9a70a31",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "attachments/Business Cycles 2024-10-15 11.35.41.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 256,
+        "y": 8,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0.5
+      }
+    ]
+  },
+  "active": "296c1f1163b91322",
   "lastOpenFiles": [
+    "Academic/Economics/Business Cycles.md",
+    "attachments/Business Cycles 2024-10-15 11.51.53.excalidraw.md",
+    "attachments/Business Cycles 2024-10-15 11.35.41.excalidraw.md",
+    "attachments/Business Cycles 2024-10-15 11.51.53.excalidraw.light.svg",
+    "attachments/Business Cycles 2024-10-15 11.51.53.excalidraw.dark.svg",
+    "attachments/Business Cycles 2024-10-15 11.07.15.excalidraw.md",
     "index.md",
+    "attachments/Business Cycles 2024-10-15 11.35.41.excalidraw.light.svg",
+    "attachments/Business Cycles 2024-10-15 11.35.41.excalidraw.dark.svg",
+    "attachments/Business Cycles 2024-10-15 11.07.15.excalidraw.light.svg",
+    "attachments/Business Cycles 2024-10-15 11.07.15.excalidraw.dark.svg",
     "Academic/Economics/Welfare Economics.md",
     "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.md",
+    "Academic/Economics/Expectations.md",
+    "Academic/Economics/index.md",
     "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.light.svg",
     "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.dark.svg",
     "Excalidraw",
-    "Academic/Economics/index.md",
     "Academic/Economics/Dynamic Stability.md",
     "Academic/Economics/Cob-web Market Model.md",
     "Academic/Economics/Agricultural Marketing in India.md",
@@ -207,11 +266,6 @@
     "notes/Right Issue.md",
     "notes/Initial Public Offering.md",
     "notes/Preference Share.md",
-    "Academic/Economics/Financial Markets Presentations.md",
-    "Academic/Economics/Financial Markets.md",
-    "templates/note.md",
-    "thoughts/index.md",
-    "Academic/Actuarial Science/Exam 5/index.md",
     "Academic/Actuarial Science/Exam 6"
   ]
 }
