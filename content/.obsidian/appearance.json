@@ -1,5 +1,10 @@
 {
   "cssTheme": "Minimal",
   "theme": "moonstone",
-  "accentColor": "#5cabf5"
+  "accentColor": "#5cabf5",
+  "enabledCssSnippets": [
+    "hursh",
+    "CyanVoxel's General Tweaks",
+    "fonts"
+  ]
 }

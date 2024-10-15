@@ -36,6 +36,7 @@ longform:
     - Financial Markets Presentations
     - - Stock Exchange of India
     - Agricultural Marketing in India
+    - Welfare Economics
   sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Economics
