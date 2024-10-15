@@ -1,5 +1,5 @@
 {
-  "folder": "Excalidraw",
+  "folder": "attachments",
   "cropFolder": "",
   "annotateFolder": "",
   "embedUseExcalidrawFolder": false,
@@ -69,9 +69,9 @@
   "exportPaddingSVG": 10,
   "exportEmbedScene": false,
   "keepInSync": false,
-  "autoexportSVG": false,
+  "autoexportSVG": true,
   "autoexportPNG": false,
-  "autoExportLightAndDark": false,
+  "autoExportLightAndDark": true,
   "autoexportExcalidraw": false,
   "embedType": "excalidraw",
   "embedMarkdownCommentLinks": true,
