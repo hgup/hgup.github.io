@@ -32,12 +32,19 @@ longform:
       - Dynamic Stability
     - Endogenous Growth Model
     - Expectations
-    - Permanent Income Hypothesis
     - Financial Markets Presentations
     - - Stock Exchange of India
     - Agricultural Marketing in India
     - Welfare Economics
     - Business Cycles
+    - Consumption
+    - Absolute Income Hypothesis
+    - Arrow's Approach
+    - Relative Income Hypothesis
+    - Permanent Income Hypothesis
+    - Life Cycle Hypothesis
+    - Real Business Cycles
+    - Neo Keynesian Economics
   sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Economics
