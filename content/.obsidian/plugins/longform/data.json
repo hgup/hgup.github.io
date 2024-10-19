@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "explorations/index.md",
+  "selectedDraftVaultPath": "Academic/Data Science/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-10-19T03:48:19.528Z",
-      "total": 105,
+      "total": 153,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -54,9 +54,9 @@
           }
         },
         "Academic/Data Science/index.md": {
-          "total": 0,
+          "total": 48,
           "scenes": {
-            "Journey": 0,
+            "Journey": 48,
             "Time Series": 0
           }
         },
