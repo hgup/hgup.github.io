@@ -16,6 +16,8 @@ longform:
     - Svelte 5 Examples
     - Fontsource fonts in TailwindCSS
     - A blunder
+    - Guidelines on writing a good Research paper
+  sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Explorations
 date: 2024-09-17

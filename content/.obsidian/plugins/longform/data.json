@@ -1,13 +1,13 @@
 {
   "version": 3,
   "projects": {},
-  "selectedDraftVaultPath": "Academic/Economics/index.md",
+  "selectedDraftVaultPath": "explorations/index.md",
   "userScriptFolder": null,
   "sessionStorage": "data",
   "sessions": [
     {
       "start": "2024-10-19T03:48:19.528Z",
-      "total": 0,
+      "total": 105,
       "drafts": {
         "thoughts/index.md": {
           "total": 0,
@@ -37,7 +37,7 @@
           }
         },
         "explorations/index.md": {
-          "total": 0,
+          "total": 105,
           "scenes": {
             "Moai": 0,
             "CSS Display Stuff": 0,
@@ -49,7 +49,8 @@
             "How to use RBI Database": 0,
             "Svelte 5 Examples": 0,
             "Fontsource fonts in TailwindCSS": 0,
-            "A blunder": 0
+            "A blunder": 0,
+            "Guidelines on writing a good Research paper": 105
           }
         },
         "Academic/Data Science/index.md": {

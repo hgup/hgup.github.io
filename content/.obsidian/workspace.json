@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academic/Economics/Welfare Economics.md",
+                "file": "explorations/Guidelines on writing a good Research paper.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welfare Economics"
+              "title": "Guidelines on writing a good Research paper"
             }
           }
         ],
@@ -105,7 +105,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 332.5,
+    "collapsed": true
   },
   "right": {
     "id": "3c10cf3923d54a73",
@@ -208,6 +209,10 @@
   },
   "active": "35e887d6c42dc64d",
   "lastOpenFiles": [
+    "explorations/index.md",
+    "explorations/Guidelines on writing a good Research paper.md",
+    "explorations/Guidelines on writing a good research paper.md",
+    "Academic/Economics/Welfare Economics.md",
     "Academic/Economics/Neo Keynesian Economics.md",
     "index.md",
     "Academic/Economics/India's Investment Function Simulation.md",
@@ -225,7 +230,6 @@
     "attachments/Real Business Cycles 2024-10-18 10.35.38.excalidraw.md",
     "attachments/Real Business Cycles 2024-10-18 10.35.38.excalidraw.light.svg",
     "attachments/Real Business Cycles 2024-10-18 10.35.38.excalidraw.dark.svg",
-    "Academic/Economics/Welfare Economics.md",
     "Academic/Economics/Marshallian Static Stability.md",
     "Academic/Economics/Dynamic Stability.md",
     "attachments/Absolute Income Hypothesis 2024-10-16 16.07.59.excalidraw.md",
@@ -242,10 +246,7 @@
     "attachments/Business Cycles 2024-10-15 11.07.15.excalidraw.light.svg",
     "attachments/Business Cycles 2024-10-15 11.07.15.excalidraw.dark.svg",
     "attachments/Welfare Economics 2024-10-15 09.48.34.excalidraw.md",
-    "Academic/Economics/Expectations.md",
-    "Academic/Economics/index.md",
     "Excalidraw",
-    "Academic/Economics/Cob-web Market Model.md",
     "tags",
     "Academic/Actuarial Science/Exam 6"
   ]
