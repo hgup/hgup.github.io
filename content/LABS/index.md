@@ -10,6 +10,8 @@ longform:
     - Enhancing my Digital Garden
     - Cashless
     - Using Regex to Extract info from PDF
+    - NotebookLM for the first-reading
+  sceneTemplate: templates/note.md
   ignoredFiles: []
 title: LABS
 date: 2024-09-17

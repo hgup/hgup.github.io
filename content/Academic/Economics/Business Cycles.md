@@ -59,7 +59,6 @@ As the time progresses, the investments and the saving curves, continue on their
 
 - Both $Y_A$ and $Y_C$ are short-term equilibrium levels of output.
 - The output fluctuation happens between $Y_A$ and $Y_C$.
-- 
 
 
 [^1]: $y*$ is synonymous to multiple things: income, GDP
