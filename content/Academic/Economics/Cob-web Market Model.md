@@ -55,11 +55,11 @@ Now, the nature of the [[time path]] depends on $\dfrac{\delta}{\beta}$, i.e. ra
 There are three cases:
 
 
-| S.No. | Case                                                                       | Graph                                                              |
-| ----- | -------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| $I$   | $\left\|\dfrac{\delta}{\beta}\right\| \lt 1$ $;\quad\delta \lt \beta$.     | ![[Cob-web Market Model 2024-09-25 09.41.32.excalidraw.light.svg]] |
-| $II$  | <br>$\left\|\dfrac{\delta}{\beta}\right\| \gt 1$ $;\quad\delta \gt \beta$. | ![[Cob-web Market Model 2024-09-25 09.53.29.excalidraw.light.svg]] |
-| $III$ | <br>$\left\|\dfrac{\delta}{\beta}\right\| = 1$ $;\quad\delta = \beta$.     | ![[Cob-web Market Model 2024-09-25 09.54.56.excalidraw.light.svg]] |
+| S.No. | Case                                                                       | Graph                                                    |
+| ----- | -------------------------------------------------------------------------- | -------------------------------------------------------- |
+| $I$   | $\left\|\dfrac{\delta}{\beta}\right\| \lt 1$ $;\quad\delta \lt \beta$.     | ![[Cob-web Market Model 2024-09-25 09.41.32.excalidraw]] |
+| $II$  | <br>$\left\|\dfrac{\delta}{\beta}\right\| \gt 1$ $;\quad\delta \gt \beta$. | ![[Cob-web Market Model 2024-09-25 09.53.29.excalidraw]] |
+| $III$ | <br>$\left\|\dfrac{\delta}{\beta}\right\| = 1$ $;\quad\delta = \beta$.     | ![[Cob-web Market Model 2024-09-25 09.54.56.excalidraw]] |
 
 ^5021fd
 

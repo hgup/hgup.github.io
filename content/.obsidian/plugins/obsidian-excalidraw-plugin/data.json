@@ -24,7 +24,7 @@
   "allowImageCache": true,
   "allowImageCacheInScene": true,
   "displayExportedImageIfAvailable": false,
-  "previewMatchObsidianTheme": false,
+  "previewMatchObsidianTheme": true,
   "width": "400",
   "height": "",
   "dynamicStyling": "colorful",

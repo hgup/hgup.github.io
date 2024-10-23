@@ -5,6 +5,7 @@ tags:
   - PECO101
 date: 2024-10-15 09:19
 ---
+
 The objective of welfare economics is the evaluation of the desirability of various alternative economic states from the society’s point of view.
 
 - An economic state means a particular arrangement of various economic activities and resources of the economy.
@@ -15,7 +16,7 @@ The objective of welfare economics is the evaluation of the desirability of vari
 - An allocation is pareto optimal or pareto efficient if production and idstribution cannot be reorganized to increase utility of one or more individuals without decreasing utility of others.
 - An allocation is said to be pareto superior to another allocation if the utility of at least one individual is higher and utility of none is lower in this allocation
 
-> [!NOTE] 
+> [!NOTE]
 > This doesn’t mean superiority is optimality because there may be a better allocation than the superior one.
 
 ## Pareto Optimality in Consumption
@@ -26,9 +27,9 @@ Consider a two commodity, two consumer model
 
 Let $u_1(q_{11},q_{12})$ and $u_2(q_{21},q_{22})$ be the utility function of consumer[^1]
 
-Let $q_{11} + q_{21} = q_1^\circ$ and  $q_{21} + q_{22} = q_2^\circ$ be the total availability of commodities
+Let $q_{11} + q_{21} = q_1^\circ$ and $q_{21} + q_{22} = q_2^\circ$ be the total availability of commodities
 
-Let $u_2 = u_2^0$ be the utility level  enjoyed by the second consumer
+Let $u_2 = u_2^0$ be the utility level enjoyed by the second consumer
 
 $\therefore$ one must maximize his utility subject to the condition $u_2 = u_2^\circ$.
 
@@ -37,6 +38,7 @@ For this, the Lagrange function is given by
 $$
 L = u_1(q_{11},q_{12}) + \lambda(u_2 - u_2^\circ) = u_1(q_{11},q_{12}) + \lambda\left[u_2(q_1^\circ - q_{11}, q_2^\circ - q_{12}) - u_2^\circ\right]
 $$
+
 $$
 \begin{align*}
 \tag1
@@ -56,27 +58,31 @@ $$
 
 \end{align*}
 $$
+
 MRCS of both consumers must be equal. This can be executed to the extended to $n$ commodities and $n$ consumers
 
-![[Welfare Economics 2024-10-15 09.48.34.excalidraw.light.svg]]
+![[Welfare Economics 2024-10-15 09.48.34.excalidraw]]
 
 ## Pareto Optimality in Production
-Suppose there are two producers using two inputs to produce two outputs with production function given by 
+
+Suppose there are two producers using two inputs to produce two outputs with production function given by
 
 $$
 q_1 = f_1(x_{11}, x_{12})\qquad;\qquad q_2 = f_2(x_{21},x_{22})
 $$
 
 where
+
 $$
 x_{11} + x_{21} = x_1^\circ \qquad;\qquad x_{12} + x_{22} = x_2^\circ
 $$
 
-are the available input quantities and $q_1$ and $q_2$ are outputs. Just like the consumption here also we can show that[^2] 
+are the available input quantities and $q_1$ and $q_2$ are outputs. Just like the consumption here also we can show that[^2]
 
-$\boxed{\textrm{MRTS}_1 = \textrm{MRTS}_2}$  is the condition for pareto optimality condition on production.
+$\boxed{\textrm{MRTS}_1 = \textrm{MRTS}_2}$ is the condition for pareto optimality condition on production.
 
 ## Pareto optimality in General
+
 Consider an economy where there are $m$ consumers, $N$ producers, $n$ primary factors and $s$ produced goods.
 
 The condition for pareto optimality can be written in terms of various marginal rates of substitutions as follows:
@@ -86,6 +92,7 @@ The condition for pareto optimality can be written in terms of various marginal 
 3. The consumers MRCS between factor and goods must be equal to corresponding rates of the producers who will transfer factors into commodities i.e. the marginal products.
 
 [^1]: In this notation $q_{ij}$, $i$ is the consumer, $j$ is the commodity
+
 [^2]: To show this we need to use the Lagrange function
 
 $$

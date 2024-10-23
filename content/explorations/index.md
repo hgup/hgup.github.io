@@ -17,6 +17,7 @@ longform:
     - Fontsource fonts in TailwindCSS
     - A blunder
     - Guidelines on writing a good Research paper
+    - Runes in Svelte
   sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Explorations

@@ -118,7 +118,7 @@ And India’s growth rate is $7\%$
 > [!NOTE] Technical Productivity
 > $$ Y = AF(K,L) $$
 > $A$ captures the state of technical knowledge and overall efficiency.[^productivity]
-> ![[Growth Theories & Models 2024-09-20 11.29.05.excalidraw.light.svg]]
+> ![[Growth Theories & Models 2024-09-20 11.29.05.excalidraw]]
 > - Due to technical progress, $A$ will increase and the production function shifts upwards (RED) leading to higher levels of output $y_3$ for a given level of factor inputs (i.e. $K$ and $L$). Thus, shift in the production function $\implies$ increase in the productivity of factors.
 > - Before technical progress, rise in $k$ from $k_1 \to k_2$ leads to an increase in the level of income $y$ from $y_1 \to y_2$
 > - But, due to technical progress which is captured by increase in capital, $A$ shifts the production function upwards so that $y$ rises from $y_1 \to y_3$ even if $k$ stays at $k_1$

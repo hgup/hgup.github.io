@@ -24,7 +24,7 @@ Discussion [^1]  [^2] [^3] [^4] [^5] [^6] [^7] [^8]
 - $S = f(Y,K_+)$
 	 This happens because if we have more capital, economy is booming, more production, less demand, lesser prices, can spend less to consume more and also save more.
 
-![[Business Cycles 2024-10-15 11.07.15.excalidraw.light.svg]]
+![[Business Cycles 2024-10-15 11.07.15.excalidraw]]
 
 When MPS > MPI, we have a stable equilibrium and when MPI > MPS, we have an unstable equilibrium. For a stable equilibrium, the investment demand function $I$ should interest the savings supply function $S$ from above thus figure A gives us stable equilibrium and figure B gives us unstable equilibrium.
 
@@ -45,7 +45,7 @@ The MPS will be **relatively high** at low and high levels of income. This is be
 | High         | Low    | High   |
 
 
-![[Business Cycles 2024-10-15 11.35.41.excalidraw.light.svg]]
+![[Business Cycles 2024-10-15 11.35.41.excalidraw]]
 
 Combining the two non-linear investment and savings schedules or functions gives us multiple equilibria, i.e., we have a stable equilibrium at both point $A$ and point $C$, but we have unstable equilibrium at point $B$.
 
@@ -53,7 +53,7 @@ The limitation of this approach is that if you are point $A$, you remain at poin
 
 But, if you are at point $B$, you move towards point $A$ or point $B$ depending on which side of $B$ you are on.
 
-![[Business Cycles 2024-10-15 11.51.53.excalidraw.light.svg]]
+![[Business Cycles 2024-10-15 11.51.53.excalidraw]]
 
 As the time progresses, the investments and the saving curves, continue on their migrations, induced by capital accumulation, and as the time progresses, the investments and the saving curves, continue on their migrations, induced by capital decumulation.
 

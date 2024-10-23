@@ -13,12 +13,33 @@ const changeTheme = (e: CustomEventMap["themechange"]) => {
     {
       giscus: {
         setConfig: {
-          theme: theme,
+          theme: getThemeUrl(getThemeName(theme)),
         },
       },
     },
     "https://giscus.app",
   )
+}
+
+const getThemeName = (theme: string) => {
+  if (theme !== "dark" && theme !== "light") {
+    return theme
+  }
+  const giscusContainer = document.querySelector(".giscus") as GiscusElement
+  if (!giscusContainer) {
+    return theme
+  }
+  const darkGiscus = giscusContainer.dataset.darkTheme ?? "noborder_dark"
+  const lightGiscus = giscusContainer.dataset.lightTheme ?? "noborder_light"
+  return theme === "dark" ? darkGiscus : lightGiscus
+}
+
+const getThemeUrl = (theme: string) => {
+  const giscusContainer = document.querySelector(".giscus") as GiscusElement
+  if (!giscusContainer) {
+    return `https://giscus.app/themes/${theme}.css`
+  }
+  return `${giscusContainer.dataset.themeUrl ?? "https://giscus.app/themes"}/${theme}.css`
 }
 
 type GiscusElement = Omit<HTMLElement, "dataset"> & {
@@ -27,6 +48,9 @@ type GiscusElement = Omit<HTMLElement, "dataset"> & {
     repoId: string
     category: string
     categoryId: string
+    themeUrl: string
+    lightTheme: string
+    darkTheme: string
     mapping: "url" | "title" | "og:title" | "specific" | "number" | "pathname"
     strict: string
     reactionsEnabled: string
@@ -50,19 +74,18 @@ document.addEventListener("nav", () => {
   giscusScript.setAttribute("data-repo-id", giscusContainer.dataset.repoId)
   giscusScript.setAttribute("data-category", giscusContainer.dataset.category)
   giscusScript.setAttribute("data-category-id", giscusContainer.dataset.categoryId)
-  giscusScript.setAttribute("data-theme", "noborder_light")
   giscusScript.setAttribute("data-mapping", giscusContainer.dataset.mapping)
   giscusScript.setAttribute("data-strict", giscusContainer.dataset.strict)
   giscusScript.setAttribute("data-reactions-enabled", giscusContainer.dataset.reactionsEnabled)
   giscusScript.setAttribute("data-input-position", giscusContainer.dataset.inputPosition)
 
-  // const theme = document.documentElement.getAttribute("saved-theme")
-  // if (theme) {
-  //   giscusScript.setAttribute("data-theme", theme)
-  // }
+  const theme = document.documentElement.getAttribute("saved-theme")
+  if (theme) {
+    giscusScript.setAttribute("data-theme", getThemeUrl(getThemeName(theme)))
+  }
 
   giscusContainer.appendChild(giscusScript)
 
-  // document.addEventListener("themechange", changeTheme)
-  // window.addCleanup(() => document.removeEventListener("themechange", changeTheme))
+  document.addEventListener("themechange", changeTheme)
+  window.addCleanup(() => document.removeEventListener("themechange", changeTheme))
 })

@@ -1,3 +1,3 @@
 It is an application that allows you to create drawings very quickly and easily. The application itself is very light and thus won’t bottleneck the workflow. The best part is that we can easily embed these drawings right into our Obsidian notes and get a seamless experience like a notebook where we are allowed to not only write but also draw. I started taking my [[content/Academic/Economics-old/index|economics]]  notes in a similar fashion, where a lot of graphs and drawings are involved.
 
-![[Excalidraw 2024-09-19 10.39.06.excalidraw.light.svg]]
+![[Excalidraw 2024-09-19 10.39.06.excalidraw]]

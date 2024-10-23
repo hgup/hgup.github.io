@@ -6,7 +6,7 @@ import { SimpleSlug } from "./quartz/util/path"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [Component.RenderExcalidraw()],
   afterBody: [
     Component.Comments({
       provider: "giscus",
@@ -42,6 +42,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
+    Component.Darkmode(),
     Component.DesktopOnly(
       Component.Explorer({
         folderClickBehavior: "link",
@@ -82,7 +83,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search({ enablePreview: true }),
-    // Component.Darkmode(),
+    Component.Darkmode(),
     Component.DesktopOnly(
       Component.Explorer({
         folderClickBehavior: "link",

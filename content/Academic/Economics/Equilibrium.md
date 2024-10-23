@@ -8,7 +8,7 @@ date: 2024-10-01 09:15
 #  Equilibrium
 ## Existence of Equilibrium
 
-![[Existence of Equilibrium 2024-10-01 09.15.43.excalidraw.light.svg]]
+![[Existence of Equilibrium 2024-10-01 09.15.43.excalidraw]]
 
 Let the demand function $D = D(P)$, supply function be $S=S(P)$;
 - If they intersect in the first quadrant at one point, the equilibrium exists and it is unique. ($I$)
@@ -20,7 +20,7 @@ Let the demand function $D = D(P)$, supply function be $S=S(P)$;
 Suppose there is disturbance in the equilibrium either due to change in [[demand]] or change in [[supply]]. But the disturbance results in coming back to the original position, due to adjustment of market forces. Then the equilibrium is said to be **stable**, otherwise it is said to be **unstable**. This is called static stability.[^2]
 
 If the stability is achieved through several periods of times in the long run, then it is said to be in **dynamic stability**. In dynamic stability, $P_t$[^3] $\to P_e$[^4] as $t \to \infty$.
-![[Existence of Equilibrium 2024-10-01 09.31.34.excalidraw.light.svg]]
+![[Existence of Equilibrium 2024-10-01 09.31.34.excalidraw]]
 
 Excess demand function, $E(P) = D(P) - S(P)$ 
 

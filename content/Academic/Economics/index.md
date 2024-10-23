@@ -45,6 +45,7 @@ longform:
     - Life Cycle Hypothesis
     - Real Business Cycles
     - Neo Keynesian Economics
+    - SMAC (CES)
   sceneTemplate: templates/note.md
   ignoredFiles: []
 title: Economics

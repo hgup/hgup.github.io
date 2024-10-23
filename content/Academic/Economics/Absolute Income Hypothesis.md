@@ -41,7 +41,7 @@ $$
 | 300    | 280         | 20      |
 | 400    | 360         | 40      |
 |        |             |         |
-![[Absolute Income Hypothesis 2024-10-16 16.07.59.excalidraw.light.svg]]
+![[Absolute Income Hypothesis 2024-10-16 16.07.59.excalidraw]]
 
 # The Kuznet’s Paradox
 

@@ -14,7 +14,7 @@ In macroeconomics, expectations are given a central place. Expectations are the 
 
 
 # Types of Expectations
-![[Expectations 2024-10-04 10.38.20.excalidraw.light.svg]]
+![[Expectations 2024-10-04 10.38.20.excalidraw]]
 ## Adaptive Expectations[^5]
 
 Adaptive Expectations, wherein at each new time period (e.g. 2024, 2025) the individual revises his expectations in view of his [[Expectational Error]][^6], i.e. the discrepancy between the current price and the actual current price.
@@ -49,7 +49,7 @@ Rational expectations[^12] , where agents never make systematic errors and there
 - [[Muth]] in 1961 contributed to Rational Expectation.[^15]
 - PIP by Sargent and Wallace[^14]
 
-![[Expectations 2024-10-04 11.49.35.excalidraw.light.svg]]
+![[Expectations 2024-10-04 11.49.35.excalidraw]]
 
 Assuming rational expectations, increasing money supply would shift the aggregate demand from $AD_1$ to $AD_2$ without reaction from the supply side. Thus equilibrium is at $E_2$.
 

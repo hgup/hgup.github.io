@@ -132,13 +132,13 @@ There are four cases:
 - dampening and converging
 
 
-![[Difference Equations 2024-09-23 09.59.13.excalidraw.light.svg]]
+![[Difference Equations 2024-09-23 09.59.13.excalidraw]]
 
 ## 4. $-1\lt b \lt 0$
 
 - dampening and oscillating -> converting to $0$
 
-![[Difference Equations 2024-09-23 10.05.39.excalidraw.light.svg]]
+![[Difference Equations 2024-09-23 10.05.39.excalidraw]]
 
 After seeing 7 situations, there are four observations
 
