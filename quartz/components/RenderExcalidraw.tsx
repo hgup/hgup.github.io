@@ -8,5 +8,5 @@ export default (() => {
   const RenderExcalidraw = () => {}
   RenderExcalidraw.afterDOMLoaded = script
 
-  return RenderExcalidraw
+  return RenderExcalidraw as any
 }) satisfies QuartzComponentConstructor
