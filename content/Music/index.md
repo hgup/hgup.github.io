@@ -17,4 +17,4 @@ date: 2024-09-17
 aliases:
   - Music
 ---
-![[music--piano--musical-conducting--trumpet--orchest.svg]]
+![[music.svg]]

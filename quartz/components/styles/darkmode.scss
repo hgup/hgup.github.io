@@ -36,6 +36,22 @@
   }
 }
 
+[saved-theme="dark"] body[data-slug="index"] img[src*="garden\.svg"] {
+  filter: invert(1);
+}
+
+[saved-theme="dark"] body[data-slug="LABS/index"] img[src*="LABS\.svg"] {
+  filter: invert(1);
+}
+
+[saved-theme="dark"] body[data-slug="explorations/index"] img[src*="exploration\.svg"] {
+  filter: invert(1);
+}
+
+[saved-theme="dark"] body[data-slug="Music/index"] img[src*="music\.svg"] {
+  filter: invert(1);
+}
+
 :root .darkmode {
   & > #dayIcon {
     display: inline;

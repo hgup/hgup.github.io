@@ -19,4 +19,4 @@ aliases:
   - experiment
   - LABS
 ---
-![[experiments--learning--laboratory.svg]]
+![[LABS.svg]]

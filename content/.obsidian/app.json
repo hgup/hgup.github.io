@@ -2,5 +2,6 @@
   "showRibbon": false,
   "vimMode": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "notes"
+  "newFileFolderPath": "notes",
+  "alwaysUpdateLinks": true
 }
