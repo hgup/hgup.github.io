@@ -6,7 +6,7 @@
   <icon>https://hgup.github.io/favicon.png</icon>
   <link href="https://hgup.github.io" />
   <link href="https://hgup.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2025-05-07T17:34:01.037Z</updated>
+  <updated>2025-05-07T17:47:26.785Z</updated>
   <author>
     <name><![CDATA[Hursh Gupta]]></name>
   </author>
@@ -16,9 +16,9 @@
     <link href="https://hgup.github.io/about" />
     <id>https://hgup.github.io/about</id>
     <published>2025-05-07T00:00:00.000Z</published>
-    <updated>2025-05-07T17:33:33.219Z</updated>
+    <updated>2025-05-07T17:47:00.687Z</updated>
     <content type="html">
-      <![CDATA[<p data-svelte-h="svelte-ewo701">Hello, this is (yet another) blog site that I am trying to set up. Don’t judge.</p>]]>
+      <![CDATA[<p data-svelte-h="svelte-ewo701">Hello, this is (yet another) blog site that I am trying to set up. Don’t judge.</p> <p data-svelte-h="svelte-s95iwt">Okay now. I was working on this particular part. Don’t think of anything sus!</p>]]>
     </content>
     <category term="Me" scheme="https://hgup.github.io/?tags=Me" />
   </entry>
