@@ -32,6 +32,10 @@ export const footer: FooterConfig = {
       link: '/sitemap.xml',
       text: 'Sitemap',
     },
+    {
+      link: 'https://hgup.github.io/note',
+      text: 'Notes',
+    },
   ],
 }
 
