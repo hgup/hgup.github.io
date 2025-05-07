@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://hgup.github.io/</id>
+  <title><![CDATA[Hursh]]></title>
+  <subtitle><![CDATA[Actuary, Data Scientist & Web Dev]]></subtitle>
+  <icon>https://hgup.github.io/favicon.png</icon>
+  <link href="https://hgup.github.io" />
+  <link href="https://hgup.github.io/atom.xml" rel="self" type="application/atom+xml" />
+  <updated>2025-05-07T17:34:01.037Z</updated>
+  <author>
+    <name><![CDATA[Hursh Gupta]]></name>
+  </author>
+  <category term="Me" scheme="https://hgup.github.io/?tags=Me" />
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="https://hgup.github.io/about" />
+    <id>https://hgup.github.io/about</id>
+    <published>2025-05-07T00:00:00.000Z</published>
+    <updated>2025-05-07T17:33:33.219Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-ewo701">Hello, this is (yet another) blog site that I am trying to set up. Don’t judge.</p>]]>
+    </content>
+    <category term="Me" scheme="https://hgup.github.io/?tags=Me" />
+  </entry>
+</feed>
