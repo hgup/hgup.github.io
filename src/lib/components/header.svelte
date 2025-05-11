@@ -63,7 +63,7 @@
         {/if}
         <a href="/" data-sveltekit-prefetch class="btn btn-ghost normal-case text-lg">{site.title}</a>
       </div>
-      <div class="navbar-end pr-4">
+      <div class="navbar-end xl:pr-4">
         {#if headerConfig.search}
           <button aria-label="search" on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost">
             <span class="i-heroicons-outline-search" />
@@ -107,7 +107,7 @@
   {:else}
     <div in:fly={{ x: 50, duration: 300, delay: 300 }} out:fly={{ x: 50, duration: 300 }} class="navbar">
       <Search />
-      <button on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost mr-4">
+      <button on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost xl:mr-4">
         <span class="i-heroicons-outline-x" />
       </button>
     </div>
