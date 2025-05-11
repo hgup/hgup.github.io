@@ -53,28 +53,20 @@
   });
 </script>
 
-<svelte:head>
-  <title
-    >{loading
-      ? "Loading..."
-      : isPlaying
-        ? `Now Playing: ${trackName}`
-        : "Last Played Track"}</title
-  >
-</svelte:head>
 
-  <div class="relative w-full flex items-center pt-10 pb-3 px-10  h-[40px]">
+  <div class="relative w-full flex items-center mx-auto pt-10 pb-3 px-6 h-[40px] min-w-xl">
     {#if loading}
-      <div class="absolute inset-0 flex flex-col" out:fade><p class="text-xs text-secondary pt-7">Was listening to...</p></div>
+      <div class="absolute inset-0 flex flex-col " out:fade><p class="text-xs text-secondary pt-8">Was listening to...</p></div>
     {:else if trackName}
-      <div class="flex w-full" in:fade={{delay: 400}}>
+    <div class='mx-auto'>
+      <div class="flex xl:max-w-[13rem]" in:fade={{delay: 400}}>
         <img
           src={imageUrl}
           alt="{albumName} album art"
           class="rounded-md mr-4"
           style="width: 40px; height: 40px;"
         />
-        <div class="flex-1">
+        <div class="flex-1 overflow-hidden">
           <p class="text-left text-sm font-semibold text-primary truncate">
             {trackName}
           </p>
@@ -83,6 +75,7 @@
           </p>
         </div>
       </div>
+</div>
     {:else}
       <p class="text-gray-600 text-sm">Not listening to anything.</p>
     {/if}
