@@ -3,18 +3,21 @@ import type { FFFAuthor } from 'fff-flavored-frontmatter'
 export interface SiteConfig {
   author: {
     bio?: string
+    lastfm?: {
+      username: string
+    }
     metadata?: (
       | {
-          text?: string
-          icon: string
+          icon?: string
           link?: string
           rel?: string
+          text: string
         }
       | {
-        icon?: string
+        icon: string
         link?: string
         rel?: string
-        text: string
+        text?: string
       }
     )[]
     status?: string

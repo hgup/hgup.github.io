@@ -34,6 +34,7 @@ export default {
       mode: 'auto',
     },
     prerender: {
+      handleHttpError: 'warn',
       handleMissingId: 'warn',
     },
   },

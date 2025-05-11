@@ -20,6 +20,7 @@ export const header: HeaderConfig = {
     colors: true,
     provider: 'google',
   },
+  theme: false,
 }
 
 export const footer: FooterConfig = {

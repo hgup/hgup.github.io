@@ -63,12 +63,13 @@
         {/if}
         <a href="/" data-sveltekit-prefetch class="btn btn-ghost normal-case text-lg">{site.title}</a>
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end pr-4">
         {#if headerConfig.search}
           <button aria-label="search" on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost">
             <span class="i-heroicons-outline-search" />
           </button>
         {/if}
+        {#if headerConfig.theme}
         <div id="change-theme" class="dropdown dropdown-end">
           <div tabindex="0" class="btn btn-square btn-ghost">
             <span class="i-heroicons-outline-color-swatch" />
@@ -100,12 +101,13 @@
             {/each}
           </ul>
         </div>
+        {/if}
       </div>
     </div>
   {:else}
     <div in:fly={{ x: 50, duration: 300, delay: 300 }} out:fly={{ x: 50, duration: 300 }} class="navbar">
       <Search />
-      <button on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost">
+      <button on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost mr-4">
         <span class="i-heroicons-outline-x" />
       </button>
     </div>

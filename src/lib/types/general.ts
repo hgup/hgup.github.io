@@ -21,6 +21,7 @@ export interface HeaderConfig {
     colors?: boolean
     provider: 'duckduckgo' | 'google'
   }
+  theme?: boolean
 }
 
 export interface FooterConfig {

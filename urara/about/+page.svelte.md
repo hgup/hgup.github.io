@@ -19,7 +19,7 @@ On this site, you'll find my thoughts and reflections as I delve into the exciti
 I approach learning with a **hands-on and project-based mentality**, especially in web development. In both music and actuarial science, I focus on building a strong grasp of the **foundational principles** to understand the "why" behind the concepts. I'm a firm believer in the **power of curiosity** and the idea that connecting seemingly disparate fields can lead to unique insights and a richer understanding of the world.
 
 $$
-A = P(1 + \dfrac{r}{n})^{nt}
+A = P\left(1 + \dfrac{2}{2}\right)^{34}
 $$
 
 ### Current Learning Goals
@@ -28,7 +28,7 @@ Currently, I'm particularly focused on:
 
 * Building more complex and performant web applications using **Next.js** and exploring the reactivity of **SvelteKit**.
 * Deepening my understanding of **music theory and composition**, and perhaps even experimenting with creating my own pieces.
-* Preparing for my next **CAS actuarial exam**, focusing on [You can optionally mention the specific exam area if you're comfortable].
+* Preparing for my next **CAS actuarial exam**, focusing on Reserving topics.
 
 You can expect to see more content related to these areas as I progress and uncover new aspects of these subjects.
 
