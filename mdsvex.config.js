@@ -5,11 +5,11 @@ import { escapeSvelte } from 'mdsvex'
 import { join, parse } from 'node:path'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeExternalLinks from 'rehype-external-links'
-import rehypeMathjax from 'rehype-mathjax'
+// import remarkMath from 'remark-math'
+// import rehypeMathjax from 'rehype-mathjax'
 import rehypeSlug from 'rehype-slug'
 import remarkFFF from 'remark-fff'
 import remarkFootnotes from 'remark-footnotes'
-import remarkMath from 'remark-math'
 import { createShikiHighlighter, renderCodeToHTML, runTwoSlash } from 'shiki-twoslash'
 import { visit } from 'unist-util-visit'
 
@@ -82,7 +82,7 @@ export default {
     _: './src/lib/components/post_layout.svelte',
   },
   rehypePlugins: [
-    rehypeMathjax,
+    // rehypeMathjax,
     rehypeSlug,
     [rehypeAutolinkHeadings, { behavior: 'wrap' }],
     [
@@ -113,7 +113,7 @@ export default {
     ],
     remarkUraraFm,
     remarkUraraSpoiler,
-    remarkMath,
+    // remarkMath,
     [remarkFootnotes, { inlineNotes: true }],
   ],
   smartypants: {
