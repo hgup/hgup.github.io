@@ -5,7 +5,7 @@ export const site: SiteConfig = {
     avatar: '/assets/maskable@192.png',
     bio: 'Actuary, Data Scientist & Web Dev',
     name: 'Hursh Gupta',
-    // status: '⚡',
+    status: '⚡',
   },
   description: 'Actuary, Data Scientist & Web Dev',
   domain: import.meta.env.URARA_SITE_DOMAIN ?? 'hgup.github.io',

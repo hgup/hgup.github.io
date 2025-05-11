@@ -18,6 +18,10 @@ On this site, you'll find my thoughts and reflections as I delve into the exciti
 
 I approach learning with a **hands-on and project-based mentality**, especially in web development. In both music and actuarial science, I focus on building a strong grasp of the **foundational principles** to understand the "why" behind the concepts. I'm a firm believer in the **power of curiosity** and the idea that connecting seemingly disparate fields can lead to unique insights and a richer understanding of the world.
 
+$$
+A = P(1 + \dfrac{r}{n})^{nt}
+$$
+
 ### Current Learning Goals
 
 Currently, I'm particularly focused on:
