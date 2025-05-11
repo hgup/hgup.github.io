@@ -2,12 +2,8 @@ import type { DateConfig, FeedConfig, FooterConfig, HeadConfig, HeaderConfig, Th
 
 export const theme: ThemeConfig = [
   {
-    name: 'corporate',
-    text: 'Lights On',
-  },
-  {
-    name: 'black',
-    text: 'Lights Off',
+    name: 'business',
+    text: 'Dark',
   },
 ]
 
@@ -20,6 +16,10 @@ export const header: HeaderConfig = {
       text: 'About',
     },
   ],
+  search: {
+    colors: true,
+    provider: 'google',
+  },
 }
 
 export const footer: FooterConfig = {
