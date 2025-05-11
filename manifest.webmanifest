@@ -1,5 +1,4 @@
 {
-  "background_color": "#3D4451",
   "description": "Actuary, Data Scientist & Web Dev",
   "display": "standalone",
   "icons": [
@@ -34,6 +33,5 @@
   "orientation": "portrait",
   "scope": "/",
   "short_name": "Hursh",
-  "start_url": "/",
-  "theme_color": "#3D4451"
+  "start_url": "/"
 }
