@@ -1,6 +1,10 @@
 ---
 title: The Mental Keyboard
 image: /music-tips/mental-keyboard/mind.webp
+tags:
+  - mind
+  - music
+created: 2025-05-12
 ---
 You should be able to run a keyboard in your mind. I try doing it as a mental exercise and see what works and what doesn't.
 
