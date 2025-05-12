@@ -1,37 +1,20 @@
 ---
-title: 'Hello World'
-image: '/about/Xmas.jpg'
-alt: 'Urara'
+title: Hello World
+image: /about/dream.jpg
+alt: Urara
 created: 2025-05-07
-# updated: 2021-12-12
 tags:
-  - 'Me'
+  - Me
 ---
 
-Welcome to my corner of the internet! I'm [Your Name], and this space is dedicated to documenting and sharing my ongoing journey of learning across a few fascinating domains. I believe that the process of exploration and understanding is a continuous adventure, and I'm excited to share the insights, discoveries, and sometimes even the stumbles I encounter along the way.
+Hey! I'm Hursh and this is my corner of the internet (as long as GitHub allows me to use their [pages](https://pages.github.com/) for free).
 
-## What You'll Find Here
+I am a student at Sri Sathya Sai Institute of Higher Learning. Finishing my bachelors in Mathematics, I joined the MA Economics program in our institute in order to fill gaps in my knowledge.
 
-On this site, you'll find my thoughts and reflections as I delve into the exciting worlds of **web development** (with a particular focus on modern frameworks like Next.js and SvelteKit), the intricate and expressive language of **music**, and the analytical rigor of **actuarial science** (as I navigate the examination process with the Casualty Actuarial Society). My aim is not just to absorb information but to truly understand it and articulate it in a way that might also be helpful or interesting to others who share these passions or are curious to learn more.
+I am pursuing to be an [Actuary](https://actuaries.org.uk/qualify/become-an-actuary/what-is-an-actuary/#WhatisanActuary), for which I am writing exams from the Casualty Actuarial Society (CAS)[^1].
 
-## My Learning Philosophy
+Our University has a brass band, [Rhythmic Energy](https://www.instagram.com/rhythmicenergy/?hl=en). I was fortunate to be part of it as a student for 4 years (2022-2026), by the blessings of our Founder Chancellor, [Sri Sathya Sai Baba](https://www.sathyasai.org/discourses-and-writings) who I refer to as Swami. 
 
-I approach learning with a **hands-on and project-based mentality**, especially in web development. In both music and actuarial science, I focus on building a strong grasp of the **foundational principles** to understand the "why" behind the concepts. I'm a firm believer in the **power of curiosity** and the idea that connecting seemingly disparate fields can lead to unique insights and a richer understanding of the world.
+I have a personal hobby of making websites and apps using frameworks like Next.js and SvelteKit. I have also started looking into mobile app development using Flutter. Will let you know if I build something nice.
 
-$$
-A = P\left(1 + \dfrac{2}{2}\right)^{34}
-$$
-
-### Current Learning Goals
-
-Currently, I'm particularly focused on:
-
-* Building more complex and performant web applications using **Next.js** and exploring the reactivity of **SvelteKit**.
-* Deepening my understanding of **music theory and composition**, and perhaps even experimenting with creating my own pieces.
-* Preparing for my next **CAS actuarial exam**, focusing on Reserving topics.
-
-You can expect to see more content related to these areas as I progress and uncover new aspects of these subjects.
-
-## Connect with Me
-
-I'm always open to connecting with fellow learners and enthusiasts in web development, music, and actuarial science. Feel free to leave comments on posts and share your own experiences or insights. If you're also on [mention LinkedIn or another platform you use professionally/for learning], feel free to connect there as well. I value your thoughts and perspectives!
+[^1]: The CAS is the ["world’s only actuarial organization focused exclusively on property and casualty risks"](https://www.casact.org/). In short, if you have decided to be a [P&C Actuary](https://www.casstudentcentral.org/about-our-profession/what-is-a-property-and-casualty-actuary/), then CAS is the way to go. Personally, I felt (after writing their exams), that a lot of the exam questions could have been actual problems that could have come up as a small part during actual work. 
