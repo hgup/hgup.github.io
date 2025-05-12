@@ -1,5 +1,7 @@
 [
   "obsidian-linter",
   "obsidian-footnotes",
-  "obsidian-git"
+  "obsidian-git",
+  "numerals",
+  "settings-search"
 ]
