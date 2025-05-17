@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fb4dc19ce5c1768d",
+        "id": "63adcdf7b144e439",
         "type": "tabs",
         "children": [
           {
-            "id": "cd4dbd6685c3ff64",
+            "id": "cc5fd16c8418d999",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -169,13 +169,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cd4dbd6685c3ff64",
+  "active": "cc5fd16c8418d999",
   "lastOpenFiles": [
+    "urara/dissertation/+page.svelte.md",
     "urara/setup/+page.svelte.md",
     "elements.md",
     "urara/setup/().md",
     "urara/setup/setup.png",
-    "urara/dissertation/+page.svelte.md",
     "urara/music-tips/mental-keyboard/+page.svelte.md",
     "urara/setup",
     "urara/dissertation/mack/+page.svelte.md",

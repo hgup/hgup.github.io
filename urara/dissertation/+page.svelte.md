@@ -17,4 +17,4 @@ Stochastic reserving aims to solve this problem by introducing us with simple st
 
 I have reviewed these papers as of now:
 
-- 
+- Mack, Thomas. “CREDIBLE CLAIMS RESERVES: THE BENKTANDER METHOD,” n.d.

@@ -3,9 +3,9 @@ title: New Device Setup (Windows)
 created: 2025-05-17
 image: /setup/setup.png
 ---
-
-# Fresh Installation
-## Debloat windows
+> This is for a windows installation.
+## Fresh Installation
+### Debloat windows
 
 Windows 11 is full of bloatware. NOT ACCEPTABLE! Remove all unnecessary stuff that are thrusted into our laptops/PCs by Microsoft.[^1]
 
@@ -19,19 +19,20 @@ So, we will run this script from [Raphire/Win11Debloat](https://github.com/Raphi
 - If you see a warning related to `winget` in the blue window, then install the [app installer](https://apps.microsoft.com/detail/9nblggh4nns1)
 - Go with recommended settings (But do suggest you to clean out the taskbar and start menu.)
 
-# Apps
+## Apps
 
-## Daily
+Here are the apps that I use on my system. One suggestion is to use apps that do most of the things that you require to do.
+### Daily
 
 - [Arc Browser](https://arc.net/)
 - [Dropbox](https://www.dropbox.com/install)
 
-## Academics
+### Academics
 
 - [Zotero](https://www.zotero.org/)
 - [Obsidian](https://obsidian.md)
 
-## Dev
+### Dev
 
 ### [VS Code](https://code.visualstudio.com)
 
@@ -156,8 +157,9 @@ I use the vim extension with VS Code. These are my settings and keybindings.
 ]
 ```
 
-## Hobbies
+### Hobbies
 
 - [Musescore](https://musescore.org/)
+- [Da Vinci Resolve](https://www.blackmagicdesign.com/in/products/davinciresolve)
 
 [^1]: The only reason I am still using your OS and not Linux is the ability to use proprietary software
