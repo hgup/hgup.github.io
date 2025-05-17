@@ -4,6 +4,7 @@ created: 2025-05-17
 image: /setup/setup.png
 ---
 > This is for a windows installation.
+
 ## Fresh Installation
 ### Debloat windows
 
@@ -34,7 +35,7 @@ Here are the apps that I use on my system. One suggestion is to use apps that do
 
 ### Dev
 
-### [VS Code](https://code.visualstudio.com)
+#### [VS Code](https://code.visualstudio.com)
 
 I use the vim extension with VS Code. These are my settings and keybindings.
 
