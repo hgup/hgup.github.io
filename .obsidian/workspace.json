@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "urara/music-tips/mental-keyboard/+page.svelte.md",
+                "file": "urara/setup/+page.svelte.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,14 +171,19 @@
   },
   "active": "cd4dbd6685c3ff64",
   "lastOpenFiles": [
-    "urara/dissertation/mack/+page.svelte.md",
+    "urara/setup/+page.svelte.md",
+    "elements.md",
+    "urara/setup/().md",
+    "urara/setup/setup.png",
+    "urara/dissertation/+page.svelte.md",
     "urara/music-tips/mental-keyboard/+page.svelte.md",
+    "urara/setup",
+    "urara/dissertation/mack/+page.svelte.md",
     "urara/music-tips/mental-keyboard/mind.webp",
     "Pasted image 20250512130521.png",
     "Pasted image 20250512130443.png",
     "urara/music-tips/mental-keyboard",
     "urara/music-tips",
-    "urara/dissertation/+page.svelte.md",
     "urara/dissertation/mack",
     "urara/dissertation/Untitled.md",
     "urara/about/+page.svelte.md",
