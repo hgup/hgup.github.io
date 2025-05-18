@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "urara/hobbies/music-tools/+page.svelte.md",
+                "file": "urara/audio/+page.svelte.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,8 +171,11 @@
   },
   "active": "cc5fd16c8418d999",
   "lastOpenFiles": [
-    "urara/hobbies/music-tools/music-tools.png",
     "urara/hobbies/music-tools/+page.svelte.md",
+    "urara/audio/+page.svelte.md",
+    "urara/audio",
+    "urara/Untitled.md",
+    "urara/hobbies/music-tools/music-tools.png",
     "urara/setup/+page.svelte.md",
     "urara/hobbies/music-tools",
     "urara/hobbies",

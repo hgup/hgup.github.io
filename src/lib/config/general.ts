@@ -15,6 +15,10 @@ export const header: HeaderConfig = {
       link: '/about',
       text: 'About',
     },
+    {
+      link: '/audio',
+      text: 'Audio',
+    },
   ],
   search: {
     colors: true,

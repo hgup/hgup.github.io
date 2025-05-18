@@ -7,7 +7,7 @@ image: /hobbies/music-tools/music-tools.png
 ---
 ## Spitfire LABS
 
-An audio library that gives you experimental aah vibes. The library is so vast that I just started off by downloading whatever sounded interesting to me.
+An audio library that gives you experimental ahh vibes. The library is so vast that I just started off by downloading whatever sounded interesting to me.
 
 They just revamped the app too. Now it looks much easier to use than the previous version. I like the green theme they are going for. And the audio samples are as High-res as ever. They can go upto 4-5 gigs. So ensure you have the right kind of storage.
 
