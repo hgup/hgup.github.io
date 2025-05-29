@@ -16,7 +16,7 @@ export const header: HeaderConfig = {
       text: 'About',
     },
     {
-      link: '/audio',
+      link: 'https://audio.com/hursh',
       text: 'Audio',
     },
   ],

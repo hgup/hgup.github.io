@@ -20,6 +20,15 @@ So, we will run this script from [Raphire/Win11Debloat](https://github.com/Raphi
 - If you see a warning related to `winget` in the blue window, then install the [app installer](https://apps.microsoft.com/detail/9nblggh4nns1)
 - Go with recommended settings (But do suggest you to clean out the taskbar and start menu.)
 
+### Realtek HD Audio Manager
+
+I remember using the Realtek HD Audio Manager back when Windows 7 was peak. The manager allowed us to set default devices and have some low latency output monitoring
+
+### Other
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+```
 ## Apps
 
 Here are the apps that I use on my system. One suggestion is to use apps that do most of the things that you require to do.
@@ -34,6 +43,14 @@ Here are the apps that I use on my system. One suggestion is to use apps that do
 - [Obsidian](https://obsidian.md)
 
 ### Dev
+
+#### Python
+
+For using Tensorflow 2 in machine learning projects, we can download miniconda to get python installed and then load up this environment. This can be activated from anywhere and be used for all datascience projects. A really good base which includes most of the things needed
+
+```shell
+conda env create --file=https://raw.githubusercontent.com/ageron/handson-ml2/refs/heads/master/environment.yml python=3.8
+```
 
 #### [VS Code](https://code.visualstudio.com)
 
