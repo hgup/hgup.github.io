@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "urara/ml/03-classification/+page.svelte.md",
+                "file": "urara/setup/aha-moments/+page.svelte.md",
                 "mode": "source",
                 "source": false
               },
@@ -184,6 +184,11 @@
   },
   "active": "f7c5af9a8e15930a",
   "lastOpenFiles": [
+    "urara/setup/+page.svelte.md",
+    "urara/setup/aha-moments/+page.svelte.md",
+    "urara/setup/setup.png",
+    "urara/ml/03-classification/+page.svelte.md",
+    "urara/setup/aha-moments",
     "vite.config.ts.timestamp-1748634823892-5e3086351194f.mjs",
     "src/static/music-tips/mental-keyboard/mind.webp",
     "src/static/music-tips/mental-keyboard",
@@ -202,24 +207,20 @@
     "static/ml/03-classification",
     "static/ml",
     "src/static/ml/03-classification/Pasted image 20250531012316.png",
-    "src/static/ml/03-classification",
     "src/static/ml/ml.png",
-    "src/static/ml",
     "src/routes/ml/03-classification/+page.svelte.md",
     "src/routes/ml/+page.svelte.md",
     "src/routes/music-tips/mental-keyboard/+page.svelte.md",
-    "src/static/hobbies/music-tools/music-tools.png",
     "src/routes/hobbies/music-tools/+page.svelte.md",
     "src/routes/dissertation/+page.svelte.md",
     "src/routes/about/+page.svelte.md",
-    "urara/ml/03-classification/+page.svelte.md",
     "urara/ml/03-think.md",
     "src/routes/ml/03-think.md",
     "urara/ml/+page.svelte.md",
     "src/routes/ml/Untitled.md",
     "urara/ml/04-test/+page.svelte.md",
     "urara/ml/03-classif/+page.svelte.md",
-    "urara/music-tips/mental-keyboard/+page.svelte.md",
+    "urara/music/mental-keyboard/+page.svelte.md",
     "urara/ml/classification/classification/+page.svelte.md",
     "urara/ml/classification/+page.svelte.md",
     "urara/ml/test2/+page.svelte.md",
@@ -227,8 +228,6 @@
     "urara/ml/nice.md",
     "urara/ml/He.md",
     "urara/about/+page.svelte.md",
-    "urara/setup/+page.svelte.md",
-    "urara/hobbies/music-tools/+page.svelte.md",
-    "urara/audio/+page.svelte.md"
+    "urara/hobbies/music-tools/+page.svelte.md"
   ]
 }
