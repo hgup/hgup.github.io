@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 import typography from '@tailwindcss/typography'
+import twscrollbar from 'tailwind-scrollbar'
 import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
 
@@ -13,10 +14,11 @@ export default {
       // ...theme.map(({ name }) => name),
       {
         sunset: {
-          ...themes.sunset,
+          ...themes.business,
           "--rounded-box": "0rem",   // Larger rounded corners for boxes/cards
           "--rounded-btn": "0.5rem", // Slightly rounded buttons
           "--rounded-badge": "0.0rem", // Pill-shaped badges
+          primary: '#aaa'
         }
       }
       // {
@@ -28,7 +30,7 @@ export default {
       // },
     ],
   },
-  plugins: [typography, daisyui],
+  plugins: [typography, daisyui, twscrollbar],
   theme: {
     extend: {
       typography: {

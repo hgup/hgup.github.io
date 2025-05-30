@@ -95,7 +95,11 @@ export default {
     ],
   ],
   remarkPlugins: [
-    remarkMath,
+    [
+      remarkMath, {
+        singleDollarTextMath: true
+      }
+    ],
     [
       remarkFFF,
       {
