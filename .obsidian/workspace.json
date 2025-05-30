@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "63adcdf7b144e439",
+        "id": "a9744eeeaac4220f",
         "type": "tabs",
         "children": [
           {
-            "id": "cc5fd16c8418d999",
+            "id": "f7c5af9a8e15930a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "urara/setup/+page.svelte.md",
+                "file": "urara/ml/03-classification/+page.svelte.md",
                 "mode": "source",
                 "source": false
               },
@@ -34,19 +34,6 @@
         "id": "6a38ca251005a7a4",
         "type": "tabs",
         "children": [
-          {
-            "id": "bc58312547527e47",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
           {
             "id": "9b97f8e794caff37",
             "type": "leaf",
@@ -73,8 +60,22 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "eea17561fd9fb903",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -150,8 +151,19 @@
               "icon": "lucide-list",
               "title": "Outline of +page.svelte"
             }
+          },
+          {
+            "id": "c611338b4fecc029",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -166,38 +178,51 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "cc5fd16c8418d999",
+  "active": "f7c5af9a8e15930a",
   "lastOpenFiles": [
+    "urara/ml/+page.svelte.md",
+    "urara/ml/03-classification/+page.svelte.md",
+    "urara/ml/03-classification",
+    "urara/ml/Untitled.md",
+    "urara/ml/ml.png",
+    "urara/ml/03-classif/+page.svelte.md",
+    "urara/music-tips/mental-keyboard/+page.svelte.md",
+    "urara/ml/03-classif",
+    "urara/ml/classification/classification/+page.svelte.md",
+    "urara/ml/classification/+page.svelte.md",
+    "urara/ml/classification/classification",
+    "urara/ml/classification",
+    "urara/ml/test2/+page.svelte.md",
+    "urara/ml/test2",
+    "urara/ml/test2/classification",
+    "userscripts/+page.template.md",
+    "urara/ml/nice.md",
+    "urara/ml/He.md",
+    "urara/about/+page.svelte.md",
+    "urara/setup/+page.svelte.md",
+    "userscripts/add_plus_page.js",
+    "userscripts",
+    "urara/ml",
     "urara/hobbies/music-tools/+page.svelte.md",
     "urara/audio/+page.svelte.md",
     "urara/audio",
     "urara/Untitled.md",
     "urara/hobbies/music-tools/music-tools.png",
-    "urara/setup/+page.svelte.md",
-    "urara/hobbies/music-tools",
-    "urara/hobbies",
     "2025-05-17.md",
     "urara/dissertation/+page.svelte.md",
     "elements.md",
     "urara/setup/().md",
     "urara/setup/setup.png",
-    "urara/music-tips/mental-keyboard/+page.svelte.md",
-    "urara/setup",
     "urara/dissertation/mack/+page.svelte.md",
     "urara/music-tips/mental-keyboard/mind.webp",
     "Pasted image 20250512130521.png",
     "Pasted image 20250512130443.png",
-    "urara/music-tips/mental-keyboard",
-    "urara/music-tips",
-    "urara/dissertation/mack",
     "urara/dissertation/Untitled.md",
-    "urara/about/+page.svelte.md",
-    "urara/dissertation",
     "urara/about/dream.jpg",
-    "urara/about/dream.jpg.~tmp",
     "urara/about/Xmas.jpg"
   ]
 }

@@ -6,5 +6,31 @@
       ],
       "key": "Q"
     }
+  ],
+  "editor:rename-heading": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "F2"
+    }
+  ],
+  "quickadd:choice:f7b8b6a1-cfb1-4e06-ad7d-beed32632027": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "N"
+    }
+  ],
+  "obsidian-git:backup-and-close": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F4"
+    }
   ]
 }

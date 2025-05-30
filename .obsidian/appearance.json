@@ -1,4 +1,6 @@
 {
-  "accentColor": "#f5d45c",
-  "textFontFamily": "Space Mono"
+  "accentColor": "#2683c9",
+  "textFontFamily": "Space Mono",
+  "cssTheme": "Prism",
+  "theme": "obsidian"
 }
