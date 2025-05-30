@@ -61,7 +61,7 @@
         {#if headerConfig.nav}
           <Nav {path} {title} {pin} {scrollY} nav={headerConfig.nav} />
         {/if}
-        <a href="/" data-sveltekit-prefetch class="btn btn-ghost normal-case text-lg">{site.title}</a>
+        <a href="/" data-sveltekit-prefetch class="btn normal-case text-base">{site.title}</a>
       </div>
       <div class="navbar-end xl:pr-4">
         {#if headerConfig.search}

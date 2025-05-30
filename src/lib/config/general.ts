@@ -2,8 +2,8 @@ import type { DateConfig, FeedConfig, FooterConfig, HeadConfig, HeaderConfig, Th
 
 export const theme: ThemeConfig = [
   {
-    name: 'business',
-    text: 'Dark',
+    name: 'sunset',
+    text: 'sunset',
   },
 ]
 

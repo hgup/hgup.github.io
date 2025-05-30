@@ -67,10 +67,10 @@
           style="width: 40px; height: 40px;"
         />
         <div class="flex-1 overflow-hidden">
-          <p class="text-left text-sm font-semibold text-primary truncate">
+          <p class="text-left text-sm font-semibold p-name truncate">
             {trackName}
           </p>
-          <p class="text-xs text-left text-secondary truncate">
+          <p class="text-xs text-left p-note truncate">
             Artist: {artistName}
           </p>
         </div>

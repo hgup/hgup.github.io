@@ -10,14 +10,22 @@ export default {
   content: ['./src/**/*.{html,md,js,svelte,ts}'],
   daisyui: {
     themes: [
-      // theme.map(({ name }) => name),
+      // ...theme.map(({ name }) => name),
       {
-        business: {
-          ...themes.business,
-          primary: '#fff',
-        },
+        sunset: {
+          ...themes.sunset,
+          "--rounded-box": "0rem",   // Larger rounded corners for boxes/cards
+          "--rounded-btn": "0.5rem", // Slightly rounded buttons
+          "--rounded-badge": "0.0rem", // Pill-shaped badges
+        }
+      }
+      // {
+      //   business: {
+      //     ...themes.business,
+      //     primary: '#fff',
+      //   },
 
-      },
+      // },
     ],
   },
   plugins: [typography, daisyui],

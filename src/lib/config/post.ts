@@ -14,7 +14,7 @@ export const post: PostConfig = {
       repo: 'hgup/hgup.github.io',
       repoID: 'R_kgDOOmLI4w',
       // theme: 'urara'
-      theme: 'noborder_gray',
+      theme: 'transparent_dark',
     },
     style: 'boxed',
     use: ['Giscus'],
