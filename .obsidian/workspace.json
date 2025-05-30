@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "urara/ml/03-classification/+page.svelte.md",
-                "mode": "source",
+                "file": "urara/ml/+page.svelte.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -182,13 +182,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f7c5af9a8e15930a",
+  "active": "eea17561fd9fb903",
   "lastOpenFiles": [
     "urara/ml/+page.svelte.md",
-    "urara/ml/03-classification/+page.svelte.md",
-    "urara/ml/03-classification",
-    "urara/ml/Untitled.md",
+    "urara/ml/04-test/+page.svelte.md",
+    "urara/ml/04-test",
     "urara/ml/ml.png",
+    "urara/ml/03-classification/+page.svelte.md",
+    "urara/ml/Untitled.md",
+    "urara/ml/03-classification",
     "urara/ml/03-classif/+page.svelte.md",
     "urara/music-tips/mental-keyboard/+page.svelte.md",
     "urara/ml/03-classif",
@@ -209,7 +211,6 @@
     "urara/ml",
     "urara/hobbies/music-tools/+page.svelte.md",
     "urara/audio/+page.svelte.md",
-    "urara/audio",
     "urara/Untitled.md",
     "urara/hobbies/music-tools/music-tools.png",
     "2025-05-17.md",
