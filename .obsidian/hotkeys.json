@@ -32,5 +32,14 @@
       ],
       "key": "F4"
     }
-  ]
+  ],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "K"
+    }
+  ],
+  "editor:insert-link": []
 }
