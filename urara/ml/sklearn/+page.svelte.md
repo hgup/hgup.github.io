@@ -8,84 +8,67 @@ tags:
 ---
 ## `sklearn` Legend
 
-| import                    | task                                                                                                             |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `sklearn.model_selection` | Helps in selecting between models.<br>Also, splitting train-test                                                 |
-| `sklearn.impute`          | Missing Values                                                                                                   |
-| `sklearn.preprocessing`   | Change the form of data.<br>Ordinal Categorical $\to$ Numbers. Make it machine friendly                          |
-| `sklearn.base`            | Access base classes to create custom `estimator`, `transformer`                                                  |
-| `sklearn.pipeline`        | Create pipelines                                                                                                 |
-| `sklearn.compose`         | Access to **column transformers**<br>(take care of categorical and numerical columns in the same transformation) |
-| `sklearn.metrics`         | Score functions; Performance metrics; Distance computations                                                      |
-| `sklearn.tree`            | Decision tree based models                                                                                       |
-| `sklearn.ensemble`        | Various ensemble methods (e.g. `RandomForestRegressor`)                                                          |
+| import                    | task                                                                                                                   |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `sklearn.model_selection` | Helps in selecting between models.<br>Also, splitting train-test                                                       |
+| `sklearn.impute`          | Missing Values                                                                                                         |
+| `sklearn.preprocessing`   | Change the form of data.<br>Ordinal Categorical $\to$ Numbers. Make it machine friendly                                |
+| `sklearn.base`            | Access base classes to create custom `estimator`, `transformer`                                                        |
+| `sklearn.pipeline`        | Create pipelines                                                                                                       |
+| `sklearn.compose`         | Access to **column transformers**<br>(take care of categorical and numerical columns in the same transformation)       |
+| `sklearn.metrics`         | Score functions; Performance metrics; Distance computations                                                            |
+| `sklearn.tree`            | Decision tree based models                                                                                             |
+| `sklearn.ensemble`        | Various ensemble methods (e.g. `RandomForestRegressor`)                                                                |
+| `sklearn.svm`             | Dedicated for Support Vector Machines???                                                                               |
+| `sklearn.multiclass`      | Access to `OneVsRestClassifier` and `OneVsOneClassifier` to override default multiclass behavior in Binary classifiers |
+| `sklearn.neighbors`       | Distance based models                                                                                                  |
 
-## `pandas` tricks
+## Design Philosophy
+### Consistency
 
-- `pd.cut()` helps you cut a series. There are two ways to do so
-	- By specifying how many categories we need like so `pd.cut(dataFrame, NO_OF_CATEGORIES)`
-	- By specifying the exact bins of categories like so `pd.cut(dataFrame, bins=[0., 1.5, 3.0, 4.5, np.inf], labels= [1,2,3,4,5])`
-	- Labelling is done to give a name (in this case ordinal) to each of the categories
+> All objects share a consistent and simple interface
 
-### `pd.DataFrame`
+| Object         | Explanation                                                                                                                                                                                                                                                                                                        | Example |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| *Estimators*   | - Any object that can estimate some parameters based on the estimator<br>- The estimation is done by the `.fit()` method.<br>- Takes only a dataset as a parameter (or 2 (data and labels) for supervised learning algorithms)<br>- Any other parameter is considered as a `hyperparameter` (e.g. strategy)        | Imputer |
+| *Transformers* | - Any object that can transform the **dataset**.<br>- The transformation is performed by the `.transform()` method, which takes input as a dataset to be transformed<br>- Both `.fit()` and `.transform()` can be conveniently be called together (with possible optimization) via the `.fit_transform()` function | Imputer |
+| *Predictors*   | - Capable of making predictions.<br>- The `.predict()` method takes a dataset of new instances and returns a dataset of corresponding predictions.<br>- A predictor also has a `.score()` method that measures the quality of predictions, given **a test set** (w/ labels, in case of supervised learning).       |         |
 
-- \#concept **axis** refers to the row, column or a higher dimensional point (e.g. `axis=0` refers to rows, `axis=1` refers to columns. `axis=3` can refer to time, if we have data across years and each row corresponds to the same entity.)
+Having learnt the above, now try implementing an [[Imputing Data using Scikit-Learn|imputing strategy in Scikit-Learn]].
+### Inspection
 
-- `loc` and `iloc` have this commonly known distinction that the first is used to index by **label** but the latter by `index`.
-  - But also know that when we take a subset of the **dataframe** (say, main) (lets say while test-train splitting of the data), the original `index` values of main df is preserved as the labels of the subsets.
-  - e.g. `main = [1,2,3,4,5,6,7]` are the default labels (for an unlabelled df main), and upon splitting it we get subsets `A = [1,3,4,5]` and `B = [2,6,7]`
-  - So now note that we cannot do `A.loc[range(1,5)]` since we don't have **label** 2 in our `A`. But `A.iloc[range(1,5)]` will definitely work since indices are always in sequence.
-#### Tricks
+1. Estimator's hyperparameters are accessible directly via public instance variables, e.g. `imputer.strategy`
+2. Estimator's *learned* parameters are accessible in a similar fashion but with an `_` (underscore) suffix, e.g. `imputer.statistics_`
 
-- `list(df)` gives us a list of all the columns of the `pd.DataFrame`. Instead of using `df.columns` which gives us an `pd.Index` of column names.
+### Nonproliferation of Classes
 
-### `pd.Series`
+1. All outputs given in the form of `numpy` arrays  or `scipy` sparse matrices.
+2. Hyperparameters are regular python `string` or `numbers`
 
-- `pd.Series.apply()` applies a function to each element of the series and returns another series with the output of each of those function call in the same order.
+### Composition
 
-- if you want the "label" to each of the items in a pandas series, its actually called `index`
+ Existing building blocks
+1. Can be reused
+2. Can be combined to create a `Pipeline` (arbitrary sequence of transformations followed by a final estimator)
 
-### `pd.plotting`
+### Sensible defaults
 
-```python
-housing.plot(kind="scatter",x='longitude',y='latitude',alpha=.4,
-             s=housing['population']/100, label="population",
-             c="median_house_value", colorbar=True, cmap=plt.get_cmap('jet'))
-```
-  - `s` is the radius of the circle.
-  - `alpha` opacity.
-  - `c` is the color (always give the name of the property (e.g. `"population"` instead of `housing['population']` whenever possible, here we needed to make an adjustment to the size).
-  - `cmap` gives us the color map.
-
-
-`scatter_matrix` is used to plot correlation maps.
+1. Most common defaults
+2. Baseline system is quick to create
 
 
-## `numpy` tricks
 
-### `np.ndarray`
+## Models
 
-- **N-dimensional array**
-- Use `iloc` to reference by index
-- Use `loc` to reference by label (==check this==: It is also possible to pass in an index, if label for the data is not available)
+### Classifiers
 
-
-## Intuition
-
-### Indices
-
-- What does `X[:,:]` mean?
-- How did you say **all rows**? How did you say **all columns**?
-- So, what is `X[a:b,:]`, (where `a` and `b` are integers)?
-	- Rows/Records are lower dimensional, so the first index  (here `a:b`) always refer to rows. This is what we call `axis=0`
-	- Columns/Headers/Attributes are higher dimensional, so the second index (here ` : `) always refer to column. This is what we call `axis=1`
-	- Thus, `X[a:b,:]` means, "select **all columns** from the **records whose indices start from `a` and do not equal or exceed `b`**"
-	- Similarly, `X[:,:c]` means "select **those columns with index $<$ `c`** from **all records**"
+| Model    |                                   |                             |                        |
+| -------- | --------------------------------- | --------------------------- | ---------------------- |
+| `sgd`    | Stochastic Gradient Descent       | uses `.decision_function()` | Multiple               |
+| `forest` | Random Forest Classifier          | uses `.predict_proba()`     | Multiple               |
+|          | Naive Bayes                       |                             | Multiple               |
+| `svc`    | Support Vector Machine Classifier | uses `.decision_function()` | Binary w/ OvO strategy |
+|          |                                   |                             |                        |
 
 
-## General Tricks
-
-### Typecasting
-
-- `pandas.core.series.Series`.`astype(np.int8)` to convert string to integers (or float to integers)
- 
+### Attributes
