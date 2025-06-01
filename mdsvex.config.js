@@ -5,6 +5,7 @@ import { escapeSvelte } from 'mdsvex'
 import { join, parse } from 'node:path'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeKatexSvelte from 'rehype-katex-svelte'
 import rehypeMathJaxSvg from 'rehype-mathjax'
 // import rehypeKatexSvelte from 'rehype-katex-svelte'
 import rehypeSlug from 'rehype-slug'
@@ -83,7 +84,7 @@ export default {
     _: './src/lib/components/post_layout.svelte',
   },
   rehypePlugins: [
-    rehypeMathJaxSvg,
+    [rehypeMathJaxSvg, { chtml: false, svg: true, tex: false }],
     rehypeSlug,
     [rehypeAutolinkHeadings, { behavior: 'wrap' }],
     [
@@ -96,9 +97,10 @@ export default {
   ],
   remarkPlugins: [
     [
-      remarkMath, {
-        singleDollarTextMath: true
-      }
+      remarkMath,
+      {
+        singleDollarTextMath: true,
+      },
     ],
     [
       remarkFFF,

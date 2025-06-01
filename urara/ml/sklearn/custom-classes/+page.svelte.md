@@ -1,10 +1,10 @@
 ---
 title: Custom Classes in sklearn
-image: /ml/sklearn/custom-classes/
+images: /ml/sklearn/custom-classes/
 alt: Custom Classes in sklearn
 created: 2025-05-31
 updated: 2025-05-31
-tags: []
+tags:
 ---
 We are going to use the housing dataset from this.
 

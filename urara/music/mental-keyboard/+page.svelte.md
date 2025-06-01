@@ -1,6 +1,6 @@
 ---
 title: The Mental Keyboard
-image: /music-tips/mental-keyboard/mind.webp
+image: /music/mental-keyboard/mind.webp
 tags:
   - mind
   - music

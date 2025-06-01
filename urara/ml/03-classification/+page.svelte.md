@@ -8,10 +8,14 @@ tags:
 
 ### Precision & Recall
 
-**Precision** refers to "How many times were you right about a Positive?" This measures the *accuracy* of positive predictions. $$
+**Precision** refers to "How many times were you right about a Positive?" This measures the *accuracy* of positive predictions. 
+$$
 \text{precision} = \frac{TP}{TP + FP}
 $$
-**Recall** refers to "How many positives could you recall correctly?". Also refers to *sensitivity* or *True Positive Rate* (TPR).  Another way to think about recall is how well you are able to **DETECT** the positives? Are you able to detect all of them or are there a few misses? $$
+**Recall** refers to "How many positives could you recall correctly?". Also refers to *sensitivity* or *True Positive Rate* (TPR).  Another way to think about recall is how well you are able to **DETECT** the positives? Are you able to detect all of them or are there a few misses?
+
+Hey
+$$
 \text{recall} = \frac{TP}{TP + FN}
 $$
 > Why do we need both precision and recall? 
