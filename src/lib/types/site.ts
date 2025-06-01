@@ -4,20 +4,21 @@ export interface SiteConfig {
   author: {
     bio?: string
     lastfm?: {
+      show: boolean
       username: string
     }
     metadata?: (
-      | {
-          icon?: string
-          link?: string
-          rel?: string
-          text: string
-        }
       | {
         icon: string
         link?: string
         rel?: string
         text?: string
+      }
+        | {
+        icon?: string
+        link?: string
+        rel?: string
+        text: string
       }
     )[]
     status?: string

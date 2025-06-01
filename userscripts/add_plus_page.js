@@ -67,7 +67,7 @@ module.exports = async (params) => {
   // const templateContent = await app.vault.read(app.vault.getAbstractFileByPath(templatePath));
   const fileContent = `---
 title: ${title}
-images: /${newFolderPath.split('/').slice(1).join('/')}/
+image_: /${newFolderPath.split('/').slice(1).join('/')}/
 alt: ${title}
 created: ${new Date().toISOString().split('T')[0]}
 updated: ${new Date().toISOString().split('T')[0]}

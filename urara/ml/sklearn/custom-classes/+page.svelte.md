@@ -1,6 +1,6 @@
 ---
 title: Custom Classes in sklearn
-images: /ml/sklearn/custom-classes/
+image_: /ml/sklearn/custom-classes/
 alt: Custom Classes in sklearn
 created: 2025-05-31
 updated: 2025-05-31
@@ -68,5 +68,7 @@ attr_adder = CombinedAttributesAdder(add_bedrooms_per_room=False)
 housing_extra_attribs = attr_adder.transform(housing.values)
 ```
 
+
 > NOTE: `np.c_` is for concatenating arrays as columns. `np.c_[X, rooms_per_household, population_per_household]` will concatenate the already 2d `X` with the two columns `rooms_per_household` and `population_per_household`. If `X` was $1000\times10$ then the final output would be $1000\times 12$ (the two new columns added)
 
+Should practice this pattern multiple times to get comfortable and so that thinking about it becomes natural.

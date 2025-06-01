@@ -5,6 +5,7 @@ export const site: SiteConfig = {
     avatar: '/assets/maskable@192.png',
     bio: 'Actuary, Data Scientist\n & Web Developer',
     lastfm: {
+      show: false,
       username: 'hGup',
     },
     metadata: [

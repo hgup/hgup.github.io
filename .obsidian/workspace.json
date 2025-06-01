@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "urara/ml/sklearn/custom-classes/+page.svelte.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -198,6 +198,9 @@
   "active": "f7c5af9a8e15930a",
   "lastOpenFiles": [
     "urara/ml/sklearn/+page.svelte.md",
+    "urara/ml/+page.svelte.md",
+    "urara/ml/sklearn/custom-classes/+page.svelte.md",
+    "urara/music/mental-keyboard/+page.svelte.md",
     "vite.config.ts.timestamp-1748747797314-dab95763f3503.mjs",
     "src/static/setup/aha-moments/eureka.png",
     "src/static/setup/setup.png",
@@ -230,9 +233,6 @@
     "src/routes/dissertation/+page.svelte.md",
     "src/routes/about/+page.svelte.md",
     "urara/ml/03-classification/+page.svelte.md",
-    "urara/ml/+page.svelte.md",
-    "urara/music/mental-keyboard/+page.svelte.md",
-    "urara/ml/sklearn/custom-classes/+page.svelte.md",
     "urara/ml/packages/+page.svelte.md",
     "urara/ml/sklearn/custom-classes/Scikit-Learn Design.md",
     "urara/ml/test/+page.svelte.md",

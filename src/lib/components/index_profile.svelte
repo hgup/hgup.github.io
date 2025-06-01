@@ -63,7 +63,7 @@
           {/if}
         {/each}
 
-    {#if site.author.lastfm}
+    {#if site.author.lastfm && site.author.lastfm.show}
     <Lastfm username={site.author.lastfm.username} />
     {/if}
       </div>
