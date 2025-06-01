@@ -11,7 +11,17 @@
     </url>
     
         <url>
+            <loc>https://hgup.github.io/ml/packages</loc>
+            <lastmod>2025-05-31T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://hgup.github.io/ml/sklearn</loc>
+            <lastmod>2025-05-31T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://hgup.github.io/ml/sklearn/custom-classes</loc>
             <lastmod>2025-05-31T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
         </url>
@@ -32,27 +42,27 @@
         </url>
         <url>
             <loc>https://hgup.github.io/hobbies/music-tools</loc>
-            <lastmod>2025-05-31T08:15:28.447Z</lastmod>
+            <lastmod>2025-06-01T03:17:45.882Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
             <loc>https://hgup.github.io/setup</loc>
-            <lastmod>2025-05-31T08:15:28.450Z</lastmod>
+            <lastmod>2025-06-01T03:17:45.886Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
             <loc>https://hgup.github.io/dissertation</loc>
-            <lastmod>2025-05-31T08:15:28.446Z</lastmod>
+            <lastmod>2025-06-01T03:17:45.882Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
             <loc>https://hgup.github.io/music/mental-keyboard</loc>
-            <lastmod>2025-05-31T08:15:28.450Z</lastmod>
+            <lastmod>2025-06-01T03:17:45.886Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
             <loc>https://hgup.github.io/about</loc>
-            <lastmod>2025-05-31T08:15:28.445Z</lastmod>
+            <lastmod>2025-06-01T03:17:45.880Z</lastmod>
             <priority>0.5</priority>
         </url>
   </urlset>
