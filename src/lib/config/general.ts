@@ -17,7 +17,24 @@ export const header: HeaderConfig = {
     },
     {
       link: 'https://audio.com/hursh',
-      text: 'Audio',
+      text: 'Music',
+    },
+    {
+      children: [
+        {
+          link: '/ml',
+          text: 'Machine Learning Notes',
+        },
+        {
+          link: '/ml/sklearn',
+          text: 'Sklearn Notes',
+        },
+        {
+          link: '/ml/packages',
+          text: 'Packages\' Notes',
+        },
+      ],
+      text: 'ML',
     },
   ],
   search: {

@@ -18,6 +18,12 @@ importers:
       '@antfu/eslint-config':
         specifier: ^3.5.1
         version: 3.5.1(@typescript-eslint/utils@8.5.0(eslint@9.10.0(jiti@1.21.7))(typescript@5.3.3))(@unocss/eslint-plugin@0.62.3(eslint@9.10.0(jiti@1.21.7))(typescript@5.3.3))(@vue/compiler-sfc@3.5.4)(eslint-plugin-svelte@2.43.0(eslint@9.10.0(jiti@1.21.7))(svelte@4.2.10))(eslint@9.10.0(jiti@1.21.7))(svelte-eslint-parser@0.41.0(svelte@4.2.10))(svelte@4.2.10)(typescript@5.3.3)
+      '@fontsource/jost':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/poppins':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@iconify-json/heroicons-outline':
         specifier: ^1.1.10
         version: 1.1.10
@@ -1223,6 +1229,12 @@ packages:
   '@eslint/plugin-kit@0.1.0':
     resolution: {integrity: sha512-autAXT203ixhqei9xt+qkYOvY8l6LAFIdT2UXc/RPNeUVfqRF1BV94GTJyVPFKT8nFM6MyVJhjLj9E8JWvf5zQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/jost@5.2.5':
+    resolution: {integrity: sha512-I401plUl7UlpOKWCdYFrfNB73UOiQv17RRFguWuD1ZmE5sWRsO39sCYQO8SV/U45B7brvD0DQPcL8UmvbbOMPw==}
+
+  '@fontsource/poppins@5.2.6':
+    resolution: {integrity: sha512-NFr0121+vWCfzLDVvSZOzwAjRUaNj6QHA9gtUh/KHHoWf1Qn23EkwVFs63XZ6UtF5K1b3UNmCx77YEMGgV7BOQ==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -5977,6 +5989,10 @@ snapshots:
   '@eslint/plugin-kit@0.1.0':
     dependencies:
       levn: 0.4.1
+
+  '@fontsource/jost@5.2.5': {}
+
+  '@fontsource/poppins@5.2.6': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 

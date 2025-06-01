@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.5.1",
+    "@fontsource/jost": "^5.2.5",
+    "@fontsource/poppins": "^5.2.6",
     "@iconify-json/heroicons-outline": "^1.1.10",
     "@iconify-json/heroicons-solid": "^1.1.11",
     "@importantimport/eslint-config": "1.0.0-alpha.2",
