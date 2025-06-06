@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "urara/ml/sklearn/custom-classes/+page.svelte.md",
+                "file": "urara/dissertation/+page.svelte.md",
                 "mode": "source",
                 "source": false
               },
@@ -197,9 +197,9 @@
   },
   "active": "f7c5af9a8e15930a",
   "lastOpenFiles": [
+    "urara/ml/sklearn/custom-classes/+page.svelte.md",
     "urara/ml/sklearn/+page.svelte.md",
     "urara/ml/+page.svelte.md",
-    "urara/ml/sklearn/custom-classes/+page.svelte.md",
     "urara/music/mental-keyboard/+page.svelte.md",
     "vite.config.ts.timestamp-1748747797314-dab95763f3503.mjs",
     "src/static/setup/aha-moments/eureka.png",

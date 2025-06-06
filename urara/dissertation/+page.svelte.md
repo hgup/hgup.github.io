@@ -18,3 +18,7 @@ Stochastic reserving aims to solve this problem by introducing us with simple st
 I have reviewed these papers as of now:
 
 - Mack, Thomas. “CREDIBLE CLAIMS RESERVES: THE BENKTANDER METHOD,” n.d.
+
+### 2025-06-06
+
+One complaint about the first few papers are that all of them offer examples and stuff. That's okay and agreeable. But the derivations involve taking assumptions about distribution. At that level it becomes too abstract to understand. Maybe an assisting paper can be written which explains with an example of a distribution how such a derivation would look like assuming a given distribution. This would allow for more clarity and less "abstractness".
