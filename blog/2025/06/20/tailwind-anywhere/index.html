@@ -2634,15 +2634,23 @@
 <p>Then create a file called <code>input.css</code>. Here, you will define the config as you do in a normal CSS file that is going to be using tailwindcss (e.g. think of it like the <code>global.css</code> in a Next.js project)</p>
 <div class="language-css highlight"><span class="filename">src/input.css</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s2">&quot;tailwindcss&quot;</span><span class="p">;</span>
 </span></code></pre></div>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pnpx<span class="w"> </span>@tailwindcss/cli<span class="w"> </span>-i<span class="w"> </span>./src/input.css<span class="w"> </span>-o<span class="w"> </span>./src/output.css<span class="w"> </span>--watch
+<p>Run the cli with the <code>--watch</code> mode</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pnpx<span class="w"> </span>@tailwindcss/cli<span class="w"> </span>-i<span class="w"> </span>./src/input.css<span class="w"> </span>-o<span class="w"> </span>./src/output.css<span class="w"> </span>--watch<span class="w"> </span><span class="c1">#(1)</span>
 </span></code></pre></div>
-<p><div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./output.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span> <span class="cm">&lt;!--(1)--&gt;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></code></pre></div>
-1. In the page that you are editing, import the <code>output.css</code> file.</p>
+<ol>
+<li>The <code>--watch</code> mode ensures that whenever you make any edits to any of the html files in the directory which mention a tailwind compatible class name, that class and its css will be added to the <code>output.css</code> file.</li>
+</ol>
+<p>Then, import the <code>output.css</code> file in the <code class="language-html highlight"><span class="p">&lt;</span><span class="nt">head</span><span class="p">/&gt;</span></code> of the html document being sourced.</p>
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./output.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
 <p>As you keep updating the html file. <code>@tailwindcss/cli</code> will update the <code>output.css</code> file based on your configurations set in <code>input.css</code>. That's how God intended <strong>tailwindcss</strong> to work from the beginning. </p>
 <h3 id="why-would-you-wanna-use-this">Why would you wanna use this?<a class="headerlink" href="#why-would-you-wanna-use-this" title="Permanent link">&para;</a></h3>
 <p>Ever thought of spinning up a quick static webpage that doesn't need those flashy features of the cutting-edge frameworks that are being used literally everywhere? Well, I don't think so. But, if you are not a native-css person and tend to use tailwindcss just because its very convenient, I have good news for you.</p>
