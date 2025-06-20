@@ -2888,14 +2888,22 @@
 </li>
 </ul>
 <h3 id="pdplotting"><code>pd.plotting</code><a class="headerlink" href="#pdplotting" title="Permanent link">&para;</a></h3>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">housing</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>             <span class="n">s</span><span class="o">=</span><span class="n">housing</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;population&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>             <span class="n">c</span><span class="o">=</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;jet&#39;</span><span class="p">))</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">housing</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="c1">#(2)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">s</span><span class="o">=</span><span class="n">housing</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="c1">#(1)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;population&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">c</span><span class="o">=</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="c1">#(3)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span> <span class="c1">#(4)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
 </span></code></pre></div>
-  - <code>s</code> is the radius of the circle.
-  - <code>alpha</code> opacity.
-  - <code>c</code> is the color (always give the name of the property (e.g. <code>"population"</code> instead of <code>housing['population']</code> whenever possible, here we needed to make an adjustment to the size).
-  - <code>cmap</code> gives us the color map.</p>
+<ol>
+<li><code>s</code> is the radius of the circle.</li>
+<li><code>alpha</code> opacity.</li>
+<li><code>c</code> is the color (always give the name of the property (e.g. <code>"population"</code> instead of <code>housing['population']</code> whenever possible, here we needed to make an adjustment to the size).</li>
+<li><code>cmap</code> gives us the color map.</li>
+</ol>
 <p><code>scatter_matrix</code> is used to plot correlation maps.</p>
 <h2 id="numpy-tricks"><code>numpy</code> tricks<a class="headerlink" href="#numpy-tricks" title="Permanent link">&para;</a></h2>
 <h3 id="npndarray"><code>np.ndarray</code><a class="headerlink" href="#npndarray" title="Permanent link">&para;</a></h3>
@@ -2960,7 +2968,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Machine Learning">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
@@ -2970,7 +2978,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Machine Learning
               </div>
             </div>
           </a>
