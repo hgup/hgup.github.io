@@ -1,0 +1,44 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+body {
+  -ms-overflow-style:none;
+}
+:root  > * {
+  --md-accent-fg-color: #629678 !important;
+  --md-typeset-a-color:  #629678 !important;
+  --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
+}
+
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 145deg; 
+  --md-default-bg-color: #171717;
+  --md-primary-fg-color: #202020;
+  --md-footer-bg-color: #191919;
+  --md-footer-bg-color--dark: #101010;
+}
+
+ .md-header__ellipsis .md-header__topic {
+  font-family: "Arapey", serif;
+  font-size: 1rem;
+}
+
+.md-search__inner {
+  padding-top: 4px;
+}
+
+.md-search__input {
+  font-family: "Arapey", serif;
+}
+
+.md-typeset h1{
+  font-family: "Arapey", serif;
+  font-size: 1.9rem;
+}
+
