@@ -6,15 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Not sponsored by Nike">
+        <meta name="description" content="An approach of thinking to harness the power of tailwindcss anywhere. (Yes, even on barebones html files). The way God intended tailwind to be used.">
       
       
       
-        <link rel="canonical" href="https://hgup.github.io/blog/2025/06/20/dont-wait-for-it-just-do-it/">
+        <link rel="canonical" href="https://hgup.github.io/blog/2025/06/20/tailwind-anywhere/">
       
       
-        <link rel="prev" href="../tailwind-anywhere/">
+        <link rel="prev" href="../../18/why-i-shifted-to-mkdocs-and-it-just-works/">
       
+      
+        <link rel="next" href="../dont-wait-for-it-just-do-it/">
       
       
       <link rel="icon" href="../../../../../assets/lightning-bolt.svg">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Don't wait for it. Just do it - Hursh Gupta</title>
+        <title>Tailwind Anywhere! - Hursh Gupta</title>
       
     
     
@@ -61,11 +63,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Don't wait for it. Just do it - Hursh Gupta" >
+        <meta  property="og:title"  content="Tailwind Anywhere! - Hursh Gupta" >
       
-        <meta  property="og:description"  content="Not sponsored by Nike" >
+        <meta  property="og:description"  content="An approach of thinking to harness the power of tailwindcss anywhere. (Yes, even on barebones html files). The way God intended tailwind to be used." >
       
-        <meta  property="og:image"  content="https://hgup.github.io/assets/images/social/blog/posts/dont-wait.png" >
+        <meta  property="og:image"  content="https://hgup.github.io/assets/images/social/blog/posts/tailwind-anywhere.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -73,15 +75,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://hgup.github.io/blog/2025/06/20/dont-wait-for-it-just-do-it/" >
+        <meta  property="og:url"  content="https://hgup.github.io/blog/2025/06/20/tailwind-anywhere/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Don't wait for it. Just do it - Hursh Gupta" >
+        <meta  name="twitter:title"  content="Tailwind Anywhere! - Hursh Gupta" >
       
-        <meta  name="twitter:description"  content="Not sponsored by Nike" >
+        <meta  name="twitter:description"  content="An approach of thinking to harness the power of tailwindcss anywhere. (Yes, even on barebones html files). The way God intended tailwind to be used." >
       
-        <meta  name="twitter:image"  content="https://hgup.github.io/assets/images/social/blog/posts/dont-wait.png" >
+        <meta  name="twitter:image"  content="https://hgup.github.io/assets/images/social/blog/posts/tailwind-anywhere.png" >
       
     
     
@@ -105,6 +107,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#tldr" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -136,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Don't wait for it. Just do it
+              Tailwind Anywhere!
             
           </span>
         </div>
@@ -2476,6 +2483,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      tl;dr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-would-you-wanna-use-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why would you wanna use this?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2541,7 +2574,7 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../../../../category/motivation/">Motivation</a></span>
+                              <a href="../../../../category/tutorials/">Tutorials</a></span>
                         </div>
                       </li>
                     
@@ -2552,7 +2585,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -2574,30 +2607,47 @@
   
 
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">webdev</span>
+      
+    
+  </nav>
 
 
-  <h1>Don't wait for it. Just do it</h1>
 
-<p>We wait for the right moment for the right things to happen. But what exactly is the "right time"?</p>
-<p>Isn't it true that a swordsman who waited for years for the battle let his sword rust by saying "I will only ever wield it when the time is right" and breaks it in the battle.</p>
+  <h1>Tailwind Anywhere!</h1>
+
+<p>The <code>tl;dr</code> is the tutoral. If you wanna know why you would want to do something like this, read <a href="#Why%20would%20you%20wanna%20use%20this?">Why would you wanna use this?</a>.</p>
 <!-- more -->
-
-<p>Isn't it true that there can always be a little better situation than the current one. In that case isn't it wise to have started the deed a bit later than now. But what if things go the other way round? Then the right moment would have been now, but we will never know what tomorrow has in stock for us.</p>
-<p>So, the best thing we can do is to have a <em>basic plan</em><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and move ahead</p>
-<pre class="mermaid"><code>flowchart LR
-    A(["Start"])
-    A --&gt; B{"Wait"}
-    B --"Yes"--&gt; C[/Keep Waiting/]
-    B --"No"o--&gt; D[/Seize the moment/]</code></pre>
-<p>Hope it makes sense one day. Peace</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>We can go on thinking about the "perfect" plan and then doom us in a similar way.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
+<h3 id="tldr">tl;dr<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h3>
+<div class="admonition source">
+<p class="admonition-title">Source</p>
+<p>Follow <a href="https://tailwindcss.com/docs/installation/tailwind-cli">this guide</a> and select the "Tailwind CLI" method</p>
 </div>
+<p>First up. Install the <strong>tailwindcss CLI</strong>.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pnpm<span class="w"> </span>install<span class="w"> </span>tailwindcss<span class="w"> </span>@tailwindcss/cli
+</span></code></pre></div>
+<p>Then create a file called <code>input.css</code>. Here, you will define the config as you do in a normal CSS file that is going to be using tailwindcss (e.g. think of it like the <code>global.css</code> in a Next.js project)</p>
+<div class="language-css highlight"><span class="filename">src/input.css</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s2">&quot;tailwindcss&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pnpx<span class="w"> </span>@tailwindcss/cli<span class="w"> </span>-i<span class="w"> </span>./src/input.css<span class="w"> </span>-o<span class="w"> </span>./src/output.css<span class="w"> </span>--watch
+</span></code></pre></div>
+<p><div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./output.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span> <span class="cm">&lt;!--(1)--&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></code></pre></div>
+1. In the page that you are editing, import the <code>output.css</code> file.</p>
+<p>As you keep updating the html file. <code>@tailwindcss/cli</code> will update the <code>output.css</code> file based on your configurations set in <code>input.css</code>. That's how God intended <strong>tailwindcss</strong> to work from the beginning. </p>
+<h3 id="why-would-you-wanna-use-this">Why would you wanna use this?<a class="headerlink" href="#why-would-you-wanna-use-this" title="Permanent link">&para;</a></h3>
+<p>Ever thought of spinning up a quick static webpage that doesn't need those flashy features of the cutting-edge frameworks that are being used literally everywhere? Well, I don't think so. But, if you are not a native-css person and tend to use tailwindcss just because its very convenient, I have good news for you.</p>
+<p>You can think of designing the page like how tailwind allows you to do (quickly and efficiently) without worrying about the native css styles. And the best part is that you don't need to think about installing tailwind as a dependency or bundling it or any of that crap (though if its a big project, its recommended, you learn how to do that to save time in the long run). But this isn't what this guide is talking about.</p>
+<p>We need to do some quick and dirty css work and fast. We don't need to do it the "right" or left way. We just want it to work!</p>
 
 
 
@@ -2656,7 +2706,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../tailwind-anywhere/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tailwind Anywhere!">
+          <a href="../../18/why-i-shifted-to-mkdocs-and-it-just-works/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why I shifted to mkdocs and it just works!">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
@@ -2666,11 +2716,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Tailwind Anywhere!
+                Why I shifted to mkdocs and it just works!
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../dont-wait-for-it-just-do-it/" class="md-footer__link md-footer__link--next" aria-label="Next: Don&#39;t wait for it. Just do it">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Don't wait for it. Just do it
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
