@@ -1124,7 +1124,7 @@
   
   
   <span class="md-ellipsis">
-    Adjust for Anomalies
+    Large Events &amp; Anamolies
     
   </span>
   
@@ -1204,12 +1204,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.1.one-time-changes/" class="md-nav__link">
+      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.2.one-time-changes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    One-time Changes
+    One time changes
     
   </span>
   
@@ -1227,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.2.trends/" class="md-nav__link">
+      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.3.trends/" class="md-nav__link">
         
   
   
@@ -1427,7 +1427,7 @@
   
   
   <span class="md-ellipsis">
-    Univariate
+    Univariate Risk Classification
     
   </span>
   
@@ -1450,7 +1450,7 @@
   
   
   <span class="md-ellipsis">
-    Multivariate
+    Multivariate Risk Classification
     
   </span>
   
@@ -1597,6 +1597,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Credibility
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1608,6 +1621,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#complement-of-credibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complement of Credibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complement of Credibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complements-in-first-dollar-ratemaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complements in First Dollar Ratemaking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2552,6 +2617,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#complement-of-credibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complement of Credibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complement of Credibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complements-in-first-dollar-ratemaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complements in First Dollar Ratemaking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2570,6 +2676,101 @@
 
 
 <h1 id="credibility">Credibility<a class="headerlink" href="#credibility" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p><strong>1 Backlink</strong></p>
+<ul>
+<li><strong>Use CSLC to lookup the credibility, MSL and EER from the ISO tables</strong><ul>
+<li>Looking up the tables is not part of Exam 5. But we may be asked to <strong>calculate the <a href="https://workflowy.com/#/866f769de90f">credibility</a></strong> or <strong>calculate the EER</strong> given the numerator and denominator.</li>
+</ul>
+</li>
+<li>
+<p><strong>3 necessary criteria</strong></p>
+</li>
+<li>
+<p>0≤Z≤1</p>
+</li>
+<li>Z should increase as n increases (dZ/dn≥0).</li>
+<li>Z should increase as n increases at a decreasing rate (d/dn(Z/n)&lt;0).</li>
+<li>
+<p><strong>Methods</strong></p>
+</li>
+<li>
+<p><strong>Classical</strong></p>
+<ul>
+<li>Z×Observed+(1−Z)×Related Experience</li>
+<li><strong>Partial</strong><ul>
+<li>Claim counts (n): Z=min(n/N0​<img alt="" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;400em&quot; height=&quot;1.28em&quot; viewBox=&quot;0 0 400000 1296&quot; preserveAspectRatio=&quot;xMinYMin slice&quot;&gt;&lt;path d=&quot;M263,681c0.7,0,18,39.7,52,119%0Ac34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120%0Ac340,-704.7,510.7,-1060.3,512,-1067%0Al0 -0%0Ac4.7,-7.3,11,-11,19,-11%0AH40000v40H1012.3%0As-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232%0Ac-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1%0As-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26%0Ac-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z%0AM1001 80h400000v40h-400000z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" />​,1)</li>
+<li>Exposures: Z=min(e/(N0​/F)<img alt="" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;400em&quot; height=&quot;1.28em&quot; viewBox=&quot;0 0 400000 1296&quot; preserveAspectRatio=&quot;xMinYMin slice&quot;&gt;&lt;path d=&quot;M263,681c0.7,0,18,39.7,52,119%0Ac34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120%0Ac340,-704.7,510.7,-1060.3,512,-1067%0Al0 -0%0Ac4.7,-7.3,11,-11,19,-11%0AH40000v40H1012.3%0As-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232%0Ac-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1%0As-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26%0Ac-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z%0AM1001 80h400000v40h-400000z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" />​,1)<ul>
+<li>Exposures for full credibility = N0​/expected frequency(F).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Buhlmann</strong><ul>
+<li>Least Squares Credibility.</li>
+<li>Estimate = Z×(Observed Experience)+(1−Z)×Prior <strong>Mean</strong></li>
+<li>And Z=N/(N+K)<ul>
+<li>K=EVPV / VHM<ul>
+<li>Expected Value of Process Variance, EVPV = E[Var(X)].</li>
+<li>Variance of Hypothetical Means, VHM = Var(E[X]).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Bayesian Analysis</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="complement-of-credibility">Complement of Credibility<a class="headerlink" href="#complement-of-credibility" title="Permanent link">&para;</a></h2>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Accurate</strong> (close to target).</li>
+<li><strong>Unbiased</strong> (on target on average).</li>
+<li><strong>Statistically independent</strong> from base statistic.</li>
+<li><strong>Available</strong> (else not practical).</li>
+<li>Easy to <strong>compute</strong> (else difficult to justify).</li>
+<li><strong>Logical</strong> relationship to base statistic (" " " justify).</li>
+</ul>
+<h3 id="complements-in-first-dollar-ratemaking">Complements in First Dollar Ratemaking<a class="headerlink" href="#complements-in-first-dollar-ratemaking" title="Permanent link">&para;</a></h3>
+<p>Ground up losses (or small deductibles): Loss Cost (LC).</p>
+<ul>
+<li><strong>LC of a Larger group including subject group</strong><ul>
+<li>Regional or Countrywide for state data.</li>
+<li>May be biased.<ul>
+<li>There is a reason why the subject group has been separated from the larger group.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>LC of a larger related group</strong><ul>
+<li>Usually biased.</li>
+<li>Logical relationship if chosen reasonably.</li>
+</ul>
+</li>
+<li><strong>Rate change from large group applied to present rates</strong><ul>
+<li>Adjusted version of prior complement to reduce bias.</li>
+<li>Complement = Current LC (Subject) * (Large group Ind LC / Large group Current Avg LC).</li>
+</ul>
+</li>
+<li><strong>Harwayne's method</strong><ul>
+<li>We are trying to find the complement of credibility for LC (Pure premium) of class A.</li>
+<li>Calculate A's, B's, C's average pure premium by using Class A's exposures as the weight.</li>
+<li>Calculate adjustment factor (Class B / Class A avg premium).</li>
+<li>Multiply PP for each class by adjustment factor.</li>
+<li>Exposure weight the PP of the other classes to get the complement.</li>
+</ul>
+</li>
+<li><strong>Trended Present rates</strong> #todo</li>
+<li><strong>Competitor's rates</strong><ul>
+<li>Biased, inaccurate, and difficult to obtain.</li>
+</ul>
+</li>
+</ul>
 
 
 

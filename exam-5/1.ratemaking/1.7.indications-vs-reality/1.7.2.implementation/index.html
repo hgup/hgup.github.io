@@ -1124,7 +1124,7 @@
   
   
   <span class="md-ellipsis">
-    Adjust for Anomalies
+    Large Events &amp; Anamolies
     
   </span>
   
@@ -1204,12 +1204,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.1.one-time-changes/" class="md-nav__link">
+      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.2.one-time-changes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    One-time Changes
+    One time changes
     
   </span>
   
@@ -1227,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.2.trends/" class="md-nav__link">
+      <a href="../../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.3.trends/" class="md-nav__link">
         
   
   
@@ -1427,7 +1427,7 @@
   
   
   <span class="md-ellipsis">
-    Univariate
+    Univariate Risk Classification
     
   </span>
   
@@ -1450,7 +1450,7 @@
   
   
   <span class="md-ellipsis">
-    Multivariate
+    Multivariate Risk Classification
     
   </span>
   
@@ -1620,6 +1620,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1631,6 +1644,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-new-rates-for-an-existing-product-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating New Rates for an Existing Product (Steps)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expense-fees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expense Fees
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deriving-new-base-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deriving new Base Rate
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2552,6 +2611,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-new-rates-for-an-existing-product-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating New Rates for an Existing Product (Steps)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expense-fees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expense Fees
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deriving-new-base-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deriving new Base Rate
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2570,6 +2664,186 @@
 
 
 <h1 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h1>
+<p>Off-balance factor.</p>
+<h3 id="calculating-new-rates-for-an-existing-product-steps">Calculating New Rates for an Existing Product (Steps)<a class="headerlink" href="#calculating-new-rates-for-an-existing-product-steps" title="Permanent link">&para;</a></h3>
+<p>This section focuses on the ==last two==:</p>
+<ul>
+<li>Select Target Overall Average Premium.</li>
+<li>Finalize the rating algorithm.</li>
+<li>Select final new rates for each rating variable.</li>
+<li>==Select final additive amounts (e.g., expense fees) if applicable==.</li>
+<li>==Derive final base rate to achieve target premium==.</li>
+</ul>
+<h3 id="expense-fees">Expense Fees<a class="headerlink" href="#expense-fees" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed expense Fee <em>per exposure</em> = <code>Fixed Expense per exposure / (1 - V - Q)</code>.<ul>
+<li>Can be converted into a per-policy basis by multiplying by the average number of exposures per policy.</li>
+</ul>
+</li>
+</ul>
+<h3 id="deriving-new-base-rate">Deriving new Base Rate<a class="headerlink" href="#deriving-new-base-rate" title="Permanent link">&para;</a></h3>
+<h1 id="tip-dont-read-the-theory-just-go-for-the-examples-to-learnunderstand-do-it-in-excel-as-all-of-them-use-the-same-base-example-to-demonstrate-the-process">tip Don't read the theory, just go for the examples to learn/understand, do it in Excel as all of them use the same base example to demonstrate the process.<a class="headerlink" href="#tip-dont-read-the-theory-just-go-for-the-examples-to-learnunderstand-do-it-in-excel-as-all-of-them-use-the-same-base-example-to-demonstrate-the-process" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p><strong>Without Rating Factor Changes</strong></p>
+<ul>
+<li>Only change the <strong>Base Rate</strong>.</li>
+<li>An additive component may also change (but this usually doesn't happen, e.g., a fixed expense fee wouldn't change with a rate change).</li>
+<li>
+<p><strong>With Rating Factor Changes</strong></p>
+</li>
+<li>
+<p><strong>Problem used in the examples below</strong>.</p>
+</li>
+<li><strong>Extension of Exposures</strong><ul>
+<li>Example (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D219%26annotation%3DPKXCJKRF">pdf</a>).</li>
+</ul>
+</li>
+<li><strong>Approximated Average Rate Differential</strong><ul>
+<li><em>EXACT</em> Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D220%26annotation%3DBVQYIVKQ">pdf</a>).</li>
+<li><em>Approximated</em> Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D221%26annotation%3DBZVGUWRT">pdf</a>).</li>
+</ul>
+</li>
+<li><strong>Approximated Change in Average Rate Differential</strong><ul>
+<li><em>EXACT</em> Change in Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D222%26annotation%3DXCA9N462">pdf</a>).</li>
+<li><em>Approximated</em> Change in Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D223%26annotation%3D366XFK3W">pdf</a>).</li>
+<li><em>See also: <a href="https://workflowy.com/#/6ef531c4e7dd">Approximated Change in Average Rate Differential</a></em><ul>
+<li>Best: Variable premium at base level.</li>
+<li>Best (=): adjusted exposures as in <a href="https://workflowy.com/#/807c48b42dfd">Adjusted Pure Premium Method</a>.</li>
+<li>Second-best: Using exposures.<ul>
+<li>But less accurate in theory. Only do if data for above 2 is unavailable.</li>
+</ul>
+</li>
+<li>==Never weight with Actual Premiums <strong>NOT at BASE Level</strong>== to avoid double counting of the relativities.</li>
+<li>Off-balance = <strong>Current</strong> weighted-relativity / <strong>Proposed</strong> weighted-relativity.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Rules for Weighting</strong></p>
+</li>
+<li>
+<p><a href="https://workflowy.com/#/6ef531c4e7dd">Approximated Change in Average Rate Differential</a>.</p>
+<ul>
+<li>Best: Variable premium at base level.</li>
+<li>Best (=): adjusted exposures as in <a href="https://workflowy.com/#/807c48b42dfd">Adjusted Pure Premium Method</a>.</li>
+<li>Second-best: Using exposures.<ul>
+<li>But less accurate in theory. Only do if data for above 2 is unavailable.</li>
+</ul>
+</li>
+<li>==Never weight with Actual Premiums <strong>NOT at BASE Level</strong>== to avoid double counting of the relativities.</li>
+<li>Off-balance = <strong>Current</strong> weighted-relativity / <strong>Proposed</strong> weighted-relativity.</li>
+</ul>
+</li>
+<li>
+<p><strong>Minimum Premiums</strong></p>
+</li>
+<li>
+<p>Ensure that premium <strong>will cover</strong> expected fixed expenses and some minimal amount of expected losses.</p>
+</li>
+<li>Effect = <code>Premium with minimum</code> / <code>Premium without (with old) minimum</code>.</li>
+<li>Base Rate offset = 1 / (1+Effect).</li>
+<li>
+<p><strong>Rate Capping for One Variable</strong></p>
+</li>
+<li>
+<p>"If we want to cap the impact of a rate change for a single variable, we will need to make up any premium loss resulting from the cap on other levels of the variable to obtain the same overall target premium" (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D225%26annotation%3D2XTXI8KQ">pdf</a>).</p>
+</li>
+<li>If we cap a <strong>non-base level</strong><ul>
+<li><strong>01</strong> Textbook approach.</li>
+<li><strong>02</strong> Allocate the shortfall directly and back into rels (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D227%26annotation%3D9FSMFCNM">pdf</a>).</li>
+<li><strong>03</strong> Figure out an equation.</li>
+</ul>
+</li>
+<li>If we cap a <strong>Base Level</strong><ul>
+<li><strong>01</strong> Textbook approach.</li>
+<li><strong>02</strong> Allocate the shortfall directly and back into rels (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D229%26annotation%3DGC5W7LJQ">pdf</a>).</li>
+<li><strong>03</strong> Figure out an equation.</li>
+</ul>
+</li>
+<li>Finish <a href="https://workflowy.com/#/61a975242bb0">Rate Capping for One Variable</a> by 6:30 PM on March 22, Saturday.</li>
+<li>
+<p><strong>Note</strong></p>
+</li>
+<li>
+<p><strong>Off-Balance Factor and the Rationale behind</strong></p>
+<ul>
+<li>Premium = Base Rate * Combined Variables Multiplicative Rating Factors + Additive Fee.</li>
+<li>Average Premium = Base Rate * Exposure-weighted Average Rating Factor + Additive Fee.</li>
+<li>If the <strong>Exposure-weighted Average RF term</strong> cancels out (in case there are no rating factor changes), we are done.<ul>
+<li>The E-w Avg RF term is shown as the last terms in the numerator and denominator of the fraction in the image above.</li>
+</ul>
+</li>
+<li>If they don't cancel out, we will have to multiply by the <strong>Off-balance</strong> factor.</li>
+</ul>
+</li>
+<li>For improved approximation we use <strong>Current Variable Premium at Base</strong>: ""Variable" means we are only considering the variable portion of premium (i.e., not including the additive fees), and "at base" means we don’t include any relativities for the variable we are analyzing (i.e., all levels of the variable are rated the same as the base level with a factor of 1)." (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D221%26annotation%3DCUEX2Q34">pdf</a>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="premium-transition-rules">Premium Transition Rules<a class="headerlink" href="#premium-transition-rules" title="Permanent link">&para;</a></h3>
+<p>To ensure that no individual risk goes up more than a certain percentage.</p>
+<ul>
+<li><strong>Rules that <em>limit</em> the change that insureds can see on their premium on renewal</strong><ul>
+<li>20% cap = (1+15%)(1+4.35%).</li>
+</ul>
+</li>
+<li><strong>Considerations</strong><ul>
+<li>What's the cap amount, and what does it do to your total profit?<ul>
+<li>Based on total profit scenario testing.</li>
+</ul>
+</li>
+<li>Fully allow to reflect non-rate large changes (e.g., change in exposures, claim surcharges). But ONLY cap the rate.</li>
+<li>Transition periods should be short.<ul>
+<li>Since multiple transition rules can start to overlap.</li>
+</ul>
+</li>
+<li><strong>Decision of implementation</strong><ul>
+<li>If uncapped impact is 5% but the impact of the first year is 3.5%, should we raise the base rates to 5% in the first year itself, or wait for future renewals for the 5% to be realized?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="expected-distribution">Expected Distribution<a class="headerlink" href="#expected-distribution" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rate changes are measured by the in-force on-level premiums.</li>
+<li>They don't consider the effect of the change to the mix-of-business.</li>
+<li><a href="https://workflowy.com/#/25a110687ffb">Optimized Pricing</a> techniques consider the impact on mix, the propensity to renew after a rate change.</li>
+</ul>
+<h3 id="using-bureau-or-competitor-rate">Using Bureau or Competitor Rate<a class="headerlink" href="#using-bureau-or-competitor-rate" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>How to make B/C rates more applicable</strong><ul>
+<li><strong>Adjust for fixed expense differences</strong><ul>
+<li>Adjust competitor expense fee by a factor = Your Fixed Expense exposure / Competitor Fixed Expense per exposure.</li>
+<li>An approximation of their fixed expense using our fixed expenses.</li>
+</ul>
+</li>
+<li><strong>Adjust for Variable expenses</strong><ul>
+<li>Adjust competitor base rate or expense fee by a factor = (Competitor variable PLR / Your Variable PLR).</li>
+<li>Competitor PLR in the numerator because variable PLR go in the denominator of the loss ratio formula for rate change.</li>
+<li>PLR: Permissible Loss Ratio.</li>
+</ul>
+</li>
+<li><strong>Adjust for loss costs</strong><ul>
+<li>Factor = Your Expected Loss Cost / Competitor's.</li>
+</ul>
+</li>
+<li><strong>Class differences can be accounted for</strong><ul>
+<li>Using actuarial judgment.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="communicating-and-monitoring">Communicating and Monitoring<a class="headerlink" href="#communicating-and-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Communicate impact to stakeholders.</li>
+<li>Explain ratemaking assumptions to regulators.</li>
+<li>The bigger the rate change, the more questions we get from regulators and internal folks.</li>
+</ul>
+<hr />
 
 
 

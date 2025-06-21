@@ -1124,7 +1124,7 @@
   
   
   <span class="md-ellipsis">
-    Adjust for Anomalies
+    Large Events &amp; Anamolies
     
   </span>
   
@@ -1204,12 +1204,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.1.one-time-changes/" class="md-nav__link">
+      <a href="../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.2.one-time-changes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    One-time Changes
+    One time changes
     
   </span>
   
@@ -1227,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.2.trends/" class="md-nav__link">
+      <a href="../1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.3.trends/" class="md-nav__link">
         
   
   
@@ -1429,7 +1429,7 @@
   
   
   <span class="md-ellipsis">
-    Univariate
+    Univariate Risk Classification
     
   </span>
   
@@ -1452,7 +1452,7 @@
   
   
   <span class="md-ellipsis">
-    Multivariate
+    Multivariate Risk Classification
     
   </span>
   
@@ -2542,6 +2542,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#asop-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASOP 12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adverse-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adverse Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-criteria-for-evaluating-a-rating-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Criteria for Evaluating a Rating Variable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Criteria for Evaluating a Rating Variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statistical" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Criteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Criteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legal-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legal Criteria
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2560,6 +2637,167 @@
 
 
 <h1 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h1>
+<p>Grouping of individuals with similar risk profiles.</p>
+<h3 id="asop-12">ASOP 12<a class="headerlink" href="#asop-12" title="Permanent link">&para;</a></h3>
+<h3 id="adverse-selection">Adverse Selection<a class="headerlink" href="#adverse-selection" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Insured Type</th>
+<th>True Expected</th>
+<th># of Risks</th>
+<th>Insurer A Price</th>
+<th>Profit</th>
+<th># of Risks</th>
+<th>Insurer B Price</th>
+<th>Profit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low-risk</td>
+<td>$200</td>
+<td>50</td>
+<td>$500</td>
+<td>$15,000</td>
+<td>50</td>
+<td>$500</td>
+<td>$15,000</td>
+</tr>
+<tr>
+<td>High-risk</td>
+<td>$800</td>
+<td>50</td>
+<td>$500</td>
+<td>($15,000)</td>
+<td>50</td>
+<td>$500</td>
+<td>($15,000)</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$500</td>
+<td>100</td>
+<td>$500</td>
+<td>$0</td>
+<td>100</td>
+<td>$500</td>
+<td>$0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A identifies the distinction, charges Low-risk less (20 Low Risk individuals shift from <code>B</code> to <code>A</code>) charges High-risk more (20 High Risk individuals shift from <code>A</code> to <code>B</code>)</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Insured Type</th>
+<th>True Expected</th>
+<th>Risks</th>
+<th>Insurer A Price</th>
+<th>Profit</th>
+<th># Risks</th>
+<th>Insurer B Price</th>
+<th>Profit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low-risk</td>
+<td>$200</td>
+<td>70</td>
+<td>$400</td>
+<td>$14,000</td>
+<td>30</td>
+<td>$500</td>
+<td>$9,000</td>
+</tr>
+<tr>
+<td>High-risk</td>
+<td>$800</td>
+<td>30</td>
+<td>$800</td>
+<td>$0</td>
+<td>70</td>
+<td>$500</td>
+<td>($21,000)</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$500</td>
+<td>100</td>
+<td>$520</td>
+<td>$14,000</td>
+<td>100</td>
+<td>$500</td>
+<td>($12,000)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>A</code> is experiencing <strong>favorable selection</strong>.</li>
+<li><code>B</code> is experiencing <strong>adverse selection</strong>.</li>
+<li>Recognizing the lower cost group of insureds that is not identified by the competition, and distinguishing this through underwriting and marketing instead of just rating, is known as "skimming the cream" #jargon.</li>
+<li>Insurers use Underwriting (UW) Guidelines to protect this trade-secret.</li>
+</ul>
+<h3 id="4-criteria-for-evaluating-a-rating-variable">4 Criteria for Evaluating a Rating Variable<a class="headerlink" href="#4-criteria-for-evaluating-a-rating-variable" title="Permanent link">&para;</a></h3>
+<h4 id="statistical">Statistical<a class="headerlink" href="#statistical" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Statistical Significance</strong><ul>
+<li>Expected Costs should vary by class with statistical significance.</li>
+</ul>
+</li>
+<li><strong>Homogeneity</strong><ul>
+<li>There should be no significantly different subclasses (otherwise they should be moved to their own separate class).</li>
+</ul>
+</li>
+<li><strong>Credibility</strong><ul>
+<li>The classes should be large enough or stable to allow credible statistical predictions.</li>
+</ul>
+</li>
+</ul>
+<h4 id="operational-criteria">Operational Criteria<a class="headerlink" href="#operational-criteria" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Objective</strong><ul>
+<li>Measurable and clearly defined (anti-example: psychological profile).</li>
+<li>Exhaustive and mutually exclusive.</li>
+</ul>
+</li>
+<li><strong>Inexpensive to administer</strong><ul>
+<li>Cost of obtaining and maintaining data to establish classes should not be too high.</li>
+</ul>
+</li>
+<li><strong>Verifiable Levels</strong><ul>
+<li>The levels of a rating variable (e.g., Short, Medium &amp; Tall) should be easily verifiable. We should minimize the ability for <strong>intentional misclassification</strong>.</li>
+<li>Miles driven: Telematics (verifiable) versus Insured reporting (hard to verify).</li>
+</ul>
+</li>
+</ul>
+<h4 id="social-criteria">Social Criteria<a class="headerlink" href="#social-criteria" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Affordability</strong><ul>
+<li>Subsidies exist to promote affordability.</li>
+</ul>
+</li>
+<li><strong>Causality (not a necessity)</strong><ul>
+<li>The public will accept it as a variable if an intuitive cause and effect relationship can be shown.</li>
+</ul>
+</li>
+<li><strong>Controllability (not a necessity)</strong><ul>
+<li>To reduce hazards.</li>
+</ul>
+</li>
+<li><strong>Privacy</strong><ul>
+<li>Insured shouldn't feel a breach of privacy.</li>
+</ul>
+</li>
+</ul>
+<h4 id="legal-criteria">Legal Criteria<a class="headerlink" href="#legal-criteria" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Must be in compliance with any laws in the jurisdiction in which the policy is being written.</li>
+</ul>
 
 
 
@@ -2615,13 +2853,13 @@
         
         
           
-          <a href="1.5.1.univariate/" class="md-footer__link md-footer__link--next" aria-label="Next: Univariate">
+          <a href="1.5.1.univariate/" class="md-footer__link md-footer__link--next" aria-label="Next: Univariate Risk Classification">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Univariate
+                Univariate Risk Classification
               </div>
             </div>
             <div class="md-footer__button md-icon">
