@@ -10,17 +10,20 @@ body {
   -ms-overflow-style:none;
 }
 :root  > * {
-  --md-accent-fg-color: #629678 !important;
-  --md-typeset-a-color:  #629678 !important;
+  /* --md-accent-fg-color: #629678 !important; */
+  /* --md-typeset-a-color:  #629678 !important;  */
+  --md-accent-fg-color: hsl(var(--md-hue), 30%, 66%) !important;
+  --md-typeset-a-color:  hsl(var(--md-hue), 30%, 66%) !important; 
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
 }
 
 
 [data-md-color-scheme="slate"] {
-  --md-hue: 145deg; 
-  --md-default-bg-color: #171717;
+  /* --md-hue: 145deg; Green */
+  --md-hue: 215deg; 
+  --md-default-bg-color: hsl(var(--md-hue), 0%, 9%);
   --md-primary-fg-color: #202020;
-  --md-footer-bg-color: #191919;
+  --md-footer-bg-color: hsl(var(--md-hue), 0%, 12%);
   --md-footer-bg-color--dark: #101010;
 }
 
