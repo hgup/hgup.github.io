@@ -12,8 +12,8 @@ body {
 :root  > * {
   /* --md-accent-fg-color: #629678 !important; */
   /* --md-typeset-a-color:  #629678 !important;  */
-  --md-accent-fg-color: hsl(var(--md-hue), 30%, 66%) !important;
-  --md-typeset-a-color:  hsl(var(--md-hue), 30%, 66%) !important; 
+  --md-accent-fg-color: hsl(var(--md-hue), 20%, 66%) !important;
+  --md-typeset-a-color:  hsl(var(--md-hue), 20%, 66%) !important; 
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
 }
 
