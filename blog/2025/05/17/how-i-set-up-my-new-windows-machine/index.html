@@ -92,7 +92,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2885,7 +2894,7 @@
 <blockquote>
 <p>This is for a windows installation.</p>
 </blockquote>
-<p><img alt="setup" src="../../../../setup.png" /></p>
+<p><a class="glightbox" href="../../../../setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="setup" src="../../../../setup.png" /></a></p>
 <!-- more -->
 <h2 id="fresh-installation">Fresh Installation<a class="headerlink" href="#fresh-installation" title="Permanent link">&para;</a></h2>
 <h3 id="debloat-windows">Debloat windows<a class="headerlink" href="#debloat-windows" title="Permanent link">&para;</a></h3>
@@ -3235,5 +3244,7 @@
     
   <script src="../../../../../assets/javascripts/custom.9e5da760.min.js"></script>
 
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
