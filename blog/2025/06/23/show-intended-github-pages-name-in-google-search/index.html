@@ -58,32 +58,6 @@
 
     
     
-      
-        <meta  property="og:type"  content="website" >
-      
-        <meta  property="og:title"  content="Show intended GitHub pages name in Google Search - Hursh Gupta" >
-      
-        <meta  property="og:description"  content="You need to update your head... Yes the <head/> tag." >
-      
-        <meta  property="og:image"  content="https://hgup.github.io/assets/images/social/blog/posts/github-pages-search-engine-name.png" >
-      
-        <meta  property="og:image:type"  content="image/png" >
-      
-        <meta  property="og:image:width"  content="1200" >
-      
-        <meta  property="og:image:height"  content="630" >
-      
-        <meta  property="og:url"  content="https://hgup.github.io/blog/2025/06/23/show-intended-github-pages-name-in-google-search/" >
-      
-        <meta  name="twitter:card"  content="summary_large_image" >
-      
-        <meta  name="twitter:title"  content="Show intended GitHub pages name in Google Search - Hursh Gupta" >
-      
-        <meta  name="twitter:description"  content="You need to update your head... Yes the <head/> tag." >
-      
-        <meta  name="twitter:image"  content="https://hgup.github.io/assets/images/social/blog/posts/github-pages-search-engine-name.png" >
-      
-    
     
   <link rel="stylesheet" href="../../../../../assets/stylesheets/custom.7c86dd97.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
@@ -2808,14 +2782,17 @@
 </span></code></pre></div></td></tr></table></div>
 <p><a href="https://github.com/pnp/pnp.github.io/blob/0f7a91c36c09ab1dd371b0950fe4bfd7221d47ac/index.html#L7C1-L18C10">pnp.github.io/index.html</a> on GitHub</p>
 <p>This made me curious and after a quick Gemini search, I found out that it's a structured data markup in JSON-LD format that provides information about a website to search engines. Meaning:</p>
-<ul>
-<li><code>"@context" : "http://schema.org"</code>: This specifies that the vocabulary used in this data is from Schema.org, a collaborative community activity whose mission is to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</li>
-<li><code>"@type" : "WebSite"</code>: This indicates that the entity being described is a website.</li>
-<li><code>"name" : "Hursh Gupta"</code>: The name of the website.</li>
-</ul>
+<dl>
+<dt><code>"@context" : "http://schema.org"</code></dt>
+<dd>This specifies that the vocabulary used in this data is from Schema.org, a collaborative community activity whose mission is to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</dd>
+<dt><code>"@type" : "WebSite"</code></dt>
+<dd>This indicates that the entity being described is a website.</dd>
+<dt><code>"name" : "Hursh Gupta"</code></dt>
+<dd>The name of the website.</dd>
+</dl>
 <p>In essence, this script helps search engines like Google understand the content and purpose of the website more effectively, which can improve its visibility and presentation in search results.</p>
 <hr />
-<p>So, without wasting any time, I added this to my site too. Here is the result</p>
+<p>So, without wasting any time, I added this to my site too. What I expect to see is the "GitHub" turning to "Hursh Gupta". Let's wait...</p>
 <div class="grid">
 <figure>
 <p><a class="glightbox" href="../../../../../assets/images/2025/06/better-search-engine-visibility-1750676765376.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/images/2025/06/better-search-engine-visibility-1750676765376.webp" /></a></p>
