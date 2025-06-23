@@ -23,7 +23,8 @@ body {
   --md-hue: 215deg; 
   --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
   --md-default-fg-color--lightest: hsl(0, 0%, 10%);
-  --md-primary-fg-color: hsl(0, 0%, 11%);
+  /* Also remember to change the color in the <head /> */
+  --md-primary-fg-color: hsl(0, 0%, 11%); /* Header */
   --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
