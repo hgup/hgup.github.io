@@ -21,10 +21,12 @@ body {
 [data-md-color-scheme="slate"] {
   /* --md-hue: 145deg; Green */
   --md-hue: 215deg; 
-  --md-default-bg-color: hsl(var(--md-hue), 0%, 9%);
-  --md-primary-fg-color: #202020;
-  --md-footer-bg-color: hsl(var(--md-hue), 0%, 12%);
-  --md-footer-bg-color--dark: #101010;
+  --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
+  --md-default-fg-color--lightest: hsl(0, 0%, 10%);
+  --md-primary-fg-color: hsl(0, 0%, 11%);
+  --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
+  --md-footer-bg-color: hsl(0, 0%, 11%);
+  --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 }
 
  .md-header__ellipsis .md-header__topic {
