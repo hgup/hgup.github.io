@@ -2779,11 +2779,9 @@
 <figure>
 <p><a class="glightbox" href="../../../../../assets/images/2025/06/better-search-engine-visibility-1750676234156.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/images/2025/06/better-search-engine-visibility-1750676234156.webp" /></a></p>
 <figcaption>
-<p>Google shows "MS 365 &amp; Power Platform" correctly but "GitHub" and "github.io" for the others </p>
+<p>Google shows "MS 365 &amp; Power Platform Community" correctly but "GitHub" and "github.io" for the others </p>
 </figcaption>
 </figure>
-<p>So, I did a little digging as to what was so special about the source code of this site that made Google recognize its name correctly?</p>
-<figure>
 <div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
@@ -2796,22 +2794,19 @@
 <span class="normal"><a href="#__codelineno-0-16">16</a></span>
 <span class="normal"><a href="#__codelineno-0-17">17</a></span>
 <span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;application/ld+json&#39;</span><span class="p">&gt;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="s2">&quot;@context&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="s2">&quot;@type&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WebSite&quot;</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="s2">&quot;name&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Microsoft 365 &amp;amp; Power Platform Community&quot;</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="s2">&quot;url&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://pnp.github.io/&quot;</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="s2">&quot;description&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Learn from others how to build apps on Microsoft 365 &amp;amp; Power Platform.&quot;</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="s2">&quot;thumbnailUrl&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://pnp.github.io/pnp.svg&quot;</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="s2">&quot;alternateName&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PnP&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="s2">&quot;@context&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://schema.org&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="s2">&quot;@type&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WebSite&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Microsoft 365 &amp;amp; Power Platform Community&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="s2">&quot;url&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://pnp.github.io/&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="s2">&quot;description&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Learn from others how to build apps on Microsoft 365 &amp;amp; Power Platform.&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="s2">&quot;thumbnailUrl&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://pnp.github.io/pnp.svg&quot;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="s2">&quot;alternateName&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PnP&quot;</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">}</span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></code></pre></div></td></tr></table></div>
-<figcaption>
 <p><a href="https://github.com/pnp/pnp.github.io/blob/0f7a91c36c09ab1dd371b0950fe4bfd7221d47ac/index.html#L7C1-L18C10">pnp.github.io/index.html</a> on GitHub</p>
-</figcaption>
-</figure>
 <p>This made me curious and after a quick Gemini search, I found out that it's a structured data markup in JSON-LD format that provides information about a website to search engines. Meaning:</p>
 <ul>
 <li><code>"@context" : "http://schema.org"</code>: This specifies that the vocabulary used in this data is from Schema.org, a collaborative community activity whose mission is to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</li>
