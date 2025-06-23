@@ -2766,6 +2766,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Reserving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Techniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjustments-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjustments &amp; Reviews
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2800,7 +2824,7 @@
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <p>This section will provide foundational knowledge for understanding the intricacies of ratemaking and reserving in the insurance industry.</p>
 <h3 id="the-insurance-product">The Insurance Product<a class="headerlink" href="#the-insurance-product" title="Permanent link">&para;</a></h3>
-<p>To establish context, we will begin by exploring the fundamental nature of the insurance product. This will involve a brief discussion of various <strong>lines of business</strong> such as:</p>
+<p>To establish context, we will begin by exploring the fundamental nature of the insurance product. This will involve a brief discussion of various <a href="0.basics/0.1.the-insurance-product/0.1.1.lines-of-business/">lines of business</a> such as:</p>
 <ul>
 <li><strong>Property Insurance:</strong> Covering physical assets against perils like fire, theft, and natural disasters.</li>
 <li><strong>Casualty Insurance:</strong> Protecting against liabilities arising from negligence or accidents, including auto liability and general liability.</li>
@@ -2810,7 +2834,7 @@
 </ul>
 <p>Understanding these different lines of business will highlight the diverse risks and considerations involved in insurance operations.</p>
 <h3 id="all-about-data">All About Data<a class="headerlink" href="#all-about-data" title="Permanent link">&para;</a></h3>
-<p>Following the overview of insurance products, we will delve into the critical role of data. This segment will cover:</p>
+<p>Following the overview of insurance products, we will delve into the critical role of <a href="0.basics/0.2.all-about-data/">data</a>. This segment will cover:</p>
 <ul>
 <li><strong>Data Aggregation Techniques:</strong> Methods for collecting, compiling, and organizing vast amounts of insurance-related data. This could include discussing data sources (e.g., policy administration systems, claims systems, external data providers) and the importance of data quality.</li>
 <li><strong>Related Calculations:</strong> An introduction to basic calculations performed on aggregated data, such as loss ratios, expense ratios, and combined ratios, to provide an initial understanding of key performance indicators in insurance.</li>
@@ -2821,48 +2845,50 @@
 <p>This section focuses on the comprehensive approach to setting rates for an insurance company's policies.</p>
 <p>We will learn about making crucial adjustments to raw data for ratemaking purposes:</p>
 <ol>
-<li><strong>Presence of Large Events and Anomalies in Data:</strong> Techniques for identifying and mitigating the impact of catastrophic events (e.g., hurricanes, major lawsuits) or unusual data points that could skew rate indications. This might involve discussing capping, smoothing, or removing outliers.</li>
-<li><strong>On-Level Data to Current Levels of Prices:</strong> Methods to adjust historical premium and loss data to reflect the current level of prices and rate structures. This ensures that past experience is comparable to the current pricing environment.</li>
-<li><strong>Develop Claims Data to Ultimate Values:</strong> Understanding the concept of "incurred but not reported" (IBNR) losses and methods to project incomplete historical claims data to their ultimate expected payout. This is crucial for accurately reflecting the true cost of claims.</li>
+<li><a href="1.ratemaking/1.1.adjustments-to-data/1.1.1.adjust-for-anomalies/">Presence of Large Events and Anomalies in Data</a>: Techniques for identifying and mitigating the impact of catastrophic events (e.g., hurricanes, major lawsuits) or unusual data points that could skew rate indications. This might involve discussing capping, smoothing, or removing outliers.</li>
+<li><a href="1.ratemaking/1.1.adjustments-to-data/1.1.2.on-levelling-data/">On-Level Data to Current Levels of Prices</a>: Methods to adjust historical premium and loss data to reflect the current level of prices and rate structures. This ensures that past experience is comparable to the current pricing environment.</li>
+<li><a href="1.ratemaking/1.1.adjustments-to-data/1.1.3.development/">Develop Claims Data to Ultimate Values</a>: Understanding the concept of "incurred but not reported" (IBNR) losses and methods to project incomplete historical claims data to their ultimate expected payout. This is crucial for accurately reflecting the true cost of claims.</li>
 </ol>
-<p>We will also incorporate <strong>Underwriting Expenses and Profits</strong> into our calculations. This includes understanding different types of expenses (e.g., commissions, administrative costs) and how profit provisions are built into the rate to ensure the insurer's financial viability.</p>
-<p>Finally, we will learn how to <strong>set an overall rating indication</strong> using the processed and adjusted data. This involves combining all components (expected losses, expenses, profit) to arrive at a preliminary rate level.</p>
-<p>We will also touch on topics like <strong>"Claims-made ratemaking"</strong> and how they differ from <strong>occurrence policies' ratemaking</strong>, which we would have been assuming until now. This will highlight the distinct characteristics of these policy types and their implications for rate setting.</p>
+<p>We will also incorporate <a href="1.ratemaking/1.2.uw-expenses-lae-and-profits/">Underwriting Expenses and Profits</a> into our calculations. This includes understanding different types of expenses (e.g., commissions, administrative costs) and how profit provisions are built into the rate to ensure the insurer's financial viability.</p>
+<p>Finally, we will learn how to <a href="1.ratemaking/1.3.overall-rate-indication/">set an overall rating indication</a> using the processed and adjusted data. This involves combining all components (expected losses, expenses, profit) to arrive at a preliminary rate level.</p>
+<p>We will also touch on topics like "<a href="1.ratemaking/1.4.claims-made-ratemaking/">Claims-made ratemaking</a>" and how they differ from occurrence policies' ratemaking, which we would have been assuming until now. This will highlight the distinct characteristics of these policy types and their implications for rate setting.</p>
 <h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h3>
 <p>Setting only an overall rate for all insureds can be inequitable and inefficient. This section will explore the importance of <strong>classification of insureds</strong> and the methodologies for pricing policies differently based on risk characteristics. We will look into the following techniques:</p>
 <ol>
-<li><strong>Univariate Classification:</strong> Analyzing the impact of individual rating factors (e.g., age, geographic location, vehicle type) on losses in isolation.</li>
-<li><strong>Multivariate Classification:</strong> Employing statistical techniques to analyze the combined impact of multiple rating factors simultaneously, leading to more refined and accurate risk differentiation (e.g., using GLMs).</li>
-<li><strong>Special Classification:</strong> Discussing unique classification challenges or approaches that might not fit neatly into univariate or multivariate categories, such as professional liability classifications or specialized industry ratings.</li>
+<li><a href="1.ratemaking/1.5.classification/1.5.1.univariate/">Univariate Classification</a>: Analyzing the impact of individual rating factors (e.g., age, geographic location, vehicle type) on losses in isolation.</li>
+<li><a href="1.ratemaking/1.5.classification/1.5.2.multivariate/">Multivariate Classification</a>: Employing statistical techniques to analyze the combined impact of multiple rating factors simultaneously, leading to more refined and accurate risk differentiation (e.g., using GLMs).</li>
+<li><a href="1.ratemaking/1.5.classification/1.5.3.special-classification/">Special Classification</a>: Discussing unique classification challenges or approaches that might not fit neatly into univariate or multivariate categories, such as professional liability classifications or specialized industry ratings.</li>
 </ol>
-<p>We will briefly touch on <strong>individual risk rating</strong>, where large customers are priced based on personalized information. This is relevant when the individual insured's data is sufficiently credible to warrant a tailored rate.</p>
+<p>We will briefly touch on <a href="1.ratemaking/1.6.individual-risk-rating/">individual risk rating</a>, where large customers are priced based on personalized information. This is relevant when the individual insured's data is sufficiently credible to warrant a tailored rate.</p>
 <h3 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h3>
 <p>Even after robust calculations, practical implementation requires further considerations.</p>
 <p>We also have to keep other considerations in mind. Not everything in life can be implemented as planned. Similarly, we have to make certain compromises based on regulations and many other reasons. Before we can use the results that we have obtained via our calculations, we have to keep:</p>
 <ol>
-<li><strong>Credibility:</strong> Assessing the statistical reliability of the data used in ratemaking. This involves understanding how much weight to give to an insurer's own experience versus broader industry experience, especially for smaller companies or newer lines of business.</li>
-<li><strong>Implementation Constraints:</strong> Recognizing the practical limitations and challenges in applying calculated rates, such as regulatory approvals, competitive pressures, market acceptance, and system limitations.</li>
-<li><strong>Other Considerations:</strong> Broader factors influencing rate decisions, including legal precedents, social inflation, emerging risks, and the overall economic environment.</li>
+<li><a href="1.ratemaking/1.7.indications-vs-reality/1.7.1.credibility/">Credibility</a>: Assessing the statistical reliability of the data used in ratemaking. This involves understanding how much weight to give to an insurer's own experience versus broader industry experience, especially for smaller companies or newer lines of business.</li>
+<li><a href="1.ratemaking/1.7.indications-vs-reality/1.7.2.implementation/">Implementation Constraints</a>: Recognizing the practical limitations and challenges in applying calculated rates, such as regulatory approvals, competitive pressures, market acceptance, and system limitations.</li>
+<li><a href="1.ratemaking/1.7.indications-vs-reality/1.7.3.other-considerations/">Other Considerations</a>: Broader factors influencing rate decisions, including legal precedents, social inflation, emerging risks, and the overall economic environment.</li>
 </ol>
 <p>in mind so that our rates can be practically implemented.</p>
 <h2 id="reserving">Reserving<a class="headerlink" href="#reserving" title="Permanent link">&para;</a></h2>
 <p>Reserving in an insurance company is the process of estimating the financial obligations for future claim payments. It is crucial for financial stability, regulatory compliance, and accurate financial reporting.</p>
+<h3 id="development-techniques">Development Techniques<a class="headerlink" href="#development-techniques" title="Permanent link">&para;</a></h3>
 <p>We will introduce why setting reserves in an insurance company is important and the process it involves. We need to develop our losses to get an estimate of the reserves that we need. In order to do so, we will use the following techniques:</p>
 <ol>
-<li><strong>Chain Ladder Development:</strong> A widely used actuarial method for projecting ultimate losses based on historical loss development patterns.</li>
-<li><strong>Expected Claims Method:</strong> A method that uses an expectation of ultimate losses, often based on exposure and expected loss ratios, particularly useful when historical data is limited.</li>
-<li><strong>Bornhuetter-Ferguson Technique:</strong> A blend of the Chain Ladder and Expected Claims methods, combining actual loss experience with an a priori expectation of losses.</li>
-<li><strong>Cape Cod Method:</strong> Another loss development technique that considers exposure and expected loss ratios in its projection.</li>
-<li><strong>Frequency-Severity Method:</strong> Projecting ultimate losses by separately estimating the number of claims (frequency) and the average cost per claim (severity).</li>
-<li><strong>Case Outstanding Method:</strong> Directly assessing the estimated cost of each open claim.</li>
+<li><a href="2.reserving/2.1.development-techniques/2.1.1.chain-ladder-dev/">Chain Ladder Development</a>: A widely used actuarial method for projecting ultimate losses based on historical loss development patterns.</li>
+<li><a href="2.reserving/2.1.development-techniques/2.1.2.expected-claims/">Expected Claims Method</a>: A method that uses an expectation of ultimate losses, often based on exposure and expected loss ratios, particularly useful when historical data is limited.</li>
+<li><a href="2.reserving/2.1.development-techniques/2.1.3.bornhuetter-ferguson/">Bornhuetter-Ferguson Technique</a>: A blend of the Chain Ladder and Expected Claims methods, combining actual loss experience with an a priori expectation of losses.</li>
+<li><a href="2.reserving/2.1.development-techniques/2.1.4.cape-cod/">Cape Cod Method</a>: Another loss development technique that considers exposure and expected loss ratios in its projection.</li>
+<li><a href="2.reserving/2.1.development-techniques/2.1.5.frequency-severity/">Frequency-Severity Method</a>: Projecting ultimate losses by separately estimating the number of claims (frequency) and the average cost per claim (severity).</li>
+<li><a href="2.reserving/2.1.development-techniques/2.1.6.case-outstanding/">Case Outstanding Method</a>: Directly assessing the estimated cost of each open claim.</li>
 </ol>
-<p>We also might need to consider <strong>calendar year effects</strong> like changes in claims processing that can lead to an increase or decrease in the claims settlement rates or any change in the insurer's method for setting reserves.</p>
-<p>Finally, we will close by discussing how we can <strong>review our reserves</strong> as time goes by to see if our reserves were set appropriately or not, which helps us make our reserves better than we had set before. This involves analyzing actual versus expected development and adjusting future reserving practices.</p>
+<h3 id="adjustments-reviews">Adjustments &amp; Reviews<a class="headerlink" href="#adjustments-reviews" title="Permanent link">&para;</a></h3>
+<p>We also might need to consider <strong>calendar year effects</strong> like changes in claims processing that can lead to an increase or decrease in the claims settlement rates or any change in the insurer's method for setting reserves. In such cases we use techniques like the <a href="2.reserving/2.2.berquist-sherman/">Berquist Sherman</a></p>
+<p>Finally, we will close by <a href="2.reserving/2.3.evaluation-of-techniques/">Evaluation of Techniques</a> where we discuss how we can <strong>review our reserves</strong> as time goes by to see if our reserves were set appropriately or not, which helps us make our reserves better than we had set before. This involves analyzing actual versus expected development and adjusting future reserving practices.</p>
 <h2 id="the-delta">The Delta<a class="headerlink" href="#the-delta" title="Permanent link">&para;</a></h2>
 <p>This section addresses important topics that, while not core to the direct ratemaking or reserving processes, are key considerations and significantly impact the accuracy and completeness of these activities.</p>
 <ol>
-<li><strong>Recoveries like Salvage and Subrogation:</strong> Understanding how funds recovered from damaged property (salvage) or from responsible third parties (subrogation) impact the net cost of claims and should be accounted for in both pricing and reserving.</li>
-<li><strong>Estimating ALAE and ULAE:</strong> Discussing the estimation of <strong>Allocated Loss Adjustment Expenses (ALAE)</strong>, which are expenses directly attributable to a specific claim (e.g., legal fees, adjustor fees), and <strong>Unallocated Loss Adjustment Expenses (ULAE)</strong>, which are general claims handling expenses not tied to specific claims (e.g., claims department salaries, office rent). Both are crucial components of the overall cost of claims and must be accurately projected.</li>
+<li><strong>Recoveries like <a href="3.the-delta/3.1.recoveries/3.1.1.salvage-and-subrogation/">salvage and subrogation</a></strong>: Understanding how funds recovered from damaged property (salvage) or from responsible third parties (subrogation) impact the net cost of claims and should be accounted for in both pricing and reserving.</li>
+<li><strong>Estimating ALAE and ULAE:</strong> Discussing the estimation of  <a href="3.the-delta/3.2.estimating-alae/">Allocated Loss Adjustment Expenses (ALAE)</a>, which are expenses directly attributable to a specific claim (e.g., legal fees, adjustor fees), and <a href="3.the-delta/3.3.estimating-ulae/">Unallocated Loss Adjustment Expenses (ULAE)</a>, which are general claims handling expenses not tied to specific claims (e.g., claims department salaries, office rent). Both are crucial components of the overall cost of claims and must be accurately projected.</li>
 </ol>
 
 
