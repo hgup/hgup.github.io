@@ -1,0 +1,3384 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An approach of thinking to harness the power of tailwindcss anywhere. (Yes, even on barebones html files). The way God intended tailwind to be used.">
+      
+      
+      
+        <link rel="canonical" href="https://hgup.github.io/blog/2025/tailwind-anywhere/">
+      
+      
+        <link rel="prev" href="../why-i-shifted-to-mkdocs-and-it-just-works/">
+      
+      
+        <link rel="next" href="../dont-wait-for-it-just-do-it/">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Tailwind Anywhere! - Hursh Gupta</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>:root{.md-tag.md-tag--exam{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M18%2022a2%202%200%200%200%202-2V4a2%202%200%200%200-2-2h-6v7L9.5%207.5%207%209V2H6a2%202%200%200%200-2%202v16a2%202%200%200%200%202%202z%22/%3E%3C/svg%3E');}.md-tag.md-tag--ml{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m5%2012%202-4V7H4v1h2l-2%204m5%200%202-4V7H8v1h2l-2%204m5%200%202-4V7h-3v1h2l-2%204m9-10c-1.1%200-2%20.9-2%202%200%20.7.4%201.4%201%201.7V17h-3v-2c.6%200%201-.4%201-1V5c0-.6-.4-1-1-1h-3.8c-.8-1.2-2.2-2-3.7-2s-2.9.8-3.7%202H2c-.6%200-1%20.4-1%201v9c0%20.6.4%201%201%201v7h15v-3h3c1.1%200%202-.9%202-2V5.7c.6-.3%201-1%201-1.7%200-1.1-.9-2-2-2m-8%2017H6v-2h7zm3-6H3V6h13z%22/%3E%3C/svg%3E');}.md-tag.md-tag--five{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M32.5%2058.3C35.3%2043.1%2048.5%2032%2064%2032h192c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032H90.7L70.3%20208H184c75.1%200%20136%2060.9%20136%20136s-60.9%20136-136%20136h-83.5c-39.4%200-75.4-22.3-93-57.5l-4.1-8.2c-7.9-15.8-1.5-35%2014.3-42.9s35-1.5%2042.9%2014.3l4.1%208.2c6.8%2013.6%2020.6%2022.1%2035.8%2022.1H184c39.8%200%2072-32.2%2072-72s-32.2-72-72-72H32c-9.5%200-18.5-4.2-24.6-11.5s-8.6-16.9-6.9-26.2z%22/%3E%3C/svg%3E');}.md-tag.md-tag--six{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M232.4%2084.7c11.4-13.5%209.7-33.7-3.8-45.1s-33.7-9.7-45.1%203.8L38.6%20214.7C14.7%20242.9%201.1%20278.4.1%20315.2c0%201.4-.1%202.9-.1%204.3v.5c0%2088.4%2071.6%20160%20160%20160s160-71.6%20160-160c0-85.5-67.1-155.4-151.5-159.8l63.9-75.6zM256%20320a96%2096%200%201%201-192%200%2096%2096%200%201%201%20192%200%22/%3E%3C/svg%3E');}.md-tag.md-tag--seven{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%2064c0-17.7%2014.3-32%2032-32h256c11.5%200%2022%206.1%2027.7%2016.1s5.7%2022.2-.1%2032.1l-224%20384c-8.9%2015.3-28.5%2020.4-43.8%2011.5s-20.4-28.5-11.5-43.8L232.3%2096H32C14.3%2096%200%2081.7%200%2064%22/%3E%3C/svg%3E');}.md-tag{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}.md-tag.md-tag--workflow{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M1%203a2%202%200%200%201%202-2h6.5a2%202%200%200%201%202%202v6.5a2%202%200%200%201-2%202H7v4.063C7%2016.355%207.644%2017%208.438%2017H12.5v-2.5a2%202%200%200%201%202-2H21a2%202%200%200%201%202%202V21a2%202%200%200%201-2%202h-6.5a2%202%200%200%201-2-2v-2.5H8.437A2.94%202.94%200%200%201%205.5%2015.562V11.5H3a2%202%200%200%201-2-2Zm2-.5a.5.5%200%200%200-.5.5v6.5a.5.5%200%200%200%20.5.5h6.5a.5.5%200%200%200%20.5-.5V3a.5.5%200%200%200-.5-.5ZM14.5%2014a.5.5%200%200%200-.5.5V21a.5.5%200%200%200%20.5.5H21a.5.5%200%200%200%20.5-.5v-6.5a.5.5%200%200%200-.5-.5Z%22/%3E%3C/svg%3E');}.md-tag.md-tag--repost{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M272%20416c17.7%200%2032-14.3%2032-32s-14.3-32-32-32H160c-17.7%200-32-14.3-32-32V192h32c12.9%200%2024.6-7.8%2029.6-19.8s2.2-25.7-6.9-34.9l-64-64c-12.5-12.5-32.8-12.5-45.3%200l-64%2064c-9.2%209.2-11.9%2022.9-6.9%2034.9S19.1%20192%2032.1%20192h32v128c0%2053%2043%2096%2096%2096h112zm32-320c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h112c17.7%200%2032%2014.3%2032%2032v128h-32c-12.9%200-24.6%207.8-29.6%2019.8s-2.2%2025.7%206.9%2034.9l64%2064c12.5%2012.5%2032.8%2012.5%2045.3%200l64-64c9.2-9.2%2011.9-22.9%206.9-34.9S556.9%20320%20543.9%20320h-32V192c0-53-43-96-96-96z%22/%3E%3C/svg%3E');}.md-tag.md-tag--obsidian{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19.355%2018.538a68.967%2068.959%200%200%200%201.858-2.954.81.81%200%200%200-.062-.9c-.516-.685-1.504-2.075-2.042-3.362-.553-1.321-.636-3.375-.64-4.377a1.7%201.7%200%200%200-.358-1.05l-3.198-4.064a4%204%200%200%201-.076.543c-.106.503-.307%201.004-.536%201.5-.134.29-.29.6-.446.914l-.31.626c-.516%201.068-.997%202.227-1.132%203.59-.124%201.26.046%202.73.815%204.481q.192.016.386.044a6.36%206.36%200%200%201%203.326%201.505c.916.79%201.744%201.922%202.415%203.5zM8.199%2022.569q.11.019.22.02c.78.024%202.095.092%203.16.29.87.16%202.593.64%204.01%201.055%201.083.316%202.198-.548%202.355-1.664.114-.814.33-1.735.725-2.58l-.01.005c-.67-1.87-1.522-3.078-2.416-3.849a5.3%205.3%200%200%200-2.778-1.257c-1.54-.216-2.952.19-3.84.45.532%202.218.368%204.829-1.425%207.531zM5.533%209.938q-.035.15-.098.29L2.82%2016.059a1.6%201.6%200%200%200%20.313%201.772l4.116%204.24c2.103-3.101%201.796-6.02.836-8.3-.728-1.73-1.832-3.081-2.55-3.831zM9.32%2014.01c.615-.183%201.606-.465%202.745-.534-.683-1.725-.848-3.233-.716-4.577.154-1.552.7-2.847%201.235-3.95q.17-.35.328-.664c.149-.297.288-.577.419-.86.217-.47.379-.885.46-1.27.08-.38.08-.72-.014-1.043-.095-.325-.297-.675-.68-1.06a1.6%201.6%200%200%200-1.475.36l-4.95%204.452a1.6%201.6%200%200%200-.513.952l-.427%202.83c.672.59%202.328%202.316%203.335%204.711q.136.317.253.653%22/%3E%3C/svg%3E');}.md-tag.md-tag--music{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%203v10.55c-.59-.34-1.27-.55-2-.55-2.21%200-4%201.79-4%204s1.79%204%204%204%204-1.79%204-4V7h4V3z%22/%3E%3C/svg%3E');}.md-tag.md-tag--brain{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M184%200c30.9%200%2056%2025.1%2056%2056v400c0%2030.9-25.1%2056-56%2056-28.9%200-52.7-21.9-55.7-50.1-5.2%201.4-10.7%202.1-16.3%202.1-35.3%200-64-28.7-64-64%200-7.4%201.3-14.6%203.6-21.2C21.4%20367.4%200%20338.2%200%20304c0-31.9%2018.7-59.5%2045.8-72.3C37.1%20220.8%2032%20207%2032%20192c0-30.7%2021.6-56.3%2050.4-62.6C80.8%20123.9%2080%20118%2080%20112c0-29.9%2020.6-55.1%2048.3-62.1%203-28%2026.8-49.9%2055.7-49.9m144%200c28.9%200%2052.6%2021.9%2055.7%2049.9C411.5%2056.9%20432%2082%20432%20112c0%206-.8%2011.9-2.4%2017.4%2028.8%206.2%2050.4%2031.9%2050.4%2062.6%200%2015-5.1%2028.8-13.8%2039.7%2027.1%2012.8%2045.8%2040.4%2045.8%2072.3%200%2034.2-21.4%2063.4-51.6%2074.8%202.3%206.6%203.6%2013.8%203.6%2021.2%200%2035.3-28.7%2064-64%2064-5.6%200-11.1-.7-16.3-2.1-3%2028.2-26.8%2050.1-55.7%2050.1-30.9%200-56-25.1-56-56V56c0-30.9%2025.1-56%2056-56%22/%3E%3C/svg%3E');}.md-tag.md-tag--math{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11.5%2019.1c-.2%201.1-.6%201.9-1.3%202.4s-1.6.6-2.7.4c-.4-.1-1.2-.2-1.5-.4l.5-1.5c.3.1.9.3%201.2.3%201.1.2%201.7-.3%201.9-1.5L12%205.2c.2-1.2.7-2%201.4-2.6.7-.5%201.7-.7%202.8-.5.4.1%201.2.2%201.8.5L17.5%204c-.2-.1-.9-.2-1.2-.3-1.3-.2-2%20.4-2.3%201.9z%22/%3E%3C/svg%3E');}.md-tag.md-tag--academic{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M320%2032c-8.1%200-16.1%201.4-23.7%204.1L15.8%20137.4C6.3%20140.9%200%20149.9%200%20160s6.3%2019.1%2015.8%2022.6l57.9%2020.9C57.3%20229.3%2048%20259.8%2048%20291.9V320c0%2028.4-10.8%2057.7-22.3%2080.8-6.5%2013-13.9%2025.8-22.5%2037.6-3.2%204.3-4.1%209.9-2.3%2015s6%208.9%2011.2%2010.2l64%2016c4.2%201.1%208.7.3%2012.4-2s6.3-6.1%207.1-10.4c8.6-42.8%204.3-81.2-2.1-108.7-3.2-14.2-7.5-28.7-13.5-42v-24.6c0-30.2%2010.2-58.7%2027.9-81.5%2012.9-15.5%2029.6-28%2049.2-35.7l157-61.7c8.2-3.2%2017.5.8%2020.7%209s-.8%2017.5-9%2020.7l-157%2061.7c-12.4%204.9-23.3%2012.4-32.2%2021.6l159.6%2057.6c7.6%202.7%2015.6%204.1%2023.7%204.1s16.1-1.4%2023.7-4.1l280.6-101c9.5-3.4%2015.8-12.5%2015.8-22.6s-6.3-19.1-15.8-22.6L343.7%2036.1c-7.6-2.7-15.6-4.1-23.7-4.1M128%20408c0%2035.3%2086%2072%20192%2072s192-36.7%20192-72l-15.3-145.4L354.5%20314c-11.1%204-22.8%206-34.5%206s-23.5-2-34.5-6l-142.2-51.4z%22/%3E%3C/svg%3E');}.md-tag.md-tag--setup{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M4%2019h4.6L2.62%208.64C2.23%208%202%207.29%202%206.5a3.999%203.999%200%200%201%207.87-1H14V3c0-1.1.9-2%202-2v2.59L17.59%202H22v2h-3.59L16%206.41v.18L18.41%209H22v2h-4.41L16%209.41V12a2%202%200%200%201-2-2V7.5H9.87c-.1.39-.26.76-.46%201.1l6%2010.4H20a2%202%200%200%201%202%202v1H2v-1c0-1.1.9-2%202-2m3.91-9c-.56.32-1.21.5-1.91.5l4.91%208.5h2.19zM6%204.5a2%202%200%200%200-2%202c0%201.11.89%202%202%202s2-.89%202-2a2%202%200%200%200-2-2%22/%3E%3C/svg%3E');}.md-tag.md-tag--web{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M16.36%2014c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26%201.31.26%202s-.1%201.36-.26%202m-5.15%205.56c.6-1.11%201.06-2.31%201.38-3.56h2.95a8.03%208.03%200%200%201-4.33%203.56M14.34%2014H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16%201.32.16%202s-.07%201.34-.16%202M12%2019.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41%201.43-1.08%202.76-1.91%203.96M8%208H5.08A7.92%207.92%200%200%201%209.4%204.44C8.8%205.55%208.35%206.75%208%208m-2.92%208H8c.35%201.25.8%202.45%201.4%203.56A8%208%200%200%201%205.08%2016m-.82-2C4.1%2013.36%204%2012.69%204%2012s.1-1.36.26-2h3.38c-.08.66-.14%201.32-.14%202s.06%201.34.14%202M12%204.03c.83%201.2%201.5%202.54%201.91%203.97h-3.82c.41-1.43%201.08-2.77%201.91-3.97M18.92%208h-2.95a15.7%2015.7%200%200%200-1.38-3.56c1.84.63%203.37%201.9%204.33%203.56M12%202C6.47%202%202%206.5%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}.md-tag.md-tag--annuity{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22356%22%20height%3D%22356%22%20viewBox%3D%220%200%20356%20356%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20clip-path%3D%22url%28%23clip0_79_8%29%22%3E%3Cpath%20d%3D%22M97.8516%2071.6L105.852%2071.2H106.252C112.118%2071.4667%20117.318%2072.8%20121.852%2075.2C126.385%2077.3333%20130.385%2080.2667%20133.852%2084L137.052%2087.2L139.452%2085.2C145.852%2079.0667%20152.785%2077.4667%20160.252%2080.4C163.985%2081.7333%20166.518%2084%20167.852%2087.2C168.918%2090.1333%20168.652%2095.3333%20167.052%20102.8C165.718%20108.667%20161.585%20125.2%20154.652%20152.4C145.052%20191.333%20140.118%20211.6%20139.852%20213.2C138.785%20220.667%20138.652%20225.867%20139.452%20228.8C139.985%20230.133%20140.785%20231.2%20141.852%20232C142.652%20232.8%20143.852%20233.2%20145.452%20233.2C147.318%20233.2%20148.785%20232.933%20149.852%20232.4C154.918%20228.667%20160.118%20216.533%20165.452%20196C166.785%20190.933%20167.852%20188.133%20168.652%20187.6C169.185%20187.067%20172.385%20186.8%20178.252%20186.8C184.118%20186.8%20187.452%20187.067%20188.252%20187.6C188.785%20188.133%20189.052%20189.2%20189.052%20190.8C189.052%20192.4%20188.385%20195.6%20187.052%20200.4C177.185%20234%20163.185%20251.333%20145.052%20252.4C131.452%20253.2%20120.518%20248.533%20112.252%20238.4C110.918%20236.8%20109.718%20235.067%20108.652%20233.2C108.118%20231.6%20107.718%20230.8%20107.452%20230.8L104.652%20233.2C95.3182%20241.467%2086.1182%20246.933%2077.0516%20249.6C59.7182%20255.467%2044.1182%20252.8%2030.2516%20241.6C28.6516%20240.267%2027.1849%20238.8%2025.8516%20237.2C21.8516%20233.2%2018.5182%20228.4%2015.8516%20222.8C7.85156%20206.533%206.25156%20187.467%2011.0516%20165.6C17.1849%20136.533%2031.0516%20112.533%2052.6516%2093.6C67.0516%2081.0667%2082.1182%2073.7333%2097.8516%2071.6ZM106.252%2090.4C95.3182%2088.5333%2084.7849%2093.7333%2074.6516%20106C71.9849%20109.467%2069.5849%20113.2%2067.4516%20117.2C63.4516%20124.933%2058.6516%20140.133%2053.0516%20162.8C49.5849%20175.6%2047.0516%20186.8%2045.4516%20196.4C44.3849%20205.467%2044.3849%20212.4%2045.4516%20217.2C48.1182%20226.533%2053.3182%20231.867%2061.0516%20233.2C65.5849%20234%2071.0516%20233.067%2077.4516%20230.4C87.0516%20225.067%2096.1182%20216.133%20104.652%20203.6L106.652%20200.8L116.652%20161.2L126.652%20121.2L125.852%20118C123.452%20102.8%20117.452%2093.7333%20107.852%2090.8C107.318%2090.5333%20106.785%2090.4%20106.252%2090.4Z%22%20fill%3D%22white%22/%3E%3Cpath%20d%3D%22M225.848%20184C228.114%20183.333%20230.981%20183.4%20234.448%20184.2C237.648%20185%20240.381%20186.467%20242.648%20188.6C244.648%20190.6%20245.981%20192.533%20246.648%20194.4L247.448%20196L249.048%20194.6C254.781%20188.867%20261.314%20185.4%20268.648%20184.2C273.448%20183.267%20277.848%20183.333%20281.848%20184.4C287.048%20185.467%20290.981%20187.733%20293.648%20191.2C295.114%20193.067%20296.314%20195.533%20297.248%20198.6C297.514%20199.8%20297.648%20202%20297.648%20205.2C297.648%20208.667%20297.581%20210.867%20297.448%20211.8C295.981%20219.4%20292.381%20231.2%20286.648%20247.2C284.514%20252.933%20283.248%20256.867%20282.848%20259C282.448%20262.333%20282.848%20264.2%20284.048%20264.6C285.648%20265.133%20287.514%20264.8%20289.648%20263.6C293.781%20261.067%20297.248%20254.867%20300.048%20245C300.714%20242.867%20301.381%20241.733%20302.048%20241.6C302.448%20241.467%20303.848%20241.4%20306.248%20241.4C309.181%20241.4%20310.781%20241.533%20311.048%20241.8C311.848%20242.333%20311.848%20243.733%20311.048%20246C309.581%20251.2%20307.381%20256.067%20304.448%20260.6C299.114%20268.6%20293.048%20273.067%20286.248%20274C283.848%20274.533%20281.381%20274.4%20278.848%20273.6C274.981%20272.8%20272.048%20271%20270.048%20268.2C267.514%20265.133%20266.248%20261.533%20266.248%20257.4C266.248%20254.867%20267.248%20250.733%20269.248%20245C275.781%20227.4%20279.448%20214.933%20280.248%20207.6C280.781%20204.4%20280.714%20201.4%20280.048%20198.6C279.114%20195.933%20277.781%20194.267%20276.048%20193.6C274.714%20192.933%20272.648%20192.8%20269.848%20193.2C261.048%20194.533%20253.448%20201.2%20247.048%20213.2L245.448%20216L239.048%20241.4C234.781%20258.6%20232.448%20267.533%20232.048%20268.2C230.314%20271.667%20227.448%20273.667%20223.448%20274.2C222.381%20274.333%20221.381%20274.267%20220.448%20274C217.114%20273.067%20215.314%20271%20215.048%20267.8C215.048%20266.6%20217.581%20255.8%20222.648%20235.4C227.848%20215.267%20230.581%20204.267%20230.848%20202.4C231.248%20198.933%20231.114%20196.4%20230.448%20194.8C229.914%20193.867%20229.048%20193.267%20227.848%20193C227.048%20193%20226.381%20193.2%20225.848%20193.6C223.848%20194.8%20221.981%20198.067%20220.248%20203.4C219.581%20205.267%20218.514%20209%20217.048%20214.6C216.648%20215.4%20216.381%20215.867%20216.248%20216C215.981%20216.267%20214.381%20216.4%20211.448%20216.4H207.048L206.448%20215.8C206.048%20215.4%20205.848%20214.867%20205.848%20214.2L207.048%20209.6C210.381%20198%20214.648%20190.333%20219.848%20186.6C221.981%20185.267%20223.981%20184.4%20225.848%20184Z%22%20fill%3D%22white%22/%3E%3Cpath%20d%3D%22M192%20151H338V272%22%20stroke%3D%22white%22%20stroke-width%3D%2210%22/%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_79_8%22%3E%3Crect%20width%3D%22356%22%20height%3D%22356%22%20fill%3D%22white%22/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E');}.md-tag.md-tag--tailwind{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206c-2.67%200-4.33%201.33-5%204%201-1.33%202.17-1.83%203.5-1.5.76.19%201.31.74%201.91%201.35.98%201%202.09%202.15%204.59%202.15%202.67%200%204.33-1.33%205-4-1%201.33-2.17%201.83-3.5%201.5-.76-.19-1.3-.74-1.91-1.35C15.61%207.15%2014.5%206%2012%206m-5%206c-2.67%200-4.33%201.33-5%204%201-1.33%202.17-1.83%203.5-1.5.76.19%201.3.74%201.91%201.35C8.39%2016.85%209.5%2018%2012%2018c2.67%200%204.33-1.33%205-4-1%201.33-2.17%201.83-3.5%201.5-.76-.19-1.3-.74-1.91-1.35C10.61%2013.15%209.5%2012%207%2012%22/%3E%3C/svg%3E');}.md-tag.md-tag--zotero{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21.231%202.462%207.18%2020.923h14.564V24H2.256v-2.462L16.308%203.076H2.975V0h18.256z%22/%3E%3C/svg%3E');}.md-tag.md-tag--zenbrowser{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M24%2012c0%206.627-5.373%2012-12%2012S0%2018.627%200%2012%205.373%200%2012%200s12%205.373%2012%2012m-12%209.846c5.438%200%209.846-4.408%209.846-9.846S17.438%202.154%2012%202.154%202.154%206.562%202.154%2012%206.562%2021.846%2012%2021.846M20%2012a8%208%200%201%201-16%200%208%208%200%200%201%2016%200m-8%206.462a6.462%206.462%200%201%200%200-12.924%206.462%206.462%200%200%200%200%2012.924m0-1.847a4.615%204.615%200%201%200%200-9.23%204.615%204.615%200%200%200%200%209.23M15.692%2012a3.692%203.692%200%201%201-7.384%200%203.692%203.692%200%200%201%207.384%200%22/%3E%3C/svg%3E');}.md-tag.md-tag--musescore{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11.777%2023.997a11.99%2011.99%200%200%201-8.98-4.296%2012%2012%200%200%201-2.406-4.655A12.1%2012.1%200%200%201%20.273%209.44a11.9%2011.9%200%200%201%201.72-4.064%2012.06%2012.06%200%200%201%204.056-3.799%2011.9%2011.9%200%200%201%204.13-1.44%2012.2%2012.2%200%200%201%203.693.007c1.708.27%203.302.89%204.751%201.848.873.577%201.692%201.29%202.385%202.08a11.97%2011.97%200%200%201%202.68%205.196c.402%201.718.416%203.556.039%205.291a12%2012%200%200%201-4.024%206.643%2012%2012%200%200%201-4.655%202.407c-.743.195-1.499.316-2.29.367a18%2018%200%200%201-.809.026l-.172-.003zm-6.924-6.684a.5.5%200%200%200%20.23-.133.55.55%200%200%200%20.139-.232c.013-.043.014-.178.018-2.363.004-2.12.005-2.327.018-2.438.033-.298.076-.51.146-.72.101-.303.224-.516.406-.705.14-.144.26-.232.434-.315a1.8%201.8%200%200%201%20.504-.148c.114-.017.382-.024.493-.012a1.8%201.8%200%200%201%201.308.807c.166.25.271.528.327.866l.017.106.004%202.438c.004%202.324.005%202.44.019%202.485a.56.56%200%200%200%20.133.226.5.5%200%200%200%20.201.128c.052.019.068.021.167.021a.46.46%200%200%200%20.37-.145.5.5%200%200%200%20.149-.3c.006-.042.008-.774.008-2.407%200-1.542.003-2.375.008-2.428q.071-.72.523-1.225c.183-.204.464-.39.73-.482.21-.074.394-.101.626-.095.304.01.55.066.8.186.284.136.514.341.668.597.178.294.28.662.299%201.083.002.053.013.491.023.973.022%201.002.024%201.063.04%201.238.072.787.307%201.426.711%201.935.087.11.311.333.417.417q.651.516%201.532.634c.177.024.507.03.68.012.797-.082%201.53-.463%202.015-1.046.373-.45.606-.99.704-1.64.046-.302.043-.143.046-2.506.003-2.417.007-2.223-.054-2.346a.48.48%200%200%200-.332-.251.58.58%200%200%200-.416.06c-.1.06-.19.183-.22.304-.009.031-.012.478-.016%202.22-.005%202.415%200%202.23-.055%202.51-.18.917-.81%201.522-1.73%201.66a2.4%202.4%200%200%201-.512-.008q-.695-.105-1.13-.557c-.332-.345-.53-.816-.601-1.432-.018-.151-.026-.387-.043-1.212-.018-.853-.026-1.05-.047-1.24-.129-1.123-.68-1.983-1.548-2.417a2.8%202.8%200%200%200-1.121-.294c-.55-.035-1.136.12-1.671.441a3%203%200%200%200-.813.707l-.038.049-.028-.038a3%203%200%200%200-.235-.261c-.457-.433-1.1-.722-1.78-.8a4%204%200%200%200-.65-.001c-.635.07-1.141.286-1.559.666-.48.437-.795%201.103-.912%201.926-.056.393-.057.436-.054%202.915l.002%202.184.022.064a.53.53%200%200%200%20.359.339c.078.02.188.02.267%200zm11.99-8.863a.69.69%200%200%200%20.546-.505.9.9%200%200%200%20.008-.3.69.69%200%200%200-.455-.516.678.678%200%200%200-.895.649c0%20.055.005.11.012.142a.684.684%200%200%200%20.783.53zm-2.667-.138a.5.5%200%200%200%20.32-.265c.046-.092.06-.158.067-.343a2.22%202.22%200%200%201%20.617-1.49%201.93%201.93%200%200%201%201.146-.587c.145-.022.434-.024.581-.004q.46.065.822.3c.244.16.474.4.634.663.202.333.326.763.327%201.127q0%20.148.036.26a.507.507%200%200%200%20.94.068c.053-.111.06-.15.059-.35%200-.198-.01-.318-.043-.514-.217-1.298-1.165-2.294-2.426-2.545a2.5%202.5%200%200%200-.625-.055%203.03%203.03%200%200%200-2.738%201.638%203.3%203.3%200%200%200-.366%201.43c-.01.265.037.418.167.544a.51.51%200%200%200%20.482.123%22/%3E%3C/svg%3E');}.md-tag.md-tag--obsstudio{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2024C5.383%2024%200%2018.617%200%2012S5.383%200%2012%200s12%205.383%2012%2012-5.383%2012-12%2012m0-22.891C5.995%201.109%201.11%205.995%201.11%2012S5.995%2022.89%2012%2022.89%2022.89%2018.005%2022.89%2012%2018.005%201.109%2012%201.109M6.182%205.99c.352-1.698%201.503-3.229%203.05-3.996-.269.273-.595.483-.844.78-1.02%201.1-1.48%202.692-1.199%204.156.355%202.235%202.455%204.06%204.732%204.028%201.765.079%203.485-.937%204.348-2.468%201.848.063%203.645%201.017%204.7%202.548.54.799.962%201.736.991%202.711-.342-1.295-1.202-2.446-2.375-3.095a4.9%204.9%200%200%200-3.772-.425c-1.56.448-2.849%201.723-3.293%203.293-.377%201.25-.216%202.628.377%203.772-.825%201.429-2.315%202.449-3.932%202.756-1.244.261-2.551.059-3.709-.464%201.036.302%202.161.355%203.191-.011a4.91%204.91%200%200%200%203.024-2.935c.556-1.49.345-3.261-.591-4.54-.7-1.007-1.803-1.717-3.002-1.969-.38-.068-.764-.098-1.148-.134-.611-1.231-.834-2.66-.528-3.996z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../etc/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Tailwind Anywhere! - Hursh Gupta" >
+      
+        <meta  property="og:description"  content="An approach of thinking to harness the power of tailwindcss anywhere. (Yes, even on barebones html files). The way God intended tailwind to be used." >
+      
+        <meta  property="og:image"  content="https://hgup.github.io/assets/images/social/blog/posts/tailwind-anywhere.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://hgup.github.io/blog/2025/tailwind-anywhere/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Tailwind Anywhere! - Hursh Gupta" >
+      
+        <meta  name="twitter:description"  content="An approach of thinking to harness the power of tailwindcss anywhere. (Yes, even on barebones html files). The way God intended tailwind to be used." >
+      
+        <meta  name="twitter:image"  content="https://hgup.github.io/assets/images/social/blog/posts/tailwind-anywhere.png" >
+      
+    
+    
+  <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <script type='application/ld+json'>
+    {
+        "@context" : "http://schema.org",
+        "@type" : "WebSite",
+        "name" : "Hursh Gupta",
+        "url" : "https://hgup.github.io/",
+        "description" : "",
+        "thumbnailUrl" : "https://hgup.github.io/favicon.ico",
+        "alternateName" : "Codisian"
+        
+    }
+  </script>
+  <meta name="theme-color" content="#1c1c1c" />
+
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tldr" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hursh Gupta
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tailwind Anywhere!
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hgup/ml2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Working on: handson-ml2
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../centre/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Centre
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exam-5/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Exam 5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exam-7/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Exam 7
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ML/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg>
+
+    </a>
+    Hursh Gupta
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hgup/ml2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Working on: handson-ml2
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+      <br>
+      <small>Writings on the Wall</small>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/essentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Essentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/gotchas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gotchas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/motivation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Motivation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/thought-experiment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thought Experiment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../centre/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Centre
+    
+      <br>
+      <small>On various topics.</small>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Centre
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../centre/academic/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Academic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../centre/actuarial-exams/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 11V9h-8V5H9v4H5v2h4v8h2v-8zm0-8c.5 0 1 .2 1.39.61C20.8 4 21 4.5 21 5v14c0 .5-.2 1-.61 1.39-.39.41-.89.61-1.39.61H5c-.5 0-1-.2-1.39-.61C3.2 20 3 19.5 3 19V5c0-.5.2-1 .61-1.39C4 3.2 4.5 3 5 3z"/></svg>
+  
+  <span class="md-ellipsis">
+    Actuarial Exams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../centre/tech/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19.88V22l-1.8-1.17-4.79-9c.66-.21 1.26-.55 1.78-1zM15 7a3 3 0 0 1-3 3h-.44L5.8 20.83 4 22v-2.12L9.79 9c-1.1-1.23-1-3.13.24-4.24C10.57 4.28 11.27 4 12 4V2a1 1 0 0 1 1 1v1.18c1.2.42 2 1.55 2 2.82m-2 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1"/></svg>
+  
+  <span class="md-ellipsis">
+    Techniques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Exam 5
+    
+      <br>
+      <small>Ratemaking & Reserving</small>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Exam 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/0.basics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/0.basics/0.1.the-insurance-product/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    The Insurance Product
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            The Insurance Product
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/0.basics/0.1.the-insurance-product/0.1.1.lines-of-business/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lines of Business
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/0.basics/0.2.all-about-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All about Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/1.ratemaking/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Ratemaking
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ratemaking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/1.ratemaking/1.1.adjustments-to-data/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Adjustments to Data
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Adjustments to Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.1.adjustments-to-data/1.1.1.adjust-for-anomalies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Large Events &amp; Anamolies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/1.ratemaking/1.1.adjustments-to-data/1.1.2.on-levelling-data/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    On Levelling Data
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_2_3" id="__nav_4_3_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            On Levelling Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.2.one-time-changes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    One time changes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.1.adjustments-to-data/1.1.2.on-levelling-data/1.2.3.trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trends
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.1.adjustments-to-data/1.1.3.development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.2.uw-expenses-lae-and-profits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UW Expenses, LAE &amp; Profits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.3.overall-rate-indication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overall Rate Indication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.4.claims-made-ratemaking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Claims-made Ratemaking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/1.ratemaking/1.5.classification/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Classification
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_6" id="__nav_4_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Classification
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.5.classification/1.5.1.univariate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Univariate Risk Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.5.classification/1.5.2.multivariate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multivariate Risk Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.5.classification/1.5.3.special-classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Special Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.6.individual-risk-rating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Individual Risk Rating
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/1.ratemaking/1.7.indications-vs-reality/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Indications vs Reality
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8" id="__nav_4_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Indications vs Reality
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.7.indications-vs-reality/1.7.1.credibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Credibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.7.indications-vs-reality/1.7.2.implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/1.ratemaking/1.7.indications-vs-reality/1.7.3.other-considerations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Other Considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/2.reserving/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Reserving
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reserving
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.0.introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/2.reserving/2.1.development-techniques/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Development Techniques
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Development Techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.1.development-techniques/2.1.1.chain-ladder-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chain Ladder / Dev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.1.development-techniques/2.1.2.expected-claims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Expected Claims
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.1.development-techniques/2.1.3.bornhuetter-ferguson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bornhuetter-Ferguson
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.1.development-techniques/2.1.4.cape-cod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cape Cod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.1.development-techniques/2.1.5.frequency-severity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequency-Severity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.1.development-techniques/2.1.6.case-outstanding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Case Outstanding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.2.berquist-sherman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Berquist-Sherman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/2.reserving/2.3.evaluation-of-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evaluation of Techniques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    The Delta
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            The Delta
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-5/3.the-delta/3.1.recoveries/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Recoveries
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5_1" id="__nav_4_5_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Recoveries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/3.the-delta/3.1.recoveries/3.1.1.salvage-and-subrogation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Salvage &amp; Subrogation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/3.the-delta/3.1.recoveries/3.1.2.reinsurance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reinsurance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/3.the-delta/3.2.estimating-alae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estimating ALAE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-5/3.the-delta/3.3.estimating-ulae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estimating ULAE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../exam-7/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Exam 7
+    
+      <br>
+      <small>Advanced Reserving</small>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exam 7
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exam-7/chain-ladder-variance-calc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chain Ladder Reserve Variance Estimation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ML/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ML
+    
+      <br>
+      <small>Machine Learning</small>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/custom-classes-in-sklearn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Classes in sklearn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/sklearn-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scikit Learn Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ML/handson/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Handson
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Handson
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/handson/03-classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      tl;dr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-would-you-wanna-use-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why would you wanna use this?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/hgup.png" alt="Hursh Gupta">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Hursh Gupta
+                        
+                      </strong>
+                      <br>
+                      (aspiring) Actuary
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-06-20 00:00:00+00:00" class="md-ellipsis">June 20, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../category/tutorials/">Tutorials</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              2 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+        
+        
+          
+        
+      
+      
+        <a href="../../../centre/#tag:tailwind" class="md-tag md-tag-icon md-tag--tailwind">Tailwind</a>
+      
+    
+      
+      
+        
+        
+          
+        
+      
+      
+        <a href="../../../centre/#tag:webdev" class="md-tag md-tag-icon md-tag--web">Webdev</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+  <h1>Tailwind Anywhere!</h1>
+
+<p>The <code>tl;dr</code> is the tutoral. If you wanna know why you would want to do something like this, read <a href="#">Why would you wanna use this?</a> section below.</p>
+<!-- more -->
+<h3 id="tldr">tl;dr<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h3>
+<div class="admonition source">
+<p class="admonition-title">Source</p>
+<p>Follow <a href="https://tailwindcss.com/docs/installation/tailwind-cli">this guide</a> and select the "Tailwind CLI" method</p>
+</div>
+<p>First up. Install the <strong>tailwindcss CLI</strong>.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pnpm<span class="w"> </span>install<span class="w"> </span>tailwindcss<span class="w"> </span>@tailwindcss/cli
+</span></code></pre></div>
+<p>Then create a file called <code>input.css</code>. Here, you will define the config as you do in a normal CSS file that is going to be using tailwindcss (e.g. think of it as the <code>global.css</code> in a Next.js project)</p>
+<div class="language-css highlight"><span class="filename">src/input.css</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s2">&quot;tailwindcss&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Run the cli with the <code>--watch</code> mode</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pnpx<span class="w"> </span>@tailwindcss/cli<span class="w"> </span>-i<span class="w"> </span>./src/input.css<span class="w"> </span>-o<span class="w"> </span>./src/output.css<span class="w"> </span>--watch<span class="w"> </span><span class="c1">#(1)</span>
+</span></code></pre></div>
+<ol>
+<li>The <code>--watch</code> mode ensures that whenever you make any edits to any of the html files in the directory which mention a tailwind compatible class name, that class and its css will be added to the <code>output.css</code> file.</li>
+</ol>
+<p>Then, import the <code>output.css</code> file in the <code class="language-html highlight"><span class="p">&lt;</span><span class="nt">head</span><span class="p">/&gt;</span></code> of the html document being sourced.</p>
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./output.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="cm">&lt;!-- ... --&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>As you keep updating the html file. <code>@tailwindcss/cli</code> will update the <code>output.css</code> file based on your configurations set in <code>input.css</code>. That's how God intended <strong>tailwindcss</strong> to work from the beginning. </p>
+<h3 id="why-would-you-wanna-use-this">Why would you wanna use this?<a class="headerlink" href="#why-would-you-wanna-use-this" title="Permanent link">&para;</a></h3>
+<p>Ever thought of spinning up a quick static webpage that doesn't need those flashy features of the cutting-edge frameworks that are being used literally everywhere? Well, I don't think so. But, if you are not a native-css person and tend to use tailwindcss just because its very convenient, I have good news for you.</p>
+<p>You can think of designing the page like how tailwind allows you to do (quickly and efficiently) without worrying about the native css styles. And the best part is that you don't need to think about installing tailwind as a dependency or bundling it or any of that crap (though if its a big project, its recommended, you learn how to do that to save time in the long run). But this isn't what this guide is talking about.</p>
+<p>We need to do some quick and dirty css work and fast. We don't need to do it the "right" or left way. We just want it to work!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="hgup/hgup.github.io"
+        data-repo-id="R_kgDOO-yHeg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOO-yHes4CrwA5"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="transparent_dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../why-i-shifted-to-mkdocs-and-it-just-works/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why I shifted to mkdocs and it just works!">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Why I shifted to mkdocs and it just works!
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../dont-wait-for-it-just-do-it/" class="md-footer__link md-footer__link--next" aria-label="Next: Don&#39;t wait for it. Just do it">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Don't wait for it. Just do it
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 - 2030 Hursh Gupta
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://linkedin.com/in/hgup" target="_blank" rel="noopener" title="Hursh on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/hgup" target="_blank" rel="noopener" title="Hursh on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://instagram.com/hurgpt" target="_blank" rel="noopener" title="Hursh on Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://hgup.github.io/note" target="_blank" rel="noopener" title="Digital Garden" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 80c-8.8 0-16 7.2-16 16v320c0 8.8 7.2 16 16 16h224v-80c0-17.7 14.3-32 32-32h80V96c0-8.8-7.2-16-16-16zm224 400H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v229.5c0 17-6.7 33.3-18.7 45.3l-90.5 90.5c-12 12-28.3 18.7-45.3 18.7z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://audio.com/hursh" target="_blank" rel="noopener" title="Hursh on audio.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c-5 0-9 4-9 9v7a3 3 0 0 0 3 3h3v-8H5v-2a7 7 0 0 1 7-7 7 7 0 0 1 7 7v2h-4v8h3a3 3 0 0 0 3-3v-7c0-5-4.03-9-9-9"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://youtube.com/@hurshgupt" target="_blank" rel="noopener" title="Hursh on YouTube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.sections", "content.tooltips", "toc.follow", "navigation.top", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": {"Academic": "academic", "Actuarial": "annuity", "Exam": "exam", "Five": "five", "Machine Learning": "ml", "Math": "math", "Mind": "brain", "MuseScore": "musescore", "Music": "music", "OBS": "obsstudio", "Obsidian": "obsidian", "Repost": "repost", "Setup": "setup", "Seven": "seven", "Six": "six", "Tailwind": "tailwind", "Technique": "workflow", "Webdev": "web", "Workflow": "workflow", "Zen": "zenbrowser", "Zotero": "zotero", "default": "default"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../etc/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  <!-- <script src="../../../assets/javascripts/custom.9e5da760.min.js"></script> -->
+
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
