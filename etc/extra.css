@@ -44,7 +44,8 @@ body {
 }
 
 .md-typeset h1{
-  font-family: "Arapey", serif;
+  font-family: "DM Serif Display", serif;
+  color: var(--md-default-fg-color);
   font-size: 1.9rem;
 }
 
