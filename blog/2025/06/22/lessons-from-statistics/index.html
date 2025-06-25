@@ -2798,7 +2798,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -2827,7 +2827,7 @@
 
   <h1>Lessons from Statistics</h1>
 
-<p>This list </p>
+<p>This is prolly going to be the longest post (over time). I will add whatever <strong>clicks</strong> to me as I learn stuff while studying actuarial science.</p>
 <!-- more -->
 
 <ul>
@@ -2836,7 +2836,20 @@
 <li>The variance is not just added up, but have a nested dependency. For example, if the <span class="arithmatex">\(X\)</span> follows a  Poisson distribution and the <span class="arithmatex">\(\mu = E[X]\)</span> follows another distribution (say Weibull) which has its own parameters to be estimated from the data, <span class="arithmatex">\(\theta\)</span> and <span class="arithmatex">\(\omega\)</span>. The variance of the these parameters will exaggerate the variance of the parameter <span class="arithmatex">\(\mu\)</span>. Nested Variance!</li>
 </ul>
 </li>
-<li></li>
+<li>
+<p>What is <span class="arithmatex">\(\alpha\)</span> in hypothesis testing? It is the <strong>false-positive</strong> rate. Say, we were trying to find out if correlation exists? So we set the null hypothesis like so:</p>
+<p>$$
+\begin{align}
+H_{0}&amp;: \text{Correlation doesn't exist} \
+H_{1}&amp;: \text{It exists!}
+\end{align}
+$$
+- We then take a sample from the population which is assumed to have <span class="arithmatex">\(H_{0}\)</span> and we calculate a test statistic based on that assumption.
+- There are two ways in which this can go. Say we set our <span class="arithmatex">\(\alpha = 10\%\)</span>
+    - Population actually has <span class="arithmatex">\(H_{1}\)</span> (in which case we hope that the sample gives evidence against <span class="arithmatex">\(H_{0}\)</span>)
+    - Population actually has <span class="arithmatex">\(H_{0}\)</span>. But there is a <span class="arithmatex">\(10\%\)</span> chance that the sample drawn from the population will <strong>betray the population</strong> and show evidence against <span class="arithmatex">\(H_{0}\)</span>. And if we believe it, its a <strong>false positive</strong>.
+- To sum it up. <span class="arithmatex">\(\alpha\)</span> is just the probability that we will draw a sample from the population that will make use falsely reject <span class="arithmatex">\(H_{0}\)</span>. And we have to be ready to take that degree of risk. That is why it is suggested to take multiple samples if possible to perform these tests (think about it, if you perform the hypothesis on <span class="arithmatex">\(k\)</span> samples, your <span class="arithmatex">\(\alpha_{k} = \alpha^k\)</span>)</p>
+</li>
 </ul>
 
 
