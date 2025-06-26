@@ -14,7 +14,8 @@ body {
   /* --md-typeset-a-color:  #629678 !important;  */
   --md-accent-fg-color: hsl(var(--md-hue), 20%, 66%) !important;
   --md-typeset-a-color:  hsl(var(--md-hue), 20%, 66%) !important; 
-  --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
+  --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1) !important;
+
 }
 
 
@@ -28,6 +29,7 @@ body {
   --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
+
 }
 
  .md-header__ellipsis .md-header__topic {
@@ -49,3 +51,23 @@ body {
   font-size: 1.9rem;
 }
 
+.jupyter-wrapper .jp-InputArea-editor {
+  /* border: var(--jp-border-width) solid var(--jp-cell-editor-border-color) !important; */
+  border: 0px solid var(--jp-cell-editor-border-color) !important;
+  border-radius: .1rem !important;
+  padding: 7px 5px 9px 5px !important;
+  background: var(--md-code-bg-color) !important;
+}
+
+.highlight-ipynb {
+  background: var(--md-code-bg-color) !important;
+}
+
+@media screen and (max-width: 60em) {
+  .jupyter-wrapper .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-InputPrompt{
+    display: none;
+  }
+  .jupyter-wrapper .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-OutputPrompt {
+    display: none;
+  }
+}
