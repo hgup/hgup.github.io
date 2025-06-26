@@ -57,9 +57,9 @@ body {
   --jp-mirror-editor-atom-color: var(--md-blue-300);
   --jp-mirror-editor-number-color: var(--md-code-hl-number-color);
   --jp-mirror-editor-def-color: var(--md-code-hl-function-color);
-  --jp-mirror-editor-string-color: var(var(--md-code-hl-string-color))
-  --jp-mirror-editor-string-2-color: var(--md-purple-300);
-  --jp-mirror-editor-meta-color: #aa22ff;
+  --jp-mirror-editor-string-color: var(var(--md-code-hl-string-color));
+  --jp-mirror-editor-string-2-color: var(--md-code-hl-constant-color);
+  --jp-mirror-editor-meta-color: var(--md-code-hl-color--light);
 
   --md-code-hl-name-color: var(--md-code-fg-color);
   --md-code-hl-operator-color: var(--md-default-fg-color--light);

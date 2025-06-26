@@ -7,13 +7,14 @@
 }
 
 body {
-  -ms-overflow-style:none;
+  -ms-overflow-style: none;
 }
-:root  > * {
+
+:root>* {
   /* --md-accent-fg-color: #629678 !important; */
   /* --md-typeset-a-color:  #629678 !important;  */
   --md-accent-fg-color: hsl(var(--md-hue), 20%, 66%) !important;
-  --md-typeset-a-color:  hsl(var(--md-hue), 20%, 66%) !important; 
+  --md-typeset-a-color: hsl(var(--md-hue), 20%, 66%) !important;
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1) !important;
 
 }
@@ -21,18 +22,19 @@ body {
 
 [data-md-color-scheme="slate"] {
   /* --md-hue: 145deg; Green */
-  --md-hue: 215deg; 
+  --md-hue: 215deg;
   --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
   --md-default-fg-color--lightest: hsl(0, 0%, 10%);
   /* Also remember to change the color in the <head /> */
-  --md-primary-fg-color: hsl(0, 0%, 11%); /* Header */
+  --md-primary-fg-color: hsl(0, 0%, 11%);
+  /* Header */
   --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 
 }
 
- .md-header__ellipsis .md-header__topic {
+.md-header__ellipsis .md-header__topic {
   font-family: "Arapey", serif;
   font-size: 1rem;
 }
@@ -45,7 +47,7 @@ body {
   font-family: "Arapey", serif;
 }
 
-.md-typeset h1{
+.md-typeset h1 {
   font-family: "DM Serif Display", serif;
   color: var(--md-default-fg-color);
   font-size: 1.9rem;
@@ -64,10 +66,33 @@ body {
 }
 
 @media screen and (max-width: 60em) {
-  .jupyter-wrapper .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-InputPrompt{
+  .jupyter-wrapper .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-InputPrompt {
     display: none;
   }
+
   .jupyter-wrapper .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-OutputPrompt {
     display: none;
   }
 }
+
+.jupyter-wrapper .jp-Notebook {
+  padding: 0px !important;
+  overflow: visible;
+}
+
+.jupyter-wrapper .jp-Cell {
+  padding: 0 0 5px 0 !important;
+  --jp-mirror-editor-atom-color: var(--md-blue-300) !important;
+  --jp-mirror-editor-number-color: var(--md-code-hl-number-color) !important;
+  --jp-mirror-editor-def-color: var(--md-code-hl-function-color) !important;
+  --jp-mirror-editor-string-color: var(--md-code-hl-string-color) !important;
+  --jp-mirror-editor-string-2-color: var(--md-code-hl-constant-color) !important;
+  --jp-mirror-editor-meta-color: var(--md-code-hl-color--light) !important;
+}
+
+/* TODO edge to edge code blocks */
+/* @media screen and (max-width: 44.9844em) {
+  .jupyter-wrapper .jp-InputArea-editor {
+    margin: 1em -.8rem !important;
+  }
+} */
