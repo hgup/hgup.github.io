@@ -17,7 +17,6 @@ body {
 [data-md-color-primary=indigo] {
 
     --md-primary-fg-color: hsl(0, 0%, 9%);
-
     --md-primary-fg-color--light: hsla(var(--md-hue), 20%, 50%);
     --md-primary-fg-color--dark: hsl(var(--md-hue), 54%, 41%);
     --md-primary-bg-color: #fff;

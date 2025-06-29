@@ -10,28 +10,67 @@ body {
   -ms-overflow-style: none;
 }
 
-:root>* {
-  /* --md-accent-fg-color: #629678 !important; */
-  /* --md-typeset-a-color:  #629678 !important;  */
-  --md-accent-fg-color: hsl(var(--md-hue), 20%, 66%) !important;
-  --md-typeset-a-color: hsl(var(--md-hue), 20%, 66%) !important;
-  --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1) !important;
+[data-md-color-scheme="default"] {
+  /* Blue */
+  /* --md-hue: 215deg; */
+  /* Green */
+  --md-hue: 145deg;
+
+  /* Header */
+  --md-primary-fg-color: hsl(0, 0%, 91%);
+  --md-primary-bg-color: hsl(0,0%, 10%);
+  --md-primary-fg-color--dark:  hsl(0, 0%, 85%);
+  --md-typeset-a-color: hsl(var(--md-hue), 80%, 15%) !important;
+  --md-default-fg-color: hsl(0,0%,20%);
+  --md-default-bg-color: hsl(var(--md-hue), 0%, 95%);
+
+  --md-accent-fg-color: hsl(var(--md-hue), 90%, 30%);
+  --md-accent-fg-color--transparent: #526cfe1a;
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: #ffffffb3;
+
+  /* --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
+  --md-footer-bg-color: hsl(0, 0%, 11%);
+  --md-footer-bg-color--dark: hsl(0, 0%, 6%); */
+
+
+@media screen and (min-width: 60em) {
+  .md-search__input::placeholder {
+    color: #000;
+  }
+}
+
+  .md-search__input {
+    background: #ffffffcc;
+  }
 
 }
 
-
 [data-md-color-scheme="slate"] {
-  /* --md-hue: 145deg; Green */
-  --md-hue: 215deg;
-  --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
-  --md-default-fg-color--lightest: hsl(0, 0%, 10%);
-  /* Also remember to change the color in the <head /> */
-  --md-primary-fg-color: hsl(0, 0%, 11%);
+
+  /* Blue */
+  /* --md-hue: 215deg; */
+  /* Green */
+  --md-hue: 145deg;
+
   /* Header */
   --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 
+  --md-accent-fg-color: hsl(var(--md-hue), 20%, 66%);
+  --md-typeset-a-color: hsl(var(--md-hue), 10%, 45%) !important;
+  --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
+
+  --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
+  --md-default-fg-color--lightest: hsl(0, 0%, 10%);
+  /* Also remember to change the color in the <head /> */
+  --md-primary-fg-color: hsl(0, 0%, 11%);
+
+  /* Header */
+  --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
+  --md-footer-bg-color: hsl(0, 0%, 11%);
+  --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 }
 
 .md-header__ellipsis .md-header__topic {
