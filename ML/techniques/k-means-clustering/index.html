@@ -6,17 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Discussing the bug in `mdsvex` and the gotcha to implement math in it">
+        <meta name="description" content="A clustering technique based on averages">
       
       
       
-        <link rel="canonical" href="https://hgup.github.io/blog/2025/math-in-mdsvex/">
+        <link rel="canonical" href="https://hgup.github.io/ML/techniques/k-means-clustering/">
       
       
-        <link rel="prev" href="../new-device-setup/">
-      
-      
-        <link rel="next" href="../music-tools/">
       
       
       <link rel="icon" href="../../../favicon.ico">
@@ -24,7 +20,7 @@
     
     
       
-        <title>Math in `mdsvex` - Hursh Gupta</title>
+        <title>K-means clustering - Hursh Gupta</title>
       
     
     
@@ -192,11 +188,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Math in `mdsvex` - Hursh Gupta" >
+        <meta  property="og:title"  content="K-means clustering - Hursh Gupta" >
       
-        <meta  property="og:description"  content="Discussing the bug in `mdsvex` and the gotcha to implement math in it" >
+        <meta  property="og:description"  content="A clustering technique based on averages" >
       
-        <meta  property="og:image"  content="https://hgup.github.io/assets/images/social/blog/posts/math-in-mdsvex.png" >
+        <meta  property="og:image"  content="https://hgup.github.io/assets/images/social/ML/techniques/k-means-clustering.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -204,15 +200,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://hgup.github.io/blog/2025/math-in-mdsvex/" >
+        <meta  property="og:url"  content="https://hgup.github.io/ML/techniques/k-means-clustering/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Math in `mdsvex` - Hursh Gupta" >
+        <meta  name="twitter:title"  content="K-means clustering - Hursh Gupta" >
       
-        <meta  name="twitter:description"  content="Discussing the bug in `mdsvex` and the gotcha to implement math in it" >
+        <meta  name="twitter:description"  content="A clustering technique based on averages" >
       
-        <meta  name="twitter:image"  content="https://hgup.github.io/assets/images/social/blog/posts/math-in-mdsvex.png" >
+        <meta  name="twitter:image"  content="https://hgup.github.io/assets/images/social/ML/techniques/k-means-clustering.png" >
       
     
     
@@ -258,6 +254,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#method" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -288,7 +289,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Math in `mdsvex`
+              K-means clustering
             
           </span>
         </div>
@@ -426,13 +427,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -520,7 +519,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ML/custom-classes-in-sklearn/" class="md-tabs__link">
+        <a href="../../custom-classes-in-sklearn/" class="md-tabs__link">
           
   
   
@@ -545,9 +544,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -607,8 +604,6 @@
       
   
   
-    
-  
   
   
     
@@ -626,23 +621,20 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   
@@ -658,13 +650,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -692,20 +684,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   
@@ -734,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../archive/2025/" class="md-nav__link">
+      <a href="../../../blog/archive/2025/" class="md-nav__link">
         
   
   
@@ -759,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../archive/2023/" class="md-nav__link">
+      <a href="../../../blog/archive/2023/" class="md-nav__link">
         
   
   
@@ -810,20 +799,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   
@@ -852,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/essentials/" class="md-nav__link">
+      <a href="../../../blog/category/essentials/" class="md-nav__link">
         
   
   
@@ -877,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/gotchas/" class="md-nav__link">
+      <a href="../../../blog/category/gotchas/" class="md-nav__link">
         
   
   
@@ -902,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/motivation/" class="md-nav__link">
+      <a href="../../../blog/category/motivation/" class="md-nav__link">
         
   
   
@@ -927,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/statistics/" class="md-nav__link">
+      <a href="../../../blog/category/statistics/" class="md-nav__link">
         
   
   
@@ -952,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/thought-experiment/" class="md-nav__link">
+      <a href="../../../blog/category/thought-experiment/" class="md-nav__link">
         
   
   
@@ -977,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/tutorials/" class="md-nav__link">
+      <a href="../../../blog/category/tutorials/" class="md-nav__link">
         
   
   
@@ -2841,7 +2827,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ML/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -2877,7 +2863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/custom-classes-in-sklearn/" class="md-nav__link">
+      <a href="../../custom-classes-in-sklearn/" class="md-nav__link">
         
   
   
@@ -2902,7 +2888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/packages/" class="md-nav__link">
+      <a href="../../packages/" class="md-nav__link">
         
   
   
@@ -2925,7 +2911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/sklearn-notes/" class="md-nav__link">
+      <a href="../../sklearn-notes/" class="md-nav__link">
         
   
   
@@ -2973,7 +2959,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ML/handson/" class="md-nav__link ">
+            <a href="../../handson/" class="md-nav__link ">
               
   
   
@@ -3008,7 +2994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/handson/03/" class="md-nav__link">
+      <a href="../../handson/03/" class="md-nav__link">
         
   
   
@@ -3047,8 +3033,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -3059,6 +3043,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3066,98 +3067,21 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://github.com/hgup.png" alt="Hursh Gupta">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Hursh Gupta
-                        
-                      </strong>
-                      <br>
-                      (aspiring) Actuary
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-05-30 00:00:00+00:00" class="md-ellipsis">May 30, 2025</time>
-                      </div>
-                    </li>
-                    
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../category/gotchas/">Gotchas</a></span>
-                        </div>
-                      </li>
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              1 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-            
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-
+                  
 
   <nav class="md-tags" >
+    
+      
+      
+        
+        
+      
+      
+        <span class="md-tag md-tag-icon">Clustering</span>
+      
     
       
       
@@ -3167,7 +3091,7 @@
         
       
       
-        <a href="../../../centre/#tag:math" class="md-tag md-tag-icon md-tag--math">Math</a>
+        <span class="md-tag md-tag-icon md-tag--ml">Machine Learning</span>
       
     
   </nav>
@@ -3177,23 +3101,21 @@
   
 
 
-  <h1>Math in `mdsvex`</h1>
+  <h1>K-means clustering</h1>
 
-<p>In order to make it happen, all you need to do is to follow this particular tutorial:</p>
-<!-- more -->
-<p>https://mdsvex-math-starter.vercel.app/
-It's really that simple. The mistake I did was to NOT follow the version of remark math mentioned here.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># run the Svelte CLI and follow the prompts</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npx<span class="w"> </span>sv<span class="w"> </span>create
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># enter and install the plugins</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">cd</span><span class="w"> </span>myProject
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>npm<span class="w"> </span>i<span class="w"> </span>-D<span class="w"> </span>remark-math@3<span class="w"> </span><span class="c1"># (1)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>npm<span class="w"> </span>i<span class="w"> </span>-D<span class="w"> </span>rehype-mathjax
-</span></code></pre></div>
+<ul>
+<li><span class="arithmatex">\(K\)</span>-means clustering has two parts <span class="arithmatex">\(K\)</span> and <code>mean</code>.</li>
+<li>The goal is to split the data into <span class="arithmatex">\(K\)</span> clusters which are homogenous within the cluster and heterogenous between the clusters.</li>
+<li>The method to do so involves using the mean (average) of clusters formed in each iteration, hence the word "mean" in the name.</li>
+</ul>
+<h3 id="method">Method<a class="headerlink" href="#method" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Here they are specifically using <code>v3</code>. Pay attention!</li>
+<li>Select <span class="arithmatex">\(K\)</span> random points from the dataset. These are tentative <strong>Centroids</strong> of each of the clusters we are going to form.</li>
+<li>For every point in the dataset, calculate the distance from each of the <span class="arithmatex">\(K\)</span> centroids. Assign this point to the centroid with the <strong>smallest distance</strong>.</li>
+<li>The associated point with each centroid form a cluster! Find the mean (average) of all the points in the cluster, and set it as the new centroid of the cluster. (You get <span class="arithmatex">\(K\)</span> new centroids this way)</li>
+<li>Repeat step (2-3) for each of the points but for the new centroids.</li>
+<li>Repeat this process till you converge to a particular cluster.</li>
 </ol>
-<p>With version 3 of remark math, it works as expected! I prefer using <code>rehype-mathjax</code> as it gives matrices and stuff much better than what <code>katex</code> provides, in my experience.</p>
 
 
 
@@ -3206,73 +3128,17 @@ It's really that simple. The mistake I did was to NOT follow the version of rema
 
 
 
-
-  
 
 
 
 
 <!--  -->
-<!--  -->
 
 
-<h2 id="__comments">Comments</h2>
-<script src="https://giscus.app/client.js" 
-        data-repo="hgup/hgup.github.io" 
-        data-repo-id="R_kgDOO-yHeg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOO-yHes4CrwA5" 
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0" 
-        data-input-position="bottom" 
-        data-theme=""
-        data-lang="en" 
-        crossorigin="anonymous" 
-async> </script>
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "noborder_light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-
-
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -3287,46 +3153,6 @@ async> </script>
       
         <footer class="md-footer">
   
-    
-      
-        
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../new-device-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How I set up my new Windows machine">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                How I set up my new Windows machine
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../music-tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Music Tools">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Music Tools
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
