@@ -2102,27 +2102,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#calculating-new-rates-for-an-existing-product-steps" class="md-nav__link">
+  <a href="#general-idea" class="md-nav__link">
     <span class="md-ellipsis">
-      Calculating New Rates for an Existing Product (Steps)
+      General Idea
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expense-fees" class="md-nav__link">
+  <a href="#obf-adjustment-note" class="md-nav__link">
     <span class="md-ellipsis">
-      Expense Fees
+      OBF Adjustment note
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deriving-new-base-rate" class="md-nav__link">
+  <a href="#implementation-scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      Deriving new Base Rate
+      Implementation Scenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-adjustment-part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Adjustment" part #1
     </span>
   </a>
   
@@ -3241,27 +3250,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#calculating-new-rates-for-an-existing-product-steps" class="md-nav__link">
+  <a href="#general-idea" class="md-nav__link">
     <span class="md-ellipsis">
-      Calculating New Rates for an Existing Product (Steps)
+      General Idea
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expense-fees" class="md-nav__link">
+  <a href="#obf-adjustment-note" class="md-nav__link">
     <span class="md-ellipsis">
-      Expense Fees
+      OBF Adjustment note
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deriving-new-base-rate" class="md-nav__link">
+  <a href="#implementation-scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      Deriving new Base Rate
+      Implementation Scenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-adjustment-part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Adjustment" part #1
     </span>
   </a>
   
@@ -3302,186 +3320,251 @@
 
 
 <h1 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h1>
-<p>Off-balance factor.</p>
-<h3 id="calculating-new-rates-for-an-existing-product-steps">Calculating New Rates for an Existing Product (Steps)<a class="headerlink" href="#calculating-new-rates-for-an-existing-product-steps" title="Permanent link">&para;</a></h3>
-<p>This section focuses on the ==last two==:</p>
+<h3 id="general-idea">General Idea<a class="headerlink" href="#general-idea" title="Permanent link">&para;</a></h3>
+<p>You have finally done all the methods to get your indicated rates for each of the classes in the form of rate relativities and a base rate. But due to some regulatory constraint you are forced to alter your results.</p>
+<p>For example, if you found the rate relativities as such:</p>
+<table>
+<thead>
+<tr>
+<th>Territory</th>
+<th>Premium</th>
+<th style="text-align: center;">Current Relativity</th>
+<th style="text-align: center;">Indicated Relativity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$195,000</td>
+<td style="text-align: center;">0.85</td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$475,000</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">1.00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$330,000</td>
+<td style="text-align: center;">1.30</td>
+<td style="text-align: center;">1.20</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$1,000,000</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Select Target Overall Average Premium.</li>
-<li>Finalize the rating algorithm.</li>
-<li>Select final new rates for each rating variable.</li>
-<li>==Select final additive amounts (e.g., expense fees) if applicable==.</li>
-<li>==Derive final base rate to achieve target premium==.</li>
+<li>Know that changing the relativity doesn't change the total premium collected. It just changes the distribution of the $1,000,000 between the territories.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>Thus, when we change the relativities, the <strong>base rate</strong> also HAS TO CHANGE!</li>
 </ul>
-<h3 id="expense-fees">Expense Fees<a class="headerlink" href="#expense-fees" title="Permanent link">&para;</a></h3>
+<p>How do we measure the change in the base rate? We do it by finding the <strong>Off-Balance Factor</strong>. (OBF for short) given by <em>"Exposure Weighted Average Rating Factor"</em> (EWARF, <em>I read it as "e-warph"</em>):
+$$
+OBF=\dfrac{\text{Current EWARF}}{\text{Proposed EWARF}} 
+$$</p>
 <ul>
-<li>Fixed expense Fee <em>per exposure</em> = <code>Fixed Expense per exposure / (1 - V - Q)</code>.<ul>
-<li>Can be converted into a per-policy basis by multiplying by the average number of exposures per policy.</li>
+<li>What is EWARF? Think of it as the effects of all the rating factors distilled into one value. Thus, you can just take the total exposures and multiply them with the EWARF to see how much premiums you are collecting in total<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. So, in our case here:
+$$
+\text{Exposures}\times \text{Base Rate ($)} \times \text{Current EAWRF} = \text{Total Premium} = $ 1,000,000
+$$
+When a relativity change happens, then the exposures don't change, neither does the base rate. The only thing that changes is the <span class="arithmatex">\(\text{EAWRF}\)</span> and so we find the <span class="arithmatex">\(OBF\)</span> and apply it to the <span class="arithmatex">\(\text{Base Rate}\)</span> in order to get <strong><em>revenue neutral changes</em></strong>.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> So, with our new rates we have:</li>
 </ul>
-</li>
-</ul>
-<h3 id="deriving-new-base-rate">Deriving new Base Rate<a class="headerlink" href="#deriving-new-base-rate" title="Permanent link">&para;</a></h3>
-<h1 id="tip-dont-read-the-theory-just-go-for-the-examples-to-learnunderstand-do-it-in-excel-as-all-of-them-use-the-same-base-example-to-demonstrate-the-process">tip Don't read the theory, just go for the examples to learn/understand, do it in Excel as all of them use the same base example to demonstrate the process.<a class="headerlink" href="#tip-dont-read-the-theory-just-go-for-the-examples-to-learnunderstand-do-it-in-excel-as-all-of-them-use-the-same-base-example-to-demonstrate-the-process" title="Permanent link">&para;</a></h1>
+<div class="arithmatex">\[
+\text{Exposures}\times OBF\cdot\text{Base Rate (\$)} \times \text{Indicated EAWRF} = \text{Total Premium} = \$ 1,000,000
+\]</div>
+<h3 id="obf-adjustment-note">OBF Adjustment note<a class="headerlink" href="#obf-adjustment-note" title="Permanent link">&para;</a></h3>
+<p>If we do not apply the OBF then the Rel change factor then the following would be the projected premiums:</p>
+<table>
+<thead>
+<tr>
+<th>Territory</th>
+<th>Current Prem</th>
+<th>Projected Prem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$195,000.00</td>
+<td>$172,058.82</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$475,000.00</td>
+<td>$475,000.00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$330,000.00</td>
+<td>$304,615.38</td>
+</tr>
+<tr>
+<td></td>
+<td>$1,000,000.00</td>
+<td>$951,674.21</td>
+</tr>
+</tbody>
+</table>
+<p>You can clearly see that we don't have a <strong><em>revenue neutral change</em></strong> in the relativities since the total premiums have decreased.</p>
+<div class="admonition summary inline end">
+<p class="admonition-title">To Summarize</p>
+<p>OBF offsets the effect of the changing relativities</p>
+</div>
+<h3 id="implementation-scenario">Implementation Scenario<a class="headerlink" href="#implementation-scenario" title="Permanent link">&para;</a></h3>
+<p>Let's say that the company has decided to change the rates (i.e. relativities and base rate) in such a way that the total revenue increases by 20\%. Subject to the constraint:</p>
+<blockquote>
+<p>We cannot increase the premiums collected (e.g. $330,000 currently for Terr 3) to more than 25%, and cap it beyond that point, which may lead to a shortfall in the desired premium.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+</blockquote>
+<p>So, we want the total premium to increase to <span class="arithmatex">\(1,000,000 \times 1.20 = 1,200,000\)</span>. </p>
+<table>
+<thead>
+<tr>
+<th>Territory</th>
+<th>Rel chg factor</th>
+<th>Total Change</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.882</td>
+<td>11.26%</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.000</td>
+<td>26.09%</td>
+<td>&gt; 25\%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.923</td>
+<td>16.39%</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>0.952</td>
+<td>20.00%</td>
+<td></td>
+</tr>
+<tr>
+<td>- <span class="arithmatex">\(\text{Rel Chg Factor} =\dfrac{\text{Proposed Rels}}{\text{Current Rels}}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Total Rel Change Factor = <span class="arithmatex">\(\dfrac{\sum\limits_{t=1}^3 \text{Premium}_{t}\times \text{Rel Chg Factor}_{t}}{\text{Total Premiums}}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- The <em>exposure weighted average of the relativity change factors</em> (<span class="arithmatex">\(\text{EWARF}\)</span>)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- This gives the change factor of the total premiums. So, if we had only changed the relativities (and not the base rate, adjusted by the <span class="arithmatex">\(OBF\)</span>) we would have a total premium of <span class="arithmatex">\(1000k \times0.952= 952k\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- <span class="arithmatex">\(\text{Total change} =\text{Rel Chg Factor}\times OBF \times 120\%\)</span> (for each territory)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- This total change reflects: the effect of the relativity change (Rel Chg Factor), the base rate adjusted for a revenue neutral change (OBF) and the required total change (120\%)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-adjustment-part-1">The "Adjustment" part #1<a class="headerlink" href="#the-adjustment-part-1" title="Permanent link">&para;</a></h3>
+<p>We note in the table above that, the relativity of Territory 2 has overshot that cap (26.09\% &gt; 25%) so we need to ensure that the total premium for Territory 2 doesn't increase to more than <span class="arithmatex">\(475k \times 1.25 = 539.75k\)</span>.[^5] In order to do so we will have to reduce  the Territory 2 rate. But note the following things that happen:</p>
+<div class="admonition question inline end">
+<p class="admonition-title">Question</p>
+<p>You might think, the previous and the current base rate relativities are the same (i.e., <span class="arithmatex">\(1\)</span>) and we are increasing all rates by <span class="arithmatex">\(20\%\)</span> then how will the Territory 2 relativity increase by more than <span class="arithmatex">\(25\%\)</span> (it should just be <span class="arithmatex">\(20\%\)</span>, right?). Well, this increase happens solely due to the <span class="arithmatex">\(OBF\)</span> we multiplied with the base rate to create a revenue neutral change for the relativities. So, the <span class="arithmatex">\(26.09\% = 1.20 \times OBF\)</span></p>
+</div>
 <ul>
-<li>
-<p><strong>Without Rating Factor Changes</strong></p>
-<ul>
-<li>Only change the <strong>Base Rate</strong>.</li>
-<li>An additive component may also change (but this usually doesn't happen, e.g., a fixed expense fee wouldn't change with a rate change).</li>
-<li>
-<p><strong>With Rating Factor Changes</strong></p>
-</li>
-<li>
-<p><strong>Problem used in the examples below</strong>.</p>
-</li>
-<li><strong>Extension of Exposures</strong><ul>
-<li>Example (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D219%26annotation%3DPKXCJKRF">pdf</a>).</li>
-</ul>
-</li>
-<li><strong>Approximated Average Rate Differential</strong><ul>
-<li><em>EXACT</em> Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D220%26annotation%3DBVQYIVKQ">pdf</a>).</li>
-<li><em>Approximated</em> Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D221%26annotation%3DBZVGUWRT">pdf</a>).</li>
-</ul>
-</li>
-<li><strong>Approximated Change in Average Rate Differential</strong><ul>
-<li><em>EXACT</em> Change in Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D222%26annotation%3DXCA9N462">pdf</a>).</li>
-<li><em>Approximated</em> Change in Average Rate Differential (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D223%26annotation%3D366XFK3W">pdf</a>).</li>
-<li><em>See also: <a href="https://workflowy.com/#/6ef531c4e7dd">Approximated Change in Average Rate Differential</a></em><ul>
-<li>Best: Variable premium at base level.</li>
-<li>Best (=): adjusted exposures as in <a href="https://workflowy.com/#/807c48b42dfd">Adjusted Pure Premium Method</a>.</li>
-<li>Second-best: Using exposures.<ul>
-<li>But less accurate in theory. Only do if data for above 2 is unavailable.</li>
-</ul>
-</li>
-<li>==Never weight with Actual Premiums <strong>NOT at BASE Level</strong>== to avoid double counting of the relativities.</li>
-<li>Off-balance = <strong>Current</strong> weighted-relativity / <strong>Proposed</strong> weighted-relativity.</li>
+<li>On reducing Territory 2 rate, we will experience a shortfall in total required premium of <span class="arithmatex">\(1200k\)</span>.</li>
+<li>But, Territory 2 happens to be the base rate. So we are in effect reducing the base rate.</li>
+<li>If we reduce the base rate, premiums for all the other territories will also reduce.</li>
+<li>So, to ensure we have a total premium increase of <span class="arithmatex">\(20\%\)</span> (and not less), we will have to increase the other two relativities (Territory 1 &amp; 3) by some amount that compensates for:<ul>
+<li>Capping of Base Rate</li>
+<li>Territory 1 &amp; 3 premiums reduced due to <span class="arithmatex">\(\text{Base Rate}\)</span> reduction</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>
-<p><strong>Rules for Weighting</strong></p>
-</li>
-<li>
-<p><a href="https://workflowy.com/#/6ef531c4e7dd">Approximated Change in Average Rate Differential</a>.</p>
-<ul>
-<li>Best: Variable premium at base level.</li>
-<li>Best (=): adjusted exposures as in <a href="https://workflowy.com/#/807c48b42dfd">Adjusted Pure Premium Method</a>.</li>
-<li>Second-best: Using exposures.<ul>
-<li>But less accurate in theory. Only do if data for above 2 is unavailable.</li>
-</ul>
-</li>
-<li>==Never weight with Actual Premiums <strong>NOT at BASE Level</strong>== to avoid double counting of the relativities.</li>
-<li>Off-balance = <strong>Current</strong> weighted-relativity / <strong>Proposed</strong> weighted-relativity.</li>
-</ul>
-</li>
-<li>
-<p><strong>Minimum Premiums</strong></p>
-</li>
-<li>
-<p>Ensure that premium <strong>will cover</strong> expected fixed expenses and some minimal amount of expected losses.</p>
-</li>
-<li>Effect = <code>Premium with minimum</code> / <code>Premium without (with old) minimum</code>.</li>
-<li>Base Rate offset = 1 / (1+Effect).</li>
-<li>
-<p><strong>Rate Capping for One Variable</strong></p>
-</li>
-<li>
-<p>"If we want to cap the impact of a rate change for a single variable, we will need to make up any premium loss resulting from the cap on other levels of the variable to obtain the same overall target premium" (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D225%26annotation%3D2XTXI8KQ">pdf</a>).</p>
-</li>
-<li>If we cap a <strong>non-base level</strong><ul>
-<li><strong>01</strong> Textbook approach.</li>
-<li><strong>02</strong> Allocate the shortfall directly and back into rels (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D227%26annotation%3D9FSMFCNM">pdf</a>).</li>
-<li><strong>03</strong> Figure out an equation.</li>
-</ul>
-</li>
-<li>If we cap a <strong>Base Level</strong><ul>
-<li><strong>01</strong> Textbook approach.</li>
-<li><strong>02</strong> Allocate the shortfall directly and back into rels (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D229%26annotation%3DGC5W7LJQ">pdf</a>).</li>
-<li><strong>03</strong> Figure out an equation.</li>
-</ul>
-</li>
-<li>Finish <a href="https://workflowy.com/#/61a975242bb0">Rate Capping for One Variable</a> by 6:30 PM on March 22, Saturday.</li>
-<li>
-<p><strong>Note</strong></p>
-</li>
-<li>
-<p><strong>Off-Balance Factor and the Rationale behind</strong></p>
-<ul>
-<li>Premium = Base Rate * Combined Variables Multiplicative Rating Factors + Additive Fee.</li>
-<li>Average Premium = Base Rate * Exposure-weighted Average Rating Factor + Additive Fee.</li>
-<li>If the <strong>Exposure-weighted Average RF term</strong> cancels out (in case there are no rating factor changes), we are done.<ul>
-<li>The E-w Avg RF term is shown as the last terms in the numerator and denominator of the fraction in the image above.</li>
-</ul>
-</li>
-<li>If they don't cancel out, we will have to multiply by the <strong>Off-balance</strong> factor.</li>
-</ul>
-</li>
-<li>For improved approximation we use <strong>Current Variable Premium at Base</strong>: ""Variable" means we are only considering the variable portion of premium (i.e., not including the additive fees), and "at base" means we don’t include any relativities for the variable we are analyzing (i.e., all levels of the variable are rated the same as the base level with a factor of 1)." (<a href="https://www.google.com/search?q=zotero://open-pdf/library/items/PBJJ39AL%3Fpage%3D221%26annotation%3DCUEX2Q34">pdf</a>)</li>
-</ul>
-</li>
-</ul>
-<h3 id="premium-transition-rules">Premium Transition Rules<a class="headerlink" href="#premium-transition-rules" title="Permanent link">&para;</a></h3>
-<p>To ensure that no individual risk goes up more than a certain percentage.</p>
-<ul>
-<li><strong>Rules that <em>limit</em> the change that insureds can see on their premium on renewal</strong><ul>
-<li>20% cap = (1+15%)(1+4.35%).</li>
-</ul>
-</li>
-<li><strong>Considerations</strong><ul>
-<li>What's the cap amount, and what does it do to your total profit?<ul>
-<li>Based on total profit scenario testing.</li>
-</ul>
-</li>
-<li>Fully allow to reflect non-rate large changes (e.g., change in exposures, claim surcharges). But ONLY cap the rate.</li>
-<li>Transition periods should be short.<ul>
-<li>Since multiple transition rules can start to overlap.</li>
-</ul>
-</li>
-<li><strong>Decision of implementation</strong><ul>
-<li>If uncapped impact is 5% but the impact of the first year is 3.5%, should we raise the base rates to 5% in the first year itself, or wait for future renewals for the 5% to be realized?</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="expected-distribution">Expected Distribution<a class="headerlink" href="#expected-distribution" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Rate changes are measured by the in-force on-level premiums.</li>
-<li>They don't consider the effect of the change to the mix-of-business.</li>
-<li><a href="https://workflowy.com/#/25a110687ffb">Optimized Pricing</a> techniques consider the impact on mix, the propensity to renew after a rate change.</li>
-</ul>
-<h3 id="using-bureau-or-competitor-rate">Using Bureau or Competitor Rate<a class="headerlink" href="#using-bureau-or-competitor-rate" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>How to make B/C rates more applicable</strong><ul>
-<li><strong>Adjust for fixed expense differences</strong><ul>
-<li>Adjust competitor expense fee by a factor = Your Fixed Expense exposure / Competitor Fixed Expense per exposure.</li>
-<li>An approximation of their fixed expense using our fixed expenses.</li>
-</ul>
-</li>
-<li><strong>Adjust for Variable expenses</strong><ul>
-<li>Adjust competitor base rate or expense fee by a factor = (Competitor variable PLR / Your Variable PLR).</li>
-<li>Competitor PLR in the numerator because variable PLR go in the denominator of the loss ratio formula for rate change.</li>
-<li>PLR: Permissible Loss Ratio.</li>
-</ul>
-</li>
-<li><strong>Adjust for loss costs</strong><ul>
-<li>Factor = Your Expected Loss Cost / Competitor's.</li>
-</ul>
-</li>
-<li><strong>Class differences can be accounted for</strong><ul>
-<li>Using actuarial judgment.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="communicating-and-monitoring">Communicating and Monitoring<a class="headerlink" href="#communicating-and-monitoring" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Communicate impact to stakeholders.</li>
-<li>Explain ratemaking assumptions to regulators.</li>
-<li>The bigger the rate change, the more questions we get from regulators and internal folks.</li>
-</ul>
+<p>So, how should we change the Indicated relativities Ter 1 &amp; 3 relativities? We can just inflate them by a factor <span class="arithmatex">\(X\)</span>, which can then be used to formulate the following equation:</p>
+<p>$$
+475(1.25) + 195\left(\dfrac{0.75X}{0.85}\right)(1.25)+ 330\left(\dfrac{1.2X}{1.3}\right)(1.25) = 1200
+$$
+- Here, we multiply everything by <span class="arithmatex">\(1.25\)</span>, the increase in the base rate (applies to all)
+- We also multiply by the <span class="arithmatex">\(\dfrac{\text{Indicated Rel}\times X}{\text{Current Rel}}\)</span> as that is the final change in relativity.
+- We are not using the <span class="arithmatex">\(OBF\)</span> anywhere here, since it was needed to adjust for a revenue neutral change owing to the changing relativities. But now, we have fixed the base rate at <span class="arithmatex">\(475(1.25)\)</span> and so it doesn't appear in the picture<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">5</a></sup></p>
+<p>Then, solving for <span class="arithmatex">\(X\)</span>, we get <span class="arithmatex">\(1.017\)</span>.</p>
+<p>Thus the new relativities should be:</p>
+<table>
+<thead>
+<tr>
+<th>Territory</th>
+<th>Final rel</th>
+<th>How?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.7631</td>
+<td><span class="arithmatex">\(0.75 \times 1.017\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.0000</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.2210</td>
+<td><span class="arithmatex">\(1.20 \times 1.017\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>With the <span class="arithmatex">\(\text{Final Base Rate =}1.25 \times \text{Current Base Rate}\)</span></p>
+<div class="footnote">
 <hr />
+<ol>
+<li id="fn:1">
+<p>For example, if the indicated relativities were (1,1,1) then the premium charged to each of the territories in aggregate would be $333,333.33 each... so that it sums up to $1,000,000.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>For example, say our base rate is $100 and total exposures (summed across all territories) is 8000. <em><strong>Note</strong> that these values are not given in the table (I am making them up for the example) but they do inherently exist even if not directly stated to us, in the premium values given</em>. Then my EWARF is going to be <span class="arithmatex">\(\dfrac{1000000}{100\times 8000}=1.25\)</span> which is like the net effect of all the relativities (0.85,1.00,1.30).&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Meaning, without changing the total premium&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>So, say if territory 3's indicated total premium increases to more than <span class="arithmatex">\(330k\times 1.25= 412.5k\)</span> , (say <span class="arithmatex">\(420k\)</span>) we will have to cap the total premium to <span class="arithmatex">\(412.5k\)</span>. In which case, we will have a shortfall in premium of <span class="arithmatex">\(420k - 412.5k = 7.5k\)</span> which has to be compensated by increasing the premiums in other territories relativities.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>However, if say some other territory had crossed the cap limit (and not the base rate), the base rate would then be <span class="arithmatex">\(\text{Current Base}\times OBF \times 1.20\)</span> (where 1.20 is the factor increase in total premiums.)&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
