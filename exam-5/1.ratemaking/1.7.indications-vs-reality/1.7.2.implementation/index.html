@@ -3320,7 +3320,7 @@
 
 
 <h1 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h1>
-<h3 id="general-idea">General Idea<a class="headerlink" href="#general-idea" title="Permanent link">&para;</a></h3>
+<h2 id="general-idea">General Idea<a class="headerlink" href="#general-idea" title="Permanent link">&para;</a></h2>
 <p>You have finally done all the methods to get your indicated rates for each of the classes in the form of rate relativities and a base rate. But due to some regulatory constraint you are forced to alter your results.</p>
 <p>For example, if you found the rate relativities as such:</p>
 <table>
@@ -3368,16 +3368,16 @@ $$
 OBF=\dfrac{\text{Current EWARF}}{\text{Proposed EWARF}} 
 $$</p>
 <ul>
-<li>What is EWARF? Think of it as the effects of all the rating factors distilled into one value. Thus, you can just take the total exposures and multiply them with the EWARF to see how much premiums you are collecting in total<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. So, in our case here:
-$$
-\text{Exposures}\times \text{Base Rate ($)} \times \text{Current EAWRF} = \text{Total Premium} = $ 1,000,000
-$$
-When a relativity change happens, then the exposures don't change, neither does the base rate. The only thing that changes is the <span class="arithmatex">\(\text{EAWRF}\)</span> and so we find the <span class="arithmatex">\(OBF\)</span> and apply it to the <span class="arithmatex">\(\text{Base Rate}\)</span> in order to get <strong><em>revenue neutral changes</em></strong>.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> So, with our new rates we have:</li>
+<li>What is EWARF? Think of it as the effects of all the rating factors distilled into one value. Thus, you can just take the total exposures and multiply them with the EWARF to see how much premiums you are collecting in total<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. So, in our case here:</li>
 </ul>
+<div class="arithmatex">\[
+\text{Exposures}\times \text{Base Rate (\$)} \times \text{Current EAWRF} = \text{Total Premium} = \$ 1,000,000
+\]</div>
+<p>When a relativity change happens, then the exposures don't change, neither does the base rate. The only thing that changes is the <span class="arithmatex">\(\text{EAWRF}\)</span> and so we find the <span class="arithmatex">\(OBF\)</span> and apply it to the <span class="arithmatex">\(\text{Base Rate}\)</span> in order to get <strong><em>revenue neutral changes</em></strong>.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> So, with our new rates we have:</p>
 <div class="arithmatex">\[
 \text{Exposures}\times OBF\cdot\text{Base Rate (\$)} \times \text{Indicated EAWRF} = \text{Total Premium} = \$ 1,000,000
 \]</div>
-<h3 id="obf-adjustment-note">OBF Adjustment note<a class="headerlink" href="#obf-adjustment-note" title="Permanent link">&para;</a></h3>
+<h2 id="obf-adjustment-note">OBF Adjustment note<a class="headerlink" href="#obf-adjustment-note" title="Permanent link">&para;</a></h2>
 <p>If we do not apply the OBF then the Rel change factor then the following would be the projected premiums:</p>
 <table>
 <thead>
@@ -3415,7 +3415,7 @@ When a relativity change happens, then the exposures don't change, neither does 
 <p class="admonition-title">To Summarize</p>
 <p>OBF offsets the effect of the changing relativities</p>
 </div>
-<h3 id="implementation-scenario">Implementation Scenario<a class="headerlink" href="#implementation-scenario" title="Permanent link">&para;</a></h3>
+<h2 id="implementation-scenario">Implementation Scenario<a class="headerlink" href="#implementation-scenario" title="Permanent link">&para;</a></h2>
 <p>Let's say that the company has decided to change the rates (i.e. relativities and base rate) in such a way that the total revenue increases by 20\%. Subject to the constraint:</p>
 <blockquote>
 <p>We cannot increase the premiums collected (e.g. $330,000 currently for Terr 3) to more than 25%, and cap it beyond that point, which may lead to a shortfall in the desired premium.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
@@ -3469,7 +3469,7 @@ When a relativity change happens, then the exposures don't change, neither does 
 </ul>
 </li>
 </ul>
-<h3 id="the-adjustment-part-1">The "Adjustment" part #1<a class="headerlink" href="#the-adjustment-part-1" title="Permanent link">&para;</a></h3>
+<h2 id="the-adjustment-part-1">The "Adjustment" part #1<a class="headerlink" href="#the-adjustment-part-1" title="Permanent link">&para;</a></h2>
 <p>We note in the table above that, the relativity of Territory 2 has overshot that cap (26.09\% &gt; 25%) so we need to ensure that the total premium for Territory 2 doesn't increase to more than <span class="arithmatex">\(475k \times 1.25 = 539.75k\)</span>.[^5] In order to do so we will have to reduce  the Territory 2 rate. But note the following things that happen:</p>
 <div class="admonition question inline end">
 <p class="admonition-title">Question</p>
@@ -3486,12 +3486,14 @@ When a relativity change happens, then the exposures don't change, neither does 
 </li>
 </ul>
 <p>So, how should we change the Indicated relativities Ter 1 &amp; 3 relativities? We can just inflate them by a factor <span class="arithmatex">\(X\)</span>, which can then be used to formulate the following equation:</p>
-<p>$$
+<div class="arithmatex">\[
 475(1.25) + 195\left(\dfrac{0.75X}{0.85}\right)(1.25)+ 330\left(\dfrac{1.2X}{1.3}\right)(1.25) = 1200
-$$
-- Here, we multiply everything by <span class="arithmatex">\(1.25\)</span>, the increase in the base rate (applies to all)
-- We also multiply by the <span class="arithmatex">\(\dfrac{\text{Indicated Rel}\times X}{\text{Current Rel}}\)</span> as that is the final change in relativity.
-- We are not using the <span class="arithmatex">\(OBF\)</span> anywhere here, since it was needed to adjust for a revenue neutral change owing to the changing relativities. But now, we have fixed the base rate at <span class="arithmatex">\(475(1.25)\)</span> and so it doesn't appear in the picture<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">5</a></sup></p>
+\]</div>
+<ul>
+<li>Here, we multiply everything by <span class="arithmatex">\(1.25\)</span>, the increase in the base rate (applies to all)</li>
+<li>We also multiply by the <span class="arithmatex">\(\dfrac{\text{Indicated Rel}\times X}{\text{Current Rel}}\)</span> as that is the final change in relativity.</li>
+<li>We are not using the <span class="arithmatex">\(OBF\)</span> anywhere here, since it was needed to adjust for a revenue neutral change owing to the changing relativities. But now, we have fixed the base rate at <span class="arithmatex">\(475(1.25)\)</span> and so it doesn't appear in the picture<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">5</a></sup></li>
+</ul>
 <p>Then, solving for <span class="arithmatex">\(X\)</span>, we get <span class="arithmatex">\(1.017\)</span>.</p>
 <p>Thus the new relativities should be:</p>
 <table>
@@ -3525,7 +3527,7 @@ $$
 <hr />
 <ol>
 <li id="fn:1">
-<p>For example, if the indicated relativities were (1,1,1) then the premium charged to each of the territories in aggregate would be $333,333.33 each... so that it sums up to $1,000,000.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>For example, if the indicated relativities were (1,1,1) then the premium charged to each of the territories in aggregate would be 333,333.33 each... so that it sums up to 1,000,000.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
 <p>For example, say our base rate is $100 and total exposures (summed across all territories) is 8000. <em><strong>Note</strong> that these values are not given in the table (I am making them up for the example) but they do inherently exist even if not directly stated to us, in the premium values given</em>. Then my EWARF is going to be <span class="arithmatex">\(\dfrac{1000000}{100\times 8000}=1.25\)</span> which is like the net effect of all the relativities (0.85,1.00,1.30).&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
