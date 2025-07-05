@@ -3410,14 +3410,20 @@
 <h2 id="fresh-installation">Fresh Installation<a class="headerlink" href="#fresh-installation" title="Permanent link">&para;</a></h2>
 <h3 id="debloat-windows">Debloat windows<a class="headerlink" href="#debloat-windows" title="Permanent link">&para;</a></h3>
 <p>Windows 11 is full of bloatware. NOT ACCEPTABLE! Remove all unnecessary stuff that are thrusted into our laptops/PCs by Microsoft.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>So, we will run this script from <a href="https://github.com/Raphire/Win11Debloat?tab=readme-ov-file">Raphire/Win11Debloat</a>.</p>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># Should work unless outdated, else use the link above</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&amp;</span> <span class="p">(</span><span class="no">[scriptblock]</span><span class="p">::</span><span class="n">Create</span><span class="p">((</span><span class="nb">irm </span><span class="s2">&quot;https://debloat.raphi.re/&quot;</span><span class="p">)))</span>
 </span></code></pre></div>
+<div class="admonition info inline end">
+<p class="admonition-title">Firewall block</p>
+<p>In case your firewall blocks the script, use this button to download and save it as <code>debloat.ps1</code> then run it as administrator.</p>
+<p><a class="md-button md-button--primary center" href="../../../assets/files/debloat.txt">Get the Script</a> </p>
+</div>
 <ul>
+<li>You will have to run this script in administrator mode using the windows Powershell</li>
 <li>If you see a warning related to <code>winget</code> in the blue window, then install the <a href="https://apps.microsoft.com/detail/9nblggh4nns1">app installer</a></li>
 <li>Go with recommended settings (But do suggest you to clean out the taskbar and start menu.)</li>
 </ul>
+<p>So, we will run this script from <a href="https://github.com/Raphire/Win11Debloat?tab=readme-ov-file">Raphire/Win11Debloat</a>.</p>
 <h3 id="realtek-hd-audio-manager">Realtek HD Audio Manager<a class="headerlink" href="#realtek-hd-audio-manager" title="Permanent link">&para;</a></h3>
 <p>I remember using the Realtek HD Audio Manager back when Windows 7 was peak. The manager allowed us to set default devices and have some low latency output monitoring</p>
 <h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
