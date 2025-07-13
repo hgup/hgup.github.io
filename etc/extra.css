@@ -141,3 +141,6 @@ body {
 .md-typeset details {
   border-width: 0px;
 }
+.md-typeset [type="checkbox"]:checked + .task-list-indicator::before {
+  background-color: #039c52;
+}
