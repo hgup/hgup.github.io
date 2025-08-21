@@ -17,18 +17,19 @@ body {
   --md-hue: 145deg;
 
   /* Header */
-  --md-primary-fg-color: hsl(0, 0%, 91%);
+  --md-primary-fg-color: hsl(0, 0%, 97%);
   --md-primary-bg-color: hsl(0,0%, 10%);
   --md-primary-fg-color--dark:  hsl(0, 0%, 85%);
   --md-typeset-a-color: hsl(var(--md-hue), 80%, 15%) !important;
+  /* Global */
   --md-default-fg-color: hsl(0,0%,20%);
-  --md-default-bg-color: hsl(var(--md-hue), 0%, 94%);
+  --md-default-bg-color: hsl(var(--md-hue), 0%, 100%);
 
   --md-accent-fg-color: hsl(var(--md-hue), 50%, 30%);
   --md-accent-fg-color--transparent: #526cfe1a;
   --md-accent-bg-color: #fff;
   --md-accent-bg-color--light: #ffffffb3;
-  --md-code-bg-color: hsl(var(--md-hue), 2%, 90%);
+  --md-code-bg-color: hsl(var(--md-hue), 2%, 95%);
 
   /* --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
   --md-footer-bg-color: hsl(0, 0%, 11%);
