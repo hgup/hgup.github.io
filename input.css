@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where([data-md-color-media="(prefers-color-scheme: dark)"], [data-md-color-media="(prefers-color-scheme: dark)"] *));

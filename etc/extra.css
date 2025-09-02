@@ -14,10 +14,11 @@ body {
   /* Blue */
   /* --md-hue: 215deg; */
   /* Green */
-  --md-hue: 145deg;
+  /* --md-hue: 145deg; */
+  --md-hue: 221deg;
 
   /* Header */
-  --md-primary-fg-color: hsl(0, 0%, 97%);
+  --md-primary-fg-color: hsl(0, 0%, 98%);
   --md-primary-bg-color: hsl(0,0%, 10%);
   --md-primary-fg-color--dark:  hsl(0, 0%, 85%);
   --md-typeset-a-color: hsl(var(--md-hue), 80%, 15%) !important;
@@ -25,7 +26,7 @@ body {
   --md-default-fg-color: hsl(0,0%,20%);
   --md-default-bg-color: hsl(var(--md-hue), 0%, 100%);
 
-  --md-accent-fg-color: hsl(var(--md-hue), 50%, 30%);
+  --md-accent-fg-color: hsl(var(--md-hue), 95%, 62%);
   --md-accent-fg-color--transparent: #526cfe1a;
   --md-accent-bg-color: #fff;
   --md-accent-bg-color--light: #ffffffb3;
@@ -53,15 +54,16 @@ body {
   /* Blue */
   /* --md-hue: 215deg; */
   /* Green */
-  --md-hue: 145deg;
+  /* --md-hue: 145deg; */
+  --md-hue: 221deg;
 
   /* Header */
   --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 
-  --md-accent-fg-color: hsl(var(--md-hue), 20%, 66%);
-  --md-typeset-a-color: hsl(var(--md-hue), 10%, 55%) !important;
+  --md-accent-fg-color: hsl(var(--md-hue), 85%, 82%);
+  --md-typeset-a-color: hsl(var(--md-hue), 20%, 95%) !important;
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
 
   --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
