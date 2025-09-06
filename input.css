@@ -1,4 +1,38 @@
 @import "tailwindcss";
 
-
 @custom-variant dark (&:where([data-md-color-media="(prefers-color-scheme: dark)"], [data-md-color-media="(prefers-color-scheme: dark)"] *));
+
+@layer base {
+}
+nav.md-tabs[hidden=""]{
+    display: flex!important;
+}
+
+.md-content__inner > h1:nth-child(1){
+    display: none;
+}
+
+.md-header {
+  position: initial;
+}
+
+.md-content {
+    @apply max-w-4xl mx-auto p-6 sm:p-8;
+}
+
+.md-content__inner {
+    @apply !ml-0;
+}
+
+
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    display: none;
+  }
+}
