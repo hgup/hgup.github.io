@@ -182,9 +182,9 @@
   ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
     height: auto;
   }
-  [hidden]:where(:not([hidden="until-found"])) {
+  /* [hidden]:where(:not([hidden="until-found"])) {
     display: none !important;
-  }
+  } */
 }
 @layer utilities {
   .mx-auto {
