@@ -18,7 +18,7 @@ body {
   --md-hue: 221deg;
 
   /* Header */
-  --md-primary-fg-color: hsl(0, 0%, 98%);
+  --md-primary-fg-color: hsl(0, 0%, 100%);
   --md-primary-bg-color: hsl(0,0%, 10%);
   --md-primary-fg-color--dark:  hsl(0, 0%, 85%);
   --md-typeset-a-color: hsl(var(--md-hue), 80%, 15%) !important;
@@ -67,6 +67,7 @@ body {
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
 
   --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
+  --md-default-fg-color: hsl(0,0%,90%);
   --md-default-fg-color--lightest: hsl(0, 0%, 10%);
   /* Also remember to change the color in the <head /> */
   --md-primary-fg-color: hsl(0, 0%, 11%);
@@ -91,9 +92,11 @@ body {
 }
 
 .md-typeset h1 {
-  font-family: "DM Serif Display", serif;
+  /* font-family: "DM Serif Display", serif; */
+  /* font-family: "Protest Guerrilla", sans-serif; */
+  font-family: "Anton SC", sans-serif;
   color: var(--md-default-fg-color);
-  font-size: 1.9rem;
+  font-size: 2.5rem;
 }
 
 .jupyter-wrapper .jp-InputArea-editor {
@@ -146,4 +149,32 @@ body {
 }
 .md-typeset [type="checkbox"]:checked + .task-list-indicator::before {
   background-color: #039c52;
+}
+
+@media screen and (min-width: 76.25em) {
+  [dir="ltr"]
+    .md-sidebar--primary:not([hidden])
+    ~ .md-content
+    > .md-content__inner {
+    margin-left: 0.8rem;
+  }
+.md-main__inner {
+  flex-direction: row-reverse !important;
+}
+
+li.md-nav__item--active {
+
+  --md-primary-fg-color: hsl(0, 0%, 60%);
+
+}
+
+
+.md-sidebar {
+  /* align-self: flex-start;
+  flex-shrink: 0;
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 2.4rem; */
+  width: 15rem;
+}
 }

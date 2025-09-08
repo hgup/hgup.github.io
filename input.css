@@ -2,14 +2,19 @@
 
 @custom-variant dark (&:where([data-md-color-media="(prefers-color-scheme: dark)"], [data-md-color-media="(prefers-color-scheme: dark)"] *));
 
-@layer base {
-}
-nav.md-tabs[hidden=""]{
-    display: flex!important;
+@theme {
+  --font-heading: "Anton SC", sans-serif;
 }
 
-.md-content__inner > h1:nth-child(1){
-    display: none;
+@layer base {
+}
+nav.md-tabs[hidden=""] {
+  display: flex !important;
+}
+
+
+.md-content__inner > h1:nth-child(1) {
+  display: none;
 }
 
 .md-header {
@@ -17,13 +22,12 @@ nav.md-tabs[hidden=""]{
 }
 
 .md-content {
-    @apply max-w-4xl mx-auto p-6 sm:p-8;
+  @apply max-w-4xl mx-auto p-6 sm:p-8;
 }
 
 .md-content__inner {
-    @apply !ml-0;
+  @apply !ml-0;
 }
-
 
 @media screen and (min-width: 60em) {
   .md-sidebar--secondary {
