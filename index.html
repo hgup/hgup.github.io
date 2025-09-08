@@ -637,25 +637,6 @@
           
         
       
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const themeToggle = document.querySelector('.md-header__button.md-icon');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function(event) {
-      // Prevents the default scroll-to-bottom behavior
-      event.preventDefault();
-      
-      // Manually toggles the dark/light theme
-      document.body.classList.toggle('md-dark');
-      
-      // Persists the theme choice
-      const isDark = document.body.classList.contains('md-dark');
-      localStorage.setItem('data-md-color-scheme', isDark ? 'slate' : 'default');
-    });
-  }
-});
-
-</script>
 <link rel="stylesheet" href="./output.css">
 <div class="bg-white text-black dark:bg-black dark:text-white antialiased  selection:bg-white selection:text-black flex flex-col">
     <!-- Main Content -->
@@ -666,11 +647,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <section id="about" class="py-5">
                 <p class="text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-100">Hursh
                     Gupta</p>
-                <h1 class="mt-4 font-heading text-4xl sm:text-6xl font-extrabold leading-tight uppercase">
-                    Student of <span class="bg-black font-heading text-white dark:bg-white dark:text-black"> Actuarial Science and
-                        Economics.</span>
+                <h1 class="mt-4 font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-tight">
+                    Student / <span class="font-heading text-black dark:text-white"> Actuarial Science </span>
                 </h1>
-                <p class="mt-8 text-lg sm:text-xl text-neutral-700 dark:text-neutral-200 max-w-2xl">
+                <p class="mt-8 text-lg md:text-xl text-neutral-700 dark:text-neutral-200 max-w-2xl">
                     Currently pursuing my studies at Sri Sathya Sai Institute of Higher Learning. When I'm not focused
                     on academics, my main hobby is creating and exploring the world of music.
                 </p>
