@@ -64,7 +64,7 @@ body {
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 
-  --md-accent-fg-color: hsl(var(--md-hue), 55%, 60%);
+  --md-accent-fg-color: hsla(var(--md-hue), 65%, 75%,80%);
   --md-typeset-a-color: hsl(var(--md-hue), 20%, 95%) !important;
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
 
@@ -187,4 +187,13 @@ li.md-nav__item--active {
   top: 2.4rem; */
   width: 17rem;
 }
+}
+.md-typeset a, .md-typeset a::before {
+  text-decoration: underline wavy hsla(var(--md-hue),50%,70%, 50%);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+h2 > a {
+  text-decoration: none !important;
 }
