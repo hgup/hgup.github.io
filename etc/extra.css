@@ -194,6 +194,6 @@ li.md-nav__item--active {
   text-decoration-thickness: 1px;
 }
 
-h2 > a {
+h1 > a, h2 > a {
   text-decoration: none !important;
 }
