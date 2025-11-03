@@ -19,11 +19,11 @@ body {
 
   /* Header */
   --md-primary-fg-color: hsl(0, 0%, 100%);
-  --md-primary-bg-color: hsl(0,0%, 10%);
-  --md-primary-fg-color--dark:  hsl(0, 0%, 85%);
+  --md-primary-bg-color: hsl(0, 0%, 10%);
+  --md-primary-fg-color--dark: hsl(0, 0%, 85%);
   --md-typeset-a-color: hsl(var(--md-hue), 80%, 15%) !important;
   /* Global */
-  --md-default-fg-color: hsl(0,0%,20%);
+  --md-default-fg-color: hsl(0, 0%, 20%);
   /* This color is what your thing fades when passed by */
   /* --md-default-fg-color--light: hsl(var(--md-hue),50%,5%); */
   --md-default-bg-color: hsl(var(--md-hue), 0%, 100%);
@@ -38,21 +38,18 @@ body {
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%); */
 
-
-@media screen and (min-width: 60em) {
-  .md-search__input::placeholder {
-    color: #000;
+  @media screen and (min-width: 60em) {
+    .md-search__input::placeholder {
+      color: #000;
+    }
   }
-}
 
   .md-search__input {
     background: #ffffffcc;
   }
-
 }
 
 [data-md-color-scheme="slate"] {
-
   /* Blue */
   /* --md-hue: 215deg; */
   /* Green */
@@ -64,12 +61,12 @@ body {
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 
-  --md-accent-fg-color: hsla(var(--md-hue), 65%, 75%,80%);
+  --md-accent-fg-color: hsla(var(--md-hue), 65%, 75%, 80%);
   --md-typeset-a-color: hsl(var(--md-hue), 20%, 95%) !important;
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
 
   --md-default-bg-color: hsl(var(--md-hue), 0%, 8%);
-  --md-default-fg-color: hsl(0,0%,90%);
+  --md-default-fg-color: hsl(0, 0%, 90%);
   /* This color is what your thing fades when passed by */
   /* --md-default-fg-color--light: hsl(var(--md-hue),50%,95%); */
   --md-default-fg-color--lightest: hsl(0, 0%, 10%);
@@ -83,8 +80,9 @@ body {
 }
 
 .md-header__ellipsis .md-header__topic {
-  font-family: "Arapey", serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  /* Regular font */
+  font-weight: 400;
 }
 
 .md-search__inner {
@@ -94,7 +92,6 @@ body {
 .md-search__input {
   font-family: "Arapey", serif;
 }
-
 
 @media screen and (min-width: 76.25em) {
   font-size: 4rem;
@@ -106,14 +103,17 @@ body {
   /* font-family: "Anton SC", sans-serif; */
   /* text-transform: uppercase; */
   color: var(--md-default-fg-color);
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   text-wrap: pretty;
+  @media screen and (min-width: 76.25em) {
+    font-size: 2.8rem;
+  }
 }
 
 .jupyter-wrapper .jp-InputArea-editor {
   /* border: var(--jp-border-width) solid var(--jp-cell-editor-border-color) !important; */
   border: 0px solid var(--jp-cell-editor-border-color) !important;
-  border-radius: .1rem !important;
+  border-radius: 0.1rem !important;
   padding: 7px 5px 9px 5px !important;
   background: var(--md-code-bg-color) !important;
 }
@@ -143,7 +143,9 @@ body {
   --jp-mirror-editor-number-color: var(--md-code-hl-number-color) !important;
   --jp-mirror-editor-def-color: var(--md-code-hl-function-color) !important;
   --jp-mirror-editor-string-color: var(--md-code-hl-string-color) !important;
-  --jp-mirror-editor-string-2-color: var(--md-code-hl-constant-color) !important;
+  --jp-mirror-editor-string-2-color: var(
+    --md-code-hl-constant-color
+  ) !important;
   --jp-mirror-editor-meta-color: var(--md-code-hl-color--light) !important;
 }
 
@@ -169,32 +171,31 @@ body {
     > .md-content__inner {
     margin-left: 0.8rem;
   }
-.md-main__inner {
-  flex-direction: row-reverse !important;
-}
+  .md-main__inner {
+    flex-direction: row-reverse !important;
+  }
 
-li.md-nav__item--active {
+  li.md-nav__item--active {
+    --md-primary-fg-color: hsl(0, 0%, 40%);
+  }
 
-  --md-primary-fg-color: hsl(0, 0%, 40%);
-
-}
-
-
-.md-sidebar {
-  /* align-self: flex-start;
+  .md-sidebar {
+    /* align-self: flex-start;
   flex-shrink: 0;
   padding: 1.2rem 0;
   position: sticky;
   top: 2.4rem; */
-  width: 17rem;
+    width: 17rem;
+  }
 }
-}
-.md-typeset a, .md-typeset a::before {
-  text-decoration: underline wavy hsla(var(--md-hue),50%,70%, 50%);
+.md-typeset a,
+.md-typeset a::before {
+  text-decoration: underline wavy hsla(var(--md-hue), 50%, 70%, 50%);
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
 
-h1 > a, h2 > a {
+h1 > a,
+h2 > a {
   text-decoration: none !important;
 }
