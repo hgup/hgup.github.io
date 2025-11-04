@@ -6266,14 +6266,14 @@
 <!-- Markdown content -->
 <ol>
 <li><span class="arithmatex">\(Y = linear(X)\)</span></li>
-<li>
-<p>Allow for discrepancies <span class="arithmatex">\(Y = \beta_1 + \beta_2X + u\)</span></p>
-<ul>
+<li>Allow for discrepancies <span class="arithmatex">\(Y = \beta_1 + \beta_2X + u\)</span><ul>
 <li><span class="arithmatex">\(\hat \beta\)</span> is the estimate for <span class="arithmatex">\(\beta\)</span></li>
 <li><span class="arithmatex">\(u\)</span> is the “disturbance terms” or “terms of error”: gap between <strong>actual values</strong> and the <strong>true regression line</strong> (that we are trying to estimate).</li>
 <li><span class="arithmatex">\(\hat u\)</span> (or <span class="arithmatex">\(e\)</span>) are called residuals, gap between the <strong>actual values</strong> and the <strong>fitted values</strong> of Y</li>
+</ul>
+</li>
 <li>[image] (<a href="zotero://open-pdf/library/items/N82CRMDH?page=5&amp;annotation=T6NPZDDC">pdf</a>)<br>
-(<a href="zotero://select/library/items/C8CV22V3">Dagnelie, p. 3</a>)</li>
+    (<a href="zotero://select/library/items/C8CV22V3">Dagnelie, p. 3</a>)</li>
 <li>
 <ul>
 <li>In each observation <span class="arithmatex">\(X_1\)</span>, the actual value of <span class="arithmatex">\(Y\)</span> = <span class="arithmatex">\(\hat Y\)</span> + <span class="arithmatex">\(\hat u\)</span></li>
@@ -6282,147 +6282,110 @@
 <li>Fitted, actual and residual graph.</li>
 <li>Conditional mean intuition</li>
 <li>Matrix form of the estimation</li>
-<li>
-<p><strong>Ordinary Least Squares</strong>.</p>
-</li>
-<li>
-<p>Sum of Sq. of residuals <span class="arithmatex">\(SSR(\hat\beta)=\hat{u}'\hat{u}\)</span></p>
-</li>
+<li><strong>Ordinary Least Squares</strong>.<ul>
+<li>Sum of Sq. of residuals <span class="arithmatex">\(SSR(\hat\beta)=\hat{u}'\hat{u}\)</span></li>
 <li>F.O.C.: <span class="arithmatex">\(\dfrac{\partial SSR}{\partial \hat\beta}=0\)</span></li>
+</ul>
+</li>
 <li>
 <ul>
 <li>If <span class="arithmatex">\(X\)</span> has full rank, <span class="arithmatex">\(\beta = (X’X)^{-1}X’y\)</span></li>
+<li>S.O.C.: <span class="arithmatex">\(2X’X\)</span> must be positive definite</li>
 </ul>
 </li>
-<li>S.O.C.: <span class="arithmatex">\(2X’X\)</span> must be positive definite</li>
 <li>Proof that <span class="arithmatex">\(v = X’X\)</span> is positive definite (this <span class="arithmatex">\(v\)</span> is just for the proof)</li>
-<li>
-<p>Algebraic aspects: Residuals are orthogonal to the column vectors of <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(x_k\)</span></p>
-</li>
-<li>
-<p>The residuals always balance out around zero, meaning OLS regression does not systematically overestimate or underestimate the response variable.</p>
-</li>
+<li>Algebraic aspects: Residuals are orthogonal to the column vectors of <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(x_k\)</span><ol>
+<li>The residuals always balance out around zero, meaning OLS regression does not systematically overestimate or underestimate the response variable.</li>
 <li>The regression <strong>hyperplane always passes through the mean of the data</strong>. This means that if you average all your input variables and plug them into the regression equation, you will get the mean of <span class="arithmatex">\(y\)</span>.</li>
 <li>The average predicted (fitted) value always equals the average observed value.</li>
-<li>
-<p>Gauss-Markov Theorem: <em>Under certain conditions OLS estimators are</em> <strong><em>Unbiased</em></strong> <em>and</em> <strong><em>BLUE</em></strong><em>.</em></p>
-</li>
-<li>
-<p><strong>H1</strong>: Model must be linear in parameters (<strong>Being linear in parameters</strong> means that the model can be written as a <strong>linear combination of the parameters</strong> <span class="arithmatex">\(\beta\)</span>, not in terms of <span class="arithmatex">\(\beta^2,\beta^3\)</span> etc)</p>
-</li>
-<li>
-<p><strong>H2: Strict Exogeneity</strong>: <span class="arithmatex">\(E(u|X) = 0\)</span>. This condition ensures that:</p>
-<ul>
-<li>Residuals must not be correlated with <span class="arithmatex">\(X\)</span>.</li>
-<li>
-<p>No variables that systematically explain <span class="arithmatex">\(y\)</span>, should be excluded from <span class="arithmatex">\(X\)</span>, because if done that way, the effect of the omitted variable will be absorbed in <span class="arithmatex">\(u_i\)</span> and thus we will get biased results.</p>
-<ol>
-<li><strong>H3:</strong> No perfect multi-collinearity: <span class="arithmatex">\(\text{rank}(X) = k\)</span> (must have full rank), there should be <strong>no <em>EXACT</em> linear dependence</strong> between the columns of <span class="arithmatex">\(X\)</span>.</li>
 </ol>
 </li>
-<li>
-<p>Otherwise, we can’t calculate the matrix <span class="arithmatex">\((X’X)^{-1}\)</span> needed for OLS calculation</p>
+<li>Gauss-Markov Theorem: <em>Under certain conditions OLS estimators are</em> <strong><em>Unbiased</em></strong> <em>and</em> <strong><em>BLUE</em></strong><em>.</em><ol>
+<li><strong>H1</strong>: Model must be linear in parameters (<strong>Being linear in parameters</strong> means that the model can be written as a <strong>linear combination of the parameters</strong> <span class="arithmatex">\(\beta\)</span>, not in terms of <span class="arithmatex">\(\beta^2,\beta^3\)</span> etc)</li>
+<li><strong>H2: Strict Exogeneity</strong>: <span class="arithmatex">\(E(u|X) = 0\)</span>. This condition ensures that:<ul>
+<li>Residuals must not be correlated with <span class="arithmatex">\(X\)</span>.</li>
+<li>No variables that systematically explain <span class="arithmatex">\(y\)</span>, should be excluded from <span class="arithmatex">\(X\)</span>, because if done that way, the effect of the omitted variable will be absorbed in <span class="arithmatex">\(u_i\)</span> and thus we will get biased results.</li>
+</ul>
 </li>
+<li><strong>H3:</strong> No perfect multi-collinearity: <span class="arithmatex">\(\text{rank}(X) = k\)</span> (must have full rank), there should be <strong>no <em>EXACT</em> linear dependence</strong> between the columns of <span class="arithmatex">\(X\)</span>.<ul>
+<li>Otherwise, we can’t calculate the matrix <span class="arithmatex">\((X’X)^{-1}\)</span> needed for OLS calculation</li>
 <li>Also, we won’t be able to estimate unique coefficients.</li>
+</ul>
+</li>
+</ol>
+</li>
 <li>Under the above 3 assumptions, <span class="arithmatex">\(\hat \beta\)</span> is an unbiased estimator of <span class="arithmatex">\(\beta\)</span>. <span class="arithmatex">\(E(\hat \beta | X) = \beta\)</span></li>
-<li><strong>H4:</strong> Homoscedasticity and serial independence. <span class="arithmatex">\(Var(u|X) = \sigma^2I_n\)</span></li>
-</ul>
-</li>
-<li>
-<p><strong>a.</strong> <span class="arithmatex">\(Var(u_t|X) = \sigma^2\)</span>, <span class="arithmatex">\(t = 1,2,\dots,n\)</span></p>
-</li>
+<li><strong>H4:</strong> Homoscedasticity and serial independence. <span class="arithmatex">\(Var(u|X) = \sigma^2I_n\)</span><ol>
+<li><strong>a.</strong> <span class="arithmatex">\(Var(u_t|X) = \sigma^2\)</span>, <span class="arithmatex">\(t = 1,2,\dots,n\)</span></li>
 <li><strong>b.</strong> <span class="arithmatex">\(Cov(u_t,u_s|X) =0\)</span>, for all <span class="arithmatex">\(t \neq s\)</span></li>
-<li>
-<p><span class="arithmatex">\(Var(\hat \beta) = \cdots = \sigma^2(X’X)^{-1}\)</span></p>
+</ol>
 </li>
-<li>
-<p><span class="arithmatex">\(\beta\)</span> is true vale with zero variance</p>
-</li>
+<li><span class="arithmatex">\(Var(\hat \beta) = \cdots = \sigma^2(X’X)^{-1}\)</span><ol>
+<li><span class="arithmatex">\(\beta\)</span> is true vale with zero variance</li>
 <li><span class="arithmatex">\(Var(Au)=AVar(u)A^′\)</span>, its a property</li>
-</ul>
+</ol>
 </li>
-<li>
-<ol>
+<li>Takeaways<ol>
 <li>Gauss-Markov: OLS is BLUE</li>
 <li><span class="arithmatex">\(var(\hat\beta) \geq \sigma^2(X’X)^{-1}\)</span> &nbsp;under homoskedasticity</li>
 <li>Linear means “linear in y”</li>
 </ol>
 </li>
-<li>
-<p>Reformulated the theorem</p>
-<ol>
+<li>Reformulated the theorem<ol>
 <li>No estimator can have variance matrix smaller than <span class="arithmatex">\(\sigma^2(X’X)^{-1}\)</span></li>
 <li>OLS estimator has exactly this, so no unbiased estimator has a lower variance than OLS</li>
 <li>So, OLS is efficient</li>
-<li>
-<p>Unbiased estimator of residual variance can be written as :</p>
+</ol>
 </li>
-<li>
-<p><span class="arithmatex">\(\hat\sigma^2 = \dfrac{\hat{u}'\hat{u}}{(n-k)}\)</span></p>
-</li>
+<li>Unbiased estimator of residual variance can be written as :<ol>
+<li><span class="arithmatex">\(\hat\sigma^2 = \dfrac{\hat{u}'\hat{u}}{(n-k)}\)</span></li>
 <li><span class="arithmatex">\(k\)</span> is the number of parameters (intercept/constant included)</li>
-<li>
-<p><span class="arithmatex">\(H_5\)</span> <em>Normality of errors</em>: <span class="arithmatex">\((u_t | X) \sim N(0,\sigma^2)\)</span> i.i.d</p>
+</ol>
 </li>
-<li>
-<p><strong>Theorem 5</strong>: Assumptions <span class="arithmatex">\(H_1\)</span> to <span class="arithmatex">\(H_5\)</span>: <span class="arithmatex">\(\hat\beta \sim N(\beta,\sigma^2(X’X)^{-1})\)</span></p>
-</li>
+<li><span class="arithmatex">\(H_5\)</span> <em>Normality of errors</em>: <span class="arithmatex">\((u_t | X) \sim N(0,\sigma^2)\)</span> i.i.d<ol>
+<li><strong>Theorem 5</strong>: Assumptions <span class="arithmatex">\(H_1\)</span> to <span class="arithmatex">\(H_5\)</span>: <span class="arithmatex">\(\hat\beta \sim N(\beta,\sigma^2(X’X)^{-1})\)</span></li>
 <li>Lower bound of Cramer-Rao of Var-Covar matrices. <span class="arithmatex">\(\hat\beta\)</span> is the unbiased estimator of minimal variance. So, <span class="arithmatex">\(\hat\beta\)</span> is MLE of <span class="arithmatex">\(\beta\)</span></li>
-<li>
-<p><strong>Theorem 6</strong>: Assumptions <span class="arithmatex">\(H_1\)</span> to <span class="arithmatex">\(H_5\)</span></p>
+</ol>
 </li>
-<li>
-<p><span class="arithmatex">\(\dfrac{\hat\beta_j - \beta}{se(\hat\beta_j)} \sim t_{n-k}, j = 1,\dots,k\)</span></p>
-</li>
+<li><strong>Theorem 6</strong>: Assumptions <span class="arithmatex">\(H_1\)</span> to <span class="arithmatex">\(H_5\)</span><ol>
+<li><span class="arithmatex">\(\dfrac{\hat\beta_j - \beta}{se(\hat\beta_j)} \sim t_{n-k}, j = 1,\dots,k\)</span></li>
 <li>Numerator follows a normal distribution</li>
 <li>Denominator follows a <span class="arithmatex">\(\chi^2\)</span> distribution with <span class="arithmatex">\(n-k\)</span> d.f.</li>
 <li>the ratio of the 2 follows a student dist with <span class="arithmatex">\(n-k\)</span> d.f.</li>
+</ol>
+</li>
 <li>Linear Regression Inference: Hypothesis test, p-value</li>
-<li>
-<p>Hypotheses:</p>
-</li>
-<li>
-<p>Correct Model: <span class="arithmatex">\(E(u_i) = 0 \to\)</span> consistent estimator</p>
-</li>
+<li>Hypotheses:<ol>
+<li>Correct Model: <span class="arithmatex">\(E(u_i) = 0 \to\)</span> consistent estimator</li>
 <li>Exogeneity: <span class="arithmatex">\(Corr(x_i,u_i) = 0\)</span> <span class="arithmatex">\(\to\)</span> consistent estimator</li>
 <li>No (perfect) colinearity</li>
-<li>
-<p>homoskedasticity: <span class="arithmatex">\(Var(u_i) = s^2\)</span> <span class="arithmatex">\(\to\)</span> efficiency</p>
-<ol>
-<li>Serial independence (no autocorrelation) <span class="arithmatex">\(Corr(u_i,u_j) = 0 \to\)</span> efficiency<ol>
+<li>homoskedasticity: <span class="arithmatex">\(Var(u_i) = s^2\)</span> <span class="arithmatex">\(\to\)</span> efficiency<ul>
+<li>Serial independence (no autocorrelation) <span class="arithmatex">\(Corr(u_i,u_j) = 0 \to\)</span> efficiency</li>
+</ul>
+</li>
 <li><em>Normality of residuals</em>: <span class="arithmatex">\(u_i \sim N \to\)</span> necessary in small samples</li>
 </ol>
 </li>
-<li>Interpretation of a regression:</li>
+<li>Interpretation of a regression:<ol>
+<li><span class="arithmatex">\(E(y|X_1,X_2) = \beta_0 +\beta_1X_1 +\beta_2X_2\)</span> gives us a min conditional upon the fixed values of the regressors</li>
+<li><span class="arithmatex">\(\hat\beta\)</span> represent the separate, individual marginal effects on the variable <span class="arithmatex">\(y\)</span>, holding all other variables constant.</li>
 </ol>
 </li>
-<li>
-<p><span class="arithmatex">\(E(y|X_1,X_2) = \beta_0 +\beta_1X_1 +\beta_2X_2\)</span> gives us a min conditional upon the fixed values of the regressors</p>
-</li>
-<li><span class="arithmatex">\(\hat\beta\)</span> represent the separate, individual marginal effects on the variable <span class="arithmatex">\(y\)</span>, holding all other variables constant.</li>
 <li>“If you increase the number of years of education by 1, hourly earnings increase by 1.88 USD,” (<a href="zotero://select/library/items/C8CV22V3">Dagnelie, p. 24</a>) (<a href="zotero://open-pdf/library/items/N82CRMDH?page=26">pdf</a>)</li>
 <li>Stargazer of regression output</li>
-<li>
-<p>Explanation of (25)</p>
-</li>
-<li>
-<p>Col 1: SLR</p>
-</li>
+<li>Explanation of (25)<ol>
+<li>Col 1: SLR</li>
 <li>Col 2: MLR (Omitted Variable Bias)</li>
-<li>
-<p>Regression from deviations from the mean: <span class="arithmatex">\(X^\* = X - \bar{X}\)</span></p>
-<ol>
-<li><span class="arithmatex">\(\beta_0^\*=\bar{y}\)</span></li>
-<li><span class="arithmatex">\(\beta_1^\* = \dfrac{\sigma_{yS^\*}}{\sigma^2_{S^\*}}\)</span> but <span class="arithmatex">\(\sigma_{y(S^\* = S-\bar{S})}=\sigma_{yS}\)</span> and so, <span class="arithmatex">\(\beta_1^\* = \dfrac{\sigma_{yS}}{\sigma^2_S}\)</span></li>
-<li>Similarly, <span class="arithmatex">\(\beta_2^\* = \dfrac{\sigma_{yEXP}}{\sigma^2_{EXP}}\)</span></li>
+<li>Regression from deviations from the mean: <span class="arithmatex">\(X^* = X - \bar{X}\)</span><ol>
+<li><span class="arithmatex">\(\beta_0^*=\bar{y}\)</span></li>
+<li><span class="arithmatex">\(\beta_1^* = \dfrac{\sigma_{yS^*}}{\sigma^2_{S^*}}\)</span> but <span class="arithmatex">\(\sigma_{y(S^* = S-\bar{S})}=\sigma_{yS}\)</span> and so, <span class="arithmatex">\(\beta_1^* = \dfrac{\sigma_{yS}}{\sigma^2_S}\)</span></li>
+<li>Similarly, <span class="arithmatex">\(\beta_2^* = \dfrac{\sigma_{yEXP}}{\sigma^2_{EXP}}\)</span></li>
 <li>Standardized coefficients: <span class="arithmatex">\(\breve{\beta_0}=0\)</span>, <span class="arithmatex">\(\breve{\beta_1} = \dfrac{\hat{\sigma_S}}{\hat{\sigma_y}}\beta_1\)</span> and <span class="arithmatex">\(\breve{\beta_2} = \dfrac{\hat{\sigma}EXP}{\hat\sigma_y}\beta_2\)</span> (zero means and unit variances)</li>
-<li>…</li>
-<li>…</li>
+</ol>
+</li>
+</ol>
+</li>
 <li>“Frisch Waugh Lovell” (<a href="zotero://select/library/items/C8CV22V3">Dagnelie, p. 30</a>) (<a href="zotero://open-pdf/library/items/N82CRMDH?page=32">pdf</a>)</li>
-</ol>
-</li>
-</ol>
-</li>
 </ol>
 
 
