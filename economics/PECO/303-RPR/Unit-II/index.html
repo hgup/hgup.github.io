@@ -2655,6 +2655,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Introduction to VAR Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uses-of-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uses of VAR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -7308,6 +7332,19 @@ $$</p>
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eb376c1b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<blockquote>
+<p>It refers to a function of <strong>lags</strong> which shows the effect of a different shock (impulse) on the variables in the equation system, at various leads.</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b0093b35">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7416,6 +7453,18 @@ $$</p>
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a1ae8f4b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Impulse response function can also help interpret the impact of one variable, since the variables are interrelated through multiple time lags, creating complex feedback loops.</p>
+<p>Hence, we we isolate a "pure" shock to one variable. The error terms in a VAR are often correlated. Thus, to see this pure effect we must first <strong>orthogonalize</strong> the shocks. The most common method for this is the <strong>Cholesky decomposition</strong>, which forces a <em>causal order</em> on the variables.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c00d1ff1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7494,6 +7543,18 @@ $$</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="introduction-to-var-analysis">Introduction to VAR Analysis<a class="anchor-link" href="#introduction-to-var-analysis">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=66ee6596">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>While modeling relationships among variables, we encounter situations where the RHS variables are endogenous. These endogenous variables are determined simultaneously by the left hand side variables. Thus, we must formulate a simultaenous model. However, this cannot be done by OLS estimation since in some of these equations, there are variables which are correlated with error terms.</p>
+<p>The VAR model, proposed by Christopher Sims, where all variables are treated as endogenous.</p>
 </div>
 </div>
 </div>
@@ -7583,6 +7644,42 @@ $$</p>
 <blockquote>
 <p>Contrast it with univariate analysis, where $X$ is a scalar, but here it is a <strong>vector</strong>.</p>
 </blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ba98d177">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="specification">Specification<a class="anchor-link" href="#specification">¶</a></h3><ol>
+<li>Variables to be included in the ssystem (theoretical background)</li>
+<li>Inclusion of Deterministic Components (ensure no Omitted variable bias)... include the intercept unless there is reason to believe that all variables have a zero mean.</li>
+<li>Lag length selection<ul>
+<li>Error vector should not exhibit any autocorrelation. $E(u_{it},u_{js})= 0$ for all $t \neq s$</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a22ba587">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="uses-of-var">Uses of VAR<a class="anchor-link" href="#uses-of-var">¶</a></h3><ol>
+<li>Forecasting</li>
+<li>Granger Causality</li>
+<li>Innovation Accounting<ul>
+<li>Impulse Response Function</li>
+</ul>
+</li>
+</ol>
 </div>
 </div>
 </div>
