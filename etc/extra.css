@@ -28,6 +28,7 @@ body {
   /* --md-default-fg-color--light: hsl(var(--md-hue),50%,5%); */
   --md-default-bg-color: hsl(var(--md-hue), 0%, 100%);
 
+  --md-typeset-mark-color: hsl(var(--md-hue), 90%, 85%, 70%);
   --md-accent-fg-color: hsl(var(--md-hue), 95%, 62%);
   --md-accent-fg-color--transparent: #526cfe1a;
   --md-accent-bg-color: #fff;
@@ -61,6 +62,7 @@ body {
   --md-footer-bg-color: hsl(0, 0%, 11%);
   --md-footer-bg-color--dark: hsl(0, 0%, 6%);
 
+  --md-typeset-mark-color: hsl(var(--md-hue), 90%, 65%, 40%);
   --md-accent-fg-color: hsla(var(--md-hue), 65%, 75%, 80%);
   --md-typeset-a-color: hsl(var(--md-hue), 20%, 95%) !important;
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);

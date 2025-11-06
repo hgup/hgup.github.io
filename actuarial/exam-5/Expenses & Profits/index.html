@@ -16,7 +16,7 @@
         <link rel="next" href="../Overall/">
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
@@ -263,7 +263,7 @@
         "name" : "Hursh Gupta",
         "url" : "https://hgup.github.io/",
         "description" : "I am a student at SSSIHL with a bachelors in Mathematics. Currently pursuing a masters in Economics, and writing actuarial exams from the CAS.",
-        "thumbnailUrl" : "https://hgup.github.io/favicon.ico",
+        "thumbnailUrl" : "https://hgup.github.io/assets/logo.svg",
         "alternateName" : "Codisian"
         
     }
@@ -315,8 +315,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -652,8 +651,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     Hursh Gupta
@@ -1600,7 +1598,7 @@
   
   
   <span class="md-ellipsis">
-    Pre
+    Pre (While buying)
     
   </span>
   
@@ -1611,7 +1609,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_2">
             <span class="md-nav__icon md-icon"></span>
-            Pre
+            Pre (While buying)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1728,7 +1726,7 @@
   
   
   <span class="md-ellipsis">
-    All about Data
+    Data Aggregation
     
   </span>
   
@@ -1779,7 +1777,7 @@
   
   
   <span class="md-ellipsis">
-    Post
+    Post (While claiming)
     
   </span>
   
@@ -1790,7 +1788,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Post
+            Post (While claiming)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1973,7 +1971,7 @@
   
   
   <span class="md-ellipsis">
-    One time
+    One-time changes
     
   </span>
   
@@ -2420,7 +2418,7 @@
   
   
   <span class="md-ellipsis">
-    Individual Risk
+    Individual Risk Rating
     
   </span>
   
@@ -7260,51 +7258,70 @@
 </li>
 </ul>
 <h2 id="uw-expenses">UW Expenses<a class="headerlink" href="#uw-expenses" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>FLOW:<br>
-- expenses as % of premium<br>
-- Sum-product <span class="arithmatex">\(\to\)</span> Fixed &amp; Variable parts<br>
-- <br>
-$$<br>
-\text{Premium} = \dfrac{\text{Losses} + \text{LAE} + \text{Fixed Expenses}}{1- V - Q_{t}}<br>
-$$</p>
-</blockquote>
-<p>where,<br>
-- <span class="arithmatex">\(Q_{t}:\)</span> Target Profit as % of premium<br>
-- <span class="arithmatex">\(V:\)</span> Variable Expense rate as % of premium</p>
+<div class="admonition example">
+<p class="admonition-title">Flow</p>
+<ul>
+<li>expenses as % of premium</li>
+<li>Sum-product <span class="arithmatex">\(\to\)</span> Fixed &amp; Variable parts</li>
+</ul>
+</div>
+<div class="arithmatex">\[
+\text{Premium} = \dfrac{\text{Losses} + \text{LAE} + \text{Fixed Expenses}}{1- V - Q_{t}}
+\]</div>
+<p>where,</p>
+<ul>
+<li><span class="arithmatex">\(Q_{t}:\)</span> Target Profit as % of premium</li>
+<li><span class="arithmatex">\(V:\)</span> Variable Expense rate as % of premium</li>
+</ul>
 <blockquote>
 <p>This equation is basically telling us, if you remove the variable expenses and profit provision from premiums, you are left with a provision for <strong>losses, their adjustment expenses &amp; fixed expenses required to keep the business running.</strong></p>
 </blockquote>
 <ul>
 <li>Indicated rate per unit of exposure = Indicated Average Premium. Given by,</li>
 </ul>
-<p>$$<br>
-\text{Indicated Avg. Premium} = \dfrac{\text{Pure Premium incl. LAE} + \text{FE per exp}}{1 - V - Q_{t}}<br>
-$$<br>
-- Fixed expenses are assumed to be the same for every exposure regardless of the the premium size.<br>
-    - e.g. Insurer's home office's rent<br>
-- Variable expenses are assumed to vary directly with the premiums.<br>
-    - e.g. Commissions paid as a % of premium<br>
-- Why combining the expenses and premiums across years together is wrong.<br>
-    - Relating all expenses to earned premiums assumes the book is not changing in size (WP = EP)<br>
-    - If we observe that one of the expense categories (Oth Acq) is growing while the premiums are shrinking <span class="arithmatex">\(\implies\)</span> the volume weighted average may not reflect expected </p>
+<div class="arithmatex">\[
+\text{Indicated Avg. Premium} = \dfrac{\text{Pure Premium incl. LAE} + \text{FE per exp}}{1 - V - Q_{t}}
+\]</div>
+<ul>
+<li>Fixed expenses are assumed to be the same for every exposure regardless of the the premium size.<ul>
+<li>e.g. Insurer's home office's rent</li>
+</ul>
+</li>
+<li>Variable expenses are assumed to vary directly with the premiums.<ul>
+<li>e.g. Commissions paid as a % of premium</li>
+</ul>
+</li>
+<li>Why combining the expenses and premiums across years together is wrong.<ul>
+<li>Relating all expenses to earned premiums assumes the book is not changing in size (WP = EP)</li>
+<li>If we observe that one of the expense categories (Oth Acq) is growing while the premiums are shrinking <span class="arithmatex">\(\implies\)</span> the volume weighted average may not reflect expected </li>
+</ul>
+</li>
+</ul>
 <h3 id="methods-for-pricing">Methods for Pricing<a class="headerlink" href="#methods-for-pricing" title="Permanent link">¶</a></h3>
 <ol>
 <li>All Variable Expense Method</li>
 <li>Premium Based Projection Method</li>
 <li>Exposure/Policy-Based Projection Method</li>
 </ol>
-<p>Details<br>
-- (1), (2) &amp; (3) <span class="arithmatex">\(\to\)</span> <span class="arithmatex">\(\dfrac{\text{Variable Expenses}}{\text{Premiums}}\)</span><br>
-- (1), (2) <span class="arithmatex">\(\to\)</span>  <span class="arithmatex">\(\dfrac{\text{Fixed Expenses}}{\text{Premiums}}\)</span><br>
-- (3) <span class="arithmatex">\(\to\)</span> <span class="arithmatex">\(\dfrac{\text{Fixed Expenses}}{\text{Exposures}}\)</span></p>
-<p>How to choose which expenses, premiums or exposures (E/P/E) to use?<br>
-- Expenses incurred at the start of policy terms <span class="arithmatex">\(\to\)</span> Written E/P/E<br>
-    - Commissions &amp; Brokerages<br>
-    - Other Acquisition<br>
-    - Taxes, Licenses &amp; Fees<br>
-- Expenses incurred throughout the policy terms <span class="arithmatex">\(\to\)</span> Earned E/P/E<br>
-    - General Expenses</p>
+<p>Details</p>
+<ul>
+<li>(1), (2) &amp; (3) <span class="arithmatex">\(\to\)</span> <span class="arithmatex">\(\dfrac{\text{Variable Expenses}}{\text{Premiums}}\)</span></li>
+<li>(1), (2) <span class="arithmatex">\(\to\)</span>  <span class="arithmatex">\(\dfrac{\text{Fixed Expenses}}{\text{Premiums}}\)</span></li>
+<li>(3) <span class="arithmatex">\(\to\)</span> <span class="arithmatex">\(\dfrac{\text{Fixed Expenses}}{\text{Exposures}}\)</span></li>
+</ul>
+<p>How to choose which expenses, premiums or exposures (E/P/E) to use?</p>
+<ul>
+<li>Expenses incurred at the start of policy terms <span class="arithmatex">\(\to\)</span> Written E/P/E<ul>
+<li>Commissions &amp; Brokerages</li>
+<li>Other Acquisition</li>
+<li>Taxes, Licenses &amp; Fees</li>
+</ul>
+</li>
+<li>Expenses incurred throughout the policy terms <span class="arithmatex">\(\to\)</span> Earned E/P/E<ul>
+<li>General Expenses</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <p>This Makes a difference if the company size is changing. Why?</p>
 </blockquote>
@@ -7338,7 +7355,10 @@ $$<br>
 <li>Selected ratios should be best representative of the future expectation.</li>
 </ul>
 <h4 id="all-variable-expense-method">All Variable Expense Method<a class="headerlink" href="#all-variable-expense-method" title="Permanent link">¶</a></h4>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Method: No fixed expenses, so take appropriate ratios (Expense / Premiums); sum them to get the Variable Expense Ratio; Use them in the FII to get the indicated rates.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Method:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>No fixed expenses, so take appropriate ratios (Expense / Premiums);
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sum them to get the Variable Expense Ratio;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Use them in the FII to get the indicated rates.
 </span></code></pre></div>
 <ul>
 <li><strong>Inaccurate</strong> if some expenses are <em>truly fixed</em>.</li>
@@ -7351,38 +7371,54 @@ $$<br>
 </ul>
 </li>
 </ul>
-<p>This distortion can be fixed using:<br>
-- premium discount<br>
-- expense constant, both of which would be discussed in <a href="../Section%20D/">Special Classification</a></p>
-<p>Finally,<br>
-- <strong>No Expense trend</strong> needs to be applied to historical expenses<br>
-    - since all expenses are fully based on premium<br>
-    - They will adjust automatically, along with the premium changes.</p>
+<p>This distortion can be fixed using:</p>
+<ul>
+<li>premium discount</li>
+<li>expense constant, both of which would be discussed in <a href="../Section%20D/">Special Classification</a></li>
+</ul>
+<p>Finally,</p>
+<ul>
+<li><strong>No Expense trend</strong> needs to be applied to historical expenses<ul>
+<li>since all expenses are fully based on premium</li>
+<li>They will adjust automatically, along with the premium changes.</li>
+</ul>
+</li>
+</ul>
 <h4 id="premium-based-projection-method">Premium-Based Projection Method<a class="headerlink" href="#premium-based-projection-method" title="Permanent link">¶</a></h4>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Apply the variable expenses method to find the variable expenses and the fixed expenses, with an additional piece of information: THE ASSUMED FIXED PERCENTAGE,
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>This biforcates the variable expenses and the fixed expenses, though the process of calculation is the same for both.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Method:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Apply the variable expenses method to find the variable expenses and the fixed expenses,
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>with an additional piece of information: THE ASSUMED FIXED PERCENTAGE,
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Then use the on-level premium x fixed expense ratio = Fixed expense.
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>This biforcates the variable expenses and the fixed expenses,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>though the process of calculation is the same for both.
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Then use the on-level premium x fixed expense ratio = Fixed expense.
 </span></code></pre></div>
 <ul>
 <li>Follow the same procedure as <a href="#all-variable-expense-method">#All Variable Expense Method</a></li>
 <li>With an additional piece of info <strong>Assumed Fixed %</strong>.</li>
 </ul>
-<p>So, you derive both:<br>
-- Variable Expense Ratio<br>
-- Fixed Expense Ratio</p>
+<p>So, you derive both:</p>
+<ul>
+<li>Variable Expense Ratio</li>
+<li>Fixed Expense Ratio</li>
+</ul>
 <blockquote>
 <p><span class="arithmatex">\(\text{VE Ratio}+ \text{FE Ratio} = \text{All Variable Expense Ratio}\)</span></p>
 </blockquote>
-<p>We (implicitly) assume,<br>
-- Fixed expenses are trending at the same rate as the premiums.</p>
-<p>E.g.<br>
-- Projected avg premium at present rates = $500<br>
-- Fixed Expense ratio = 12.5%<br>
-- Fixed Expense <em>per exposure</em> = <span class="arithmatex">\(\$500 \times 12.5 \% = \$62.5\)</span> <br>
-- <span class="arithmatex">\(Q_{T}\)</span> = 5%<br>
-- Projected <strong>Pure</strong> premium (incl. LAE) = $250</p>
+<p>We (implicitly) assume,</p>
+<div class="admonition warning">
+<p class="admonition-title">We (implicitly) assume</p>
+<p>Fixed expenses are trending at the same rate as the premiums.</p>
+</div>
+<p>E.g.</p>
+<ul>
+<li>Projected avg premium at present rates = $500</li>
+<li>Fixed Expense ratio = 12.5%</li>
+<li>Fixed Expense <em>per exposure</em> = <span class="arithmatex">\(\$500 \times 12.5 \% = \$62.5\)</span> </li>
+<li><span class="arithmatex">\(Q_{T}\)</span> = 5%</li>
+<li>Projected <strong>Pure</strong> premium (incl. LAE) = $250</li>
+</ul>
 <p>Then, the indicated avg premium =</p>
 <div class="arithmatex">\[
 \text{Ind. Avg Premium} = \dfrac{250+62.5}{1 - 12.5\% - 5\%} = 429.26
@@ -7476,7 +7512,7 @@ $$<br>
 </li>
 </ul>
 <h3 id="some-expenses">Some expenses<a class="headerlink" href="#some-expenses" title="Permanent link">¶</a></h3>
-<p>#### Risk control services</p>
+<p>RISK CONTROL SERVICES</p>
 <ul>
 <li>Before finalizing the rates the underwriter makes use of additional information to ensure he is not excessively charging.</li>
 </ul>

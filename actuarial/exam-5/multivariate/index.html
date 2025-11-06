@@ -12,7 +12,7 @@
       
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
@@ -259,7 +259,7 @@
         "name" : "Hursh Gupta",
         "url" : "https://hgup.github.io/",
         "description" : "I am a student at SSSIHL with a bachelors in Mathematics. Currently pursuing a masters in Economics, and writing actuarial exams from the CAS.",
-        "thumbnailUrl" : "https://hgup.github.io/favicon.ico",
+        "thumbnailUrl" : "https://hgup.github.io/assets/logo.svg",
         "alternateName" : "Codisian"
         
     }
@@ -311,8 +311,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -646,8 +645,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     Hursh Gupta
@@ -1584,7 +1582,7 @@
   
   
   <span class="md-ellipsis">
-    Pre
+    Pre (While buying)
     
   </span>
   
@@ -1595,7 +1593,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_2">
             <span class="md-nav__icon md-icon"></span>
-            Pre
+            Pre (While buying)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1712,7 +1710,7 @@
   
   
   <span class="md-ellipsis">
-    All about Data
+    Data Aggregation
     
   </span>
   
@@ -1763,7 +1761,7 @@
   
   
   <span class="md-ellipsis">
-    Post
+    Post (While claiming)
     
   </span>
   
@@ -1774,7 +1772,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Post
+            Post (While claiming)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1955,7 +1953,7 @@
   
   
   <span class="md-ellipsis">
-    One time
+    One-time changes
     
   </span>
   
@@ -2238,7 +2236,7 @@
   
   
   <span class="md-ellipsis">
-    Individual Risk
+    Individual Risk Rating
     
   </span>
   
@@ -7104,11 +7102,13 @@
 </li>
 </ul>
 <h3 id="sequential-analysis">Sequential Analysis<a class="headerlink" href="#sequential-analysis" title="Permanent link">¶</a></h3>
-<p><strong>Method</strong>:<br>
-- Perform standard <a href="../Univariate%20Classification/">univariate approach</a> to obtain relativities for a single variable<br>
-- Perform <a href="../Univariate%20Classification/#adjusted-pure-premium-approach">Adjusted Pure Premium</a> approach to obtain indicated relativities for the second variable, <em>based on</em> adjusting exposures as a result of the prior variable's selected relativities<br>
-- Repeat the Adj PP method for the remaining variables, having adjusted for all the prior variables at each step</p>
-<p><strong>Pros &amp; Cons</strong></p>
+<h5 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h5>
+<ul>
+<li>Perform standard <a href="../Univariate%20Classification/">univariate approach</a> to obtain relativities for a single variable</li>
+<li>Perform <a href="../Univariate%20Classification/#adjusted-pure-premium-approach">Adjusted Pure Premium</a> approach to obtain indicated relativities for the second variable, <em>based on</em> adjusting exposures as a result of the prior variable's selected relativities</li>
+<li>Repeat the Adj PP method for the remaining variables, having adjusted for all the prior variables at each step</li>
+</ul>
+<h5 id="pros-cons">Pros &amp; Cons<a class="headerlink" href="#pros-cons" title="Permanent link">¶</a></h5>
 <ul>
 <li>Pros<ul>
 <li>Not iterative (one pass)</li>
@@ -7123,15 +7123,19 @@
 <h2 id="glms"><abbr title="Generalized Linear Models">GLMs</abbr><a class="headerlink" href="#glms" title="Permanent link">¶</a></h2>
 <p>Linear models: <span class="arithmatex">\(Y_{i} = \mu_{i}+\epsilon_{i} = (\beta_{0}+\beta_{1}X_{1,i} +\beta_{3}X_{3,i}+\dots+\beta_{p}X_{p,i}+\epsilon_{i}\)</span><br>
 <abbr title="Generalized Linear Model">GLM</abbr>: <span class="arithmatex">\(Y_{i} = g(\mu_{i}) = \beta_{0}+\beta_{1}X_{1,i} +\beta_{3}X_{3,i}+\dots+\beta_{p}X_{p,i}\)</span></p>
-<p>where<br>
-- <span class="arithmatex">\(Y:\)</span> Pure Premium we are trying to predict<br>
-- <span class="arithmatex">\(\mu:\)</span> predicted mean<br>
-- <span class="arithmatex">\(X:\)</span> Rating Variables (called predictors)<br>
-- <span class="arithmatex">\(\beta:\)</span> Parameters we try to estimate<br>
-- <span class="arithmatex">\(g(\mu):\)</span> Link function<br>
-    - non-additive relationship with response variable<br>
-    - e.g., <span class="arithmatex">\(\ln\)</span>-link, predictors are multiplicative, good for multiplicative rating plans</p>
-<h3 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h3>
+<p>where</p>
+<ul>
+<li><span class="arithmatex">\(Y:\)</span> Pure Premium we are trying to predict</li>
+<li><span class="arithmatex">\(\mu:\)</span> predicted mean</li>
+<li><span class="arithmatex">\(X:\)</span> Rating Variables (called predictors)</li>
+<li><span class="arithmatex">\(\beta:\)</span> Parameters we try to estimate</li>
+<li><span class="arithmatex">\(g(\mu):\)</span> Link function<ul>
+<li>non-additive relationship with response variable</li>
+<li>e.g., <span class="arithmatex">\(\ln\)</span>-link, predictors are multiplicative, good for multiplicative rating plans</li>
+</ul>
+</li>
+</ul>
+<h5 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h5>
 <ul>
 <li>Compile dataset with enough data for modelling</li>
 <li>Selecting a <strong>link function</strong></li>
@@ -7159,7 +7163,7 @@
 </li>
 </ul>
 <h3 id="interpret-a-graph-of-glm-outputs-for-a-rating-variable">Interpret a graph of <abbr title="Generalized Linear Model">GLM</abbr> outputs for a rating variable.<a class="headerlink" href="#interpret-a-graph-of-glm-outputs-for-a-rating-variable" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../docs/assets/images/2025/10/Multivariate-1759308987489.webp" data-desc-position="bottom"><img alt="" src="../../docs/assets/images/2025/10/Multivariate-1759308987489.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Multivariate-1759310370589.webp" data-desc-position="bottom"><img alt="../../assets/images/2025/10/Multivariate-1759310370589.webp" src="../../../../assets/images/2025/10/Multivariate-1759310370589.webp"></a></p>
 <ul>
 <li><strong>Meta</strong><ul>
 <li>Exposure distribution = Green bars: 1000 deductible has most policies (Right axis labels)</li>
@@ -7178,16 +7182,16 @@
 </ul>
 <h3 id="glm-diagnostics"><abbr title="Generalized Linear Model">GLM</abbr> Diagnostics<a class="headerlink" href="#glm-diagnostics" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Standard Errors</strong>: How wide is the confidence interval around the <abbr title="Generalized Linear Model">GLM</abbr> estimate. Shows whether each level of the variable or if the ==variable itself is statistically significant==</li>
-<li><strong>Deviance Tests</strong>: <span class="arithmatex">\(\chi^2\)</span> statistic, <span class="arithmatex">\(F\)</span>- statistic, AIC or BIC to choose between ==two models with different variables==</li>
-<li><strong>Time Consistency</strong>: run the model on <em>separate consecutive periods of data</em>.. check if estimated ==parameters are consistent over time==.</li>
+<li><strong>Standard Errors</strong>: How wide is the confidence interval around the <abbr title="Generalized Linear Model">GLM</abbr> estimate. Shows whether each level of the variable or if the <mark>variable itself is statistically significant</mark></li>
+<li><strong>Deviance Tests</strong>: <span class="arithmatex">\(\chi^2\)</span> statistic, <span class="arithmatex">\(F\)</span>- statistic, AIC or BIC to choose between <mark>two models with different variables</mark></li>
+<li><strong>Time Consistency</strong>: run the model on <em>separate consecutive periods of data</em>.. check if estimated <mark>parameters are consistent over time</mark>.</li>
 <li><strong>Validation Test</strong>:<ul>
 <li>build the model on one subset of historical data</li>
 <li>compare the model's predictions with the actual results on a second subset of the historical data (holdout set)</li>
-<li>to check if the model is ==underfitting or overfitting the original set==.</li>
+<li>to check if the model is <mark>underfitting or overfitting the original set</mark>.</li>
 </ul>
 </li>
-<li>Judgement decision of when results seem reasonable. ==Deal with counterintuitive results==.</li>
+<li>Judgement decision of when results seem reasonable. <mark>Deal with counterintuitive results</mark>.</li>
 </ul>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h4>
 <blockquote>
@@ -7197,25 +7201,29 @@
 <li>
 <p><strong>Confidence intervals</strong></p>
 <ul>
-<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../docs/assets/images/2025/10/Multivariate-1759310370589.webp" data-desc-position="bottom"><img alt="" src="../../docs/assets/images/2025/10/Multivariate-1759310370589.webp"></a></li>
+<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Multivariate-1759310370589.webp" data-desc-position="bottom"><img alt="../../assets/images/2025/10/Multivariate-1759310370589.webp" src="../../../../assets/images/2025/10/Multivariate-1759310370589.webp"></a></li>
 <li>More data, smaller the confidence interval</li>
 <li>No significant difference between b/w impact of 5000 and 10000 deductible since <strong>CI largely overlap</strong>.</li>
 </ul>
 </li>
 <li>
-<p><strong>Deviance Tests</strong><br>
-    &gt; The <abbr title="Generalized Linear Model">GLM</abbr> is fit <strong>with</strong> (complex) and <strong>without</strong> (simple) the variable in question. <span class="arithmatex">\(\chi^2\)</span> percentage is calculated.</p>
+<p><strong>Deviance Tests</strong></p>
+<blockquote>
+<p>The <abbr title="Generalized Linear Model">GLM</abbr> is fit <strong>with</strong> (complex) and <strong>without</strong> (simple) the variable in question. <span class="arithmatex">\(\chi^2\)</span> percentage is calculated.</p>
+</blockquote>
 <ul>
 <li>Smaller the <span class="arithmatex">\(\chi^2-\)</span>\% more statistically significant the variable is.</li>
 <li>Choose the complex model if <span class="arithmatex">\(\chi^2\)</span> is below 5%.</li>
 </ul>
 </li>
 <li>
-<p><strong>Time Consistency</strong><br>
-    &gt; Fit the model separately using different years from training data, compare the patterns (should be consistent across years)</p>
+<p><strong>Time Consistency</strong></p>
 <ul>
-<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../docs/assets/images/2025/10/Multivariate-1759310517358.webp" data-desc-position="bottom"><img alt="" src="../../docs/assets/images/2025/10/Multivariate-1759310517358.webp"></a></li>
-<li>Values of the estimated (predicted) relativities are largely close. Consistent over time.</li>
+<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Multivariate-1759310517358.webp" data-desc-position="bottom"><img alt="../../assets/images/2025/10/Multivariate-1759310517358.webp" src="../../../../assets/images/2025/10/Multivariate-1759310517358.webp"></a></li>
+<li>Values of the estimated (predicted) relativities are largely close. Consistent over time.<blockquote>
+<p>Fit the model separately using different years from training data, compare the patterns (should be consistent across years)</p>
+</blockquote>
+</li>
 </ul>
 </li>
 <li>
@@ -7226,7 +7234,7 @@
 <ul>
 <li>Overfit: pick up random noise</li>
 <li>Underfit: not have picked enough signal (less predictive power)</li>
-<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../docs/assets/images/2025/10/Multivariate-1759310722415.webp" data-desc-position="bottom"><img alt="" src="../../docs/assets/images/2025/10/Multivariate-1759310722415.webp"></a></li>
+<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Multivariate-1759310722415.webp" data-desc-position="bottom"><img alt="../../assets/images/2025/10/Multivariate-1759310722415.webp" src="../../../../assets/images/2025/10/Multivariate-1759310722415.webp"></a></li>
 </ul>
 </li>
 <li>

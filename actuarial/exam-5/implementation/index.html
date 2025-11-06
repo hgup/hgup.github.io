@@ -12,7 +12,7 @@
       
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
@@ -259,7 +259,7 @@
         "name" : "Hursh Gupta",
         "url" : "https://hgup.github.io/",
         "description" : "I am a student at SSSIHL with a bachelors in Mathematics. Currently pursuing a masters in Economics, and writing actuarial exams from the CAS.",
-        "thumbnailUrl" : "https://hgup.github.io/favicon.ico",
+        "thumbnailUrl" : "https://hgup.github.io/assets/logo.svg",
         "alternateName" : "Codisian"
         
     }
@@ -311,8 +311,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -646,8 +645,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     Hursh Gupta
@@ -1584,7 +1582,7 @@
   
   
   <span class="md-ellipsis">
-    Pre
+    Pre (While buying)
     
   </span>
   
@@ -1595,7 +1593,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_2">
             <span class="md-nav__icon md-icon"></span>
-            Pre
+            Pre (While buying)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1712,7 +1710,7 @@
   
   
   <span class="md-ellipsis">
-    All about Data
+    Data Aggregation
     
   </span>
   
@@ -1763,7 +1761,7 @@
   
   
   <span class="md-ellipsis">
-    Post
+    Post (While claiming)
     
   </span>
   
@@ -1774,7 +1772,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Post
+            Post (While claiming)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1955,7 +1953,7 @@
   
   
   <span class="md-ellipsis">
-    One time
+    One-time changes
     
   </span>
   
@@ -2238,7 +2236,7 @@
   
   
   <span class="md-ellipsis">
-    Individual Risk
+    Individual Risk Rating
     
   </span>
   
@@ -7063,6 +7061,7 @@
 </li>
 <li><strong>Fixed Expense Fee</strong> per exposure = <span class="arithmatex">\(\dfrac{\text{FE per exopsure}}{1 - V- Q}\)</span></li>
 <li><strong>Fixed Expense Fee</strong> per policy = <span class="arithmatex">\(\text{FE fee} \times \dfrac{\text{Exposures}}{\text{Policy}}\)</span></li>
+<li></li>
 </ul>
 <h3 id="off-balance-factors">Off-balance factors<a class="headerlink" href="#off-balance-factors" title="Permanent link">¶</a></h3>
 <ul>
@@ -7177,30 +7176,42 @@
 </li>
 </ul>
 <h2 id="extension-of-exposures">Extension of Exposures<a class="headerlink" href="#extension-of-exposures" title="Permanent link">¶</a></h2>
-<p>$$<br>
-\text{Prop. base rate} = \text{SBR} \times \dfrac{\text{Prop. Avg Prem} - \text{Prop. Add Fee}}{P_{Base} - \text{Prop. Add Fee}}<br>
-$$<br>
-Given,<br>
-- Proposed Rating Factors<br>
-- Proposed Additive Fee<br>
-- Proposed Avg Premium</p>
-<p>Assume,<br>
-- SBR = Seed Base rate (<span class="arithmatex">\(\neq 0\)</span>)</p>
-<p>Calculation,<br>
-- <span class="arithmatex">\(P_{Base} =\)</span> Avg Premium with Seed base \&amp; new rates</p>
+<div class="arithmatex">\[
+\text{Prop. base rate} = \text{SBR} \times \dfrac{\text{Prop. Avg Prem} - \text{Prop. Add Fee}}{P_{Base} - \text{Prop. Add Fee}}
+\]</div>
+<p>Given,</p>
+<ul>
+<li>Proposed Rating Factors</li>
+<li>Proposed Additive Fee</li>
+<li>Proposed Avg Premium</li>
+</ul>
+<p>Assume,</p>
+<ul>
+<li>SBR = Seed Base rate (<span class="arithmatex">\(\neq 0\)</span>)</li>
+</ul>
+<p>Calculation,</p>
+<ul>
+<li><span class="arithmatex">\(P_{Base} =\)</span> Avg Premium with Seed base \&amp; new rates</li>
+</ul>
 <h2 id="approximated-avg-rate-differential">Approximated Avg. rate Differential<a class="headerlink" href="#approximated-avg-rate-differential" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 \text{Prop. Base Rate} = \dfrac{\text{Prop Avg Prem}- \text{Prop Add Fee}}{\text{Prop Avg Rating Factor}}
 \]</div>
-<p>Given,<br>
-- Proposed Average Premium<br>
-- Proposed Rating Factors</p>
-<p>Approximation (Proposed Avg Rating Factor)<br>
-- <strong>Actual</strong>: all combinations of rating variables multiplied together with detailed <em>exposures as weights</em><br>
-- <strong>Approximation:</strong> <span class="arithmatex">\(\prod_{\text{Rating Variables}} \text{Prop. Avg Rating Factor}\)</span></p>
-<p>A better approximation,<br>
-- Instead of exposures as weights<br>
-- Use Variable Premium at base</p>
+<p>Given,</p>
+<ul>
+<li>Proposed Average Premium</li>
+<li>Proposed Rating Factors</li>
+</ul>
+<p>Approximation (Proposed Avg Rating Factor)</p>
+<ul>
+<li><strong>Actual</strong>: all combinations of rating variables multiplied together with detailed <em>exposures as weights</em></li>
+<li><strong>Approximation:</strong> <span class="arithmatex">\(\prod_{\text{Rating Variables}} \text{Prop. Avg Rating Factor}\)</span></li>
+</ul>
+<p>A better approximation,</p>
+<ul>
+<li>Instead of exposures as weights</li>
+<li>Use Variable Premium at base</li>
+</ul>
 <h2 id="approximated-change-in-avg-rate-differential">Approximated <em>Change</em> in Avg. rate Differential<a class="headerlink" href="#approximated-change-in-avg-rate-differential" title="Permanent link">¶</a></h2>
 <h2 id="notes-on-obf">Notes on OBF<a class="headerlink" href="#notes-on-obf" title="Permanent link">¶</a></h2>
 <p>Finally, the Off-balance Factor means just this</p>

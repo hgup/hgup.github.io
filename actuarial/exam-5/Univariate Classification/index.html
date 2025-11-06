@@ -16,7 +16,7 @@
         <link rel="next" href="../Special%20Classification/">
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
@@ -263,7 +263,7 @@
         "name" : "Hursh Gupta",
         "url" : "https://hgup.github.io/",
         "description" : "I am a student at SSSIHL with a bachelors in Mathematics. Currently pursuing a masters in Economics, and writing actuarial exams from the CAS.",
-        "thumbnailUrl" : "https://hgup.github.io/favicon.ico",
+        "thumbnailUrl" : "https://hgup.github.io/assets/logo.svg",
         "alternateName" : "Codisian"
         
     }
@@ -315,8 +315,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -652,8 +651,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     Hursh Gupta
@@ -1600,7 +1598,7 @@
   
   
   <span class="md-ellipsis">
-    Pre
+    Pre (While buying)
     
   </span>
   
@@ -1611,7 +1609,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_2">
             <span class="md-nav__icon md-icon"></span>
-            Pre
+            Pre (While buying)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1728,7 +1726,7 @@
   
   
   <span class="md-ellipsis">
-    All about Data
+    Data Aggregation
     
   </span>
   
@@ -1779,7 +1777,7 @@
   
   
   <span class="md-ellipsis">
-    Post
+    Post (While claiming)
     
   </span>
   
@@ -1790,7 +1788,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Post
+            Post (While claiming)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1971,7 +1969,7 @@
   
   
   <span class="md-ellipsis">
-    One time
+    One-time changes
     
   </span>
   
@@ -2477,7 +2475,7 @@
   
   
   <span class="md-ellipsis">
-    Individual Risk
+    Individual Risk Rating
     
   </span>
   
@@ -7340,8 +7338,10 @@
 <blockquote>
 <p>Fixed expenses are dealt with separately in the rating algo. So we ignore it here.</p>
 </blockquote>
-<p>Indicated Class 1 Relativity = <span class="arithmatex">\(\dfrac{PP_{1}}{PP_{B}}\)</span><br>
-- This is why and trends or development factors cancel out.</p>
+<p>Indicated Class 1 Relativity = <span class="arithmatex">\(\dfrac{PP_{1}}{PP_{B}}\)</span></p>
+<ul>
+<li>This is why and trends or development factors cancel out.</li>
+</ul>
 <h2 id="pure-premium-approach">Pure Premium Approach<a class="headerlink" href="#pure-premium-approach" title="Permanent link">¶</a></h2>
 <ul>
 <li>Calculate Pure Premium for each level of RL</li>
@@ -7435,17 +7435,27 @@ For example, when reviewing rating variable A, using adjusted exposures corrects
 </div>
 <hr>
 <h2 id="credibility-consideration">Credibility consideration<a class="headerlink" href="#credibility-consideration" title="Permanent link">¶</a></h2>
-<p>Simple general rules that will help in credibility weighting. Always have the "total" as the denominator.<br>
-- Rebase the indicated rates to total<br>
-    - <a href="#loss-ratio-approach">#Loss Ratio Approach</a>: Since we divide LR's with the total LR, we don't have to do anything else <span class="arithmatex">\(\to\)</span> change factor<br>
-    - <a href="#adjusted-pure-premium-approach">(Adjusted)</a> <a href="#pure-premium-approach">#Pure Premium Approach</a>: Instead of dividing by the base pure premium, divide by the total pure premium<br>
-- Rebase the current rates to total<br>
-    - <a href="#loss-ratio-approach">#Loss Ratio Approach</a>:<br>
-        - If 'no-change' is the complement, use 1 as the complement to the change factors<br>
-        - If some other (e.g. competitor) current rates, <a href="#normalization">normalize</a> them<br>
-    - Pure premium approach<br>
-        - Divide pure premium by the total Pure premium<br>
-- Credibility weight</p>
+<p>Simple general rules that will help in credibility weighting. Always have the "total" as the denominator.</p>
+<ul>
+<li>Rebase the indicated rates to total<ul>
+<li><a href="#loss-ratio-approach">#Loss Ratio Approach</a>: Since we divide LR's with the total LR, we don't have to do anything else <span class="arithmatex">\(\to\)</span> change factor</li>
+<li><a href="#adjusted-pure-premium-approach">(Adjusted)</a> <a href="#pure-premium-approach">#Pure Premium Approach</a>: Instead of dividing by the base pure premium, divide by the total pure premium</li>
+</ul>
+</li>
+<li>Rebase the current rates to total<ul>
+<li><a href="#loss-ratio-approach">#Loss Ratio Approach</a>:<ul>
+<li>If 'no-change' is the complement, use 1 as the complement to the change factors</li>
+<li>If some other (e.g. competitor) current rates, <a href="#normalization">normalize</a> them</li>
+</ul>
+</li>
+<li>Pure premium approach<ul>
+<li>Divide pure premium by the total Pure premium</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Credibility weight</li>
+</ul>
 <h3 id="normalization">Normalization<a class="headerlink" href="#normalization" title="Permanent link">¶</a></h3>
 <ul>
 <li>Find the WACR (Weight the current relativities with the (adjusted) exposures)</li>

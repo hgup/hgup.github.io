@@ -16,7 +16,7 @@
         <link rel="next" href="../Individual%20Risk/">
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
@@ -263,7 +263,7 @@
         "name" : "Hursh Gupta",
         "url" : "https://hgup.github.io/",
         "description" : "I am a student at SSSIHL with a bachelors in Mathematics. Currently pursuing a masters in Economics, and writing actuarial exams from the CAS.",
-        "thumbnailUrl" : "https://hgup.github.io/favicon.ico",
+        "thumbnailUrl" : "https://hgup.github.io/assets/logo.svg",
         "alternateName" : "Codisian"
         
     }
@@ -315,8 +315,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -652,8 +651,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"></path></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     Hursh Gupta
@@ -1600,7 +1598,7 @@
   
   
   <span class="md-ellipsis">
-    Pre
+    Pre (While buying)
     
   </span>
   
@@ -1611,7 +1609,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_2">
             <span class="md-nav__icon md-icon"></span>
-            Pre
+            Pre (While buying)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1728,7 +1726,7 @@
   
   
   <span class="md-ellipsis">
-    All about Data
+    Data Aggregation
     
   </span>
   
@@ -1779,7 +1777,7 @@
   
   
   <span class="md-ellipsis">
-    Post
+    Post (While claiming)
     
   </span>
   
@@ -1790,7 +1788,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Post
+            Post (While claiming)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1971,7 +1969,7 @@
   
   
   <span class="md-ellipsis">
-    One time
+    One-time changes
     
   </span>
   
@@ -2423,6 +2421,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#itv-initiatives" class="md-nav__link">
     <span class="md-ellipsis">
       ITV Initiatives
@@ -2474,7 +2481,7 @@
   
   
   <span class="md-ellipsis">
-    Individual Risk
+    Individual Risk Rating
     
   </span>
   
@@ -7384,16 +7391,22 @@
 <ul>
 <li>When loss distribution is given, and you are trying </li>
 </ul>
-<p>$$<br>
-\text{Ind. Rel} = \text{Excess Ratio(D)} = 1- LER(D)<br>
-$$<br>
-- The average amount of value that the <br>
-$$<br>
-LER(D) = \dfrac{\text{L\&amp;LAE below D}}{\text{Ground-Up L\&amp;LAE}}<br>
-$$<br>
-- Okay, what will you do if you are given loss distribution? Well, it is possible to calculate the LER purely from the loss distribution. By looking at frequency as <strong>counts</strong> of losses, which means you can calculate total losses on the numerator and denominator.</p>
+<div class="arithmatex">\[
+\text{Ind. Rel} = \text{Excess Ratio(D)} = 1- LER(D)
+\]</div>
 <ul>
-<li>Different base… learn to read the table. The table shows three different (rows) types of coverages.</li>
+<li>The average amount of value that the </li>
+</ul>
+<div class="arithmatex">\[
+LER(D) = \dfrac{\text{L\&amp;LAE below D}}{\text{Ground-Up L\&amp;LAE}}
+\]</div>
+<ul>
+<li>
+<p>Okay, what will you do if you are given loss distribution? Well, it is possible to calculate the LER purely from the loss distribution. By looking at frequency as <strong>counts</strong> of losses, which means you can calculate total losses on the numerator and denominator.</p>
+</li>
+<li>
+<p>Different base… learn to read the table. The table shows three different (rows) types of coverages.</p>
+</li>
 </ul>
 <table>
 <thead>
@@ -7430,9 +7443,11 @@ $$<br>
 <li>2003 Exam 5 - Q38</li>
 </ul>
 <h3 id="true-ground-up-unknown">True Ground-up unknown<a class="headerlink" href="#true-ground-up-unknown" title="Permanent link">¶</a></h3>
-<p>Notation:<br>
-- <span class="arithmatex">\(L_{D}:\)</span> Losses when deductible is <span class="arithmatex">\(D\)</span>,<br>
-- <span class="arithmatex">\(L_{B}:\)</span> Losses when base deductible is <span class="arithmatex">\(B\)</span> (where <span class="arithmatex">\(B\)</span> can be <span class="arithmatex">\(=0\)</span>, meaning ground-up losses)</p>
+<p>Notation:</p>
+<ul>
+<li><span class="arithmatex">\(L_{D}:\)</span> Losses when deductible is <span class="arithmatex">\(D\)</span>,</li>
+<li><span class="arithmatex">\(L_{B}:\)</span> Losses when base deductible is <span class="arithmatex">\(B\)</span> (where <span class="arithmatex">\(B\)</span> can be <span class="arithmatex">\(=0\)</span>, meaning ground-up losses)</li>
+</ul>
 <div class="arithmatex">\[
 LER(D,\text{with base }B) = \dfrac{\sum(L_{D} - L_{B})}{\sum L_{B}}
 \]</div>
@@ -7459,19 +7474,21 @@ LER(D,\text{with base }B) = \dfrac{\sum(L_{D} - L_{B})}{\sum L_{B}}
 </li>
 </ul>
 <h3 id="loss-constant">Loss Constant<a class="headerlink" href="#loss-constant" title="Permanent link">¶</a></h3>
-<p>Reasons why smaller risks generally show higher Loss ratios<br>
-- Less sophisticated safety training programs <span class="arithmatex">\(\implies\)</span> Higher frequency/severity<br>
-- Not impacted by/ Don't qualify for <em>experience rating</em>, don't have an incentive to mitigate losses</p>
+<p>Reasons why smaller risks generally show higher Loss ratios</p>
+<ul>
+<li>Less sophisticated safety training programs <span class="arithmatex">\(\implies\)</span> Higher frequency/severity</li>
+<li>Not impacted by/ Don't qualify for <em>experience rating</em>, don't have an incentive to mitigate losses</li>
+</ul>
 <blockquote>
 <p>Equate the loss ratios of the small risks to that of the large risks</p>
 </blockquote>
 <div class="arithmatex">\[
 \dfrac{\text{Small Risk Losses}}{\text{Small Risk Premium} + \#\text{Small Policies} \times \text{LC}} = \text{Large Risk Loss Ratio}
 \]</div>
-<p>e.g.<br>
-$$<br>
-\dfrac{63000}{75000 + C} = 72\% \implies C = 125<br>
-$$</p>
+<p>e.g.</p>
+<div class="arithmatex">\[
+\dfrac{63000}{75000 + C} = 72\% \implies C = 125
+\]</div>
 <hr>
 <h2 id="insurance-to-value">Insurance to Value<a class="headerlink" href="#insurance-to-value" title="Permanent link">¶</a></h2>
 <div class="admonition note">
@@ -7514,12 +7531,9 @@ ITV = \dfrac{\text{Coverage Amt. Selected}}{\text{Replacement Cost}} = \dfrac{\t
 <td>Pure Prem rate per 100</td>
 <td><code>=(C19*B7)/(B6*0.5/100)</code></td>
 </tr>
-<tr>
-<td>### Example</td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
 <p><span class="arithmatex">\(\text{Claim Sev.} \sim U(0,\text{Replacement Cost})\)</span></p>
 <blockquote>
 <p><strong>The real crux</strong>: Compare H2 (home 2) and H3.<br>
@@ -7533,10 +7547,14 @@ ITV = \dfrac{\text{Coverage Amt. Selected}}{\text{Replacement Cost}} = \dfrac{\t
 <p>On paper, we would only know that the coverage amount is 200k. But the real difference comes from the fact that the claim severity distribution is based on the replacement costs which are different for both the houses. As such, <strong>we should account for the fact that the houses have not been covered to the full value.</strong></p>
 </blockquote>
 <p>In general, the <em>indicated rate per $1000 of coverage</em> will be higher for underinsured homes <strong>as long as partial losses are possible</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<p>Solving:<br>
-- Instead of severities in dollar amounts, we may be given the \% loss and thus we can just <code>sumproduct</code> to get the Avg \% losses, and divide them by the <span class="arithmatex">\(\dfrac{ITV}{\text{\%1,000}}\)</span> to get the PP rates.</p>
-<p>Theoretical answers:<br>
-- Rate for an underinsured house would be higher since there is a higher chance for total losses, the replacement cost being higher.</p>
+<p>Solving:</p>
+<ul>
+<li>Instead of severities in dollar amounts, we may be given the \% loss and thus we can just <code>sumproduct</code> to get the Avg \% losses, and divide them by the <span class="arithmatex">\(\dfrac{ITV}{\text{\%1,000}}\)</span> to get the PP rates.</li>
+</ul>
+<p>Theoretical answers:</p>
+<ul>
+<li>Rate for an underinsured house would be higher since there is a higher chance for total losses, the replacement cost being higher.</li>
+</ul>
 <h3 id="itv-initiatives">ITV Initiatives<a class="headerlink" href="#itv-initiatives" title="Permanent link">¶</a></h3>
 <ul>
 <li>Guaranteed Replacement Costs</li>
@@ -7608,13 +7626,13 @@ I = \min(a \times \text{Loss Amt}, \text{Coverage Amt})
         
         
           
-          <a href="../Individual%20Risk/" class="md-footer__link md-footer__link--next" aria-label="Next: Individual Risk">
+          <a href="../Individual%20Risk/" class="md-footer__link md-footer__link--next" aria-label="Next: Individual Risk Rating">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Individual Risk
+                Individual Risk Rating
               </div>
             </div>
             <div class="md-footer__button md-icon">
