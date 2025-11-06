@@ -10,6 +10,12 @@ body {
   -ms-overflow-style: none;
 }
 
+.md-typeset div.arithmatex > * {
+  padding: 0;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
 [data-md-color-scheme="default"] {
   /* Blue */
   /* --md-hue: 215deg; */
