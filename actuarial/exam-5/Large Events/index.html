@@ -1927,7 +1927,7 @@
   
   
   <span class="md-ellipsis">
-    Imbalanced
+    Handling Imbalance in FIE
     
   </span>
   
@@ -7283,14 +7283,16 @@
 <ul>
 <li>Most years have $500,000 (LUCKY)</li>
 <li>Some years will have $2,000,000 (UNLUCKY)<ul>
-<li>Usual $500,000 + additional $1,500,000</li>
+<li>Usual $ 500,000 + additional $ 1,500,000</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>In general, if you don’t adjust for shock losses or catastrophes in your historical loss data, you will<br>
-- overestimate future expected losses when these events are in your dataset, and<br>
-- underestimate future expected losses when the events do not occur in your dataset.</p>
+<p>In general, if you don’t adjust for shock losses or catastrophes in your historical loss data, you will</p>
+<ul>
+<li>overestimate future expected losses when these events are in your dataset, and</li>
+<li>underestimate future expected losses when the events do not occur in your dataset.</li>
+</ul>
 </blockquote>
 <p><strong>GOAL</strong>: Produce rates that <strong>cover these costs over a long period</strong> of time, and don't overreact to unlucky years</p>
 <h2 id="adjustments-to-shock-losses">Adjustments to Shock Losses<a class="headerlink" href="#adjustments-to-shock-losses" title="Permanent link">¶</a></h2>
@@ -7318,16 +7320,19 @@
 <li>Loss as \% of insured value</li>
 </ol>
 <h4 id="number-of-years-to-choose">Number of years to choose<a class="headerlink" href="#number-of-years-to-choose" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>GOAL: Balance <strong>stability</strong> of the average and its (average's) <strong>responsiveness</strong> to changes.<br>
-- Too less years, unstable<br>
-- Too many years, not identifying latest patterns at all</p>
-</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Goal</p>
+<p>To balance <strong>stability</strong> of the average and its (average's) <strong>responsiveness</strong> to changes.</p>
+<ul>
+<li>Too less years, unstable</li>
+<li>Too many years, not identifying latest patterns at all</li>
+</ul>
+</div>
 <h4 id="inflation-changes-in-avg-severity">Inflation / Changes in Avg Severity<a class="headerlink" href="#inflation-changes-in-avg-severity" title="Permanent link">¶</a></h4>
-<p>Use this as the XS loss factor<br>
-$$<br>
-\dfrac{\text{Trended XS Losses}}{\text{Trended Non-XS Losses}}<br>
-$$</p>
+<p>Use this as the XS loss factor</p>
+<div class="arithmatex">\[
+\dfrac{\text{Trended XS Losses}}{\text{Trended Non-XS Losses}}
+\]</div>
 <h2 id="adjustments-to-cat-losses">Adjustments to Cat Losses<a class="headerlink" href="#adjustments-to-cat-losses" title="Permanent link">¶</a></h2>
 <ol>
 <li>Project AIY / Exposure</li>
@@ -7390,7 +7395,7 @@ $$</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../Imbalanced/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Imbalanced">
+          <a href="../Imbalanced/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Handling Imbalance in FIE">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -7400,7 +7405,7 @@ $$</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Imbalanced
+                Handling Imbalance in FIE
               </div>
             </div>
           </a>

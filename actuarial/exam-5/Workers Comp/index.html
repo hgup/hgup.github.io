@@ -1978,7 +1978,7 @@
   
   
   <span class="md-ellipsis">
-    Imbalanced
+    Handling Imbalance in FIE
     
   </span>
   
@@ -7146,15 +7146,18 @@
 </ul>
 <hr>
 <h2 id="process">Process<a class="headerlink" href="#process" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>Manual prem <span class="arithmatex">\(\to\)</span>  Modified prem <span class="arithmatex">\(\to\)</span>  Standard prem <span class="arithmatex">\(\to\)</span>  Guaranteed Cost prem<br>
-1. For each combo of location and class <span class="arithmatex">\(\to\)</span> <strong>Manual rate</strong> <span class="arithmatex">\(\times\)</span> <span class="arithmatex">\(\dfrac{\text{Payroll}}{100} =\)</span> <strong>Manual Premium</strong><br>
-2. If qualified for <a href="../Individual%20Risk/#1-experience-rating">Experience Rating</a>, Manual premium <span class="arithmatex">\(\times\)</span> <em>Experience mod-factor</em> <span class="arithmatex">\(=\)</span> <strong>Modified Premium</strong><br>
-3. If qualified for <a href="../Individual%20Risk/#2-schedule-rating">Schedule Rating</a>, Modified premium <span class="arithmatex">\(\times\)</span> <em>Schedule mod-factor</em> <span class="arithmatex">\(\to\)</span> Round to the penny <span class="arithmatex">\(\to\)</span> <strong>Standard Premium</strong><br>
-4. Calculate <a href="../Special%20Classification/#premium-discount">Premium Discount</a> <span class="arithmatex">\(\to\)</span> Apply to Standard premium (Round <em>up</em> to the dollar)<br>
-5. Add <a href="../implementation/#expense-fees">Expense Fee</a><br>
-6. <span class="arithmatex">\(\min(\text{Step 5 result}, \text{Minimum Premium})\)</span> <span class="arithmatex">\(\to\)</span> <strong>Guaranteed Cost Premium</strong></p>
-</blockquote>
+<div class="admonition abstract">
+<p class="admonition-title">Summary</p>
+<p>Manual prem <span class="arithmatex">\(\to\)</span>  Modified prem <span class="arithmatex">\(\to\)</span>  Standard prem <span class="arithmatex">\(\to\)</span>  Guaranteed Cost prem</p>
+</div>
+<ol>
+<li>For each combo of location and class <span class="arithmatex">\(\to\)</span> <strong>Manual rate</strong> <span class="arithmatex">\(\times\)</span> <span class="arithmatex">\(\dfrac{\text{Payroll}}{100} =\)</span> <strong>Manual Premium</strong></li>
+<li>If qualified for <a href="../Individual%20Risk/#1-experience-rating">Experience Rating</a>, Manual premium <span class="arithmatex">\(\times\)</span> <em>Experience mod-factor</em> <span class="arithmatex">\(=\)</span> <strong>Modified Premium</strong></li>
+<li>If qualified for <a href="../Individual%20Risk/#2-schedule-rating">Schedule Rating</a>, Modified premium <span class="arithmatex">\(\times\)</span> <em>Schedule mod-factor</em> <span class="arithmatex">\(\to\)</span> Round to the penny <span class="arithmatex">\(\to\)</span> <strong>Standard Premium</strong></li>
+<li>Calculate <a href="../Special%20Classification/#premium-discount">Premium Discount</a> <span class="arithmatex">\(\to\)</span> Apply to Standard premium (Round <em>up</em> to the dollar)</li>
+<li>Add <a href="../implementation/#expense-fees">Expense Fee</a></li>
+<li><span class="arithmatex">\(\min(\text{Step 5 result}, \text{Minimum Premium})\)</span> <span class="arithmatex">\(\to\)</span> <strong>Guaranteed Cost Premium</strong></li>
+</ol>
 
 
 

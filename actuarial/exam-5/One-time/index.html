@@ -1927,7 +1927,7 @@
   
   
   <span class="md-ellipsis">
-    Imbalanced
+    Handling Imbalance in FIE
     
   </span>
   
@@ -7484,26 +7484,35 @@
 <p>For CY WP (without Law changes), we just need to find the portion of policies written at each rate level<br>
 - (e.g. if <span class="arithmatex">\(+10\%\)</span> rate change at July 1, 2025. Then OLF for CY 2025 would be <span class="arithmatex">\(1\times 0.5 + 1.10 \times 0.5\)</span>)</p>
 <h4 id="cy-wp-with-law-changes">CY WP with Law changes<a class="headerlink" href="#cy-wp-with-law-changes" title="Permanent link">¶</a></h4>
-<p>For CY WP (with Law changes), the process is a little involved.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br>
-- Answer the question: <em>What is the total Premium written in CY 20xx?</em><br>
-- Say, we have the rate changes:<br>
-    - 4/1/12: +10% (experience)<br>
-    - 7/1/12: +5% (law change)<br>
-- Partition the CY into segments between the rate changes, and under the assumption (100 policies per year, and 1000 per policy, before rate change)) find the premium written in that year, appropriately.<br>
-- Next, find how much does the law change contribute to the increase in total premium written for in-force policies (so, don't double count the premiums calculated in the previous step)<br>
-    - Starting from the first date, from which policies are affected by the law change (10/1/11), till the first experience rate change (3/31/12). This is the first portion we will inspect. 50 policies will be written in this rate (6 months <span class="arithmatex">\(\times\)</span> 100 per year = 50)<br>
-    - The average date for this portion is 1/1/12. So, the average policy will have 3 months remaining after the law change on 10/1/12 (i.e. 3months between 10/1/12 <span class="arithmatex">\(\to\)</span> 12/31/12)<br>
-    - So, the contribution from this would be <span class="arithmatex">\(50 \times \dfrac{3}{12} \times (1000 \times 5\%) = 625\)</span><br>
-    - Similarly, from the portion, 4/1/12 <span class="arithmatex">\(\to\)</span> 9/30/12, the contribution would be <span class="arithmatex">\(50 \times \dfrac{9}{12} (1100 \times 5\%)=2062.5\)</span> (since, post 4/1/12, the rate would be 1100 per policy and 9 month on average would be left for each policy after the LC)<br>
-- Now, <em>answer</em> the first question. Sum all these and get <strong>CY 2012 WP</strong> . <br>
-- To obtain the answer<br>
-    $$<br>
-    OLF = \dfrac{\text{CY 2012 WP @CRL}}{\text{CY 2012 WP}}<br>
-    $$</p>
+<p>For CY WP (with Law changes), the process is a little involved.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<div class="admonition question">
+<p class="admonition-title">Answer the question:</p>
+<p><em>What is the total Premium written in CY 20xx?</em></p>
+</div>
+<ul>
+<li>Say, we have the rate changes:<ul>
+<li>4/1/12: +10% (experience)</li>
+<li>7/1/12: +5% (law change)</li>
+</ul>
+</li>
+<li>Partition the CY into segments between the rate changes, and under the assumption (100 policies per year, and 1000 per policy, before rate change)) find the premium written in that year, appropriately.</li>
+<li>Next, find how much does the law change contribute to the increase in total premium written for in-force policies (so, don't double count the premiums calculated in the previous step)<ul>
+<li>Starting from the first date, from which policies are affected by the law change (10/1/11), till the first experience rate change (3/31/12). This is the first portion we will inspect. 50 policies will be written in this rate (6 months <span class="arithmatex">\(\times\)</span> 100 per year = 50)</li>
+<li>The average date for this portion is 1/1/12. So, the average policy will have 3 months remaining after the law change on 10/1/12 (i.e. 3months between 10/1/12 <span class="arithmatex">\(\to\)</span> 12/31/12)</li>
+<li>So, the contribution from this would be <span class="arithmatex">\(50 \times \dfrac{3}{12} \times (1000 \times 5\%) = 625\)</span></li>
+<li>Similarly, from the portion, 4/1/12 <span class="arithmatex">\(\to\)</span> 9/30/12, the contribution would be <span class="arithmatex">\(50 \times \dfrac{9}{12} (1100 \times 5\%)=2062.5\)</span> (since, post 4/1/12, the rate would be 1100 per policy and 9 month on average would be left for each policy after the LC)</li>
+</ul>
+</li>
+<li>Now, <em>answer</em> the first question. Sum all these and get <strong>CY 2012 WP</strong> . </li>
+<li>To obtain the answer</li>
+</ul>
+<div class="arithmatex">\[
+OLF = \dfrac{\text{CY 2012 WP @CRL}}{\text{CY 2012 WP}}
+\]</div>
 <blockquote>
 <p>If you understood this much then this diagram should be enough to remember the entire story</p>
 </blockquote>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../docs/assets/images/2025/10/One-time-1760434465658.webp" data-desc-position="bottom"><img alt="" src="../../docs/assets/images/2025/10/One-time-1760434465658.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/One-time-1760434465658.webp" data-desc-position="bottom"><img alt="../../assets/images/2025/10/One-time-1760434465658.webp" src="../../../../assets/images/2025/10/One-time-1760434465658.webp"></a></p>
 <ul>
 <li>Avg Rate Level: <code>sum</code><ul>
 <li><span class="arithmatex">\((25\%)(1.00)+(50\%)(1.10)+(25\%)(1.10)(1.05)\)</span> ← Written on the same year</li>
