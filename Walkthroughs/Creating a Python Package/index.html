@@ -7,28 +7,28 @@
       
       
       
-        <link rel="canonical" href="https://hgup.github.io/economics/PECO/305-SS/Hedging%20Strategies%20Using%20Futures/">
+        <link rel="canonical" href="https://hgup.github.io/Walkthroughs/Creating%20a%20Python%20Package/">
       
       
-        <link rel="prev" href="../Futures%20Markets%20%26%20Central%20Counter%20Parties/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../Forwards%20%26%20Futures%20Pricing/">
+        <link rel="next" href="../Evolving%20into%20a%20Python%20Chainladder%20Ninja/">
       
       
-      <link rel="icon" href="../../../../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>Hedging Strategies Using Futures - Hursh Gupta</title>
+        <title>Creating a Python Package - Hursh Gupta</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -220,9 +220,9 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../../etc/extra.css">
+      <link rel="stylesheet" href="../../etc/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -231,11 +231,11 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="Hedging Strategies Using Futures - Hursh Gupta">
+        <meta property="og:title" content="Creating a Python Package - Hursh Gupta">
       
         <meta property="og:description" content="Student | Actuarial Science | Economics">
       
-        <meta property="og:image" content="https://hgup.github.io/assets/images/social/economics/PECO/305-SS/Hedging Strategies Using Futures.png">
+        <meta property="og:image" content="https://hgup.github.io/assets/images/social/Walkthroughs/Creating a Python Package.png">
       
         <meta property="og:image:type" content="image/png">
       
@@ -243,15 +243,15 @@
       
         <meta property="og:image:height" content="630">
       
-        <meta property="og:url" content="https://hgup.github.io/economics/PECO/305-SS/Hedging%20Strategies%20Using%20Futures/">
+        <meta property="og:url" content="https://hgup.github.io/Walkthroughs/Creating%20a%20Python%20Package/">
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="Hedging Strategies Using Futures - Hursh Gupta">
+        <meta name="twitter:title" content="Creating a Python Package - Hursh Gupta">
       
         <meta name="twitter:description" content="Student | Actuarial Science | Economics">
       
-        <meta name="twitter:image" content="https://hgup.github.io/assets/images/social/economics/PECO/305-SS/Hedging Strategies Using Futures.png">
+        <meta name="twitter:image" content="https://hgup.github.io/assets/images/social/Walkthroughs/Creating a Python Package.png">
       
     
     
@@ -270,7 +270,7 @@
   </script>
   <meta name="theme-color" content="#1c1c1c">
 
-  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -299,7 +299,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#long-short-hedges" class="md-skip">
+        <a href="#tips" class="md-skip">
           Skip to content
         </a>
       
@@ -313,9 +313,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
+    <a href="../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  <img src="../../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -332,7 +332,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hedging Strategies Using Futures
+              Creating a Python Package
             
           </span>
         </div>
@@ -443,7 +443,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -464,7 +464,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   
@@ -486,7 +486,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../centre/" class="md-tabs__link">
+        <a href="../../centre/" class="md-tabs__link">
           
   
   
@@ -508,7 +508,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../actuarial/" class="md-tabs__link">
+        <a href="../../actuarial/" class="md-tabs__link">
           
   
   
@@ -526,13 +526,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../economics/" class="md-tabs__link">
           
   
   
@@ -554,7 +552,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../ML/" class="md-tabs__link">
+        <a href="../../ML/" class="md-tabs__link">
           
   
   
@@ -572,9 +570,33 @@
   
   
   
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Walkthroughs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
   
     <li class="md-tabs__item">
-      <a href="../../../../songs/" class="md-tabs__link">
+      <a href="../../songs/" class="md-tabs__link">
         
   
   
@@ -593,7 +615,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../resource/" class="md-tabs__link">
+      <a href="../../resource/" class="md-tabs__link">
         
   
   
@@ -649,9 +671,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
+    <a href="../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
-  <img src="../../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Hursh Gupta
@@ -678,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -727,7 +749,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../blog/" class="md-nav__link ">
+            <a href="../../blog/" class="md-nav__link ">
               
   
   
@@ -814,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
         
   
   
@@ -904,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/category/academic/" class="md-nav__link">
+      <a href="../../blog/category/academic/" class="md-nav__link">
         
   
   
@@ -929,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/category/actuarial-science/" class="md-nav__link">
+      <a href="../../blog/category/actuarial-science/" class="md-nav__link">
         
   
   
@@ -954,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/category/essentials/" class="md-nav__link">
+      <a href="../../blog/category/essentials/" class="md-nav__link">
         
   
   
@@ -979,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/category/gotchas/" class="md-nav__link">
+      <a href="../../blog/category/gotchas/" class="md-nav__link">
         
   
   
@@ -1004,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/category/thought-experiment/" class="md-nav__link">
+      <a href="../../blog/category/thought-experiment/" class="md-nav__link">
         
   
   
@@ -1029,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/category/tutorials/" class="md-nav__link">
+      <a href="../../blog/category/tutorials/" class="md-nav__link">
         
   
   
@@ -1096,7 +1118,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../centre/" class="md-nav__link ">
+            <a href="../../centre/" class="md-nav__link ">
               
   
   
@@ -1134,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../centre/academic/" class="md-nav__link">
+      <a href="../../centre/academic/" class="md-nav__link">
         
   
   
@@ -1159,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../centre/actuarial-exams/" class="md-nav__link">
+      <a href="../../centre/actuarial-exams/" class="md-nav__link">
         
   
   
@@ -1184,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../centre/tech/" class="md-nav__link">
+      <a href="../../centre/tech/" class="md-nav__link">
         
   
   
@@ -1243,7 +1265,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../actuarial/" class="md-nav__link ">
+            <a href="../../actuarial/" class="md-nav__link ">
               
   
   
@@ -1311,7 +1333,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../actuarial/exam-5/" class="md-nav__link ">
+            <a href="../../actuarial/exam-5/" class="md-nav__link ">
               
   
   
@@ -1402,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Tips/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Tips/" class="md-nav__link">
         
   
   
@@ -1425,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/AJ/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/AJ/" class="md-nav__link">
         
   
   
@@ -1448,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Wording/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Wording/" class="md-nav__link">
         
   
   
@@ -1471,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Careful/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Careful/" class="md-nav__link">
         
   
   
@@ -1557,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/The%20Insurance%20Product/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/The%20Insurance%20Product/" class="md-nav__link">
         
   
   
@@ -1580,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Data%20Aggregation/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Data%20Aggregation/" class="md-nav__link">
         
   
   
@@ -1699,7 +1721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Workers%20Comp/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Workers%20Comp/" class="md-nav__link">
         
   
   
@@ -1730,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Policy%20Data/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Policy%20Data/" class="md-nav__link">
         
   
   
@@ -1808,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Claims%20Data/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Claims%20Data/" class="md-nav__link">
         
   
   
@@ -1839,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Insurer%20Performance%20%26%20Profit/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Insurer%20Performance%20%26%20Profit/" class="md-nav__link">
         
   
   
@@ -1935,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Imbalanced/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Imbalanced/" class="md-nav__link">
         
   
   
@@ -1958,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Large%20Events/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Large%20Events/" class="md-nav__link">
         
   
   
@@ -1981,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/One-time/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/One-time/" class="md-nav__link">
         
   
   
@@ -2051,7 +2073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Diagnostic%20Triangles/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Diagnostic%20Triangles/" class="md-nav__link">
         
   
   
@@ -2082,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Expenses%20%26%20Profits/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Expenses%20%26%20Profits/" class="md-nav__link">
         
   
   
@@ -2105,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Overall/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Overall/" class="md-nav__link">
         
   
   
@@ -2179,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Risk%20Classification/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Risk%20Classification/" class="md-nav__link">
         
   
   
@@ -2202,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Univariate%20Classification/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Univariate%20Classification/" class="md-nav__link">
         
   
   
@@ -2225,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Special%20Classification/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Special%20Classification/" class="md-nav__link">
         
   
   
@@ -2256,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Individual%20Risk/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Individual%20Risk/" class="md-nav__link">
         
   
   
@@ -2326,7 +2348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Other%20Considerations/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Other%20Considerations/" class="md-nav__link">
         
   
   
@@ -2410,7 +2432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/A_Private%20Passenger%20Auto__PD/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/A_Private%20Passenger%20Auto__PD/" class="md-nav__link">
         
   
   
@@ -2433,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/B_Homeowners/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/B_Homeowners/" class="md-nav__link">
         
   
   
@@ -2456,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/C_Medical%20Malpractice/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/C_Medical%20Malpractice/" class="md-nav__link">
         
   
   
@@ -2479,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/D_Workers%20Compensation/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/D_Workers%20Compensation/" class="md-nav__link">
         
   
   
@@ -2581,7 +2603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Reserving%20Goals/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Reserving%20Goals/" class="md-nav__link">
         
   
   
@@ -2604,7 +2626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Chain%20Ladder/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Chain%20Ladder/" class="md-nav__link">
         
   
   
@@ -2627,7 +2649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Expected%20Claims/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Expected%20Claims/" class="md-nav__link">
         
   
   
@@ -2650,7 +2672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/B-F/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/B-F/" class="md-nav__link">
         
   
   
@@ -2673,7 +2695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Cape%20Cod/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Cape%20Cod/" class="md-nav__link">
         
   
   
@@ -2696,7 +2718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/F-S/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/F-S/" class="md-nav__link">
         
   
   
@@ -2719,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Case%20Outstanding/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Case%20Outstanding/" class="md-nav__link">
         
   
   
@@ -2742,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/B-S/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/B-S/" class="md-nav__link">
         
   
   
@@ -2765,7 +2787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/Evaluation/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/Evaluation/" class="md-nav__link">
         
   
   
@@ -2845,7 +2867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/ALAE/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/ALAE/" class="md-nav__link">
         
   
   
@@ -2868,7 +2890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-5/ULAE/" class="md-nav__link">
+      <a href="../../actuarial/exam-5/ULAE/" class="md-nav__link">
         
   
   
@@ -2932,7 +2954,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../actuarial/exam-7/" class="md-nav__link ">
+            <a href="../../actuarial/exam-7/" class="md-nav__link ">
               
   
   
@@ -2995,7 +3017,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../actuarial/exam-7/Methods/" class="md-nav__link ">
+            <a href="../../actuarial/exam-7/Methods/" class="md-nav__link ">
               
   
   
@@ -3033,7 +3055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../actuarial/exam-7/Methods/chain-ladder-variance-calc/" class="md-nav__link">
+      <a href="../../actuarial/exam-7/Methods/chain-ladder-variance-calc/" class="md-nav__link">
         
   
   
@@ -3076,8 +3098,6 @@
       
   
   
-    
-  
   
   
     
@@ -3093,23 +3113,20 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../economics/" class="md-nav__link ">
               
   
   
@@ -3122,13 +3139,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Economics
@@ -3141,10 +3158,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -3161,21 +3176,18 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
   
@@ -3188,7 +3200,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             PECO
@@ -3235,7 +3247,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../302-RPR/" class="md-nav__link ">
+            <a href="../../economics/PECO/302-RPR/" class="md-nav__link ">
               
   
   
@@ -3273,7 +3285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../302-RPR/Unit-I/" class="md-nav__link">
+      <a href="../../economics/PECO/302-RPR/Unit-I/" class="md-nav__link">
         
   
   
@@ -3296,7 +3308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../302-RPR/Unit-II/" class="md-nav__link">
+      <a href="../../economics/PECO/302-RPR/Unit-II/" class="md-nav__link">
         
   
   
@@ -3319,7 +3331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../302-RPR/Unit-III/" class="md-nav__link">
+      <a href="../../economics/PECO/302-RPR/Unit-III/" class="md-nav__link">
         
   
   
@@ -3342,7 +3354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../302-RPR/Unit-IV/" class="md-nav__link">
+      <a href="../../economics/PECO/302-RPR/Unit-IV/" class="md-nav__link">
         
   
   
@@ -3365,7 +3377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../302-RPR/Unit-V/" class="md-nav__link">
+      <a href="../../economics/PECO/302-RPR/Unit-V/" class="md-nav__link">
         
   
   
@@ -3435,7 +3447,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../303-SKG/" class="md-nav__link ">
+            <a href="../../economics/PECO/303-SKG/" class="md-nav__link ">
               
   
   
@@ -3473,7 +3485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/Endogenous%20Growth%20Models/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/Endogenous%20Growth%20Models/" class="md-nav__link">
         
   
   
@@ -3496,7 +3508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/Solow%27s%20Model/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/Solow%27s%20Model/" class="md-nav__link">
         
   
   
@@ -3519,7 +3531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/MRW/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/MRW/" class="md-nav__link">
         
   
   
@@ -3542,7 +3554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/GDP%20Limitations/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/GDP%20Limitations/" class="md-nav__link">
         
   
   
@@ -3565,7 +3577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/Globalization/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/Globalization/" class="md-nav__link">
         
   
   
@@ -3588,7 +3600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/Lewis/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/Lewis/" class="md-nav__link">
         
   
   
@@ -3611,7 +3623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/Harris-Torado/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/Harris-Torado/" class="md-nav__link">
         
   
   
@@ -3634,7 +3646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../303-SKG/Fei%20Rami%27s%20Model/" class="md-nav__link">
+      <a href="../../economics/PECO/303-SKG/Fei%20Rami%27s%20Model/" class="md-nav__link">
         
   
   
@@ -3712,7 +3724,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../304-RBN/" class="md-nav__link ">
+            <a href="../../economics/PECO/304-RBN/" class="md-nav__link ">
               
   
   
@@ -3805,7 +3817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%201__BE-What%20and%20Why/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%201__BE-What%20and%20Why/" class="md-nav__link">
         
   
   
@@ -3828,7 +3840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%202_BE%20in%20Relation%20to%20other%20Sciences%20%26%20Economics/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%202_BE%20in%20Relation%20to%20other%20Sciences%20%26%20Economics/" class="md-nav__link">
         
   
   
@@ -3851,7 +3863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%203__Evolution%20of%20BE/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%203__Evolution%20of%20BE/" class="md-nav__link">
         
   
   
@@ -3874,7 +3886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%204__The%20Neoclassical%20Tradition%20-%20An%20Introduction/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%204__The%20Neoclassical%20Tradition%20-%20An%20Introduction/" class="md-nav__link">
         
   
   
@@ -3897,7 +3909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%205__Methodology%20-%20Types%20of%20Empirical%20Studies/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%205__Methodology%20-%20Types%20of%20Empirical%20Studies/" class="md-nav__link">
         
   
   
@@ -3983,7 +3995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%206__Intro%20to%20Motivation%20and%20Hierarchical%20Needs/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%206__Intro%20to%20Motivation%20and%20Hierarchical%20Needs/" class="md-nav__link">
         
   
   
@@ -4006,7 +4018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%207__Achievement%20and%20Craftmanship%20-%20Driving%20Forces%20in%20Economic%20Behavior/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%207__Achievement%20and%20Craftmanship%20-%20Driving%20Forces%20in%20Economic%20Behavior/" class="md-nav__link">
         
   
   
@@ -4029,7 +4041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%208__Social%20Drivers%20of%20Economic%20Decisions/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%208__Social%20Drivers%20of%20Economic%20Decisions/" class="md-nav__link">
         
   
   
@@ -4052,7 +4064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%209__The%20Standard%20Model%20in%20Neoclassical%20Economics/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%209__The%20Standard%20Model%20in%20Neoclassical%20Economics/" class="md-nav__link">
         
   
   
@@ -4075,7 +4087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2010__Axioms%20%26%20Assumptions%20of%20NM/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2010__Axioms%20%26%20Assumptions%20of%20NM/" class="md-nav__link">
         
   
   
@@ -4161,7 +4173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2011__Utility/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2011__Utility/" class="md-nav__link">
         
   
   
@@ -4184,7 +4196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2012__Types%20of%20Utility/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2012__Types%20of%20Utility/" class="md-nav__link">
         
   
   
@@ -4207,7 +4219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2013__Bounded%20Rationality%20%26%20Heuristics/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2013__Bounded%20Rationality%20%26%20Heuristics/" class="md-nav__link">
         
   
   
@@ -4230,7 +4242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2014__Biases/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2014__Biases/" class="md-nav__link">
         
   
   
@@ -4253,7 +4265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2015__Heuristics%20%26%20Framing%20Effects/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2015__Heuristics%20%26%20Framing%20Effects/" class="md-nav__link">
         
   
   
@@ -4339,7 +4351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2016__Menu%20Effects/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2016__Menu%20Effects/" class="md-nav__link">
         
   
   
@@ -4362,7 +4374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2017__A%20few%20effects%20%26%20Choice%20Architecture/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2017__A%20few%20effects%20%26%20Choice%20Architecture/" class="md-nav__link">
         
   
   
@@ -4385,7 +4397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2018__Nudges/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2018__Nudges/" class="md-nav__link">
         
   
   
@@ -4408,7 +4420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2019__Fundamental%20of%20Probability%20Theory/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2019__Fundamental%20of%20Probability%20Theory/" class="md-nav__link">
         
   
   
@@ -4431,7 +4443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2020__Bayesian%20Updating%20and%20Confirmation%20Bias/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2020__Bayesian%20Updating%20and%20Confirmation%20Bias/" class="md-nav__link">
         
   
   
@@ -4517,7 +4529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2021__Prospects%20%26%20Risk%20Attitude/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2021__Prospects%20%26%20Risk%20Attitude/" class="md-nav__link">
         
   
   
@@ -4540,7 +4552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2022__Risk%20Attitude%20%26%20Axioms%20of%20EUT/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2022__Risk%20Attitude%20%26%20Axioms%20of%20EUT/" class="md-nav__link">
         
   
   
@@ -4563,7 +4575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2023__Other%20Axioms%20%26%20Violations%20of%20EUT/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2023__Other%20Axioms%20%26%20Violations%20of%20EUT/" class="md-nav__link">
         
   
   
@@ -4586,7 +4598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2024__Anomalies%20of%20EUT%20%26%20Prospect%20Theory/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2024__Anomalies%20of%20EUT%20%26%20Prospect%20Theory/" class="md-nav__link">
         
   
   
@@ -4609,7 +4621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2025__Prospect%20Theory%20-%20Evaluation/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2025__Prospect%20Theory%20-%20Evaluation/" class="md-nav__link">
         
   
   
@@ -4695,7 +4707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2026__The%20Value%20Function/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2026__The%20Value%20Function/" class="md-nav__link">
         
   
   
@@ -4718,7 +4730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2027__The%20Weighting%20Function/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2027__The%20Weighting%20Function/" class="md-nav__link">
         
   
   
@@ -4741,7 +4753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2028__Cumulative%20Prospect%20Theory%20I/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2028__Cumulative%20Prospect%20Theory%20I/" class="md-nav__link">
         
   
   
@@ -4764,7 +4776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2029__Cumulative%20Prospect%20Theory%20II/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2029__Cumulative%20Prospect%20Theory%20II/" class="md-nav__link">
         
   
   
@@ -4787,7 +4799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2030__Criticisms%20of%20Prospect%20Theory/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2030__Criticisms%20of%20Prospect%20Theory/" class="md-nav__link">
         
   
   
@@ -4873,7 +4885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2031__Mental%20Accounting/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2031__Mental%20Accounting/" class="md-nav__link">
         
   
   
@@ -4896,7 +4908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2032__Hedonic%20Editing%20Hypothesis/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2032__Hedonic%20Editing%20Hypothesis/" class="md-nav__link">
         
   
   
@@ -4919,7 +4931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2033__Hedonic%20Framing%2C%20Acquisition%20Utility%2C%20and%20Transaction%20Utility/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2033__Hedonic%20Framing%2C%20Acquisition%20Utility%2C%20and%20Transaction%20Utility/" class="md-nav__link">
         
   
   
@@ -4942,7 +4954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2034__Applications%20of%20Mental%20Accounting/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2034__Applications%20of%20Mental%20Accounting/" class="md-nav__link">
         
   
   
@@ -4965,7 +4977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2035__Payment%20Decoupling%20%26%20Budgeting/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2035__Payment%20Decoupling%20%26%20Budgeting/" class="md-nav__link">
         
   
   
@@ -5051,7 +5063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2036__Behavioral%20%26%20Classical%20Life-Cycle%20Theories/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2036__Behavioral%20%26%20Classical%20Life-Cycle%20Theories/" class="md-nav__link">
         
   
   
@@ -5074,7 +5086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2037__Budgeting%20%26%20Choice%20Bracketing/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2037__Budgeting%20%26%20Choice%20Bracketing/" class="md-nav__link">
         
   
   
@@ -5097,7 +5109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2038__Choice%20Bracketing%20%26%20Dynamic%20Mental%20Accounting/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2038__Choice%20Bracketing%20%26%20Dynamic%20Mental%20Accounting/" class="md-nav__link">
         
   
   
@@ -5120,7 +5132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2039__Policy%20Implications%20of%20Mental%20Accounting/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2039__Policy%20Implications%20of%20Mental%20Accounting/" class="md-nav__link">
         
   
   
@@ -5143,7 +5155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2040__Policy%20Implications%20of%20Mental%20Accounting%20-%20II/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2040__Policy%20Implications%20of%20Mental%20Accounting%20-%20II/" class="md-nav__link">
         
   
   
@@ -5229,7 +5241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2041__Intertemporal%20Choice%20Models/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2041__Intertemporal%20Choice%20Models/" class="md-nav__link">
         
   
   
@@ -5252,7 +5264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2042__Optimal%20Consumption%20in%20the%20Two-Period%20Model/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2042__Optimal%20Consumption%20in%20the%20Two-Period%20Model/" class="md-nav__link">
         
   
   
@@ -5275,7 +5287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2043__Projection%20Bias/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2043__Projection%20Bias/" class="md-nav__link">
         
   
   
@@ -5298,7 +5310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2044__Discounted%20Utility%20Model/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2044__Discounted%20Utility%20Model/" class="md-nav__link">
         
   
   
@@ -5321,7 +5333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2045__Features%20of%20the%20Discounted%20Utility%20Model/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2045__Features%20of%20the%20Discounted%20Utility%20Model/" class="md-nav__link">
         
   
   
@@ -5407,7 +5419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2046__Anomalies%20in%20DUM/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2046__Anomalies%20in%20DUM/" class="md-nav__link">
         
   
   
@@ -5430,7 +5442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2047__Anomalies%20of%20DUM%20%26%20Time-Inconsistent%20Behavior/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2047__Anomalies%20of%20DUM%20%26%20Time-Inconsistent%20Behavior/" class="md-nav__link">
         
   
   
@@ -5453,7 +5465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2048__Naive%20Hyperbolic%20Discounting/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2048__Naive%20Hyperbolic%20Discounting/" class="md-nav__link">
         
   
   
@@ -5476,7 +5488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2049__Naive%20Quasi-Hyperbolic%20Discounting/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2049__Naive%20Quasi-Hyperbolic%20Discounting/" class="md-nav__link">
         
   
   
@@ -5499,7 +5511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2050__Some%20Special%20Discounting%20Cases/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2050__Some%20Special%20Discounting%20Cases/" class="md-nav__link">
         
   
   
@@ -5583,7 +5595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2051__Introduction%20to%20Strategic%20Interactions/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2051__Introduction%20to%20Strategic%20Interactions/" class="md-nav__link">
         
   
   
@@ -5606,7 +5618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2053__Sequential%20Game%20%26%20Types%20of%20Games/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2053__Sequential%20Game%20%26%20Types%20of%20Games/" class="md-nav__link">
         
   
   
@@ -5629,7 +5641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2054__Problems%20with%20Classical%20Game%20Theory%20-%20I/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2054__Problems%20with%20Classical%20Game%20Theory%20-%20I/" class="md-nav__link">
         
   
   
@@ -5652,7 +5664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2055__Centipede%20Games/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2055__Centipede%20Games/" class="md-nav__link">
         
   
   
@@ -5738,7 +5750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2056__Problems%20with%20Classical%20Game%20Theory%20-%20III/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2056__Problems%20with%20Classical%20Game%20Theory%20-%20III/" class="md-nav__link">
         
   
   
@@ -5761,7 +5773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2057__Introduction%20of%20Behavioral%20Games/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2057__Introduction%20of%20Behavioral%20Games/" class="md-nav__link">
         
   
   
@@ -5784,7 +5796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2058__Ultimatum%20%26%20Dictator%20Games/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2058__Ultimatum%20%26%20Dictator%20Games/" class="md-nav__link">
         
   
   
@@ -5807,7 +5819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2059__Ultimatum%20%26%20Public%20Goods%20Games/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2059__Ultimatum%20%26%20Public%20Goods%20Games/" class="md-nav__link">
         
   
   
@@ -5830,7 +5842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../304-RBN/Lecture%2060__Trust%20Games/" class="md-nav__link">
+      <a href="../../economics/PECO/304-RBN/Lecture%2060__Trust%20Games/" class="md-nav__link">
         
   
   
@@ -5866,8 +5878,6 @@
                 
   
   
-    
-  
   
   
     
@@ -5896,15 +5906,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../economics/PECO/305-SS/" class="md-nav__link ">
               
   
   
@@ -5926,7 +5936,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_4">
             <span class="md-nav__icon md-icon"></span>
             305 SS
@@ -5942,7 +5952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Introduction/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/Introduction/" class="md-nav__link">
         
   
   
@@ -5965,7 +5975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Measurement%20of%20Risk/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/Measurement%20of%20Risk/" class="md-nav__link">
         
   
   
@@ -5988,7 +5998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Investors%20Risk%20Management/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/Investors%20Risk%20Management/" class="md-nav__link">
         
   
   
@@ -6060,12 +6070,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Greek%20Letters/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/4.1%20Greek%20Letters/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Greek Letters
+    Green Letters
     
   </span>
   
@@ -6083,12 +6093,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Options/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/4.2%20VaR%20%26%20CaR/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Options
+    VaR &amp; CaR
     
   </span>
   
@@ -6111,10 +6121,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -6126,6 +6134,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -6135,11 +6147,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_6">
         
           
           <label class="md-nav__link" for="__nav_5_2_4_6" id="__nav_5_2_4_6_label" tabindex="0">
@@ -6155,7 +6167,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_4_6">
             <span class="md-nav__icon md-icon"></span>
             Derivatives
@@ -6169,7 +6181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Futures%20Markets%20%26%20Central%20Counter%20Parties/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/5.1%20Futures%20Markets%20%26%20Central%20Counter%20Parties/" class="md-nav__link">
         
   
   
@@ -6189,30 +6201,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Hedging Strategies Using Futures
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../economics/PECO/305-SS/5.2%20Hedging%20Strategies%20Using%20Futures/" class="md-nav__link">
         
   
   
@@ -6223,171 +6215,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#long-short-hedges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Long &amp; Short Hedges
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basis-risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basis Risk
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#long-hedge-for-purchase-of-an-asset" class="md-nav__link">
-    <span class="md-ellipsis">
-      Long Hedge for Purchase of an Asset
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Long Hedge for Purchase of an Asset">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#short-hedge-for-sale-of-an-asset" class="md-nav__link">
-    <span class="md-ellipsis">
-      Short Hedge for Sale of an Asset
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Short Hedge for Sale of an Asset">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#choice-of-contract" class="md-nav__link">
-    <span class="md-ellipsis">
-      Choice of Contract
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optimal-hedge-ratio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optimal Hedge Ratio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optimal-number-of-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optimal Number of Contracts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#daily-settlement" class="md-nav__link">
-    <span class="md-ellipsis">
-      Daily Settlement
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#portfolio-hedging" class="md-nav__link">
-    <span class="md-ellipsis">
-      Portfolio Hedging
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changing-beta" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changing \(\beta\)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-people-hedge-equity-returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why people hedge equity returns?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stack-roll" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack &amp; Roll
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#liquidity-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Liquidity Issues
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6400,7 +6227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Forwards%20%26%20Futures%20Pricing/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/5.3%20Forwards%20%26%20Futures%20Pricing/" class="md-nav__link">
         
   
   
@@ -6423,7 +6250,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../Appendix/" class="md-nav__link">
+      <a href="../../economics/PECO/305-SS/5.4%20Forwards%20vs%20Futures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forwards vs Futures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/PECO/305-SS/5.5%20Options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/PECO/305-SS/5.9%20Appendix/" class="md-nav__link">
         
   
   
@@ -6508,7 +6381,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../ML/" class="md-nav__link ">
+            <a href="../../ML/" class="md-nav__link ">
               
   
   
@@ -6630,7 +6503,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../ML/handson/" class="md-nav__link ">
+            <a href="../../ML/handson/" class="md-nav__link ">
               
   
   
@@ -6667,7 +6540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/handson/Handson_2_E2E_ML_Project/" class="md-nav__link">
+      <a href="../../ML/handson/Handson_2_E2E_ML_Project/" class="md-nav__link">
         
   
   
@@ -6690,7 +6563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/handson/Handson_3_Classification/" class="md-nav__link">
+      <a href="../../ML/handson/Handson_3_Classification/" class="md-nav__link">
         
   
   
@@ -6713,7 +6586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/handson/Handson_4_Training_Models/" class="md-nav__link">
+      <a href="../../ML/handson/Handson_4_Training_Models/" class="md-nav__link">
         
   
   
@@ -6736,7 +6609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/handson/Handson_5_Support_Vector_Machines/" class="md-nav__link">
+      <a href="../../ML/handson/Handson_5_Support_Vector_Machines/" class="md-nav__link">
         
   
   
@@ -6759,7 +6632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/handson/Handson_6_Decision_Trees/" class="md-nav__link">
+      <a href="../../ML/handson/Handson_6_Decision_Trees/" class="md-nav__link">
         
   
   
@@ -6782,7 +6655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/handson/Handson_7_Ensemble_Learning_%26_Random_Forests/" class="md-nav__link">
+      <a href="../../ML/handson/Handson_7_Ensemble_Learning_%26_Random_Forests/" class="md-nav__link">
         
   
   
@@ -6805,7 +6678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/handson/Handson_8_Dimensionality_Reduction/" class="md-nav__link">
+      <a href="../../ML/handson/Handson_8_Dimensionality_Reduction/" class="md-nav__link">
         
   
   
@@ -6844,7 +6717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/how-to-start/" class="md-nav__link">
+      <a href="../../ML/how-to-start/" class="md-nav__link">
         
   
   
@@ -6867,7 +6740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/Linear%20Regression%20Model/" class="md-nav__link">
+      <a href="../../ML/Linear%20Regression%20Model/" class="md-nav__link">
         
   
   
@@ -6964,7 +6837,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../ML/techniques/" class="md-nav__link ">
+            <a href="../../ML/techniques/" class="md-nav__link ">
               
   
   
@@ -6999,7 +6872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/techniques/k-means-clustering/" class="md-nav__link">
+      <a href="../../ML/techniques/k-means-clustering/" class="md-nav__link">
         
   
   
@@ -7081,7 +6954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/libraries/custom-classes-in-sklearn/" class="md-nav__link">
+      <a href="../../ML/libraries/custom-classes-in-sklearn/" class="md-nav__link">
         
   
   
@@ -7104,7 +6977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/libraries/packages/" class="md-nav__link">
+      <a href="../../ML/libraries/packages/" class="md-nav__link">
         
   
   
@@ -7127,7 +7000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ML/libraries/sklearn-notes/" class="md-nav__link">
+      <a href="../../ML/libraries/sklearn-notes/" class="md-nav__link">
         
   
   
@@ -7170,10 +7043,262 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Walkthroughs
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Walkthroughs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Creating a Python Package
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating a Python Package
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../../../songs/" class="md-nav__link">
+      <a href="../Evolving%20into%20a%20Python%20Chainladder%20Ninja/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evolving into a Python Chainladder Ninja
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learning%20a%20new%20Library%20in%20Python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Learning a new Library in Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../songs/" class="md-nav__link">
         
   
   
@@ -7198,7 +7323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../resource/" class="md-nav__link">
+      <a href="../../resource/" class="md-nav__link">
         
   
   
@@ -7280,266 +7405,77 @@
   as the main headline.
 -->
 
-  <h1>Hedging Strategies Using Futures</h1>
+  <h1>Creating a Python Package</h1>
 
 
 <!-- Markdown content -->
-<h2 id="long-short-hedges">Long &amp; Short Hedges<a class="headerlink" href="#long-short-hedges" title="Permanent link">¶</a></h2>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">¶</a></h2>
+<p>If there are any datasets that you wish your users should try out when checking your library, you can just host them in GitHub in the same repository as your package and provide them with the <code>raw.githubusercontent.com</code> URL. <code>pandas</code> can directly read it from there.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">prism_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="s2">"https://raw.githubusercontent.com/casact/chainladder-python/master/chainladder/utils/data/prism.csv"</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">prism_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</span></code></pre></div>
+<h2 id="flow">Flow<a class="headerlink" href="#flow" title="Permanent link">¶</a></h2>
+<ol>
+<li>Need a Source Tree</li>
+<li><code>pyproject.toml</code></li>
+<li>Need to create <strong>build artifacts</strong><ul>
+<li><strong>sdist</strong> (source distributions)</li>
+<li><strong>wheels</strong> (built distributions) ← Often just one for a pure Python package</li>
+</ul>
+</li>
+<li>Upload to package distribution service (<abbr title="Package Distribution Service">PDS</abbr>)</li>
+</ol>
+<h5 id="using-the-package">Using the Package<a class="headerlink" href="#using-the-package" title="Permanent link">¶</a></h5>
+<p>User runs <code>pip install</code> which would</p>
+<ol>
+<li>Download one of the package's build artifacts from the <abbr title="Package Distribution Service">PDS</abbr></li>
+<li>Install it in their Python environment</li>
+</ol>
+<h3 id="config-file">Config File<a class="headerlink" href="#config-file" title="Permanent link">¶</a></h3>
 <ul>
-<li>Long futures hedge, you know you will purchase the asset and wish to <strong>lock the price</strong></li>
-<li>Short futures hedge, you know you will sell an asset in the future and wish to <strong>lock the price</strong></li>
-<li>In favor of hedging, Companies should<ul>
-<li>Focus on the main business they are in</li>
-<li>Take steps to minimize risks from<ul>
-<li>interest rates</li>
-<li>exchange rates</li>
-<li>other market variables</li>
+<li>Config depends on the tool to create build artifacts</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>Against hedging,<ul>
-<li>Shareholders usually are well diversified, can make their own hedging decisions</li>
-<li>May increase risk to hedge <strong>when competitors don't</strong></li>
-<li>But a situation where<ul>
-<li>loss on hedge</li>
-<li>gain on the underlying, is difficult to explain</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="basis-risk">Basis Risk<a class="headerlink" href="#basis-risk" title="Permanent link">¶</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[build-system]
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>requires = ["setuptools&gt;=61.0", "wheel"]
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>build-backend = "setuptools.build_meta"
+</span></code></pre></div>
 <ul>
-<li><span class="arithmatex">\(\text{Basis} = \text{Spot Price}-\text{Futures Price}\)</span><ul>
-<li>Sometimes on a financial asset, it is <span class="arithmatex">\(\text{Futures Price}- \text{Spot Price}\)</span></li>
+<li>I used <a href="https://setuptools.pypa.io/en/latest/">Setuptools</a> as the build backend. (for no obvious reason)</li>
+<li>A build frontend e.g. <code>pip</code> can run the chosen backend<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
+<p>Use this guide: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#writing-pyproject-toml for <code>project.toml</code></p>
+<h3 id="build-artifacts">Build Artifacts<a class="headerlink" href="#build-artifacts" title="Permanent link">¶</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>build<span class="w"> </span>--sdist<span class="w"> </span>source-tree-directory
+</span></code></pre></div>
+<ul>
+<li>Allow to build from source.</li>
+</ul>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>build<span class="w"> </span>--wheel<span class="w"> </span>source-tree-directory
+</span></code></pre></div>
+<ul>
+<li>Only the files needed for end user's Pythong environment</li>
+</ul>
+<h3 id="upload">Upload<a class="headerlink" href="#upload" title="Permanent link">¶</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>twine<span class="w"> </span>upload<span class="w"> </span>dist/package-name-version.tar.gz<span class="w"> </span>dist/package-name-version-py3-none-any.whl
+</span></code></pre></div>
+<p>After this you can install the package using <code>pip</code> the build frontend.</p>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
+<p>Create a new isolated python environment for all your build dependencies.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>conda create --name stochastic-reserving-framework python=3.10
+</span></code></pre></div>
+<ul>
+<li>Press <code>y</code> to install the base packages.</li>
+</ul>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The build backend takes the source tree and builds an sdist or wheel. All backends have a standardized interface&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
-<li>Basis risk <span class="arithmatex">\(\impliedby\)</span> uncertainty about basis when hedge is closed out</li>
-</ul>
-<h2 id="long-hedge-for-purchase-of-an-asset">Long Hedge for Purchase of an Asset<a class="headerlink" href="#long-hedge-for-purchase-of-an-asset" title="Permanent link">¶</a></h2>
-<ul>
-<li><span class="arithmatex">\(F_{1}:\)</span> Futures price at hedge-setup time</li>
-<li><span class="arithmatex">\(F_{2}:\)</span> Futures price at asset-purchase time</li>
-<li><span class="arithmatex">\(S_{2}:\)</span> Asset price at purchase time</li>
-<li><span class="arithmatex">\(b_{2}:\)</span> Basis at time of purchase</li>
-<li>Cost of asset = <span class="arithmatex">\(S_{2}\)</span>. Gain on futures <span class="arithmatex">\(F_{2}-F_{1}\)</span></li>
-<li>So net amount paid = Cost - Gain = <span class="arithmatex">\(S_{2} - (F_{2} - F_{1}) = F_{1} + b_{2}\)</span><ul>
-<li><span class="arithmatex">\(b_{2} = S_{2} - F_{2}\)</span> (positive basis, profit)</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>Basis a/o a date means, how much is the spot more than the futures price then. Are you at an advantage or disadvantage, if you want to purchase the asset?</p>
-</blockquote>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
-<ul>
-<li><code>June 8</code><ul>
-<li><strong>Will need to</strong> purchase 20,000 barrels of crude oil in Oct or Nov.</li>
-<li>Futures contract for delivery every month.<ul>
-<li>Contract size = 1000 barrels</li>
-</ul>
-</li>
-<li>Takes <strong>long position</strong> in <strong>20</strong> Dec Futures contracts.<ul>
-<li><span class="arithmatex">\(F_{1} = \$48\)</span> per barrel</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>Nov 10</code><ul>
-<li><code>Company ready to purchase crude oil and closed out its futures contract</code></li>
-<li><span class="arithmatex">\(S_{2} = \$50\)</span> per barrel</li>
-<li><span class="arithmatex">\(F_{2} = \$49.1\)</span> per barrel</li>
-<li>Gain on futures contract: <span class="arithmatex">\(49.1 - 48 = 1.1\)</span> per barrel</li>
-<li>Basis on Nov 10 = <span class="arithmatex">\(50 - 49.1 = 0.9\)</span></li>
-<li>Effective price paid per barrel <span class="arithmatex">\(= 50 - 1.1 = 48.9\)</span></li>
-<li>Or <span class="arithmatex">\(F_{1} + b_{2} = 48 + 0.9 = 48.9\)</span></li>
-<li>Total price paid = <span class="arithmatex">\(48.9 \times 20000 = 978,000\)</span></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p><strong>Think</strong>: First paid 48 per barrel. Then the <strong>value</strong> of that 48 increased to 49.1, so that extra 1.1 per barrel is your gain. So, now instead of an extra <strong>$2 per barrel</strong> compared to June 8, you only need to pay <strong>$0.9 per barrel</strong>, which is your basis. So, totally you spent, <span class="arithmatex">\(48 + 0.9 = 48.9\)</span>, saving <strong>$1.1 per barrel</strong> (hedged this loss).</p>
-</blockquote>
-<h2 id="short-hedge-for-sale-of-an-asset">Short Hedge for Sale of an Asset<a class="headerlink" href="#short-hedge-for-sale-of-an-asset" title="Permanent link">¶</a></h2>
-<ul>
-<li>Same definitions</li>
-</ul>
-<h5 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">¶</a></h5>
-<ul>
-<li><code>March 1</code><ul>
-<li>Expected to receive 50M Jap Yen</li>
-<li>Yen futures contracts delivery: March, June, Sep, Dec</li>
-<li>12.5 M Yen per contract</li>
-<li>MNC shorts <strong>four</strong> Sep futures contracts today (march 1)</li>
-<li>Closes when it receives Yen at <code>July End</code>.</li>
-<li><span class="arithmatex">\(F_{1} = 1.0800\)</span> cents per yen</li>
-</ul>
-</li>
-<li><code>July End</code><ul>
-<li><span class="arithmatex">\(S_{2} = 1.0200\)</span> per yen</li>
-<li><span class="arithmatex">\(F_{2} = 1.0250\)</span></li>
-<li>Gain = <span class="arithmatex">\(F_{2} - F_{1} = 0.0550\)</span> cents per yen</li>
-<li><span class="arithmatex">\(b_{2} = S_{2} - F_{2} = - 0.0050\)</span> cents per yen</li>
-<li>Effective price = <span class="arithmatex">\(S_{2} - \text{Gain}\)</span> = <span class="arithmatex">\(F_{1} + b_{2}\)</span>  cents per yen<ul>
-<li><span class="arithmatex">\(= 1.0800 + (-0.0050) = 1.0750\)</span></li>
-</ul>
-</li>
-<li>Total amount <strong>received</strong>  (because we are in short position)<ul>
-<li><span class="arithmatex">\(= 1.0750 \times 50M = \$537,500\)</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="choice-of-contract">Choice of Contract<a class="headerlink" href="#choice-of-contract" title="Permanent link">¶</a></h2>
-<ul>
-<li>Choose delivery month <span class="arithmatex">\(\geq\)</span> end of life of hedge, but closest to</li>
-<li>If no futures contract <strong>on asset being hedged</strong>, choose contract whose futures price <strong>most highly correlated</strong> with asset price.</li>
-</ul>
-<h2 id="optimal-hedge-ratio">Optimal Hedge Ratio<a class="headerlink" href="#optimal-hedge-ratio" title="Permanent link">¶</a></h2>
-<ul>
-<li><span class="arithmatex">\(h^* = \rho \dfrac{\sigma_{S}}{\sigma_{F}}\)</span> <span class="arithmatex">\(\implies\)</span> Amount of exposure that should be hedged</li>
-<li><span class="arithmatex">\(\sigma_{S}:\)</span> Std dev of <span class="arithmatex">\(\Delta S\)</span>, change in the spot price during the hedging period</li>
-<li><span class="arithmatex">\(\sigma_{F}:\)</span> Std dev of <span class="arithmatex">\(\Delta F\)</span>, change in the Futures price during the hedging period</li>
-<li><span class="arithmatex">\(\rho:\)</span> correlation between <span class="arithmatex">\(\Delta S\)</span> and <span class="arithmatex">\(\Delta F\)</span>.</li>
-</ul>
-<h2 id="optimal-number-of-contracts">Optimal Number of Contracts<a class="headerlink" href="#optimal-number-of-contracts" title="Permanent link">¶</a></h2>
-<ul>
-<li><span class="arithmatex">\(N^* = \dfrac{h^*Q_{A}}{Q_{F}}\)</span></li>
-<li><span class="arithmatex">\(Q_{F}:\)</span> Size of one futures contract.</li>
-<li><span class="arithmatex">\(Q_{A}:\)</span> Size of position being hedged.</li>
-</ul>
-<blockquote>
-<p>Note, when optimal number of contracts without taking into account daily settlements, the <strong>quantities</strong> of stocks are taken. But when considering it, we take the <strong>value</strong> of the stocks. Equity also is a daily settlement case… so we take the <strong>value</strong> of the portfolio.</p>
-</blockquote>
-<h2 id="daily-settlement">Daily Settlement<a class="headerlink" href="#daily-settlement" title="Permanent link">¶</a></h2>
-<ul>
-<li><span class="arithmatex">\(N^* = \hat{h} \dfrac{V_{A}}{V_{F}}\)</span></li>
-<li><span class="arithmatex">\(V_{A}:\)</span> Value of the position being hedged <span class="arithmatex">\(=SQ_{A}\)</span>, <span class="arithmatex">\(S\)</span> is today's spot.</li>
-<li><span class="arithmatex">\(V_{A}:\)</span> Value of the Futures price times size of one contract <span class="arithmatex">\(=FQ_{F}\)</span>, <span class="arithmatex">\(S\)</span> is today's spot.</li>
-<li><span class="arithmatex">\(\hat{\sigma}_{S}:\)</span> Std dev of <span class="arithmatex">\(\Delta S\)</span>, daily change in the spot price during the hedging period</li>
-<li><span class="arithmatex">\(\hat{\sigma}_{F}:\)</span> Std dev of <span class="arithmatex">\(\Delta F\)</span>, daily change in the Futures price during the hedging period</li>
-<li><span class="arithmatex">\(\hat{\rho}:\)</span> correlation between daily <span class="arithmatex">\(\Delta S\)</span> and <span class="arithmatex">\(\Delta F\)</span>.</li>
-<li><strong>TAILING THE HEDGE</strong> = <span class="arithmatex">\(\dfrac{N^*}{(1+i)}\)</span> the interest, <span class="arithmatex">\(i\)</span> earned over the remaining life of the hedge. When settlements are made daily<ul>
-<li>Gains from futures position can be reinvested to earn interest</li>
-<li>Losses must be funded, incurring an interest cost.</li>
-<li>Timing of cashflows is not captured in the standard model.</li>
-<li>Multiply <span class="arithmatex">\(N^*\)</span> by <span class="arithmatex">\(\dfrac{S_{0}}{F_{0}}\)</span></li>
-</ul>
-</li>
-</ul>
-<h2 id="portfolio-hedging">Portfolio Hedging<a class="headerlink" href="#portfolio-hedging" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>V_F</th>
-<th>252500</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>V_A</td>
-<td>5050000</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>h</td>
-<td>30 = <span class="arithmatex">\(\beta\dfrac{ V_{A}}{V_{F}}\)</span></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>After three months</td>
-<td></td>
-</tr>
-<tr>
-<td>S_2</td>
-<td>900</td>
-</tr>
-<tr>
-<td>F_2</td>
-<td>902</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Gain from short futures position</td>
-<td>$810,000.00 = <span class="arithmatex">\(h \times (F_{2}-F_{1}) \times \dfrac{\text{\#shares}}{\text{Contract}}\)</span></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Loss on index</td>
-<td>-10% <span class="arithmatex">\(= \dfrac{S_{2}- S_{1}}{S_{1}}\)</span></td>
-</tr>
-<tr>
-<td>Dividend on index</td>
-<td>0.0025 <span class="arithmatex">\(= 1\% pa = 0.25\% pm\)</span></td>
-</tr>
-<tr>
-<td>Net return on index over 3 months</td>
-<td>-9.75% <span class="arithmatex">\(= -10\% + .25\%\)</span></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Risk free interest rate</td>
-<td>0.01 <span class="arithmatex">\(= 4\% pa = 1\% pm\)</span></td>
-</tr>
-<tr>
-<td>Expected return of portfolio</td>
-<td>-15.13% (CAPM formula)</td>
-</tr>
-<tr>
-<td>Expected value of portfolio</td>
-<td>$4,286,187.50</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Expected value of hedgers position</td>
-<td>$5,096,187.50 (Expected value + Gain from futures)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="changing-beta">Changing <span class="arithmatex">\(\beta\)</span><a class="headerlink" href="#changing-beta" title="Permanent link">¶</a></h2>
-<div class="arithmatex">\[
-(\text{target } \beta - \text{current } \beta) \times \dfrac{V_{A}}{V_{F}}
-\]</div>
-<ul>
-<li>Negative means short</li>
-<li>Positive means long</li>
-</ul>
-<h2 id="why-people-hedge-equity-returns">Why people hedge equity returns?<a class="headerlink" href="#why-people-hedge-equity-returns" title="Permanent link">¶</a></h2>
-<ul>
-<li>You want to be out of the market for a while, you have to sell the entire portfolio, then when you want back in, repurchase it. But that causes a lot of transaction costs. Thus, hedging will help avoid that.</li>
-<li>For fixing your returns at <span class="arithmatex">\(\alpha +r_{f}\)</span>, if the average <span class="arithmatex">\(\beta\)</span> of stocks is 1.0, in both good and bad times.</li>
-</ul>
-<h2 id="stack-roll">Stack &amp; Roll<a class="headerlink" href="#stack-roll" title="Permanent link">¶</a></h2>
-<ul>
-<li>Roll future contracts forward to hedge future exposures</li>
-<li>Initially enter to hedge exposures <strong>up to a time horizon</strong></li>
-<li>Just before maturity, close and replace with new contract reflecting new exposure</li>
-</ul>
-<h2 id="liquidity-issues">Liquidity Issues<a class="headerlink" href="#liquidity-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li>Danger: losses realized on hedge, while gains on underlying exposures are unrealized. (Low liquidity of underlying exposures)</li>
-<li>Liquidity Crisis: MGRM spent millions to maintain its hedge, without realizing any of its future gains on paper.</li>
-</ul>
+</ol>
+</div>
 
 
 
@@ -7570,7 +7506,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../Futures%20Markets%20%26%20Central%20Counter%20Parties/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Futures Markets &amp; Central Counter Parties">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -7580,20 +7516,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Futures Markets &amp; Central Counter Parties
+                Index
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Forwards%20%26%20Futures%20Pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: Forwards &amp; Futures Pricing">
+          <a href="../Evolving%20into%20a%20Python%20Chainladder%20Ninja/" class="md-footer__link md-footer__link--next" aria-label="Next: Evolving into a Python Chainladder Ninja">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Forwards &amp; Futures Pricing
+                Evolving into a Python Chainladder Ninja
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -7683,24 +7619,24 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.sections", "content.tooltips", "toc.follow", "navigation.top", "content.code.annotate", "content.code.copy", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": {"Academic": "academic", "Actuarial": "annuity", "Exam": "exam", "Five": "five", "Machine Learning": "ml", "Math": "math", "Mind": "brain", "MuseScore": "musescore", "Music": "music", "OBS": "obsstudio", "Obsidian": "obsidian", "Repost": "repost", "Setup": "setup", "Seven": "seven", "Six": "six", "Tailwind": "tailwind", "Technique": "workflow", "Webdev": "web", "Workflow": "workflow", "Zen": "zenbrowser", "Zotero": "zotero", "default": "default"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.sections", "content.tooltips", "toc.follow", "navigation.top", "content.code.annotate", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": {"Academic": "academic", "Actuarial": "annuity", "Exam": "exam", "Five": "five", "Machine Learning": "ml", "Math": "math", "Mind": "brain", "MuseScore": "musescore", "Music": "music", "OBS": "obsstudio", "Obsidian": "obsidian", "Repost": "repost", "Setup": "setup", "Seven": "seven", "Six": "six", "Tailwind": "tailwind", "Technique": "workflow", "Webdev": "web", "Workflow": "workflow", "Zen": "zenbrowser", "Zotero": "zotero", "default": "default"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
   
-      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../../../etc/extra.js"></script>
+        <script src="../../etc/extra.js"></script>
       
-        <script src="../../../../etc/katex.js"></script>
+        <script src="../../etc/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
-        <script src="../../../../js/open_in_new_tab.js"></script>
+        <script src="../../js/open_in_new_tab.js"></script>
       
     
-  <!-- <script src="../../../../assets/javascripts/custom.9e5da760.min.js"></script> -->
+  <!-- <script src="../../assets/javascripts/custom.9e5da760.min.js"></script> -->
 
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
