@@ -21,7 +21,7 @@
     
     
       
-        <title>Green Letters - Hursh Gupta</title>
+        <title>Greek Letters - Hursh Gupta</title>
       
     
     
@@ -231,7 +231,7 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="Green Letters - Hursh Gupta">
+        <meta property="og:title" content="Greek Letters - Hursh Gupta">
       
         <meta property="og:description" content="Student | Actuarial Science | Economics">
       
@@ -247,7 +247,7 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="Green Letters - Hursh Gupta">
+        <meta name="twitter:title" content="Greek Letters - Hursh Gupta">
       
         <meta name="twitter:description" content="Student | Actuarial Science | Economics">
       
@@ -299,7 +299,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#green-letters" class="md-skip">
+        <a href="#greek-letters" class="md-skip">
           Skip to content
         </a>
       
@@ -332,7 +332,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Green Letters
+              Greek Letters
             
           </span>
         </div>
@@ -7614,17 +7614,142 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Greek Letters
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Green Letters
+    Greek Letters
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#risk-involved-in-option-hedging-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk involved in Option Hedging strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk involved in Option Hedging strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#black-scholes-merton-valuation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Black-Scholes-Merton Valuation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greek-letters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Greek Letters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Greek Letters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delta-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delta \(\Delta\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theta-theta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theta \(\Theta\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamma-gamma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gamma \(\Gamma\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vega-mathcalv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vega \(\mathcal{V}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rho-rho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rho \(\rho\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-need-greeks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why need Greeks?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -8840,11 +8965,231 @@
 
 
 <!-- Markdown content -->
-<h1 id="green-letters">Green Letters<a class="headerlink" href="#green-letters" title="Permanent link">¶</a></h1>
+<h1 id="greek-letters">Greek Letters<a class="headerlink" href="#greek-letters" title="Permanent link">¶</a></h1>
 <blockquote>
 <p>Greek letters are the partial derivatives with respect to model parameters that are likely to change.</p>
 </blockquote>
+<h2 id="risk-involved-in-option-hedging-strategies">Risk involved in Option Hedging strategies<a class="headerlink" href="#risk-involved-in-option-hedging-strategies" title="Permanent link">¶</a></h2>
 <h5 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h5>
+<ul>
+<li>Bank has sold an European <strong>call</strong> option<ul>
+<li>Price = $300,000</li>
+<li># of shares = 100,000</li>
+<li>Non-dividend paying</li>
+</ul>
+</li>
+<li>Specs<ul>
+<li><span class="arithmatex">\(S_{0} = 49\)</span></li>
+<li><span class="arithmatex">\(K = 50\)</span></li>
+<li><span class="arithmatex">\(r = 5\%\)</span></li>
+<li><span class="arithmatex">\(\sigma = 20\%\)</span></li>
+<li><span class="arithmatex">\(T= 20\text{ weeks}\)</span> </li>
+</ul>
+</li>
+<li>Black Scholes-Merton value = $240,000</li>
+</ul>
+<p>How does the bank hedge its risk to lock in a $60,000 profit?</p>
+<ul>
+<li>Naked position <span class="arithmatex">\(\to\)</span>  No action<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li>Covered position <span class="arithmatex">\(\to\)</span> Buy 100,000 shares today<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+</ul>
+<p>But what about the risk associated with these strategies? (Read footnotes)</p>
+<p>Thus, we can apply the stop-loss strategy</p>
+<ul>
+<li>Buy 100,000 shares as soon as price reaches $50 (to lock the profit of $300,000, the option premium)</li>
+<li>Sell 100,000 shares as soon as price falls below $50 (as the option call will not be exercised thereafter, and we don't make a loss in the value of the stock)</li>
+</ul>
+<h3 id="black-scholes-merton-valuation">Black-Scholes-Merton Valuation<a class="headerlink" href="#black-scholes-merton-valuation" title="Permanent link">¶</a></h3>
+<p>The <abbr title="Black-Scholes-Merton">BSM</abbr> value of the call/put option are related to the various input variables like so:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Input Variable</strong></th>
+<th><strong>Symbol</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Impact on Option Price</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Current Stock Price</strong></td>
+<td><span class="arithmatex">\(S\)</span></td>
+<td>The current market price of the underlying asset.</td>
+<td><span class="arithmatex">\(\uparrow\)</span> Price <span class="arithmatex">\(\implies \uparrow\)</span> Call Value <span class="arithmatex">\(\text{ and } \downarrow\)</span> Put Value</td>
+</tr>
+<tr>
+<td><strong>Strike Price</strong></td>
+<td><span class="arithmatex">\(K\)</span></td>
+<td>The fixed price at which the option holder can buy or sell the asset.</td>
+<td><span class="arithmatex">\(\uparrow\)</span> Strike <span class="arithmatex">\(\implies \downarrow\)</span> Call Value <span class="arithmatex">\(\text{ and } \uparrow\)</span> Put Value</td>
+</tr>
+<tr>
+<td><strong>Time to Expiration</strong></td>
+<td><span class="arithmatex">\(T\)</span></td>
+<td>The time remaining until the option expires (in years).</td>
+<td><span class="arithmatex">\(\uparrow\)</span> Time <span class="arithmatex">\(\implies \uparrow\)</span> Both Call and Put Value (generally)</td>
+</tr>
+<tr>
+<td><strong>Risk-Free Interest Rate</strong></td>
+<td><span class="arithmatex">\(r\)</span></td>
+<td>The theoretical rate of return on a zero-risk investment.</td>
+<td><span class="arithmatex">\(\uparrow\)</span> Rate <span class="arithmatex">\(\implies \uparrow\)</span> Call Value <span class="arithmatex">\(\text{ and } \downarrow\)</span> Put Value</td>
+</tr>
+<tr>
+<td><strong>Volatility</strong></td>
+<td><span class="arithmatex">\(\sigma\)</span></td>
+<td>The expected fluctuation or uncertainty of the underlying asset's price.</td>
+<td><span class="arithmatex">\(\uparrow\)</span> Volatility <span class="arithmatex">\(\implies \uparrow\)</span> Both Call and Put Value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="greek-letters_1">Greek Letters<a class="headerlink" href="#greek-letters_1" title="Permanent link">¶</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Definition</p>
+<p>Greek letters are the partial derivatives with respect to the model parameters that are liable to change.</p>
+</div>
+<ul>
+<li>Usually traders use the Black-Scholes-Merton model when calculating partial derivatives</li>
+<li><strong>Practitioner Black-Scholes</strong> model: <span class="arithmatex">\(\sigma\)</span> in <abbr title="Black-Scholes-Merton">BSM</abbr> is set = implied volatility when Greek letters are calculated.</li>
+</ul>
+<blockquote>
+<p>NOTE: We will denote option price, <span class="arithmatex">\(P\)</span> for put, <span class="arithmatex">\(C\)</span> for call and <span class="arithmatex">\(\Pi\)</span> for both in general.</p>
+</blockquote>
+<h3 id="delta-delta">Delta  <span class="arithmatex">\(\Delta\)</span><a class="headerlink" href="#delta-delta" title="Permanent link">¶</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Definition</p>
+<p><strong>Delta</strong> is the rate of change of the option price with respect to the underlying asset price</p>
+<div class="arithmatex">\[
+\Delta = \dfrac{\partial \text{Option Price}}{\partial \text{Underlying Asset Price}} = \dfrac{\partial{\Pi}}{\partial{S}}
+\]</div>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762750363291.webp" data-desc-position="bottom"><img align="right" alt="../../../assets/images/2025/11/4.1 Greek Letters-1762750363291.webp" src="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762750363291.webp" width="300"></a></p>
+<ul>
+<li>Here the <span class="arithmatex">\(\Delta =0.6\)</span> </li>
+</ul>
+<h5 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">¶</a></h5>
+<ul>
+<li>Stock price, <span class="arithmatex">\(S_{0} = 100\)</span></li>
+<li>Call option price, <span class="arithmatex">\(C = 10\)</span><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
+<li>Investor sold call option to buy 2000 shares</li>
+<li>Hedge by buying <span class="arithmatex">\(\Delta \times 2000 = 0.6 \times 2000 = 1200\)</span> shares<blockquote>
+<p>Gain(loss) on <strong>stock position</strong> <span class="arithmatex">\(\overset{\text{Offset}}{\iff}\)</span> Loss(gain) on <strong>option position</strong></p>
+</blockquote>
+</li>
+<li>If stock price rises by $1<ul>
+<li>Gain is $1200 (in stock position)</li>
+<li>Loss is $1200 (<span class="arithmatex">\(= 0.6 \times \$1 = \$0.6\)</span>, in options position)</li>
+</ul>
+</li>
+<li>We did this buy noting<ul>
+<li><span class="arithmatex">\(\text{change in }C= \Delta \times\text{change in }S\)</span></li>
+<li><span class="arithmatex">\(\Delta_{C} = \dfrac{\partial{C}}{\partial{S}}\)</span>, <span class="arithmatex">\(0 \leq \Delta_{C}\leq1\)</span></li>
+<li><span class="arithmatex">\(\Delta_{P} = \dfrac{\partial{P}}{\partial{S}}\)</span>, <span class="arithmatex">\(-1 \leq \Delta_{P} \leq 0\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="theta-theta">Theta <span class="arithmatex">\(\Theta\)</span><a class="headerlink" href="#theta-theta" title="Permanent link">¶</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Definition</p>
+<p><strong>Theta</strong> of a derivative (or portfolio) is the rate of change of value with respect to the passage of time (i.e. time to maturity) with ceteris paribus.</p>
+<div class="arithmatex">\[
+\Theta = \dfrac{\partial\text{Value of Portfolio}}{\partial{\text{Time to Maturity}}} = \dfrac{\partial{f}}{\partial T}
+\]</div>
+</div>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762751851447.webp" data-desc-position="bottom"><img align="right" alt="../../../assets/images/2025/11/4.1 Greek Letters-1762751851447.webp" src="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762751851447.webp" width="300"></a></p>
+<figcaption>
+<p><span class="arithmatex">\(\Theta_{C}\)</span>, Theta for call option with <span class="arithmatex">\(K=50, \sigma=25\%, r=0, T=2\)</span>.</p>
+</figcaption>
+</figure>
+<ul>
+<li>The <span class="arithmatex">\(\Theta\)</span> of a call or put is usually negative.<ul>
+<li>The value, (<span class="arithmatex">\(P\)</span> or <span class="arithmatex">\(S\)</span>) of a <strong>long</strong><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">4</a></sup> call or put option, declines when <span class="arithmatex">\(T\)</span> increases, if the price of underlying, <span class="arithmatex">\(S\)</span> and volatility, <span class="arithmatex">\(\sigma\)</span> remain the same.</li>
+</ul>
+</li>
+<li>Change in option value, <span class="arithmatex">\(P\)</span> or <span class="arithmatex">\(S\)</span> = <span class="arithmatex">\(\Theta \times dt\)</span><ul>
+<li>where <span class="arithmatex">\(dt = \dfrac{1}{252}\text{years} \sim 0.004\text{ years}\)</span> (one trading day)</li>
+<li>If <span class="arithmatex">\(\Theta_{C}=-13.5\)</span> then after one day, change in <span class="arithmatex">\(C = -13.5 \times 0.004 = -0.054\)</span></li>
+</ul>
+</li>
+</ul>
+<h5 id="variation-of-theta-with-various-strikes-k">Variation of <span class="arithmatex">\(\Theta\)</span> with various strikes, <span class="arithmatex">\(K\)</span><a class="headerlink" href="#variation-of-theta-with-various-strikes-k" title="Permanent link">¶</a></h5>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762751968685.webp" data-desc-position="bottom"><img alt="../../../assets/images/2025/11/4.1 Greek Letters-1762751968685.webp" src="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762751968685.webp"></a></p>
+<figcaption>
+<p>Variation of <span class="arithmatex">\(\Theta\)</span> with Time to Maturity for various <span class="arithmatex">\(K\)</span> and <span class="arithmatex">\(S_{0}=50, r=0, \sigma=25\%\)</span>.</p>
+</figcaption>
+</figure>
+<ul>
+<li><span class="arithmatex">\(\Theta\)</span> is less negative for option that are close to the money</li>
+</ul>
+<h3 id="gamma-gamma">Gamma <span class="arithmatex">\(\Gamma\)</span><a class="headerlink" href="#gamma-gamma" title="Permanent link">¶</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Definition</p>
+<p><strong>Gamma</strong> is the rate of change of delta with respect to the price of the underlying.</p>
+<div class="arithmatex">\[
+\Gamma = \dfrac{\partial{\Delta}}{\partial{\text{Price of Underlying}}} = \dfrac{\partial^{2}{\Pi}}{\partial S^{2}}
+\]</div>
+</div>
+<ul>
+<li><span class="arithmatex">\(\Gamma\)</span> is greatest for options that are close to the money.</li>
+</ul>
+<h3 id="vega-mathcalv">Vega <span class="arithmatex">\(\mathcal{V}\)</span><a class="headerlink" href="#vega-mathcalv" title="Permanent link">¶</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Definition</p>
+<p><strong>Vega</strong> is the rate of change of value of a derivatives portfolio with respect to volatility</p>
+<div class="arithmatex">\[
+\mathcal{V} = \dfrac{\partial{\text{Value of Portfolio}}}{\partial\sigma} = \dfrac{\partial{f}}{\partial{\sigma}}
+\]</div>
+</div>
+<ul>
+<li>If <span class="arithmatex">\(\mathcal{V} = 12.1\)</span>, it means<ul>
+<li>At 1% increase in implied volatility<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">5</a></sup>, <span class="arithmatex">\(\sigma\)</span> the increase in value of the option <span class="arithmatex">\(=0.01 \times 13.1 = 0.121\)</span></li>
+</ul>
+</li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762752867138.webp" data-desc-position="bottom"><img alt="../../../assets/images/2025/11/4.1 Greek Letters-1762752867138.webp" src="../../../../../../assets/images/2025/11/4.1 Greek Letters-1762752867138.webp"></a></p>
+<figcaption>
+<p>Vega, <span class="arithmatex">\(\mathcal{V}\)</span> for call or put option (<span class="arithmatex">\(K=50, \sigma=25\%, r=0, T=2\)</span>)</p>
+</figcaption>
+</figure>
+<h3 id="rho-rho">Rho <span class="arithmatex">\(\rho\)</span><a class="headerlink" href="#rho-rho" title="Permanent link">¶</a></h3>
+<div class="admonition partial">
+<p class="admonition-title">Definition</p>
+<p>Rate of change of value of a derivative with respect to the interest rate with ceteris paribus.</p>
+</div>
+<p>$$<br>
+\rho = \dfrac{\partial{\text{Value of Derivative}}}{\partial{\text{Interest Rate}}} = \dfrac{\partial{f}}{\partial{r}}<br>
+$$<br>
+- If <span class="arithmatex">\(\rho=8.91\)</span> it means<br>
+    - a 1% increase in the risk free rate, increases the option value by <span class="arithmatex">\(0.01\times 8.91=0.0891\)</span></p>
+<h2 id="why-need-greeks">Why need Greeks?<a class="headerlink" href="#why-need-greeks" title="Permanent link">¶</a></h2>
+<ul>
+<li>Greeks contain information about <strong>option sensitivity</strong> into something that can be visualized.</li>
+<li>Magnitude of changes can be <strong>compared</strong> and used to <em>offset</em> each other.</li>
+<li>Can easily be <strong>extended</strong> to an entire portfolio on a given underlying.</li>
+</ul>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>If stock price declines to $40, buyer will not exercise call option. Thus, we just experience loss on shares as $900,000, while the price of option was $300,000.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>Say we don't have the shares. If the price rises to $60, we have to buy the shares at that spot price and sell it to the buyer of the call at $50, thus incurring a total loss of $1,000,000, while the price of option was $300,000.&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>In case of put option, we write <span class="arithmatex">\(P\)</span>&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>Note that long position refers to the act of buying or holding <strong>the option</strong> (not the underlying or what-so-ever)&nbsp;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:6">
+<p>For implied volatility refer to Practitioner Black-Scholes&nbsp;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
 
