@@ -9366,6 +9366,24 @@ $$<br>
 \text{Amt Borrowed} = 2.38 - 25\times \dfrac{1}{2} = 10.12
 \]</div>
 <h3 id="the-risk-neutral-approach">The Risk-Neutral Approach<a class="headerlink" href="#the-risk-neutral-approach" title="Permanent link">¶</a></h3>
+<ul>
+<li>Value of option, <span class="arithmatex">\(V(0)\)</span> → the value of the replicating portfolio</li>
+<li>Equivalent method = risk-neutral valuation</li>
+<li><span class="arithmatex">\(q\)</span> is the risk neutral probability for an "up" move (<span class="arithmatex">\(U\)</span>)</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762791823593.webp" data-desc-position="bottom"><img align="align" alt="5.5 Options-1762791823593.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762791823593.webp"></a></p>
+<div class="arithmatex">\[
+V(0) = \dfrac{q \times V(U) + (1-q)\times V(D)}{(1+R_{f})}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(S(U)\)</span> and <span class="arithmatex">\(S(D)\)</span> are asset prices ("up" and "down" moves)</li>
+<li><span class="arithmatex">\(V(U)\)</span> and <span class="arithmatex">\(V(D)\)</span> are option values ("up" and "down" moves)</li>
+</ul>
+<p>Thus we can find <span class="arithmatex">\(q\)</span> since we already observe <span class="arithmatex">\(S(0)\)</span>, and have speculations about what "up" and "down" movements will show up at which <span class="arithmatex">\(R_{f}\)</span> rate of interest.</p>
+<div class="arithmatex">\[
+q = \dfrac{(1+R_{f})\times S(0) - S(D)}{S(U)-S(D)}
+\]</div>
+<p>And then <span class="arithmatex">\(C(U)\)</span> and <span class="arithmatex">\(C(D)\)</span> can be derived since we known <span class="arithmatex">\(K\)</span>.</p>
 <h3 id="black-scholes-option-pricing-model">Black-Scholes Option Pricing Model<a class="headerlink" href="#black-scholes-option-pricing-model" title="Permanent link">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Geometric Brownian Motion</p>
