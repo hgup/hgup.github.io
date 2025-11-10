@@ -7702,21 +7702,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Call Option">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pricing-at-expiration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pricing at Expiration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -7726,13 +7711,58 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Put Option">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Quotes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinations-of-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinations of Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combinations of Options">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pricing-at-expiration_1" class="md-nav__link">
+  <a href="#protective-put-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Pricing at Expiration
+      Protective Put Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#covered-call-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covered Call Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-call-parity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Put-Call Parity
     </span>
   </a>
   
@@ -7744,14 +7774,74 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#valuing-options-before-expiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valuing Options (before expiration)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Valuing Options (before expiration)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#american-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      American Call
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-value-determinants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Value Determinants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-pricing-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Pricing Formula
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option Pricing Formula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binomial-option-pricing-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binomial Option Pricing Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-risk-neutral-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Risk-Neutral Approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#black-scholes-option-pricing-model" class="md-nav__link">
     <span class="md-ellipsis">
       Black-Scholes Option Pricing Model
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Black-Scholes Option Pricing Model">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#pricing-index-options" class="md-nav__link">
@@ -8871,9 +8961,9 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>In-the-Money (ITM) Option</strong></td>
+<td><strong>In-the-Money (<abbr title="In The Money">ITM</abbr>) Option</strong></td>
 <td>that would lead to a positive cashflow to the holder <strong>if exercised immediately</strong></td>
-<td><em>Call</em> opt on the index <em>if</em> spot price <span class="arithmatex">\(\gt\)</span> strike price. (Much higher: <strong>deep ITM</strong>)</td>
+<td><em>Call</em> opt on the index <em>if</em> spot price <span class="arithmatex">\(\gt\)</span> strike price. (Much higher: <strong>deep <abbr title="In The Money">ITM</abbr></strong>)</td>
 <td></td>
 </tr>
 <tr>
@@ -8889,7 +8979,7 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Out-of-the-Money (OTM) Option</strong></td>
+<td><strong>Out-of-the-Money (<abbr title="Out of The Money">OTM</abbr>) Option</strong></td>
 <td><br>[…] negative cashflow […]</td>
 <td><br>[…] spot price <span class="arithmatex">\(\lt\)</span> strike price.</td>
 <td></td>
@@ -8902,7 +8992,7 @@
 </tr>
 <tr>
 <td><strong>Intrinsic Value of an Option</strong></td>
-<td>Intrinsic value = ITM <em>else</em> 0 (if call is OTM).</td>
+<td>Intrinsic value = <abbr title="In The Money">ITM</abbr> <em>else</em> 0 (if call is <abbr title="Out of The Money">OTM</abbr>).</td>
 <td><span class="arithmatex">\(\max(0,S_{t}-K)\)</span> for call.</td>
 <td></td>
 </tr>
@@ -8925,7 +9015,7 @@
 </li>
 <li>Option Premium</li>
 </ol>
-<h2 id="call-option">Call Option<a class="headerlink" href="#call-option" title="Permanent link">¶</a></h2>
+<h3 id="call-option">Call Option<a class="headerlink" href="#call-option" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Buyer has right to buy the underlying asset at strike price</p>
 </blockquote>
@@ -8937,22 +9027,24 @@
 <li>Higher the <span class="arithmatex">\(S_{t}\)</span>, more the profit he (buyer) makes.</li>
 <li>If <span class="arithmatex">\(S_{T} \lt\text{Strike}\)</span> , he leaves the option unexercised. The buyer loses the premium he paid.</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Interpretation</p>
+<p>To identify the strike price of a call, see where the elbow breaks</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762779812005.webp" data-desc-position="bottom"><img alt="assets/images/2025/11/5.5 Options-1762779812005.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762779812005.webp"></a></p>
 <h5 id="short-call-writer">Short Call (Writer)<a class="headerlink" href="#short-call-writer" title="Permanent link">¶</a></h5>
 <ul>
 <li>Higher the <span class="arithmatex">\(S_{t}\)</span>, more the loss he (writer) makes.</li>
 <li>If <span class="arithmatex">\(S_{T}\lt Strike\)</span>, option left unexercised. The writer keeps the premium (profit)</li>
 </ul>
-<h3 id="pricing-at-expiration">Pricing at Expiration<a class="headerlink" href="#pricing-at-expiration" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762786212700.webp" data-desc-position="bottom"><img alt="5.5 Options-1762786212700.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762786212700.webp"></a></p>
+<h4 id="pricing-at-expiration">Pricing at Expiration<a class="headerlink" href="#pricing-at-expiration" title="Permanent link">¶</a></h4>
 <ul>
 <li>American = European (with same characteristics) at expiration</li>
-<li>If the call is ITM, price = <span class="arithmatex">\(S_{T}-K\)</span></li>
+<li>If the call is <abbr title="In The Money">ITM</abbr>, price = <span class="arithmatex">\(S_{T}-K\)</span></li>
 <li>Out of the money, worthless, price = <span class="arithmatex">\(\max(S_{T}-K,0)\)</span></li>
 </ul>
-<div class="grid">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762779792960.webp" data-desc-position="bottom"><img alt="assets/images/2025/11/5.5 Options-1762779792960.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762779792960.webp"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762779812005.webp" data-desc-position="bottom"><img alt="assets/images/2025/11/5.5 Options-1762779812005.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762779812005.webp"></a></p>
-</div>
-<h2 id="put-option">Put Option<a class="headerlink" href="#put-option" title="Permanent link">¶</a></h2>
+<h3 id="put-option">Put Option<a class="headerlink" href="#put-option" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Buyer has the right to sell the underlying asset at strike price</p>
 </blockquote>
@@ -8961,16 +9053,320 @@
 <li>Lower the <span class="arithmatex">\(S_{t}\)</span>, more the profit he makes. (He can sell at a higher price and buy again at a lower price)</li>
 <li>If <span class="arithmatex">\(S_{T} \gt\text{Strike}\)</span>, option left unexercised. Buyer loses the premium he paid to buy the put option.</li>
 </ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762785833549.webp" data-desc-position="bottom"><img alt="5.5 Options-1762785833549.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762785833549.webp"></a></p>
 <h5 id="short-put-writer">Short Put (Writer)<a class="headerlink" href="#short-put-writer" title="Permanent link">¶</a></h5>
 <ul>
 <li>Lower the <span class="arithmatex">\(S_{t}\)</span>, more the loss he (writer) makes. (Buyer's profit is the seller's loss)</li>
 <li>If <span class="arithmatex">\(S_{T}\lt Strike\)</span>, option left unexercised. The writer keeps the premium (profit)</li>
 </ul>
-<h3 id="pricing-at-expiration_1">Pricing at Expiration<a class="headerlink" href="#pricing-at-expiration_1" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762786231206.webp" data-desc-position="bottom"><img alt="5.5 Options-1762786231206.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762786231206.webp"></a></p>
+<h4 id="pricing-at-expiration_1">Pricing at Expiration<a class="headerlink" href="#pricing-at-expiration_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>In the money: <span class="arithmatex">\(E - S_{T}\)</span></li>
 </ul>
-<h2 id="black-scholes-option-pricing-model">Black-Scholes Option Pricing Model<a class="headerlink" href="#black-scholes-option-pricing-model" title="Permanent link">¶</a></h2>
+<h2 id="option-value">Option Value<a class="headerlink" href="#option-value" title="Permanent link">¶</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Definition</p>
+<p><strong>Speculative Value</strong> = <span class="arithmatex">\(\text{Option Premium}-\text{Intrinsic Value}\)</span></p>
+</div>
+<p>And thus,</p>
+<div class="arithmatex">\[
+\text{Option Premium} = \text{Intrinsic Value} + \text{Speciulative Value}
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762786265886.webp" data-desc-position="bottom"><img alt="How certain option combinations can be used to create constant outcomes" src="../../../../assets/images/2025/11/5.5%20Options-1762786265886.webp"></a></p>
+<h2 id="option-quotes">Option Quotes<a class="headerlink" href="#option-quotes" title="Permanent link">¶</a></h2>
+<ul>
+<li>Remember that if your <span class="arithmatex">\(\text{Strike}\gt\text{Current Price}\)</span>, you will wish to sell it (for more, at strike) <span class="arithmatex">\(\implies\)</span> Put option is <abbr title="In The Money">ITM</abbr> <span class="arithmatex">\(\implies\)</span> Call option is <abbr title="Out of The Money">OTM</abbr></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recent<br>Price<br>(IBM)</td>
+<td>Option/Strike</td>
+<td>Exp.</td>
+<td>Call<br><br>Vol.</td>
+<td>Call<br><br>Last</td>
+<td>Put<br><br>Vol.</td>
+<td>Put<br><br>Last</td>
+</tr>
+<tr>
+<td>167.3</td>
+<td>162.5</td>
+<td>Jul</td>
+<td>21</td>
+<td>5.85</td>
+<td>145</td>
+<td>.89</td>
+</tr>
+<tr>
+<td>167.3</td>
+<td>165</td>
+<td>Jul</td>
+<td>108</td>
+<td>3.95</td>
+<td>150</td>
+<td>1.48</td>
+</tr>
+<tr>
+<td><strong>167.3</strong></td>
+<td><strong>170</strong></td>
+<td><strong>Jul</strong></td>
+<td><strong>212</strong></td>
+<td><strong>1.25</strong></td>
+<td><strong>335</strong></td>
+<td><strong>3.95</strong></td>
+</tr>
+<tr>
+<td>167.3</td>
+<td>170</td>
+<td>Aug</td>
+<td>1449</td>
+<td>3.15</td>
+<td>1518</td>
+<td>6.75</td>
+</tr>
+<tr>
+<td>167.3</td>
+<td>170</td>
+<td>Sep</td>
+<td>156</td>
+<td>3.91</td>
+<td>264</td>
+<td>7.71</td>
+</tr>
+<tr>
+<td>167.3</td>
+<td>175</td>
+<td>Sep</td>
+<td>101</td>
+<td>2.18</td>
+<td>78</td>
+<td>11.05</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="arithmatex">\(170 \gt 167.3\)</span> <span class="arithmatex">\(\implies\)</span> Put option is <abbr title="In The Money">ITM</abbr>, Call is <abbr title="Out of The Money">OTM</abbr></li>
+<li>212 <strong>call options</strong> with this exercise price were traded<ul>
+<li>The Call option itself traded for $1.25 i.e. <span class="arithmatex">\(C = 1.25\)</span></li>
+<li>The option is for 100 stocks </li>
+<li>So, cost of buying this call = $125 (+ commissions, if any)</li>
+</ul>
+</li>
+<li>335 <strong>put options</strong> with this exercise price were traded<ul>
+<li><span class="arithmatex">\(P = 3.95\)</span></li>
+<li>100 shares of stocks, so cost = 395 (+ commissions)</li>
+</ul>
+</li>
+</ul>
+<h2 id="combinations-of-options">Combinations of Options<a class="headerlink" href="#combinations-of-options" title="Permanent link">¶</a></h2>
+<ul>
+<li>Use puts and calls as building blocks to make more complex option contracts.</li>
+</ul>
+<h3 id="protective-put-strategy">Protective Put Strategy<a class="headerlink" href="#protective-put-strategy" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>Optimistic: Downside protection and upside potential.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762787266898.webp" data-desc-position="bottom"><img alt="5.5 Options-1762787266898.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762787266898.webp"></a></p>
+<ul>
+<li>It sees a profit, because option premium = 10, strike price = 50 and <span class="arithmatex">\(S_{0}\)</span> = 40</li>
+<li>Alternate scenario, if Strike price was 45, then draw the same diagram and you will see that the green line (of the Protective Put strategy) starts from -5 and elbows at 45 then goes up, touching the x-axis at 50</li>
+</ul>
+<h3 id="covered-call-strategy">Covered Call Strategy<a class="headerlink" href="#covered-call-strategy" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762787292415.webp" data-desc-position="bottom"><img alt="5.5 Options-1762787292415.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762787292415.webp"></a></p>
+<ul>
+<li>Since the loss potential in selling a call is infinite, we can "cover the call" by buying the same stock.</li>
+</ul>
+<h3 id="put-call-parity">Put-Call Parity<a class="headerlink" href="#put-call-parity" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762788708386.webp" data-desc-position="bottom"><img alt="5.5 Options-1762788708386.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762788708386.webp"></a></p>
+<p>This is a portfolio with</p>
+<ul>
+<li>Call with strike <span class="arithmatex">\(K = 25\)</span></li>
+<li>Bond with future value <span class="arithmatex">\(25\)</span> (same as <span class="arithmatex">\(K\)</span>)</li>
+</ul>
+<div class="arithmatex">\[
+C_{0} + \dfrac{K}{(1+r)^T}
+\]</div>
+<hr>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762788856624.webp" data-desc-position="bottom"><img alt="5.5 Options-1762788856624.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762788856624.webp"></a></p>
+<p>Portfolio with</p>
+<ul>
+<li>Share of stock with price <span class="arithmatex">\(S_{0} = 25\)</span></li>
+<li>Put with a strike <span class="arithmatex">\(K = 25\)</span></li>
+</ul>
+<hr>
+<p>They have the same value!</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762788966173.webp" data-desc-position="bottom"><img alt="5.5 Options-1762788966173.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762788966173.webp"></a></p>
+<p>Thus they have the same value today:</p>
+<p>$$<br>
+\text{Put-Call Parity}:  C_{0} + \dfrac{K}{(1+r)^T} = P_{0} +S_{0}<br>
+$$<br>
+Or in words</p>
+<div class="arithmatex">\[
+\text{Underlying Price} + \text{Price of Put} = \text{Price of Call} + PV(\text{Redemption of Zero-coup Bond1})
+\]</div>
+<blockquote>
+<p>Holds when Put and Call have the same</p>
+<ul>
+<li>Exercise price, <span class="arithmatex">\(C=P\)</span></li>
+<li>Expiration Date, <span class="arithmatex">\(T\)</span></li>
+</ul>
+</blockquote>
+<p>Hence, we can replicate <strong>buying a stock</strong> by buying a call, selling a put<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> and buying a zero coupon bond.</p>
+<div class="arithmatex">\[
+S_{0} = C_{0} - P_{0} + \dfrac{K}{(1+r)^T}
+\]</div>
+<ul>
+<li>We can also find the <strong>price/value of a put</strong> if we know the price of a call option, duration and strike price.</li>
+</ul>
+<h2 id="valuing-options-before-expiration">Valuing Options (before expiration)<a class="headerlink" href="#valuing-options-before-expiration" title="Permanent link">¶</a></h2>
+<h3 id="american-call">American Call<a class="headerlink" href="#american-call" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762789364030.webp" data-desc-position="bottom"><img alt="5.5 Options-1762789364030.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762789364030.webp"></a></p>
+<ul>
+<li>Market value is the vertical distance between the Red curve and horizontal axis.</li>
+<li>Time value is the vertical distance between Red curve and green call value line.</li>
+<li>Intrinsic value is the vertical distance between the green call value line and horizontal axis.</li>
+</ul>
+<p>Thus, market value lies between <span class="arithmatex">\(S_{T}\)</span> curve and the Intrinsic call value line.</p>
+<div class="arithmatex">\[
+\max(S_{0}-K,0) \leq C_{0} \leq S_{0}
+\]</div>
+<h2 id="option-value-determinants">Option Value Determinants<a class="headerlink" href="#option-value-determinants" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Determinant</th>
+<th>Call</th>
+<th>Put</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(S_{0}\)</span>, current price</td>
+<td>+</td>
+<td>-</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(K\)</span>, strike</td>
+<td>-</td>
+<td>+</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(r\)</span>, risk-free interest rate</td>
+<td>+</td>
+<td>-</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sigma\)</span>, volatility in stock price</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(T\)</span>, expiration</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dividend paying</td>
+<td>-</td>
+<td>+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition quote">
+<p class="admonition-title">Mental Model</p>
+<p>Think of value as "value to the holder/buyer"</p>
+<ul>
+<li>More the stock price, <ul>
+<li>the buyer of call, will buy asset at the strike <span class="arithmatex">\(\implies\)</span>  profits for him.</li>
+<li>the buyer of put, will have to pay a higher price. Sad for him</li>
+</ul>
+</li>
+<li>More the strike,<ul>
+<li>higher the price buyer of call, needs to pay. Sad for him</li>
+<li>the buyer of put, will get a higher strike. profits for him</li>
+</ul>
+</li>
+<li>If <span class="arithmatex">\(r\)</span> is high, <ul>
+<li>call buyer has to borrow "less money" to pay the strike price.</li>
+<li>put buyer will discount the strike price, and feel scammed.</li>
+</ul>
+</li>
+<li>If there is higher volatility in stock price, the buyer has the kill-switch, it is always a risk for the seller. Good for buyer</li>
+<li>More time to expiration, means more time to act. Who has the kill-switch? The buyer. So higher risk for the seller. Good for buyer</li>
+</ul>
+</div>
+<h5 id="additional-points-for-american-options">Additional Points for American Options<a class="headerlink" href="#additional-points-for-american-options" title="Permanent link">¶</a></h5>
+<p>This should ALWAYS hold!</p>
+<div class="arithmatex">\[
+\max(S_{0}-K,0) \leq C_{0} \leq S_{0}
+\]</div>
+<ol>
+<li><span class="arithmatex">\(C_{0} \lt S_{0}\)</span> (no arbitrages)</li>
+<li><span class="arithmatex">\(\max(S_{0}-K,0) \lt C_{0}\)</span>   (meaning, strike should be higher than <span class="arithmatex">\(S_{0}\)</span>, no arbitrages)</li>
+<li><span class="arithmatex">\(S_{0} = 0 \implies C_{0} = 0\)</span></li>
+<li><span class="arithmatex">\(S_{T} \gg K \implies C_{0} \to S_{0} - \dfrac{K}{(1+r)^T}\)</span></li>
+</ol>
+<h2 id="option-pricing-formula">Option Pricing Formula<a class="headerlink" href="#option-pricing-formula" title="Permanent link">¶</a></h2>
+<h3 id="binomial-option-pricing-model">Binomial Option Pricing Model<a class="headerlink" href="#binomial-option-pricing-model" title="Permanent link">¶</a></h3>
+<ul>
+<li><span class="arithmatex">\(S_{0}= \$25\)</span></li>
+<li>At <span class="arithmatex">\(t=1\)</span>, <span class="arithmatex">\(S_{1}\)</span> is either 15% more or 15% less (28.75 or 21.25)</li>
+<li>
+<p>What is the value of at-the-money option?<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762790885719.webp" data-desc-position="bottom"><img align="right" alt="5.5 Options-1762790885719.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762790885719.webp" width="300"></a></p>
+</li>
+<li>
+<p>The payoffs in the next period are indicated as <span class="arithmatex">\(C_{1}\)</span></p>
+</li>
+<li>Replicate the payoffs of call option with a <strong>levered position in the stock</strong><ul>
+<li>Borrow the PV(21.25, lower point) and buy one stock</li>
+<li>Thus, net payoff is now 7.5 or 0</li>
+<li><span class="arithmatex">\(25 - \dfrac{21.25}{(1+R_{f})}\)</span></li>
+</ul>
+</li>
+</ul>
+<p>Thus, value the call option today as <strong>half the value of levered-equity portfolio</strong> (the expected value of the portfolio.)</p>
+<p>$$<br>
+C_{0} = \dfrac{1}{2}\left(25 - \dfrac{21.25}{(1+R_{f})}\right)<br>
+$$<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762791200489.webp" data-desc-position="bottom"><img alt="5.5 Options-1762791200489.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762791200489.webp" width="500"></a></p>
+<h4 id="delta">Delta<a class="headerlink" href="#delta" title="Permanent link">¶</a></h4>
+<ul>
+<li>See <a href="../4.1%20Greek%20Letters/#delta-delta">Delta in Greek Letters</a></li>
+</ul>
+<div class="arithmatex">\[
+\Delta = \dfrac{\text{Swing of call}}{\text{Swing of Stock}} = \dfrac{3.75}{7.5} = \dfrac{1}{2}
+\]</div>
+<ul>
+<li>Delta of a call option is positive,</li>
+<li>Delta of a put option is negative</li>
+</ul>
+<div class="arithmatex">\[
+\text{Value of call} = S_{0} \times \Delta - \text{Amount borrowed}
+\]</div>
+<p>Thus, we can find amount borrowed as</p>
+<div class="arithmatex">\[
+\text{Amt Borrowed} = 2.38 - 25\times \dfrac{1}{2} = 10.12
+\]</div>
+<h3 id="the-risk-neutral-approach">The Risk-Neutral Approach<a class="headerlink" href="#the-risk-neutral-approach" title="Permanent link">¶</a></h3>
+<h3 id="black-scholes-option-pricing-model">Black-Scholes Option Pricing Model<a class="headerlink" href="#black-scholes-option-pricing-model" title="Permanent link">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Geometric Brownian Motion</p>
 <p>A simple and well-known equation that models <em>the way in which stock prices fluctuate</em>.</p>
@@ -9029,6 +9425,9 @@ C = S_{0} \Phi(d_{1}) - F_{0} e^{ -rT } \Phi(d_{2})
 <ol>
 <li id="fn:1">
 <p>Not in case of European options&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>Which means we should already own a put.&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 </ol>
 </div>
