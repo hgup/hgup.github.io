@@ -7583,19 +7583,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Risk &amp; Return">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-of-risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Definition of Risk
-    </span>
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#risk-return-of-a-single-asset" class="md-nav__link">
     <span class="md-ellipsis">
       Risk &amp; Return of a single asset
@@ -7603,8 +7593,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#risk-return-of-portfolio" class="md-nav__link">
     <span class="md-ellipsis">
       Risk &amp; Return of Portfolio
@@ -7612,8 +7602,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#optimal-weights" class="md-nav__link">
     <span class="md-ellipsis">
       Optimal Weights
@@ -7621,8 +7611,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#portfolio-selection" class="md-nav__link">
     <span class="md-ellipsis">
       Portfolio Selection
@@ -7630,8 +7620,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#capm-capital-asset-pricing-model" class="md-nav__link">
     <span class="md-ellipsis">
       CAPM [Capital Asset Pricing Model]
@@ -7639,8 +7629,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#extended-capm" class="md-nav__link">
     <span class="md-ellipsis">
       Extended CAPM
@@ -7648,9 +7638,13 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#arbitrage-pricing-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arbitrage Pricing Theory
+    </span>
+  </a>
   
 </li>
       
@@ -8980,40 +8974,39 @@
 
 <!-- Markdown content -->
 <h2 id="risk-return">Risk &amp; Return<a class="headerlink" href="#risk-return" title="Permanent link">¶</a></h2>
-<h3 id="definition-of-risk">Definition of Risk<a class="headerlink" href="#definition-of-risk" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong>Definition:</strong> Risk refers to the variability of the expected returns associated with a given security or asset.</li>
-</ul>
-<p><strong>Problem Checklist</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">Definition of risk</p>
+<p><strong>Risk</strong> refers to the variability of the expected returns associated with a given security or asset.</p>
+</div>
+<h5 id="problem-checklist">Problem Checklist<a class="headerlink" href="#problem-checklist" title="Permanent link">¶</a></h5>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> <strong>Example 1</strong>: Rate of return = Current Yield + Capital gains/loss</li>
 </ul>
-<hr>
-<h3 id="risk-return-of-a-single-asset">Risk &amp; Return of a single asset<a class="headerlink" href="#risk-return-of-a-single-asset" title="Permanent link">¶</a></h3>
-<h4 id="sensitivity-analysis">Sensitivity Analysis<a class="headerlink" href="#sensitivity-analysis" title="Permanent link">¶</a></h4>
+<h2 id="risk-return-of-a-single-asset">Risk &amp; Return of a single asset<a class="headerlink" href="#risk-return-of-a-single-asset" title="Permanent link">¶</a></h2>
+<h5 id="sensitivity-analysis">Sensitivity Analysis<a class="headerlink" href="#sensitivity-analysis" title="Permanent link">¶</a></h5>
 <ul>
 <li><span class="arithmatex">\(\text{Range} = \text{Best}-\text{Worst}\)</span></li>
 </ul>
-<h4 id="probability-distribution">Probability (Distribution)<a class="headerlink" href="#probability-distribution" title="Permanent link">¶</a></h4>
+<h5 id="probability-distribution">Probability (Distribution)<a class="headerlink" href="#probability-distribution" title="Permanent link">¶</a></h5>
 <ul>
 <li><span class="arithmatex">\(\bar{R} = \sum_{i=1}^n R_{i}\times P_{i}\)</span> (expected returns)</li>
 </ul>
-<h4 id="standard-deviation">Standard Deviation<a class="headerlink" href="#standard-deviation" title="Permanent link">¶</a></h4>
+<h5 id="standard-deviation">Standard Deviation<a class="headerlink" href="#standard-deviation" title="Permanent link">¶</a></h5>
 <div class="arithmatex">\[
 \sigma=\sqrt{ \sum_{t=1}^n(R_{t} - \bar{R})^2 \times P_{i} }
 \]</div>
-<h4 id="coefficient-of-variation">Coefficient of Variation<a class="headerlink" href="#coefficient-of-variation" title="Permanent link">¶</a></h4>
+<h5 id="coefficient-of-variation">Coefficient of Variation<a class="headerlink" href="#coefficient-of-variation" title="Permanent link">¶</a></h5>
 <ul>
 <li><em>measure of risk per unit of expected return</em>. Relative values to enable comparison of risk (assets having different expected values)</li>
 <li><span class="arithmatex">\(CV = \dfrac{\sigma_{r}}{\bar{R}}\)</span></li>
 </ul>
 <hr>
-<h3 id="risk-return-of-portfolio">Risk &amp; Return of Portfolio<a class="headerlink" href="#risk-return-of-portfolio" title="Permanent link">¶</a></h3>
-<h4 id="portfolio-definition">Portfolio Definition<a class="headerlink" href="#portfolio-definition" title="Permanent link">¶</a></h4>
+<h2 id="risk-return-of-portfolio">Risk &amp; Return of Portfolio<a class="headerlink" href="#risk-return-of-portfolio" title="Permanent link">¶</a></h2>
+<h5 id="portfolio-definition">Portfolio Definition<a class="headerlink" href="#portfolio-definition" title="Permanent link">¶</a></h5>
 <ul>
 <li>Portfolio = two ore more securities (assets)</li>
 </ul>
-<h4 id="portfolio-expected-return">Portfolio Expected Return<a class="headerlink" href="#portfolio-expected-return" title="Permanent link">¶</a></h4>
+<h5 id="portfolio-expected-return">Portfolio Expected Return<a class="headerlink" href="#portfolio-expected-return" title="Permanent link">¶</a></h5>
 <div class="arithmatex">\[
 E(r_{p}) = \sum^n w_{i}E(r_{i})
 \]</div>
@@ -9022,11 +9015,11 @@ E(r_{p}) = \sum^n w_{i}E(r_{i})
 <li><span class="arithmatex">\(r_{i}\)</span> return for asset <span class="arithmatex">\(i\)</span></li>
 <li><span class="arithmatex">\(n\)</span> number of assets in portfolio</li>
 </ul>
-<p><strong>Problem Checklist</strong></p>
+<h5 id="problem-checklist_1">Problem Checklist<a class="headerlink" href="#problem-checklist_1" title="Permanent link">¶</a></h5>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Example 2</li>
 </ul>
-<h4 id="portfolio-risk-two-asset-portfolio">Portfolio Risk (Two-asset Portfolio)<a class="headerlink" href="#portfolio-risk-two-asset-portfolio" title="Permanent link">¶</a></h4>
+<h5 id="portfolio-risk-two-asset-portfolio">Portfolio Risk (Two-asset Portfolio)<a class="headerlink" href="#portfolio-risk-two-asset-portfolio" title="Permanent link">¶</a></h5>
 <div class="arithmatex">\[
 \sigma^2_{p} = w_{1}^2\sigma^2_{1} + w_{2}^2\sigma_{2}^2 + 2w_{1}w_{2}(\sigma_{12})
 \]</div>
@@ -9034,19 +9027,19 @@ E(r_{p}) = \sum^n w_{i}E(r_{i})
 <li><span class="arithmatex">\(\sigma_{12}\)</span> = Covariance between returns of two assets (<span class="arithmatex">\(= \rho_{12}\sigma_{1}\sigma_{2}\)</span>)</li>
 </ul>
 <hr>
-<h4 id="notable-inferences">Notable Inferences<a class="headerlink" href="#notable-inferences" title="Permanent link">¶</a></h4>
+<h5 id="notable-inferences">Notable Inferences<a class="headerlink" href="#notable-inferences" title="Permanent link">¶</a></h5>
 <ul>
 <li>Two assets <strong>CAN</strong> be combined so that portfolio risk <span class="arithmatex">\(&lt;\)</span> individual assets</li>
 <li>For given weights, portfolio standard deviation <span class="arithmatex">\(\downarrow\)</span> as <span class="arithmatex">\(\rho_{12}\)</span> moves from <span class="arithmatex">\(+1.0 \to -1.0\)</span></li>
 <li>When <span class="arithmatex">\(\rho_{12} &lt; 1\)</span> then some combinations of <span class="arithmatex">\(w_{i}\)</span> are more efficient than others; they don't involve risk-return tradeoff.</li>
 <li>For a given <span class="arithmatex">\(\rho\)</span>, there is a <strong>minimum risk portfolio</strong>, produced by optimal weights <span class="arithmatex">\(w^*\)</span></li>
 </ul>
-<p><strong>Problem Checklist</strong></p>
+<h5 id="problem-checklist_2">Problem Checklist<a class="headerlink" href="#problem-checklist_2" title="Permanent link">¶</a></h5>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Example 3</li>
 </ul>
 <hr>
-<h3 id="optimal-weights">Optimal Weights<a class="headerlink" href="#optimal-weights" title="Permanent link">¶</a></h3>
+<h2 id="optimal-weights">Optimal Weights<a class="headerlink" href="#optimal-weights" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 w_{1}^* = \dfrac{\sigma_{2}^2 - (\rho_{12}\sigma_{1}\sigma_{2})}{\sigma_{1}^2 + \sigma_{2}^2 - 2(\rho_{12}\sigma_{1}\sigma_{2})}
 \]</div>
@@ -9080,16 +9073,16 @@ w_{1}^* = \dfrac{\sigma_{2}^2 - (\rho_{12}\sigma_{1}\sigma_{2})}{\sigma_{1}^2 + 
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Example 4: Determine optimal weights</li>
 </ul>
 <hr>
-<h3 id="portfolio-selection">Portfolio Selection<a class="headerlink" href="#portfolio-selection" title="Permanent link">¶</a></h3>
+<h2 id="portfolio-selection">Portfolio Selection<a class="headerlink" href="#portfolio-selection" title="Permanent link">¶</a></h2>
 <ul>
 <li>Optimal portfolio based on <strong>mean-variance model</strong> <span class="arithmatex">\(\leftarrow\)</span> Harry Markowitz</li>
 </ul>
-<h4 id="process">Process<a class="headerlink" href="#process" title="Permanent link">¶</a></h4>
+<h5 id="process">Process<a class="headerlink" href="#process" title="Permanent link">¶</a></h5>
 <ol>
 <li><strong>Technical</strong> - determine set of efficient portfolios</li>
 <li><strong>Personal</strong> - choose the best risk-return opportunity from this set <em>based on the risk-appetite</em></li>
 </ol>
-<h4 id="two-broad-approaches">Two broad approaches<a class="headerlink" href="#two-broad-approaches" title="Permanent link">¶</a></h4>
+<h5 id="two-broad-approaches">Two broad approaches<a class="headerlink" href="#two-broad-approaches" title="Permanent link">¶</a></h5>
 <ol>
 <li><strong>One-step optimization</strong>:<ul>
 <li><strong><abbr title="Capital Market Line">CML</abbr></strong>: Capital Market Line (represents efficient portfolios that can be formed by combining a <em>risky asset</em> with <em>risk-free lending and borrowing opportunities</em>)</li>
@@ -9100,7 +9093,7 @@ w_{1}^* = \dfrac{\sigma_{2}^2 - (\rho_{12}\sigma_{1}\sigma_{2})}{\sigma_{1}^2 + 
 </ul>
 </li>
 </ol>
-<h4 id="efficient-portfolios">Efficient Portfolios<a class="headerlink" href="#efficient-portfolios" title="Permanent link">¶</a></h4>
+<h5 id="efficient-portfolios">Efficient Portfolios<a class="headerlink" href="#efficient-portfolios" title="Permanent link">¶</a></h5>
 <ul>
 <li>Summarized by <strong>Minimum-variance frontier</strong> (<abbr title="Minimum Variance Frontier">MVF</abbr>) of risky assets<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 <li>Lowest possible variance that can be attained for a given portfolio's expected return</li>
@@ -9109,14 +9102,14 @@ w_{1}^* = \dfrac{\sigma_{2}^2 - (\rho_{12}\sigma_{1}\sigma_{2})}{\sigma_{1}^2 + 
 <li>The line connecting them represents efficient portfolios</li>
 <li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/09/Risk%20%26%20Return%20K%26J-1756826397492.webp" data-desc-position="bottom"><img alt="|523x368" src="../../../../assets/images/2025/09/Risk%20%26%20Return%20K%26J-1756826397492.webp"></a></li>
 </ul>
-<p><strong>Problem Checklist</strong></p>
+<h5 id="problem-checklist_3">Problem Checklist<a class="headerlink" href="#problem-checklist_3" title="Permanent link">¶</a></h5>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Example 5: Concept of <strong>dominance</strong> and efficient frontier<ul>
 <li>Portfolio A and B are inefficient/dominated.</li>
 </ul>
 </li>
 </ul>
-<h4 id="efficient-frontier-with-margined-short-sales">Efficient Frontier with Margined Short Sales<a class="headerlink" href="#efficient-frontier-with-margined-short-sales" title="Permanent link">¶</a></h4>
+<h5 id="efficient-frontier-with-margined-short-sales">Efficient Frontier with Margined Short Sales<a class="headerlink" href="#efficient-frontier-with-margined-short-sales" title="Permanent link">¶</a></h5>
 <ul>
 <li><strong>Margined Short sales</strong><ul>
 <li><strong>Person</strong> sells a <strong>second person</strong> an <em>asset</em></li>
@@ -9127,7 +9120,7 @@ w_{1}^* = \dfrac{\sigma_{2}^2 - (\rho_{12}\sigma_{1}\sigma_{2})}{\sigma_{1}^2 + 
 </li>
 <li>The point <span class="arithmatex">\(\to\)</span> it is possible to construct portfolios that offer the same expected return with a lower variance. <strong>Such an efficient frontier dominates the one without margined short sales</strong>. (The frontier shifting left…, lower variance for the same returns)</li>
 </ul>
-<h4 id="efficient-frontier-with-one-risk-free-asset">Efficient Frontier with One Risk-free Asset<a class="headerlink" href="#efficient-frontier-with-one-risk-free-asset" title="Permanent link">¶</a></h4>
+<h5 id="efficient-frontier-with-one-risk-free-asset">Efficient Frontier with One Risk-free Asset<a class="headerlink" href="#efficient-frontier-with-one-risk-free-asset" title="Permanent link">¶</a></h5>
 <ul>
 <li>Risk-free security <span class="arithmatex">\(\to\)</span> Zero variance denoted by <span class="arithmatex">\(\mathbf{F}\)</span></li>
 <li>A risky portfolio <span class="arithmatex">\(\mathbf{M}\)</span></li>
@@ -9155,7 +9148,7 @@ E(r_{c}) = r_{f} + \left(\dfrac{\sigma_{c}}{\sigma_{m}}\right)[E(r_{m}) - r_{f}]
 </ul>
 </li>
 </ul>
-<h4 id="efficient-frontier-with-borrowing">Efficient frontier with borrowing<a class="headerlink" href="#efficient-frontier-with-borrowing" title="Permanent link">¶</a></h4>
+<h5 id="efficient-frontier-with-borrowing">Efficient frontier with borrowing<a class="headerlink" href="#efficient-frontier-with-borrowing" title="Permanent link">¶</a></h5>
 <ul>
 <li>Extending FM beyond <span class="arithmatex">\(M\)</span>, opportunities of higher return?</li>
 <li>How to exploit these opportunities?<ul>
@@ -9174,13 +9167,13 @@ E(r_{c}) = r_{f} + \left(\dfrac{\sigma_{c}}{\sigma_{m}}\right)[E(r_{m}) - r_{f}]
 <li><abbr title="Capital Allocation Line">CAL</abbr> tangential to efficient frontier of risky assets = new efficient frontier <em>with one risk-free asset</em>, <strong>completely dominates the efficient frontier of risky assets</strong></li>
 <li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/09/Risk%20%26%20Return%20K%26J-1756828183321.webp" data-desc-position="bottom"><img alt="" src="../../../../assets/images/2025/09/Risk%20%26%20Return%20K%26J-1756828183321.webp"></a></li>
 </ul>
-<h4 id="market-portfolio-m">Market Portfolio: <span class="arithmatex">\(M\)</span><a class="headerlink" href="#market-portfolio-m" title="Permanent link">¶</a></h4>
+<h5 id="market-portfolio-m">Market Portfolio: <span class="arithmatex">\(M\)</span><a class="headerlink" href="#market-portfolio-m" title="Permanent link">¶</a></h5>
 <ul>
 <li>Add up portfolios of all individual investors, borrowing and lending cancel out</li>
 <li>Value of <em>an aggregate risky portfolio</em> is the entire wealth of the economy.</li>
 <li><span class="arithmatex">\(\implies\)</span> #doubt Market portfolio is a huge portfolio that includes all traded assets in the same proportion <strong>in which they are supplied in equilibrium</strong></li>
 </ul>
-<h4 id="cml-capital-market-line"><abbr title="Capital Market Line">CML</abbr> [Capital Market Line]<a class="headerlink" href="#cml-capital-market-line" title="Permanent link">¶</a></h4>
+<h5 id="cml-capital-market-line"><abbr title="Capital Market Line">CML</abbr> [Capital Market Line]<a class="headerlink" href="#cml-capital-market-line" title="Permanent link">¶</a></h5>
 <ul>
 <li>is a <abbr title="Capital Allocation Line">CAL</abbr> provided by<ul>
 <li>Risk-free asset: one-month T-bills</li>
@@ -9194,26 +9187,26 @@ E(r_{c}) = r_{f} + \left(\dfrac{\sigma_{c}}{\sigma_{m}}\right)[E(r_{m}) - r_{f}]
 </ol>
 </li>
 </ul>
-<h4 id="investors-risk-preference">Investor's Risk Preference<a class="headerlink" href="#investors-risk-preference" title="Permanent link">¶</a></h4>
+<h5 id="investors-risk-preference">Investor's Risk Preference<a class="headerlink" href="#investors-risk-preference" title="Permanent link">¶</a></h5>
 <ul>
 <li>Utility score, <span class="arithmatex">\(U = E(r) - 0.005A\sigma^2\)</span></li>
 <li>Risk-return indifference curves</li>
 <li>Rational investor seeks an efficient portfolio tangent to the highest attainable indifference curve. <span class="arithmatex">\(\implies\)</span> <strong>Optimal Portfolio</strong></li>
 </ul>
 <hr>
-<h3 id="capm-capital-asset-pricing-model">CAPM [Capital Asset Pricing Model]<a class="headerlink" href="#capm-capital-asset-pricing-model" title="Permanent link">¶</a></h3>
-<h4 id="about">About<a class="headerlink" href="#about" title="Permanent link">¶</a></h4>
+<h2 id="capm-capital-asset-pricing-model">CAPM [Capital Asset Pricing Model]<a class="headerlink" href="#capm-capital-asset-pricing-model" title="Permanent link">¶</a></h2>
+<h5 id="about">About<a class="headerlink" href="#about" title="Permanent link">¶</a></h5>
 <ul>
 <li>Explains how asset prices are formed in the market place.</li>
 <li>To determine the equilibrium expected return for risky assets</li>
 <li><em>Capital market theories</em> aka <em>asset pricing theories</em> = how prices are determined if investors behaved the way Markowitz's portfolio theory suggests.</li>
 </ul>
-<h4 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">¶</a></h4>
+<h5 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">¶</a></h5>
 <ul>
 <li><strong><abbr title="Capital Market Line">CML</abbr></strong> <span class="arithmatex">\(\to\)</span> one-month T-bills + broad index of common stocks</li>
 <li><strong><abbr title="Security Market Line">SML</abbr></strong> (Security Market Line) <span class="arithmatex">\(\to\)</span> graphic depiction of CAPM (market price of <strong>risk</strong> in capital markets)</li>
 </ul>
-<h4 id="capital-market-theory-says">Capital Market theory says<a class="headerlink" href="#capital-market-theory-says" title="Permanent link">¶</a></h4>
+<h5 id="capital-market-theory-says">Capital Market theory says<a class="headerlink" href="#capital-market-theory-says" title="Permanent link">¶</a></h5>
 <ul>
 <li>Market compensates or rewards for <strong>systematic risk</strong> only.</li>
 <li>Systematic risk level measured by <span class="arithmatex">\(\to\)</span> <span class="arithmatex">\(\beta\)</span> coefficient</li>
@@ -9237,7 +9230,7 @@ E(r_{i}) - r_{f} = \beta(\underbrace{E(r_{m}) - r_{f}}_{\text{Risk-Premium}})
 </ul>
 </li>
 </ul>
-<h4 id="unlevering-relevering-beta">Unlevering &amp; Relevering <span class="arithmatex">\(\beta\)</span><a class="headerlink" href="#unlevering-relevering-beta" title="Permanent link">¶</a></h4>
+<h5 id="unlevering-relevering-beta">Unlevering &amp; Relevering <span class="arithmatex">\(\beta\)</span><a class="headerlink" href="#unlevering-relevering-beta" title="Permanent link">¶</a></h5>
 <ul>
 <li>View all assets of the firm as portfolio (debt + equity)</li>
 <li>Market value, <span class="arithmatex">\(V\)</span> of firm <span class="arithmatex">\(= D + E\)</span></li>
@@ -9249,10 +9242,8 @@ E(r_{i}) - r_{f} = \beta(\underbrace{E(r_{m}) - r_{f}}_{\text{Risk-Premium}})
 <div class="arithmatex">\[
 \beta_{\text{assets}} = \beta_{\text{portfolio}} = \dfrac{D}{V}\beta_{D} + \dfrac{E}{V}\beta_{E}
 \]</div>
-<h3 id="extended-capm">Extended CAPM<a class="headerlink" href="#extended-capm" title="Permanent link">¶</a></h3>
-<ul>
-<li></li>
-</ul>
+<h2 id="extended-capm">Extended CAPM<a class="headerlink" href="#extended-capm" title="Permanent link">¶</a></h2>
+<h2 id="arbitrage-pricing-theory">Arbitrage Pricing Theory<a class="headerlink" href="#arbitrage-pricing-theory" title="Permanent link">¶</a></h2>
 <hr>
 <h2 id="other-topics">Other Topics<a class="headerlink" href="#other-topics" title="Permanent link">¶</a></h2>
 <h3 id="brealey">Brealey<a class="headerlink" href="#brealey" title="Permanent link">¶</a></h3>
