@@ -14,7 +14,13 @@ body {
   padding: 0;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
+  font-size: 0.9rem !important;
 }
+
+.md-typeset .admonition {
+  font-size: inherit !important;
+}
+
 
 [data-md-color-scheme="default"] {
   /* Blue */

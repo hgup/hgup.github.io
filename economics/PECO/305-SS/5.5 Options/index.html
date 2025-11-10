@@ -7702,6 +7702,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Call Option">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pricing-at-expiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pricing at Expiration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -7710,6 +7725,21 @@
       Put Option
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Put Option">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pricing-at-expiration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pricing at Expiration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8753,6 +8783,10 @@
 
 <!-- Markdown content -->
 <h1 id="options">Options<a class="headerlink" href="#options" title="Permanent link">¶</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Definition</p>
+<p>An <strong>option</strong> gives the holder the right, <em>but not the obligation</em> to buy or sell a given quantity of an asset on (or before<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>) a given date at prices agreed upon today.</p>
+</div>
 <h5 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">¶</a></h5>
 <table>
 <thead>
@@ -8760,6 +8794,7 @@
 <th><strong>TERM</strong></th>
 <th></th>
 <th><strong>DETAILS</strong></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
@@ -8767,91 +8802,115 @@
 <td><strong>Index Options</strong></td>
 <td>Underlying = Index. European/American</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td></td>
-<td>American Options</td>
+<td><em>American Options</em></td>
 <td>can be excised at any date, up to expiration. (Most traded)</td>
+<td></td>
 </tr>
 <tr>
 <td></td>
-<td>European Options</td>
+<td><em>European Options</em></td>
 <td>only at the expiration date. (Easier to analyze)</td>
+<td></td>
+</tr>
+<tr>
+<td>Exercising the option</td>
+<td>The act of buying or selling the underlying asset.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Stock options</strong></td>
 <td>Underlying = individual stocks</td>
 <td>Holder the right to buy/sell shares at the specified prices.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Buyer</strong></td>
 <td>Paying the option premium</td>
 <td>Has the right to exercise his option.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Writer/Seller</strong></td>
 <td>Receives the option premium</td>
 <td>Obliged to sell/buy if buyer exercises.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Call Option</strong></td>
 <td>Holder has right (not obligation)</td>
 <td>to <strong>buy</strong> asset by a certain date for a certain price.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Put Option</strong></td>
 <td>[…]</td>
 <td>to <strong>sell</strong> […]</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Option Price/Premium</strong></td>
 <td>Price option buyer pays the seller</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td><strong>Expiration Date</strong></td>
 <td>Date specified in the options contract</td>
 <td>a.k.a. <em>exercise date</em> or <em>strike date</em></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Strike Price</strong></td>
 <td>Price specified in the options contract</td>
 <td>a.k.a. <em>exercise price</em></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>In-the-Money (ITM) Option</strong></td>
 <td>that would lead to a positive cashflow to the holder <strong>if exercised immediately</strong></td>
 <td><em>Call</em> opt on the index <em>if</em> spot price <span class="arithmatex">\(\gt\)</span> strike price. (Much higher: <strong>deep ITM</strong>)</td>
+<td></td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td><em>Put</em> opt on the index <em>if</em> strike price <span class="arithmatex">\(\gt\)</span> spot price (sell at a higher price than market)</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>At-the-Money (ATM) Option</strong></td>
 <td>[…] zero cashflow […]</td>
 <td>[…] spot price <span class="arithmatex">\(=\)</span> strike price.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Out-of-the-Money (OTM) Option</strong></td>
 <td><br>[…] negative cashflow […]</td>
 <td><br>[…] spot price <span class="arithmatex">\(\lt\)</span> strike price.</td>
+<td></td>
 </tr>
 <tr>
 <td>Option Premium =</td>
 <td>Intrinsic value + time value<br></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td><strong>Intrinsic Value of an Option</strong></td>
 <td>Intrinsic value = ITM <em>else</em> 0 (if call is OTM).</td>
 <td><span class="arithmatex">\(\max(0,S_{t}-K)\)</span> for call.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Time Value of an Option</strong></td>
 <td>= Premium - Intrinsic value. The longer the time to expiration, the greater the time value</td>
 <td>Maximum time value option is ATM. At expiration, no time value.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -8866,10 +8925,13 @@
 </li>
 <li>Option Premium</li>
 </ol>
-<h3 id="call-option">Call Option<a class="headerlink" href="#call-option" title="Permanent link">¶</a></h3>
+<h2 id="call-option">Call Option<a class="headerlink" href="#call-option" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>Buyer has right to buy the underlying asset at strike price</p>
 </blockquote>
+<ul>
+<li>You "call in" an asset, when exercising a call option.</li>
+</ul>
 <h5 id="long-call-buyer">Long Call (Buyer)<a class="headerlink" href="#long-call-buyer" title="Permanent link">¶</a></h5>
 <ul>
 <li>Higher the <span class="arithmatex">\(S_{t}\)</span>, more the profit he (buyer) makes.</li>
@@ -8880,7 +8942,17 @@
 <li>Higher the <span class="arithmatex">\(S_{t}\)</span>, more the loss he (writer) makes.</li>
 <li>If <span class="arithmatex">\(S_{T}\lt Strike\)</span>, option left unexercised. The writer keeps the premium (profit)</li>
 </ul>
-<h3 id="put-option">Put Option<a class="headerlink" href="#put-option" title="Permanent link">¶</a></h3>
+<h3 id="pricing-at-expiration">Pricing at Expiration<a class="headerlink" href="#pricing-at-expiration" title="Permanent link">¶</a></h3>
+<ul>
+<li>American = European (with same characteristics) at expiration</li>
+<li>If the call is ITM, price = <span class="arithmatex">\(S_{T}-K\)</span></li>
+<li>Out of the money, worthless, price = <span class="arithmatex">\(\max(S_{T}-K,0)\)</span></li>
+</ul>
+<div class="grid">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762779792960.webp" data-desc-position="bottom"><img alt="assets/images/2025/11/5.5 Options-1762779792960.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762779792960.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/11/5.5%20Options-1762779812005.webp" data-desc-position="bottom"><img alt="assets/images/2025/11/5.5 Options-1762779812005.webp" src="../../../../assets/images/2025/11/5.5%20Options-1762779812005.webp"></a></p>
+</div>
+<h2 id="put-option">Put Option<a class="headerlink" href="#put-option" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>Buyer has the right to sell the underlying asset at strike price</p>
 </blockquote>
@@ -8893,6 +8965,10 @@
 <ul>
 <li>Lower the <span class="arithmatex">\(S_{t}\)</span>, more the loss he (writer) makes. (Buyer's profit is the seller's loss)</li>
 <li>If <span class="arithmatex">\(S_{T}\lt Strike\)</span>, option left unexercised. The writer keeps the premium (profit)</li>
+</ul>
+<h3 id="pricing-at-expiration_1">Pricing at Expiration<a class="headerlink" href="#pricing-at-expiration_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>In the money: <span class="arithmatex">\(E - S_{T}\)</span></li>
 </ul>
 <h2 id="black-scholes-option-pricing-model">Black-Scholes Option Pricing Model<a class="headerlink" href="#black-scholes-option-pricing-model" title="Permanent link">¶</a></h2>
 <div class="admonition note">
@@ -8948,6 +9024,14 @@ C = S_{0} \Phi(d_{1}) - F_{0} e^{ -rT } \Phi(d_{2})
 </ul>
 </div>
 <p>Hence, index options should be valued in the same way as ordinary options on common stock.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Not in case of European options&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
 
