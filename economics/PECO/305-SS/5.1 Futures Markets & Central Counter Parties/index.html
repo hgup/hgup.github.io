@@ -7708,15 +7708,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#-isda-master-agreement-with-credit-support-annex-csa" class="md-nav__link">
-    <span class="md-ellipsis">
-      - ISDA Master agreement with credit support annex (CSA)
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -8838,7 +8829,7 @@
 <p>Settled daily</p>
 </li>
 <li>
-<p>Futures converge to spot <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760007394331.webp" data-desc-position="bottom"><img alt="assets/images/2025/10/Hull%20-%20Futures%20Markets%20&amp;%20Central%20Counter%20Parties-1760007394331.webp" src="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760007394331.webp"></a></p>
+<p>Futures converge to spot <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760007394331.webp" data-desc-position="bottom"><img alt="Hull - Futures Markets &amp; Central Counter Parties-1760007394331.webp" src="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760007394331.webp"></a></p>
 </li>
 <li>Margin<ul>
 <li>Cash/Marketable security deposited by investor with the broker</li>
@@ -8881,12 +8872,16 @@
 </li>
 </ul>
 <h2 id="margin-cash-flows">Margin Cash Flows<a class="headerlink" href="#margin-cash-flows" title="Permanent link">¶</a></h2>
-<p>When Futures price increases<br>
-- Short trader <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span> Clearing house<br>
-- Clearing house <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Long trader</p>
-<p>When Futures price decreases<br>
-- Long trader <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span> Clearing house<br>
-- Clearing house <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Short trader</p>
+<p>When Futures price increases</p>
+<ul>
+<li>Short trader <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span> Clearing house</li>
+<li>Clearing house <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Long trader</li>
+</ul>
+<p>When Futures price decreases</p>
+<ul>
+<li>Long trader <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span> Clearing house</li>
+<li>Clearing house <span class="arithmatex">\(\to\)</span>  Clearing house member <span class="arithmatex">\(\to\)</span>  Broker <span class="arithmatex">\(\to\)</span>  Short trader</li>
+</ul>
 <blockquote>
 <ul>
 <li>Price increase, the person who is going to get the asset gets a profit (strike is fixed, price increases… long can buy at a lower (strike) price than the spot price)</li>
@@ -8932,14 +8927,14 @@
 <blockquote>
 <p>Actual operations are referred to <strong>market order</strong></p>
 </blockquote>
-<h4 id="limit">Limit<a class="headerlink" href="#limit" title="Permanent link">¶</a></h4>
+<h5 id="limit">Limit<a class="headerlink" href="#limit" title="Permanent link">¶</a></h5>
 <ul>
 <li>Order to buy or sell at a specific (or better) price</li>
 <li><strong>Buy limit</strong> order is placed <em>below</em> current market price, executes if price drops to or lower.</li>
 <li><strong>Sell limit</strong> order is placed <em>above</em> current price, executes only if the prices to or above.</li>
 <li>You get your price (or better) but no guarantee of execution of order.</li>
 </ul>
-<h4 id="stop-loss-order">Stop-loss Order<a class="headerlink" href="#stop-loss-order" title="Permanent link">¶</a></h4>
+<h5 id="stop-loss-order">Stop-loss Order<a class="headerlink" href="#stop-loss-order" title="Permanent link">¶</a></h5>
 <ul>
 <li>Becomes a market order when a specific "stop price" is reached, to limit losses or protect profits.</li>
 <li><strong>sell-stop</strong> below the current price on a long position.<ul>
@@ -8949,13 +8944,13 @@
 <li><strong>buy-stop</strong> above current price on a short position</li>
 <li>Execution guaranteed, but price is not (slippage may occur)</li>
 </ul>
-<h4 id="stop-limit-order">Stop-limit Order<a class="headerlink" href="#stop-limit-order" title="Permanent link">¶</a></h4>
+<h5 id="stop-limit-order">Stop-limit Order<a class="headerlink" href="#stop-limit-order" title="Permanent link">¶</a></h5>
 <ul>
 <li>Hybrid of stop and limit order to give more price control</li>
 <li><strong>STOP Price</strong> when hit, becomes a limit order at specified limit - <strong>LIMIT Price</strong></li>
 <li>Protects from slippage, but order may not get filled at all.</li>
 </ul>
-<h4 id="market-if-touched-mit-order">Market-if-touched (MIT) order<a class="headerlink" href="#market-if-touched-mit-order" title="Permanent link">¶</a></h4>
+<h5 id="market-if-touched-mit-order">Market-if-touched (MIT) order<a class="headerlink" href="#market-if-touched-mit-order" title="Permanent link">¶</a></h5>
 <ul>
 <li>Becomes market order when price moves in a favorable direction to touch specified price</li>
 <li>Inverse of stop-order</li>
@@ -9024,9 +9019,11 @@
 </li>
 </ul>
 <h2 id="bilateral-clearing-vs-central-clearing">Bilateral Clearing vs Central Clearing<a class="headerlink" href="#bilateral-clearing-vs-central-clearing" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760024135364.webp" data-desc-position="bottom"><img alt="assets/images/2025/10/Hull%20-%20Futures%20Markets%20&amp;%20Central%20Counter%20Parties-1760024135364.webp" src="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760024135364.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760024135364.webp" data-desc-position="bottom"><img alt="Hull - Futures Markets &amp; Central Counter Parties-1760024135364.webp" src="../../../../assets/images/2025/10/Hull%20-%20Futures%20Markets%20%26%20Central%20Counter%20Parties-1760024135364.webp"></a></p>
 <h3 id="bilaterally-cleared">Bilaterally Cleared<a class="headerlink" href="#bilaterally-cleared" title="Permanent link">¶</a></h3>
-<h2 id="-isda-master-agreement-with-credit-support-annex-csa">- ISDA Master agreement with credit support annex (CSA)<a class="headerlink" href="#-isda-master-agreement-with-credit-support-annex-csa" title="Permanent link">¶</a></h2>
+<ul>
+<li>ISDA Master agreement with credit support annex (CSA)</li>
+</ul>
 
 
 

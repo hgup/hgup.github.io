@@ -10,6 +10,11 @@ body {
   -ms-overflow-style: none;
 }
 
+.md-typeset img, .md-typeset svg, .md-typeset video {
+  height: auto;
+  max-width: 80%;
+}
+
 .md-typeset div.arithmatex > * {
   padding: 0;
   padding-top: 0.1rem;
