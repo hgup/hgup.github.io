@@ -10,10 +10,11 @@ body {
   -ms-overflow-style: none;
 }
 
-.md-typeset img, .md-typeset svg, .md-typeset video {
+div.md-content article.md-content__inner.md-typeset p a.glightbox img {
   height: auto;
-  max-width: 80%;
+  max-width: min(70%,700px);
 }
+
 
 .md-typeset div.arithmatex > * {
   padding: 0;
