@@ -9390,6 +9390,29 @@ q = \dfrac{(1+R_{f})\times S(0) - S(D)}{S(U)-S(D)}
 <p>A simple and well-known equation that models <em>the way in which stock prices fluctuate</em>.</p>
 </div>
 <p><span class="arithmatex">\(\implies\)</span> The stock returns will have lognormal distribution <span class="arithmatex">\(\implies\)</span> Log of stock returns will follow normal distribution.</p>
+<div class="admonition example">
+<p class="admonition-title">Assumptions of Black-Scholes-Merton Model</p>
+<ul>
+<li>Underlying asset<ul>
+<li>Price follows Geometric Brownian Motion (<span class="arithmatex">\(\log\text{-}N\)</span>)</li>
+<li>Constant <span class="arithmatex">\(\sigma\)</span></li>
+<li>No Dividends</li>
+</ul>
+</li>
+<li>Market<ul>
+<li>Constant <span class="arithmatex">\(r_{f}\)</span></li>
+<li>Perfect liquidity and continuous trading</li>
+<li>No transaction costs or taxes</li>
+<li>No limits on shortselling</li>
+<li>No arbitrage</li>
+</ul>
+</li>
+<li>Options<ul>
+<li>European style options</li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Black-Scholes formula for prices of <strong>European calls and puts</strong> on a <em>non-dividend paying stock</em>:</p>
 <div class="arithmatex">\[
 C = SN(d_{1}) - Xe^{ -rT } N(d_{2})
