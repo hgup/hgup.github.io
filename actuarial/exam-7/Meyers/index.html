@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Student | Actuarial Science | Economics">
+        <meta name="description" content="Bayesian MCMC to find parameters. It's all chain ladder with Correlated/Leveled x Trend and finally note on claim settlement rate. And finally we conclude that paid claims don't have information about changing CSR, that incremental claims do have.">
       
       
       
@@ -19,7 +19,7 @@
         
       
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -231,7 +231,7 @@
         "name" : "Hursh Gupta",
         "url" : "https://hgup.github.io/",
         "description" : "I am a student at SSSIHL with a bachelors in Mathematics. Currently pursuing a masters in Economics, and writing actuarial exams from the CAS.",
-        "thumbnailUrl" : "https://hgup.github.io/assets/favicon.png",
+        "thumbnailUrl" : "https://hgup.github.io/assets/logo.svg",
         "alternateName" : "Codisian"
         
     }
@@ -241,6 +241,7 @@
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="Stochastic Loss Reserving Using Bayesian MCMC Models - Meyers - Hursh Gupta">
+<meta property="og:description" content="Bayesian MCMC to find parameters. It's all chain ladder with Correlated/Leveled x Trend and finally note on claim settlement rate. And finally we conclude that paid claims don't have information about changing CSR, that incremental claims do have.">
 <meta property="og:image" content="https://hgup.github.io/assets/images/social/actuarial/exam-7/Meyers.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
@@ -248,6 +249,7 @@
 <meta property="og:url" content="https://hgup.github.io/actuarial/exam-7/Meyers/">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:title" content="Stochastic Loss Reserving Using Bayesian MCMC Models - Meyers - Hursh Gupta">
+<meta property="twitter:description" content="Bayesian MCMC to find parameters. It's all chain ladder with Correlated/Leveled x Trend and finally note on claim settlement rate. And finally we conclude that paid claims don't have information about changing CSR, that incremental claims do have.">
 <meta property="twitter:image" content="https://hgup.github.io/assets/images/social/actuarial/exam-7/Meyers.png">
 <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
@@ -295,7 +297,7 @@
     <a href="../../.." title="Hursh Gupta" class="md-header__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4h6.11l7.04 14H21v2h-6.12L7.84 6H3zm11 0h7v2h-7z"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -676,7 +678,7 @@
     <a href="../../.." title="Hursh Gupta" class="md-nav__button md-logo" aria-label="Hursh Gupta" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4h6.11l7.04 14H21v2h-6.12L7.84 6H3zm11 0h7v2h-7z"></path></svg>
 
     </a>
     Hursh Gupta
@@ -3670,6 +3672,28 @@
     <span class="md-ellipsis">
       
         Bayesian MCMC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-risk-parameter-risk-model-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process Risk, Parameter Risk &amp; Model Risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prior-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior Distribution
       
     </span>
   </a>
@@ -11610,6 +11634,17 @@
 
 <!-- Markdown content -->
 <h2 id="study-strategy">Study Strategy<a class="headerlink" href="#study-strategy" title="Permanent link">¶</a></h2>
+<ul>
+<li>Just get a hang of interpreting the <span class="arithmatex">\(p\)</span>-<span class="arithmatex">\(p\)</span> curves properly. Understand what light and heavy tailed means using examples (read the footnote and the illustration provided. But have your own way to explain it)</li>
+<li>Understand what Bayesian <abbr title="Markov Chain Monte Carlo">MCMC</abbr> is all about → Just a neat way to find parameters</li>
+<li>Read each of the model with the overview in the next bullet.</li>
+<li>There are 5 models. Some are fit to incurred data, and perform decently well. But with paid data only <abbr title="Changing Settlement Rate">CSR</abbr> performs well (<span class="arithmatex">\(\implies\)</span> paid data doesn't have that information and that is what creates the bias.)<ul>
+<li>Leveled or correlated</li>
+<li>with Trend (leveled or correlated)</li>
+<li>with <abbr title="Changing Settlement Rate">CSR</abbr></li>
+</ul>
+</li>
+</ul>
 <h2 id="outline">Outline<a class="headerlink" href="#outline" title="Permanent link">¶</a></h2>
 <ol class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to list the reasons a model may not perform well</li>
@@ -11619,18 +11654,18 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to interpret PP Plots</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know that the Anderson-Darling test is another validation method and know why Meyers ultimately didn’t use it to distinguish one model from another</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know the reasons why a model might be light-tailed, heavy-tailed, biased high or biased low</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to describe the basic process for running a Bayesian MCMC model</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to list the characteristics of the different models and calculate the log mean, <span class="arithmatex">\(\mu_{w,d}\)</span><ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Leveled Chain Ladder (LCL)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Correlated Chain Ladder (CCL)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Correlated Incremental Trend (CIT)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Leveled Incremental Trend (LIT)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Changing Settlement Rate (CSR)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to describe the basic process for running a Bayesian <abbr title="Markov Chain Monte Carlo">MCMC</abbr> model</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to list the characteristics of the different models and calculate the log mean, <span class="arithmatex">\(\mu_{w,d}\)</span><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Leveled Chain Ladder (<abbr title="Leveled Chain Ladder">LCL</abbr>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Correlated Chain Ladder (<abbr title="Correlated Chain Ladder">CCL</abbr>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Correlated Incremental Trend (<abbr title="Correlated Incremental Trend">CIT</abbr>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Leveled Incremental Trend (<abbr title="Leveled Incremental Trend">LIT</abbr>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Changing Settlement Rate (<abbr title="Changing Settlement Rate">CSR</abbr>)</li>
 </ul>
 </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to describe the different skew distributions used in the incremental paid models</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to briefly describe process risk, parameter risk, and model risk</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Know when to choose a wide or narrow prior distribution and the possible effects</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to describe the different skew distributions used in the incremental paid models</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to briefly describe process risk, parameter risk, and model risk</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know when to choose a wide or narrow prior distribution and the possible effects</li>
 </ol>
 <h2 id="my-notes">My Notes<a class="headerlink" href="#my-notes" title="Permanent link">¶</a></h2>
 <blockquote>
@@ -11717,10 +11752,14 @@
 <td>Estimate majority of losses higher than they actually are. <strong>Mean is too high.</strong></td>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1769961518757.webp" data-desc-position="bottom"><img alt="Meyers-1769961518757.webp" src="../../../assets/images/2026/02/Meyers-1769961518757.webp"></a></td>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1769961494175.webp" data-desc-position="bottom"><img alt="Meyers-1769961494175.webp" src="../../../assets/images/2026/02/Meyers-1769961494175.webp"></a></td>
-<td></td>
+<td>All observations are overestimated! (Biased high!)</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>An illustration to the concept of standard deviation <span class="arithmatex">\(\downarrow\)</span>. This is light tailed because we needed more in the tails (e.g. 3,5) to match reality than we expect (5,6).</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1770002031503.webp" data-desc-position="bottom"><img alt="Meyers-1770002031503.webp" src="../../../assets/images/2026/02/Meyers-1770002031503.webp"></a></p>
 <ul>
 <li>We can also have a biased low model but Meyer's doesn't find any.</li>
 </ul>
@@ -11743,18 +11782,278 @@
 <p class="admonition-title">Width of the band</p>
 <p>Critical value of <strong>all lines</strong> is smaller than the individual LOBs because <span class="arithmatex">\(n=50\)</span> for individual lines and <span class="arithmatex">\(n=200\)</span> for all lines combined. And critical value = <span class="arithmatex">\(\dfrac{136}{\sqrt{ n }}\)</span></p>
 </div>
-<h3 id="bayesian-mcmc">Bayesian MCMC<a class="headerlink" href="#bayesian-mcmc" title="Permanent link">¶</a></h3>
+<h3 id="bayesian-mcmc">Bayesian <abbr title="Markov Chain Monte Carlo">MCMC</abbr><a class="headerlink" href="#bayesian-mcmc" title="Permanent link">¶</a></h3>
+<ul>
+<li>These models rely on Markov chains → random processes where the transition to the next state depends <em>only</em> on its current state. (e.g. Metropolis Hastings algorithm)</li>
+<li>Basic steps<ol>
+<li>Select → <strong>Prior &amp; Conditional distribution</strong></li>
+<li>Select → <strong>starting vector</strong>. Run large number of <strong>iterations</strong>, with various <strong>phases</strong>:<ul>
+<li>Adaptive phase → improve model efficiency</li>
+<li>Burn-in phase → help model start to converge</li>
+<li>Final phase → for sampling</li>
+</ul>
+</li>
+<li><strong>Take sample</strong> from final phase and <strong>update</strong> posterior distribution from this sample.</li>
+</ol>
+</li>
+</ul>
+<h4 id="lcl-model-incurred"><abbr title="Leveled Chain Ladder">LCL</abbr> Model (Incurred)<a class="headerlink" href="#lcl-model-incurred" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>Leveled means AYs are uncorrelated!</p>
+</blockquote>
+<ul>
+<li>Similar to ODP Bootstrap model but Bayesian <abbr title="Markov Chain Monte Carlo">MCMC</abbr> method to solve for parameters.<ul>
+<li><span class="arithmatex">\(\mu_{w,d} = \alpha_{w} + \beta_{d}\)</span></li>
+<li>Cum losses → Lognormal distribution (log mean <span class="arithmatex">\(\mu_{w,d}\)</span> and log SD = <span class="arithmatex">\(\sigma_{d}\)</span>)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup><br>
+<span class="arithmatex">\(\sigma_{1} \gt \sigma_{2} \gt \dots \gt \sigma_{10}\)</span></li>
+<li><span class="arithmatex">\(\beta_{10} = 0\)</span> for unique solution</li>
+<li>Assign remaining <span class="arithmatex">\(\beta_{d}\)</span> to a wide prior distribution<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1770001470495.webp" data-desc-position="bottom"><img alt="Meyers-1770001470495.webp" src="../../../assets/images/2026/02/Meyers-1770001470495.webp"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Observation</p>
+<ul>
+<li>Light tailed but not as much as the Mack model</li>
+</ul>
+</div>
+<h4 id="ccl-model-incurred"><abbr title="Correlated Chain Ladder">CCL</abbr> Model (Incurred)<a class="headerlink" href="#ccl-model-incurred" title="Permanent link">¶</a></h4>
+<ul>
+<li>Base is <a href="#lcl-model-incurred">#<abbr title="Leveled Chain Ladder">LCL</abbr> Model (Incurred)</a> and adds a between-year correlation<ul>
+<li><span class="arithmatex">\(\mu_{1,d} = \alpha_{1} + \beta_{d}\)</span></li>
+<li><span class="arithmatex">\(\mu_{w,d} = \alpha_{w} + \beta_{d} + \rho(\ln(C_{w-1,d})- \mu_{w-1,d})\)</span> for <span class="arithmatex">\(w\gt 1\)</span><ul>
+<li><span class="arithmatex">\(\alpha + \beta + \rho(\ln\text{actual}- \ln\text{expected})\)</span> from the previous AY</li>
+</ul>
+</li>
+<li>Rest is the same as <abbr title="Leveled Chain Ladder">LCL</abbr> so if <span class="arithmatex">\(\rho=0\)</span> <span class="arithmatex">\(\implies\)</span> Same as <abbr title="Leveled Chain Ladder">LCL</abbr> model </li>
+</ul>
+</li>
+<li>E.g.<ul>
+<li>Compute <span class="arithmatex">\(\mu_{2019,60}\)</span> and use it to compute <span class="arithmatex">\(\mu_{2020,60}\)</span> using params <span class="arithmatex">\(\alpha_{2020}\)</span>, <span class="arithmatex">\(\beta_{60}\)</span> and <span class="arithmatex">\(\rho\)</span> along with the actual value of <span class="arithmatex">\(C_{2019,60}\)</span> and the expected value we just calculated <span class="arithmatex">\(\mu_{2019,60}\)</span>.</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1770003614946.webp" data-desc-position="bottom"><img alt="Meyers-1770003614946.webp" src="../../../assets/images/2026/02/Meyers-1770003614946.webp"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Observation</p>
+<ul>
+<li>Passes K-S test individually and in total (just barely in <abbr title="Other Liability">OL</abbr>)</li>
+<li>Larger standard deviation than Mack model</li>
+<li>Lean lightly to the <strong>light-tailed</strong> side</li>
+</ul>
+</div>
+<h4 id="ccl-model-paid"><abbr title="Correlated Chain Ladder">CCL</abbr> Model (Paid)<a class="headerlink" href="#ccl-model-paid" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1770003860140.webp" data-desc-position="bottom"><img alt="Meyers-1770003860140.webp" src="../../../assets/images/2026/02/Meyers-1770003860140.webp"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Observation</p>
+<ul>
+<li>Terrible and biased high!</li>
+</ul>
+</div>
+<h4 id="cit-model-paid"><abbr title="Correlated Incremental Trend">CIT</abbr> Model (Paid)<a class="headerlink" href="#cit-model-paid" title="Permanent link">¶</a></h4>
+<ul>
+<li>Includes a payment year trend</li>
+<li>Based on incremental paid (not cumulative paid) → since cumulative will include already settled claims (that won't change) and we just want to look at the part of claims data that changes.</li>
+<li>Incremental paid tends to be skewed right and negative (sometimes). Two distributions that allow for that<ol>
+<li>Skew Normal distribution<ul>
+<li><span class="arithmatex">\(\mu\)</span> → location param</li>
+<li><span class="arithmatex">\(\omega \gt 0\)</span> → scale parameter</li>
+<li><span class="arithmatex">\(\delta\)</span> → shape parameter, <span class="arithmatex">\(\in (-1,1)\)</span></li>
+<li>Combination of <strong>truncated normal distribution</strong> and <strong>normal distribution</strong> (<span class="arithmatex">\(\delta = 0\)</span> <span class="arithmatex">\(\implies\)</span> Normal)</li>
+<li>Con: We need a more skewed distribution (since <span class="arithmatex">\(\delta\)</span> is close to 1 for most incremental triangles and <span class="arithmatex">\(\delta\)</span> in the model is capped to <span class="arithmatex">\(1\)</span>)  </li>
+</ul>
+</li>
+<li>Mixed log-Normal Normal<ul>
+<li>Also uses <span class="arithmatex">\(\mu\)</span>, <span class="arithmatex">\(\omega\)</span>, and <span class="arithmatex">\(\delta\)</span></li>
+<li>Without limits to skewness → Allows for more accurate reflection of incremental paid loss triangles' skewness</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><abbr title="Correlated Incremental Trend">CIT</abbr> Model Characteristics<ul>
+<li><span class="arithmatex">\(\mu_{w,d} = \alpha_{w} + \beta_{d} + \tau(\omega - d - 1)\)</span><ul>
+<li><span class="arithmatex">\(\tau\)</span> (PAYMENT YEAR TREND TERM)</li>
+</ul>
+</li>
+<li>Modelled incremental loss <span class="arithmatex">\(\tilde{I}_{w,d}\)</span><ul>
+<li><span class="arithmatex">\(\tilde{I}_{1,d} \sim\text{normal}(Z_{1,d},\delta)\)</span></li>
+<li><span class="arithmatex">\(\tilde{I}_{w,d} \sim\text{normal}(Z_{w,d} + \rho(\tilde{I}_{w-1,d}- Z_{w-1,d})e^\tau,\delta)\)</span> for <span class="arithmatex">\(w \gt 1\)</span><ul>
+<li><span class="arithmatex">\(\rho\)</span> (CORRELATION TERM)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(Z_{w,d} \sim\text{lognormal}(\mu_{w,d},\sigma_{d})\)</span> where <span class="arithmatex">\(\sigma_{1} \lt \sigma_{2} \lt \dots \lt \sigma_{10}\)</span><ul>
+<li>Note that magnitude order of <span class="arithmatex">\(\sigma_{d}\)</span> is reversed → Expect smaller, less volatile claims are settled earlier <span class="arithmatex">\(\implies\)</span>  more volatile claims paid later so  <span class="arithmatex">\(\sigma_{1} \lt \sigma_{2} \lt \dots \lt \sigma_{10}\)</span></li>
+<li>Compare it with before. For cumulative distribution → Volatility decreases over time since <strong>greater proportion of claims are settled</strong>  <span class="arithmatex">\(\sigma_{1} \gt \sigma_{2} \gt \dots \gt \sigma_{10}\)</span></li>
+</ul>
+</li>
+<li>Assign <span class="arithmatex">\(\beta_{d}, \alpha_{w}, \sigma_{d}\)</span> and <span class="arithmatex">\(\rho\)</span> to relatively wide prior distribution.<sup id="fnref3:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Mixed lognormal normal distribution = lognormal <span class="arithmatex">\(Z\)</span> distribution inside a normal distribution.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1770005611924.webp" data-desc-position="bottom"><img alt="Meyers-1770005611924.webp" src="../../../assets/images/2026/02/Meyers-1770005611924.webp"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Observation</p>
+<ul>
+<li>Model is biased high!</li>
+</ul>
+</div>
+<h4 id="lit-model-paid"><abbr title="Leveled Incremental Trend">LIT</abbr> Model (Paid)<a class="headerlink" href="#lit-model-paid" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>Leveled means AYs are uncorrelated!</p>
+</blockquote>
+<ul>
+<li>Identical to <a href="#cit-model-paid">#<abbr title="Correlated Incremental Trend">CIT</abbr> Model (Paid)</a> but <span class="arithmatex">\(\rho=0\)</span></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1770007185291.webp" data-desc-position="bottom"><img alt="Meyers-1770007185291.webp" src="../../../assets/images/2026/02/Meyers-1770007185291.webp"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Observation</p>
+<ul>
+<li>Model is biased high!</li>
+</ul>
+</div>
+<h4 id="csr-model-paid"><abbr title="Changing Settlement Rate">CSR</abbr> Model (Paid)<a class="headerlink" href="#csr-model-paid" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>Perhaps the paid data is missing information about <strong>speedup in claim settlement rates</strong></p>
+</blockquote>
+<ul>
+<li>Model<ul>
+<li><span class="arithmatex">\(\mu_{w,d} = \alpha_{w} + \beta_{d}(1-\gamma)^{(w-1)}\)</span> where <span class="arithmatex">\(\gamma \sim\text{normal}(0,0.025)\)</span></li>
+<li>Model cumulative losses, <span class="arithmatex">\(C_{w,d} \sim\text{lognormal}(\mu, \sigma)\)</span><sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
+<li><span class="arithmatex">\(\beta_{10} = 0\)</span> → for unique solution</li>
+<li><span class="arithmatex">\(\beta_{d}\)</span> to wide prior distribution<sup id="fnref4:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
+</ul>
+</li>
+<li>Cumulative paid <span class="arithmatex">\(\uparrow\)</span> so <span class="arithmatex">\(\beta_{d} \propto d\)</span> and since <span class="arithmatex">\(\beta_{10} = 0\)</span> <span class="arithmatex">\(\implies\)</span> all our previous <span class="arithmatex">\(\beta\)</span>'s are negative. Thus, <span class="arithmatex">\(\gamma \gt 0\)</span> will ensure that <span class="arithmatex">\(\beta_{d}(1-\gamma)^{(w-1)}\)</span> increases as <span class="arithmatex">\(w\)</span> increases, indicating a speedup in claim settlements and vise-versa.<ul>
+<li><span class="arithmatex">\(\gamma \gt 0\)</span> → speedup in <abbr title="Changing Settlement Rate">CSR</abbr><ul>
+<li><span class="arithmatex">\(\beta_{d}(1-\gamma)^{w-1}\)</span> will start decreasing down <span class="arithmatex">\(w\)</span></li>
+<li>-0.500</li>
+<li>-0.495</li>
+<li>-0.490</li>
+<li>-0.485</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(\gamma \lt 0\)</span> → slowdown in <abbr title="Changing Settlement Rate">CSR</abbr><ul>
+<li><span class="arithmatex">\(\beta_{d}(1-\gamma)^{w-1}\)</span> will start increasing down <span class="arithmatex">\(w\)</span></li>
+<li>-0.500</li>
+<li>-0.505</li>
+<li>-0.510</li>
+<li>-0.515</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Meyers-1770008637228.webp" data-desc-position="bottom"><img alt="Meyers-1770008637228.webp" src="../../../assets/images/2026/02/Meyers-1770008637228.webp"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Observation</p>
+<ul>
+<li><abbr title="Personal Auto">PA</abbr> is still biased high</li>
+<li>Corrects for the bias of other paid models → Incurred data recognized speedup of <abbr title="Changing Settlement Rate">CSR</abbr>, which was missing in paid data</li>
+</ul>
+</div>
+<p>Here is the markdown representation of the table from the image, using LaTeX for the mathematical formulas.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Incurred</strong></th>
+<th><strong>Paid</strong></th>
+<th><strong>Between Year Corr</strong></th>
+<th><strong>Payment Year Trend</strong></th>
+<th><strong>Skew Distribution</strong></th>
+<th><strong>Claims Settlement</strong></th>
+<th><strong>μw,d​</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><abbr title="Leveled Chain Ladder">LCL</abbr></strong></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="arithmatex">\(\mu_{w,d} = \alpha_w + \beta_d\)</span></td>
+</tr>
+<tr>
+<td><strong><abbr title="Correlated Chain Ladder">CCL</abbr></strong></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="arithmatex">\(\mu_{w,d} = \alpha_w + \beta_d + \rho(ln(C_{w-1,d}) - \mu_{w-1,d})\)</span></td>
+</tr>
+<tr>
+<td><strong><abbr title="Correlated Incremental Trend">CIT</abbr></strong></td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td><span class="arithmatex">\(\mu_{w,d} = \alpha_w + \beta_d + \tau(w + d - 1)\)</span></td>
+</tr>
+<tr>
+<td><strong><abbr title="Leveled Incremental Trend">LIT</abbr></strong></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td><span class="arithmatex">\(\mu_{w,d} = \alpha_w + \beta_d + \tau(w + d - 1)\)</span></td>
+</tr>
+<tr>
+<td><strong><abbr title="Changing Settlement Rate">CSR</abbr></strong></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td><span class="arithmatex">\(\mu_{w,d} = \alpha_w + \beta_d(1 - \gamma)^{(w-1)}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="process-risk-parameter-risk-model-risk">Process Risk, Parameter Risk &amp; Model Risk<a class="headerlink" href="#process-risk-parameter-risk-model-risk" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[
+Var[X] = E_{\theta}[Var(X|\theta)] + Var_{\theta}[E(X|\theta)]
+\]</div>
+<ul>
+<li><span class="arithmatex">\(E_{\theta}[V]\)</span> → Process risk → Average variance of outcomes from expected results</li>
+<li><span class="arithmatex">\(Var_{\theta}[E]\)</span> → Parameter risk → Variance due to many possible parameters in posterior distribution (a bigger portion of total)<ul>
+<li>Model risk → Risk that the wrong model was chosen (specific type of parameter risk).</li>
+</ul>
+</li>
+</ul>
+<h3 id="prior-distribution">Prior Distribution<a class="headerlink" href="#prior-distribution" title="Permanent link">¶</a></h3>
+<p>Read footnote<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Understand that the percentiles are for actual values. So, look at the graph and you will realize that there are more number of actual observations away from the mean than the model predicts. Think of it like if the model says (5,6,7,8,9) → The actual values are (3,5,7,9,11). Both have the same mean, but the actual data is more spread out, resulting the percentiles to be lower or higher than expected (as seen in the histogram)&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>Understand that the percentiles are for actual values. So, look at the graph and you will realize that <strong>there are more number of actual observations away from the mean</strong> than the model predicts. Think of it like if the model says (5,6,7,8,9) → The actual values are (3,5,7,9,11). Both have the same mean, but the actual data is more spread out, resulting the percentiles to be lower or higher than expected (as seen in the histogram)&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
 <p>By prediction we mean what our model thinks should be… vs what actually is&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
 <p>Think like the model is predicting more in the tails (1,2,3, 7, 12,13,14) than actually is (4,5,6,7,8,9,10)… predicting a big range of losses.&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p>In a lognormal distribution, the log mean (<span class="arithmatex">\(\mu\)</span>) and the log standard deviation (<span class="arithmatex">\(\sigma\)</span>) are the mean and standard deviation of the <span class="arithmatex">\(\ln\)</span> of data, <span class="arithmatex">\(\ln(X) \sim \text{Normal}(\mu,\sigma^{2})\)</span>. Thus they are parameters for the lognormal distribution and NOT the arithmetic mean or SD of the <strong>original data</strong>.&nbsp;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>A more <strong>informative prior</strong> can be used if the actuary has sufficient knowledge of the book of business. Here, wide priors were used because Meyers wasn't familiar with any of those companies.&nbsp;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref3:5" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref4:5" title="Jump back to footnote 5 in the text">↩</a></p>
 </li>
 </ol>
 </div>
