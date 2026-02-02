@@ -10,10 +10,10 @@ body {
   -ms-overflow-style: none;
 }
 
-div.md-content article.md-content__inner.md-typeset p a.glightbox img {
+/* div.md-content article.md-content__inner.md-typeset p a.glightbox img {
   height: auto;
   max-width: min(70%,700px);
-}
+} */
 
 
 .md-typeset div.arithmatex > * {
