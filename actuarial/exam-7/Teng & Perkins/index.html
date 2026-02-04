@@ -3871,6 +3871,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="My Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrospectively-rated-insurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrospectively Rated Insurance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrospective-premium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrospective Premium
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdld-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDLD Ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -11776,8 +11815,8 @@
 <h2 id="study-strategy">Study Strategy<a class="headerlink" href="#study-strategy" title="Permanent link">¶</a></h2>
 <h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">¶</a></h2>
 <ol class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Know the basics of retrospectively rated insurance (the features and benefits)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Know how to calculate the premium for a retrospectively rated policy</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know the basics of retrospectively rated insurance (the features and benefits)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know how to calculate the premium for a retrospectively rated policy</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate the PDLD ratios<ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Rating parameter method</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Empirical method</li>
@@ -11791,6 +11830,164 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Know the advantages and disadvantages of both Fitzgibbon’s method and the PDLD method</li>
 </ol>
 <h2 id="my-notes">My Notes<a class="headerlink" href="#my-notes" title="Permanent link">¶</a></h2>
+<h3 id="retrospectively-rated-insurance">Retrospectively Rated Insurance<a class="headerlink" href="#retrospectively-rated-insurance" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>After the policy <strong>expires</strong> → premium is set to reflect <strong><em>actual experience</em></strong> (premium adjusts up or down as losses develop)</p>
+</blockquote>
+<ul>
+<li>Features<ol>
+<li>Even with no losses insured pays <strong>minimum premium</strong></li>
+<li>There has to be a <strong>maximum premium</strong> (else no point of buying insurance)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>There is a <strong>per accident loss limit</strong> that caps the <em>amount of individual loss</em> that can contribute to the additional premium being collected</li>
+</ol>
+</li>
+<li>Benefits<ol>
+<li>Good experience <span class="arithmatex">\(\implies\)</span> Premium refunds.<ul>
+<li>This purchase is attractive for insureds with good loss control and management procedures</li>
+<li>Insurer can <strong>attract good consumers</strong> this way</li>
+</ul>
+</li>
+<li>Policyholders benefit by paying premiums gradually (instead of fully up-front). This way, they hold on to cash for longer <span class="arithmatex">\(\implies\)</span> <strong>possible investment income</strong>.</li>
+<li>Insurer benefits → risk due to inflation, rate regulations, increasing claim frequency<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, and lawsuits → shift to the insured <span class="arithmatex">\(\implies\)</span>  improves <strong>availability of insurance</strong>.</li>
+</ol>
+</li>
+</ul>
+<h3 id="retrospective-premium">Retrospective Premium<a class="headerlink" href="#retrospective-premium" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[
+R = (b + CA)T
+\]</div>
+<ul>
+<li>where<ul>
+<li><span class="arithmatex">\(CA:\)</span> <span class="arithmatex">\(\text{Loss Conversion Factor}\times\text{Capped incurred Loss}\)</span><ul>
+<li>to cover incurred losses (capped at per accident limit) <em>and</em>,</li>
+<li>expense → LAE (represented by <span class="arithmatex">\(C\)</span>, loss conversion factor), taxes (factor <span class="arithmatex">\(T\)</span> multiplied to it) and other state assessments.</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(b:\)</span>  basic premium <em>includes</em>  <span class="arithmatex">\(= e - (C-1)E[A] + CI\)</span><ul>
+<li>expense provision (company expenses)<ul>
+<li><abbr title="Underwriting">UW</abbr></li>
+<li>acquisition</li>
+</ul>
+</li>
+<li>insurance charge (min and max)<ul>
+<li>insured needs protection against large losses <span class="arithmatex">\(\implies\)</span> max<ul>
+<li>losses <span class="arithmatex">\(\gt\)</span> max → insured benefits, <strong>insurer loses</strong></li>
+</ul>
+</li>
+<li>insurer needs to collect enough premium (cover expenses, bit of losses) <span class="arithmatex">\(\implies\)</span> min<ul>
+<li>losses <span class="arithmatex">\(\lt\)</span> min → <strong>insurer gains</strong>, other loses</li>
+</ul>
+</li>
+<li><abbr title="Insurance Charge">IC</abbr> <span class="arithmatex">\(=E(\text{Loss due to max}) - E(\text{Gain due to min})\)</span></li>
+</ul>
+</li>
+<li>excess loss charge → <strong>accounting for risk</strong> of losses exceeding per-accident loss limit.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="pdld-ratio">PDLD Ratio<a class="headerlink" href="#pdld-ratio" title="Permanent link">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Disclaimer</p>
+<p>These methods are meant to be applied to an entire (or large segment of) book of business, rather than individual policies</p>
+</div>
+<h4 id="rating-parameter">Rating Parameter<a class="headerlink" href="#rating-parameter" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Var</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P_{n}\)</span></td>
+<td>Premium at <span class="arithmatex">\(n\)</span>-th retro adjustment</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(BP\)</span></td>
+<td>Basic premium</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(SP\)</span></td>
+<td><a href="../../exam-5/Individual%20Risk/#2-schedule-rating">Standard Premium</a></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\dfrac{BP}{SP}\)</span></td>
+<td>Basic Premium factor</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(L_{n}\)</span></td>
+<td>Total developed at <span class="arithmatex">\(n\)</span>-th retro adjustment</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(CL_{n}\)</span></td>
+<td>Capped loss at <span class="arithmatex">\(n\)</span>-th adjustment</td>
+<td>Any loss contributing to additional premiums</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(LCR_{n}\)</span></td>
+<td><span class="arithmatex">\(\dfrac{CL_{n}}{L_{n}}\)</span> = Loss capping ratio (% contributing to additional premium)</td>
+<td>- <span class="arithmatex">\(\downarrow\)</span>  as data matures<br>- If loss data already capped, <span class="arithmatex">\(L_{n} = CL_{n}\)</span> and <span class="arithmatex">\(LCR_{n}=1\)</span><br>- Otherwise, the ratio needs to be estimated<br>- LCR = 0.9 <span class="arithmatex">\(\implies\)</span>  1-0.9 = 10% of losses are eliminated  by max, min and per</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(LCF\)</span></td>
+<td>Loss Conversion Factor</td>
+<td>loss-related expenses</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(TM\)</span></td>
+<td>Tax Multiplier</td>
+<td>premium taxes and other state assesments</td>
+</tr>
+</tbody>
+</table>
+<div class="arithmatex">\[
+P_{n} = [BP + (CL_{n}\times LCF)] \times TM
+\]</div>
+<p>which is same as</p>
+<div class="arithmatex">\[
+R = (b + AC)T = (b + CA)T
+\]</div>
+<div class="arithmatex">\[
+L_{n} = SP \times E[\text{Loss Ratio}] \times \% \text{Loss Emerged}
+\]</div>
+<blockquote>
+<p>Deriving this formula makes more sense, just remember the basic identities, and the fact that you have to break <span class="arithmatex">\(L_{n}\)</span> and also use <span class="arithmatex">\(LCR_{n} = \dfrac{CL_{n}}{L_{n}}\)</span>.</p>
+</blockquote>
+<div class="arithmatex">\[
+PDLD_{1} = \dfrac{P_{1}}{L_{1}} = \left(\dfrac{BP}{SP} \times \dfrac{TM}{ELR \times \%Loss_{1}}\right) + [LCR_{1} \times LCF \times TM]
+\]</div>
+<p>There are two parts in this formula:</p>
+<ol>
+<li><span class="arithmatex">\(\left(\dfrac{BP}{SP} \times \dfrac{TM}{ELR \times \%Loss_{1}}\right)\)</span> → Charged even without loss, cost to write and service the policy (unrepeated in subsequent adjustments)</li>
+<li><span class="arithmatex">\([LCR_{1} \times LCF \times TM]\)</span>  → cost of the policy for any reported losses (will be adjusted again)</li>
+</ol>
+<p>And then,</p>
+<ul>
+<li>For <span class="arithmatex">\(PDLD_{2} = \dfrac{P_{2}-P_{1}}{L_{2}-L_{1}}\)</span><ul>
+<li>Eventually instead of <span class="arithmatex">\(LCR_{1}\)</span> write <span class="arithmatex">\(\dfrac{CL_{2}-CL_{1}}{L_{2} - L_{1}}\)</span> </li>
+</ul>
+</li>
+</ul>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Purpose: reduce risk from a loss&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>If you write business thinking the claim frequency will be 100, but in the future during the policy period it turns out to be 150, its unprofitable&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
   
