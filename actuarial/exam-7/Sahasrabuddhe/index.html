@@ -3740,6 +3740,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#big-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Big Picture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3758,6 +3769,67 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="My Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claim-size-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claim Size Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-ldfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjusting LDFs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claims-layer-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claims Layer Ratios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3868,7 +3940,7 @@
   <span class="md-ellipsis">
     
   
-    Estimating the Premium Asset on Retrospectively Rated Policies - Teng &amp; Perkins
+    None
   
 
     
@@ -11774,23 +11846,178 @@
 
 <!-- Markdown content -->
 <h2 id="study-strategy">Study Strategy<a class="headerlink" href="#study-strategy" title="Permanent link">¶</a></h2>
+<ul>
+<li>The source material is daunting, and unnecessarily rigorous. I feel start basic and once you have grasped the mechanism of adjustments, then go for the source material (optional)</li>
+<li>Solve questions and work your way back to theory to stitch everything together!</li>
+<li>First learn how to calculate the trend indices, and practice.</li>
+<li>Claim Size model will require you to refer back to material.<ul>
+<li>Calculate <abbr title="Limited Expected Value">LEV</abbr> depending on distribution, formula given on the exam</li>
+<li><span class="arithmatex">\(L(d,p)\)</span> for a layer is just difference</li>
+</ul>
+</li>
+</ul>
+<h2 id="big-picture">Big Picture<a class="headerlink" href="#big-picture" title="Permanent link">¶</a></h2>
+<ul>
+<li>We have ultimate claim size mean → adjust it for trends then you have it for every cell → use these to find limited expected values in a layer and <strong>relativities</strong> between layers <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>.</li>
+<li><span class="arithmatex">\(a\)</span> = Basic limit; <span class="arithmatex">\(b\)</span> = Limits of our given table</li>
+<li>Use relativities to calculate cumulative triangles at current year cost levels and basic limits → Denominator = current @ original limits, Numerator = latest @ basic limits</li>
+<li>Calculate LDFs from this Adjusted Cumulative triangle</li>
+</ul>
 <h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">¶</a></h2>
 <ol class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to explain why we need to adjust loss development factors in different layers</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate the trend index</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate LEVs given values of <span class="arithmatex">\(\theta\)</span> and the LEV formula for a distribution</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate adjusted loss development factors for a given layer<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Adjust the cumulative losses to the basic limit and appropriate cost level</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Calculate the LDFs based on the adjusted cumulative losses</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Use the LEVs to adjust the LDFs for the given layer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate the trend index</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate <abbr title="Limited Expected Values">LEVs</abbr> given values of <span class="arithmatex">\(\theta\)</span> and the <abbr title="Limited Expected Value">LEV</abbr> formula for a distribution</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate adjusted loss development factors for a given layer<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Adjust the cumulative losses to the basic limit and appropriate cost level</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Calculate the LDFs based on the adjusted cumulative losses</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Use the <abbr title="Limited Expected Values">LEVs</abbr> to adjust the LDFs for the given layer</li>
 </ul>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to explain the impact the value of theta has on the adjusted LDFs</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to describe the purpose of a claims layer ratio</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Know the properties of the claims layer ratio</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate adjusted LDFs using the claims layer ratio and the LEVs at ultimate</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know the properties of the claims layer ratio</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate adjusted LDFs using the claims layer ratio and the <abbr title="Limited Expected Values">LEVs</abbr> at ultimate</li>
 </ol>
 <h2 id="my-notes">My Notes<a class="headerlink" href="#my-notes" title="Permanent link">¶</a></h2>
+<div class="admonition success">
+<p class="admonition-title">The point</p>
+<p>Adjust LDF for one claim layer to produce LDFs appropriate for another layer.</p>
+<ul>
+<li>Useful for high deductible and XOL reinsurance policies (with thinness in excess/ceded layer)</li>
+</ul>
+</div>
+<h3 id="notation">Notation<a class="headerlink" href="#notation" title="Permanent link">¶</a></h3>
+<ul>
+<li>Exposure period (AY) <span class="arithmatex">\(i\)</span></li>
+<li>Development period <span class="arithmatex">\(j\)</span></li>
+<li><span class="arithmatex">\(C^L_{i,j}\)</span> → Cumulative claims in <span class="arithmatex">\(L\)</span></li>
+<li><span class="arithmatex">\(C_{i,\infty}^L\)</span> → Ultimate claims in <span class="arithmatex">\(L\)</span></li>
+<li><span class="arithmatex">\(f_{n,j}^L\)</span> → Age-to-age (LDF)</li>
+<li><span class="arithmatex">\(F^L_{n,j}\)</span> → Age-to-ult (CDF)</li>
+<li><span class="arithmatex">\(L(d,p)\)</span> → claims layer (<span class="arithmatex">\(0 \leq d &lt; p \leq \infty\)</span>)<ul>
+<li>truncated below <span class="arithmatex">\(d\)</span> → deductible</li>
+<li>censored above <span class="arithmatex">\(p\)</span> → policy limit</li>
+<li><span class="arithmatex">\(d=0, p=\infty\)</span> → ground-up unlimited basis</li>
+</ul>
+</li>
+</ul>
+<h3 id="trend">Trend<a class="headerlink" href="#trend" title="Permanent link">¶</a></h3>
+<ul>
+<li>Trends apply to and are calculated from <strong>ground-up unlimited claims layer</strong></li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Complication about selection of trend factors</p>
+<ul>
+<li>Trend typically acts on incremental values</li>
+<li>Analysis uses cumulative data</li>
+<li>Then exactly what trend factors to apply to this data?</li>
+</ul>
+</div>
+<h5 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h5>
+<ol>
+<li>Calculate AY trend (row-wise)</li>
+<li>Calculate CY trend (diagonally)</li>
+<li>Total trend = AY <span class="arithmatex">\(\times\)</span> CY  (for <span class="arithmatex">\(T_{ij}\)</span> values)</li>
+</ol>
+<h3 id="claim-size-model">Claim Size Model<a class="headerlink" href="#claim-size-model" title="Permanent link">¶</a></h3>
+<ul>
+<li>Calculate <strong><abbr title="Limited Expected Value">LEV</abbr></strong>s from the distribution → Every distribution has a limited version, in Exam P, we had seen this as <span class="arithmatex">\(E(X \wedge L)\)</span> and is provided in the tables for each distribution. Each cell has a mean value which can be used to determine it. We will typically be given the exponential distribution.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><span class="arithmatex">\(LEV(L(d,p)) = LEV(p) - LEV(d)\)</span> for a given distribution <span class="arithmatex">\(\Phi\)</span></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">How <span class="arithmatex">\(\theta\)</span> impacts adjusted LDFs</p>
+<ul>
+<li>If claim size parameters (<span class="arithmatex">\(\theta\)</span>'s) are larger<ul>
+<li>adjustment of LDFs below limit is impactful ← Greater difference between adjusted and unadjusted factors</li>
+<li>the impact from a larger trend would be the same.</li>
+</ul>
+</li>
+<li>If <span class="arithmatex">\(\theta\)</span>'s are smaller (less claims are being censored at policy limit)<ul>
+<li>limited <abbr title="Limited Expected Values">LEVs</abbr> are closer to unlimited <abbr title="Limited Expected Values">LEVs</abbr></li>
+<li>Adjustment of LDFs below limit is less impactful (← difference between adjusted and unadjusted factors is minimal)</li>
+<li>but above the limit is more impactful (← fewer losses in excess layer)</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="adjusting-ldfs">Adjusting LDFs<a class="headerlink" href="#adjusting-ldfs" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Why adjust LDFs?</p>
+<ul>
+<li>Traditional <a href="../../exam-5/Chain%20Ladder/">Chain Ladder</a> to calculate LDFs is appropriate if our loss data<ul>
+<li>is on a ground-up (<span class="arithmatex">\(d=0\)</span>)</li>
+<li>unlimited basis (<span class="arithmatex">\(p = \infty\)</span>)</li>
+<li>and trend only acts in AY direction</li>
+</ul>
+</li>
+<li>If either of these aren't true <span class="arithmatex">\(\implies\)</span>  We need to adjust LDFs</li>
+</ul>
+</div>
+<blockquote>
+<p>Use 500k as Basic limit unless told otherwise</p>
+</blockquote>
+<ul>
+<li>Basic limit = data is sufficiently credible for estimating claims development patterns</li>
+<li>To adjust LDFs<ol>
+<li>Adjust Original loss triangle to latest period's cost level @ basic limit</li>
+<li>Use <span class="arithmatex">\(\uparrow\)</span> to calculate LDFs → CDFs</li>
+<li>Adjust CDFs for any layer</li>
+</ol>
+</li>
+</ul>
+<p>Let's look at how to do the last step. For layer <span class="arithmatex">\(X\)</span></p>
+<div class="arithmatex">\[
+F_{ij}^X = F_{n,j}^B \times \dfrac{\text{Ult in Layer}/\text{Ult Latest Basic}}{\text{Dev(j) in Layer}/\text{Dev(j) Latest Basic}} 
+\]</div>
+<ul>
+<li>Its best to create an "in Layer" table (using the relation <span class="arithmatex">\(LEV(L(d,p)) = LEV(p) - LEV(d)\)</span>)</li>
+<li>And apply this adjustment to CDFs <span class="arithmatex">\(= \dfrac{\text{Ult in Layer}}{\text{Dev(j) in Layer}} / \dfrac{\text{Ult Latest Basic}}{\text{Dev(j) Latest Basic}}\)</span><ul>
+<li>So, to remember, you are calculating <span class="arithmatex">\(\dfrac{\text{CDF for Layer}}{\text{CDF for Basic @Latest}}\)</span> and multiplying it to selected CDFs from Basic @Latest</li>
+</ul>
+</li>
+</ul>
+<h3 id="claims-layer-ratios">Claims Layer Ratios<a class="headerlink" href="#claims-layer-ratios" title="Permanent link">¶</a></h3>
+<div class="admonition todo">
+<p class="admonition-title">The Goal</p>
+<p>Find LDFs for </p>
+</div>
+<ul>
+<li>There is no claim size model for maturities other than ultimate.</li>
+<li>But don't try to develop one. Just estimate the ratios</li>
+</ul>
+<div class="arithmatex">\[
+\text{Claims Layer Ratio} = R_{j}(B,X) = \dfrac{LEV(B)}{LEV(X)}
+\]</div>
+<ul>
+<li>Adjustment factors for for LDFs<ul>
+<li>Basic <span class="arithmatex">\(=\dfrac{\text{LEV(Basic, Ult)}}{\text{LEV(Limited, Ult)}}/\text{Claims Layer Ratio}\)</span></li>
+<li>Basic → Limit (X) <span class="arithmatex">\(=\left(1-\dfrac{\text{LEV(Basic, Ult)}}{\text{LEV(Limited, Ult)}}\right)/(1-\text{Claims Layer Ratio})\)</span></li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Properties of Claims Layer Ratio</p>
+<p>For <span class="arithmatex">\(R_{j}(B,X) \lt 1\)</span> (i.e. ignoring negative dev for which it would be <span class="arithmatex">\(\geq 1\)</span>)</p>
+<ol>
+<li><span class="arithmatex">\(R_{a} \gt R_{b}\)</span> (<span class="arithmatex">\(a &lt; b\)</span>) for earlier maturities → less development in excess layer earlier on. (e.g. <span class="arithmatex">\(R_{12} \gt R_{24}\)</span>)</li>
+<li><span class="arithmatex">\(R_{a} \geq R_{\infty}\)</span> → Pre-mature (reported) ratios will be greater than ultimate <span class="arithmatex">\(\impliedby\)</span> more development in higher layers than lower layers<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li>If LDFs calculated from unlimited data → <span class="arithmatex">\(\max{R} = R_{\infty} \times F_{j}\)</span> #doubt </li>
+</ol>
+</div>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Distribution needs to meet requirements:<br>
+1. Parameters can be adjusted for inflation<br>
+2. <abbr title="Limited Expected Value">LEV</abbr> and unlimited means can be calculated with reasonable effort&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>Lower layers don't develop once they hit the top of the layer&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
   
