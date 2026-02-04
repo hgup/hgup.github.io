@@ -3951,7 +3951,7 @@
   <span class="md-ellipsis">
     
   
-    None
+    Estimating the Premium Asset on Retrospectively Rated Policies - Teng &amp; Perkins
   
 
     
@@ -12114,9 +12114,45 @@ L = O_{t} \times LDF_{t} + Z + E\times (1-Z)
 </ul>
 </li>
 <li>BF method</li>
-<li>NCCI method (Exam 8)<ul>
-<li>More practical than (1)</li>
-<li>Accuracy depends on proper <strong>insurance charge</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li>
+<p>NCCI method (Exam 8)</p>
+<ul>
+<li>More practical than (1) (PROS)</li>
+<li>Accuracy depends on proper <strong>insurance charge</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> (CONS)</li>
+</ul>
+</li>
+<li>
+<p>NCCI method</p>
+<ol>
+<li>Limited losses at <span class="arithmatex">\(j\)</span> and Ult</li>
+<li><strong>Entry ratio</strong><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> <span class="arithmatex">\(=\dfrac{\text{aggregate limit}}{\text{limited loss}}\)</span> (for each <span class="arithmatex">\(j\)</span> and Ult)</li>
+<li><strong>Adjusted</strong> limited losses<ul>
+<li><span class="arithmatex">\(\text{loss XS of d}\)</span> = <span class="arithmatex">\(1 -\dfrac{\text{limited loss}}{\text{expected unlimited loss}}\)</span></li>
+<li>Adjustment factor = <span class="arithmatex">\(\dfrac{1+0.8 \times \text{loss XS of d}}{1 - \text{loss XS of d}}\)</span></li>
+<li><strong>Adjusted limited loss</strong> = Adj factor <span class="arithmatex">\(\times\)</span> Expected unlimited loss</li>
+</ul>
+</li>
+<li>Insurance charge ratio<ul>
+<li><strong>adjusted limited loss</strong> → <abbr title="Expected Loss Group">ELG</abbr>,  <strong>entry ratio</strong>, <abbr title="Expected Loss Group">ELG</abbr> → Insurance charge ratio (<em>If entry ratio is in-between</em> → just interpolate)</li>
+</ul>
+</li>
+<li>Calculate Insurance charge = <span class="arithmatex">\(\text{Ratio} \times\text{Limited Loss}\)</span></li>
+<li>IBNR = CIC(Ult) - CIC(<span class="arithmatex">\(j\)</span>)</li>
+</ol>
+</li>
+<li>
+<p>Adjustment factor → </p>
+<ul>
+<li><abbr title="Insurance Charge">IC</abbr> = E(Agg excess loss) without considering deductible</li>
+<li>And E(Agg with deductible) <span class="arithmatex">\(\lt\)</span> E(Agg without deductible)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
+<li>More the loss → lower the <abbr title="Expected Loss Group">ELG</abbr> → lower the <abbr title="Insurance Charge">IC</abbr></li>
+<li>The adjustment increase the expected aggregate losses</li>
+</ul>
+</li>
+<li>
+<p>Aggregate Dev Factors</p>
+<ul>
+<li>Read #later</li>
 </ul>
 </li>
 </ol>
@@ -12140,6 +12176,12 @@ L = O_{t} \times LDF_{t} + Z + E\times (1-Z)
 </li>
 <li id="fn:2">
 <p>GIGO otherwise&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>The influence of aggregate limit on  losses below deductible&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p>"Why" is beyond the scope of the syllabus.&nbsp;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
 </li>
 </ol>
 </div>
