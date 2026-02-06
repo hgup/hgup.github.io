@@ -3907,8 +3907,63 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cpdld-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPDLD Ratios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premium-asset-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premium Asset Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitzgibbons-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fitzgibbon's method
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Muffs
+      
+    </span>
+  </a>
   
 </li>
       
@@ -11817,19 +11872,64 @@
 <ol class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know the basics of retrospectively rated insurance (the features and benefits)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Know how to calculate the premium for a retrospectively rated policy</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate the PDLD ratios<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Rating parameter method</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Empirical method</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate the <abbr title="Premium Development to Loss Development">PDLD</abbr> ratios<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Rating parameter method</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Empirical method</li>
 </ul>
 </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate CPDLD ratios</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate future expected premium</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate the premium asset</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to explain the basics of Fitzgibbon’s method</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to recognize and explain the graphs of both Fitzgibbon’s method and the PDLD method</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Know the advantages and disadvantages of both Fitzgibbon’s method and the PDLD method</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate CPDLD ratios</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate future expected premium</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate the premium asset</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to explain the basics of Fitzgibbon’s method</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to recognize and explain the graphs of both Fitzgibbon’s method and the <abbr title="Premium Development to Loss Development">PDLD</abbr> method</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Know the advantages and disadvantages of both Fitzgibbon’s method and the <abbr title="Premium Development to Loss Development">PDLD</abbr> method</li>
 </ol>
 <h2 id="my-notes">My Notes<a class="headerlink" href="#my-notes" title="Permanent link">¶</a></h2>
+<ul>
+<li>Retro adjustments <ul>
+<li>First at 18 months of losses (+9 lag = 27 months of booked premium)</li>
+<li>Subsequent +12 to both (refer to table below)</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Retro adj.</th>
+<th>Losses a/o</th>
+<th>Booked Prem a/o</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>18 months</td>
+<td>27 months</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>2</td>
+<td>30 months</td>
+<td>39 months</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>3</td>
+<td>42 months</td>
+<td>51 months</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>4</td>
+<td>56 months</td>
+<td>Not yet reflected</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770268835699.webp" data-desc-position="bottom"><img alt="Teng &amp; Perkins-1770268835699.webp" src="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770268835699.webp"></a></p>
+<p><em>Note that in our calculations, the retro premiums should have reflected in the book. Thus we don't consider 18 month losses from 2022.2, 2022.3 &amp; 2022.4 even though the retro adjustment has already been done. This is due to the lag.</em></p>
 <h3 id="retrospectively-rated-insurance">Retrospectively Rated Insurance<a class="headerlink" href="#retrospectively-rated-insurance" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>After the policy <strong>expires</strong> → premium is set to reflect <strong><em>actual experience</em></strong> (premium adjusts up or down as losses develop)</p>
@@ -11887,7 +11987,7 @@ R = (b + CA)T
 </ul>
 </li>
 </ul>
-<h3 id="pdld-ratio">PDLD Ratio<a class="headerlink" href="#pdld-ratio" title="Permanent link">¶</a></h3>
+<h3 id="pdld-ratio"><abbr title="Premium Development to Loss Development">PDLD</abbr> Ratio<a class="headerlink" href="#pdld-ratio" title="Permanent link">¶</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Disclaimer</p>
 <p>These methods are meant to be applied to an entire (or large segment of) book of business, rather than individual policies</p>
@@ -11896,7 +11996,7 @@ R = (b + CA)T
 <table>
 <thead>
 <tr>
-<th>Var</th>
+<th>Rating Parameter</th>
 <th>Name</th>
 <th>Description</th>
 </tr>
@@ -11972,10 +12072,156 @@ PDLD_{1} = \dfrac{P_{1}}{L_{1}} = \left(\dfrac{BP}{SP} \times \dfrac{TM}{ELR \ti
 </ol>
 <p>And then,</p>
 <ul>
-<li>For <span class="arithmatex">\(PDLD_{2} = \dfrac{P_{2}-P_{1}}{L_{2}-L_{1}}\)</span><ul>
-<li>Eventually instead of <span class="arithmatex">\(LCR_{1}\)</span> write <span class="arithmatex">\(\dfrac{CL_{2}-CL_{1}}{L_{2} - L_{1}}\)</span> </li>
+<li>
+<p>For <span class="arithmatex">\(PDLD_{2} = \dfrac{P_{2}-P_{1}}{L_{2}-L_{1}}\)</span></p>
+<ul>
+<li>Eventually instead of <span class="arithmatex">\(LCR_{1}\)</span> write the <strong><em>incremental</em> Loss Capping Ratio</strong>, <span class="arithmatex">\(\dfrac{CL_{2}-CL_{1}}{L_{2} - L_{1}}\)</span> in the (2) part</li>
 </ul>
 </li>
+<li>
+<p>Pros:</p>
+<ul>
+<li>change to rating params can be accounted for (good for currently written policies)</li>
+<li>PDLDs are more stable than <a href="#empirical">#Empirical</a> method</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>rating parameters (LDF) cannot be average across segments (to avoid bias)<ul>
+<li>thus have to retrospectively test <abbr title="Premium Development to Loss Development">PDLD</abbr> ratios (actual vs expected)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="empirical">Empirical<a class="headerlink" href="#empirical" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>Don't use ultimate losses because <em>future actual loss development</em> will be accounted for in <strong>future</strong> premium adjustments.</p>
+</blockquote>
+<ul>
+<li>Aggregate by Policy effective Quarter<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
+<li>Say the first adjustment is done at 18 months, there is a <strong>lag</strong> in processing and recording adjusted premiums → for them to be booked it will take some more months after the adjustment has been made. (use Lag =  9 months unless stated otherwise)</li>
+<li>So we have to associate losses at 18 months with premiums booked at 27 months.<ul>
+<li>Second adjustment is <span class="arithmatex">\(\text{Loss date 1} + 12\text{mo} = 30\text{ months}\)</span>  → 39 months premiums</li>
+<li>And so on… 42 months loss → 51 months premium, you get the point…</li>
+</ul>
+</li>
+<li>Reasons for <abbr title="Premium Development to Loss Development">PDLD</abbr> trending higher<ul>
+<li>Perhaps rating parameters have changed (max or per accident-lim might have increased)</li>
+<li>Improvement in loss experience → larger portion of loss is within the cap <span class="arithmatex">\(\implies\)</span> more "premium per dollar of loss"</li>
+</ul>
+</li>
+</ul>
+<h3 id="cpdld-ratios">CPDLD Ratios<a class="headerlink" href="#cpdld-ratios" title="Permanent link">¶</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Reminder</p>
+<ul>
+<li>What's the goal? →  to estimate the premium asset</li>
+<li>Premium asset = <span class="arithmatex">\(\sum\text{future adjustments on E(Future losses)}\)</span></li>
+</ul>
+</div>
+<div class="arithmatex">\[
+CPDLD_{k} = \dfrac{\sum_{i=k}^{N} PDLD_{k} \times \%\text{ reported}}{\sum_{i=k}^{N} \%\text{ reported}}
+\]</div>
+<ul>
+<li>where <span class="arithmatex">\(N\)</span> is the total number of retro adjustments to be made in the future.</li>
+</ul>
+<h3 id="premium-asset-calculation">Premium Asset Calculation<a class="headerlink" href="#premium-asset-calculation" title="Permanent link">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip: Understand the Axes</p>
+<ul>
+<li>Before getting into the calculations, understand the Policy effective triangle well</li>
+<li>For any PQ → The number of months actually show how many retro adjustments they would have had.</li>
+<li>It would make sense if you are not given the full triangle to create a column for maturity of each Policy effective quarter. </li>
+<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770268396251.webp" data-desc-position="bottom"><img alt="Teng &amp; Perkins-1770268396251.webp" src="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770268396251.webp"></a></li>
+<li>Notice how at 27 months for premiums, first retro adjustment takes place</li>
+<li>The next at 27 months</li>
+</ul>
+</div>
+<ol>
+<li>Calculate <a href="#pdld-ratio"><abbr title="Premium Development to Loss Development">PDLD</abbr></a> and <a href="#cpdld-ratios">#CPDLD Ratios</a></li>
+<li><span class="arithmatex">\(E(\text{Future Loss}) =\text{Ult Loss} -\text{Loss a/o most recent retro adj.}\)</span><ul>
+<li>% earned factor for the latest year →  to account for the fact that policies aren't fully earned by the end of the year<ul>
+<li>If not given, state "I assume that, % earned 100%"</li>
+</ul>
+</li>
+<li>Most recent retro adj. = prior retro adjustment</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(E(\text{Future Prem}) =CPDLD \times\text{E(Future Losses)}\)</span> ← Corresponding values<ul>
+<li>Refer to the top to understand how to map them properly</li>
+</ul>
+</li>
+<li>Ultimate premium = <span class="arithmatex">\(E(\text{Future Prem})+\text{Prem booked a/o most recent retro adj.}\)</span></li>
+<li><span class="arithmatex">\(\text{Prem Asset} =\text{Ultimate Prem} -\text{Latest Val. Prem}\)</span> ← which is the diagonal prem</li>
+</ol>
+<blockquote>
+<p>Mind the difference between the <strong>booked premiums</strong> for the ultimate premium calculation<br>
+- (4) has a/o most recent retro adjustment<br>
+- (5) is what is yet to be adjusted → latest valuation date (diagonal)</p>
+</blockquote>
+<h5 id="future-premium-step-3-can-be-calculated-in-another-way">Future Premium (step 3) can be calculated in another way<a class="headerlink" href="#future-premium-step-3-can-be-calculated-in-another-way" title="Permanent link">¶</a></h5>
+<p>Use <span class="arithmatex">\(\downarrow\)</span>  formula to find <span class="arithmatex">\(P_{3}\)</span>, premium at third adjustment</p>
+<div class="arithmatex">\[
+P_{n} = [BP + (CL_{n}\times LCF)] \times TM
+\]</div>
+<p>Then find ultimate premium <span class="arithmatex">\(P_{ult}\)</span></p>
+<div class="arithmatex">\[
+P_{ult} = [BP + (CL_{ult} \times LCF)]\times TM
+\]</div>
+<p>And subtract the both: <span class="arithmatex">\(E(\text{Future Prem})= P_{ult}- P_{n}\)</span></p>
+<h3 id="next">Next<a class="headerlink" href="#next" title="Permanent link">¶</a></h3>
+<ul>
+<li>Why not use development method on premiums? Why use <abbr title="Premium Development to Loss Development">PDLD</abbr>?<ol>
+<li>Ultimate incurred loss can be estimated more quickly than retro premiums can be obtained. We get a better estimate sooner.</li>
+<li>LOGICALLY, retro premiums <strong>depend</strong> on incurred losses → thus look at the connection between them, instead of just premiums</li>
+</ol>
+</li>
+<li>PROs of <abbr title="Premium Development to Loss Development">PDLD</abbr><ul>
+<li>Based on rating formula → explainable</li>
+<li>Emphasis on Premium sensitivity (in line with regulatory procedures)</li>
+<li>Adapts to changes in retro parameters (other methods get distorted)</li>
+</ul>
+</li>
+<li>CON of <abbr title="Premium Development to Loss Development">PDLD</abbr><ul>
+<li>Ratios are difficult to come by (as params vary by year, state and plan)</li>
+</ul>
+</li>
+</ul>
+<h3 id="fitzgibbons-method">Fitzgibbon's method<a class="headerlink" href="#fitzgibbons-method" title="Permanent link">¶</a></h3>
+<p>To calculate premium asset, we use this reserve formula</p>
+<div class="arithmatex">\[
+\text{Retro adjustment} = A + B \times \text{Standard Loss Ratio}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span> are estimated from historical regression<ul>
+<li><span class="arithmatex">\(A:\)</span> intercept → <em>minimum premium to cover expenses of writing and servicing policy</em></li>
+<li><span class="arithmatex">\(B:\)</span> slope represents the <em>premium responsiveness</em></li>
+</ul>
+</li>
+<li><abbr title="Standard Loss Ratios">SLR</abbr> and Retro adjustments from mature PYs (old)</li>
+<li>
+<p><span class="arithmatex">\(\implies\)</span> We don't need to calculate plan parameters in the <abbr title="Premium Development to Loss Development">PDLD</abbr> method</p>
+</li>
+<li>
+<p>CON:</p>
+<ul>
+<li>Doesn't consider emerging loss experience.</li>
+<li>Won't adjust the premium for worse or better loss experience at each premium adjustment.</li>
+<li>Problem 2: <abbr title="Standard Loss Ratios">SLR</abbr> doesn't account for the composition of losses (can be one very large loss or multiple smaller losses)</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770278446909.webp" data-desc-position="bottom"><img alt="Teng &amp; Perkins-1770278446909.webp" src="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770278446909.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770278387606.webp" data-desc-position="bottom"><img alt="Teng &amp; Perkins-1770278387606.webp" src="../../../assets/images/2026/02/Teng%20%26%20Perkins-1770278387606.webp"></a></p>
+<ul>
+<li>In contrast, for the <abbr title="Premium Development to Loss Development">PDLD</abbr> method<ul>
+<li>Premium responsiveness declines over time. Why? #later</li>
+</ul>
+</li>
+</ul>
+<h2 id="muffs">Muffs<a class="headerlink" href="#muffs" title="Permanent link">¶</a></h2>
+<ul>
+<li>Be careful when calculating CPDLD ratio… you must divide by the total weights (when finding for <span class="arithmatex">\(CPDLD_{2+}\)</span>, the \% reported don't add up to 1)</li>
 </ul>
 <div class="footnote">
 <hr>
@@ -11985,6 +12231,9 @@ PDLD_{1} = \dfrac{P_{1}}{L_{1}} = \left(\dfrac{BP}{SP} \times \dfrac{TM}{ELR \ti
 </li>
 <li id="fn:2">
 <p>If you write business thinking the claim frequency will be 100, but in the future during the policy period it turns out to be 150, its unprofitable&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>Similar to PY but this is PQ (Policy Quarter)&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
 </div>
