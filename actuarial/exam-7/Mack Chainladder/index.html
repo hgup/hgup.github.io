@@ -12171,9 +12171,20 @@ T_{k} \to 0 \implies \text{non-correlation}
 </ul>
 </li>
 <li>Count <span class="arithmatex">\(L\)</span>'s and <span class="arithmatex">\(S\)</span>'s in each diagonal</li>
+<li>(Znm) → "Zanam"<ul>
+<li><span class="arithmatex">\(Z_{j} = \min(L_{j},S_{j})\)</span> → Minimum</li>
+<li><span class="arithmatex">\(n_{j} = L_{j}+S_{j}\)</span> → Addition</li>
+<li><span class="arithmatex">\(m_{j} =\text{rounddown}((n-1)/2,0)\)</span> </li>
+<li><span class="arithmatex">\(Z = \sum Z_{j}\)</span> </li>
+</ul>
+</li>
+<li>Calculate mean and variance of <span class="arithmatex">\(Z\)</span><ul>
+<li><span class="arithmatex">\(E(Z_{j})=\dfrac{n}{2}-\binom{n-1}{m}\times \dfrac{n}{2^n}\)</span></li>
+<li><span class="arithmatex">\(V(Z_{j})=\dfrac{n(n-1)}{4}-\binom{n-1}{m} \dfrac{n(n-1)}{2^n} + E(Z_{j}) - E(Z_{j})^{2}\)</span></li>
+</ul>
+</li>
 </ol>
-<p>%% <br>
-$$<br>
+<p>$$<br>
 % Triangle Table<br>
 \begin{array}{c|cccc}<br>
  &amp; j=1 &amp; j=2 &amp; j=3 &amp; j=4 \ \hline<br>
@@ -12191,22 +12202,7 @@ j &amp; S_j &amp; L_j \ \hline<br>
 3 &amp; \bbox[#FFFFC8, 2pt]{1} &amp; \bbox[#FFFFC8, 2pt]{1} \<br>
 4 &amp; \bbox[#B4F0B4, 2pt]{2} &amp; \bbox[#B4F0B4, 2pt]{1} \<br>
 \end{array}<br>
-$$<br>
- %%</p>
-<ul>
-<li>Step 4 (Znm) → "Zanam"<ul>
-<li><span class="arithmatex">\(Z_{j} = \min(L_{j},S_{j})\)</span> → Minimum</li>
-<li><span class="arithmatex">\(n_{j} = L_{j}+S_{j}\)</span> → Addition</li>
-<li><span class="arithmatex">\(m_{j} =\text{rounddown}((n-1)/2,0)\)</span> </li>
-<li><span class="arithmatex">\(Z = \sum Z_{j}\)</span> </li>
-</ul>
-</li>
-<li>Step 5<ul>
-<li><span class="arithmatex">\(E(Z_{j})=\dfrac{n}{2}-\binom{n-1}{m}\times \dfrac{n}{2^n}\)</span></li>
-<li><span class="arithmatex">\(V(Z_{j})=\dfrac{n(n-1)}{4}-\binom{n-1}{m} \dfrac{n(n-1)}{2^n} + E(Z_{j}) - E(Z_{j})^{2}\)</span></li>
-</ul>
-</li>
-</ul>
+$$</p>
 <blockquote>
 <p>Then do hypothesis testing using this mean and variance. Just check if <span class="arithmatex">\(Z=0\)</span> appears in the 95% confidence interval (select <span class="arithmatex">\(97.5\)</span>-th percentile since it is a symmetric interval)</p>
 </blockquote>
