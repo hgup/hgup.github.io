@@ -3501,6 +3501,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#the-caseload-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Caseload Effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#muffs" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -13287,6 +13298,27 @@ y = a + bx
 <blockquote>
 <p>Brosius: Least squares works in any situation.</p>
 </blockquote>
+<h3 id="the-caseload-effect">The Caseload Effect<a class="headerlink" href="#the-caseload-effect" title="Permanent link">¶</a></h3>
+<ul>
+<li>Claims reporting slows down when losses are higher.</li>
+<li>Typically, <span class="arithmatex">\(E(X|Y=y)\propto y\)</span> (claims incurred)</li>
+<li>But in this case, the expected claims is NOT proportional to the claims incurred</li>
+</ul>
+<p>Thus,</p>
+<div class="arithmatex">\[
+E(X|Y=y) = dy + x_{0}
+\]</div>
+<ul>
+<li>where<ul>
+<li><span class="arithmatex">\(d:\)</span> constant % reported</li>
+<li><span class="arithmatex">\(x_{0}:\)</span>  some constant</li>
+</ul>
+</li>
+</ul>
+<p>The Bayesian Ultimate loss then turns out to be (note: instead of <span class="arithmatex">\(\dfrac{x}{d}\)</span>, we have <span class="arithmatex">\(\dfrac{x-x_{0}}{d}\)</span>)</p>
+<div class="arithmatex">\[
+L(x) = Z \dfrac{x-x_{0}}{d} + (1-Z)E(Y)
+\]</div>
 <h3 id="muffs">Muffs<a class="headerlink" href="#muffs" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Fall 2000 Exam 6 - Q41</strong>: When you are given 48 months to ult tail factor but one of the months have 60 month maturity, then know that 60 month doesn't mean ultimate. Thus, you will have to use 48 month loss and multiply it by the given tail factor.</li>
