@@ -12822,6 +12822,8 @@
       
         
       
+        
+      
     
     
     
@@ -12975,6 +12977,34 @@
     
   
     Learning a new Library in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Walkthroughs/Next.js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next.js
   
 
     
@@ -13148,11 +13178,18 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Diagonal dummy regression test</li>
 </ul>
 </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate <span class="arithmatex">\(f(d)\)</span> and <span class="arithmatex">\(h(w)\)</span> for the parameterized BF or Cape Cod methods for constant variance or variance proportional to loss</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Be able to calculate <span class="arithmatex">\(f(d)\)</span> and <span class="arithmatex">\(h(w)\)</span> for the parameterized BF or Cape Cod methods for constant variance or variance proportional to loss</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Understand how to calculate the number of parameters for a BF-CC emergence pattern</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Be able to calculate expected ultimate losses using the additive chain ladder method</li>
 </ol>
 <h2 id="my-notes">My Notes<a class="headerlink" href="#my-notes" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Remember</p>
+<ul>
+<li>Venter always uses incremental development factors so <span class="arithmatex">\(f(d)\)</span>  will not be <span class="arithmatex">\(\gt 1\)</span> in general.</li>
+<li>Plot <span class="arithmatex">\(Y\)</span> vs <span class="arithmatex">\(X\)</span></li>
+</ul>
+</div>
 <h3 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">¶</a></h3>
 <ol>
 <li><em>Expected value of incremental losses in the next period</em> <span class="arithmatex">\(\propto\)</span> Losses to date<ul>
@@ -13166,6 +13203,54 @@
 </li>
 </ol>
 <h3 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Test (Assumption #)</th>
+<th>What to do?</th>
+<th>What to check?</th>
+<th>If failing?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#significance-test-1">#Significance test ( 1)</a></td>
+<td>Regress</td>
+<td>check if <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are significant?</td>
+<td>Use <a href="#additive-chain-ladder">#Additive Chain Ladder</a> (if <span class="arithmatex">\(b\)</span> significant)</td>
+</tr>
+<tr>
+<td><a href="#superiority-of-emergence-pattern-test-1">#Superiority of emergence pattern test ( 1)</a></td>
+<td>Use Adj. SSE (or info criteria)</td>
+<td>compare "prop emergence" to other patterns.</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#linearity-test-1">#Linearity test ( 1)</a></td>
+<td>Plot residual vs loss</td>
+<td>No pattern (random scatter) , constant variance</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#stability-test-1">#Stability test ( 1)</a></td>
+<td>Plot LDF vs time</td>
+<td>Relatively flat (5yr), no trends else unstable</td>
+<td>Unstable → Give more weight to recent years</td>
+</tr>
+<tr>
+<td><a href="#correlation-test-2">#Correlation test ( 2)</a></td>
+<td><span class="arithmatex">\(T_{n-2} = r\sqrt{ \dfrac{n-2}{1-r^{2}} }\)</span></td>
+<td><span class="arithmatex">\(H_{0}:\text{No Correlation}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#diagonal-dummy-regression-test-2">#Diagonal dummy regression test ( 2)</a></td>
+<td>Regress with dummy for diagonals <span class="arithmatex">\(d_{j}\)</span>.</td>
+<td>If dummies are significant → CY effect exist.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h4 id="significance-test-1">Significance test (#1)<a class="headerlink" href="#significance-test-1" title="Permanent link">¶</a></h4>
 <div class="admonition question">
 <p class="admonition-title">Test</p>
@@ -13177,7 +13262,7 @@
 </ul>
 </div>
 <ul>
-<li>What happens if <span class="arithmatex">\(a\)</span> is also significant?</li>
+<li>What happens if <span class="arithmatex">\(a\)</span> is significant but <span class="arithmatex">\(b\)</span> is not? → Use <a href="#additive-chain-ladder">#Additive Chain Ladder</a></li>
 </ul>
 <h4 id="superiority-of-emergence-pattern-test-1">Superiority of emergence pattern test (#1)<a class="headerlink" href="#superiority-of-emergence-pattern-test-1" title="Permanent link">¶</a></h4>
 <div class="admonition question">
@@ -13185,7 +13270,7 @@
 <p>Is <strong>proportional emergence</strong> superior to other emergence patterns?</p>
 <ul>
 <li>
-<p>Calculate <span class="arithmatex">\(\dfrac{SSE}{(n-p)^{2}}\)</span> for different models. <br>
+<p>Calculate Adjusted SSE <span class="arithmatex">\(\dfrac{SSE}{(n-p)^{2}}\)</span> for different models. <br>
 <em>or</em> AIC = <span class="arithmatex">\(SSE \times e^{ 2p/n }\)</span> or BIC = <span class="arithmatex">\(SSE \times n^{p/n}\)</span></p>
 </li>
 <li>
@@ -13202,7 +13287,6 @@
 <li>Factor times parameter: <span class="arithmatex">\(y = f(d)h(w)\)</span></li>
 </ol>
 </li>
-<li></li>
 </ul>
 <h4 id="linearity-test-1">Linearity test (#1)<a class="headerlink" href="#linearity-test-1" title="Permanent link">¶</a></h4>
 <div class="admonition question">
@@ -13279,8 +13363,50 @@
 </ul>
 </div>
 <h3 id="parameterized-bf-method">Parameterized BF Method<a class="headerlink" href="#parameterized-bf-method" title="Permanent link">¶</a></h3>
+<ul>
+<li>The method is simple, just iteratively calculate <span class="arithmatex">\(f(d)\)</span> and <span class="arithmatex">\(h(w)\)</span>, with the initial values (of <span class="arithmatex">\(f\)</span> or <span class="arithmatex">\(h\)</span> given).</li>
+<li>There are two variance assumptions, according to which the iterative equations change.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Var Assumption</th>
+<th>Constant</th>
+<th>Proportional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(h(w)=\)</span></td>
+<td><span class="arithmatex">\(\dfrac{\sum{q}\times{f}}{\sum{f\times f}}\)</span></td>
+<td><span class="arithmatex">\(\dfrac{\sum{q^2} \div {f}}{\sum{f^2 \div f}}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f(h)=\)</span></td>
+<td><span class="arithmatex">\(\dfrac{\sum{q}\times{h}}{\sum{h\times h}}\)</span></td>
+<td><span class="arithmatex">\(\dfrac{\sum{q^2} \div {h}}{\sum{h^2 \div h}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Careful</p>
+<p>We need to use <strong>incremental values</strong> <span class="arithmatex">\(q(w,d)\)</span> for this process.</p>
+</div>
+<h5 id="cape-cod-parameters">Cape Cod Parameters<a class="headerlink" href="#cape-cod-parameters" title="Permanent link">¶</a></h5>
+<p>There are too many parameters in Parameterized BF, we can improve this situation by using Cape Cod Parameters, i.e. <strong>ONLY ONE</strong> <span class="arithmatex">\(h(w)\)</span> for all AY's <span class="arithmatex">\(w\)</span>. For this, we use the same iterative formula as mentioned above, but for <span class="arithmatex">\(h(w)\)</span> instead of summing row-wise, we will use all rows and columns of data to get A SINGLE <span class="arithmatex">\(h(w)\)</span> value.</p>
 <h3 id="bf-cc-emergence-pattern">BF-CC Emergence Pattern<a class="headerlink" href="#bf-cc-emergence-pattern" title="Permanent link">¶</a></h3>
+<p>Another way to get fewer parameters is to <strong>group</strong> AYs (<span class="arithmatex">\(h(w)\)</span>) and development periods (<span class="arithmatex">\(f(d)\)</span>) which aren't significantly different.</p>
+<div class="admonition tip">
+<p class="admonition-title">Number of parameters</p>
+<p><span class="arithmatex">\(p\)</span>, the number of parameters should only include those parameters which are required for estimation. For example, we can skip the <span class="arithmatex">\(f(d)\)</span> parameter for 0-12 period. Because all of the losses in the 0-12 period are known, and thus it won't be useful calculating <span class="arithmatex">\(f(1)\)</span>. If all the losses for 12-24 period were also known (not a proper triangle that way but still, for the sake of explanation)… then we would select number of parameters excluding <span class="arithmatex">\(f(d)\)</span> parameters for 0-12 and 12-24, as they don't require any estimation.</p>
+</div>
 <h3 id="additive-chain-ladder">Additive Chain Ladder<a class="headerlink" href="#additive-chain-ladder" title="Permanent link">¶</a></h3>
+<ul>
+<li>When constant terms are significant in <a href="#significance-test-1">#Significance test ( 1)</a> but <strong>factor values are not</strong>!</li>
+<li>Gives the same fit accuracy as <a href="#cape-cod-parameters">Cape Cod Method</a></li>
+<li>Additive (and BF and CC) allows for a bad year to be in just a few development periods. But <strong>traditional chain ladder</strong> amplifies the effect of the bad losses and carries them through all development periods.</li>
+</ul>
+<p>NOTATION: Instead of factors <span class="arithmatex">\(f(d)\)</span>, find average development <span class="arithmatex">\(g(d)\)</span> → Average of increments.</p>
 <div class="footnote">
 <hr>
 <ol>
