@@ -13530,7 +13530,19 @@ Y_{k,j+1}|X_{kj} \sim ODP(\mu_{kj},\phi_{j}) = ODP(\alpha_{k}\beta_{j},\phi)
 <li>Note that <span class="arithmatex">\(\phi\)</span> doesn't vary at all</li>
 </ul>
 <h3 id="deviance">Deviance<a class="headerlink" href="#deviance" title="Permanent link">¶</a></h3>
-<p><span class="arithmatex">\(D(Y,\hat{Y}) = 2 \sum_{i=1}^{n}[\ln[\pi(Y_{i}, \hat{\theta}^{(s)},\phi)]- \ln[\pi(Y_{i};\hat{\theta},\phi)]]\)</span></p>
+<div class="arithmatex">\[
+D(Y,\hat{Y}) = 2 \sum_{i=1}^{n}[\ln[\pi(Y_{i}, \hat{\theta}^{(s)},\phi)]- \ln[\pi(Y_{i};\hat{\theta},\phi)]]
+$$
+$$
+=2 \sum_{i=1}^{n} \ell(\text{saturated})-\ell(unsaturated)
+\]</div>
+<ul>
+<li>where, <ul>
+<li><span class="arithmatex">\(\ell\)</span> represents the log-likelihood function.</li>
+<li><span class="arithmatex">\(\hat{\theta}^{(s)}\)</span> represents saturated parameters</li>
+</ul>
+</li>
+</ul>
 <h3 id="residuals">Residuals<a class="headerlink" href="#residuals" title="Permanent link">¶</a></h3>
 <div class="arithmatex">\[
 R_{i}^{p} = \dfrac{Y_{i}-\hat{Y}_{i}}{\hat{\sigma}_{i}}

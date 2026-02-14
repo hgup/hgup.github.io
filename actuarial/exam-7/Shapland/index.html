@@ -13724,6 +13724,14 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 </ol>
 <h4 id="combining-methods">Combining Methods<a class="headerlink" href="#combining-methods" title="Permanent link">¶</a></h4>
 <p>Given a choice of models, how do we combine them? Shapland suggests:</p>
+<div class="admonition note">
+<p class="admonition-title">What does "<strong>same</strong> random variable" mean?</p>
+<ul>
+<li>It means that the same simulated values are going to be used for all methods.</li>
+<li>The source of randomness is going to be same for all models</li>
+<li>They share the same luck (if one sample is a "bad draw", all models will have that)</li>
+</ul>
+</div>
 <h5 id="run-models-with-same-random-variables-and-take-weighted-average-of-all-outputs">Run models with same random variables, and take weighted average of all outputs<a class="headerlink" href="#run-models-with-same-random-variables-and-take-weighted-average-of-all-outputs" title="Permanent link">¶</a></h5>
 <ul>
 <li>e.g. ODP bootstrap method is run using <a href="../../exam-5/Chain%20Ladder/">Chain Ladder</a> and <a href="../../exam-5/B-F/">B-F</a> GLM Bootstrap is also run<ul>
