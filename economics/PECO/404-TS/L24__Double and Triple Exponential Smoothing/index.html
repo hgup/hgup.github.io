@@ -13101,10 +13101,10 @@
 <li>aka Holt's trend corrected or <abbr title="Second Order">SO</abbr> Exponential smoothing</li>
 <li>Introduce a term, <span class="arithmatex">\(b_{t}\)</span> to take care of trend</li>
 </ul>
-<p>$$<br>
-s_{0} = y_{0}<br>
-$$<br>
-and for <span class="arithmatex">\(t\gt 0\)</span></p>
+<div class="arithmatex">\[
+s_{0} = y_{0}
+\]</div>
+<p>and for <span class="arithmatex">\(t\gt 0\)</span></p>
 <div class="arithmatex">\[
 s_{t} = \alpha y_{t} + (1-\alpha)(s_{t-1} + b_{t-1})
 \]</div>
@@ -13155,21 +13155,21 @@ Y_{t} = T_{t} \times S_{t} \times e_{t}
 \]</div>
 <p>Multiplicative Seasonality</p>
 <div class="arithmatex">\[
-\begin{align}
+\begin{align*}
 s_{0} &amp;  = y_{0} \\
 s_{t} &amp; = \alpha \dfrac{y_{t}}{c_{t-L}} + (1-\alpha)(s_{t-1}+b_{t-1}) \\
 b_{t}  &amp; = \beta(s_{t}-s_{t-1}) + (1-\beta)b_{t-1}  \\
 c_{t} &amp; = \gamma \dfrac{y_{t}}{s_{t}}  + (1-\gamma) c_{t-L}
-\end{align}
+\end{align*}
 \]</div>
 <p>Additive Seasonality</p>
 <div class="arithmatex">\[
-\begin{align}
+\begin{align*}
 s_{0} &amp;  = y_{0} \\
 s_{t} &amp; = \alpha + (y_{t} - c_{t-L}) + (1-\alpha)(s_{t-1}+b_{t-1}) \\
 b_{t}  &amp; = \beta(s_{t} - s_{t-1}) + (1-\beta)b_{t-1}  \\
 c_{t} &amp; = \gamma(y_{t} - s_{t-1} - b_{t-1})  + (1-\gamma) c_{t-L}
-\end{align}
+\end{align*}
 \]</div>
 <blockquote>
 <p>Holt's Filtering (same as Smoothing) on the Data </p>

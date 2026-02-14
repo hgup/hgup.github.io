@@ -13274,14 +13274,11 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td>- Least squares and MLE to solve for <span class="arithmatex">\(\alpha_{w}\)</span> and <span class="arithmatex">\(\beta_{d}\)</span> params</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<ul>
+<li>Least squares and MLE to solve for <span class="arithmatex">\(\alpha_{w}\)</span> and <span class="arithmatex">\(\beta_{d}\)</span> params</li>
+</ul>
 <h4 id="residuals">Residuals<a class="headerlink" href="#residuals" title="Permanent link">¶</a></h4>
 <div class="admonition tip">
 <p class="admonition-title">The big idea</p>
@@ -13359,6 +13356,12 @@ q^*(w,d) = r^* \times \sqrt{ m^z_{w,d} } + m_{w,d}
 <li>→ Ultimate losses and Estimated Reserves</li>
 </ul>
 <h4 id="process-variance-z2-gamma">Process Variance (<span class="arithmatex">\(z=2\)</span>, Gamma)<a class="headerlink" href="#process-variance-z2-gamma" title="Permanent link">¶</a></h4>
+<div class="admonition todo">
+<p class="admonition-title">When to use this?</p>
+<ul>
+<li>when you are asked to "Account for process variance" (see Shapland's GLM Bootstrap Overview)</li>
+</ul>
+</div>
 <blockquote>
 <p>Using Gamma Distribution, we will do probabilistic sampling</p>
 </blockquote>
@@ -13388,25 +13391,23 @@ E(x) = m_{w,d} \quad Var(x) = \phi m^z_{w,d}
 <li>We can arrive at the same expected values using LDFs (since <span class="arithmatex">\(z=1\)</span> and its a Poisson distribution) (we also need <span class="arithmatex">\(\beta_{1} = 0\)</span> and no additional params)</li>
 </ul>
 <h4 id="glm-bootstrap">GLM Bootstrap<a class="headerlink" href="#glm-bootstrap" title="Permanent link">¶</a></h4>
+<h5 id="no-requirement-regarding-number-of-parameters">No requirement regarding number of parameters<a class="headerlink" href="#no-requirement-regarding-number-of-parameters" title="Permanent link">¶</a></h5>
 <ul>
-<li>No requirement regarding number of parameters<ul>
 <li>Simplify by combining accident (development) years to have fewer accident (development) year parameters</li>
 <li>Can add calendar year parameters to explain calendar year effects</li>
 <li>Solve for parameters using least squares or MLE <span class="arithmatex">\(\alpha_{w}\)</span> and <span class="arithmatex">\(\beta_{b}\)</span> → <span class="arithmatex">\(m_{w,d}\)</span> and the same process follows</li>
 </ul>
-</li>
-<li>Advantages (GLM with diff params)<ul>
+<h5 id="advantages-glm-with-diff-params">Advantages (GLM with diff params)<a class="headerlink" href="#advantages-glm-with-diff-params" title="Permanent link">¶</a></h5>
+<ul>
 <li>Avoid over-fitting, flexibility to capture trends</li>
 <li>Fewer params allow corner residuals to be variant (non-zero) and allow for sampling</li>
 <li>Calendar year trends can be added</li>
 <li>Can work even if its not a complete triangle</li>
 </ul>
-</li>
-<li>Disadvantages (GLM with diff params)<ul>
+<h5 id="disadvantages-glm-with-diff-params">Disadvantages (GLM with diff params)<a class="headerlink" href="#disadvantages-glm-with-diff-params" title="Permanent link">¶</a></h5>
+<ul>
 <li>After each iteration, re-solving for <span class="arithmatex">\(\alpha_{w}\)</span> and <span class="arithmatex">\(\beta_{d}\)</span> is required</li>
 <li>LDF explicability is lost</li>
-</ul>
-</li>
 </ul>
 <hr>
 <h3 id="common-modelling-problems">Common Modelling Problems<a class="headerlink" href="#common-modelling-problems" title="Permanent link">¶</a></h3>
@@ -13504,8 +13505,8 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 </li>
 </ul>
 <h5 id="odp-bootstrap-adjustments-for-heteroskedasticity">ODP Bootstrap adjustments for heteroskedasticity<a class="headerlink" href="#odp-bootstrap-adjustments-for-heteroskedasticity" title="Permanent link">¶</a></h5>
-<ol>
-<li>Stratified sampling<ul>
+<h5 id="1-stratified-sampling">1. Stratified sampling<a class="headerlink" href="#1-stratified-sampling" title="Permanent link">¶</a></h5>
+<ul>
 <li>Group dev periods with homogenous variances</li>
 <li>Sample only from the residuals in each group (if we are sampling for cols 1-3, then choose residuals in columns 1-3)</li>
 <li>Pro<ul>
@@ -13518,8 +13519,15 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 </ul>
 </li>
 </ul>
-</li>
-<li>Calculating hetero-adjustment parameters<ul>
+<h5 id="2-calculating-hetero-adjustment-parameters">2. Calculating hetero-adjustment parameters<a class="headerlink" href="#2-calculating-hetero-adjustment-parameters" title="Permanent link">¶</a></h5>
+<div class="admonition tip">
+<p class="admonition-title">Hetero-adjustment parameters</p>
+<ul>
+<li>Groups</li>
+<li>Compute a factor that makes the individual standard deviation equal to that of the group.</li>
+</ul>
+</div>
+<ul>
 <li>Adjust residuals so that they become homoscedastic, then undo the adjustment from sampled incremental values</li>
 <li>Hetero-adjustment, <span class="arithmatex">\(h_{i} =\dfrac{\text{standard deviation for the whole triangle}}{\text{standard deviation for the group}}=\dfrac{\text{total}}{\text{individual}}\)</span></li>
 <li><span class="arithmatex">\(r^*_{w,d} = r_{w,d} \times f_{w,d}^H \times h_{i}\)</span> (assuming <span class="arithmatex">\(z=1\)</span>)</li>
@@ -13536,8 +13544,8 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 </ul>
 </li>
 </ul>
-</li>
-<li>Calculating non-constant scale parameters <span class="arithmatex">\(\phi\)</span><ul>
+<h5 id="3-calculating-non-constant-scale-parameters-phi">3. Calculating non-constant scale parameters <span class="arithmatex">\(\phi\)</span><a class="headerlink" href="#3-calculating-non-constant-scale-parameters-phi" title="Permanent link">¶</a></h5>
+<ul>
 <li>Calculate scale parameter for the whole triangle: <span class="arithmatex">\(\phi = \dfrac{\sum r^{2}_{w,d}}{N-p}\)</span><ul>
 <li><span class="arithmatex">\(\phi = \dfrac{\sum\left( \sqrt{ \frac{N}{N-p} }\times r_{w,d} \right)^{2}}{N}\)</span> (equivalently)</li>
 </ul>
@@ -13546,8 +13554,6 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 <li>Adjustment factor: <span class="arithmatex">\(h_{i} = \dfrac{\sqrt{ \phi }}{\sqrt{ \phi_{i} }}\)</span></li>
 <li>See an “Example” (<a href="zotero://open-pdf/library/items/5GEUKPGI?page=102&amp;annotation=DFANNGJV">pdf</a>) for calculation</li>
 </ul>
-</li>
-</ol>
 <h4 id="7-heteroecthesious-data">7. Heteroecthesious data<a class="headerlink" href="#7-heteroecthesious-data" title="Permanent link">¶</a></h4>
 <ul>
 <li>"Heteroecthesious" → different exposure periods</li>
@@ -13718,8 +13724,8 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 </ol>
 <h4 id="combining-methods">Combining Methods<a class="headerlink" href="#combining-methods" title="Permanent link">¶</a></h4>
 <p>Given a choice of models, how do we combine them? Shapland suggests:</p>
-<ol>
-<li>Run models with same random variables, and take weighted average of all outputs<ul>
+<h5 id="run-models-with-same-random-variables-and-take-weighted-average-of-all-outputs">Run models with same random variables, and take weighted average of all outputs<a class="headerlink" href="#run-models-with-same-random-variables-and-take-weighted-average-of-all-outputs" title="Permanent link">¶</a></h5>
+<ul>
 <li>e.g. ODP bootstrap method is run using <a href="../../exam-5/Chain%20Ladder/">Chain Ladder</a> and <a href="../../exam-5/B-F/">B-F</a> GLM Bootstrap is also run<ul>
 <li>All models used the same random variables</li>
 <li>Estimates (unpaid loss) from each method is given</li>
@@ -13728,8 +13734,8 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 </ul>
 </li>
 </ul>
-</li>
-<li>Run models with independent random variables, given each model a weight and then randomly select a model for each iteration<ul>
+<h5 id="run-models-with-independent-random-variables-given-each-model-a-weight-and-then-randomly-select-a-model-for-each-iteration">Run models with independent random variables, given each model a weight and then randomly select a model for each iteration<a class="headerlink" href="#run-models-with-independent-random-variables-given-each-model-a-weight-and-then-randomly-select-a-model-for-each-iteration" title="Permanent link">¶</a></h5>
+<ul>
 <li>e.g. Same situation as (1) but<ul>
 <li>Random variables are simulated independently of other models</li>
 <li>Run two simulations<ol>
@@ -13748,8 +13754,6 @@ a_{w,d} + c \to \text{such that average = 0 } \forall  w,d
 </ul>
 </li>
 </ul>
-</li>
-</ol>
 <hr>
 <h3 id="correlation">Correlation<a class="headerlink" href="#correlation" title="Permanent link">¶</a></h3>
 <p>We need a single estimate for the entire business (aggregating various LOBs) but the challenge is that <strong>there is correlation between LOBs</strong>.</p>
