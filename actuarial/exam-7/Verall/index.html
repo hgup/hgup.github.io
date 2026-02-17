@@ -10,7 +10,7 @@
         <link rel="canonical" href="https://hgup.github.io/actuarial/exam-7/Verall/">
       
       
-        <link rel="prev" href="../Taylor/">
+        <link rel="prev" href="../Meyers/">
       
       
         <link rel="next" href="../Sahasrabuddhe/">
@@ -902,10 +902,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -950,66 +946,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../blog/category/academic/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Academic
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../blog/category/essentials/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Essentials
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -3535,14 +3471,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Meyers/" class="md-nav__link">
+      <a href="../Taylor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Meyers: Validating Bayesian MCMC
+    Taylor: GLMs in Reserving
   
 
     
@@ -3563,14 +3499,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Taylor/" class="md-nav__link">
+      <a href="../Meyers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Taylor: GLMs in Reserving
+    Meyers: Validating Bayesian MCMC
   
 
     
@@ -13372,6 +13308,7 @@ M_{i} = \dfrac{\alpha_{i}}{\beta_{i}} \qquad Var = \dfrac{\alpha_{i}}{\beta_{i}^
 <p>Set <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> in such a way that the desired mean and variance are obtained. Decrease <span class="arithmatex">\(\beta\)</span> to increase variance and adjust <span class="arithmatex">\(\alpha\)</span> to keep the mean fixed <span class="arithmatex">\(M_{i} = 500\)</span>. So, the more we are sure about <span class="arithmatex">\(M\)</span>, the larger the <span class="arithmatex">\(\beta\)</span> should be.</p>
 <ul>
 <li>It's actually Benktander (cred weighting between <a href="../../exam-5/B-F/">B-F</a> and <a href="../../exam-5/Chain%20Ladder/">Chain Ladder</a>)</li>
+<li>The credibility weighs the <strong>incremental loss derived</strong> (by doing <span class="arithmatex">\(\times (LDF-1)\)</span>) from <strong>Actual losses to date</strong> (<span class="arithmatex">\(D_{i,j-1}\)</span>) and <strong>Expected Losses to date</strong> (<span class="arithmatex">\(=M \times\text{\%reported}\)</span>)</li>
 </ul>
 <div class="arithmatex">\[
 E(C_{ij}) = Z_{ij} (\lambda_{j} - 1)D_{i,j-1} + (1-Z_{ij}) (\lambda_{j} - 1) M_{i} \dfrac{1}{\lambda_{j}\lambda_{j+1}\dots\lambda_{n}}
@@ -13390,7 +13327,8 @@ Z_{ij} = \dfrac{\sum_{k=1}^{j-1}y_{k}}{\beta_{i}\phi + \sum_{k=1}^{j-1} y_{k}} =
 <ul>
 <li><span class="arithmatex">\(\alpha = 250\)</span>, <span class="arithmatex">\(\beta = 0.011\)</span>, <span class="arithmatex">\(\phi = 9.13\)</span></li>
 <li><span class="arithmatex">\(\lambda_{j} = [1.5, 1.2, 1.1, 1.0]\)</span></li>
-<li>Compute BF estimate of incremental loss from 12 to 24 month maturity</li>
+<li>Compute BF estimate of incremental loss from 12 to 24 month maturity<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Verall-1771320194770.webp" data-desc-position="bottom"><img alt="Verall-1771320194770.webp" src="../../../assets/images/2026/02/Verall-1771320194770.webp"></a></li>
 </ul>
 </div>
 <ul>
@@ -13436,7 +13374,6 @@ E(\text{incremental loss}) = (\text{row param} - 1) \times \sum_{\text{column}} 
 <p class="admonition-title">Don't memorize</p>
 <p>This is a daunting formula, you might make mistakes while memorizing the indices.<br>
 So instead, just try to understand the pattern of these calculations.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/2026/02/Verrall-1770023522997.webp" data-desc-position="bottom"><img alt="Verrall-1770023522997.webp" src="../../../assets/images/2026/02/Verrall-1770023522997.webp"></a></p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Expert Opinion incorporated</p>
@@ -13506,7 +13443,7 @@ So instead, just try to understand the pattern of these calculations.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../Taylor/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Taylor: GLMs in Reserving">
+          <a href="../Meyers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Meyers: Validating Bayesian MCMC">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -13516,7 +13453,7 @@ So instead, just try to understand the pattern of these calculations.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Taylor: GLMs in Reserving
+                Meyers: Validating Bayesian MCMC
               </div>
             </div>
           </a>
