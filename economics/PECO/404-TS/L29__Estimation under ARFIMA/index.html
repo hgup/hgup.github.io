@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -9848,32 +9848,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#geweke-and-porter-hudak-estimation-gph" class="md-nav__link">
+  <a href="#estimation-under-the-arfima-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Geweke and Porter-Hudak Estimation (GPH)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Advantages
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-estimation-techniques" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Other Estimation Techniques
+        Estimation under the ARFIMA Model
       
     </span>
   </a>
@@ -13025,8 +13003,8 @@ S(f) = \lim_{ T \to \infty } \dfrac{1}{T} \left\lvert  \sum_{t=0}^{T-1} y_{t}e^{
 <div class="arithmatex">\[
 I(f) = \dfrac{1}{T} \left\lvert  \sum_{t=0}^{T-1} y_{t}e^{ -i2\pi ft }  \right\rvert ^{2}
 \]</div>
-<p>### Estimation under the ARFIMA Model</p>
-<h3 id="geweke-and-porter-hudak-estimation-gph">Geweke and Porter-Hudak Estimation (GPH)<a class="headerlink" href="#geweke-and-porter-hudak-estimation-gph" title="Permanent link">¶</a></h3>
+<h3 id="estimation-under-the-arfima-model">Estimation under the ARFIMA Model<a class="headerlink" href="#estimation-under-the-arfima-model" title="Permanent link">¶</a></h3>
+<h4 id="geweke-and-porter-hudak-estimation-gph">Geweke and Porter-Hudak Estimation (GPH)<a class="headerlink" href="#geweke-and-porter-hudak-estimation-gph" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>Use the log periodogram of the time series.</p>
 </blockquote>
@@ -13040,17 +13018,17 @@ b = -2d
 \]</div>
 <p>Thus, we can estimate, <span class="arithmatex">\(\hat{d} = -\dfrac{b}{2}\)</span>.</p>
 <p>Then we can estimate AR and MA parameters as usual.</p>
-<h3 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">¶</a></h3>
+<h5 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">¶</a></h5>
 <ol>
 <li>Robustness (to noise)</li>
 <li>Applicability (can be applied to wide range of TS (say, different <span class="arithmatex">\(H\)</span> values))</li>
 </ol>
-<h4 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h4>
+<h5 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h5>
 <ol>
 <li>Sensitivity to bandwidth → Biased estimates</li>
 <li>Assumption of Stationarity → Assumes stationary after differencing (which may not always hold)</li>
 </ol>
-<h3 id="other-estimation-techniques">Other Estimation Techniques<a class="headerlink" href="#other-estimation-techniques" title="Permanent link">¶</a></h3>
+<h4 id="other-estimation-techniques">Other Estimation Techniques<a class="headerlink" href="#other-estimation-techniques" title="Permanent link">¶</a></h4>
 <ul>
 <li>MLE</li>
 <li>Yule Walker equations (method of moments)<ul>
