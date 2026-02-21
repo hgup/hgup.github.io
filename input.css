@@ -13,9 +13,9 @@ nav.md-tabs[hidden=""] {
 }
 
 
-.md-content__inner > h1:nth-child(1) {
+/* .md-content__inner > h1:nth-child(1) {
   display: none;
-}
+} */
 
 .md-header {
   position: initial;
