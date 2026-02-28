@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a">
+        <animate attributeName="stop-color" values="#1e3a8a;#312e81;#1e3a8a" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#0f172a">
+        <animate attributeName="stop-color" values="#0f172a;#1e1b4b;#0f172a" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Balloon Floating Animations */
+    .balloon { animation: floatUp linear infinite; }
+    .b1 { animation-duration: 9s; animation-delay: 0s; }
+    .b2 { animation-duration: 12s; animation-delay: 2s; }
+    .b3 { animation-duration: 8s; animation-delay: 4s; }
+    .b4 { animation-duration: 10s; animation-delay: 1s; }
+    .b5 { animation-duration: 13s; animation-delay: 3s; }
+
+    @keyframes floatUp {
+      0% { transform: translateY(650px); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-150px); opacity: 0; }
+    }
+
+    /* Confetti Tumbling Animations */
+    .confetti { animation: fall linear infinite; }
+    .c1 { animation-duration: 4s; animation-delay: 0s; }
+    .c2 { animation-duration: 3.5s; animation-delay: 1.5s; }
+    .c3 { animation-duration: 4.5s; animation-delay: 0.5s; }
+    .c4 { animation-duration: 5s; animation-delay: 2s; }
+    .c5 { animation-duration: 3.8s; animation-delay: 1s; }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(650px) rotate(360deg); opacity: 0; }
+    }
+
+    /* Typography Settings */
+    .title {
+      font-family: 'Arial Black', Impact, sans-serif;
+      font-size: 65px;
+      fill: url(#textGrad);
+      text-anchor: middle;
+      filter: url(#glow);
+    }
+    
+    .subtitle {
+      font-family: 'Georgia', serif;
+      font-size: 55px;
+      fill: #ffffff;
+      text-anchor: middle;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    /* Text Pulsing Animation */
+    .pulse {
+      animation: pulseAnim 2.5s ease-in-out infinite;
+      transform-origin: center;
+    }
+    
+    @keyframes pulseAnim {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+  </style>
+
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+
+  <g class="confetti c1"><rect x="150" y="-20" width="12" height="20" fill="#ef4444"/></g>
+  <g class="confetti c2"><rect x="350" y="-20" width="15" height="15" fill="#3b82f6"/></g>
+  <g class="confetti c3"><rect x="550" y="-20" width="10" height="25" fill="#10b981"/></g>
+  <g class="confetti c4"><rect x="700" y="-20" width="20" height="12" fill="#f59e0b"/></g>
+  <g class="confetti c5"><rect x="250" y="-20" width="12" height="12" fill="#ec4899"/></g>
+  <g class="confetti c1" style="animation-delay: 2s;"><rect x="650" y="-20" width="14" height="18" fill="#8b5cf6"/></g>
+  <g class="confetti c3" style="animation-delay: 1.2s;"><rect x="450" y="-20" width="12" height="20" fill="#ef4444"/></g>
+  <g class="confetti c2" style="animation-delay: 2.5s;"><rect x="50" y="-20" width="18" height="14" fill="#10b981"/></g>
+
+  <g class="balloon b1" transform="translate(120, 0)">
+    <line x1="0" y1="0" x2="0" y2="100" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="40" fill="#ec4899" opacity="0.85"/>
+  </g>
+  <g class="balloon b2" transform="translate(280, 0)">
+    <line x1="0" y1="0" x2="0" y2="120" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="50" fill="#3b82f6" opacity="0.85"/>
+  </g>
+  <g class="balloon b3" transform="translate(520, 0)">
+    <line x1="0" y1="0" x2="0" y2="90" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="35" fill="#10b981" opacity="0.85"/>
+  </g>
+  <g class="balloon b4" transform="translate(680, 0)">
+    <line x1="0" y1="0" x2="0" y2="110" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="45" fill="#f59e0b" opacity="0.85"/>
+  </g>
+  <g class="balloon b5" transform="translate(400, 0)">
+    <line x1="0" y1="0" x2="0" y2="130" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="55" fill="#8b5cf6" opacity="0.85"/>
+  </g>
+
+  <g class="pulse">
+    <text x="400" y="280" class="title">HAPPY BIRTHDAY</text>
+    <text x="400" y="370" class="subtitle">Prusty Sir!</text>
+  </g>
+  
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="15, 15" opacity="0.3" rx="15" />
+</svg>
