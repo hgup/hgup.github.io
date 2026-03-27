@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Economy Study Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* Using Outfit font which closely resembles Google Sans */
+            font-family: 'Outfit', sans-serif;
+            background-color: #131314; /* M3 Dark Background */
+            color: #e3e3e3;
+        }
+        
+        /* Modern subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444746;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5f6368;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .prose p {
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+            color: #c4c7c5; /* M3 On-Surface Variant */
+            font-size: 1.05rem;
+        }
+        
+        /* Material 3 Card Style */
+        .m3-card {
+            background-color: #1e1f20; /* M3 Surface */
+            border-radius: 2rem; /* Extreme rounding like Google Flow */
+            border: 1px solid #444746;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col overflow-hidden">
+
+    <!-- Header -->
+    <header class="bg-[#131314] text-[#e3e3e3] p-4 md:px-6 flex justify-between items-center z-10 relative">
+        <h1 class="text-2xl font-medium tracking-tight">Indian Economy</h1>
+        <nav class="space-x-3 bg-[#1e1f20] p-1.5 rounded-full border border-[#444746] flex">
+            <button id="btn-study" class="bg-[#a8c7fa] text-[#062e6f] px-6 py-2.5 rounded-full font-medium transition duration-200" onclick="switchMode('study')">Study</button>
+            <button id="btn-quiz" class="bg-transparent text-[#a8c7fa] hover:bg-[#282a2c] px-6 py-2.5 rounded-full font-medium transition duration-200" onclick="switchMode('quiz')">Quiz</button>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="flex-1 flex overflow-hidden">
+        
+        <!-- Sidebar (Study Mode) -->
+        <aside id="sidebar" class="w-1/4 max-w-[320px] bg-[#131314] overflow-y-auto flex flex-col z-0 pb-6">
+            <div class="px-6 py-4 font-medium text-[#c4c7c5] tracking-wide text-sm">Topics</div>
+            <ul id="topic-list" class="flex-1 space-y-1">
+                <!-- Populated by JS -->
+            </ul>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 bg-[#131314] relative" id="main-content">
+            
+            <!-- Study View -->
+            <div id="study-view" class="max-w-4xl mx-auto fade-in">
+                <div class="m3-card p-8 md:p-10 mb-6 relative overflow-hidden">
+                    <h2 id="topic-title" class="text-3xl md:text-4xl font-semibold text-[#f2f2f2] mb-8 tracking-tight">Topic Title</h2>
+                    
+                    <!-- Mnemonic Card (Material 3 Secondary Container) -->
+                    <div class="bg-[#004a77] bg-opacity-40 border border-[#004a77] p-6 rounded-3xl mb-10">
+                        <h3 class="font-medium text-[#c2e7ff] flex items-center mb-3 text-lg">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                            Memory Trick
+                        </h3>
+                        <p id="topic-mnemonic" class="text-[#e3e3e3] font-normal leading-relaxed text-lg"></p>
+                    </div>
+
+                    <!-- Article Content -->
+                    <div id="topic-content" class="prose max-w-none text-left">
+                        <!-- Content goes here -->
+                    </div>
+                </div>
+                
+                <div class="flex justify-between max-w-4xl mx-auto mb-10 space-x-4">
+                    <button id="btn-prev" class="px-6 py-3.5 border border-[#444746] bg-transparent rounded-full text-[#a8c7fa] hover:bg-[#282a2c] transition duration-200 disabled:opacity-30 disabled:hover:bg-transparent font-medium" onclick="navigate(-1)">Previous</button>
+                    <button id="btn-next" class="px-8 py-3.5 bg-[#a8c7fa] text-[#062e6f] rounded-full hover:bg-[#d3e3fd] transition duration-200 disabled:opacity-50 font-medium" onclick="navigate(1)">Next Topic</button>
+                </div>
+            </div>
+
+            <!-- Quiz View -->
+            <div id="quiz-view" class="max-w-3xl mx-auto hidden fade-in h-full flex flex-col justify-center pb-20">
+                <div id="quiz-container" class="m3-card p-8 md:p-10">
+                    <div class="flex justify-between items-center mb-8">
+                        <h2 id="quiz-header-title" class="text-2xl font-semibold text-[#f2f2f2]">Knowledge Check</h2>
+                        <span id="quiz-progress" class="text-sm font-medium text-[#c2e7ff] bg-[#004a77] px-4 py-1.5 rounded-full">1 of X</span>
+                    </div>
+                    
+                    <p id="quiz-question" class="text-xl text-[#e3e3e3] font-medium mb-8 leading-relaxed"></p>
+                    
+                    <div id="quiz-options" class="space-y-4">
+                        <!-- Options populated by JS -->
+                    </div>
+                    
+                    <div class="mt-10 flex justify-end hidden" id="quiz-next-container">
+                        <button id="btn-quiz-next" class="bg-[#a8c7fa] text-[#062e6f] px-8 py-3 rounded-full hover:bg-[#d3e3fd] transition duration-200 font-medium text-lg" onclick="nextQuizQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results -->
+                <div id="quiz-results" class="m3-card p-12 text-center hidden">
+                    <div class="w-24 h-24 bg-[#0f5223] rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-12 h-12 text-[#c4eed0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h2 class="text-4xl font-semibold text-[#f2f2f2] mb-4 tracking-tight">Completed</h2>
+                    <p class="text-xl text-[#c4c7c5] mb-10">You scored <span id="final-score" class="font-bold text-[#a8c7fa] text-3xl mx-1"></span> out of <span id="total-questions" class="font-bold text-[#e3e3e3]"></span></p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-transparent border border-[#444746] text-[#a8c7fa] px-8 py-3.5 rounded-full hover:bg-[#282a2c] transition duration-200 text-lg font-medium" onclick="switchMode('study')">Back to Study</button>
+                        <button class="bg-[#a8c7fa] text-[#062e6f] px-8 py-3.5 rounded-full hover:bg-[#d3e3fd] transition duration-200 text-lg font-medium" onclick="startQuiz()">Retake Quiz</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const studyData = [
+            {
+                title: "1. Industrial Policy",
+                mnemonic: "Remember the shift: From 'License Raj' (Control) to 'LPG' (Freedom). Think: 1948 (Mixed), 1956 (State focus), 1991 (Liberalization & FDI).",
+                content: `
+                    <p>The industrial policy of India has undergone significant transformations since independence, transitioning from a rigid state controlled model to a dynamic market driven approach. The Industrial Policy Resolution of 1948 laid the foundation for a mixed economy, dividing industries into four broad categories with varying degrees of state monopoly and private participation. This was followed by the Industries (Development and Regulation) Act of 1951, which established the infamous "license raj." This act gave the government immense power to regulate industrial capacity, location, and expansion to ensure planned economic development.</p>
+                    <p>The Industrial Policy Resolution of 1956 is often called the Economic Constitution of India. It classified industries into three distinct schedules. Schedule A consisted of 17 industries reserved exclusively for the state, covering arms, atomic energy, and railways. Schedule B contained 12 industries where the state would take the lead, but private enterprise could supplement it. Schedule C included all remaining industries left to the private sector, subject to heavy state licensing. This policy heavily prioritized the public sector and heavy industries to build a self reliant economy.</p>
+                    <p>Over the decades, this rigid regulatory system led to severe inefficiencies, a lack of competitiveness, technological obsolescence, and slow growth. The paradigm shifted completely with the Industrial Policy of 1991. This landmark liberalization policy dismantled the licensing regime for all but a few hazardous and environmentally sensitive industries. The number of industries reserved for the public sector was drastically reduced, ultimately coming down to just two core areas: atomic energy and specific railway operations. Furthermore, the 1991 policy opened the doors to Foreign Direct Investment. It allowed automatic approval up to 51 percent in high priority sectors, thereby integrating Indian industry with the global market, promoting fierce competition, and facilitating the transfer of advanced technology. The role of the public sector was redefined to focus only on strategic and essential infrastructure areas, paving the way for a more vibrant and globally competitive Indian industrial landscape.</p>
+                `,
+                quiz: [
+                    {
+                        question: "What act established the 'license raj' and gave the government immense power to regulate industrial capacity?",
+                        options: ["Industrial Policy Resolution of 1948", "Industries (Development and Regulation) Act of 1951", "Industrial Policy Resolution of 1956", "Industrial Policy of 1991"],
+                        correct: 1
+                    },
+                    {
+                        question: "Under the Industrial Policy Resolution of 1956, how many industries were reserved exclusively for the state in Schedule A?",
+                        options: ["12 industries", "17 industries", "2 core areas", "51 industries"],
+                        correct: 1
+                    },
+                    {
+                        question: "What was the Foreign Direct Investment (FDI) automatic approval limit set by the Industrial Policy of 1991 for high priority sectors?",
+                        options: ["12 percent", "17 percent", "51 percent", "100 percent"],
+                        correct: 2
+                    }
+                ]
+            },
+            {
+                title: "2. Money Market",
+                mnemonic: "SOUL: Short-term, Organized (RBI, DFHI), Unorganized (moneylenders), Liquidity. Remember Vaghul Committee (1987) for reforms.",
+                content: `
+                    <p>The Indian money market is a crucial mechanism for borrowing and lending short term funds, typically for a period of up to one year. It is absolutely essential for maintaining liquidity in the economy and facilitating the short term cash requirements of banks, the central government, and large corporations. A defining characteristic of the Indian money market is its dichotomous nature, meaning it is split into two distinct and somewhat disconnected sectors: the organized sector and the unorganized sector.</p>
+                    <p>The organized sector is highly regulated by the central bank and includes the Reserve Bank of India, commercial banks, cooperative banks, and specialized institutions like the Discount and Finance House of India. The financial instruments traded here include treasury bills issued by the government to manage short term deficits, commercial paper issued by highly rated corporations, certificates of deposit from commercial banks, and call money used for interbank borrowing. Conversely, the unorganized sector consists of indigenous bankers and local moneylenders who operate outside strict regulatory frameworks. While their overall influence has waned over the years, they still play a significant role in rural areas and among small traders where formal banking reach is limited.</p>
+                    <p>Historically, the Indian money market suffered from several structural defects. These included a lack of integration between the organized and unorganized sectors, highly volatile interest rates, a shortage of diverse financial instruments, and seasonal stringency during agricultural harvest seasons. Major structural reforms were initiated following the Vaghul Committee recommendations in 1987. These reforms introduced new financial instruments to deepen the market and established the Discount and Finance House of India to provide much needed liquidity. Furthermore, interest rates were progressively deregulated to reflect true market conditions rather than administrative dictates. Electronic clearing systems and negotiated dealing systems were also implemented, making the Indian money market significantly more modern, transparent, liquid, and efficient for all participating entities.</p>
+                `,
+                quiz: [
+                    {
+                        question: "What is a defining characteristic of the Indian money market regarding its structure?",
+                        options: ["It only deals with long term funds", "It is exclusively run by indigenous bankers", "It is dichotomous, split into organized and unorganized sectors", "It only allows borrowing for up to five years"],
+                        correct: 2
+                    },
+                    {
+                        question: "Which of the following is an instrument traded in the organized sector of the money market?",
+                        options: ["Agricultural land", "Treasury bills", "Corporate equity shares", "Long term government bonds"],
+                        correct: 1
+                    },
+                    {
+                        question: "Which committee's recommendations in 1987 led to major structural reforms in the Indian money market?",
+                        options: ["Narasimham Committee", "Kelkar Committee", "Tendulkar Committee", "Vaghul Committee"],
+                        correct: 3
+                    }
+                ]
+            },
+            {
+                title: "3. Small Scale Industries",
+                mnemonic: "CREDIT: Capital saving, Regional balance, Employment generation, Decentralization, Intensive labor, Technology upgrades needed.",
+                content: `
+                    <p>Small Scale Industries and cottage industries play an indispensable role in the socio economic development of India. Because these industries are highly labor intensive by nature, they are absolutely essential for tackling the country's massive unemployment and underemployment problems. They require comparatively lower capital investment per worker, making them the ideal solution for an economy characterized by scarce capital and abundant labor resources. Furthermore, they promote decentralized industrial development, helping to reduce regional economic imbalances and prevent massive, unsustainable migration from rural areas to urban centers. They also contribute substantially to the country's total manufacturing output and account for a remarkably large percentage of total export earnings.</p>
+                    <p>Historically, the Indian government has protected this vital sector through various policies, such as reserving specific products exclusively for small scale manufacturing and offering numerous financial subsidies and tax holidays. Census data consistently highlights that small scale units make up the vast majority of all registered and unregistered industrial units in India. However, the overall performance of this sector is frequently hindered by severe and persistent challenges. These units often suffer from obsolete manufacturing technology, poor quality control mechanisms, and an inherent inability to achieve economies of scale.</p>
+                    <p>Access to timely and adequate credit remains their single biggest hurdle, alongside immense difficulties in marketing their products against large domestic conglomerates and multinational corporations. To combat these systemic issues, the government has shifted its overall approach from mere protection to active promotion and modernization. Key initiatives include the establishment of the Small Industries Development Bank of India to provide dedicated and streamlined financial assistance. The government has also implemented robust credit guarantee schemes to encourage banks to lend without collateral, and facilitated the creation of industrial estates and specialized technology hubs. These measures are designed to foster rapid modernization, improve product quality, and significantly enhance the global competitive edge of India's small scale enterprises.</p>
+                `,
+                quiz: [
+                    {
+                        question: "Why are Small Scale Industries considered ideal for an economy like India's?",
+                        options: ["They require massive urban infrastructure", "They are highly automated and replace manual jobs", "They require comparatively lower capital investment per worker and are highly labor intensive", "They only focus on importing foreign goods"],
+                        correct: 2
+                    },
+                    {
+                        question: "According to the text, what is a major performance hindrance frequently faced by small scale units?",
+                        options: ["Excessive access to international credit", "Obsolete manufacturing technology and poor quality control mechanisms", "An overreliance on Foreign Direct Investment", "Too much focus on achieving economies of scale"],
+                        correct: 1
+                    },
+                    {
+                        question: "Which institution was established by the government to provide dedicated financial assistance to this sector?",
+                        options: ["Reserve Bank of India", "Securities and Exchange Board of India", "Discount and Finance House of India", "Small Industries Development Bank of India (SIDBI)"],
+                        correct: 3
+                    }
+                ]
+            },
+            {
+                title: "4. Balance of Payments",
+                mnemonic: "1991 Crisis Formula: Gulf War + Oil Spikes = Forex drop. Solution: Devaluation + IT Exports + Remittances = Recovery.",
+                content: `
+                    <p>The Balance of Payments is a systematic statistical record of all economic transactions between the residents of a country and the rest of the world over a specific period. It serves as a crucial macroeconomic indicator and is primarily divided into the current account, the capital account, and the official reserve account. The current account tracks the import and export of visible goods, invisible services, and unilateral transfers like remittances and foreign aid. The capital account records international investments such as foreign direct investment, external commercial borrowings, sovereign loans, and banking capital flows. A persistent deficit in the current account must generally be financed by a surplus in the capital account or by depleting the country's foreign exchange reserves.</p>
+                    <p>Before 1991, India faced chronic and severe Balance of Payments deficits. The economy was heavily reliant on essential imports, particularly crude oil, fertilizers, and advanced capital goods. At the same time, export growth remained extremely sluggish due to an inward looking, protectionist trade policy that heavily discouraged global competitiveness. This long term structural imbalance culminated in the severe macroeconomic crisis of 1991. The immediate trigger was the geopolitical shock of the Gulf War, which dramatically spiked global oil prices and simultaneously reduced inward remittances from Indian workers in the Middle East. Consequently, India's foreign exchange reserves plummeted to an alarming level, barely sufficient to cover two weeks of essential imports, pushing the country to the absolute brink of a sovereign default and necessitating emergency loans from the IMF.</p>
+                    <p>The post 1991 era witnessed a dramatic turnaround due to comprehensive economic reforms. To immediately stabilize the external sector, the government devalued the rupee to make Indian exports more competitive globally and eventually transitioned to a market determined exchange rate system. Furthermore, stringent restrictions on Foreign Direct Investment and Foreign Portfolio Investment were systematically lifted, leading to robust and sustained capital inflows. On the current account front, a massive boom in software and IT services exports, coupled with consistently strong remittances from the growing Indian diaspora, fundamentally altered the balance. Consequently, India transitioned from a state of acute forex scarcity to comfortably holding massive foreign exchange reserves.</p>
+                `,
+                quiz: [
+                    {
+                        question: "Which account in the Balance of Payments records international investments such as foreign direct investment and external commercial borrowings?",
+                        options: ["Current account", "Capital account", "Official reserve account", "Trade balance account"],
+                        correct: 1
+                    },
+                    {
+                        question: "What was the immediate geopolitical trigger that exacerbated the 1991 macroeconomic crisis by spiking global oil prices?",
+                        options: ["The Asian Financial Crisis", "The Cold War", "The Gulf War", "The Global Recession"],
+                        correct: 2
+                    },
+                    {
+                        question: "What immediate step did the government take in the post 1991 era to stabilize the external sector and make Indian exports more competitive?",
+                        options: ["Devalued the rupee", "Banned all essential imports", "Stopped accepting inward remittances", "Increased restrictions on Foreign Direct Investment"],
+                        correct: 0
+                    }
+                ]
+            },
+            {
+                title: "5. New Trade Policy",
+                mnemonic: "D-D-S: Dismantle quantitative restrictions, Decanalization of monopolies, SEZs (Special Economic Zones) for exports.",
+                content: `
+                    <p>The New Trade Policy, introduced as a core component of the landmark 1991 economic reforms, marked a definitive shift from a closed, import substitution strategy to an outward looking, export led growth model. Prior to this policy, India's trade regime was heavily characterized by excessively high protective tariffs, strict import quotas, and incredibly complex licensing procedures that completely stifled global integration.</p>
+                    <p>A central feature of the new policy was the systematic dismantling of quantitative restrictions on imports. The government methodically removed import quotas and drastically reduced peak customs duties from staggering highs of over 300 percent to levels much more closely aligned with international standards. Another pivotal reform during this period was decanalization. Previously, the import and export of many essential commodities were canalized, meaning they could only be traded by designated state owned monopolies, which led to immense inefficiencies. Decanalization moved these items to the Open General License list, allowing active private sector participation and dramatically increasing market efficiency and responsiveness.</p>
+                    <p>To aggressively promote exports, the policy established robust and highly supportive frameworks for Export Oriented Units and Special Economic Zones. Special Economic Zones are designated duty free enclaves treated essentially as foreign territory for the purpose of trade operations, duties, and tariffs. Companies operating within these zones were offered massive incentives. These included comprehensive corporate tax holidays, the duty free procurement of raw materials and capital goods from domestic and international markets, and highly simplified labor and administrative compliance procedures. This single window clearance system removed traditional bureaucratic bottlenecks. Ultimately, these structural trade reforms successfully integrated the Indian economy with complex global supply chains. The policy encouraged rapid technological upgrades through the easier import of advanced capital goods, boosted total trade volume, and made Indian manufacturing and service sectors significantly more globally competitive. Furthermore, the focus shifted towards expanding the export basket beyond traditional agricultural goods to include high value manufactured products, pharmaceuticals, and engineering goods, cementing India's new position in global trade.</p>
+                `,
+                quiz: [
+                    {
+                        question: "What kind of growth model did the New Trade Policy of 1991 shift the Indian economy towards?",
+                        options: ["A closed import substitution strategy", "An outward looking export led growth model", "A strictly state controlled monopoly model", "A decentralized rural barter system"],
+                        correct: 1
+                    },
+                    {
+                        question: "What does the process of 'decanalization' refer to in the context of the new policy?",
+                        options: ["Moving items to the Open General License list to allow private sector participation", "Increasing peak customs duties on specific agricultural products", "Banning the export of essential commodities", "Creating new state owned monopolies for trade"],
+                        correct: 0
+                    },
+                    {
+                        question: "What specific incentive was offered to companies operating within Special Economic Zones (SEZs)?",
+                        options: ["Complete protection from international competition", "Mandatory requirement to hire only unionized labor", "Comprehensive corporate tax holidays and duty free procurement", "Subsidies to focus exclusively on local retail markets"],
+                        correct: 2
+                    }
+                ]
+            },
+            {
+                title: "6. Role, Nature and Cropping Pattern",
+                mnemonic: "Think of agriculture as the 'Gamble with Monsoons'. Trends: Moving from subsistence (food crops) to commercial (cash crops).",
+                content: `
+                    <p>Agriculture serves as the fundamental backbone of the Indian economy. Its critical role extends far beyond merely contributing to the Gross Domestic Product. It remains the primary source of livelihood for more than half of the Indian population, ensuring national food security and playing a vital role in reducing rural poverty. Furthermore, agriculture supplies crucial raw materials to major agro based industries like textiles, sugar, jute, and food processing. It also generates significant export earnings for the country through high demand commodities like spices, tea, coffee, and basmati rice.</p>
+                    <p>The nature of Indian agriculture is incredibly complex and deeply rooted in tradition. It is largely characterized by subsistence farming, where farmers grow food primarily for their own family's consumption rather than for commercial sale in the market. It is also famously described by economists as a gamble with the monsoons, given that a vast majority of the arable land lacks reliable irrigation infrastructure. The sector suffers heavily from highly fragmented and uneconomical small landholdings, which makes modern mechanization exceptionally difficult and cost prohibitive. Additionally, it is plagued by the widespread issue of disguised unemployment, where significantly more people are engaged in farming activities than are actually required for optimal production.</p>
+                    <p>The cropping pattern indicates the proportion of agricultural land devoted to different crops at any given time. Historically, Indian agriculture was heavily biased towards essential food crops like rice, wheat, and coarse cereals. This was actively promoted by the government to ensure national self sufficiency, especially following the success of the Green Revolution in the 1960s. However, in recent years, there has been a noticeable and steady shift towards commercial and cash crops such as sugarcane, cotton, oilseeds, and high value horticulture. This gradual shift in the cropping pattern is primarily driven by rising market demand, better pricing structures, and the expansion of irrigation facilities, although government Minimum Support Price policies still heavily influence the final choices made by farmers.</p>
+                `,
+                quiz: [
+                    {
+                        question: "Apart from contributing to the GDP, what is a primary role of agriculture for more than half of the Indian population?",
+                        options: ["It provides them with foreign exchange reserves", "It is their primary source of livelihood", "It guarantees them corporate jobs in cities", "It solely focuses on producing spices for export"],
+                        correct: 1
+                    },
+                    {
+                        question: "Why is Indian agriculture famously described as a 'gamble with the monsoons'?",
+                        options: ["Because farmers prefer to bet their crops in local markets", "Because all crops grown in India are heavily water intensive", "Because a vast majority of the arable land lacks reliable irrigation infrastructure", "Because the government uses a lottery system for seeds"],
+                        correct: 2
+                    },
+                    {
+                        question: "In recent years, there has been a noticeable shift in the Indian cropping pattern from food crops towards what type of crops?",
+                        options: ["Coarse cereals only", "Genetically modified wheat", "Commercial and cash crops", "Exclusively imported crop varieties"],
+                        correct: 2
+                    }
+                ]
+            },
+            {
+                title: "7. Economic Reforms 1991",
+                mnemonic: "LPG Strategy: Liberalization (end license raj), Privatization (reduce public sector), Globalization (integrate with world).",
+                content: `
+                    <p>The Economic Reforms of 1991 represent a watershed moment in India's modern economic history, fundamentally and permanently altering its development trajectory. The origin of this severe crisis lay directly in the macroeconomic mismanagement of the 1980s. During that decade, the government ran unsustainably high fiscal deficits financed heavily by internal and external borrowing, which inevitably led to double digit inflation rates. Externally, the situation rapidly deteriorated into an unprecedented Balance of Payments crisis, which was further exacerbated by the geopolitical shock of the Gulf War. This left India dangerously low on foreign exchange reserves and on the absolute verge of defaulting on its international debt obligations.</p>
+                    <p>To secure emergency funding and stabilize the economy, India approached the International Monetary Fund and the World Bank, agreeing to implement the comprehensive New Economic Policy. This sweeping policy framework had two distinct but deeply interconnected components. The first component was macroeconomic stabilization, which involved immediate, short term measures to control runaway inflation and restore the balance of payments. This was successfully achieved through a sharp, deliberate devaluation of the Indian rupee to boost exports, a tight monetary policy to curb excess liquidity, and strict fiscal discipline to drastically reduce government spending.</p>
+                    <p>The second component consisted of structural reforms designed to fundamentally improve the long term efficiency, productivity, and global competitiveness of the economy. These transformative reforms are collectively known by the acronym LPG: Liberalization, Privatization, and Globalization. Liberalization effectively dismantled the oppressive license raj, finally freeing private enterprises from suffocating bureaucratic control and arbitrary restrictions. Privatization sought to carefully reduce the overwhelming dominance of the public sector through phased disinvestment and by opening previously reserved sectors to private capital investment. Globalization integrated the Indian economy with the rest of the world by slashing exorbitant import tariffs, decanalizing trade, and actively encouraging Foreign Direct Investment across various sectors. These sweeping changes effectively ended decades of state controlled economic planning, paving the way for the rapid modernization, higher growth rates, and increased entrepreneurial activity that characterize the contemporary Indian economy.</p>
+                `,
+                quiz: [
+                    {
+                        question: "What was the direct origin of the severe economic crisis that led to the 1991 reforms?",
+                        options: ["A sudden crash in the global stock market", "Macroeconomic mismanagement and high fiscal deficits in the 1980s", "The complete failure of the agricultural sector in 1990", "A deliberate attempt to default on international debt"],
+                        correct: 1
+                    },
+                    {
+                        question: "Which measure was part of the short term macroeconomic stabilization component of the New Economic Policy?",
+                        options: ["Increasing government spending", "Tight monetary policy to curb excess liquidity", "Opening all reserved sectors to private capital", "Slashing exorbitant import tariffs"],
+                        correct: 1
+                    },
+                    {
+                        question: "What did the 'Liberalization' component of the LPG reforms effectively dismantle?",
+                        options: ["The agricultural Minimum Support Price system", "The oppressive license raj", "The entire public sector infrastructure", "The right of private enterprises to operate"],
+                        correct: 1
+                    }
+                ]
+            },
+            {
+                title: "8. Low Productivity in Agriculture",
+                mnemonic: "Factors = G.I.T. (General: overcrowding. Institutional: small fragmented plots. Technological: lack of irrigation/seeds).",
+                content: `
+                    <p>Despite having one of the largest arable land areas in the entire world, India suffers from notoriously low agricultural productivity. This alarmingly low yield is evident both in terms of total production per hectare of land and production per agricultural worker when compared directly to global averages and other developing nations. The underlying causes for this low productivity are multi dimensional and can generally be categorized into general, institutional, and technological factors.</p>
+                    <p>General causes include the massive, structural overcrowding of the agricultural sector due to a persistent lack of alternative employment opportunities in the industrial and service sectors. This immense population pressure leads to intense strain on agricultural land and widespread disguised unemployment. Institutional causes are deeply rooted in India's complex agrarian structure. The historical legacy of defective land tenure systems and the continuous, generational subdivision of land have resulted in highly fragmented and extremely small landholdings. These tiny, scattered plots make it economically unviable for farmers to invest in permanent land improvements or to utilize modern, efficient farming machinery.</p>
+                    <p>Technological causes further compound this productivity problem. A significantly large portion of Indian agriculture remains entirely rain fed and highly vulnerable to monsoon failures due to inadequate and poorly maintained irrigation infrastructure. Furthermore, a vast majority of marginalized farmers continue to rely on traditional, low yielding seed varieties. They frequently apply insufficient or imbalanced chemical fertilizers, lack basic knowledge of soil health, and have very limited access to modern pest control methods. To actively combat these severe issues, the government has introduced several targeted measures. These include aggressive land consolidation programs, the massive expansion of both major and minor irrigation projects, and the provision of affordable institutional credit through Kisan Credit Cards to finally free farmers from the grip of exploitative local moneylenders. Promoting High Yielding Variety seeds, expanding crop insurance, and vastly improving agricultural extension services to actively educate farmers are also critical ongoing steps. Additionally, the recent push towards organic farming, soil health cards, and improved rural infrastructure like cold storage facilities aims to reduce post harvest losses and sustainably boost overall farm yields.</p>
+                `,
+                quiz: [
+                    {
+                        question: "What is a major general cause of low agricultural productivity related to the population?",
+                        options: ["A severe shortage of workers in rural areas", "Structural overcrowding and widespread disguised unemployment", "A complete migration of the workforce to urban centers", "An overreliance on highly skilled labor"],
+                        correct: 1
+                    },
+                    {
+                        question: "What institutional issue makes it economically unviable for Indian farmers to invest in permanent land improvements?",
+                        options: ["Highly fragmented and extremely small landholdings", "The lack of local agricultural markets", "The high cost of exporting goods", "A complete ban on using modern farming machinery"],
+                        correct: 0
+                    },
+                    {
+                        question: "What government measure aims to provide affordable institutional credit and free farmers from exploitative moneylenders?",
+                        options: ["Land consolidation programs", "High Yielding Variety seeds", "Soil health cards", "Kisan Credit Cards"],
+                        correct: 3
+                    }
+                ]
+            },
+            {
+                title: "9. Capital Market",
+                mnemonic: "PLSS: Primary (new issues), Long-term, Secondary (stock exchanges), SEBI (supreme regulator).",
+                content: `
+                    <p>The capital market is a vital and highly complex financial system that primarily deals in medium and long term funds. It serves as the critical, indispensable link between the savings generated by the household sector and the massive investment needs of the corporate sector and the government. A robust and well functioning capital market is absolutely essential for rapid national economic development because it facilitates large scale capital formation, provides a reliable platform for accurate price discovery, and allows businesses to seamlessly raise the funds necessary for expansion, innovation, and infrastructure development.</p>
+                    <p>The Indian capital market structure is broadly divided into two main segments: the primary market and the secondary market. The primary market, also known as the new issue market, is the platform where companies raise fresh capital by issuing new shares, debentures, or bonds directly to the investing public. The secondary market primarily comprises the various stock exchanges, where previously issued securities are actively traded among investors. This secondary market provides crucial liquidity and ensures the continuous valuation of financial assets. The active participants in this market include retail individual investors, massive domestic institutional investors like mutual funds and insurance companies, Foreign Portfolio Investors, and various highly regulated financial intermediaries such as stockbrokers and merchant bankers.</p>
+                    <p>Post 1991, the Indian capital market underwent sweeping, transformative reforms to heavily enhance transparency and rigorously protect retail investors. The Securities and Exchange Board of India was granted expansive statutory powers to act as the supreme, independent market regulator. The establishment of the National Stock Exchange introduced modern, screen based electronic trading, completely replacing the outdated and opaque open outcry system used previously. Furthermore, the introduction of depositories enabled the complete dematerialization of shares. This monumental shift eliminated the severe risks associated with physical paper certificates, such as theft and forgery, and vastly improved the overall speed, efficiency, and safety of market transactions. More recently, regulations surrounding corporate governance, insider trading, and mutual fund disclosures have been continually tightened, bringing the Indian capital market strictly in line with the best international financial practices.</p>
+                `,
+                quiz: [
+                    {
+                        question: "In which segment of the capital market do companies raise fresh capital by issuing new shares directly to the investing public?",
+                        options: ["The secondary market", "The primary market", "The unorganized money market", "The official reserve account"],
+                        correct: 1
+                    },
+                    {
+                        question: "Which institution was granted expansive statutory powers post 1991 to act as the supreme independent market regulator?",
+                        options: ["Reserve Bank of India", "Discount and Finance House of India", "Small Industries Development Bank of India", "Securities and Exchange Board of India (SEBI)"],
+                        correct: 3
+                    },
+                    {
+                        question: "What reform enabled the complete dematerialization of shares, eliminating risks like theft and forgery of physical certificates?",
+                        options: ["The establishment of the primary market", "The decanalization of monopolies", "The introduction of depositories", "The creation of Special Economic Zones"],
+                        correct: 2
+                    }
+                ]
+            }
+        ];
+
+        let currentTopicIndex = 0;
+        let currentQuizIndex = 0;
+        let score = 0;
+        let hasAnswered = false;
+        let currentQuizData = [];
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSidebar();
+            loadTopic(0);
+        });
+
+        function renderSidebar() {
+            const list = document.getElementById('topic-list');
+            list.innerHTML = '';
+            studyData.forEach((topic, index) => {
+                const li = document.createElement('li');
+                // Material 3 list item styling
+                li.className = index === currentTopicIndex 
+                    ? 'mx-3 my-1 px-5 py-3.5 rounded-full cursor-pointer transition bg-[#004a77] text-[#c2e7ff] font-medium' 
+                    : 'mx-3 my-1 px-5 py-3.5 rounded-full cursor-pointer transition hover:bg-[#282a2c] text-[#c4c7c5]';
+                li.innerText = topic.title;
+                li.onclick = () => loadTopic(index);
+                list.appendChild(li);
+            });
+        }
+
+        function loadTopic(index) {
+            currentTopicIndex = index;
+            const topic = studyData[index];
+            
+            document.getElementById('topic-title').innerText = topic.title;
+            document.getElementById('topic-mnemonic').innerText = topic.mnemonic;
+            document.getElementById('topic-content').innerHTML = topic.content;
+            
+            document.getElementById('btn-prev').disabled = index === 0;
+            document.getElementById('btn-next').disabled = index === studyData.length - 1;
+            
+            renderSidebar();
+
+            const view = document.getElementById('study-view');
+            view.classList.remove('fade-in');
+            void view.offsetWidth;
+            view.classList.add('fade-in');
+        }
+
+        function navigate(direction) {
+            const newIndex = currentTopicIndex + direction;
+            if (newIndex >= 0 && newIndex < studyData.length) {
+                loadTopic(newIndex);
+            }
+        }
+
+        function switchMode(mode) {
+            const studyView = document.getElementById('study-view');
+            const quizView = document.getElementById('quiz-view');
+            const sidebar = document.getElementById('sidebar');
+            const btnStudy = document.getElementById('btn-study');
+            const btnQuiz = document.getElementById('btn-quiz');
+
+            if (mode === 'study') {
+                studyView.classList.remove('hidden');
+                sidebar.classList.remove('hidden');
+                quizView.classList.add('hidden');
+                
+                // Set toggle styles for Material 3 segmented button
+                btnStudy.classList.add('bg-[#a8c7fa]', 'text-[#062e6f]');
+                btnStudy.classList.remove('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
+                
+                btnQuiz.classList.add('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
+                btnQuiz.classList.remove('bg-[#a8c7fa]', 'text-[#062e6f]');
+            } else {
+                studyView.classList.add('hidden');
+                sidebar.classList.add('hidden');
+                quizView.classList.remove('hidden');
+                
+                btnQuiz.classList.add('bg-[#a8c7fa]', 'text-[#062e6f]');
+                btnQuiz.classList.remove('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
+                
+                btnStudy.classList.add('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
+                btnStudy.classList.remove('bg-[#a8c7fa]', 'text-[#062e6f]');
+                
+                startQuiz();
+            }
+        }
+
+        function startQuiz() {
+            currentQuizData = studyData[currentTopicIndex].quiz;
+            currentQuizIndex = 0;
+            score = 0;
+            
+            document.getElementById('quiz-header-title').innerText = studyData[currentTopicIndex].title;
+            document.getElementById('quiz-container').classList.remove('hidden');
+            document.getElementById('quiz-results').classList.add('hidden');
+            loadQuizQuestion();
+        }
+
+        function loadQuizQuestion() {
+            hasAnswered = false;
+            const q = currentQuizData[currentQuizIndex];
+            
+            document.getElementById('quiz-progress').innerText = `${currentQuizIndex + 1} of ${currentQuizData.length}`;
+            document.getElementById('quiz-question').innerText = q.question;
+            
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+            
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left px-6 py-5 border border-[#444746] rounded-3xl hover:bg-[#282a2c] transition duration-200 text-[#e3e3e3] text-lg focus:outline-none';
+                btn.innerText = opt;
+                btn.onclick = () => selectAnswer(idx, btn);
+                optionsContainer.appendChild(btn);
+            });
+
+            document.getElementById('quiz-next-container').classList.add('hidden');
+        }
+
+        function selectAnswer(selectedIndex, btnElement) {
+            if (hasAnswered) return;
+            hasAnswered = true;
+            
+            const q = currentQuizData[currentQuizIndex];
+            const allButtons = document.getElementById('quiz-options').children;
+
+            if (selectedIndex === q.correct) {
+                // Correct styling (Material 3 Dark Green)
+                btnElement.classList.add('bg-[#0f5223]', 'bg-opacity-40', 'border-[#81c995]', 'text-[#c4eed0]');
+                score++;
+            } else {
+                // Incorrect styling (Material 3 Dark Red)
+                btnElement.classList.add('bg-[#8c1d18]', 'bg-opacity-40', 'border-[#f2b8b5]', 'text-[#f2b8b5]');
+                // Highlight correct answer
+                allButtons[q.correct].classList.add('bg-[#0f5223]', 'bg-opacity-40', 'border-[#81c995]', 'text-[#c4eed0]');
+            }
+
+            for (let btn of allButtons) {
+                btn.classList.remove('hover:bg-[#282a2c]');
+                btn.style.cursor = 'default';
+            }
+
+            document.getElementById('quiz-next-container').classList.remove('hidden');
+        }
+
+        function nextQuizQuestion() {
+            currentQuizIndex++;
+            if (currentQuizIndex < currentQuizData.length) {
+                loadQuizQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            const resultsDiv = document.getElementById('quiz-results');
+            resultsDiv.classList.remove('hidden');
+            
+            document.getElementById('final-score').innerText = score;
+            document.getElementById('total-questions').innerText = currentQuizData.length;
+        }
+
+    </script>
+</body>
+</html>

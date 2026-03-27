@@ -82,8 +82,8 @@ body {
 
   /* Header */
   --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
-  --md-footer-bg-color: hsl(0, 0%, 11%);
-  --md-footer-bg-color--dark: hsl(0, 0%, 6%);
+  --md-footer-bg-color: hsl(0, 0%, 4%);
+  --md-footer-bg-color--dark: hsl(0, 0%, 5.2%);
 
   --md-typeset-mark-color: hsl(var(--md-hue), 90%, 65%, 40%);
   --md-accent-fg-color: hsla(var(--md-hue), 65%, 75%, 80%);
@@ -91,18 +91,18 @@ body {
   --md-code-bg-color: hsla(var(--md-hue), 2%, 12%, 1);
 
   /* --md-default-bg-color: hsl(var(--md-hue), 0%, 8%); */
-  --md-default-bg-color: #1E1E1E;
+  --md-default-bg-color: #050505;
   --md-default-fg-color: hsl(0, 0%, 90%);
   /* This color is what your thing fades when passed by */
   /* --md-default-fg-color--light: hsl(var(--md-hue),50%,95%); */
   --md-default-fg-color--lightest: hsl(0, 0%, 10%);
   /* Also remember to change the color in the <head /> */
   /* --md-primary-fg-color: hsl(0, 0%, 11%); */
-  --md-primary-fg-color: #1F2021;
+  --md-primary-fg-color: #060606;
   /* Header */
   --md-primary-fg-color--lightest: hsl(0, 0%, 7%);
-  --md-footer-bg-color: hsl(0, 0%, 8%);
-  --md-footer-bg-color--dark: hsl(0, 0%, 5.5%);
+  /* --md-footer-bg-color: hsl(0, 0%, 8%);
+  --md-footer-bg-color--dark: hsl(0, 0%, 5.5%); */
 
   --md-admonition-bg-color: hsla(0, 0%, 21.6%, 0.18);
 }
