@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indian Economy Study Companion</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            /* Using Outfit font which closely resembles Google Sans */
-            font-family: 'Outfit', sans-serif;
-            background-color: #131314; /* M3 Dark Background */
-            color: #e3e3e3;
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB; /* Very light gray background */
+            color: #374151; /* Dark gray text */
         }
         
         /* Modern subtle scrollbar */
@@ -23,11 +22,11 @@
             background: transparent;
         }
         ::-webkit-scrollbar-thumb {
-            background: #444746;
+            background: #D1D5DB;
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #5f6368;
+            background: #9CA3AF;
         }
 
         .fade-in {
@@ -38,28 +37,69 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .prose p {
-            margin-bottom: 1.25rem;
-            line-height: 1.7;
-            color: #c4c7c5; /* M3 On-Surface Variant */
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+            color: #4B5563; 
             font-size: 1.05rem;
         }
         
-        /* Material 3 Card Style */
-        .m3-card {
-            background-color: #1e1f20; /* M3 Surface */
-            border-radius: 2rem; /* Extreme rounding like Google Flow */
-            border: 1px solid #444746;
+        /* Brilliant style cards */
+        .brilliant-card {
+            background-color: #FFFFFF; 
+            border-radius: 1rem; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #F3F4F6;
+        }
+
+        /* Brilliant style buttons */
+        .btn-primary {
+            background-color: #2563EB; /* Vibrant Blue */
+            color: #FFFFFF;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+        .btn-primary:hover:not(:disabled) {
+            background-color: #1D4ED8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+        .btn-secondary {
+            background-color: #F3F4F6;
+            color: #4B5563;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+        .btn-secondary:hover:not(:disabled) {
+            background-color: #E5E7EB;
+            color: #111827;
+        }
+
+        /* Quiz Option Button */
+        .quiz-option {
+            background-color: #FFFFFF;
+            border: 2px solid #E5E7EB;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+        }
+        .quiz-option:hover:not(:disabled) {
+            border-color: #93C5FD;
+            background-color: #EFF6FF;
         }
     </style>
 </head>
 <body class="h-screen flex flex-col overflow-hidden">
 
     <!-- Header -->
-    <header class="bg-[#131314] text-[#e3e3e3] p-4 md:px-6 flex justify-between items-center z-10 relative">
-        <h1 class="text-2xl font-medium tracking-tight">Indian Economy</h1>
-        <nav class="space-x-3 bg-[#1e1f20] p-1.5 rounded-full border border-[#444746] flex">
-            <button id="btn-study" class="bg-[#a8c7fa] text-[#062e6f] px-6 py-2.5 rounded-full font-medium transition duration-200" onclick="switchMode('study')">Study</button>
-            <button id="btn-quiz" class="bg-transparent text-[#a8c7fa] hover:bg-[#282a2c] px-6 py-2.5 rounded-full font-medium transition duration-200" onclick="switchMode('quiz')">Quiz</button>
+    <header class="bg-white border-b border-gray-200 p-4 md:px-8 flex justify-between items-center z-10 relative">
+        <h1 class="text-2xl font-bold text-gray-900 tracking-tight flex items-center">
+            <svg class="w-7 h-7 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            Indian Economy
+        </h1>
+        <nav class="space-x-2 bg-gray-100 p-1 rounded-xl flex">
+            <button id="btn-study" class="bg-white shadow-sm text-blue-700 px-6 py-2 rounded-lg font-semibold transition duration-200" onclick="switchMode('study')">Study</button>
+            <button id="btn-quiz" class="bg-transparent text-gray-500 hover:text-gray-900 px-6 py-2 rounded-lg font-semibold transition duration-200" onclick="switchMode('quiz')">Practice</button>
         </nav>
     </header>
 
@@ -67,28 +107,30 @@
     <div class="flex-1 flex overflow-hidden">
         
         <!-- Sidebar (Study Mode) -->
-        <aside id="sidebar" class="w-1/4 max-w-[320px] bg-[#131314] overflow-y-auto flex flex-col z-0 pb-6">
-            <div class="px-6 py-4 font-medium text-[#c4c7c5] tracking-wide text-sm">Topics</div>
-            <ul id="topic-list" class="flex-1 space-y-1">
+        <aside id="sidebar" class="w-1/4 max-w-[300px] bg-white border-r border-gray-200 overflow-y-auto flex flex-col z-0 pb-6">
+            <div class="px-6 py-5 font-bold text-gray-400 uppercase tracking-wider text-xs">Curriculum</div>
+            <ul id="topic-list" class="flex-1 space-y-1 px-3">
                 <!-- Populated by JS -->
             </ul>
         </aside>
 
         <!-- Content Area -->
-        <main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 bg-[#131314] relative" id="main-content">
+        <main class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10 bg-[#F9FAFB] relative" id="main-content">
             
             <!-- Study View -->
             <div id="study-view" class="max-w-4xl mx-auto fade-in">
-                <div class="m3-card p-8 md:p-10 mb-6 relative overflow-hidden">
-                    <h2 id="topic-title" class="text-3xl md:text-4xl font-semibold text-[#f2f2f2] mb-8 tracking-tight">Topic Title</h2>
+                <div class="brilliant-card p-8 md:p-12 mb-8 relative overflow-hidden">
+                    <h2 id="topic-title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 tracking-tight">Topic Title</h2>
                     
-                    <!-- Mnemonic Card (Material 3 Secondary Container) -->
-                    <div class="bg-[#004a77] bg-opacity-40 border border-[#004a77] p-6 rounded-3xl mb-10">
-                        <h3 class="font-medium text-[#c2e7ff] flex items-center mb-3 text-lg">
-                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                            Memory Trick
-                        </h3>
-                        <p id="topic-mnemonic" class="text-[#e3e3e3] font-normal leading-relaxed text-lg"></p>
+                    <!-- Mnemonic Card -->
+                    <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl mb-10 flex flex-col sm:flex-row gap-4 items-start">
+                        <div class="bg-blue-100 p-3 rounded-full text-blue-600 shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-blue-900 mb-1 text-lg">Memory Trick</h3>
+                            <p id="topic-mnemonic" class="text-blue-800 font-medium leading-relaxed"></p>
+                        </div>
                     </div>
 
                     <!-- Article Content -->
@@ -97,41 +139,41 @@
                     </div>
                 </div>
                 
-                <div class="flex justify-between max-w-4xl mx-auto mb-10 space-x-4">
-                    <button id="btn-prev" class="px-6 py-3.5 border border-[#444746] bg-transparent rounded-full text-[#a8c7fa] hover:bg-[#282a2c] transition duration-200 disabled:opacity-30 disabled:hover:bg-transparent font-medium" onclick="navigate(-1)">Previous</button>
-                    <button id="btn-next" class="px-8 py-3.5 bg-[#a8c7fa] text-[#062e6f] rounded-full hover:bg-[#d3e3fd] transition duration-200 disabled:opacity-50 font-medium" onclick="navigate(1)">Next Topic</button>
+                <div class="flex justify-between max-w-4xl mx-auto mb-12 space-x-4">
+                    <button id="btn-prev" class="btn-secondary px-8 py-3.5 disabled:opacity-40" onclick="navigate(-1)">Previous</button>
+                    <button id="btn-next" class="btn-primary px-8 py-3.5 disabled:opacity-40" onclick="navigate(1)">Next Topic</button>
                 </div>
             </div>
 
             <!-- Quiz View -->
             <div id="quiz-view" class="max-w-3xl mx-auto hidden fade-in h-full flex flex-col justify-center pb-20">
-                <div id="quiz-container" class="m3-card p-8 md:p-10">
-                    <div class="flex justify-between items-center mb-8">
-                        <h2 id="quiz-header-title" class="text-2xl font-semibold text-[#f2f2f2]">Knowledge Check</h2>
-                        <span id="quiz-progress" class="text-sm font-medium text-[#c2e7ff] bg-[#004a77] px-4 py-1.5 rounded-full">1 of X</span>
+                <div id="quiz-container" class="brilliant-card p-8 md:p-12">
+                    <div class="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
+                        <h2 id="quiz-header-title" class="text-2xl font-bold text-gray-900">Knowledge Check</h2>
+                        <span id="quiz-progress" class="text-sm font-bold text-blue-700 bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100">1 of X</span>
                     </div>
                     
-                    <p id="quiz-question" class="text-xl text-[#e3e3e3] font-medium mb-8 leading-relaxed"></p>
+                    <p id="quiz-question" class="text-xl text-gray-800 font-semibold mb-8 leading-relaxed"></p>
                     
                     <div id="quiz-options" class="space-y-4">
                         <!-- Options populated by JS -->
                     </div>
                     
                     <div class="mt-10 flex justify-end hidden" id="quiz-next-container">
-                        <button id="btn-quiz-next" class="bg-[#a8c7fa] text-[#062e6f] px-8 py-3 rounded-full hover:bg-[#d3e3fd] transition duration-200 font-medium text-lg" onclick="nextQuizQuestion()">Next</button>
+                        <button id="btn-quiz-next" class="btn-primary px-10 py-3.5 text-lg" onclick="nextQuizQuestion()">Continue</button>
                     </div>
                 </div>
 
                 <!-- Quiz Results -->
-                <div id="quiz-results" class="m3-card p-12 text-center hidden">
-                    <div class="w-24 h-24 bg-[#0f5223] rounded-full flex items-center justify-center mx-auto mb-8">
-                        <svg class="w-12 h-12 text-[#c4eed0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <div id="quiz-results" class="brilliant-card p-12 text-center hidden">
+                    <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                     </div>
-                    <h2 class="text-4xl font-semibold text-[#f2f2f2] mb-4 tracking-tight">Completed</h2>
-                    <p class="text-xl text-[#c4c7c5] mb-10">You scored <span id="final-score" class="font-bold text-[#a8c7fa] text-3xl mx-1"></span> out of <span id="total-questions" class="font-bold text-[#e3e3e3]"></span></p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4 tracking-tight">Practice Complete!</h2>
+                    <p class="text-xl text-gray-500 mb-10 font-medium">You scored <span id="final-score" class="font-bold text-blue-600 text-3xl mx-1"></span> out of <span id="total-questions" class="font-bold text-gray-800 text-3xl mx-1"></span></p>
                     <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <button class="bg-transparent border border-[#444746] text-[#a8c7fa] px-8 py-3.5 rounded-full hover:bg-[#282a2c] transition duration-200 text-lg font-medium" onclick="switchMode('study')">Back to Study</button>
-                        <button class="bg-[#a8c7fa] text-[#062e6f] px-8 py-3.5 rounded-full hover:bg-[#d3e3fd] transition duration-200 text-lg font-medium" onclick="startQuiz()">Retake Quiz</button>
+                        <button class="btn-secondary px-8 py-4 text-lg" onclick="switchMode('study')">Review Material</button>
+                        <button class="btn-primary px-8 py-4 text-lg" onclick="startQuiz()">Practice Again</button>
                     </div>
                 </div>
             </div>
@@ -151,17 +193,37 @@
                 `,
                 quiz: [
                     {
-                        question: "What act established the 'license raj' and gave the government immense power to regulate industrial capacity?",
+                        question: "What 1948 resolution laid the foundation for a mixed economy by dividing industries into four categories?",
                         options: ["Industrial Policy Resolution of 1948", "Industries (Development and Regulation) Act of 1951", "Industrial Policy Resolution of 1956", "Industrial Policy of 1991"],
+                        correct: 0
+                    },
+                    {
+                        question: "Which act established the 'license raj' and gave the government immense regulatory power?",
+                        options: ["Industrial Policy Resolution of 1948", "Industries (Development and Regulation) Act of 1951", "Industrial Policy Resolution of 1956", "Economic Constitution of India Act"],
                         correct: 1
                     },
                     {
-                        question: "Under the Industrial Policy Resolution of 1956, how many industries were reserved exclusively for the state in Schedule A?",
-                        options: ["12 industries", "17 industries", "2 core areas", "51 industries"],
-                        correct: 1
+                        question: "The Industrial Policy Resolution of 1956 is often referred to by what title?",
+                        options: ["The Market Reform Act", "The License Raj Act", "The Economic Constitution of India", "The Mixed Economy Resolution"],
+                        correct: 2
                     },
                     {
-                        question: "What was the Foreign Direct Investment (FDI) automatic approval limit set by the Industrial Policy of 1991 for high priority sectors?",
+                        question: "Under the 1956 policy, how many industries were reserved exclusively for the state in Schedule A?",
+                        options: ["4", "12", "17", "51"],
+                        correct: 2
+                    },
+                    {
+                        question: "What major reform in 1991 dismantled the licensing regime for most industries?",
+                        options: ["Industrial Policy Resolution of 1948", "Industries (Development and Regulation) Act", "Industrial Policy Resolution of 1956", "Industrial Policy of 1991"],
+                        correct: 3
+                    },
+                    {
+                        question: "By the end of the 1991 reforms, how many core areas were left exclusively reserved for the public sector?",
+                        options: ["Two: atomic energy and specific railways", "Four: arms, railways, telecom, and atomic energy", "Twelve supplementary industries", "Seventeen essential industries"],
+                        correct: 0
+                    },
+                    {
+                        question: "What was the automatic approval limit for Foreign Direct Investment (FDI) in high priority sectors under the 1991 policy?",
                         options: ["12 percent", "17 percent", "51 percent", "100 percent"],
                         correct: 2
                     }
@@ -177,19 +239,39 @@
                 `,
                 quiz: [
                     {
-                        question: "What is a defining characteristic of the Indian money market regarding its structure?",
-                        options: ["It only deals with long term funds", "It is exclusively run by indigenous bankers", "It is dichotomous, split into organized and unorganized sectors", "It only allows borrowing for up to five years"],
-                        correct: 2
+                        question: "The Indian money market is primarily designed for borrowing and lending funds for what duration?",
+                        options: ["Up to one year", "One to five years", "Five to ten years", "More than ten years"],
+                        correct: 0
                     },
                     {
-                        question: "Which of the following is an instrument traded in the organized sector of the money market?",
-                        options: ["Agricultural land", "Treasury bills", "Corporate equity shares", "Long term government bonds"],
+                        question: "What term describes the dual structure of the Indian money market?",
+                        options: ["Monolithic nature", "Dichotomous nature", "Homogeneous nature", "Trilateral nature"],
                         correct: 1
                     },
                     {
-                        question: "Which committee's recommendations in 1987 led to major structural reforms in the Indian money market?",
-                        options: ["Narasimham Committee", "Kelkar Committee", "Tendulkar Committee", "Vaghul Committee"],
+                        question: "Which of the following institutions is a key part of the highly regulated organized sector?",
+                        options: ["Indigenous bankers", "Local moneylenders", "Reserve Bank of India", "Unregulated microfinanciers"],
+                        correct: 2
+                    },
+                    {
+                        question: "What financial instrument is typically issued by the government to manage short term deficits?",
+                        options: ["Commercial paper", "Certificates of deposit", "Call money", "Treasury bills"],
                         correct: 3
+                    },
+                    {
+                        question: "Who primarily makes up the unorganized sector of the money market?",
+                        options: ["Commercial and cooperative banks", "The Reserve Bank of India", "Indigenous bankers and local moneylenders", "Foreign portfolio investors"],
+                        correct: 2
+                    },
+                    {
+                        question: "Which committee's recommendations in 1987 initiated major structural reforms in the money market?",
+                        options: ["Narasimham Committee", "Tendulkar Committee", "Vaghul Committee", "Kelkar Committee"],
+                        correct: 2
+                    },
+                    {
+                        question: "What specialized institution was established following the 1987 reforms to provide much needed liquidity?",
+                        options: ["Securities and Exchange Board of India", "Small Industries Development Bank of India", "Discount and Finance House of India", "National Stock Exchange"],
+                        correct: 2
                     }
                 ]
             },
@@ -203,17 +285,37 @@
                 `,
                 quiz: [
                     {
-                        question: "Why are Small Scale Industries considered ideal for an economy like India's?",
-                        options: ["They require massive urban infrastructure", "They are highly automated and replace manual jobs", "They require comparatively lower capital investment per worker and are highly labor intensive", "They only focus on importing foreign goods"],
-                        correct: 2
-                    },
-                    {
-                        question: "According to the text, what is a major performance hindrance frequently faced by small scale units?",
-                        options: ["Excessive access to international credit", "Obsolete manufacturing technology and poor quality control mechanisms", "An overreliance on Foreign Direct Investment", "Too much focus on achieving economies of scale"],
+                        question: "Why are Small Scale Industries considered essential for tackling India's unemployment problem?",
+                        options: ["They rely entirely on automation", "They are highly labor intensive by nature", "They are only located in major urban centers", "They exclusively hire foreign workers"],
                         correct: 1
                     },
                     {
-                        question: "Which institution was established by the government to provide dedicated financial assistance to this sector?",
+                        question: "How do small scale industries help reduce regional economic imbalances?",
+                        options: ["By concentrating wealth in major cities", "By relying solely on imported raw materials", "By promoting decentralized industrial development", "By replacing human labor with machines"],
+                        correct: 2
+                    },
+                    {
+                        question: "Historically, how did the Indian government heavily protect the small scale sector from competition?",
+                        options: ["By banning all foreign imports completely", "By reserving specific products exclusively for small scale manufacturing", "By shutting down all large scale industries", "By forcing large corporations to buy them out"],
+                        correct: 1
+                    },
+                    {
+                        question: "According to census data, what proportion of all industrial units in India are small scale units?",
+                        options: ["A very small minority", "Exactly half", "Only unregistered businesses", "The vast majority"],
+                        correct: 3
+                    },
+                    {
+                        question: "What is cited as a major performance hindrance frequently faced by these units?",
+                        options: ["Too much access to international credit", "Obsolete manufacturing technology", "An overreliance on Foreign Direct Investment", "Excessive economies of scale"],
+                        correct: 1
+                    },
+                    {
+                        question: "What remains the single biggest hurdle for small scale industries in their daily operations?",
+                        options: ["Access to timely and adequate credit", "Hiring enough unskilled labor", "Sourcing cheap local materials", "Dealing with international shipping laws"],
+                        correct: 0
+                    },
+                    {
+                        question: "Which dedicated institution was established to provide streamlined financial assistance to this sector?",
                         options: ["Reserve Bank of India", "Securities and Exchange Board of India", "Discount and Finance House of India", "Small Industries Development Bank of India (SIDBI)"],
                         correct: 3
                     }
@@ -229,19 +331,39 @@
                 `,
                 quiz: [
                     {
-                        question: "Which account in the Balance of Payments records international investments such as foreign direct investment and external commercial borrowings?",
-                        options: ["Current account", "Capital account", "Official reserve account", "Trade balance account"],
+                        question: "How is the Balance of Payments primarily divided?",
+                        options: ["Domestic account, foreign account, corporate account", "Current account, capital account, official reserve account", "Trade account, service account, investment account", "Import account, export account, banking account"],
                         correct: 1
                     },
                     {
-                        question: "What was the immediate geopolitical trigger that exacerbated the 1991 macroeconomic crisis by spiking global oil prices?",
-                        options: ["The Asian Financial Crisis", "The Cold War", "The Gulf War", "The Global Recession"],
+                        question: "Which account tracks the import and export of visible goods and invisible services?",
+                        options: ["Capital account", "Official reserve account", "Current account", "Foreign Direct Investment account"],
                         correct: 2
                     },
                     {
-                        question: "What immediate step did the government take in the post 1991 era to stabilize the external sector and make Indian exports more competitive?",
-                        options: ["Devalued the rupee", "Banned all essential imports", "Stopped accepting inward remittances", "Increased restrictions on Foreign Direct Investment"],
-                        correct: 0
+                        question: "What type of trade policy characterized India's approach before 1991, leading to sluggish export growth?",
+                        options: ["Outward looking and highly competitive", "Export led growth strategy", "Inward looking and protectionist", "Fully globalized free trade"],
+                        correct: 2
+                    },
+                    {
+                        question: "What geopolitical event served as the immediate trigger for the 1991 macroeconomic crisis?",
+                        options: ["The Cold War", "The Asian Financial Crisis", "The Gulf War", "The Dot-com Bubble"],
+                        correct: 2
+                    },
+                    {
+                        question: "During the 1991 crisis, India's foreign exchange reserves plummeted to a level sufficient to cover imports for what duration?",
+                        options: ["Two days", "Two weeks", "Two months", "Two years"],
+                        correct: 1
+                    },
+                    {
+                        question: "What immediate step did the government take to make Indian exports more competitive globally?",
+                        options: ["Revalued the rupee to make it stronger", "Devalued the rupee", "Banned all essential imports", "Stopped accepting inward remittances"],
+                        correct: 1
+                    },
+                    {
+                        question: "In the post 1991 era, a massive boom in which sector fundamentally altered the current account balance?",
+                        options: ["Heavy manufacturing", "Agricultural exports", "Software and IT services", "Crude oil extraction"],
+                        correct: 2
                     }
                 ]
             },
@@ -255,19 +377,39 @@
                 `,
                 quiz: [
                     {
-                        question: "What kind of growth model did the New Trade Policy of 1991 shift the Indian economy towards?",
-                        options: ["A closed import substitution strategy", "An outward looking export led growth model", "A strictly state controlled monopoly model", "A decentralized rural barter system"],
+                        question: "The New Trade Policy of 1991 shifted the Indian economy from a closed import substitution strategy to what kind of model?",
+                        options: ["A purely agricultural growth model", "An outward looking, export led growth model", "A strictly state controlled monopoly model", "A decentralized rural barter system"],
                         correct: 1
                     },
                     {
-                        question: "What does the process of 'decanalization' refer to in the context of the new policy?",
-                        options: ["Moving items to the Open General License list to allow private sector participation", "Increasing peak customs duties on specific agricultural products", "Banning the export of essential commodities", "Creating new state owned monopolies for trade"],
+                        question: "Prior to 1991, what characterized India's trade regime?",
+                        options: ["Excessively high protective tariffs and strict import quotas", "Free trade with zero customs duties", "Automatic approval for all foreign investments", "A complete ban on all domestic manufacturing"],
                         correct: 0
                     },
                     {
-                        question: "What specific incentive was offered to companies operating within Special Economic Zones (SEZs)?",
-                        options: ["Complete protection from international competition", "Mandatory requirement to hire only unionized labor", "Comprehensive corporate tax holidays and duty free procurement", "Subsidies to focus exclusively on local retail markets"],
+                        question: "As part of dismantling quantitative restrictions, peak customs duties were reduced from staggering highs of over what percentage?",
+                        options: ["50 percent", "100 percent", "200 percent", "300 percent"],
+                        correct: 3
+                    },
+                    {
+                        question: "What does the process of 'decanalization' refer to?",
+                        options: ["Increasing peak customs duties on specific products", "Banning the export of essential commodities", "Moving items to the Open General License list from state owned monopolies", "Creating new state owned monopolies for trade"],
                         correct: 2
+                    },
+                    {
+                        question: "To aggressively promote exports, the policy established robust frameworks for which designated duty free enclaves?",
+                        options: ["Agricultural Free Zones (AFZs)", "Special Economic Zones (SEZs)", "State Regulated Territories (SRTs)", "Closed Import Areas (CIAs)"],
+                        correct: 1
+                    },
+                    {
+                        question: "What specific incentive was offered to companies operating within these duty free enclaves?",
+                        options: ["Complete protection from international competition", "Mandatory requirement to hire only unionized labor", "Comprehensive corporate tax holidays", "Subsidies to focus exclusively on local retail markets"],
+                        correct: 2
+                    },
+                    {
+                        question: "Post 1991, the focus shifted towards expanding the export basket beyond traditional agricultural goods to include what?",
+                        options: ["Exclusively raw materials and minerals", "High value manufactured products and engineering goods", "Only software and IT services", "Unprocessed crude oil and natural gas"],
+                        correct: 1
                     }
                 ]
             },
@@ -281,17 +423,37 @@
                 `,
                 quiz: [
                     {
-                        question: "Apart from contributing to the GDP, what is a primary role of agriculture for more than half of the Indian population?",
-                        options: ["It provides them with foreign exchange reserves", "It is their primary source of livelihood", "It guarantees them corporate jobs in cities", "It solely focuses on producing spices for export"],
-                        correct: 1
-                    },
-                    {
-                        question: "Why is Indian agriculture famously described as a 'gamble with the monsoons'?",
-                        options: ["Because farmers prefer to bet their crops in local markets", "Because all crops grown in India are heavily water intensive", "Because a vast majority of the arable land lacks reliable irrigation infrastructure", "Because the government uses a lottery system for seeds"],
+                        question: "Apart from contributing to the GDP, what is a crucial role of agriculture for more than half of the Indian population?",
+                        options: ["It provides them with foreign exchange reserves", "It guarantees them corporate jobs in cities", "It is their primary source of livelihood", "It solely focuses on producing spices for export"],
                         correct: 2
                     },
                     {
-                        question: "In recent years, there has been a noticeable shift in the Indian cropping pattern from food crops towards what type of crops?",
+                        question: "What type of farming characterizes the nature of Indian agriculture, where farmers grow food primarily for their own family?",
+                        options: ["Corporate farming", "Subsistence farming", "Commercial farming", "Plantation farming"],
+                        correct: 1
+                    },
+                    {
+                        question: "Why do economists famously describe Indian agriculture as a 'gamble with the monsoons'?",
+                        options: ["Because farmers prefer to bet their crops in local markets", "Because all crops grown in India are heavily water intensive", "Because a vast majority of arable land lacks reliable irrigation", "Because the government uses a lottery system for seeds"],
+                        correct: 2
+                    },
+                    {
+                        question: "What issue makes modern mechanization exceptionally difficult and cost prohibitive for Indian farmers?",
+                        options: ["The lack of modern machinery in the world", "Highly fragmented and uneconomical small landholdings", "A complete government ban on using tractors", "The high cost of exporting agricultural goods"],
+                        correct: 1
+                    },
+                    {
+                        question: "What term describes the situation where significantly more people are engaged in farming activities than are actually required?",
+                        options: ["Seasonal unemployment", "Frictional unemployment", "Structural employment", "Disguised unemployment"],
+                        correct: 3
+                    },
+                    {
+                        question: "Historically, Indian agriculture was heavily biased towards essential food crops to ensure national self sufficiency following what major event?",
+                        options: ["The White Revolution", "The Industrial Revolution", "The Green Revolution", "The 1991 Economic Reforms"],
+                        correct: 2
+                    },
+                    {
+                        question: "In recent years, there has been a steady shift in the cropping pattern towards what type of crops?",
                         options: ["Coarse cereals only", "Genetically modified wheat", "Commercial and cash crops", "Exclusively imported crop varieties"],
                         correct: 2
                     }
@@ -307,19 +469,39 @@
                 `,
                 quiz: [
                     {
-                        question: "What was the direct origin of the severe economic crisis that led to the 1991 reforms?",
-                        options: ["A sudden crash in the global stock market", "Macroeconomic mismanagement and high fiscal deficits in the 1980s", "The complete failure of the agricultural sector in 1990", "A deliberate attempt to default on international debt"],
+                        question: "The origin of the 1991 economic crisis lay directly in the macroeconomic mismanagement of which decade?",
+                        options: ["The 1960s", "The 1970s", "The 1980s", "The 1990s"],
+                        correct: 2
+                    },
+                    {
+                        question: "To secure emergency funding, India approached which international institutions?",
+                        options: ["The United Nations and the World Health Organization", "The International Monetary Fund and the World Bank", "The Asian Development Bank and BRICS", "The Federal Reserve and the European Central Bank"],
                         correct: 1
                     },
                     {
-                        question: "Which measure was part of the short term macroeconomic stabilization component of the New Economic Policy?",
-                        options: ["Increasing government spending", "Tight monetary policy to curb excess liquidity", "Opening all reserved sectors to private capital", "Slashing exorbitant import tariffs"],
+                        question: "The New Economic Policy had two interconnected components. What was the first component focused on short term measures?",
+                        options: ["Long term industrial planning", "Macroeconomic stabilization", "Agricultural modernization", "Complete privatization of banks"],
                         correct: 1
                     },
                     {
-                        question: "What did the 'Liberalization' component of the LPG reforms effectively dismantle?",
-                        options: ["The agricultural Minimum Support Price system", "The oppressive license raj", "The entire public sector infrastructure", "The right of private enterprises to operate"],
+                        question: "Which measure was utilized to achieve this short term stabilization and curb excess liquidity?",
+                        options: ["Increasing government spending", "Tight monetary policy", "Opening all reserved sectors to private capital", "Slashing exorbitant import tariffs"],
                         correct: 1
+                    },
+                    {
+                        question: "What does the acronym LPG stand for in the context of the structural reforms?",
+                        options: ["Liquefied Petroleum Gas", "Liberalization, Privatization, and Globalization", "Licensing, Protectionism, and Government", "Local Production and Growth"],
+                        correct: 1
+                    },
+                    {
+                        question: "Which specific component of the LPG reforms effectively dismantled the oppressive license raj?",
+                        options: ["Liberalization", "Privatization", "Globalization", "Stabilization"],
+                        correct: 0
+                    },
+                    {
+                        question: "How did the Globalization component aim to integrate the Indian economy with the rest of the world?",
+                        options: ["By banning all foreign imports", "By forcing local companies to move abroad", "By slashing exorbitant import tariffs and encouraging Foreign Direct Investment", "By replacing the rupee with the US dollar"],
+                        correct: 2
                     }
                 ]
             },
@@ -333,19 +515,39 @@
                 `,
                 quiz: [
                     {
-                        question: "What is a major general cause of low agricultural productivity related to the population?",
-                        options: ["A severe shortage of workers in rural areas", "Structural overcrowding and widespread disguised unemployment", "A complete migration of the workforce to urban centers", "An overreliance on highly skilled labor"],
+                        question: "The underlying causes for low agricultural productivity in India can generally be categorized into which three factors?",
+                        options: ["Climatic, political, and social", "General, institutional, and technological", "Domestic, international, and regional", "Financial, educational, and cultural"],
                         correct: 1
                     },
                     {
-                        question: "What institutional issue makes it economically unviable for Indian farmers to invest in permanent land improvements?",
-                        options: ["Highly fragmented and extremely small landholdings", "The lack of local agricultural markets", "The high cost of exporting goods", "A complete ban on using modern farming machinery"],
+                        question: "What massive structural issue acts as a general cause of low productivity by straining agricultural land?",
+                        options: ["A severe shortage of workers in rural areas", "Overcrowding and widespread disguised unemployment", "A complete migration of the workforce to urban centers", "An overreliance on highly skilled corporate labor"],
+                        correct: 1
+                    },
+                    {
+                        question: "What historical legacy has resulted in highly fragmented and extremely small landholdings?",
+                        options: ["The Green Revolution's focus on large farms", "Defective land tenure systems and generational subdivision of land", "Government bans on owning more than one acre", "The rapid industrialization of rural areas"],
+                        correct: 1
+                    },
+                    {
+                        question: "Technologically, why is a significantly large portion of Indian agriculture highly vulnerable to monsoon failures?",
+                        options: ["Because of inadequate and poorly maintained irrigation infrastructure", "Because Indian soil cannot retain any water", "Because farmers refuse to use modern weather forecasting", "Because of strict government limits on water usage"],
                         correct: 0
                     },
                     {
-                        question: "What government measure aims to provide affordable institutional credit and free farmers from exploitative moneylenders?",
-                        options: ["Land consolidation programs", "High Yielding Variety seeds", "Soil health cards", "Kisan Credit Cards"],
-                        correct: 3
+                        question: "What type of seed varieties do a vast majority of marginalized farmers continue to rely on?",
+                        options: ["Genetically modified, drought resistant seeds", "Expensive imported seeds", "Traditional, low yielding seed varieties", "High Yielding Variety seeds exclusively"],
+                        correct: 2
+                    },
+                    {
+                        question: "What government measure was introduced to provide affordable institutional credit and free farmers from exploitative local moneylenders?",
+                        options: ["Land consolidation programs", "High Yielding Variety seeds", "Kisan Credit Cards", "Special Economic Zones"],
+                        correct: 2
+                    },
+                    {
+                        question: "The recent push towards using what specific tool aims to educate farmers and sustainably boost overall farm yields?",
+                        options: ["Industrial license quotas", "Soil health cards", "Decanalization certificates", "Foreign portfolio investments"],
+                        correct: 1
                     }
                 ]
             },
@@ -359,17 +561,37 @@
                 `,
                 quiz: [
                     {
-                        question: "In which segment of the capital market do companies raise fresh capital by issuing new shares directly to the investing public?",
-                        options: ["The secondary market", "The primary market", "The unorganized money market", "The official reserve account"],
+                        question: "What is the primary function of a capital market?",
+                        options: ["To deal exclusively in foreign currency exchanges", "To deal in medium and long term funds", "To provide short term overnight loans to banks", "To regulate the prices of agricultural commodities"],
                         correct: 1
                     },
                     {
-                        question: "Which institution was granted expansive statutory powers post 1991 to act as the supreme independent market regulator?",
+                        question: "What are the two main segments into which the Indian capital market structure is broadly divided?",
+                        options: ["Organized sector and unorganized sector", "Domestic market and international market", "Primary market and secondary market", "Equity market and agricultural market"],
+                        correct: 2
+                    },
+                    {
+                        question: "In which segment do companies raise fresh capital by issuing new shares directly to the investing public?",
+                        options: ["The secondary market", "The primary market / new issue market", "The unorganized money market", "The official reserve account"],
+                        correct: 1
+                    },
+                    {
+                        question: "What essential function does the secondary market (stock exchanges) provide for previously issued securities?",
+                        options: ["It issues fresh capital for new startups", "It dictates the government's fiscal policy", "It provides crucial liquidity and continuous valuation", "It converts foreign direct investment into local currency"],
+                        correct: 2
+                    },
+                    {
+                        question: "Post 1991, which institution was granted expansive statutory powers to act as the supreme independent market regulator?",
                         options: ["Reserve Bank of India", "Discount and Finance House of India", "Small Industries Development Bank of India", "Securities and Exchange Board of India (SEBI)"],
                         correct: 3
                     },
                     {
-                        question: "What reform enabled the complete dematerialization of shares, eliminating risks like theft and forgery of physical certificates?",
+                        question: "The establishment of the National Stock Exchange completely replaced what outdated trading mechanism?",
+                        options: ["The electronic clearing system", "The negotiated dealing system", "The open outcry system", "The dematerialization system"],
+                        correct: 2
+                    },
+                    {
+                        question: "What major reform enabled the dematerialization of shares and eliminated risks associated with physical paper certificates?",
                         options: ["The establishment of the primary market", "The decanalization of monopolies", "The introduction of depositories", "The creation of Special Economic Zones"],
                         correct: 2
                     }
@@ -394,10 +616,10 @@
             list.innerHTML = '';
             studyData.forEach((topic, index) => {
                 const li = document.createElement('li');
-                // Material 3 list item styling
+                
                 li.className = index === currentTopicIndex 
-                    ? 'mx-3 my-1 px-5 py-3.5 rounded-full cursor-pointer transition bg-[#004a77] text-[#c2e7ff] font-medium' 
-                    : 'mx-3 my-1 px-5 py-3.5 rounded-full cursor-pointer transition hover:bg-[#282a2c] text-[#c4c7c5]';
+                    ? 'mx-1 my-1 px-4 py-3 rounded-xl cursor-pointer transition bg-blue-50 text-blue-700 font-bold border border-blue-100' 
+                    : 'mx-1 my-1 px-4 py-3 rounded-xl cursor-pointer transition hover:bg-gray-50 text-gray-600 font-medium border border-transparent';
                 li.innerText = topic.title;
                 li.onclick = () => loadTopic(index);
                 list.appendChild(li);
@@ -442,22 +664,21 @@
                 sidebar.classList.remove('hidden');
                 quizView.classList.add('hidden');
                 
-                // Set toggle styles for Material 3 segmented button
-                btnStudy.classList.add('bg-[#a8c7fa]', 'text-[#062e6f]');
-                btnStudy.classList.remove('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
+                btnStudy.classList.add('bg-white', 'shadow-sm', 'text-blue-700');
+                btnStudy.classList.remove('bg-transparent', 'text-gray-500', 'hover:text-gray-900');
                 
-                btnQuiz.classList.add('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
-                btnQuiz.classList.remove('bg-[#a8c7fa]', 'text-[#062e6f]');
+                btnQuiz.classList.add('bg-transparent', 'text-gray-500', 'hover:text-gray-900');
+                btnQuiz.classList.remove('bg-white', 'shadow-sm', 'text-blue-700');
             } else {
                 studyView.classList.add('hidden');
                 sidebar.classList.add('hidden');
                 quizView.classList.remove('hidden');
                 
-                btnQuiz.classList.add('bg-[#a8c7fa]', 'text-[#062e6f]');
-                btnQuiz.classList.remove('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
+                btnQuiz.classList.add('bg-white', 'shadow-sm', 'text-blue-700');
+                btnQuiz.classList.remove('bg-transparent', 'text-gray-500', 'hover:text-gray-900');
                 
-                btnStudy.classList.add('bg-transparent', 'text-[#a8c7fa]', 'hover:bg-[#282a2c]');
-                btnStudy.classList.remove('bg-[#a8c7fa]', 'text-[#062e6f]');
+                btnStudy.classList.add('bg-transparent', 'text-gray-500', 'hover:text-gray-900');
+                btnStudy.classList.remove('bg-white', 'shadow-sm', 'text-blue-700');
                 
                 startQuiz();
             }
@@ -486,7 +707,7 @@
             
             q.options.forEach((opt, idx) => {
                 const btn = document.createElement('button');
-                btn.className = 'w-full text-left px-6 py-5 border border-[#444746] rounded-3xl hover:bg-[#282a2c] transition duration-200 text-[#e3e3e3] text-lg focus:outline-none';
+                btn.className = 'quiz-option w-full text-left px-6 py-5 text-gray-700 text-lg font-medium focus:outline-none';
                 btn.innerText = opt;
                 btn.onclick = () => selectAnswer(idx, btn);
                 optionsContainer.appendChild(btn);
@@ -503,18 +724,22 @@
             const allButtons = document.getElementById('quiz-options').children;
 
             if (selectedIndex === q.correct) {
-                // Correct styling (Material 3 Dark Green)
-                btnElement.classList.add('bg-[#0f5223]', 'bg-opacity-40', 'border-[#81c995]', 'text-[#c4eed0]');
+                // Correct styling
+                btnElement.classList.add('bg-green-50', 'border-green-400', 'text-green-800');
+                btnElement.classList.remove('hover:bg-blue-50', 'hover:border-blue-300');
                 score++;
             } else {
-                // Incorrect styling (Material 3 Dark Red)
-                btnElement.classList.add('bg-[#8c1d18]', 'bg-opacity-40', 'border-[#f2b8b5]', 'text-[#f2b8b5]');
+                // Incorrect styling
+                btnElement.classList.add('bg-red-50', 'border-red-300', 'text-red-700');
+                btnElement.classList.remove('hover:bg-blue-50', 'hover:border-blue-300');
+                
                 // Highlight correct answer
-                allButtons[q.correct].classList.add('bg-[#0f5223]', 'bg-opacity-40', 'border-[#81c995]', 'text-[#c4eed0]');
+                allButtons[q.correct].classList.add('bg-green-50', 'border-green-400', 'text-green-800');
+                allButtons[q.correct].classList.remove('hover:bg-blue-50', 'hover:border-blue-300');
             }
 
             for (let btn of allButtons) {
-                btn.classList.remove('hover:bg-[#282a2c]');
+                btn.classList.remove('quiz-option'); // Remove hover effects class
                 btn.style.cursor = 'default';
             }
 
