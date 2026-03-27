@@ -9,11 +9,10 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F9FAFB; /* Very light gray background */
-            color: #374151; /* Dark gray text */
+            background-color: #F9FAFB;
+            color: #374151;
         }
         
-        /* Modern subtle scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -43,7 +42,6 @@
             font-size: 1.05rem;
         }
         
-        /* Brilliant style cards */
         .brilliant-card {
             background-color: #FFFFFF; 
             border-radius: 1rem; 
@@ -51,9 +49,8 @@
             border: 1px solid #F3F4F6;
         }
 
-        /* Brilliant style buttons */
         .btn-primary {
-            background-color: #2563EB; /* Vibrant Blue */
+            background-color: #2563EB;
             color: #FFFFFF;
             border-radius: 0.75rem;
             transition: all 0.2s ease;
@@ -76,7 +73,6 @@
             color: #111827;
         }
 
-        /* Quiz Option Button */
         .quiz-option {
             background-color: #FFFFFF;
             border: 2px solid #E5E7EB;
@@ -87,6 +83,10 @@
             border-color: #93C5FD;
             background-color: #EFF6FF;
         }
+
+        #topic-content {
+            outline: none;
+        }
     </style>
 </head>
 <body class="h-screen flex flex-col overflow-hidden">
@@ -94,7 +94,7 @@
     <!-- Header -->
     <header class="bg-white border-b border-gray-200 p-4 md:px-8 flex justify-between items-center z-10 relative">
         <h1 class="text-2xl font-bold text-gray-900 tracking-tight flex items-center">
-            <svg class="w-7 h-7 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            <!-- <svg class="w-7 h-7 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg> -->
             Indian Economy
         </h1>
         <nav class="space-x-2 bg-gray-100 p-1 rounded-xl flex">
@@ -104,9 +104,9 @@
     </header>
 
     <!-- Main Container -->
-    <div class="flex-1 flex overflow-hidden">
+    <div class="flex-1 flex overflow-hidden relative">
         
-        <!-- Sidebar (Study Mode) -->
+        <!-- Sidebar -->
         <aside id="sidebar" class="w-1/4 max-w-[300px] bg-white border-r border-gray-200 overflow-y-auto flex flex-col z-0 pb-6">
             <div class="px-6 py-5 font-bold text-gray-400 uppercase tracking-wider text-xs">Curriculum</div>
             <ul id="topic-list" class="flex-1 space-y-1 px-3">
@@ -117,10 +117,23 @@
         <!-- Content Area -->
         <main class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10 bg-[#F9FAFB] relative" id="main-content">
             
+            <!-- Highlight Toolbar -->
+            <div id="highlight-toolbar" class="fixed bg-white shadow-lg rounded-full px-3 py-2 flex space-x-2 hidden border border-gray-200 z-50">
+                <button class="w-6 h-6 rounded-full bg-[#fef08a] hover:scale-110 transition shadow-sm" onclick="applyHighlight('#fef08a')" title="Highlight Yellow"></button>
+                <button class="w-6 h-6 rounded-full bg-[#bbf7d0] hover:scale-110 transition shadow-sm" onclick="applyHighlight('#bbf7d0')" title="Highlight Green"></button>
+                <button class="w-6 h-6 rounded-full bg-[#bfdbfe] hover:scale-110 transition shadow-sm" onclick="applyHighlight('#bfdbfe')" title="Highlight Blue"></button>
+                <button class="w-6 h-6 rounded-full bg-[#fbcfe8] hover:scale-110 transition shadow-sm" onclick="applyHighlight('#fbcfe8')" title="Highlight Pink"></button>
+                <div class="w-px h-6 bg-gray-200 mx-1"></div>
+                <button class="w-6 h-6 rounded-full hover:bg-gray-100 text-gray-500 transition flex items-center justify-center text-xs font-bold" onclick="clearHighlight()" title="Remove Highlight">✕</button>
+            </div>
+
             <!-- Study View -->
             <div id="study-view" class="max-w-4xl mx-auto fade-in">
                 <div class="brilliant-card p-8 md:p-12 mb-8 relative overflow-hidden">
-                    <h2 id="topic-title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 tracking-tight">Topic Title</h2>
+                    <div class="flex justify-between items-start mb-8">
+                        <h2 id="topic-title" class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">Topic Title</h2>
+                        <button onclick="clearAllHighlights()" class="text-xs text-gray-400 hover:text-red-500 font-medium transition" title="Clear all highlights from this page">Reset Highlights</button>
+                    </div>
                     
                     <!-- Mnemonic Card -->
                     <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl mb-10 flex flex-col sm:flex-row gap-4 items-start">
@@ -134,7 +147,7 @@
                     </div>
 
                     <!-- Article Content -->
-                    <div id="topic-content" class="prose max-w-none text-left">
+                    <div id="topic-content" class="prose max-w-none text-left selection:bg-gray-200">
                         <!-- Content goes here -->
                     </div>
                 </div>
@@ -604,11 +617,13 @@
         let score = 0;
         let hasAnswered = false;
         let currentQuizData = [];
+        let currentSelectionRange = null;
 
         // Initialize App
         document.addEventListener('DOMContentLoaded', () => {
             renderSidebar();
             loadTopic(0);
+            setupHighlighter();
         });
 
         function renderSidebar() {
@@ -632,12 +647,22 @@
             
             document.getElementById('topic-title').innerText = topic.title;
             document.getElementById('topic-mnemonic').innerText = topic.mnemonic;
-            document.getElementById('topic-content').innerHTML = topic.content;
+            
+            // Load saved highlights if available
+            const contentArea = document.getElementById('topic-content');
+            const savedHtml = localStorage.getItem(`topic_html_${index}`);
+            
+            if (savedHtml) {
+                contentArea.innerHTML = savedHtml;
+            } else {
+                contentArea.innerHTML = topic.content;
+            }
             
             document.getElementById('btn-prev').disabled = index === 0;
             document.getElementById('btn-next').disabled = index === studyData.length - 1;
             
             renderSidebar();
+            hideToolbar();
 
             const view = document.getElementById('study-view');
             view.classList.remove('fade-in');
@@ -658,6 +683,8 @@
             const sidebar = document.getElementById('sidebar');
             const btnStudy = document.getElementById('btn-study');
             const btnQuiz = document.getElementById('btn-quiz');
+            
+            hideToolbar();
 
             if (mode === 'study') {
                 studyView.classList.remove('hidden');
@@ -684,6 +711,78 @@
             }
         }
 
+        /* Highlight feature logic */
+        function setupHighlighter() {
+            document.addEventListener('selectionchange', () => {
+                const selection = window.getSelection();
+                const toolbar = document.getElementById('highlight-toolbar');
+                const contentArea = document.getElementById('topic-content');
+                
+                if (selection.isCollapsed || !contentArea.contains(selection.anchorNode)) {
+                    // Do not hide toolbar immediately, to allow user to click colors
+                    // It will hide when clicked elsewhere or highlight applied
+                    return;
+                }
+
+                const range = selection.getRangeAt(0);
+                currentSelectionRange = range.cloneRange();
+                const rect = range.getBoundingClientRect();
+
+                let topPos = rect.top - 50;
+                // adjust if it goes off screen top
+                if (topPos < 0) topPos = rect.bottom + 10;
+                
+                toolbar.style.top = `${topPos}px`;
+                toolbar.style.left = `${rect.left + (rect.width / 2) - (toolbar.offsetWidth / 2)}px`;
+                toolbar.classList.remove('hidden');
+            });
+
+            // Hide toolbar if clicking outside
+            document.addEventListener('mousedown', (e) => {
+                const toolbar = document.getElementById('highlight-toolbar');
+                if (!toolbar.contains(e.target) && !document.getElementById('topic-content').contains(e.target)) {
+                    hideToolbar();
+                }
+            });
+        }
+
+        function hideToolbar() {
+            document.getElementById('highlight-toolbar').classList.add('hidden');
+        }
+
+        function applyHighlight(color) {
+            const contentArea = document.getElementById('topic-content');
+            contentArea.contentEditable = "true";
+            
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(currentSelectionRange);
+            
+            document.execCommand('backColor', false, color);
+            
+            contentArea.contentEditable = "false";
+            hideToolbar();
+            selection.removeAllRanges();
+            saveHighlights();
+        }
+
+        function clearHighlight() {
+            applyHighlight('transparent');
+        }
+
+        function clearAllHighlights() {
+            localStorage.removeItem(`topic_html_${currentTopicIndex}`);
+            const topic = studyData[currentTopicIndex];
+            document.getElementById('topic-content').innerHTML = topic.content;
+            hideToolbar();
+        }
+
+        function saveHighlights() {
+            const contentArea = document.getElementById('topic-content');
+            localStorage.setItem(`topic_html_${currentTopicIndex}`, contentArea.innerHTML);
+        }
+
+        /* Quiz Logic */
         function startQuiz() {
             currentQuizData = studyData[currentTopicIndex].quiz;
             currentQuizIndex = 0;
@@ -724,22 +823,19 @@
             const allButtons = document.getElementById('quiz-options').children;
 
             if (selectedIndex === q.correct) {
-                // Correct styling
                 btnElement.classList.add('bg-green-50', 'border-green-400', 'text-green-800');
                 btnElement.classList.remove('hover:bg-blue-50', 'hover:border-blue-300');
                 score++;
             } else {
-                // Incorrect styling
                 btnElement.classList.add('bg-red-50', 'border-red-300', 'text-red-700');
                 btnElement.classList.remove('hover:bg-blue-50', 'hover:border-blue-300');
                 
-                // Highlight correct answer
                 allButtons[q.correct].classList.add('bg-green-50', 'border-green-400', 'text-green-800');
                 allButtons[q.correct].classList.remove('hover:bg-blue-50', 'hover:border-blue-300');
             }
 
             for (let btn of allButtons) {
-                btn.classList.remove('quiz-option'); // Remove hover effects class
+                btn.classList.remove('quiz-option'); 
                 btn.style.cursor = 'default';
             }
 
