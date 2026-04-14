@@ -24,7 +24,7 @@
     
     
       
-        <title>Introduction to TS - Hursh Gupta</title>
+        <title>Introduction to Time Series - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-ts" class="md-skip">
+        <a href="#introduction-to-time-series" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction to TS
+              Introduction to Time Series
             
           </span>
         </div>
@@ -8518,7 +8518,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction to TS
+    Introduction to Time Series
   
 
     
@@ -10851,7 +10851,7 @@
   <span class="md-ellipsis">
     
   
-    Machine Learning in TL
+    Machine Learning in TS
   
 
     
@@ -12250,6 +12250,8 @@
           
         
       
+        
+      
     
     
     
@@ -12284,6 +12286,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
@@ -12297,6 +12304,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Music/Sheet%20music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sheet music
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -12662,88 +12697,79 @@
 
 
 <!-- Markdown content -->
-<h1 id="introduction-to-ts">Introduction to TS<a class="headerlink" href="#introduction-to-ts" title="Permanent link">¶</a></h1>
+<h1 id="introduction-to-time-series">Introduction to Time Series<a class="headerlink" href="#introduction-to-time-series" title="Permanent link">¶</a></h1>
 <ul>
-<li>Difference between<ul>
-<li><span class="arithmatex">\(X_{1},X_{2}\dots,X_{100}\)</span> dice roll in 100 rounds (<abbr title="Independent and Identical">IID</abbr> random)</li>
-<li><span class="arithmatex">\(X_{1},X_{2}\dots,X_{100}\)</span> closing prices of stock for 100 consecutive days (autocorrelated random)</li>
+<li><strong>Difference between:</strong><ul>
+<li><span class="arithmatex">\(X_{1}, X_{2}, \dots, X_{100}\)</span> representing a dice roll in 100 rounds (<abbr title="Independent and Identical">IID</abbr><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> random).</li>
+<li><span class="arithmatex">\(X_{1}, X_{2}, \dots, X_{100}\)</span> representing closing prices of a stock for 100 consecutive days (autocorrelated random).</li>
 </ul>
 </li>
-<li>What exactly is time series?<ul>
-<li>Classical inference (<abbr title="Independent and Identical">IID</abbr><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>)</li>
-<li>Time Series (Ordered by time, chronological)</li>
+<li><strong>What exactly is a time series?</strong><ul>
+<li>Classical inference deals with <abbr title="Independent and Identical">IID</abbr> observations.</li>
+<li>A time series is ordered by time and is chronological.</li>
 <li>Thus, <em>time series data is not independent!</em></li>
 </ul>
 </li>
-<li>Data Types<ul>
-<li>Cross-sectional data<ul>
-<li>Different individuals</li>
-<li>at a <strong>SINGLE POINT OF TIME</strong></li>
-<li>Eg.<ul>
-<li>Max humidity at 20 diff locations</li>
-<li>20 stocks ka closing price on a particular day</li>
-<li>Heights of students, on a particular day</li>
+<li><strong>Data Types</strong><ul>
+<li><strong>Cross-sectional data</strong><ul>
+<li>This involves different individuals at a <strong>SINGLE POINT OF TIME</strong>.</li>
+<li>Examples include:<ul>
+<li>Max humidity at 20 diff locations.</li>
+<li>20 stocks ka closing price on a particular day.</li>
+<li>Heights of students, on a particular day.</li>
 </ul>
 </li>
-<li><em>Several variables at a single point of time</em></li>
+<li><em>This involves several variables at a single point of time.</em></li>
 </ul>
 </li>
-<li>Time series data<ul>
-<li>For a particular individual/entity (fixed)</li>
-<li>over <strong>DIFFERENT POINTS OF TIME</strong></li>
-<li>Eg. (transition the time point over a month)<ul>
-<li>Max HUMIDITY level for a month</li>
-<li>Closing stock price of a (single) STOCK over 6 months</li>
+<li><strong>Time series data</strong><ul>
+<li>This involves a particular individual/entity (fixed) over <strong>DIFFERENT POINTS OF TIME</strong>.</li>
+<li>Examples include (transitioning the time point over a month):<ul>
+<li>Max HUMIDITY level for a month.</li>
+<li>Closing stock price of a (single) STOCK over 6 months.</li>
 <li>Quarterly student enrolment in a COLLEGE over 5 years.</li>
 </ul>
 </li>
-<li><em>Same variable over a period of time</em></li>
+<li><em>This involves the same variable over a period of time.</em></li>
 </ul>
 </li>
-<li>Panel/Longitudinal<ul>
-<li>Observations on different cross-sections over a time</li>
-<li>E.g.<ul>
-<li>Annual cancer mortality rates of different Indian states during 2015-2023<ul>
-<li>Delhi, Jharkhand, Maharashtra…</li>
-<li>for each of these 2015-2023</li>
-</ul>
-</li>
-<li>Yearly sales of 10 companies over 10 years<ul>
-<li>Multiple companies</li>
-<li>Multiple years</li>
+<li><strong>Panel/Longitudinal data</strong><ul>
+<li>This involves observations on different cross-sections over a time.</li>
+<li>Examples include:<ul>
+<li>Annual cancer mortality rates of different Indian states during 2015:2023 (e.g., Delhi, Jharkhand, Maharashtra…) for each of these years.</li>
+<li>Yearly sales of 10 companies over 10 years (multiple companies, multiple years).</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Steps in Time Series Analysis<ol>
-<li>Plotting data</li>
-<li>Study past behavior</li>
-<li>Identify underlying patterns and trends<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
-<li>Use past data for forecasting</li>
+<li><strong>Steps in Time Series Analysis</strong><ol>
+<li>Plotting the data.</li>
+<li>Studying past behavior.</li>
+<li>Identifying underlying patterns and trends<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</li>
+<li>Using past data for forecasting.</li>
 </ol>
 </li>
-<li>Application Areas<ul>
-<li>Retail stores → sales</li>
-<li>Energy company → reserves, production, demand, price</li>
-<li>Education → enrollment</li>
-<li>Intl. Fin Orgs (World Bank, IMF) → Inflation, econ activity</li>
-<li>Transportation → Future travel</li>
-<li>Banks → New home purchases</li>
+<li><strong>Application Areas</strong><ul>
+<li>Retail stores monitor sales.</li>
+<li>Energy companies monitor reserves, production, demand, and price.</li>
+<li>Education sectors track enrollment.</li>
+<li>International Financial Organizations (World Bank, IMF) track inflation and economic activity.</li>
+<li>Transportation departments predict future travel.</li>
+<li>Banks track new home purchases.</li>
 </ul>
 </li>
 </ul>
+<hr>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p><abbr title="Independent and Identical">IID</abbr> means, Identical observations (random variable) come from some distribution and Independent observations (doesn't depend on observations)&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p><abbr title="Independent and Identical">IID</abbr> means Identical observations (random variable) come from some distribution and Independent observations (doesn't depend on observations).&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>Trend = upward or downward movement of an entity&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p>Trend = upward or downward movement of an entity.&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 </ol>
 </div>
