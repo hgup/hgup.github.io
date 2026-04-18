@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10342,10 +10342,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#revisiting-non-parametric-estimation" class="md-nav__link">
+  <a href="#revisiting-non-parametric-estimation-smoothing-the-periodogram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Revisiting Non-parametric Estimation
+        Revisiting Non-parametric Estimation: Smoothing the Periodogram
       
     </span>
   </a>
@@ -10364,10 +10364,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practical-consideration-in-estimation" class="md-nav__link">
+  <a href="#practical-considerations-in-estimation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practical Consideration in Estimation
+        Practical Considerations in Estimation
       
     </span>
   </a>
@@ -10375,21 +10375,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practical-application-of-estimation" class="md-nav__link">
+  <a href="#numerical-example-identifying-dominant-frequencies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practical Application of Estimation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
+        Numerical Example: Identifying Dominant Frequencies
       
     </span>
   </a>
@@ -10401,17 +10390,6 @@
     <span class="md-ellipsis">
       
         Cross Spectrum
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practical-examples-of-cross-spectrum" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Practical Examples of Cross Spectrum
       
     </span>
   </a>
@@ -10993,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12812,189 +12790,118 @@
 
 <!-- Markdown content -->
 <h1 id="numerical-examples-further">Numerical Examples &amp; Further<a class="headerlink" href="#numerical-examples-further" title="Permanent link">¶</a></h1>
-<h3 id="revisiting-non-parametric-estimation">Revisiting Non-parametric Estimation<a class="headerlink" href="#revisiting-non-parametric-estimation" title="Permanent link">¶</a></h3>
-<ul>
-<li>Smoothing the Periodogram<ul>
-<li>To reduce variance and obtain a consistent estimator</li>
-<li>Average the periodogram by averaging across frequencies</li>
-</ul>
-</li>
-<li>Kernel Smoothing<ul>
-<li>Apply weighted moving average using (kernel function <span class="arithmatex">\(W\)</span>)</li>
-<li><span class="arithmatex">\(\hat{S}(\omega) = \sum_{k=-K}^{K} W(k)I(\omega+k \Delta \omega)\)</span>, its a moving average before and after <span class="arithmatex">\(\omega\)</span></li>
-<li>Common Kernels<ul>
-<li>Bartlett kernel: Triangular weights</li>
-<li>Daniell kernel: Simple moving average</li>
-<li>Parzen kernel: Smoother weights for gradual tapering</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Averaging over bands<ul>
-<li>Divide frequency range into bands (baskets) and average periodogram within each band</li>
-</ul>
-</li>
-<li>Welch's method<ul>
-<li>Divide <abbr title="Time Series">TS</abbr> into <em>overlapping</em> segments</li>
-<li>Apply a <strong>windowing function</strong> (e.g. Hamming, Hann) to each segment to reduce <strong>edge effects</strong></li>
-<li>Compute periodogram for each segment.</li>
-<li>Average them <span class="arithmatex">\(\hat{S}(\omega) = \dfrac{1}{N}\sum_{k=1}^{N}I_{k}(\omega)\)</span></li>
-</ul>
-</li>
-</ul>
+<h3 id="revisiting-non-parametric-estimation-smoothing-the-periodogram">Revisiting Non-parametric Estimation: Smoothing the Periodogram<a class="headerlink" href="#revisiting-non-parametric-estimation-smoothing-the-periodogram" title="Permanent link">¶</a></h3>
+<p>As previously noted, the raw periodogram is an inconsistent estimator because its variance does not decrease as the sample size <span class="arithmatex">\(T\)</span> increases. To obtain a <strong>consistent estimator</strong>, we must "smooth" the periodogram by averaging across frequencies.</p>
+<h4 id="1-kernel-smoothing">1. Kernel Smoothing<a class="headerlink" href="#1-kernel-smoothing" title="Permanent link">¶</a></h4>
+<p>This method applies a weighted moving average to the periodogram using a <strong>kernel function <span class="arithmatex">\(W\)</span></strong>.<br>
+$<span class="arithmatex">\(\hat{S}(\omega) = \sum_{k=-K}^{K} W(k)I(\omega+k \Delta \omega)\)</span>$<br>
+Essentially, it is a moving average that considers frequencies before and after <span class="arithmatex">\(\omega\)</span>.<br>
+* <strong>Common Kernels</strong>:<br>
+    * <strong>Bartlett kernel</strong>: Uses triangular weights.<br>
+    * <strong>Daniell kernel</strong>: A simple, unweighted moving average.<br>
+    * <strong>Parzen kernel</strong>: Uses smoother weights for a more gradual tapering at the edges.</p>
+<h4 id="2-averaging-over-bands">2. Averaging over Bands<a class="headerlink" href="#2-averaging-over-bands" title="Permanent link">¶</a></h4>
+<p>In this approach, we divide the entire frequency range into specific "bands" (or baskets) and average all periodogram values within each band.</p>
+<h4 id="3-welchs-method">3. Welch's Method<a class="headerlink" href="#3-welchs-method" title="Permanent link">¶</a></h4>
+<p>Welch's method improves the estimate by following these steps:<br>
+1.  Divide the Time Series (<abbr title="Time Series">TS</abbr>) into <strong>overlapping</strong> segments.<br>
+2.  Apply a <strong>windowing function</strong> (e.g., Hamming or Hann) to each segment to reduce <strong>edge effects</strong>.<br>
+3.  Compute the periodogram for each segment individually.<br>
+4.  Average the segment periodograms: <span class="arithmatex">\(\hat{S}(\omega) = \dfrac{1}{N}\sum_{k=1}^{N}I_{k}(\omega)\)</span>.</p>
+<hr>
 <h3 id="comparison-of-estimation-techniques">Comparison of Estimation Techniques<a class="headerlink" href="#comparison-of-estimation-techniques" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Method</th>
-<th>Advantages</th>
-<th>Disadvantages</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Advantages</th>
+<th style="text-align: left;">Disadvantages</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Parametric</td>
-<td>Smooth, interpretable. Efficient for stationary models</td>
-<td>Requires correct specification</td>
+<td style="text-align: left;"><strong>Parametric</strong></td>
+<td style="text-align: left;">Smooth, interpretable; efficient for stationary models.</td>
+<td style="text-align: left;">Requires <strong>correct</strong> model specification.</td>
 </tr>
 <tr>
-<td>Periodogram</td>
-<td>Simple, high resolution</td>
-<td>Noisy, inconsistent</td>
+<td style="text-align: left;"><strong>Periodogram</strong></td>
+<td style="text-align: left;">Simple to compute; provides high frequency resolution.</td>
+<td style="text-align: left;">Noisy and inconsistent (variance stays high).</td>
 </tr>
 <tr>
-<td>Smoothed Periodogram</td>
-<td>Reduces noise, improves consistency</td>
-<td>May lose frequency resolution</td>
+<td style="text-align: left;"><strong>Smoothed Periodogram</strong></td>
+<td style="text-align: left;">Reduces noise; improves statistical consistency.</td>
+<td style="text-align: left;">May lose fine frequency resolution (blurring).</td>
 </tr>
 <tr>
-<td>Welch's Method</td>
-<td>Robust to noise, reduces variance</td>
-<td>Reduced frequency resolution due to <strong>segmentation</strong></td>
+<td style="text-align: left;"><strong>Welch's Method</strong></td>
+<td style="text-align: left;">Robust to noise; significantly reduces variance.</td>
+<td style="text-align: left;">Reduced frequency resolution due to <strong>segmentation</strong>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="practical-consideration-in-estimation">Practical Consideration in Estimation<a class="headerlink" href="#practical-consideration-in-estimation" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="practical-considerations-in-estimation">Practical Considerations in Estimation<a class="headerlink" href="#practical-considerations-in-estimation" title="Permanent link">¶</a></h3>
 <ul>
-<li>Choice of windowing/kernel<ul>
-<li>Good window = reduce spectral leakage, &amp; maintain frequency resolution</li>
-<li>Popular choices<ul>
-<li>Rectangular: High res, but leakage</li>
-<li>Hamming/Hann: Reduce leakage with moderate resolution loss</li>
+<li><strong>Choice of Windowing/Kernel</strong>: A "good" window reduces <strong>spectral leakage</strong> while maintaining as much frequency resolution as possible.<ul>
+<li><em>Rectangular</em>: High resolution, but suffers from significant leakage.</li>
+<li><em>Hamming/Hann</em>: Greatly reduces leakage with only a moderate loss in resolution.</li>
 </ul>
 </li>
+<li><strong>Choice of Bandwidth</strong>: This is the ultimate trade-off between <strong>variance and resolution</strong>.<ul>
+<li><em>Wide Bandwidth</em>: Lower variance (more stable) but more smoothing (less detail).</li>
+<li><em>Narrow Bandwidth</em>: Higher resolution but higher variance (noisier).</li>
 </ul>
 </li>
-<li>Choice of bandwidth<ul>
-<li>Smoothing bandwidth (trade-off between variance and resolution)</li>
-<li>should not be very wide or narrow</li>
-<li>Wide → less variance, more smoothing</li>
-<li>Narrow → more variance, higher resolution</li>
+<li><strong>Handling Non-stationarity</strong>: If a series is non-stationary, use time-frequency methods like:<ul>
+<li><strong>Wavelet Transform</strong></li>
+<li><strong>Short-Time Fourier Transform (<abbr title="Short-Time Fourier Transform">STFT</abbr>)</strong></li>
 </ul>
 </li>
-<li>Handling non-stationary<ul>
-<li>For such situations, use time -frequency methods<ul>
-<li>Wavelet Transform</li>
-<li>Short-Time Fourier Transform (STFT)</li>
+<li><strong>Sampling Rate</strong>: The sampling frequency <span class="arithmatex">\(f_{s}\)</span> must satisfy the <strong>Nyquist criterion</strong>: <span class="arithmatex">\(f_{s} &gt; 2 f_{\max}\)</span>. If this is met, we are "good to go" and can avoid aliasing.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>Sampling Rage<ul>
-<li>Sampling frequency <span class="arithmatex">\(f_{s}\)</span> satisfies Nyquist criterion:<ul>
-<li>If <span class="arithmatex">\(f_{s} &gt; 2 f_{\max}\)</span> then we are good to go (maximum frequency <span class="arithmatex">\(f_{\max}\)</span>)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="practical-application-of-estimation">Practical Application of Estimation<a class="headerlink" href="#practical-application-of-estimation" title="Permanent link">¶</a></h3>
-<ul>
-<li>Climate Science: study seasonal and annual cycles</li>
-<li>Finance: hidden cycles in stock returns</li>
-<li>Speech processing: analyze voice signals</li>
-<li>Vibration analysis: mechanical system to identify faults</li>
-</ul>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Y_{t} = \sin(2\pi f_{1}t) + 0.5 \sin(2\pi f_{2}t) + \epsilon_{t}
-\]</div>
-<ul>
-<li>Where <span class="arithmatex">\(f_{1}=0.1 Hz\)</span> (low frequency)</li>
-<li><span class="arithmatex">\(f_{2} =0.3 Hz\)</span> (high frequency)</li>
-<li><span class="arithmatex">\(\epsilon_{t}\)</span> is random noise with 0 mean</li>
-</ul>
+<hr>
+<h3 id="numerical-example-identifying-dominant-frequencies">Numerical Example: Identifying Dominant Frequencies<a class="headerlink" href="#numerical-example-identifying-dominant-frequencies" title="Permanent link">¶</a></h3>
+<p>Consider the following generated time series:<br>
+$<span class="arithmatex">\(Y_{t} = \sin(2\pi f_{1}t) + 0.5 \sin(2\pi f_{2}t) + \epsilon_{t}\)</span>$<br>
+* <span class="arithmatex">\(f_{1} = 0.1 \text{ Hz}\)</span> (Low frequency)<br>
+* <span class="arithmatex">\(f_{2} = 0.3 \text{ Hz}\)</span> (High frequency)<br>
+* <span class="arithmatex">\(\epsilon_{t}\)</span> = Random noise with 0 mean.</p>
 <div class="admonition todo">
 <p class="admonition-title">Task</p>
-<ul>
-<li>Compute Periodogram and then,</li>
-<li>Identify the dominant frequencies <span class="arithmatex">\(f_{1}, f_{2}\)</span></li>
-</ul>
+<p>Compute the Periodogram and identify the dominant frequencies <span class="arithmatex">\(f_{1}\)</span> and <span class="arithmatex">\(f_{2}\)</span>.</p>
 </div>
-<h4 id="steps-in-computation">Steps in computation<a class="headerlink" href="#steps-in-computation" title="Permanent link">¶</a></h4>
-<p>Generate the time series… let sampling rate be <span class="arithmatex">\(\Delta t = 1\)</span> and total time series length <span class="arithmatex">\(T = 20\)</span>. <span class="arithmatex">\(t = 0,1,2,\dots,19\)</span></p>
-<p>The <abbr title="Time Series">TS</abbr> is,</p>
-<div class="arithmatex">\[
-Y_{t} = \sin(2\pi \times 0.1)t + 0.5 \sin(2\pi \times 0.3t) + \epsilon_{t}
-\]</div>
-<ul>
-<li>Compute the <abbr title="Discrete Fourier Transforms">DFTs</abbr></li>
-</ul>
-<div class="arithmatex">\[
-Y(\omega_{k}) = \sum_{t=0}^{T-1} Y_{t}e^{ -i\omega_{k}t }, \quad \omega_{k} = \dfrac{2\pi k}{T},\ k=0,1,\dots,T-1
-\]</div>
-<ul>
-<li>The power at each frequency is</li>
-</ul>
-<div class="arithmatex">\[
-I(\omega_{k}) = \dfrac{1}{T}|Y(\omega_{k})|^{2}
-\]</div>
-<ul>
-<li>Frequencies of interest.<ul>
-<li>For <span class="arithmatex">\(T=20\)</span> are <span class="arithmatex">\(f_{k} = \dfrac{k}{T}\)</span></li>
-<li>Corresponding to <span class="arithmatex">\(f_{k} =[0,0.05,0.1,0.15,\dots,0.5] Hz\)</span></li>
-</ul>
-</li>
-<li>Compute the  periodogram <span class="arithmatex">\(I(f_{k})\)</span> for each <span class="arithmatex">\(f_{k}\)</span></li>
-</ul>
-<h4 id="manual-computation">Manual Computation<a class="headerlink" href="#manual-computation" title="Permanent link">¶</a></h4>
-<ul>
-<li>Computing periodogram for <span class="arithmatex">\(f_{1}=0.1 Hz\)</span> and <span class="arithmatex">\(f_{2}=0.3Hz\)</span></li>
-<li>At <span class="arithmatex">\(f_{1}\)</span>, <span class="arithmatex">\(Y(0.1) = \sum_{t=0}^{19}Y_{t}e^{ -i\times 2\pi \times 0.1t }\)</span></li>
-<li>At <span class="arithmatex">\(f_{2}\)</span>, <span class="arithmatex">\(Y(0.3) = \sum_{t=0}^{19}Y_{t}e^{ -i\times 2\pi \times 0.3t }\)</span></li>
-<li>Power spectrum: <span class="arithmatex">\(I(0.1) = \dfrac{1}{20}|Y(0.1)|^{2}\)</span>, <span class="arithmatex">\(I(0.3) = \dfrac{1}{20}|Y(0.3)|^{2}\)</span></li>
-</ul>
+<h4 id="steps-in-computation">Steps in Computation<a class="headerlink" href="#steps-in-computation" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Generate Series</strong>: Let <span class="arithmatex">\(\Delta t = 1\)</span> and <span class="arithmatex">\(T = 20\)</span>. Thus, <span class="arithmatex">\(t = 0, 1, \dots, 19\)</span>.</li>
+<li><strong>Compute <abbr title="Discrete Fourier Transforms">DFTs</abbr></strong>: <br>
+    $<span class="arithmatex">\(Y(\omega_{k}) = \sum_{t=0}^{T-1} Y_{t}e^{ -i\omega_{k}t }, \quad \omega_{k} = \dfrac{2\pi k}{T}\)</span>$</li>
+<li><strong>Compute Power</strong>: <br>
+    $<span class="arithmatex">\(I(\omega_{k}) = \dfrac{1}{T}|Y(\omega_{k})|^{2}\)</span>$</li>
+<li><strong>Frequency Analysis</strong>: For <span class="arithmatex">\(T=20\)</span>, the frequencies of interest are <span class="arithmatex">\(f_{k} = \dfrac{k}{T}\)</span>, which gives the range <span class="arithmatex">\([0, 0.05, 0.1, \dots, 0.5] \text{ Hz}\)</span>.</li>
+</ol>
+<p><strong>Manual Computation (Conceptual):</strong><br>
+At <span class="arithmatex">\(f_{1} = 0.1 \text{ Hz}\)</span> and <span class="arithmatex">\(f_{2} = 0.3 \text{ Hz}\)</span>, the periodogram <span class="arithmatex">\(I(f)\)</span> will show distinct peaks. These peaks confirm that <span class="arithmatex">\(0.1\)</span> and <span class="arithmatex">\(0.3\)</span> are the dominant periodic components of the series.</p>
+<hr>
 <h3 id="cross-spectrum">Cross Spectrum<a class="headerlink" href="#cross-spectrum" title="Permanent link">¶</a></h3>
+<p>When we have two stationary time series with mean 0, the <strong>Cross Spectrum</strong> allows us to ask:<br>
+1.  Are the periodicities of the two series related?<br>
+2.  If they are, what is the <strong>phase relationship</strong> (lead/lag) between them?</p>
+<p>Let <span class="arithmatex">\(\gamma_{k}^{xy} = Cov(x_{t}, y_{t-k})\)</span> be the cross covariance. The cross spectrum is:<br>
+$<span class="arithmatex">\(f_{xy}(\omega) = \sum_{k=-\infty}^{\infty} e^{ -ik\omega } \gamma_{k}^{xy}\)</span>$</p>
+<p><strong>Spectrum of a Sum (<span class="arithmatex">\(z_{t} = x_{t} + y_{t}\)</span>):</strong><br>
+The spectrum of the combined series is given by:<br>
+$<span class="arithmatex">\(f_{z}(\omega) = f_{x}(\omega) + f_{xy}(\omega) + f_{yx}(\omega) + f_{y}(\omega)\)</span>$<br>
+If <span class="arithmatex">\(x_{t}\)</span> and <span class="arithmatex">\(y_{t}\)</span> are <strong>uncorrelated</strong>, this simplifies to:<br>
+$<span class="arithmatex">\(f_{z}(\omega) = f_{x}(\omega) + f_{y}(\omega)\)</span>$</p>
+<h4 id="practical-examples">Practical Examples<a class="headerlink" href="#practical-examples" title="Permanent link">¶</a></h4>
 <ul>
-<li>Let there be two stationary <abbr title="Time Series">TS</abbr> with mean 0</li>
-<li>Ask two questions<ul>
-<li>Are periodicities related to each other?</li>
-<li>If so, what's the phase relationship between them?</li>
+<li><strong>Macroeconomics</strong>: Identifying leading and lagging relationships between GDP growth and stock market returns.</li>
+<li><strong>Finance</strong>: Using cross-spectral analysis for <strong>portfolio diversification</strong>.</li>
+<li><strong>Commodities</strong>: Understanding relationships between Forex and commodity prices for better <strong>hedging strategies</strong>.</li>
 </ul>
-</li>
-</ul>
-<p>Let <span class="arithmatex">\(\gamma_{k}^{xy} = Cov(x_{t},y_{t-k})\)</span> be the cross covariance</p>
-<p>$$<br>
-f_{xy}(\omega) = \sum_{k=-\infty}^{\infty} e^{ -ik\omega } \gamma_{k}^{xy}<br>
-$$<br>
-- Compute the spectrum of a sum, <span class="arithmatex">\(z_{t} = z_{t} + y_{t}\)</span></p>
-<div class="arithmatex">\[
-f_{z}(\omega) = \sum_{k=-\infty}^{\infty} e^{ -ik\omega }E(z_{t}z_{t-k})
-\]</div>
-<p>Thus,</p>
-<div class="arithmatex">\[
-f_{z}(\omega) = f_{x}(\omega) + f_{xy}(\omega) + f_{yx}(\omega) + f_{y}(\omega)
-\]</div>
-<p>and if <span class="arithmatex">\(x_{t}\)</span> and <span class="arithmatex">\(y_{t}\)</span> are uncorrelated</p>
-<div class="arithmatex">\[
-f_{z}(\omega) = f_{x}(\omega) + f_{y}(\omega)
-\]</div>
-<h3 id="practical-examples-of-cross-spectrum">Practical Examples of Cross Spectrum<a class="headerlink" href="#practical-examples-of-cross-spectrum" title="Permanent link">¶</a></h3>
-<ul>
-<li>Identifying leading and lagging relationships between GDP growth and stock market returns</li>
-<li>Portfolio diversification</li>
-<li>Forex and commodities (hedging strategies)</li>
-</ul>
+<hr>
 
 
 

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9678,10 +9678,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#hurst-exponent-an-index-of-long-range-dependence" class="md-nav__link">
+  <a href="#1-mathematical-construction-rescaled-range-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hurst Exponent - An Index of Long-Range Dependence
+        1. Mathematical Construction (Rescaled Range Analysis)
       
     </span>
   </a>
@@ -9689,10 +9689,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#construction" class="md-nav__link">
+  <a href="#2-estimation-of-h" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Construction
+        2. Estimation of \(H\)
       
     </span>
   </a>
@@ -9700,10 +9700,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#application-of-h-exponent" class="md-nav__link">
+  <a href="#3-properties-and-interpretation-of-h" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Application of \(H\) exponent
+        3. Properties and Interpretation of \(H\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-applications-in-finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Applications in Finance
       
     </span>
   </a>
@@ -9861,7 +9872,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10949,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12768,75 +12779,67 @@
 
 <!-- Markdown content -->
 <h1 id="hurst-exponent">Hurst Exponent<a class="headerlink" href="#hurst-exponent" title="Permanent link">¶</a></h1>
+<p>The Hurst Exponent (<span class="arithmatex">\(H\)</span>) is a powerful index used to measure the <strong>long-term memory</strong> of a time series. Originally developed in hydrology to determine the optimum dam size for the Nile River, it is now extensively used in finance, physics, and environmental science to quantify the predictability and nature of price or physical movements.</p>
+<h3 id="1-mathematical-construction-rescaled-range-analysis">1. Mathematical Construction (Rescaled Range Analysis)<a class="headerlink" href="#1-mathematical-construction-rescaled-range-analysis" title="Permanent link">¶</a></h3>
+<p>To estimate <span class="arithmatex">\(H\)</span>, we use the <strong>Rescaled Range (<abbr title="Rescaled Range">R/S</abbr>) Analysis</strong>. Given a realization <span class="arithmatex">\(y_{t}\)</span> for <span class="arithmatex">\(t=1, 2, \dots, n\)</span> with mean <span class="arithmatex">\(\bar{y}_{n}\)</span> and variance <span class="arithmatex">\(S_{n}^{2}\)</span>:</p>
 <ul>
-<li>Fractionally Integrated <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(d\)</span> can take fractional values</li>
+<li><strong>Mean Adjusted Partial Sums (<span class="arithmatex">\(Z_{t}\)</span>):</strong><br>
+    $<span class="arithmatex">\(Z_{t} = \sum_{j=1}^t (y_{j} - \bar{y}_{n}), \quad t=1, 2, \dots, n\)</span>$</li>
+<li><strong>Adjusted Range (<span class="arithmatex">\(R_{n}\)</span>):</strong><br>
+    $<span class="arithmatex">\(R_{n} = \max(Z_{1}, \dots, Z_{n}) - \min(Z_{1}, \dots, Z_{n})\)</span>$</li>
+<li><strong>Rescaled Adjusted Range:</strong> Defined as <span class="arithmatex">\(R_{n}/S_{n}\)</span>.</li>
 </ul>
-<h3 id="hurst-exponent-an-index-of-long-range-dependence">Hurst Exponent - An Index of Long-Range Dependence<a class="headerlink" href="#hurst-exponent-an-index-of-long-range-dependence" title="Permanent link">¶</a></h3>
+<h3 id="2-estimation-of-h">2. Estimation of <span class="arithmatex">\(H\)</span><a class="headerlink" href="#2-estimation-of-h" title="Permanent link">¶</a></h3>
+<p>According to Hurst's law, the expected value of the rescaled range scales with time (<span class="arithmatex">\(n\)</span>) following a power law:<br>
+$<span class="arithmatex">\(E\left(\dfrac{R_{n}}{S_{n}}\right) \propto Cn^H \quad \text{as } n \to \infty\)</span>$</p>
+<p>By taking the logarithm of both sides, we can estimate <span class="arithmatex">\(H\)</span> using a simple linear regression:<br>
+$<span class="arithmatex">\(\log\left(\dfrac{R_{n}}{S_{n}}\right) = \alpha + H \times \log(n)\)</span>$</p>
+<hr>
+<h3 id="3-properties-and-interpretation-of-h">3. Properties and Interpretation of <span class="arithmatex">\(H\)</span><a class="headerlink" href="#3-properties-and-interpretation-of-h" title="Permanent link">¶</a></h3>
+<p>The value of the Hurst exponent reveals the "flavor" of the time series memory:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Value of <span class="arithmatex">\(H\)</span></th>
+<th style="text-align: left;">Interpretation</th>
+<th style="text-align: left;">Market/Process Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(H = 0.5\)</span></strong></td>
+<td style="text-align: left;"><strong>Random Walk</strong></td>
+<td style="text-align: left;">White noise; i.i.d. observations; no memory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(0.5 &lt; H &lt; 1\)</span></strong></td>
+<td style="text-align: left;"><strong>Persistence</strong></td>
+<td style="text-align: left;">Long-memory; trending; momentum exists.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(0 &lt; H &lt; 0.5\)</span></strong></td>
+<td style="text-align: left;"><strong>Anti-persistence</strong></td>
+<td style="text-align: left;">Mean-reverting; "pink noise"; frequent reversals.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(H \geq 1\)</span></strong></td>
+<td style="text-align: left;"><strong>Non-stationary</strong></td>
+<td style="text-align: left;">Infinite variance; process does not settle.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="4-applications-in-finance">4. Applications in Finance<a class="headerlink" href="#4-applications-in-finance" title="Permanent link">¶</a></h3>
+<p>Investors and analysts use the Hurst exponent to gain insights into the nature of price movements:</p>
 <ul>
-<li><span class="arithmatex">\(H\)</span> can be used as a measure of long-term memory of TS.</li>
-<li>Developed in hydrology → optimum dam size (river Nile)</li>
-<li>Used in finance, hydrology and physics (behavior of physics over time)</li>
+<li><strong>Persistent Trends (<span class="arithmatex">\(H &gt; 0.5\)</span>):</strong><br>
+    If <span class="arithmatex">\(H = 0.7\)</span>, the market is in a "trending" state. Price movements are likely to persist in their current direction. This information is critical for <strong>trend-following strategies</strong>.</li>
+<li><strong>Random Walk (<span class="arithmatex">\(H \approx 0.5\)</span>):</strong><br>
+    The market has no observable trend. Future movements are independent of past ones, making it equally likely for the price to increase or decrease.</li>
+<li><strong>Mean Reversion (<span class="arithmatex">\(H &lt; 0.5\)</span>):</strong><br>
+    If <span class="arithmatex">\(H = 0.3\)</span>, the price shows a tendency to reverse. An increase is likely followed by a decrease. This is often used to identify <strong>overbought or oversold</strong> conditions for mean-reversion trading.</li>
 </ul>
-<h3 id="construction">Construction<a class="headerlink" href="#construction" title="Permanent link">¶</a></h3>
-<p>We need some ingredients…</p>
-<p><span class="arithmatex">\(y_{t}\)</span> for <span class="arithmatex">\(t=1,2,\dots,n\)</span> be a realization with mean <span class="arithmatex">\(\bar{y}_{n}\)</span> and variance <span class="arithmatex">\(S_{n}^{2}\)</span></p>
-<ul>
-<li>Mean adjusted partial sums defined as,</li>
-</ul>
-<div class="arithmatex">\[
-Z_{t} = \sum_{j=1}^t y_{j} - t\bar{y}_{t}, \quad t=1,2,\dots,n
-\]</div>
-<p>Example, <span class="arithmatex">\(Z_{1} = y_{1} - \bar{y}_{1}\)</span>, <span class="arithmatex">\(Z_{2} = y_{1} + y_{2} - \bar{y}_{t}  - 2\bar{y}_{t}\)</span> etc.</p>
-<ul>
-<li>Adjusted range is defined as</li>
-</ul>
-<div class="arithmatex">\[
-R_{n} = \max\{ Z_{t} \} - \min \{ Z_{t} \}
-\]</div>
-<ul>
-<li>Rescaled adjusted range = <span class="arithmatex">\(\dfrac{R_{n}}{S_{n}}\)</span></li>
-<li><span class="arithmatex">\(E(\dfrac{R_{n}}{S_{n}}) \propto Cn^H\)</span> as <span class="arithmatex">\(n\to \infty\)</span></li>
-<li>If the realization is i.i.d., <span class="arithmatex">\(H = 0.5\)</span></li>
-</ul>
-<p>For large <span class="arithmatex">\(n\)</span>,</p>
-<div class="arithmatex">\[
-\log\left(\dfrac{R_{n}}{S_{n}}\right) = \alpha + H \times \log(n)
-\]</div>
-<ul>
-<li>Can be viewed as <span class="arithmatex">\(\log\left(\dfrac{R_{n}}{S_{n}}\right)\)</span> regressed on <span class="arithmatex">\(\log(n)\)</span></li>
-<li>This is how we can estimate, <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(H\)</span></li>
-</ul>
-<h4 id="properties-of-h">Properties of <span class="arithmatex">\(H\)</span><a class="headerlink" href="#properties-of-h" title="Permanent link">¶</a></h4>
-<ul>
-<li><span class="arithmatex">\(H \in (0.5, 1):\)</span> Long memory structure</li>
-<li><span class="arithmatex">\(H \in [1,\infty):\)</span>  infinite variance, non-stationary</li>
-<li><span class="arithmatex">\(H \in (0,0.5):\)</span> Anti-persistence structure exists</li>
-<li><span class="arithmatex">\(H = 0.5:\)</span> White noise structure exists (i.i.d.)</li>
-</ul>
-<h3 id="application-of-h-exponent">Application of <span class="arithmatex">\(H\)</span> exponent<a class="headerlink" href="#application-of-h-exponent" title="Permanent link">¶</a></h3>
-<ul>
-<li>Calculate Hurst exponent, to gain insights into the nature of price movements.</li>
-</ul>
-<div class="arithmatex">\[
-H \gt 0.5\ (H=0.7)
-\]</div>
-<ul>
-<li>Stock price shows a persistent trend, trending market or momentum</li>
-<li>Investors can use this persistence <em>ka</em> information to apply a trend-following strategies <span class="arithmatex">\(\implies\)</span> price movements will persist</li>
-</ul>
-<div class="arithmatex">\[
-H \approx 0.5\ (e.g., H = 0.5)
-\]</div>
-<ul>
-<li>Stock price follows <strong>random walk</strong> <span class="arithmatex">\(\implies\)</span>  no observable trend. Equally likely to increase or decrease</li>
-</ul>
-<div class="arithmatex">\[
-H \lt 0.5\ (e.\mathbf{g} H=0.3)
-\]</div>
-<ul>
-<li>Stock price shows mean-reverting behavior.</li>
-<li>After an increase, more likely to decrease and vice versa. (Stock overbought and oversold)</li>
-</ul>
+<hr>
 
 
 

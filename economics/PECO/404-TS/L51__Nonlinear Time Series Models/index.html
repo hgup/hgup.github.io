@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10704,10 +10704,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-of-nonlinear-processes" class="md-nav__link">
+  <a href="#examples-of-nonlinear-processes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example of Nonlinear Processes
+        Examples of Nonlinear Processes
       
     </span>
   </a>
@@ -10719,6 +10719,17 @@
     <span class="md-ellipsis">
       
         Threshold Models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-regime-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Regime Transitions
       
     </span>
   </a>
@@ -10960,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12780,122 +12791,90 @@
 <!-- Markdown content -->
 <h1 id="nonlinear-ts-models">Nonlinear TS Models<a class="headerlink" href="#nonlinear-ts-models" title="Permanent link">¶</a></h1>
 <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h3>
-<ul>
-<li>Extension of traditional TS, account for systems where relationships cannot be adequately captured by linear models</li>
-</ul>
+<p>Nonlinear Time Series (TS) models are extensions of traditional linear models designed to account for systems where relationships cannot be adequately captured by simple additive models. These are essential for modeling real-world data that exhibit structural shifts or complex behaviors.</p>
+<hr>
 <h3 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>Motivation: Why should be change to linear to nonlinear processes?</p>
+<p>Motivation: Why should we change from linear to nonlinear processes?</p>
 </blockquote>
 <ul>
-<li><strong>Nonlinearity</strong>: not additive, depend on interactions or thresholds</li>
-<li><strong>Complex dynamics</strong>: chaos, bifurcations, periodic behavior</li>
-<li><strong>State Dependence</strong>: Based on the state of the current TS, the influence on future values will differ.</li>
-<li><strong>Non-stationarity</strong>: Statistical properties (mean and variance) may change over time</li>
+<li><strong>Nonlinearity</strong>: Relationships are not additive; they depend on interactions, powers, or specific thresholds.</li>
+<li><strong>Complex Dynamics</strong>: Ability to model chaos, bifurcations, and non-standard periodic behavior.</li>
+<li><strong>State Dependence</strong>: The influence of a variable on future values differs based on the current "state" of the system.</li>
+<li><strong>Non-stationarity</strong>: Statistical properties (mean and variance) may change over time in ways that a simple trend cannot explain.</li>
 </ul>
-<h3 id="example-of-nonlinear-processes">Example of Nonlinear Processes<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><a class="headerlink" href="#example-of-nonlinear-processes" title="Permanent link">¶</a></h3>
+<h3 id="examples-of-nonlinear-processes">Examples of Nonlinear Processes<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><a class="headerlink" href="#examples-of-nonlinear-processes" title="Permanent link">¶</a></h3>
 <ul>
-<li>Threshold Models: <abbr title="Threshold Autoregressive">TAR</abbr> models: different dynamics above or below certain threshold limits</li>
-<li>Volatility models: GARCH</li>
-<li>Nonlinear Dynamical Systems: Deterministic chaos<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (e.g. Lorenz attractor)</li>
-<li>Neural Networks: Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM) and Transformer-based models<ul>
-<li>Polynomial and Rational Models</li>
+<li><strong>Threshold Models</strong>: <abbr title="Threshold Autoregressive">TAR</abbr> models, where dynamics change above or below certain limits.</li>
+<li><strong>Volatility Models</strong>: GARCH models, where variance is a nonlinear function of past shocks.</li>
+<li><strong>Nonlinear Dynamical Systems</strong>: Deterministic chaos<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (e.g., the Lorenz attractor).</li>
+<li><strong>Neural Networks</strong>: Recurrent Neural Networks (RNNs), LSTMs, and Transformer-based models.</li>
+<li><strong>Polynomial and Rational Models</strong>: Models where terms are squared, cubed, or divided.</li>
 </ul>
-</li>
-</ul>
+<hr>
 <h3 id="threshold-models">Threshold Models<a class="headerlink" href="#threshold-models" title="Permanent link">¶</a></h3>
-<ul>
-<li>Class of Nonlinear TS models → Dynamics change based on whether the <em>processes crosses certain thresholds</em><ul>
-<li>After a certain point (thresholds), the dynamics change</li>
-</ul>
-</li>
-<li>Useful for capturing abrupt changes and regime shifts in the data</li>
-</ul>
+<p>Threshold models are a class of nonlinear TS models where the dynamics of the system change based on whether the <strong>process crosses certain threshold limits</strong>. After a certain point (the threshold), the governing equations change. This is incredibly useful for capturing abrupt changes and regime shifts.</p>
 <h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">¶</a></h4>
 <ul>
-<li><strong>Regimes</strong>: TS operates under different "regimes", with distinct dynamics for each regimes<ul>
-<li>Regimes are subsets separated by thresholds</li>
-<li>Distinct phases or states of a system, each governed by distinct dynamics</li>
-<li>In Threshold models, regimes are defined based on crossing of thresholds by a variable (say, <span class="arithmatex">\(Y_{t-d}\)</span>)</li>
+<li><strong>Regimes</strong>: Distinct phases or states of a system.<ul>
+<li>The TS operates under different "regimes," which are subsets of data separated by thresholds.</li>
+<li>In Threshold models, regimes are defined based on a variable crossing a specific threshold (e.g., <span class="arithmatex">\(Y_{t-d}\)</span>).</li>
 </ul>
 </li>
-<li><strong>Threshold Variable</strong>A: The variable whose value <em>determines the regime</em>. (Often a lagged value of the TS)<ul>
-<li>Given, <span class="arithmatex">\(Y_{t}\)</span> then <span class="arithmatex">\(Y_{t-1}\)</span> or <span class="arithmatex">\(Y_{t-2}\)</span> might be a threshold variable.</li>
+<li><strong>Threshold Variable</strong>: The variable whose value <strong>determines the regime</strong>.<ul>
+<li>This is often a lagged value of the TS itself. For example, if we are modeling <span class="arithmatex">\(Y_{t}\)</span>, <span class="arithmatex">\(Y_{t-1}\)</span> or <span class="arithmatex">\(Y_{t-2}\)</span> might be the threshold variable.</li>
 </ul>
 </li>
-<li>Nonlinearity: exhibits piecewise linear behavior (making them interpretable)</li>
+<li><strong>Nonlinearity</strong>: These models exhibit <strong>piecewise linear</strong> behavior, which makes them nonlinear overall but still highly interpretable within each regime.</li>
 </ul>
 <h4 id="regime-characteristics">Regime Characteristics<a class="headerlink" href="#regime-characteristics" title="Permanent link">¶</a></h4>
 <ul>
-<li>Distinct Dynamics<ul>
-<li>Each regime has its own set of parameters and <strong>equations</strong> the describe the behavior of system</li>
-<li>Economic growth rates might follow one pattern in expansion and different during recession<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
+<li><strong>Distinct Dynamics</strong>: Each regime has its own set of parameters and <strong>equations</strong>. For example, economic growth rates follow one pattern during an expansion and a completely different one during a recession.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
+<li><strong>Transition Mechanism</strong>: Regimes change via the crossing of a threshold or a probabilistic switching mechanism.</li>
+<li><strong>Temporal Persistence</strong>: The system tends to persist in a regime for a period before transitioning, leading to a clustering of similar states.</li>
+<li><strong>System Nonlinearity</strong>: While linear <em>within</em> a regime, the abrupt or smooth transitions between regimes make the overall system nonlinear.</li>
 </ul>
-</li>
-<li>Transition Mechanism<ul>
-<li>Crossing a threshold</li>
-<li>probabilistic switching mechanism</li>
-</ul>
-</li>
-<li>Temporal persistence<ul>
-<li>persist for a period before transitioning (It has to be persistent inside a regime)</li>
-<li><span class="arithmatex">\(\implies\)</span> clustering of similar states</li>
-</ul>
-</li>
-<li>Nonlinearity<ul>
-<li>Overall system may appear nonlinear!</li>
-<li><span class="arithmatex">\(\impliedby\)</span> abrupt or smooth transition between regimes</li>
-</ul>
-</li>
-</ul>
-<h4 id="types-of-regime-transitions">Types of Regime Transitions<a class="headerlink" href="#types-of-regime-transitions" title="Permanent link">¶</a></h4>
+<hr>
+<h3 id="types-of-regime-transitions">Types of Regime Transitions<a class="headerlink" href="#types-of-regime-transitions" title="Permanent link">¶</a></h3>
+<p>The way a system moves from one regime to another defines the specific model type:</p>
+<ol>
+<li>
+<p><strong>Abrupt Transition (Discrete Switching)</strong>:</p>
 <ul>
-<li>Abrupt transition (discrete switching)<ul>
-<li>Changes between regimes are <strong>instantaneous</strong>, when threshold condition is met</li>
-<li>Example: <abbr title="Threshold Autoregressive">TAR</abbr> and <abbr title="Self-Exciting TAR">SETAR</abbr></li>
-<li>Uses:<ul>
-<li>Economic recession and recoveries,</li>
-<li>sudden market crashes and booms</li>
+<li>Changes are <strong>instantaneous</strong> the moment the threshold condition is met.</li>
+<li><strong>Examples</strong>: <abbr title="Threshold Autoregressive">TAR</abbr> and <abbr title="Self-Exciting TAR">SETAR</abbr> models.</li>
+<li><strong>Uses</strong>: Economic recessions and recoveries, sudden market crashes, and booms.</li>
 </ul>
 </li>
+<li>
+<p><strong>Smooth Transitions</strong>:</p>
+<ul>
+<li>Changes occur <strong>gradually</strong> over a range of values of the threshold variable.</li>
+<li><strong>Examples</strong>: <abbr title="Smooth Transition Autoregressive">STAR</abbr> models (using Logistic or Exponential transition functions).</li>
+<li><strong>Use cases</strong>: Gradual policy shifts or slow transitions between weather patterns.</li>
 </ul>
 </li>
-<li>Smooth Transitions<ul>
-<li>Changes between regimes → gradually over a range of values of the threshold variable</li>
-<li>Example<ul>
-<li><abbr title="Smooth Transition Autoregressive">STAR</abbr> models</li>
-<li>Logistic or exponential transition functions</li>
+<li>
+<p><strong>Probabilistic Transitions</strong>:</p>
+<ul>
+<li>Transitions are governed by probabilities, often modeled as latent (hidden) variables rather than a fixed threshold.</li>
+<li><strong>Example</strong>: <abbr title="Markov Switching Autoregressive">MSAR</abbr> (Markov Switching) models.</li>
+<li><strong>Use cases</strong>: Stock market volatility clustering or hidden states in biological systems.</li>
 </ul>
 </li>
-<li>Use cases<ul>
-<li>Gradual Policy shifts</li>
-<li>transitioning between weather patterns</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Probabilistic Transitions<ul>
-<li>Neither abrupt nor smooth, but governed by probabilities (modelled as latent variables)</li>
-<li>Example: <abbr title="Markov Switching Autoregressive">MSAR</abbr> models</li>
-<li>Cases<ul>
-<li>Stock market volatility clustering</li>
-<li>Hidden states in biological systems</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+</ol>
+<hr>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Complex dynamics, abruptions in the models&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>Complex dynamics, abruptions in the models.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>Not Nonlinear "Time Series" models, just nonlinear models in general&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p>Not Nonlinear "Time Series" models specifically, just nonlinear models in general.&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
-<p>Expansion and recession are regimes&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+<p>Expansion and recession are regimes.&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
 </div>

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10358,10 +10358,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#steps-to-compute-the-periodic" class="md-nav__link">
+  <a href="#steps-to-compute-the-periodogram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Steps to compute the Periodic
+        Steps to Compute the Periodogram
       
     </span>
   </a>
@@ -10369,10 +10369,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations-of-periodogram" class="md-nav__link">
+  <a href="#limitations-of-the-periodogram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limitations of Periodogram
+        Limitations of the Periodogram
       
     </span>
   </a>
@@ -10982,7 +10982,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12801,127 +12801,107 @@
 
 <!-- Markdown content -->
 <h1 id="spectral-density-estimation">Spectral Density Estimation<a class="headerlink" href="#spectral-density-estimation" title="Permanent link">¶</a></h1>
+<p>Estimation of the Spectral Density Function (<abbr title="Spectral Density Function">SDF</abbr>) allows us to move from theoretical models to practical data analysis, identifying the "power" behind various cycles in a time series.</p>
 <h3 id="practical-applications">Practical Applications<a class="headerlink" href="#practical-applications" title="Permanent link">¶</a></h3>
 <ul>
-<li>Signal processing<ul>
-<li>Noise filtering → remove noise by filtering out high-frequency components using the <abbr title="Spectral Density Function">SDF</abbr></li>
-<li>cleaning audio recordings/ improve image quality</li>
+<li><strong>Signal Processing</strong>:<ul>
+<li><strong>Noise Filtering</strong>: We can remove noise by filtering out high-frequency components identified via the <abbr title="Spectral Density Function">SDF</abbr>.</li>
+<li><strong>Restoration</strong>: Used to clean audio recordings or improve image quality.</li>
 </ul>
 </li>
-<li>Medicine and biology<ul>
-<li>ECG: diagnosing arrhythmia</li>
+<li><strong>Medicine and Biology</strong>:<ul>
+<li><strong>ECG/EEG</strong>: Analyzing the spectral components of heart or brain waves for diagnosing conditions like arrhythmia.</li>
 </ul>
 </li>
 </ul>
+<hr>
 <h3 id="parametric-estimation">Parametric Estimation<a class="headerlink" href="#parametric-estimation" title="Permanent link">¶</a></h3>
-<ul>
-<li>Specific model for the TS<ul>
-<li>ARMA or ARIMA</li>
-<li>estimate parameters of that model to compute <abbr title="Spectral Density Function">SDF</abbr></li>
-</ul>
-</li>
-</ul>
+<p>Parametric estimation assumes the time series follows a specific, known model (like an ARMA process). We estimate the parameters of that model to compute the <abbr title="Spectral Density Function">SDF</abbr> analytically.</p>
 <h4 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h4>
 <ol>
-<li>Model selection: <span class="arithmatex">\(AR(p)\)</span> or <span class="arithmatex">\(MA(q)\)</span> or <span class="arithmatex">\(ARMA(p,q)\)</span></li>
-<li>Parameter estimation: estimate <span class="arithmatex">\((\phi,\theta)\)</span> using methods like MLE etc</li>
+<li><strong>Model Selection</strong>: Choose an <span class="arithmatex">\(AR(p)\)</span>, <span class="arithmatex">\(MA(q)\)</span>, or <span class="arithmatex">\(ARMA(p,q)\)</span> structure.</li>
+<li><strong>Parameter Estimation</strong>: Estimate the coefficients (<span class="arithmatex">\(\phi, \theta\)</span>) and noise variance <span class="arithmatex">\(\sigma^2\)</span> using methods like <strong>Maximum Likelihood Estimation (<abbr title="Maximum Likelihood Estimation">MLE</abbr>)</strong>.</li>
 <li>
-<p>Compute the <abbr title="Spectral Density Function">SDF</abbr> using the analytical formula</p>
+<p><strong>Compute the <abbr title="Spectral Density Function">SDF</abbr></strong>: Plug the estimated parameters into the theoretical formula for that model's spectrum.</p>
 </li>
 <li>
-<p>Pros</p>
+<p><strong>Pros</strong>:</p>
 <ul>
-<li>Provides smooth estimates</li>
-<li>Suitable for well-modeled stationary processes</li>
+<li>Provides very smooth estimates.</li>
+<li>Highly accurate for well-modeled stationary processes.</li>
 </ul>
 </li>
-<li>Cons<ul>
-<li>Requires <em>correct</em> model specification</li>
-<li>May not work well for complex or unknown processes</li>
+<li><strong>Cons</strong>:<ul>
+<li>Strictly requires <strong>correct</strong> model specification; if the model is wrong, the spectrum is wrong.</li>
+<li>May perform poorly for complex processes that don't fit standard ARMA forms.</li>
 </ul>
 </li>
 </ol>
+<hr>
 <h3 id="non-parametric-estimation">Non-parametric Estimation<a class="headerlink" href="#non-parametric-estimation" title="Permanent link">¶</a></h3>
+<p>Non-parametric estimation does not assume a specific model structure. Instead, it attempts to directly estimate the <abbr title="Spectral Density Function">SDF</abbr> from the data itself.</p>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<p>We try to estimate the <abbr title="Spectral Density Function">SDF</abbr> using a <strong>periodogram</strong>.</p>
+</div>
 <ul>
-<li>Doesn't assume a specific model</li>
-<li>Directly estimate the <abbr title="Spectral Density Function">SDF</abbr> from the data</li>
-</ul>
-<blockquote>
-<p>We try to estimate the <abbr title="Spectral Density Function">SDF</abbr> using a periodogram.</p>
-</blockquote>
-<ul>
-<li>Periodogram<ul>
-<li>A fundamental non-parametric method for estimation of <abbr title="Spectral Density Function">SDF</abbr></li>
-<li>It is a graph → provides measure of power (variance) of a signal at different frequencies</li>
+<li><strong>The Periodogram</strong>:<ul>
+<li>A fundamental non-parametric tool for <abbr title="Spectral Density Function">SDF</abbr> estimation.</li>
+<li>It is a graph that provides a measure of the power (variance) of a signal at different frequencies.</li>
 </ul>
 </li>
 </ul>
+<hr>
 <h3 id="the-periodogram">The Periodogram<a class="headerlink" href="#the-periodogram" title="Permanent link">¶</a></h3>
+<p>The periodogram <span class="arithmatex">\(I(\omega)\)</span> is the sample analog of the spectral density.</p>
 <div class="arithmatex">\[
-I(\omega) = \dfrac{1}{T}\left\lvert  \sum_{i=1}^{T}  y_{t}e^{ -\omega t }  \right\rvert^{2}
+I(\omega) = \dfrac{1}{T}\left\lvert \sum_{t=1}^{T} y_{t}e^{-i\omega t} \right\rvert^{2}
 \]</div>
-<p>Alternatively</p>
-<div class="arithmatex">\[
-I(\omega) = \dfrac{1}{T}[\mathrm{Re}^{2}(\omega) + \mathrm{Im}^{2}(\omega)]
-\]</div>
-<ul>
-<li>where<ul>
-<li><span class="arithmatex">\(\mathrm{Re}^{2}(\omega) = \sum y_{t} \cos \omega t\)</span></li>
-<li><span class="arithmatex">\(\mathrm{\mathrm{Im}}^{2}(\omega) = \sum y_{t} \sin \omega t\)</span></li>
-</ul>
-</li>
-</ul>
+<p><strong>Alternative Algebraic Form:</strong><br>
+$$<br>
+I(\omega) = \dfrac{1}{T}[\text{Re}^2(\omega) + \text{Im}^2(\omega)]<br>
+$$<br>
+- where:<br>
+    - <span class="arithmatex">\(\text{Re}(\omega) = \sum y_{t} \cos(\omega t)\)</span><br>
+    - <span class="arithmatex">\(\text{Im}(\omega) = \sum y_{t} \sin(\omega t)\)</span></p>
 <blockquote>
-<p>Both <abbr title="Spectral Density Function">SDF</abbr> and periodogram are function of the frequency, <span class="arithmatex">\(\omega\)</span> and <span class="arithmatex">\(I(\omega)\)</span> is an ESTIMATE of <span class="arithmatex">\(S(\omega)\)</span></p>
+<p><strong>Note</strong>: Both the <abbr title="Spectral Density Function">SDF</abbr> and the periodogram are functions of the frequency <span class="arithmatex">\(\omega\)</span>. In this context, <span class="arithmatex">\(I(\omega)\)</span> acts as an <strong>estimate</strong> of <span class="arithmatex">\(S(\omega)\)</span>.</p>
 </blockquote>
 <h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h4>
 <ul>
-<li>Frequency Range<ul>
-<li>Evaluated at discrete frequencies</li>
-<li><span class="arithmatex">\(\omega_{k} = \dfrac{2\pi k}{T}\)</span> where <span class="arithmatex">\(k = 0,1,\dots,T-1\)</span></li>
-<li>For real-valued TS, periodogram is symmetric so <span class="arithmatex">\(\omega \in [0,\pi]\)</span></li>
+<li><strong>Frequency Range</strong>:<ul>
+<li>Evaluated at discrete <strong>Fourier Frequencies</strong>: <span class="arithmatex">\(\omega_{k} = \dfrac{2\pi k}{T}\)</span> for <span class="arithmatex">\(k = 0, 1, \dots, T-1\)</span>.</li>
+<li>For real-valued series, the periodogram is symmetric; we usually only plot <span class="arithmatex">\(\omega \in [0, \pi]\)</span>.</li>
 </ul>
 </li>
-<li>Units<ul>
-<li>Units are <em>variance per unit frequency</em></li>
-<li>e.g. <span class="arithmatex">\(\dfrac{volts^{2}}{Hz}\)</span></li>
+<li><strong>Units</strong>:<ul>
+<li>Measured in <em>variance per unit frequency</em> (e.g., <span class="arithmatex">\(volts^{2}/Hz\)</span>).</li>
 </ul>
 </li>
-<li>Bias and Variance<ul>
-<li>Asymptotically unbiased: <span class="arithmatex">\(E[I(\omega)] \approx S(\omega)\)</span> </li>
-<li>Variance: not consistent, variance doesn't decrease with increasing <span class="arithmatex">\(T\)</span></li>
+<li><strong>Bias and Variance</strong>:<ul>
+<li><strong>Asymptotically Unbiased</strong>: <span class="arithmatex">\(E[I(\omega)] \approx S(\omega)\)</span> as <span class="arithmatex">\(T\)</span> gets large.</li>
+<li><strong>Inconsistency</strong>: The variance of <span class="arithmatex">\(I(\omega)\)</span> does <strong>not</strong> decrease as <span class="arithmatex">\(T\)</span> increases. This means the plot remains "jagged" even with more data.</li>
 </ul>
 </li>
 </ul>
-<h3 id="steps-to-compute-the-periodic">Steps to compute the Periodic<a class="headerlink" href="#steps-to-compute-the-periodic" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="steps-to-compute-the-periodogram">Steps to Compute the Periodogram<a class="headerlink" href="#steps-to-compute-the-periodogram" title="Permanent link">¶</a></h3>
 <ol>
-<li>Transform the frequency domain using DFT<ul>
-<li><span class="arithmatex">\(Y(\omega_{k})=\sum_{t=1}^{T} Y_{t} e^{ -i \omega_{k}t }\)</span></li>
-</ul>
-</li>
-<li>Compute the power spectrum<ul>
-<li>Periodogram = squared magnitude of the DFT scaled by <span class="arithmatex">\(1/T\)</span></li>
-<li><span class="arithmatex">\(I(\omega_{k}) =\dfrac{1}{T}[Y(\omega_{k})]^{2}\)</span></li>
-</ul>
-</li>
-<li>Frequency resolution<ul>
-<li>longer <span class="arithmatex">\(T\)</span> provides better frequency resolution</li>
-<li><span class="arithmatex">\(\triangle f = \dfrac{1}{T \triangle t}\)</span></li>
-</ul>
-</li>
+<li><strong>Fourier Transformation</strong>: Transform the data into the frequency domain using the <strong>Discrete Fourier Transform (<abbr title="Discrete Fourier Transform">DFT</abbr>)</strong>:<br>
+   $<span class="arithmatex">\(Y(\omega_{k}) = \sum_{t=1}^{T} y_{t} e^{-i \omega_{k}t}\)</span>$</li>
+<li><strong>Compute Power Spectrum</strong>: The periodogram is the squared magnitude of the <abbr title="Discrete Fourier Transform">DFT</abbr> results, scaled by the sample size:<br>
+   $<span class="arithmatex">\(I(\omega_{k}) = \dfrac{1}{T} |Y(\omega_{k})|^2\)</span>$</li>
+<li><strong>Frequency Resolution</strong>: A longer series <span class="arithmatex">\(T\)</span> provides better frequency resolution (ability to distinguish between two close frequencies):<br>
+   $<span class="arithmatex">\(\Delta f = \dfrac{1}{T \Delta t}\)</span>$</li>
 </ol>
-<h3 id="limitations-of-periodogram">Limitations of Periodogram<a class="headerlink" href="#limitations-of-periodogram" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="limitations-of-the-periodogram">Limitations of the Periodogram<a class="headerlink" href="#limitations-of-the-periodogram" title="Permanent link">¶</a></h3>
 <ul>
-<li>Noisy estimates<ul>
-<li><span class="arithmatex">\(I(\omega)\)</span> ka variance doesn't decrease with sample size, <span class="arithmatex">\(T\)</span> → Inconsistent estimator.</li>
-</ul>
-</li>
-<li>Spectral Leakage<ul>
-<li>When TS contains frequencies not aligned with discrete Fourier frequencies, power leaks into adjacent frequencies #what?</li>
-</ul>
-</li>
-<li>Resolution vs Variance tradeoffs<ul>
-<li>High-frequency resolution <span class="arithmatex">\(\iff\)</span> increased variance</li>
+<li><strong>Noisy Estimates</strong>: Because the variance doesn't decrease with sample size <span class="arithmatex">\(T\)</span>, the periodogram is an <strong>inconsistent estimator</strong>. It looks like a "hairy" or erratic plot.</li>
+<li><strong>Spectral Leakage</strong>: This occurs when the time series contains frequencies that do not align perfectly with the discrete Fourier frequencies. The power "leaks" out from the true frequency into adjacent frequency bins.</li>
+<li><strong>Resolution vs. Variance Tradeoff</strong>: <ul>
+<li>Higher frequency resolution (large <span class="arithmatex">\(T\)</span>) <span class="arithmatex">\(\iff\)</span> Increased variance/noise in the estimate.</li>
+<li>To fix this, researchers often use <strong>Smoothing Techniques</strong> (like Daniel windows or WOSA) to reduce variance at the cost of some resolution.</li>
 </ul>
 </li>
 </ul>

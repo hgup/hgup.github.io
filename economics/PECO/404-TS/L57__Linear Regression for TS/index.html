@@ -24,7 +24,7 @@
     
     
       
-        <title>Linear Regression in TS - Hursh Gupta</title>
+        <title>Linear Regression &amp; Classical ML in TS - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linear-regression-in-ts" class="md-skip">
+        <a href="#linear-regression-classical-ml-in-ts" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linear Regression in TS
+              Linear Regression &amp; Classical ML in TS
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10878,7 +10878,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -10896,7 +10896,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -10922,6 +10922,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#advantages-of-classical-ml-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages of Classical ML Models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linear-regression" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -10933,10 +10955,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#svm" class="md-nav__link">
+  <a href="#support-vector-machines-svm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SVM
+        Support Vector Machines (SVM)
       
     </span>
   </a>
@@ -10948,6 +10970,17 @@
     <span class="md-ellipsis">
       
         Random Forests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparative-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparative Summary
       
     </span>
   </a>
@@ -12767,219 +12800,122 @@
 
 
 <!-- Markdown content -->
-<h1 id="linear-regression-in-ts">Linear Regression in TS<a class="headerlink" href="#linear-regression-in-ts" title="Permanent link">¶</a></h1>
-<h4 id="advantages-of-classical-ml-models">Advantages of classical ML models<a class="headerlink" href="#advantages-of-classical-ml-models" title="Permanent link">¶</a></h4>
+<h1 id="linear-regression-classical-ml-in-ts">Linear Regression &amp; Classical ML in TS<a class="headerlink" href="#linear-regression-classical-ml-in-ts" title="Permanent link">¶</a></h1>
+<p>Traditional Machine Learning (ML) models offer a bridge between basic statistical forecasting and complex deep learning. They provide high speed and interpretability, making them ideal for the "baseline model" stage of any time series project.</p>
+<h3 id="advantages-of-classical-ml-models">Advantages of Classical ML Models<a class="headerlink" href="#advantages-of-classical-ml-models" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Speed</strong>: Fast training and prediction, suitable for low-resource environments</li>
-<li><strong>Interpretability</strong><ul>
-<li>DT and Linear Regression are easy to explain</li>
+<li><strong>Speed</strong>: Characterized by fast training and prediction times; perfectly suitable for low-resource environments.</li>
+<li><strong>Interpretability</strong>: Models like Decision Trees and Linear Regression are highly transparent and easy to explain to stakeholders.</li>
+<li><strong>Flexibility</strong>: Can handle varied data types and structures with proper preprocessing.</li>
 </ul>
-</li>
-<li>Flexibility</li>
-</ul>
-<h4 id="challengers">Challengers<a class="headerlink" href="#challengers" title="Permanent link">¶</a></h4>
+<h3 id="challenges">Challenges<a class="headerlink" href="#challenges" title="Permanent link">¶</a></h3>
 <ul>
-<li>Feature Engineering Dependency<ul>
-<li>choose appropriate features carefully</li>
-<li>performance depends on quality of features</li>
+<li><strong>Feature Engineering Dependency</strong>: You must choose appropriate features carefully, as model performance is directly tied to the quality of engineered features.</li>
+<li><strong>Data Stationarity</strong>: Most classical models assume stationarity; significant preprocessing, such as <strong>differencing</strong>, is usually required.</li>
+<li><strong>Scalability</strong>: Certain models, like k-NN, struggle to perform efficiently with very large datasets.</li>
 </ul>
-</li>
-<li>Data stationarity<ul>
-<li>models assume stationarity</li>
-<li>preprocess → differencing</li>
-</ul>
-</li>
-<li>Scalability<ul>
-<li>some models struggle with large datasets (k-NN for example)</li>
-</ul>
-</li>
-</ul>
+<hr>
 <h3 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-y_{t} = \beta_{0} + \beta_{1}x_{t-1} + \beta_{2}x_{t-2} + \dots + e_{t}
-\]</div>
+<p>Linear Regression (LR) in a time series context typically involves regressing the current value on its own lags or external predictors.</p>
+<div class="arithmatex">\[y_{t} = \beta_{0} + \beta_{1}x_{t-1} + \beta_{2}x_{t-2} + \dots + e_{t}\]</div>
 <ul>
-<li>Applications<ul>
-<li>Trend estimation</li>
-<li>Capturing seasonal effects (dummy variables / engineered features)</li>
-<li>LR models form the Baseline models for forecasting</li>
+<li><strong>Applications</strong>: <ul>
+<li>Trend estimation.</li>
+<li>Capturing seasonal effects through engineered features or <strong>dummy variables</strong>.</li>
+<li>Serving as the <strong>Baseline model</strong> for comparative forecasting performance.</li>
 </ul>
 </li>
 </ul>
-<h4 id="feature-engineering">Feature Engineering<a class="headerlink" href="#feature-engineering" title="Permanent link">¶</a></h4>
+<h4 id="feature-engineering-strategies">Feature Engineering Strategies<a class="headerlink" href="#feature-engineering-strategies" title="Permanent link">¶</a></h4>
 <ol>
-<li>Lagged Features<ul>
-<li><span class="arithmatex">\((y_{t-1},y_{t-2})\)</span></li>
-<li>Temperature and yesterday's temperature</li>
-</ul>
-</li>
-<li>Rolling Statistics<ul>
-<li>Add moving averages or rolling standard deviations as predictions</li>
-<li>Average of the past 7 days to predict the next day</li>
-</ul>
-</li>
-<li>Seasonality Indicators<ul>
-<li>Encode day-of-week, month or holiday information as dummy variables</li>
-</ul>
-</li>
+<li><strong>Lagged Features</strong>: Using past values like <span class="arithmatex">\((y_{t-1}, y_{t-2})\)</span> as inputs (e.g., using yesterday's temperature to predict today's).</li>
+<li><strong>Rolling Statistics</strong>: Adding moving averages or rolling standard deviations. For example, using the average of the past 7 days to predict the next.</li>
+<li><strong>Seasonality Indicators</strong>: Encoding calendar information (day-of-week, month, holidays) as dummy variables.</li>
 </ol>
-<h4 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">¶</a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Limitations</p>
+<p>LR assumes a strictly linear relationship and is highly sensitive to <strong>multicollinearity</strong> between features, which is common when using multiple overlapping lags.</p>
+</div>
+<hr>
+<h3 id="support-vector-machines-svm">Support Vector Machines (<abbr title="Support Vector Machines">SVM</abbr>)<a class="headerlink" href="#support-vector-machines-svm" title="Permanent link">¶</a></h3>
+<p>The aim of an <abbr title="Support Vector Machines">SVM</abbr> is to find a hyperplane that <strong>best separates or fits the data</strong> in high-dimensional space.<br>
+- <strong>SVC (Classification)</strong>: Separates data into different regimes or categories.<br>
+- <strong><abbr title="Support Vector Regression">SVR</abbr> (Regression)</strong>: Fits the data within a specified <strong>margin of tolerance (<span class="arithmatex">\(\epsilon\)</span>)</strong>. It penalizes only the points that lie outside this threshold to minimize error.</p>
+<h4 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">¶</a></h4>
 <ul>
-<li>Interpretability (clear insights)</li>
-<li>Efficiency (computationally inexpensive)</li>
-</ul>
-<h4 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h4>
-<ul>
-<li>Assumes linearity<ul>
-<li>Cannot model non-linear relationship effectively</li>
+<li><strong>Kernel Functions</strong>: SVMs use kernels to model non-linear relationships:<ul>
+<li><strong>Linear Kernel</strong></li>
+<li><strong>Polynomial Kernel</strong></li>
+<li><strong><abbr title="Radial Basis Function">RBF</abbr> Kernel</strong> (Radial Basis Function): Ideal for highly non-linear data.</li>
 </ul>
 </li>
-<li>Sensitive to multicollinearity between features (overlapping  lags)</li>
+<li><strong>Robustness</strong>: Effective against outliers when using appropriate margin parameters.</li>
 </ul>
-<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h4>
-<ul>
-<li>Forecasting Stock prices<ul>
-<li>Predict next day's closing prices</li>
-<li>Features<ul>
-<li>Previous closing prices</li>
-<li>rolling average (5-day or 10-day moving averages)</li>
-<li>volume traded</li>
-<li>relative strength index</li>
-<li>moving average convergence divergence</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="svm"><abbr title="Support Vector Machines">SVM</abbr><a class="headerlink" href="#svm" title="Permanent link">¶</a></h3>
-<ul>
-<li>Aim: find a hyperplane that <strong>best</strong> </li>
-<li>SVC: separates data in feature space (for classification) or,</li>
-<li><abbr title="Support Vector Regression">SVR</abbr>: Fits the data within a margin of tolerance (for regression)<ul>
-<li>penalizing points which lie outside the threshold, minimizing error</li>
-<li>Optimizes the margin of tolerance (<span class="arithmatex">\(\epsilon\)</span>) around the hyperplane</li>
-</ul>
-</li>
-</ul>
-<h4 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">¶</a></h4>
-<ul>
-<li>TS for forecasting (regression)</li>
-<li>Anomaly detection or regime change prediction (classification)</li>
-</ul>
-<h4 id="ensemble-learning">Ensemble Learning<a class="headerlink" href="#ensemble-learning" title="Permanent link">¶</a></h4>
-<ul>
-<li>SMVs rely on kernel functions to model non-linear relationships<ul>
-<li>Linear Kernel</li>
-<li>polynomial Kernel</li>
-<li><abbr title="Radial Basis Function">RBF</abbr> Kernel (for highly non-linear relationships)</li>
-</ul>
-</li>
-</ul>
-<h4 id="feature-engineering_1">Feature Engineering<a class="headerlink" href="#feature-engineering_1" title="Permanent link">¶</a></h4>
-<ul>
-<li>Lagged Features</li>
-<li>Seasonality Features<ul>
-<li>Encode periodic patterns</li>
-</ul>
-</li>
-<li>Normalizations<ul>
-<li>Scale features to ensure <abbr title="Support Vector Machines">SVM</abbr> works efficiently (standardization)</li>
-</ul>
-</li>
-</ul>
-<h4 id="advantages_1">Advantages<a class="headerlink" href="#advantages_1" title="Permanent link">¶</a></h4>
-<ul>
-<li>Handles non-linear relationships via kernels</li>
-<li>robust to outliers when using <em>appropriate margin parameters</em></li>
-</ul>
-<h4 id="limitations_1">Limitations<a class="headerlink" href="#limitations_1" title="Permanent link">¶</a></h4>
-<ul>
-<li>Computationally intensive: large datasets (quadratic complexity)</li>
-<li>Requires careful parameter tuning<ul>
-<li><span class="arithmatex">\(\epsilon\)</span></li>
-<li>kernel type</li>
-<li>regularization parameter <span class="arithmatex">\(C\)</span></li>
-</ul>
-</li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Feature engineering for <abbr title="Support Vector Machines">SVM</abbr> requires <strong>Normalization/Standardization</strong> to ensure all features are scaled appropriately, as <abbr title="Support Vector Machines">SVM</abbr> is distance-based.</p>
+</div>
+<hr>
 <h3 id="random-forests">Random Forests<a class="headerlink" href="#random-forests" title="Permanent link">¶</a></h3>
+<p>Random Forests combine multiple decision trees built on <strong>random subsets of the data</strong> and aggregate their results.<br>
+- <strong>Regression</strong>: Uses the average of all tree predictions.<br>
+- <strong>Classification</strong>: Uses majority voting.</p>
+<h4 id="advantages-limitations">Advantages &amp; Limitations<a class="headerlink" href="#advantages-limitations" title="Permanent link">¶</a></h4>
 <ul>
-<li>
-<p>Combine multiple decision trees on <strong>random subsets of data</strong> and aggregate their predictions</p>
-<ul>
-<li>average fore regression</li>
-<li>majority-voting for classification</li>
+<li><strong>Pros</strong>: Handles non-linear relationships excellently, is robust to overfitting (with enough trees), and requires minimal preprocessing/normalization compared to <abbr title="Support Vector Machines">SVM</abbr>.</li>
+<li><strong>Cons</strong>: Struggles significantly with <strong>extrapolation</strong> (it cannot predict values outside the range of its training data). It is also computationally expensive as the number of trees and depth increase.</li>
 </ul>
-</li>
-<li>
-<p>Advantages</p>
-<ul>
-<li>non-linear relationships</li>
-<li>robust to overfitting when many trees are used</li>
-<li>no extensive preprocessing/normalization required</li>
-</ul>
-</li>
-<li>Limitations<ul>
-<li>Struggles with extrapolation (forecast outside training data range)</li>
-<li>Computationally expensive for large datasets/many trees</li>
-<li>less interpretable with increasing complexity</li>
-</ul>
-</li>
-<li>Hyperparameters<ul>
-<li>Number of trees</li>
-<li>maximum depth</li>
-<li>number of features</li>
-</ul>
-</li>
-</ul>
+<hr>
+<h3 id="comparative-summary">Comparative Summary<a class="headerlink" href="#comparative-summary" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th><strong>Feature</strong></th>
-<th><strong>Linear Regression</strong></th>
-<th><strong><abbr title="Support Vector Machines">SVM</abbr> (<abbr title="Support Vector Regression">SVR</abbr>)</strong></th>
-<th><strong>Random Forests</strong></th>
+<th style="text-align: left;"><strong>Feature</strong></th>
+<th style="text-align: left;"><strong>Linear Regression</strong></th>
+<th style="text-align: left;"><strong><abbr title="Support Vector Machines">SVM</abbr> (<abbr title="Support Vector Regression">SVR</abbr>)</strong></th>
+<th style="text-align: left;"><strong>Random Forests</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Complexity</strong></td>
-<td>Low</td>
-<td>Medium-High</td>
-<td>Medium</td>
+<td style="text-align: left;"><strong>Complexity</strong></td>
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">Medium-High</td>
+<td style="text-align: left;">Medium</td>
 </tr>
 <tr>
-<td><strong>Interpretability</strong></td>
-<td>High</td>
-<td>Medium</td>
-<td>Low-Medium</td>
+<td style="text-align: left;"><strong>Interpretability</strong></td>
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Medium</td>
+<td style="text-align: left;">Low-Medium</td>
 </tr>
 <tr>
-<td><strong>Non-linearity</strong></td>
-<td>Poor</td>
-<td>Excellent (with kernels)</td>
-<td>Excellent</td>
+<td style="text-align: left;"><strong>Non-linearity</strong></td>
+<td style="text-align: left;">Poor</td>
+<td style="text-align: left;">Excellent (with kernels)</td>
+<td style="text-align: left;">Excellent</td>
 </tr>
 <tr>
-<td><strong>Feature Engineering</strong></td>
-<td>Critical</td>
-<td>Important</td>
-<td>Minimal</td>
+<td style="text-align: left;"><strong>Feature Engineering</strong></td>
+<td style="text-align: left;">Critical</td>
+<td style="text-align: left;">Important</td>
+<td style="text-align: left;">Minimal</td>
 </tr>
 <tr>
-<td><strong>Computational Cost</strong></td>
-<td>Low</td>
-<td>High</td>
-<td>Medium</td>
+<td style="text-align: left;"><strong>Computational Cost</strong></td>
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Medium</td>
 </tr>
 <tr>
-<td><strong>Handling Large Data</strong></td>
-<td>Excellent</td>
-<td>Poor</td>
-<td>Good</td>
+<td style="text-align: left;"><strong>Handling Large Data</strong></td>
+<td style="text-align: left;">Excellent</td>
+<td style="text-align: left;">Poor</td>
+<td style="text-align: left;">Good</td>
 </tr>
 </tbody>
 </table>
+<hr>
 
 
 

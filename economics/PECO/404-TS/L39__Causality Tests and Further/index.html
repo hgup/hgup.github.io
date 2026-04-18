@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10130,10 +10130,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#understanding" class="md-nav__link">
+  <a href="#understanding-granger-causality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding
+        Understanding Granger Causality
       
     </span>
   </a>
@@ -10982,7 +10982,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12801,122 +12801,87 @@
 
 <!-- Markdown content -->
 <h1 id="causality-tests-further">Causality Tests &amp; Further<a class="headerlink" href="#causality-tests-further" title="Permanent link">¶</a></h1>
-<p>Casuality test <span class="arithmatex">\(\implies\)</span>  asses whether one TS can predict or cause change in another.</p>
+<p>Causality tests are used to assess whether one time series can predict or "cause" a change in another. In time series analysis, we specifically use the concept of <strong>Granger Causality</strong>.</p>
 <ul>
-<li>Granger causality test is used<ul>
-<li>Does past value of <span class="arithmatex">\(X\)</span> contain some information about future values of <span class="arithmatex">\(Y\)</span></li>
+<li><strong>Granger causality test</strong>: Used to determine if the past values of <span class="arithmatex">\(X\)</span> contain some useful information about the future values of <span class="arithmatex">\(Y\)</span> that is not already contained in the past values of <span class="arithmatex">\(Y\)</span> itself.</li>
 </ul>
-</li>
-</ul>
-<h3 id="understanding">Understanding<a class="headerlink" href="#understanding" title="Permanent link">¶</a></h3>
+<h3 id="understanding-granger-causality">Understanding Granger Causality<a class="headerlink" href="#understanding-granger-causality" title="Permanent link">¶</a></h3>
 <ul>
-<li><span class="arithmatex">\(X\)</span> "Granger causes" <span class="arithmatex">\(Y\)</span> <span class="arithmatex">\(\implies\)</span> knowing all past <span class="arithmatex">\(X\)</span> values <em>improves</em> the prediction of <span class="arithmatex">\(Y\)</span></li>
+<li><strong><span class="arithmatex">\(X\)</span> "Granger causes" <span class="arithmatex">\(Y\)</span></strong>: Knowing all past <span class="arithmatex">\(X\)</span> values <em>improves</em> the prediction of <span class="arithmatex">\(Y\)</span>.</li>
 </ul>
-<blockquote>
-<p>Granger Causality <span class="arithmatex">\(\neq\)</span> true causality</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Important Distinction</p>
+<p>Granger Causality <span class="arithmatex">\(\neq\)</span> true philosophical or physical causality. It is strictly a measure of "predictive causality" or precedence.</p>
+</div>
+<hr>
 <h3 id="mathematical-foundation">Mathematical Foundation<a class="headerlink" href="#mathematical-foundation" title="Permanent link">¶</a></h3>
+<p>The test involves comparing two models to see if adding <span class="arithmatex">\(X\)</span> significantly improves the fit.</p>
 <ul>
-<li>Model 1 (unrestricted)… lagged value of <span class="arithmatex">\(Y\)</span> and <span class="arithmatex">\(X\)</span> both</li>
-<li>Model 2 (restricted)… only lagged values of <span class="arithmatex">\(Y\)</span> (not <span class="arithmatex">\(X\)</span>)</li>
+<li><strong>Model 1 (Unrestricted)</strong>: Includes lagged values of both <span class="arithmatex">\(Y\)</span> and <span class="arithmatex">\(X\)</span>.</li>
+<li><strong>Model 2 (Restricted)</strong>: Includes only lagged values of <span class="arithmatex">\(Y\)</span> (not <span class="arithmatex">\(X\)</span>).</li>
 </ul>
-<div class="arithmatex">\[
-Y_{t} = \alpha + \sum_{i=1}^{p} \beta_{i}Y_{t-i} + \sum_{j=1}^{p} \gamma_{j} X_{t-j} + \epsilon_{t}
-\]</div>
-<p>And the restricted model</p>
-<div class="arithmatex">\[
-Y_{t} = \alpha + \sum_{i=1}^{p} \beta_{i} Y_{t-i} + \epsilon_{t}
-\]</div>
-<div class="arithmatex">\[
-\begin{align}
-H_{0} &amp; : \gamma_{j} = 0\ \forall j, X \text{ does not Granger-cause } Y \\
-H_{1} &amp; : \gamma_{j} \neq 0 \text{ for at least one } j, X \text{ Granger-causes } Y
-\end{align}
-\]</div>
+<p><strong>Unrestricted Model:</strong><br>
+$<span class="arithmatex">\(Y_{t} = \alpha + \sum_{i=1}^{p} \beta_{i}Y_{t-i} + \sum_{j=1}^{p} \gamma_{j} X_{t-j} + \epsilon_{t}\)</span>$</p>
+<p><strong>Restricted Model:</strong><br>
+$<span class="arithmatex">\(Y_{t} = \alpha + \sum_{i=1}^{p} \beta_{i} Y_{t-i} + \epsilon_{t}\)</span>$</p>
+<p><strong>Hypothesis Setup:</strong><br>
+$$<br>
+\begin{align}<br>
+H_{0} &amp; : \gamma_{j} = 0 \text{ for all } j \implies X \text{ does not Granger-cause } Y \<br>
+H_{1} &amp; : \gamma_{j} \neq 0 \text{ for at least one } j \implies X \text{ Granger-causes } Y<br>
+\end{align}<br>
+$$</p>
 <ul>
-<li>Use <span class="arithmatex">\(F\)</span>-test (for small samples)</li>
-<li>Wald  test (large samples)</li>
-<li>If statistically significant <span class="arithmatex">\(\implies\)</span> Reject <span class="arithmatex">\(H_{0}\)</span>, <span class="arithmatex">\(X\)</span> Granger-causes <span class="arithmatex">\(Y\)</span>.</li>
+<li><strong>Testing</strong>: Use an <strong>F-test</strong> for small samples or a <strong>Wald test</strong> for large samples.</li>
+<li><strong>Decision</strong>: If the result is statistically significant, we reject <span class="arithmatex">\(H_{0}\)</span>, meaning <span class="arithmatex">\(X\)</span> Granger-causes <span class="arithmatex">\(Y\)</span>.</li>
 </ul>
+<hr>
 <h3 id="assumptions-of-granger-causality">Assumptions of Granger Causality<a class="headerlink" href="#assumptions-of-granger-causality" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Stationarity</strong>: both <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> should be stationary (transform if not by differencing)</li>
-<li><strong>Appropriate Lag Length</strong>: choose <span class="arithmatex">\(p\)</span> (it's crucial) using AIC or BIC</li>
-<li><strong>No Cointegration</strong> (for VAR models)<ul>
-<li>If so, use ECM or VECM (more appropriate)</li>
+<li><strong>Stationarity</strong>: Both <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> should be stationary. If they are not, transform them (usually by differencing) before testing.</li>
+<li><strong>Appropriate Lag Length (<span class="arithmatex">\(p\)</span>)</strong>: Choosing <span class="arithmatex">\(p\)</span> is crucial. Use information criteria like <strong><abbr title="Akaike Information Criterion">AIC</abbr></strong> or <strong>BIC</strong> to find the optimal lag.</li>
+<li><strong>No Cointegration</strong>: For standard VAR models, the series should not be cointegrated.<ul>
+<li>If they are cointegrated, use an <strong>Error Correction Model (ECM)</strong> or <strong>Vector Error Correction Model (VECM)</strong> instead, as they are more appropriate for handling long-run relationships.</li>
 </ul>
 </li>
 </ul>
+<hr>
 <h3 id="extensions-of-granger-causality">Extensions of Granger Causality<a class="headerlink" href="#extensions-of-granger-causality" title="Permanent link">¶</a></h3>
 <ol>
-<li>VECM causality<ul>
-<li>If cointegrated</li>
-<li>Include both <abbr title="Error Correction Term">ECT</abbr> and lagged differences</li>
-</ul>
-</li>
-<li>Nonlinear Granger Causality<ul>
-<li>Requiring neural networks or kernel based methods</li>
-</ul>
-</li>
-<li>Instantaneous Causality<ul>
-<li>If change in <span class="arithmatex">\(X\)</span> at <span class="arithmatex">\(t\)</span> immediately affects <span class="arithmatex">\(Y\)</span> at <span class="arithmatex">\(t\)</span></li>
-<li>Simultaneous Equation Model (SEM) framework</li>
-</ul>
-</li>
+<li><strong>VECM Causality</strong>: Used if variables are cointegrated. It includes both the <strong>Error Correction Term (<abbr title="Error Correction Term">ECT</abbr>)</strong> and lagged differences to capture both short-term and long-term causality.</li>
+<li><strong>Nonlinear Granger Causality</strong>: Used when the relationship isn't linear, requiring neural networks or kernel-based methods.</li>
+<li><strong>Instantaneous Causality</strong>: Occurs if a change in <span class="arithmatex">\(X\)</span> at time <span class="arithmatex">\(t\)</span> immediately affects <span class="arithmatex">\(Y\)</span> at the same time <span class="arithmatex">\(t\)</span>. This is usually handled within a <strong>Simultaneous Equation Model (SEM)</strong> framework.</li>
 </ol>
+<hr>
 <h3 id="the-haugh-pierce-test">The Haugh-Pierce Test<a class="headerlink" href="#the-haugh-pierce-test" title="Permanent link">¶</a></h3>
-<ul>
-<li>context: Two stationary TS. How? Examine their <strong>cross-correlation</strong></li>
-<li>
-<p>IDENTIFY if <span class="arithmatex">\(X_{t-i}\)</span> can improve prediction for <span class="arithmatex">\(Y_{t+k}\)</span> <em>without the need to estimate a model</em></p>
-</li>
-<li>
-<p>Procedure</p>
+<p>The context for this test is two stationary time series. It examines their <strong>cross-correlation</strong> to identify if <span class="arithmatex">\(X_{t-i}\)</span> can improve the prediction for <span class="arithmatex">\(Y_{t+k}\)</span> <em>without the need to estimate a full model</em>.</p>
+<h4 id="procedure">Procedure:<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h4>
 <ol>
-<li>Pre-whiten Each Series: Fit an ARIMA model to each TS. Remove auto correlations  (thus, isolates residuals for each series)</li>
-<li>Compute Cross-Correlation of Residuals. <abbr title="Cross-Correlation Function">CCF</abbr> represents relationship between unexplained changes in one series and past of another.</li>
+<li><strong>Pre-whiten Each Series</strong>: Fit an ARIMA model to each time series and remove autocorrelations. This isolates the residuals (white noise) for each series.</li>
+<li><strong>Compute Cross-Correlation of Residuals</strong>: The <strong>Cross-Correlation Function (<abbr title="Cross-Correlation Function">CCF</abbr>)</strong> then represents the relationship between the unexplained changes in one series and the past of another.</li>
 </ol>
-</li>
-</ul>
-<div class="arithmatex">\[
-\begin{align}
- H_{0} &amp; : \text{No Causality, cross-correlation} = 0 \\
- H_{1} &amp; : \text{Causality exists. CC insignificant} \\
-\end{align}
-\]</div>
-<ul>
-<li>Test statistic<ul>
-<li>Sum of Cross-Correlations up to specified lag <span class="arithmatex">\(K\)</span> (maximum lag of interest)</li>
-<li><span class="arithmatex">\(Q = T \sum_{k=1}^{N}\hat{\rho}_{XY}(k)^{2}\)</span><ul>
-<li><span class="arithmatex">\(T\)</span> is number of observations</li>
-<li><span class="arithmatex">\(\hat{\rho}_{XY}(k)\)</span> is the cross-correlation at lag <span class="arithmatex">\(k\)</span></li>
-<li>follows <span class="arithmatex">\(\chi^{2}\)</span> distribution with <span class="arithmatex">\(K\)</span>-d.f.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">¶</a></h4>
-<ul>
-<li>Stationarity</li>
-<li>Model assumptions: appropriateness of A</li>
-</ul>
+<p><strong>Hypotheses:</strong><br>
+- <span class="arithmatex">\(H_{0}\)</span>: No Causality (cross-correlation = 0).<br>
+- <span class="arithmatex">\(H_{1}\)</span>: Causality exists (cross-correlation is significant).</p>
+<p><strong>Test Statistic (<span class="arithmatex">\(Q\)</span>):</strong><br>
+It is the sum of squared cross-correlations up to a specified maximum lag <span class="arithmatex">\(K\)</span>:<br>
+$<span class="arithmatex">\(Q = T \sum_{k=1}^{K}\hat{\rho}_{XY}(k)^{2}\)</span>$<br>
+- <span class="arithmatex">\(T\)</span> is the number of observations.<br>
+- <span class="arithmatex">\(\hat{\rho}_{XY}(k)\)</span> is the cross-correlation at lag <span class="arithmatex">\(k\)</span>.<br>
+- <span class="arithmatex">\(Q\)</span> follows a <span class="arithmatex">\(\chi^{2}\)</span> distribution with <span class="arithmatex">\(K\)</span> degrees of freedom.</p>
+<hr>
 <h3 id="hsiao-procedure">Hsiao Procedure<a class="headerlink" href="#hsiao-procedure" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>"H" is silent… "Siao"</p>
-</blockquote>
-<p>Cheng Hsiao in 1981.</p>
+<div class="admonition note">
+<p class="admonition-title">Pronunciation</p>
+<p>The "H" is silent, so it is pronounced "<strong>Siao</strong>."</p>
+</div>
+<p>Introduced by Cheng Hsiao in 1981, this procedure was designed to overcome limitations of traditional Granger causality tests, especially regarding <strong>lag selection</strong>.</p>
 <ul>
-<li>To overcome some limitations of traditional Granger causality tests</li>
-<li>Especially useful for <strong>lag selection</strong> in TS data</li>
-<li>A more adaptable way to determine causal relationships</li>
-<li>Combines Akaike's Final Prediction Error (FPE) criterion + traditional Granger causality test</li>
+<li><strong>Adaptability</strong>: Provides a more systematic way to determine causal relationships.</li>
+<li><strong><abbr title="Final Prediction Error">FPE</abbr> Criterion</strong>: It combines <strong>Akaike's Final Prediction Error (<abbr title="Final Prediction Error">FPE</abbr>)</strong> criterion with the traditional test.</li>
+<li><strong>Motivation</strong>: It balances model fit and complexity to ensure the resulting lag structure is both accurate and parsimonious.</li>
 </ul>
-<h4 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">¶</a></h4>
-<ul>
-<li>Systematically determines best lag structure</li>
-<li>FPE criterion balances model fit and complexity <span class="arithmatex">\(\implies\)</span>  accurate and parsimonious</li>
-</ul>
+<hr>
 
 
 

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9254,10 +9254,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#normality-of-errors" class="md-nav__link">
+  <a href="#1-normality-of-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Normality of Errors
+        1. Normality of Errors
       
     </span>
   </a>
@@ -9265,10 +9265,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#detection-of-serial-correlation" class="md-nav__link">
+  <a href="#2-detection-of-serial-correlation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Detection of Serial Correlation
+        2. Detection of Serial Correlation
       
     </span>
   </a>
@@ -9298,7 +9298,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9850,7 +9850,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10938,7 +10938,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12757,111 +12757,51 @@
 
 <!-- Markdown content -->
 <h1 id="diagnostic-checking">Diagnostic Checking<a class="headerlink" href="#diagnostic-checking" title="Permanent link">¶</a></h1>
+<p>Following <strong>Model Identification</strong> <a href="../L16__Model%20Identification/">L16__Model Identification</a> and <strong>Model Estimation</strong> <a href="../L17__Model%20Estimation/">L17__Model Estimation</a>, the diagnostic stage is crucial to:<br>
+* <strong>Check the Goodness of Fit:</strong> Ensure the model accurately represents the underlying data structure.<br>
+* <strong>Validate Error Assumptions:</strong> Verify that the residuals (errors) satisfy the theoretical assumptions required for reliable forecasting.</p>
+<hr>
+<h3 id="1-normality-of-errors">1. Normality of Errors<a class="headerlink" href="#1-normality-of-errors" title="Permanent link">¶</a></h3>
+<p>We assume that errors follow a normal distribution (<span class="arithmatex">\(e_{t} \sim \mathcal{N}(0, \sigma_{e}^{2})\)</span>). Several methods are used to verify this:</p>
 <ul>
-<li>We did <a href="../L16__Model%20Identification/">L16__Model Identification</a> and <a href="../L17__Model%20Estimation/">L17__Model Estimation</a>. Now we need to<ul>
-<li>check the goodness of fit</li>
-<li>check the validity of assumptions (on errors)</li>
+<li><strong>Visual Tools:</strong><ul>
+<li><strong>Histogram:</strong> Plot the standardized residuals (<span class="arithmatex">\(\frac{\hat{e}_{t}}{\sigma_{e}}\)</span>) to check for a bell-shaped curve.</li>
+<li><strong>Normal Q-Q Plots:</strong> Plot theoretical quantiles (Standard Normal) against actual sample quantiles. A straight line indicates normality.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984649984.webp" data-desc-position="bottom"><img alt="L18__Diagnostic Checking - 1-1768984649984.webp" src="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984649984.webp"></a><br>
+<em>Above: Normality holds true.</em><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984671799.webp" data-desc-position="bottom"><img alt="L18__Diagnostic Checking - 1-1768984671799.webp" src="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984671799.webp"></a><br>
+<em>Above: Normality does not hold.</em></li>
 </ul>
 </li>
-<li>Then do forecasting</li>
+<li><strong>Statistical Summaries:</strong> Using Tukey's "five-number summary," we check if the distribution matches normal parameters (Skewness <span class="arithmatex">\(\approx 0\)</span>, Kurtosis <span class="arithmatex">\(\approx 3\)</span>, Excess Kurtosis <span class="arithmatex">\(\approx 0\)</span>). Note that small sample sizes may appear skewed even if drawn from a normal distribution.</li>
 </ul>
-<h3 id="normality-of-errors">Normality of Errors<a class="headerlink" href="#normality-of-errors" title="Permanent link">¶</a></h3>
+<h4 id="jarque-bera-jb-test">Jarque-Bera (JB) Test<a class="headerlink" href="#jarque-bera-jb-test" title="Permanent link">¶</a></h4>
+<p>This test assesses whether the skewness (<span class="arithmatex">\(\beta_{1}\)</span>) and excess kurtosis (<span class="arithmatex">\(\hat{\beta}_{2} - 3\)</span>) are collectively zero.<br>
+$<span class="arithmatex">\(JB = \dfrac{n}{6} \left[ \beta_{1}^{2} + \dfrac{(\hat{\beta}_{2}- 3)^{2}}{4}\right] \sim \chi_{2}^{2}\)</span>$<br>
+* <strong><span class="arithmatex">\(H_{0}\)</span>:</strong> Errors are normally distributed.<br>
+* <strong><span class="arithmatex">\(H_{a}\)</span>:</strong> Errors are not normally distributed.</p>
+<h4 id="shapiro-wilk-test">Shapiro-Wilk Test<a class="headerlink" href="#shapiro-wilk-test" title="Permanent link">¶</a></h4>
+<p>This test utilizes order statistics (<span class="arithmatex">\(x_{(i)}\)</span>) and specific constants (<span class="arithmatex">\(a_{i}\)</span>) to check for normality:<br>
+$<span class="arithmatex">\(W = \dfrac{\left( \sum_{i=1}^n a_{i}x_{(i)} \right)^{2}}{\sum(x_{i}- \bar{x})^{2}}\)</span>$<br>
+* <strong>Decision Rule:</strong> Reject the null hypothesis of normality if the <span class="arithmatex">\(W\)</span> statistic is too small.</p>
+<hr>
+<h3 id="2-detection-of-serial-correlation">2. Detection of Serial Correlation<a class="headerlink" href="#2-detection-of-serial-correlation" title="Permanent link">¶</a></h3>
+<p><strong>Serial Autocorrelation</strong> occurs when residuals are correlated with their own lagged values, suggesting that the model has not captured all the systematic information in the data.</p>
 <ul>
-<li>
-<p>How to check if the errors are normal?</p>
-<ul>
-<li>Check the histogram of the standardized residual, <span class="arithmatex">\(\dfrac{\hat{e}_{t}}{\sigma_{e}^{2}}\)</span></li>
-<li>Draw normal Q-Q plots</li>
-<li>Look at Tukey's "five number summary" to check for normality<ul>
-<li>Skewness = 0?</li>
-<li>Kurtosis = 3?</li>
-<li>Excess kurtosis = 0?</li>
+<li><strong><abbr title="Autocorrelation Function">ACF</abbr> Plot of Residuals:</strong> If spikes in the <abbr title="Autocorrelation Function">ACF</abbr> plot exceed confidence bands, serial correlation is present.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984717059.webp" data-desc-position="bottom"><img alt="L18__Diagnostic Checking - 1-1768984717059.webp" src="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984717059.webp"></a><br>
+<em>Above: Patterns in correlations indicate that current errors are related to past or future errors.</em></li>
 </ul>
-</li>
-<li>Hypothesis tests<ul>
-<li>Shapiro-Wilk</li>
-<li>Jarque-Bera</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>If the sample size is relatively small, then the simulated distribution will be skewed even if it is drawn from a normal distribution.</p>
-</li>
-</ul>
-<h4 id="jarque-bera-test">Jarque-Bera Test<a class="headerlink" href="#jarque-bera-test" title="Permanent link">¶</a></h4>
-<ul>
-<li>Tests whether skewness or excess kurtosis are collectively equal to 0 or not?</li>
-<li><span class="arithmatex">\(\beta_{1}\)</span>  = skewness</li>
-<li><span class="arithmatex">\(\beta_{2}\)</span> = kurtosis</li>
-</ul>
-<div class="arithmatex">\[
-JB = \dfrac{n}{2} \left[ \beta_{1}^{2} + \dfrac{(\hat{\beta}_{2}- 3)^{2}}{4}\right] \sim \chi_{2}^{2}
-\]</div>
-<p>The Hypothesis Setup</p>
-<div class="arithmatex">\[
-\begin{matrix}
-H_{0}  : &amp;  \text{Normality} \\
-H_{\alpha}  : &amp;  \text{Non-Normality}
-\end{matrix}
-\]</div>
-<h4 id="shapiro-wilk-test">Shapiro Wilk Test<a class="headerlink" href="#shapiro-wilk-test" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-W = \dfrac{\left( \sum_{i=1}^n a_{i}x_{(i)} \right)^{2}}{\sum(x_{i}- \bar{x})^{2}}
-\]</div>
-<p>where,</p>
-<ul>
-<li><span class="arithmatex">\(a_{i}\)</span> are constants</li>
-<li><span class="arithmatex">\(x_{(i)}\)</span> denote order statistics.</li>
-</ul>
-<p>Reject <strong>normality</strong> if <span class="arithmatex">\(W\)</span> is too small.</p>
-<h4 id="normal-q-q-plots">Normal Q-Q Plots<a class="headerlink" href="#normal-q-q-plots" title="Permanent link">¶</a></h4>
-<ul>
-<li>95th quantile (95% of the values are smaller than this 95% quantile)</li>
-<li>X-axis: Theoretical quantiles (assuming standard normal distribution)</li>
-<li>Y-axis: Actual quantiles from the sample distribution.</li>
-</ul>
-<blockquote>
-<p>If the graph shows a straight line then normality holds true.</p>
-</blockquote>
-<p>Normality holds:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984649984.webp" data-desc-position="bottom"><img alt="L18__Diagnostic Checking - 1-1768984649984.webp" src="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984649984.webp"></a></p>
-<p>Normality doesn't  hold:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984671799.webp" data-desc-position="bottom"><img alt="L18__Diagnostic Checking - 1-1768984671799.webp" src="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984671799.webp"></a></p>
-<h3 id="detection-of-serial-correlation">Detection of Serial Correlation<a class="headerlink" href="#detection-of-serial-correlation" title="Permanent link">¶</a></h3>
-<p>"Serial autocorrelation": Residuals are found to be correlated with their own lagged values.</p>
-<p>Draw the ACF plot:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984717059.webp" data-desc-position="bottom"><img alt="L18__Diagnostic Checking - 1-1768984717059.webp" src="../../../../assets/images/2026/01/L18__Diagnostic%20Checking%20-%201-1768984717059.webp"></a></p>
-<p>If there is this kind of pattern in correlations, we can say that there is serial autocorrelation (current error and one error in the future and the past are correlated).</p>
 <h4 id="box-pierce-test">Box-Pierce Test<a class="headerlink" href="#box-pierce-test" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-H_{0}: \text{data are independent (no correlation)}
-\]</div>
-<p><span class="arithmatex">\(h\)</span> is the number of lags up to which we would check for.</p>
-<ul>
-<li>
-<div class="arithmatex">\[
-Q_{BP} = n \sum_{k=1}^h \hat{\rho}_{k}^{2}
-\]</div>
-</li>
-</ul>
-<p>If <span class="arithmatex">\(Q_{BP} \gt \chi_{1-\alpha,2}^2\)</span></p>
-<ul>
-<li>reject null <span class="arithmatex">\(\implies\)</span>  Autocorrelation in residuals</li>
-<li>recheck model → Better add another lag in either AR or MA part of the model.</li>
-</ul>
+<p>Used to test if a group of autocorrelations (up to lag <span class="arithmatex">\(h\)</span>) is significantly different from zero.<br>
+* <strong><span class="arithmatex">\(H_{0}\)</span>:</strong> Residuals are independent (no correlation).<br>
+* <strong>Statistic:</strong> <span class="arithmatex">\(Q_{BP} = n \sum_{k=1}^h \hat{\rho}_{k}^{2}\)</span><br>
+* <strong>Action:</strong> If <span class="arithmatex">\(Q_{BP} &gt; \chi_{1-\alpha, h}^2\)</span>, reject <span class="arithmatex">\(H_{0}\)</span>. You may need to add another lag to the AR or MA part of your model.</p>
 <h4 id="ljung-box-modified-test">Ljung-Box Modified Test<a class="headerlink" href="#ljung-box-modified-test" title="Permanent link">¶</a></h4>
-<ul>
-<li><span class="arithmatex">\(n\)</span> is the sample size, <span class="arithmatex">\(h\)</span> is the number of lags being tested</li>
-<li>Mostly same as <a href="#box-pierce-test">#Box-Pierce Test</a></li>
-<li>Modified by Ljung and Box in 1978.<ul>
-<li><span class="arithmatex">\(n^{2}\)</span> and <span class="arithmatex">\(n-k\)</span> in denominator</li>
-</ul>
-</li>
-</ul>
-<div class="arithmatex">\[
-Q_{LB} = n^{2} \sum_{k=1}^h \dfrac{\hat{\rho}_{k}^{2}}{n-k}
-\]</div>
+<p>A more robust version of the Box-Pierce test, modified in 1978 to perform better with smaller sample sizes.<br>
+$<span class="arithmatex">\(Q_{LB} = n^{2} \sum_{k=1}^h \dfrac{\hat{\rho}_{k}^{2}}{n-k}\)</span>$<br>
+* The setup remains the same as the Box-Pierce test, but the formula accounts for the sample size (<span class="arithmatex">\(n\)</span>) and lag (<span class="arithmatex">\(k\)</span>) more precisely in the denominator.</p>
+<hr>
 
 
 
@@ -12914,13 +12854,13 @@ Q_{LB} = n^{2} \sum_{k=1}^h \dfrac{\hat{\rho}_{k}^{2}}{n-k}
         
         
           
-          <a href="../L19__Diagnostic%20Checking%20-%202/" class="md-footer__link md-footer__link--next" aria-label="Next: L19  Diagnostic Checking   2">
+          <a href="../L19__Diagnostic%20Checking%20-%202/" class="md-footer__link md-footer__link--next" aria-label="Next: Detecting Heteroscedasticity">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                L19  Diagnostic Checking   2
+                Detecting Heteroscedasticity
               </div>
             </div>
             <div class="md-footer__button md-icon">

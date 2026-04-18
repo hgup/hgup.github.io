@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9781,7 +9781,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -9862,10 +9862,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#cross-covariance-matrix" class="md-nav__link">
+  <a href="#1-fundamentals-random-vectors-and-dispersion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cross Covariance Matrix
+        1. Fundamentals: Random Vectors and Dispersion
       
     </span>
   </a>
@@ -9873,10 +9873,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stationary-multivariate-time-series" class="md-nav__link">
+  <a href="#2-stationary-multivariate-time-series" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stationary Multivariate Time Series
+        2. Stationary Multivariate Time Series
       
     </span>
   </a>
@@ -9884,10 +9884,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moments-of-the-process" class="md-nav__link">
+  <a href="#3-cross-covariance-and-correlation-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Moments of the Process
+        3. Cross-Covariance and Correlation Functions
       
     </span>
   </a>
@@ -9895,21 +9895,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cross-covariance-cross-correlation_1" class="md-nav__link">
+  <a href="#4-vector-white-noise-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cross Covariance &amp; Cross Correlation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vector-white-noise-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vector White Noise Process
+        4. Vector White Noise Process
       
     </span>
   </a>
@@ -10971,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12790,93 +12779,47 @@
 
 <!-- Markdown content -->
 <h1 id="cross-covariance-cross-correlation">Cross-covariance &amp; Cross-correlation<a class="headerlink" href="#cross-covariance-cross-correlation" title="Permanent link">¶</a></h1>
+<p>Understanding the relationship between multiple time series requires extending the univariate concepts of covariance and correlation into a matrix framework. This allows us to capture dependencies both within a single series and between different series at various lags.</p>
+<h3 id="1-fundamentals-random-vectors-and-dispersion">1. Fundamentals: Random Vectors and Dispersion<a class="headerlink" href="#1-fundamentals-random-vectors-and-dispersion" title="Permanent link">¶</a></h3>
+<p>A <strong>random vector</strong> is a collection of random variables. For a vector <span class="arithmatex">\(X = (X_{1}, X_{2}, \dots, X_{p})'\)</span>, we define:<br>
+* <strong>Mean Vector:</strong> The vector of expected values for each component, <span class="arithmatex">\(E(X) = (\mu_{1}, \mu_{2}, \dots, \mu_{p})'\)</span>.<br>
+* <strong>Variance-Covariance Matrix (Dispersion Matrix):</strong> Captures the variances of each variable and the covariances between all pairs:<br>
+    $<span class="arithmatex">\(\Sigma = E[(X-\mu)(X-\mu)'] = \begin{bmatrix} \sigma_{11} &amp; \dots &amp; \sigma_{1p} \\ \vdots &amp; \ddots &amp; \vdots \\ \sigma_{p1} &amp; \dots &amp; \sigma_{pp} \end{bmatrix}\)</span>$<br>
+* <strong>Cross-Covariance Matrix (<span class="arithmatex">\(\Sigma_{xy}\)</span>):</strong> Measures the relationship between two different random vectors <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>:<br>
+    $<span class="arithmatex">\(\Sigma_{xy} = E[(X-\mu_{x})(Y-\mu_{y})']\)</span>$<br>
+    The <span class="arithmatex">\(ij\)</span>-th element represents <span class="arithmatex">\(Cov(X_{i}, Y_{j})\)</span>.</p>
+<hr>
+<h3 id="2-stationary-multivariate-time-series">2. Stationary Multivariate Time Series<a class="headerlink" href="#2-stationary-multivariate-time-series" title="Permanent link">¶</a></h3>
+<p>A vector process <span class="arithmatex">\(Y_{t} = (Y_{1t}, \dots, Y_{kt})'\)</span> is <strong>strictly stationary</strong> if the joint probability distribution of any set of vectors is invariant to a time shift <span class="arithmatex">\(l\)</span>. In a stationary process:<br>
+* The <strong>Mean Vector</strong> <span class="arithmatex">\(\mu\)</span> is constant over time.<br>
+* The <strong>Covariance Matrix</strong> depends only on the lag <span class="arithmatex">\(l\)</span>, not on the absolute time <span class="arithmatex">\(t\)</span>.</p>
+<hr>
+<h3 id="3-cross-covariance-and-correlation-functions">3. Cross-Covariance and Correlation Functions<a class="headerlink" href="#3-cross-covariance-and-correlation-functions" title="Permanent link">¶</a></h3>
+<p>For a multivariate process, we distinguish between relationships within a single series and between two distinct series.</p>
+<h4 id="autocovariance-and-cross-covariance">Autocovariance and Cross-covariance<a class="headerlink" href="#autocovariance-and-cross-covariance" title="Permanent link">¶</a></h4>
 <ul>
-<li>Random variable: <span class="arithmatex">\(X_{i}\)</span></li>
-<li>Random vector: <span class="arithmatex">\(( X_{1},X_{2},\dots,X_{p} )\)</span></li>
-<li>Random vector: <span class="arithmatex">\((Y_{t},Y_{t+1},Y_{t+2},\dots,Y_{t+n})\)</span></li>
+<li><strong>Autocovariance (<span class="arithmatex">\(\gamma_{ii}(l)\)</span>):</strong> The covariance within the <span class="arithmatex">\(i\)</span>-th series at lag <span class="arithmatex">\(l\)</span>.<br>
+    $<span class="arithmatex">\(\gamma_{ii}(l) = E[(y_{it}-\mu_{i})(y_{i,t+l}- \mu_{i})]\)</span>$</li>
+<li><strong>Cross-covariance (<span class="arithmatex">\(\gamma_{ij}(l)\)</span>):</strong> The covariance between the <span class="arithmatex">\(i\)</span>-th series and the <span class="arithmatex">\(j\)</span>-th series at lag <span class="arithmatex">\(l\)</span>.<br>
+    $<span class="arithmatex">\(\gamma_{ij}(l) = E[(y_{it}-\mu_{i})(y_{j,t+l}-\mu_{j})]\)</span>$</li>
 </ul>
-<div class="arithmatex">\[
-E(X) = [E(X_{1}), E(X_{2}),\dots E(X_{p})]' = (\mu_{1},\mu_{2},\dots,\mu_{p})'
-\]</div>
-<p>The variance-covariance matrix:</p>
-<div class="arithmatex">\[
-E(X-\mu)(X-\mu)' =
-\]</div>
-<p>"Dispersion matrix"</p>
-<div class="arithmatex">\[
-\begin{bmatrix}
-\sigma_{11}  &amp; \dots  &amp; \sigma_{1p} \\
-\vdots &amp; \ddots &amp; \vdots  \\
-\sigma_{p1}  &amp; \dots  &amp; \sigma_{pp} \\
-\end{bmatrix}
-\]</div>
-<h3 id="cross-covariance-matrix">Cross Covariance Matrix<a class="headerlink" href="#cross-covariance-matrix" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-\Sigma_{xy} = E(X-\mu_{x})(Y-\mu_{y})'
-\]</div>
-<ul>
-<li><span class="arithmatex">\(ij\)</span>-th element of <span class="arithmatex">\(\Sigma_{xy}\)</span> is the covariance between <span class="arithmatex">\(X_{i}\)</span> and <span class="arithmatex">\(Y_{j}\)</span></li>
-</ul>
-<h3 id="stationary-multivariate-time-series">Stationary Multivariate Time Series<a class="headerlink" href="#stationary-multivariate-time-series" title="Permanent link">¶</a></h3>
-<ul>
-<li><span class="arithmatex">\(Y_{t} = (Y_{1t},\dots,Y_{kt})'\)</span> where <span class="arithmatex">\(t \in T \equiv (\pm 1, \pm 2,\dots)\)</span></li>
-<li><span class="arithmatex">\(Y\)</span> is a collection of different time series <span class="arithmatex">\(Y_{1}, Y_{2},\dots Y_{k}\)</span>. We are looking at the time <span class="arithmatex">\(t\)</span> value of this collection.</li>
-<li><span class="arithmatex">\(Y_{t}\)</span> is stationary if<ul>
-<li>joint probability distribution of <span class="arithmatex">\((Y_{t_{1}},Y_{t_{2}},\dots Y_{t_{n}})\)</span></li>
-<li>is the same as that of <span class="arithmatex">\((Y_{t_{1}+l},Y_{t_{2}+l},\dots Y_{t_{n}+l})\)</span></li>
-<li>for all time stamps <span class="arithmatex">\(\{ t_{1}\dots t_{n},n \}\)</span>  and all leads and lags.</li>
-</ul>
-</li>
-</ul>
-<h3 id="moments-of-the-process">Moments of the Process<a class="headerlink" href="#moments-of-the-process" title="Permanent link">¶</a></h3>
-<ul>
-<li>Mean vector <span class="arithmatex">\(E(Y_{t}) =\mu = (\mu_{1},\mu_{2},\dots, \mu_{k})'\)</span></li>
-<li>where <span class="arithmatex">\(\mu_{i}\)</span> is the mean of an individual time series part of <span class="arithmatex">\(Y_{t}\)</span></li>
-<li>Covariance matrix: <span class="arithmatex">\(E(Y_{t}-\mu)(Y_{t}-\mu)' \equiv \Sigma\)</span></li>
-</ul>
-<h3 id="cross-covariance-cross-correlation_1">Cross Covariance &amp; Cross Correlation<a class="headerlink" href="#cross-covariance-cross-correlation_1" title="Permanent link">¶</a></h3>
-<ul>
-<li>Autocovariance function for <span class="arithmatex">\(y_{it}\)</span> (one of the individual processes from <span class="arithmatex">\(Y_{t}\)</span>)</li>
-</ul>
-<div class="arithmatex">\[
-\gamma_{ii}(l) = E(y_{it}-\mu_{i})(y_{i,t+l}- \mu_{i})
-\]</div>
-<ul>
-<li>Cross covariance between <span class="arithmatex">\(y_{it}, y_{jt}\)</span> at lag <span class="arithmatex">\(l\)</span>:</li>
-</ul>
-<div class="arithmatex">\[
-\gamma_{ij}(l) = E(y_{it}-\mu_{i})(y_{j,t+l}-\mu_{j})
-\]</div>
-<ul>
-<li>Cross correlation</li>
-</ul>
-<div class="arithmatex">\[
-\rho_{ij}(l) = \dfrac{\gamma_{ij}(l)}{\{\gamma_{ii}(0)\gamma_{jj}(0)\}^{1/2}}
-\]</div>
-<ul>
-<li>Cross covariance matrix</li>
-</ul>
-<div class="arithmatex">\[
-\Gamma(l) = E(Y_{t}-\mu)(Y_{t}-\mu)'
-\]</div>
-<ul>
-<li><span class="arithmatex">\(\rho(l)=V^{1/2}\rho(l)V^{-1/2}\)</span></li>
-<li>where <span class="arithmatex">\(V = diag(\gamma_{11}(0),\gamma_{22}(0),\dots,\gamma_{kk}(0))\)</span></li>
-</ul>
-<h3 id="vector-white-noise-process">Vector White Noise Process<a class="headerlink" href="#vector-white-noise-process" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-\{ e_{t} \} \sim WN(0,\Sigma)
-\]</div>
-<p>if and only if,</p>
-<ul>
-<li><span class="arithmatex">\(e_{t}\)</span> is stationary with mean <span class="arithmatex">\(\vec{0}\)</span> and variance covariance matrix</li>
-</ul>
-<div class="arithmatex">\[
-\Gamma(k) = \begin{cases}
-\Sigma, &amp; k=0 \\
-0, &amp; \text{otherwise}
-\end{cases}
-\]</div>
+<h4 id="cross-correlation-rho_ijl">Cross-correlation (<span class="arithmatex">\(\rho_{ij}(l)\)</span>)<a class="headerlink" href="#cross-correlation-rho_ijl" title="Permanent link">¶</a></h4>
+<p>This normalizes the cross-covariance by the standard deviations of the two series:<br>
+$<span class="arithmatex">\(\rho_{ij}(l) = \dfrac{\gamma_{ij}(l)}{\sqrt{\gamma_{ii}(0)\gamma_{jj}(0)}}\)</span>$</p>
+<h4 id="matrix-representation">Matrix Representation<a class="headerlink" href="#matrix-representation" title="Permanent link">¶</a></h4>
+<p>The <strong>Cross-Covariance Matrix at lag <span class="arithmatex">\(l\)</span></strong>, denoted <span class="arithmatex">\(\Gamma(l)\)</span>, organizes all these relationships into a <span class="arithmatex">\(k \times k\)</span> matrix:<br>
+$<span class="arithmatex">\(\Gamma(l) = E[(Y_{t}-\mu)(Y_{t+l}-\mu)']\)</span>$<br>
+The corresponding <strong>Correlation Matrix</strong> <span class="arithmatex">\(\rho(l)\)</span> can be calculated as:<br>
+$<span class="arithmatex">\(\rho(l) = V^{-1/2} \Gamma(l) V^{-1/2}\)</span>$<br>
+where <span class="arithmatex">\(V = diag(\gamma_{11}(0), \gamma_{22}(0), \dots, \gamma_{kk}(0))\)</span> contains the variances of each series.</p>
+<hr>
+<h3 id="4-vector-white-noise-process">4. Vector White Noise Process<a class="headerlink" href="#4-vector-white-noise-process" title="Permanent link">¶</a></h3>
+<p>A sequence of random vectors <span class="arithmatex">\(\{ e_{t} \}\)</span> is a <strong>Vector White Noise</strong> process, denoted <span class="arithmatex">\(e_{t} \sim WN(0, \Sigma)\)</span>, if:<br>
+* <span class="arithmatex">\(E(e_{t}) = \vec{0}\)</span><br>
+* The covariance matrix <span class="arithmatex">\(\Gamma(k)\)</span> satisfies:<br>
+    $<span class="arithmatex">\(\Gamma(k) = \begin{cases} \Sigma, &amp; k=0 \\ 0, &amp; k \neq 0 \end{cases}\)</span>$<br>
+This implies that while components within the same vector <span class="arithmatex">\(e_{t}\)</span> can be correlated (via <span class="arithmatex">\(\Sigma\)</span>), there is no correlation between vectors at different time points.</p>
+<hr>
 
 
 
@@ -12912,7 +12855,7 @@ E(X-\mu)(X-\mu)' =
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L31__Multivariate%20Time%20Series%20Analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multivariate TS Analysis">
+          <a href="../L31__Multivariate%20Time%20Series%20Analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multivariate Time Series Analysis">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12922,7 +12865,7 @@ E(X-\mu)(X-\mu)' =
                 Previous
               </span>
               <div class="md-ellipsis">
-                Multivariate TS Analysis
+                Multivariate Time Series Analysis
               </div>
             </div>
           </a>

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10470,6 +10470,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#properties-of-volatility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties of Volatility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing Variance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conditional-unconditional-variance" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -10484,7 +10506,7 @@
   <a href="#stylized-facts-of-asset-returns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stylized facts of Asset Returns
+        Stylized Facts of Asset Returns
       
     </span>
   </a>
@@ -10949,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12768,114 +12790,77 @@
 
 <!-- Markdown content -->
 <h1 id="stochastic-volatility-modelling">Stochastic Volatility Modelling<a class="headerlink" href="#stochastic-volatility-modelling" title="Permanent link">¶</a></h1>
+<p>While ARIMA models describe the <strong>mean development</strong> of a time series, stochastic volatility models focus on the evolution of variance (risk) over time. This is particularly crucial for financial indices like the <strong><abbr title="Volatility Index">VIX</abbr> Index</strong> or daily returns of the <strong><abbr title="New York Stock Exchange">NYSE</abbr> Composite Index</strong>.</p>
+<h3 id="properties-of-volatility">Properties of Volatility<a class="headerlink" href="#properties-of-volatility" title="Permanent link">¶</a></h3>
 <ul>
-<li>
-<p>ARIMA models: describe the <strong>mean development</strong> of time series</p>
-</li>
-<li>
-<p>Example</p>
+<li><strong>Volatility Clusters:</strong> High volatility tends to be followed by high volatility, and low by low.</li>
+<li><strong>Continuity:</strong> Volatility usually evolves in a continuous manner without sudden jumps.</li>
+<li><strong>Stationarity:</strong> It is often stationary, varying within fixed limits rather than diverging to infinity.</li>
+<li><strong>Leverage Effect:</strong> Volatility reacts differently to price rises and drops; big price drops typically have a significantly greater impact on volatility than corresponding rises.</li>
+</ul>
+<h3 id="changing-variance">Changing Variance<a class="headerlink" href="#changing-variance" title="Permanent link">¶</a></h3>
 <ul>
-<li>VIX Index</li>
-<li>Daily returns of NYSE Composite Index</li>
+<li><strong>Heteroscedastic:</strong> Non-constant variance. In finance, this often follows a mixture of normal distributions, leading to <strong>heavy-tailed</strong> or outlier-prone (leptokurtic) probability distributions.</li>
+<li><strong>Homoscedastic:</strong> Constant variance over time.</li>
 </ul>
-</li>
-<li>
-<p>Properties</p>
-<ul>
-<li>Volatility clusters exist (higher and low periods)</li>
-<li>Volatility evolves over time in a continuous manner (no jumps)</li>
-<li>Volatility is often stationary and doesn't diverge to infinity (varies within fixed limits)</li>
-<li>Big price drops have a greater impact on volatility. Leverage effect (volatility reacts differently to rise and drops)</li>
-</ul>
-</li>
-<li>
-<p>Changing variance</p>
-<ul>
-<li>Heteroscedastic <span class="arithmatex">\(\implies\)</span> non-constant variance, follows a mixture of normal distribution <span class="arithmatex">\(\implies\)</span> it will follow a heavy-tailed or outlier-prone (more outliers) probability distribution</li>
-<li>Homoscedastic</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>Key distinction is between conditional and unconditional variance</p>
-</blockquote>
+<hr>
 <h3 id="conditional-unconditional-variance">Conditional &amp; Unconditional Variance<a class="headerlink" href="#conditional-unconditional-variance" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Var(X) = E[X - E(X)]^{2}
-\]</div>
-<ul>
-<li>Given a model and an information set <span class="arithmatex">\(\Omega\)</span></li>
-</ul>
-<div class="arithmatex">\[
-Cond\ Var(X) = E[X - E(X|\Omega)]^{2}
-\]</div>
-<h3 id="stylized-facts-of-asset-returns">Stylized facts of Asset Returns<a class="headerlink" href="#stylized-facts-of-asset-returns" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>Facts that can be evidently observed everywhere but cannot be proved. "This is how it is"</p>
-</blockquote>
+<p>The key distinction in volatility modelling is between these two types of variance:</p>
+<p><strong>Unconditional Variance:</strong><br>
+The overall variance of the series without considering time-specific information.<br>
+$<span class="arithmatex">\(Var(X) = E[X - E(X)]^{2}\)</span>$</p>
+<p><strong>Conditional Variance:</strong><br>
+The variance at a specific time <span class="arithmatex">\(t\)</span>, given a model and an information set <span class="arithmatex">\(\Omega\)</span> (past observations).<br>
+$<span class="arithmatex">\(Cond\ Var(X) = E[X - E(X|\Omega)]^{2}\)</span>$</p>
+<hr>
+<h3 id="stylized-facts-of-asset-returns">Stylized Facts of Asset Returns<a class="headerlink" href="#stylized-facts-of-asset-returns" title="Permanent link">¶</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Stylized facts are empirical findings that are so consistently observed across different markets and instruments that they are accepted as truths, even if they cannot be formally "proven."</p>
+</div>
 <table>
 <thead>
 <tr>
-<th>Stylized Fact</th>
-<th>What?</th>
-<th></th>
+<th style="text-align: left;">Stylized Fact</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Thick Tails</td>
-<td>leptokurtic</td>
-<td></td>
+<td style="text-align: left;"><strong>Thick Tails</strong></td>
+<td style="text-align: left;">Returns are <strong>leptokurtic</strong>, meaning extreme outcomes (outliers) happen more often than a normal distribution would predict.</td>
 </tr>
 <tr>
-<td>Leverage Effects</td>
-<td>change in stock prices to be negatively correlated with change in volatility</td>
-<td></td>
+<td style="text-align: left;"><strong>Leverage Effects</strong></td>
+<td style="text-align: left;">Changes in stock prices are negatively correlated with changes in volatility; when prices fall, volatility usually spikes.</td>
 </tr>
 <tr>
-<td>Non-trading period effects</td>
-<td>when market closes, information seems to accumulate at different rate (Information accumulates differently over the weekends)</td>
-<td></td>
+<td style="text-align: left;"><strong>Non-trading Period Effects</strong></td>
+<td style="text-align: left;">Information accumulates at different rates when markets are closed (e.g., weekends vs. weekdays).</td>
 </tr>
 <tr>
-<td>Forecastable events</td>
-<td>When the market opens for a day (the asset price is extremely volatile), or when an announcement happens.</td>
-<td></td>
+<td style="text-align: left;"><strong>Forecastable Events</strong></td>
+<td style="text-align: left;">Volatility spikes predictably during market openings or scheduled economic announcements.</td>
 </tr>
 <tr>
-<td>Volatility and serial correlation</td>
-<td>There is a suggestion of an inverse relationship between the two</td>
-<td></td>
+<td style="text-align: left;"><strong>Volatility and Serial Correlation</strong></td>
+<td style="text-align: left;">There is a suggested inverse relationship between volatility and the degree of serial correlation in returns.</td>
 </tr>
 <tr>
-<td>Co-movements in volatility</td>
-<td>High volatility is positively correlated across assets of the same class.</td>
-<td></td>
+<td style="text-align: left;"><strong>Co-movements in Volatility</strong></td>
+<td style="text-align: left;">High volatility is positively correlated across assets of the same class (e.g., if one tech stock is volatile, others likely are too).</td>
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="types-of-volatility">Types of Volatility<a class="headerlink" href="#types-of-volatility" title="Permanent link">¶</a></h3>
 <ul>
-<li>Historical Volatility<ul>
-<li>Measure of volatility calculated using the past data</li>
+<li><strong>Historical Volatility:</strong> A measure calculated using past realized data.</li>
+<li><strong>Implied Volatility:</strong> Derived from option pricing models (like Black-Scholes). It represents the market's <strong>expectations</strong> of future volatility.</li>
+<li><strong>Volatility Clustering:</strong> The tendency of large changes to follow large changes. This is the primary motivation for <strong><abbr title="Autoregressive Conditional Heteroscedasticity">ARCH</abbr> and <abbr title="Generalized Autoregressive Conditional Heteroscedasticity">GARCH</abbr></strong> models.</li>
+<li><strong>Realized Volatility:</strong> The actual volatility observed over a past period, often estimated using high-frequency (intra-day) data.</li>
 </ul>
-</li>
-<li>Implied Volatility<ul>
-<li>derived from option pricing models (Black-Scholes)</li>
-<li>market's <strong>expectations</strong> to capture future volatility</li>
-</ul>
-</li>
-<li>Volatility clustering<ul>
-<li>periods of high volatility followed by periods of low volatility</li>
-<li>ARCH and GARCH</li>
-</ul>
-</li>
-<li>Realized volatility<ul>
-<li>actual volatility observed over a past period data</li>
-<li>Can be estimated using high-frequency data</li>
-</ul>
-</li>
-</ul>
+<hr>
 
 
 

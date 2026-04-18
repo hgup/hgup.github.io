@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10749,10 +10749,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-star-model" class="md-nav__link">
+  <a href="#the-star-model-smooth-transition-autoregressive" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The STAR Model
+        The STAR Model (Smooth Transition Autoregressive)
       
     </span>
   </a>
@@ -10771,10 +10771,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#steps-in-model-building" class="md-nav__link">
+  <a href="#the-setar-model-self-exciting-tar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Steps in Model Building
+        The SETAR Model (Self-Exciting TAR)
       
     </span>
   </a>
@@ -10782,21 +10782,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setar" class="md-nav__link">
+  <a href="#specialized-extensions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SETAR
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extensions-of-setar-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extensions of SETAR Model
+        Specialized Extensions
       
     </span>
   </a>
@@ -10982,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12801,155 +12790,62 @@
 
 <!-- Markdown content -->
 <h1 id="nonlinear-model-extensions">Nonlinear Model Extensions<a class="headerlink" href="#nonlinear-model-extensions" title="Permanent link">¶</a></h1>
-<blockquote>
-<p><abbr title="Threshold Autoregressive">TAR</abbr> was basic, we will extend it further now</p>
-</blockquote>
+<p>Building on the basic Threshold Autoregressive (<abbr title="Threshold Autoregressive">TAR</abbr>) framework, we can extend these models to handle more specific behaviors, such as self-exciting dynamics, momentum-based triggers, and smooth transitions between states.</p>
 <h3 id="extensions-of-the-tar-model">Extensions of the <abbr title="Threshold Autoregressive">TAR</abbr> Model<a class="headerlink" href="#extensions-of-the-tar-model" title="Permanent link">¶</a></h3>
 <ul>
-<li><abbr title="Self-Exciting TAR">SETAR</abbr>: threshold variable is the TS itself (<span class="arithmatex">\(y_{t-d}\)</span>)</li>
-<li><abbr title="Momentum TAR">MTAR</abbr>: uses difference or <strong>momentum</strong> (<span class="arithmatex">\(\Delta y_{t-d}\)</span>) as threshold</li>
-<li>Multiple thresholds: more than two regimes</li>
-<li><abbr title="Smooth Transition Autoregressive">STAR</abbr>: Transition between regimes are smooth<ul>
-<li>modelled using logistic or exponential transition functions</li>
-<li>see <a href="../L52__Regimes%20and%20Nonlinear%20Models/#smooth-transition-regimes">Smooth Transition Regimes</a></li>
+<li><strong><abbr title="Self-Exciting TAR">SETAR</abbr></strong>: The threshold variable is the time series itself (<span class="arithmatex">\(y_{t-d}\)</span>). It "excites" its own regime changes.</li>
+<li><strong><abbr title="Momentum TAR">MTAR</abbr></strong>: Uses the difference or <strong>momentum</strong> (<span class="arithmatex">\(\Delta y_{t-d}\)</span>) as the threshold variable. Useful for capturing asymmetrical responses to price movements.</li>
+<li><strong>Multiple Thresholds</strong>: Models that allow for more than two regimes (e.g., Low, Medium, and High volatility states).</li>
+<li><strong><abbr title="Smooth Transition Autoregressive">STAR</abbr></strong>: Transitions between regimes are smooth rather than abrupt, modeled using continuous transition functions.</li>
 </ul>
-</li>
-</ul>
-<h3 id="the-star-model">The <abbr title="Smooth Transition Autoregressive">STAR</abbr> Model<a class="headerlink" href="#the-star-model" title="Permanent link">¶</a></h3>
-<ul>
-<li>Transition across regimes happen smoothly rather than abruptly as in <abbr title="Threshold Autoregressive">TAR</abbr></li>
-<li>Key features<ul>
-<li>Smooth regime transition</li>
-<li>has a Transition Function (logistic, exponential <span class="arithmatex">\(\implies\)</span> smoothness and location of transition)</li>
-<li>Flexibility (simplicity of linear model, with ability to model nonlinear dynamics across regimes)</li>
-</ul>
-</li>
-<li>Model formulation</li>
-</ul>
-<div class="arithmatex">\[
-y_{t} = \phi_{0} + \phi_{1} y_{t-1} + \dots + \phi_{p} y_{t-p} + G(z_{t-d};\gamma,c)(\psi_{0}+ \psi_{1}y_{t-1}+\dots + \psi_{p}y_{t-p}) + e_{t}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(\psi_{i}\)</span> are parameters for the second regime</li>
-</ul>
-<h3 id="transition-functions">Transition Functions<a class="headerlink" href="#transition-functions" title="Permanent link">¶</a></h3>
-<h4 id="logistic-transition-function">Logistic Transition Function<a class="headerlink" href="#logistic-transition-function" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-G(z_{t-d}; \gamma,c) = \dfrac{1}{1+e^{ -\gamma(z_{t-d}-c) }}
-\]</div>
-<ul>
-<li>Behavior<ul>
-<li><span class="arithmatex">\(G \to 0\)</span> <span class="arithmatex">\(z_{t-d}\)</span> is far below <span class="arithmatex">\(c\)</span> (not happening)</li>
-<li><span class="arithmatex">\(G \to 1\)</span> <span class="arithmatex">\(z_{t-d}\)</span> is far above <span class="arithmatex">\(c\)</span> (transition is happening)</li>
-</ul>
-</li>
-<li>Example: Gradual shifts in economic expansions</li>
-</ul>
-<h4 id="exponential-transition-function">Exponential Transition Function<a class="headerlink" href="#exponential-transition-function" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-G(z_{t-d}; \gamma,c) = {1+e^{ -\gamma(z_{t-d}-c)^{2} }}
-\]</div>
-<ul>
-<li>
-<p>Behavior</p>
-<ul>
-<li><span class="arithmatex">\(G=0;\)</span> <span class="arithmatex">\(z_{t-d} =c\)</span></li>
-<li><span class="arithmatex">\(G\to 1;\)</span> <span class="arithmatex">\(z_{t-d}\)</span> moves away in either side of <span class="arithmatex">\(c\)</span></li>
-</ul>
-</li>
-<li>
-<p>Deviation from <span class="arithmatex">\(c\)</span> is symmetric (Like a slide, go up and down)</p>
-</li>
-<li>Application: Oscillatory dynamics</li>
-</ul>
-<h3 id="steps-in-model-building">Steps in Model Building<a class="headerlink" href="#steps-in-model-building" title="Permanent link">¶</a></h3>
-<ul>
-<li>Specify the Threshold variable <span class="arithmatex">\(z_{t-d}\)</span> = <span class="arithmatex">\(y_{t-d}\)</span> or an external variable</li>
-<li>Estimate linear model<ul>
-<li>Fit a linear AR as a benchmark to test for nonlinearity</li>
-</ul>
-</li>
-<li>
-<p>Test for nonlinearity</p>
-<ul>
-<li><abbr title="Lagrange Multiplier">LM</abbr> test to justify using <abbr title="Smooth Transition Autoregressive">STAR</abbr></li>
-</ul>
-</li>
-<li>
-<p>Select the transition function</p>
-<ul>
-<li>choose between logistic or exponential based on application</li>
-</ul>
-</li>
-<li>Estimate parameters<ul>
-<li><span class="arithmatex">\(\gamma\)</span>, <span class="arithmatex">\(c\)</span> and AR coefficients</li>
-<li>using MLE, Nonlinear least squares</li>
-</ul>
-</li>
-<li>Model dynamics<ul>
-<li>residual autocorrelation, heteroscedasticity</li>
-<li>adequacy of smooth transition</li>
-</ul>
-</li>
-</ul>
-<h3 id="setar"><abbr title="Self-Exciting TAR">SETAR</abbr><a class="headerlink" href="#setar" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>SE <abbr title="Threshold Autoregressive">TAR</abbr> models</p>
-</blockquote>
-<ul>
-<li>DEFINITION: Threshold variable = <span class="arithmatex">\(y_{t-d}\)</span></li>
-<li>self-referencing nature. Regime-switching dynamics based on its own history</li>
-</ul>
+<hr>
+<h3 id="the-star-model-smooth-transition-autoregressive">The <abbr title="Smooth Transition Autoregressive">STAR</abbr> Model (Smooth Transition Autoregressive)<a class="headerlink" href="#the-star-model-smooth-transition-autoregressive" title="Permanent link">¶</a></h3>
+<p>Unlike the standard <abbr title="Threshold Autoregressive">TAR</abbr> model where the switch is instantaneous, the <abbr title="Smooth Transition Autoregressive">STAR</abbr> model allows the system to move gradually from one state to another.</p>
 <h4 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">¶</a></h4>
 <ul>
-<li>Regime-specific dynamics<ul>
-<li>based on the value of its own lags</li>
-</ul>
-</li>
-<li>Threshold Determination</li>
-<li>Piecewise linearity</li>
-<li>Flexibility</li>
+<li><strong>Smooth Regime Transition</strong>: Captures the "gray area" between states.</li>
+<li><strong>Transition Function</strong>: Uses mathematical functions (Logistic or Exponential) to define the speed (<span class="arithmatex">\(\gamma\)</span>) and location (<span class="arithmatex">\(c\)</span>) of the transition.</li>
+<li><strong>Flexibility</strong>: Combines the simplicity of a linear AR model with the power to model nonlinear dynamics across different regimes.</li>
 </ul>
 <h4 id="model-formulation">Model Formulation<a class="headerlink" href="#model-formulation" title="Permanent link">¶</a></h4>
+<p>$<span class="arithmatex">\(y_{t} = \phi_{0} + \phi_{1} y_{t-1} + \dots + \phi_{p} y_{t-p} + G(z_{t-d};\gamma,c)(\psi_{0}+ \psi_{1}y_{t-1}+\dots + \psi_{p}y_{t-p}) + e_{t}\)</span>$<br>
+* <span class="arithmatex">\(\psi_{i}\)</span> are the parameters for the second regime, weighted by the transition function <span class="arithmatex">\(G\)</span>.</p>
+<hr>
+<h3 id="transition-functions">Transition Functions<a class="headerlink" href="#transition-functions" title="Permanent link">¶</a></h3>
+<h4 id="1-logistic-transition-function-lstar">1. Logistic Transition Function (LSTAR)<a class="headerlink" href="#1-logistic-transition-function-lstar" title="Permanent link">¶</a></h4>
+<p>$<span class="arithmatex">\(G(z_{t-d}; \gamma,c) = \dfrac{1}{1+e^{ -\gamma(z_{t-d}-c) }}\)</span>$<br>
+* <strong>Behavior</strong>: As <span class="arithmatex">\(z_{t-d}\)</span> moves from far below <span class="arithmatex">\(c\)</span> to far above <span class="arithmatex">\(c\)</span>, <span class="arithmatex">\(G\)</span> moves smoothly from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(1\)</span>.<br>
+* <strong>Application</strong>: Modeling gradual shifts, such as the transition from a period of economic contraction to a period of steady expansion.</p>
+<h4 id="2-exponential-transition-function-estar">2. Exponential Transition Function (ESTAR)<a class="headerlink" href="#2-exponential-transition-function-estar" title="Permanent link">¶</a></h4>
+<p>$<span class="arithmatex">\(G(z_{t-d}; \gamma,c) = 1 - e^{-\gamma(z_{t-d}-c)^2}\)</span>$<br>
+* <strong>Behavior</strong>: <span class="arithmatex">\(G\)</span> is <span class="arithmatex">\(0\)</span> when <span class="arithmatex">\(z_{t-d} = c\)</span> and moves toward <span class="arithmatex">\(1\)</span> as the variable moves away from <span class="arithmatex">\(c\)</span> in <strong>either</strong> direction.<br>
+* <strong>Application</strong>: Modeling oscillatory dynamics where the behavior is the same for large positive and large negative deviations (symmetry).</p>
+<hr>
+<h3 id="the-setar-model-self-exciting-tar">The <abbr title="Self-Exciting TAR">SETAR</abbr> Model (Self-Exciting <abbr title="Threshold Autoregressive">TAR</abbr>)<a class="headerlink" href="#the-setar-model-self-exciting-tar" title="Permanent link">¶</a></h3>
+<p>The <abbr title="Self-Exciting TAR">SETAR</abbr> model is a "self-referencing" system where the regime-switching dynamics are based entirely on the series' own historical values.</p>
+<h4 id="model-formulation_1">Model Formulation<a class="headerlink" href="#model-formulation_1" title="Permanent link">¶</a></h4>
 <div class="arithmatex">\[
-y_{t} = \begin{cases}
-\phi_{1,0} + \phi_{1,1} y_{t-1} + \dots \phi_{1,p} y_{t-p} + e_{t},  &amp; \text{if } y_{t-d} \le \gamma \\
-\phi_{2,0} + \phi_{2,1} y_{t-1} + \dots \phi_{2,p} y_{t-p} + e_{t},  &amp; \text{if } y_{t-d} \le \gamma \\
+y_{t} = \begin{cases} 
+\phi_{1,0} + \phi_{1,1} y_{t-1} + \dots \phi_{1,p} y_{t-p} + e_{t}, &amp; \text{if } y_{t-d} \le \gamma \\
+\phi_{2,0} + \phi_{2,1} y_{t-1} + \dots \phi_{2,p} y_{t-p} + e_{t}, &amp; \text{if } y_{t-d} &gt; \gamma 
 \end{cases}
 \]</div>
+<h4 id="model-building-steps">Model Building Steps<a class="headerlink" href="#model-building-steps" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Determine Threshold Variable</strong>: Set <span class="arithmatex">\(z_{t-d} = y_{t-d}\)</span>.</li>
+<li><strong>Lag Selection</strong>: Choose the number of regimes (<span class="arithmatex">\(k=2\)</span> or <span class="arithmatex">\(k&gt;2\)</span>) and the AR order <span class="arithmatex">\(p\)</span> for each.</li>
+<li><strong>Threshold Estimation</strong>: Use grid search or information criteria to find the optimal <span class="arithmatex">\(\gamma\)</span>.</li>
+<li><strong>Nonlinearity Testing</strong>: Perform <strong>Hansen’s test</strong> to confirm that regime switching is statistically present (justifying the complex model over a simple linear AR).</li>
+<li><strong>Diagnostics</strong>: Check residuals for autocorrelation and perform out-of-sample forecasting to test the model's predictive power.</li>
+</ol>
+<hr>
+<h3 id="specialized-extensions">Specialized Extensions<a class="headerlink" href="#specialized-extensions" title="Permanent link">¶</a></h3>
 <ul>
-<li>
-<p>Steps</p>
-<ul>
-<li>Determine threshold values</li>
-<li>Choose number of regimes<ul>
-<li><span class="arithmatex">\(k=2\)</span> or <span class="arithmatex">\(k\gt 2\)</span></li>
+<li><strong><abbr title="Continuous SETAR">CSETAR</abbr> (Continuous <abbr title="Self-Exciting TAR">SETAR</abbr>)</strong>: Uses continuous functions to smooth the transition within the self-exciting framework.</li>
+<li><strong>Seasonal <abbr title="Self-Exciting TAR">SETAR</abbr></strong>: Accounts for seasonality by incorporating <strong>periodic thresholds</strong>, allowing the regime-switching logic to change depending on the time of year.</li>
+<li><strong><abbr title="Momentum TAR">MTAR</abbr> (Momentum <abbr title="Threshold Autoregressive">TAR</abbr>)</strong>: Specifically tracks the <em>speed</em> of change. If the series is dropping quickly (high negative momentum), it might trigger a "crash" regime.</li>
 </ul>
-</li>
-<li>Estimate the threshold</li>
-<li>Estimate parameters</li>
-<li>Test for nonlinearity<ul>
-<li>statistical test like Hansen's test to confirm presence of regime switching</li>
-</ul>
-</li>
-<li>Diagnostics<ul>
-<li>check residuals for autocorrelation</li>
-<li>Perform out-of-sample forecasting</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Advantages and challenges are the same</p>
-</li>
-</ul>
-<h3 id="extensions-of-setar-model">Extensions of <abbr title="Self-Exciting TAR">SETAR</abbr> Model<a class="headerlink" href="#extensions-of-setar-model" title="Permanent link">¶</a></h3>
-<ul>
-<li><abbr title="Self-Exciting TAR">SETAR</abbr> with multiple thresholds</li>
-<li><abbr title="Momentum TAR">MTAR</abbr></li>
-<li><abbr title="Continuous SETAR">CSETAR</abbr> (continuous <abbr title="Self-Exciting TAR">SETAR</abbr>) → Regime transition is smoothed using continuous functions</li>
-<li>Seasonal <abbr title="Self-Exciting TAR">SETAR</abbr>: Accounts for seasonality by incorporating <strong>periodic thresholds</strong></li>
-</ul>
+<hr>
 
 
 

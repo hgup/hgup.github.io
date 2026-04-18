@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10509,17 +10509,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practical-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Practical Examples
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#volatility-models" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -10553,10 +10542,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations_1" class="md-nav__link">
+  <a href="#limitations-of-arch-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limitations
+        Limitations of ARCH Models
       
     </span>
   </a>
@@ -10982,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12803,140 +12792,93 @@
 <h1 id="arch-models">ARCH Models<a class="headerlink" href="#arch-models" title="Permanent link">¶</a></h1>
 <h3 id="historical-volatility">Historical Volatility<a class="headerlink" href="#historical-volatility" title="Permanent link">¶</a></h3>
 <ul>
-<li>Historical Volatility (HV) measures variability of an asset's returns over a specific period in the past</li>
-<li>Reflects uncertainty or risk associated with price movements during a given historical period</li>
+<li><strong>Historical Volatility (<abbr title="Historical Volatility">HV</abbr>)</strong> measures the variability of an asset's returns over a specific period in the past.</li>
+<li>It reflects the uncertainty or risk associated with price movements during a given historical period.</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Situation</th>
-<th>Interpretation</th>
+<th style="text-align: left;">Situation</th>
+<th style="text-align: left;">Interpretation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>High HV</td>
-<td><span class="arithmatex">\(\implies\)</span>  Large price swings, higher level of risk</td>
+<td style="text-align: left;"><strong>High <abbr title="Historical Volatility">HV</abbr></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\implies\)</span> Large price swings, higher level of risk.</td>
 </tr>
 <tr>
-<td>Low HV</td>
-<td><span class="arithmatex">\(\implies\)</span>   Smaller price fluctuations and lower risk, stable assets (government bonds)</td>
+<td style="text-align: left;"><strong>Low <abbr title="Historical Volatility">HV</abbr></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\implies\)</span> Smaller price fluctuations and lower risk; characteristic of stable assets (e.g., government bonds).</td>
 </tr>
 <tr>
-<td>Changes in HV</td>
-<td><span class="arithmatex">\(\implies\)</span>  Sudden spikes or drops <span class="arithmatex">\(\implies\)</span> market uncertainty, upcoming events, shift in investor sentiment</td>
+<td style="text-align: left;"><strong>Changes in <abbr title="Historical Volatility">HV</abbr></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\implies\)</span> Sudden spikes or drops <span class="arithmatex">\(\implies\)</span> market uncertainty, upcoming events, or a shift in investor sentiment.</td>
 </tr>
 </tbody>
 </table>
 <h4 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h4>
 <ul>
-<li>Backward-looking<ul>
-<li>only reflects past behavior</li>
+<li><strong>Backward-looking</strong>: Only reflects past behavior.</li>
+<li><strong>Sensitivity to Time Period</strong>: Results vary significantly based on the window (e.g., 20 days vs. 100 days).</li>
+<li><strong>Outliers and Noise</strong>: Extreme events can skew the measure, making it less representative of typical asset behavior.</li>
+<li><strong>Ignores Structural Changes</strong>: Assumes the future will be identical to the past, which may not hold during regime changes or crises.</li>
 </ul>
-</li>
-<li>Sensitivity to Time Period<ul>
-<li>(20 days vs 100 days)</li>
-</ul>
-</li>
-<li>Outliers and Noise<ul>
-<li><em>makes it less representative</em> of typical asset behavior</li>
-</ul>
-</li>
-<li>Ignores Structural changes<ul>
-<li>assumes that future will be identical to past</li>
-<li>may not hold during regime changes or crises</li>
-</ul>
-</li>
-</ul>
-<h3 id="practical-examples">Practical Examples<a class="headerlink" href="#practical-examples" title="Permanent link">¶</a></h3>
-<ul>
-<li>Forecasting Future Asset prices</li>
-<li>market sentiment and behavioral finance</li>
-</ul>
+<hr>
 <h3 id="volatility-models">Volatility Models<a class="headerlink" href="#volatility-models" title="Permanent link">¶</a></h3>
-<p><span class="arithmatex">\(F_{t_{1}}\)</span> is the information set</p>
-<ul>
-<li><span class="arithmatex">\(E(y_{t}| F_{t-1}) = \mu_{t}\)</span></li>
-<li><span class="arithmatex">\(V(y_{t}| F_{t-1}) = \sigma_{t}\)</span></li>
-</ul>
-<p>Let <span class="arithmatex">\(y_{t}\)</span> follow an <span class="arithmatex">\(ARMA(p,q)\)</span> model</p>
-<div class="arithmatex">\[
-y_{t} = \mu_{t} + e_{t}
-\]</div>
-<p>with,</p>
-<div class="arithmatex">\[
-E(y_{t}| F_{t-1}) = \mu_{t} = \phi_{0} + \sum_{i=1}^{p} \phi_{i} y_{t-i} + \sum_{j=1}^{q} \theta_{j} e_{t-j}
-\]</div>
-<p>and</p>
-<div class="arithmatex">\[
-V(y_{t}| F_{t-1}) = \sigma_{t}^{2}
-\]</div>
-<p>Volatility: <span class="arithmatex">\(\sigma_{t} = + \sqrt{ \sigma_{t}^{2} }\)</span></p>
-<p>Since it evolves over time, we should model <span class="arithmatex">\(\sigma_{t}\)</span> too.</p>
-<ul>
-<li>
-<p>Classical Heteroscedastic model</p>
-<ul>
-<li>Stochastic equation to describe <span class="arithmatex">\(\sigma_{t}^{2}\)</span> → <abbr title="Stochastic Volatility">SV</abbr> Models</li>
-<li>Use an exact function to govern evolution of <span class="arithmatex">\(\sigma_{t}^{2}\)</span></li>
-<li>ARCH or GARCH</li>
-</ul>
-</li>
-<li>
-<p>Model building</p>
+<p>Let <span class="arithmatex">\(F_{t-1}\)</span> be the information set at time <span class="arithmatex">\(t-1\)</span>.<br>
+- <span class="arithmatex">\(E(y_{t}| F_{t-1}) = \mu_{t}\)</span> (Conditional Mean)<br>
+- <span class="arithmatex">\(V(y_{t}| F_{t-1}) = \sigma_{t}^2\)</span> (Conditional Variance)</p>
+<p>If <span class="arithmatex">\(y_{t}\)</span> follows an <span class="arithmatex">\(ARMA(p,q)\)</span> model:<br>
+$<span class="arithmatex">\(y_{t} = \mu_{t} + e_{t}\)</span>$<br>
+Where the mean equation is:<br>
+$<span class="arithmatex">\(E(y_{t}| F_{t-1}) = \mu_{t} = \phi_{0} + \sum_{i=1}^{p} \phi_{i} y_{t-i} + \sum_{j=1}^{q} \theta_{j} e_{t-j}\)</span>$<br>
+And the volatility is defined as: <span class="arithmatex">\(\sigma_{t} = + \sqrt{ \sigma_{t}^{2} }\)</span>.</p>
+<p>Since volatility evolves over time, we must model <span class="arithmatex">\(\sigma_{t}^2\)</span> as well.<br>
+- <strong>Stochastic Volatility (<abbr title="Stochastic Volatility">SV</abbr>) Models</strong>: Use a stochastic equation to describe <span class="arithmatex">\(\sigma_{t}^{2}\)</span>.<br>
+- <strong>ARCH/GARCH Models</strong>: Use an exact function to govern the evolution of <span class="arithmatex">\(\sigma_{t}^{2}\)</span>.</p>
+<h4 id="model-building-steps">Model Building Steps<a class="headerlink" href="#model-building-steps" title="Permanent link">¶</a></h4>
 <ol>
-<li>Specify mean equation by testing for serial dependence. Or build a time series model</li>
-<li>Use residuals to check for ARCH effects (changing variance tendencies)</li>
-<li>Specify a volatility model if ARCH effects statistically significant. <strong>Perform joint estimation</strong> of the mean  and volatility equations</li>
-<li>Perform diagnostic checks</li>
+<li><strong>Specify mean equation</strong>: Test for serial dependence or build a standard time series model.</li>
+<li><strong>Check for ARCH effects</strong>: Use the residuals from the mean equation to check for changing variance tendencies.</li>
+<li><strong>Specify Volatility Model</strong>: If ARCH effects are statistically significant, <strong>perform joint estimation</strong> of the mean and volatility equations.</li>
+<li><strong>Diagnostic Checks</strong>: Validate the model fit and residual properties.</li>
 </ol>
-</li>
-</ul>
+<hr>
 <h3 id="arch-model">ARCH Model<a class="headerlink" href="#arch-model" title="Permanent link">¶</a></h3>
-<ul>
-<li>Model TS with varying volatility</li>
-<li>
-<p><span class="arithmatex">\(e_{t} \sim e_{t-1}, e_{t-2}\dots\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(ARCH(m) \text{ model}\)</span></p>
-<ul>
-<li><span class="arithmatex">\(e_{t} = \sigma_{t}\epsilon_{t}\)</span></li>
-<li><span class="arithmatex">\(\sigma_{t}^{2} = \alpha_{0} + \alpha_{1}e^{2}_{t-1}+ .. + \alpha_{m}e^{2}_{t-m}\)</span></li>
-<li><span class="arithmatex">\(e_{t} \sim iid(0, \sigma^{2})\)</span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, <span class="arithmatex">\(\alpha_{0}\gt 0\)</span> and <span class="arithmatex">\(\alpha_{i} \geq 0\)</span> for <span class="arithmatex">\(i&gt;0\)</span></li>
-</ul>
-</li>
-<li><span class="arithmatex">\(\alpha_{i}\)</span> satisfy regularity condition so that <span class="arithmatex">\(e_{t}\)</span> is finite</li>
-<li><span class="arithmatex">\(\epsilon_{t}\)</span> follows<ul>
-<li>standard normal</li>
-<li>standardized T distribution</li>
-<li>generalized error distribution (GED)</li>
-</ul>
-</li>
-<li>Leverage effects hold under ARCH framework</li>
-</ul>
+<p>The <strong>Autoregressive Conditional Heteroscedasticity (ARCH)</strong> model is used for time series with varying volatility, where current volatility is dependent on previous shocks (<span class="arithmatex">\(e_{t-1}, e_{t-2}, \dots\)</span>).</p>
+<p><strong><span class="arithmatex">\(ARCH(m)\)</span> Model Specification:</strong><br>
+- <span class="arithmatex">\(e_{t} = \sigma_{t}\epsilon_{t}\)</span><br>
+- <span class="arithmatex">\(\sigma_{t}^{2} = \alpha_{0} + \alpha_{1}e^{2}_{t-1} + \dots + \alpha_{m}e^{2}_{t-m}\)</span><br>
+- <span class="arithmatex">\(\epsilon_{t} \sim iid(0, 1)\)</span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br>
+- Constraints: <span class="arithmatex">\(\alpha_{0} &gt; 0\)</span> and <span class="arithmatex">\(\alpha_{i} \geq 0\)</span> for <span class="arithmatex">\(i &gt; 0\)</span> to ensure positive variance.</p>
+<p><span class="arithmatex">\(\epsilon_{t}\)</span> typically follows:<br>
+- Standard Normal distribution<br>
+- Standardized T-distribution (to capture fat tails)<br>
+- Generalized Error Distribution (GED)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Leverage effects hold under the ARCH framework, though standard ARCH models treat positive and negative shocks symmetrically.</p>
+</div>
+<hr>
 <h3 id="arch1-model">ARCH(1) Model<a class="headerlink" href="#arch1-model" title="Permanent link">¶</a></h3>
+<p>The simplest form, where volatility depends only on the immediately preceding shock:<br>
+- <strong>Mean</strong>: <span class="arithmatex">\(E(e_{t})=0\)</span><br>
+- <strong>Unconditional Variance</strong>: <span class="arithmatex">\(Var(e_{t}) = \dfrac{\alpha_{0}}{1-\alpha_{1}}\)</span><br>
+- <strong>Condition</strong>: <span class="arithmatex">\(0 \leq \alpha_1 &lt; 1\)</span> for the variance to be finite and positive.</p>
+<hr>
+<h3 id="limitations-of-arch-models">Limitations of ARCH Models<a class="headerlink" href="#limitations-of-arch-models" title="Permanent link">¶</a></h3>
 <ul>
-<li>Mean, <span class="arithmatex">\(E(e_{t})=0\)</span></li>
-<li>Variance, <span class="arithmatex">\(Var(e_{t}) = \dfrac{\alpha_{0}}{1-\alpha_{1}} \geq 0\)</span> where <span class="arithmatex">\(0 \leq \alpha \leq 1\)</span></li>
+<li><strong>Symmetry</strong>: The model depends on the square of previous shocks, meaning positive and negative shocks of the same magnitude have the same effect on volatility.</li>
+<li><strong>Over-prediction</strong>: It often over-predicts volatility because it responds slowly to large, isolated "one-off" shocks.</li>
+<li><strong>Parameter Explosion</strong>: The model becomes complex and computationally expensive as the order <span class="arithmatex">\(m\)</span> increases to capture long-term persistence.</li>
 </ul>
-<h3 id="limitations_1">Limitations<a class="headerlink" href="#limitations_1" title="Permanent link">¶</a></h3>
-<ul>
-<li>Model depends on square of the previous shocks (positive and negative shocks have same effect)</li>
-<li>Often over-predicts volatility<ul>
-<li>as it responds slowly to large isolated shocks</li>
-</ul>
-</li>
-<li>Parameter explosion<ul>
-<li>model becomes complex and computationally expensive with <span class="arithmatex">\(q\)</span></li>
-</ul>
-</li>
-</ul>
+<hr>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p>By mentioning it this way, we are saying that the white noise is distribution-agnostic&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>By mentioning it this way, we are saying that the white noise is distribution-agnostic.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10799,10 +10799,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estimation" class="md-nav__link">
+  <a href="#estimation-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estimation
+        Estimation &amp; Interpretation
       
     </span>
   </a>
@@ -10810,54 +10810,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advantages-of-msm" class="md-nav__link">
+  <a href="#other-nonlinear-extensions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advantages of MSM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#challenges-in-msm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Challenges in MSM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#numerical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Numerical Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-possible-interesting-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Other Possible Interesting Extensions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#others" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Others
+        Other Nonlinear Extensions
       
     </span>
   </a>
@@ -11015,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12834,180 +12790,80 @@
 
 <!-- Markdown content -->
 <h1 id="markov-switching-models">Markov Switching Models<a class="headerlink" href="#markov-switching-models" title="Permanent link">¶</a></h1>
-<ul>
-<li><abbr title="Markov Switching Models">MSM</abbr><ul>
-<li>class of nonlinear TS models</li>
-<li>capture regime-switching behavior</li>
-<li>assuming transition between regime is governed by a <em><strong>hidden</strong> Markov process</em></li>
-</ul>
-</li>
-<li>TAR and SETAR have regime changes <em>depending on </em><em>observable variables</em>**<ul>
-<li>VS <abbr title="Markov Switching Models">MSM</abbr>, where regime switching depends on unobservable state variable</li>
-</ul>
-</li>
-</ul>
+<p>Markov Switching Models (<abbr title="Markov Switching Models">MSM</abbr>) represent a powerful class of nonlinear time series models that capture regime-switching behavior. The fundamental difference between <abbr title="Markov Switching Models">MSM</abbr> and models like TAR or SETAR is the nature of the switch: while TAR/SETAR rely on <strong>observable variables</strong> to trigger a change, <abbr title="Markov Switching Models">MSM</abbr> assumes the transition is governed by a <strong>hidden (unobservable) Markov process</strong>.</p>
 <h3 id="key-features-of-msm">Key Features of <abbr title="Markov Switching Models">MSM</abbr><a class="headerlink" href="#key-features-of-msm" title="Permanent link">¶</a></h3>
 <ul>
-<li>Regime switching</li>
-<li>Markov process<ul>
-<li>current regime depends only on previous regime<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Regime Switching</strong>: The system moves between different states (e.g., bull vs. bear markets).</li>
+<li><strong>Markov Property</strong>: The current regime depends only on the immediate previous regime.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Hidden State</strong>: The actual regime at any time <span class="arithmatex">\(t\)</span> is a latent variable that must be inferred from the data.</li>
+<li><strong>Flexibility</strong>: Capable of capturing both abrupt and relatively smooth transitions based on the estimated state transition probabilities.</li>
 </ul>
-</li>
-<li>Hidden state<ul>
-<li>regime is a latent (unobservable) variable</li>
-</ul>
-</li>
-<li>Flexibility<ul>
-<li>suitable for capturing abrupt or smooth transition, dependent on state transition probabilities</li>
-</ul>
-</li>
-</ul>
+<hr>
 <h3 id="model-formulation">Model Formulation<a class="headerlink" href="#model-formulation" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-y_{t} = \mu_{s_{t}} + \phi_{s_{t},1} y_{t-1} + \phi_{s_{t},2}y_{t-2} + \dots + \phi_{s_{t},p}y_{t-p} + e_{t}
-\]</div>
+<p>The general form of an <abbr title="Markov Switching Models">MSM</abbr> with an AR(p) structure in each regime is:</p>
+<div class="arithmatex">\[y_{t} = \mu_{s_{t}} + \phi_{s_{t},1} y_{t-1} + \dots + \phi_{s_{t},p}y_{t-p} + e_{t}\]</div>
 <ul>
-<li>where<ul>
-<li><span class="arithmatex">\(s_{t}\)</span> is the latent state (regime) taking values <span class="arithmatex">\(1,2,\dots,k\)</span></li>
-<li><span class="arithmatex">\(\mu_{s_{t}}\)</span> is a regime specific mean</li>
-<li><span class="arithmatex">\(\phi_{s_{t},i}\)</span> are AR coefficients</li>
-<li><span class="arithmatex">\(e_{t}\)</span> error terms with variance <span class="arithmatex">\(\sigma_{s_{t}}^{2}\)</span></li>
-</ul>
-</li>
+<li><strong><span class="arithmatex">\(s_{t}\)</span></strong>: The latent state (regime) taking values <span class="arithmatex">\(\{1, 2, \dots, k\}\)</span>.</li>
+<li><strong><span class="arithmatex">\(\mu_{s_{t}}\)</span></strong>: Regime-specific mean.</li>
+<li><strong><span class="arithmatex">\(\phi_{s_{t},i}\)</span></strong>: Regime-specific autoregressive coefficients.</li>
+<li><strong><span class="arithmatex">\(e_{t}\)</span></strong>: Error terms, often with regime-specific variance <span class="arithmatex">\(\sigma_{s_{t}}^{2}\)</span>.</li>
 </ul>
 <h3 id="transition-probabilities">Transition Probabilities<a class="headerlink" href="#transition-probabilities" title="Permanent link">¶</a></h3>
-<p>The regime-switching controlled by a <strong>state transition probability matrix</strong>  (<span class="arithmatex">\(P\)</span>)</p>
+<p>The movement between regimes is controlled by a <strong>State Transition Probability Matrix (<span class="arithmatex">\(P\)</span>)</strong>:</p>
 <div class="arithmatex">\[
 P = \begin{bmatrix}
-p_{11} &amp;  \dots &amp;  p_{1k} \\
-\vdots &amp; \ddots  &amp; \vdots \\
-p_{k1} &amp;  \dots &amp;  p_{kk} \\
+p_{11} &amp; \dots &amp; p_{1k} \\
+\vdots &amp; \ddots &amp; \vdots \\
+p_{k1} &amp; \dots &amp; p_{kk} \\
 \end{bmatrix}
 \]</div>
 <ul>
-<li><span class="arithmatex">\(p_{ij} = P(s_{t}= j | s_{t-1}=i)\)</span></li>
-<li>Each row of <span class="arithmatex">\(P\)</span> sums to <span class="arithmatex">\(1\)</span></li>
+<li><span class="arithmatex">\(p_{ij} = P(s_{t} = j \mid s_{t-1} = i)\)</span> represents the probability of moving from state <span class="arithmatex">\(i\)</span> to state <span class="arithmatex">\(j\)</span>.</li>
+<li><strong>Constraint</strong>: Each row must sum to <span class="arithmatex">\(1\)</span> (since the process must transition to <em>some</em> state).</li>
 </ul>
-<h3 id="estimation">Estimation<a class="headerlink" href="#estimation" title="Permanent link">¶</a></h3>
-<ul>
-<li>Likelihood function</li>
-<li>Expectation-Maximization (<abbr title="Expectation-Maximization">EM</abbr>) Algorithm<ul>
-<li>E-step = expected values of hidden states given params</li>
-<li>M-step = updates parameters to maximize expected likelihood</li>
-</ul>
-</li>
-<li>Filter and Smoother<ul>
-<li>Hamilton Filter = estimate probability of being in particular state at <span class="arithmatex">\(t\)</span></li>
-<li>Kim Filter = smooths the probability to improve state estimation</li>
+<hr>
+<h3 id="estimation-interpretation">Estimation &amp; Interpretation<a class="headerlink" href="#estimation-interpretation" title="Permanent link">¶</a></h3>
+<p>Because the states are hidden, we cannot use standard OLS. Instead, we use:</p>
+<ol>
+<li><strong>Expectation-Maximization (<abbr title="Expectation-Maximization">EM</abbr>) Algorithm</strong>:<ul>
+<li><strong>E-step</strong>: Calculate the expected values of the hidden states given the current parameters.</li>
+<li><strong>M-step</strong>: Update the parameters (<span class="arithmatex">\(\mu, \phi, \sigma\)</span>) to maximize the expected likelihood.</li>
 </ul>
 </li>
-</ul>
-<h3 id="advantages-of-msm">Advantages of <abbr title="Markov Switching Models">MSM</abbr><a class="headerlink" href="#advantages-of-msm" title="Permanent link">¶</a></h3>
-<ul>
-<li>Flexibility</li>
-<li>State dependence → improve model accuracy</li>
-<li>Latent Regime Models → infers unobservable states that drive the system</li>
-</ul>
-<h3 id="challenges-in-msm">Challenges in <abbr title="Markov Switching Models">MSM</abbr><a class="headerlink" href="#challenges-in-msm" title="Permanent link">¶</a></h3>
-<ul>
-<li>Computational Complexity (high dimensional likelihood function)</li>
-<li>Model selection (number of regimes, lag structure)</li>
-<li>Interpretability: <strong>regime probability</strong> must be carefully interpreted<ul>
-<li>Overfitting <span class="arithmatex">\(\impliedby\)</span> too many parameters</li>
+<li><strong>Filtering and Smoothing</strong>:<ul>
+<li><strong>Hamilton Filter</strong>: Estimates the probability of being in a state at time <span class="arithmatex">\(t\)</span> using only information up to <span class="arithmatex">\(t\)</span>.</li>
+<li><strong>Kim Filter</strong>: A backward-looking smoother that improves state estimation using the full dataset.</li>
 </ul>
 </li>
-</ul>
-<h3 id="numerical-example">Numerical Example<a class="headerlink" href="#numerical-example" title="Permanent link">¶</a></h3>
-<ul>
-<li><span class="arithmatex">\(n=300\)</span></li>
-<li><span class="arithmatex">\(\mu = [1,-1]\)</span></li>
-<li><span class="arithmatex">\(\phi = [0.8,0.5]\)</span></li>
-<li><span class="arithmatex">\(\sigma= [0.5,1]\)</span></li>
-</ul>
-<div class="arithmatex">\[
-P = \begin{bmatrix}
-0.9 &amp; 0.1 \\
-0.2 &amp; 0.8
-\end{bmatrix}
-\]</div>
-<h4 id="estimation-interpretation">Estimation Interpretation<a class="headerlink" href="#estimation-interpretation" title="Permanent link">¶</a></h4>
-<ul>
-<li>mean <span class="arithmatex">\(\mu\)</span>, AR coefficients <span class="arithmatex">\(\phi\)</span>, variance <span class="arithmatex">\(\sigma^{2}\)</span> for each regime</li>
-<li>transition probabilities <span class="arithmatex">\(p_{ij}\)</span></li>
-<li><strong>Hidden states</strong>: smoothed probabilities indicate likelihood of TS being in each regime at a given time (Carefully address hidden states)</li>
-</ul>
-<h4 id="output-interpretation">Output interpretation<a class="headerlink" href="#output-interpretation" title="Permanent link">¶</a></h4>
-<ul>
-<li>Parameter estimates</li>
-<li>Plot of smoothed probabilities</li>
-<li>Diagnostics</li>
-</ul>
-<h3 id="other-possible-interesting-extensions">Other Possible Interesting Extensions<a class="headerlink" href="#other-possible-interesting-extensions" title="Permanent link">¶</a></h3>
+</ol>
+<hr>
+<h3 id="other-nonlinear-extensions">Other Nonlinear Extensions<a class="headerlink" href="#other-nonlinear-extensions" title="Permanent link">¶</a></h3>
+<p>Beyond <abbr title="Markov Switching Models">MSM</abbr>, several other models handle complex nonlinearities:</p>
 <h4 id="bilinear-models">Bilinear Models<a class="headerlink" href="#bilinear-models" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-y_{t} = \phi_{0} + \sum_{i=1}^{p}  \phi_{i}y_{t-i} + \sum_{j=1}^{q} \sum_{k=1}^{p} \beta_{jk}y_{t-k} e_{t-j} + e_{t}
-\]</div>
+<p>These incorporate products of past observations and noise to handle specific interactions:<br>
+$<span class="arithmatex">\(y_{t} = \phi_{0} + \sum_{i=1}^{p} \phi_{i}y_{t-i} + \sum_{j=1}^{q} \sum_{k=1}^{p} \beta_{jk}y_{t-k} e_{t-j} + e_{t}\)</span>$</p>
+<h4 id="nonlinear-arx-narx-models">Nonlinear <abbr title="Autoregressive Exogenous">ARX</abbr> (NARX) Models<a class="headerlink" href="#nonlinear-arx-narx-models" title="Permanent link">¶</a></h4>
+<p>The future value is a nonlinear function of past inputs and outputs:<br>
+$<span class="arithmatex">\(y_{t} = f(y_{t-1}, y_{t-2}, \dots, x_{t-1}, x_{t-2}, \dots) + e_{t}\)</span>$<br>
+<em>Used frequently in control systems and dynamic engineering modeling.</em></p>
+<h4 id="neural-network-based-models">Neural Network Based Models<a class="headerlink" href="#neural-network-based-models" title="Permanent link">¶</a></h4>
 <ul>
-<li>Incorporates products of<ul>
-<li>past observations and noise</li>
-<li>handles nonlinearities</li>
+<li><strong><abbr title="Nonlinear Autoregressive Neural Network">NAR-NN</abbr></strong>: Uses a feed-forward network to model the autoregressive relationship.</li>
+<li><strong><abbr title="Long Short-Term Memory">LSTM</abbr></strong>: Specifically designed to handle long-term dependencies in sequential data, preventing the "vanishing gradient" problem in deep nonlinear time series.</li>
 </ul>
-</li>
-<li>Uses: environmental data with interaction effects</li>
-</ul>
-<h4 id="nonlinear-arx-models">Nonlinear <abbr title="Autoregressive Exogenous">ARX</abbr> models<a class="headerlink" href="#nonlinear-arx-models" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-y_{t} = f(y_{t-1},y_{t-2},\dots x_{t-1},x_{t-2},\dots) + e_{t}
-\]</div>
+<h4 id="hybrid-specialized-models">Hybrid &amp; Specialized Models<a class="headerlink" href="#hybrid-specialized-models" title="Permanent link">¶</a></h4>
 <ul>
-<li>Nonlinear function of<ul>
-<li>past inputs and outputs</li>
+<li><strong>ST-GARCH</strong>: A Smooth Transition GARCH that allows the variance equation itself to switch regimes.</li>
+<li><strong>Functional Time Series</strong>: Models changes in entire curves or functions over time (e.g., yield curves).</li>
+<li><strong>Wavelet Transform Models</strong>: Decomposes the series into both time and frequency components simultaneously.</li>
 </ul>
-</li>
-<li><span class="arithmatex">\(f(\cdot)\)</span> can be a polynomial, neural network or other nonlinear functions</li>
-<li><strong>Applications</strong>: control systems, dynamic system modelling</li>
-</ul>
-<h4 id="neutral-network-based-models">Neutral-Network Based models<a class="headerlink" href="#neutral-network-based-models" title="Permanent link">¶</a></h4>
-<ul>
-<li>Nonlinear Autoregressive Neural Network (<abbr title="Nonlinear Autoregressive Neural Network">NAR-NN</abbr>)<ul>
-<li>use neural network to model the autoregressive relationship</li>
-</ul>
-</li>
-</ul>
-<div class="arithmatex">\[
-y_{t} = f_{NN}(y_{t-1},y_{t-2},\dots,e_{t})
-\]</div>
-<ul>
-<li>Flexible, powerful for compl<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>ex nonlinear dependencies</li>
-<li>Long Short-Term Memory (<abbr title="Long Short-Term Memory">LSTM</abbr>) → handles sequential dependencies and long-term memory in nonlinear time series</li>
-</ul>
-<h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">¶</a></h3>
-<ul>
-<li>ST-GARCH: Smooth Transition GARCH<ul>
-<li>Extends GARCH by allowing regime switching in variance equation</li>
-</ul>
-</li>
-<li>Hidden Markov Models (HMMs)<ul>
-<li>switching dynamics in TS using <strong>discrete latent states</strong></li>
-</ul>
-</li>
-<li>Functional Time Series<ul>
-<li>high (infinite) dimensional</li>
-<li>models temporal changes in curves/functions</li>
-</ul>
-</li>
-<li>Wavelet Transform Models<ul>
-<li>decompose TS into different frequency components</li>
-</ul>
-</li>
-</ul>
+<hr>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Markov Property: today's state is dependent only on yesterday's state&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>Markov Property: Today's state is dependent only on yesterday's state.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
-<li id="fn:2"></li>
 </ol>
 </div>
 

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10096,17 +10096,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ecm-equation-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -10129,10 +10118,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advantages-disadvantages-of-ecm" class="md-nav__link">
+  <a href="#advantages-disadvantages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advantages &amp; Disadvantages of ECM
+        Advantages &amp; Disadvantages
       
     </span>
   </a>
@@ -10993,7 +10982,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12814,101 +12803,87 @@
 <h1 id="error-correction-models">Error Correction Models<a class="headerlink" href="#error-correction-models" title="Permanent link">¶</a></h1>
 <div class="admonition quote">
 <p class="admonition-title"><abbr title="Error Correction Model">ECM</abbr></p>
-<p>It is a type of <abbr title="Time Series">TS</abbr> model used to analyze the relationship between two or more <em>non-stationary variables</em> that share a stable, long-term equilibrium relationship (alt, cointegration exists).</p>
+<p>An Error Correction Model (<abbr title="Error Correction Model">ECM</abbr>) is a type of time series model used to analyze the relationship between two or more <strong>non-stationary variables</strong> that share a stable, long-term equilibrium relationship (i.e., cointegration exists).</p>
 </div>
 <h3 id="why-ecm">Why <abbr title="Error Correction Model">ECM</abbr>?<a class="headerlink" href="#why-ecm" title="Permanent link">¶</a></h3>
-<ul>
-<li>If two variables have a shared equilibrium, any deviations are temporary. The rise or fall will revert back to the mean (long-run equilibrium).</li>
-<li><abbr title="Error Correction Model">ECM</abbr> has the capability of capturing the<ul>
-<li>short-term effects: immediate impact of changes in the related variables</li>
-<li>long-term correction: adjusts for deviations from the equilibrium. Pulling variables back in line</li>
-</ul>
-</li>
-</ul>
+<p>If two variables have a shared equilibrium, any deviations from that balance are temporary. The system inherently possesses a "corrective" force where a rise or fall will eventually revert back to the mean (long-run equilibrium). </p>
+<p><abbr title="Error Correction Model">ECM</abbr> is uniquely capable of capturing:<br>
+* <strong>Short-term effects:</strong> The immediate impact of changes in the related variables.<br>
+* <strong>Long-term correction:</strong> The mechanism that adjusts for deviations from equilibrium, pulling the variables back in line.</p>
+<hr>
 <h3 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">¶</a></h3>
 <ol>
-<li>Error Correction Term (<abbr title="Error Correction Term">ECT</abbr>): Measures the gap between current value and long-term equilibrium.<ul>
-<li>Larger the <abbr title="Error Correction Term">ECT</abbr>, larger the adjustment the model will make in the next period</li>
+<li><strong>Error Correction Term (<abbr title="Error Correction Term">ECT</abbr>):</strong> Measures the "gap" or disequilibrium between the current value and the long-term equilibrium. <ul>
+<li>The larger the <abbr title="Error Correction Term">ECT</abbr>, the larger the adjustment the model will make in the next period to restore balance.</li>
 </ul>
 </li>
-<li>Short-term coefficients: without needing to consider equilibrium relationship, show immediate effect of changes  in one variables on other.</li>
+<li><strong>Short-term coefficients:</strong> These capture the immediate effect of changes in one variable on another without needing to consider the equilibrium relationship.</li>
 </ol>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
-<ul>
-<li>Inflation and Interest rates</li>
-<li>Model short-term changes in interest rates based on recent changes</li>
-<li>"Error correction process": high interest rate could slowly adjust downward if inflation is low</li>
-</ul>
+<p><strong>Example: Inflation and Interest Rates</strong><br>
+* The model captures short-term changes in interest rates based on recent inflationary spikes.<br>
+* The <strong>"Error Correction Process"</strong> ensures that if interest rates are abnormally high relative to low inflation, they will slowly adjust downward toward the equilibrium over time.</p>
+<hr>
 <h3 id="ecm-equation-structure"><abbr title="Error Correction Model">ECM</abbr> Equation Structure<a class="headerlink" href="#ecm-equation-structure" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-\nabla Y_{t} = \alpha(\beta X_{t-1} - Y_{t-1}) + \gamma \nabla X_{t} + \epsilon_{t}
-\]</div>
+<p>The mathematical representation of an <abbr title="Error Correction Model">ECM</abbr> for a bivariate system is:</p>
+<div class="arithmatex">\[\nabla Y_{t} = \alpha(\beta X_{t-1} - Y_{t-1}) + \gamma \nabla X_{t} + \epsilon_{t}\]</div>
 <ul>
-<li><span class="arithmatex">\(\beta X_{t-1} - Y_{t-1}\)</span> is the <abbr title="Error Correction Term">ECT</abbr> = deviation from long-term equilibrium at time <span class="arithmatex">\(t-1\)</span><ul>
-<li><span class="arithmatex">\(\beta\)</span> = "long term impact"</li>
-<li>Degree of disequilibrium. High <span class="arithmatex">\(\implies\)</span> Far from Equilibrium, requiring larger adjustments</li>
+<li><strong><span class="arithmatex">\((\beta X_{t-1} - Y_{t-1})\)</span> is the <abbr title="Error Correction Term">ECT</abbr>:</strong> This represents the deviation from the long-term equilibrium at time <span class="arithmatex">\(t-1\)</span>.<ul>
+<li><strong><span class="arithmatex">\(\beta\)</span>:</strong> Represents the "long-term impact."</li>
+<li><strong>Degree of disequilibrium:</strong> A high value implies the system is far from equilibrium, requiring larger adjustments.</li>
 </ul>
 </li>
-<li><span class="arithmatex">\(\alpha\)</span> = speed of adjustment coefficient (how fast <span class="arithmatex">\(Y_{t}\)</span> in response to deviations in the equilibrium)<ul>
-<li><span class="arithmatex">\(\alpha\)</span> = "how slow or how quick"</li>
-<li>Faster adjustment, vs slow correction process</li>
+<li><strong><span class="arithmatex">\(\alpha\)</span> is the speed of adjustment coefficient:</strong> This dictates how fast <span class="arithmatex">\(Y_{t}\)</span> changes in response to deviations in the equilibrium.<ul>
+<li>Determines if the system undergoes a "faster adjustment" or a "slow correction process."</li>
 </ul>
 </li>
-<li>
-<p><span class="arithmatex">\(\gamma\)</span> = short term coefficient</p>
+<li><strong><span class="arithmatex">\(\gamma\)</span> is the short-term coefficient:</strong><ul>
+<li>Represents the "short-term impact" independent of the long-term relationship.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Significance</p>
 <ul>
-<li><span class="arithmatex">\(\gamma\)</span> = "short term impact"</li>
-<li>independent of long-term relationship</li>
+<li>If the <abbr title="Error Correction Term">ECT</abbr> is significant <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(Y_{t}\)</span> actively adjusts to bring the system back to equilibrium.</li>
+<li>Changes in <span class="arithmatex">\(X\)</span> (<span class="arithmatex">\(\nabla X_{t}\)</span>) have immediate effects on <span class="arithmatex">\(Y\)</span> in the short run.</li>
 </ul>
-</li>
-<li>
-<p>If <abbr title="Error Correction Term">ECT</abbr> is significant <span class="arithmatex">\(\implies\)</span>  <span class="arithmatex">\(Y_{t}\)</span> adjusts to bring back equilibrium</p>
-</li>
-<li>changes in <span class="arithmatex">\(X\)</span> have immediate effects on <span class="arithmatex">\(Y\)</span> in the short run</li>
-</ul>
+</div>
+<hr>
 <h3 id="steps-to-fit-an-ecm">Steps to Fit an <abbr title="Error Correction Model">ECM</abbr><a class="headerlink" href="#steps-to-fit-an-ecm" title="Permanent link">¶</a></h3>
 <ol>
-<li>Test for Non-stationary: ADF → Ensure <span class="arithmatex">\(I(1)\)</span></li>
-<li>Test for Cointegration: Johansen cointegration → If yes, proceed with <abbr title="Error Correction Model">ECM</abbr></li>
-<li>Estimate <abbr title="Error Correction Model">ECM</abbr> using cointegration equation (usually OLS)<ul>
-<li>Error correction term from cointegration equation.</li>
-</ul>
-</li>
+<li><strong>Test for Non-stationarity:</strong> Use the Augmented Dickey-Fuller (<abbr title="Augmented Dickey-Fuller">ADF</abbr>) test to ensure the variables are <span class="arithmatex">\(I(1)\)</span>.</li>
+<li><strong>Test for Cointegration:</strong> Use tests like the <strong>Johansen Cointegration test</strong>. If cointegration is confirmed, proceed with the <abbr title="Error Correction Model">ECM</abbr>.</li>
+<li><strong>Estimate <abbr title="Error Correction Model">ECM</abbr>:</strong> Usually performed via <abbr title="Ordinary Least Squares">OLS</abbr>, using the error correction term derived from the cointegration equation.</li>
 </ol>
-<h3 id="advantages-disadvantages-of-ecm">Advantages &amp; Disadvantages of <abbr title="Error Correction Model">ECM</abbr><a class="headerlink" href="#advantages-disadvantages-of-ecm" title="Permanent link">¶</a></h3>
-<ul>
-<li>Advantages<ul>
-<li>combine short- and long-term dynamics, more accurate models for cointegrated <abbr title="Time Series">TS</abbr></li>
-<li>effective in systems where <em>relationships drift but maintain an equilibrium over time</em>  (SITUATION, common in economic in financial data)</li>
-</ul>
-</li>
-<li>Limitations<ul>
-<li>Requires cointegration (unsuitable otherwise)</li>
-<li>If model is mis-specified, erroneous results follow</li>
-</ul>
-</li>
-</ul>
+<hr>
+<h3 id="advantages-disadvantages">Advantages &amp; Disadvantages<a class="headerlink" href="#advantages-disadvantages" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Advantages</th>
+<th style="text-align: left;">Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Dual Dynamics:</strong> Combines short- and long-term dynamics for more accurate modeling.</td>
+<td style="text-align: left;"><strong>Prerequisite:</strong> Strictly requires the variables to be cointegrated; unsuitable otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Drift Handling:</strong> Highly effective for systems where relationships drift but maintain equilibrium (common in economic/financial data).</td>
+<td style="text-align: left;"><strong>Specification Sensitivity:</strong> If the model is mis-specified, erroneous and misleading results follow.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h3 id="practical-examples">Practical Examples<a class="headerlink" href="#practical-examples" title="Permanent link">¶</a></h3>
 <ul>
-<li>Stock prices and dividends:<ul>
-<li>dividend-based valuations (long-term)</li>
-<li>prices might diverge in the short term</li>
+<li><strong>Stock Prices and Dividends:</strong> Prices may diverge from dividend-based valuations in the short term but eventually realign based on long-term valuation models.</li>
+<li><strong>Interest Rates and Inflation (Fisher Effect):</strong> Used by central banks to understand how nominal rates adjust to maintain equilibrium with inflation.</li>
+<li><strong>Oil Prices and Exchange Rates:</strong> Captures how oil prices might deviate from currency values before returning to a stable ratio.</li>
+<li><strong>Electricity Demand and Temperature:</strong> While demand has short-term spikes due to extreme weather, it typically returns to an average level relative to the seasonal trend.</li>
 </ul>
-</li>
-<li>(nominal) Interest rates and Inflation (Fisher effect)<ul>
-<li>central banks and investors</li>
-</ul>
-</li>
-<li>Oil Prices and Exchange Rates<ul>
-<li>Oil prices deviate from currency values</li>
-</ul>
-</li>
-<li>Electricity demand and temperature<ul>
-<li>Electricity demand has Short-term spikes due to extreme weather</li>
-<li>returns to average level</li>
-</ul>
-</li>
-</ul>
+<hr>
 
 
 

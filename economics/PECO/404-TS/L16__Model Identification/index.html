@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9198,10 +9198,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#acf-and-pacf-plots-of-ar-and-ma-models" class="md-nav__link">
+  <a href="#1-acf-and-pacf-behavior" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ACF and PACF plots of AR and MA models
+        1. ACF and PACF Behavior
       
     </span>
   </a>
@@ -9209,10 +9209,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#information-criteria" class="md-nav__link">
+  <a href="#2-information-criteria" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Information Criteria
+        2. Information Criteria
       
     </span>
   </a>
@@ -9220,10 +9220,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-techniques" class="md-nav__link">
+  <a href="#3-advanced-identification-techniques" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Other Techniques
+        3. Advanced Identification Techniques
       
     </span>
   </a>
@@ -9309,7 +9309,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9861,7 +9861,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10949,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12768,107 +12768,60 @@
 
 <!-- Markdown content -->
 <h1 id="model-identification">Model Identification<a class="headerlink" href="#model-identification" title="Permanent link">¶</a></h1>
-<blockquote>
-<p>How do we find the best possible model (optimal orders <span class="arithmatex">\((p,q)\)</span> of the model) given the practical data?</p>
-</blockquote>
-<h3 id="acf-and-pacf-plots-of-ar-and-ma-models">ACF and PACF plots of AR and MA models<a class="headerlink" href="#acf-and-pacf-plots-of-ar-and-ma-models" title="Permanent link">¶</a></h3>
+<p>Determining the optimal orders <span class="arithmatex">\((p,q)\)</span> for a time series model involves balancing statistical fit with model parsimony.</p>
+<h3 id="1-acf-and-pacf-behavior">1. <abbr title="Autocorrelation Function">ACF</abbr> and <abbr title="Partial Autocorrelation Function">PACF</abbr> Behavior<a class="headerlink" href="#1-acf-and-pacf-behavior" title="Permanent link">¶</a></h3>
+<p>The primary visual method for identifying model orders is examining the <strong>Autocorrelation Function (<abbr title="Autocorrelation Function">ACF</abbr>)</strong> and <strong>Partial Autocorrelation Function (<abbr title="Partial Autocorrelation Function">PACF</abbr>)</strong> plots.</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>ACF</th>
-<th>PACF</th>
+<th style="text-align: left;">Model</th>
+<th style="text-align: left;"><abbr title="Autocorrelation Function">ACF</abbr></th>
+<th style="text-align: left;"><abbr title="Partial Autocorrelation Function">PACF</abbr></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="arithmatex">\(AR(p)\)</span></td>
-<td>Tails off after lag <span class="arithmatex">\(p\)</span><br><br><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981473022.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp"></a></td>
-<td>Cuts off after lag <span class="arithmatex">\(p\)</span><br><br><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981499872.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp"></a></td>
+<td style="text-align: left;"><strong><span class="arithmatex">\(AR(p)\)</span></strong></td>
+<td style="text-align: left;"><strong>Tails off</strong> (geometric or sinusoidal decay) after lag <span class="arithmatex">\(p\)</span>. <br><br> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981473022.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp"></a></td>
+<td style="text-align: left;"><strong>Cuts off</strong> abruptly after lag <span class="arithmatex">\(p\)</span>. <br><br> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981499872.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp"></a></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(MA(q)\)</span></td>
-<td>Cuts off after lag <span class="arithmatex">\(q\)</span><br><br><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981499872.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp"></a></td>
-<td>Tails off after lag <span class="arithmatex">\(q\)</span><br><br><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981473022.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp"></a></td>
+<td style="text-align: left;"><strong><span class="arithmatex">\(MA(q)\)</span></strong></td>
+<td style="text-align: left;"><strong>Cuts off</strong> abruptly after lag <span class="arithmatex">\(q\)</span>. <br><br> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981499872.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981499872.webp"></a></td>
+<td style="text-align: left;"><strong>Tails off</strong> (geometric or sinusoidal decay) after lag <span class="arithmatex">\(q\)</span>. <br><br> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768981473022.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768981473022.webp"></a></td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Note the 95% confidence bands, any correlations outside the band are significant.</li>
-<li>For large and messy data, ACF and PACF become complicated (harder to interpret)</li>
-<li>There can be multiple models. Choose the most appropriate model (with less parameters) → Look at <strong>information criteria</strong>.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Significance:</strong> Most plots include 95% confidence bands; any correlation spikes extending beyond these bands are considered statistically significant.</li>
+<li><strong>Complexity:</strong> For large or messy datasets, these plots become harder to interpret. When multiple models seem plausible, we follow the principle of parsimony—preferring the model with the fewest parameters that still achieves high accuracy.</li>
 </ul>
-<h3 id="information-criteria">Information Criteria<a class="headerlink" href="#information-criteria" title="Permanent link">¶</a></h3>
-<ol>
-<li>AIC: 1974</li>
-<li>SBC (or BIC): 1978</li>
-<li>HQIC: 1989</li>
-</ol>
-<h4 id="akaikes-information-criteria-aic">Akaike's Information Criteria (AIC)<a class="headerlink" href="#akaikes-information-criteria-aic" title="Permanent link">¶</a></h4>
-<p>A statistical model with <span class="arithmatex">\(M\)</span> parameters are fitted to data.</p>
-<div class="arithmatex">\[
-AIC = -2\log(\text{Maximum Likelihood}) + 2M
-\]</div>
-<p>The log-likelihood function becomes</p>
-<div class="arithmatex">\[
-\ln L = -\dfrac{n}{2} \ln 2\pi\sigma_{e}^{2} - \dfrac{1}{2\sigma_{e}^{2}} S(\phi_{p}, \theta_{q}, \mu)
-\]</div>
-<ul>
-<li>where <ul>
-<li><span class="arithmatex">\(S(\phi_{p}, \theta_{q},\mu)\)</span> is the <abbr title="Residual Sum of Squares">RSS</abbr>,</li>
-<li>assuming <span class="arithmatex">\(e_{t}\)</span> follows a <span class="arithmatex">\(\mathcal{N}(0, \sigma_{e}^{2})\)</span>. <span class="arithmatex">\(Y_{t}-\hat{Y_{t}} = e_{t}\)</span></li>
-<li>The first part <span class="arithmatex">\(\left(-\dfrac{n}{2}\ln 2\pi\sigma_{e}^{2}\right)\)</span> comes from the normal PDF</li>
-</ul>
-</li>
-</ul>
-<div class="arithmatex">\[
-AIC = n \log \hat{\sigma_{e}}^{2} + 2M
-\]</div>
-<h4 id="schwarzs-bayesian-criteria-sbc-or-bic">Schwarz's Bayesian Criteria (SBC) or BIC<a class="headerlink" href="#schwarzs-bayesian-criteria-sbc-or-bic" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>A.k.a. Bayesian Information Criteria (BIC)</p>
-</blockquote>
-<ul>
-<li>BIC introduces an additional penalty term for an extra parameter, to account for the risk of overfitting that comes with higher number of parameters</li>
-</ul>
-<div class="arithmatex">\[
-SBC = n \log \hat{\sigma_{e}}^{2} + M \log n
-\]</div>
-<h4 id="hannan-quinn-information-criteria-hqic">Hannan-Quinn Information Criteria (HQIC)<a class="headerlink" href="#hannan-quinn-information-criteria-hqic" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-HQIC = n \log \hat{\sigma_{e}}^{2} + 2M \log(\log n)
-\]</div>
-<ul>
-<li>Due to simplicity people still prefer AIC and SBC.</li>
-</ul>
-<h3 id="other-techniques">Other Techniques<a class="headerlink" href="#other-techniques" title="Permanent link">¶</a></h3>
-<ul>
-<li>Sample Inverse Autocorrelation Function (SACF)<ul>
-<li>Generally captures orders better in seasonal models than PACF</li>
-<li>useful for detecting over-differencing</li>
-</ul>
-</li>
-<li>Extended Sample Autocorrelation Function (ESACF)<ul>
-<li>Can <em>tentatively</em> identify orders of stationary or nonstationary ARMA process</li>
-<li>Based on <strong>iterated least squares estimates</strong> (previous information criteria were based on MLE)</li>
-</ul>
-</li>
-<li>Minimum Information Criteria (MINIC)<ul>
-<li>Use a combination of AIC and SBC to minimize overall information</li>
-<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768982729123.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768982729123.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768982729123.webp"></a></li>
-<li>Which cell gives you the minimum value? Select the orders accordingly.</li>
-<li><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768982767711.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768982767711.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768982767711.webp"></a></li>
-</ul>
-</li>
-</ul>
-<div class="footnote">
 <hr>
-<ol>
-<li id="fn:1">
-<p>If the same job could be done with approximately same accuracy but less number of parameters, prefer that&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<h3 id="2-information-criteria">2. Information Criteria<a class="headerlink" href="#2-information-criteria" title="Permanent link">¶</a></h3>
+<p>Information criteria provide a numerical way to compare models by penalizing for the number of parameters (<span class="arithmatex">\(M\)</span>) to prevent overfitting.</p>
+<h4 id="akaikes-information-criterion-aic">Akaike's Information Criterion (AIC)<a class="headerlink" href="#akaikes-information-criterion-aic" title="Permanent link">¶</a></h4>
+<p>Introduced in 1974, AIC measures the trade-off between the goodness of fit and the complexity of the model.<br>
+$<span class="arithmatex">\(AIC = -2\log(\text{Maximum Likelihood}) + 2M\)</span>$<br>
+Using the residual sum of squares (<abbr title="Residual Sum of Squares">RSS</abbr>) under the assumption that <span class="arithmatex">\(e_{t} \sim \mathcal{N}(0, \sigma_{e}^{2})\)</span>, it simplifies to:<br>
+$<span class="arithmatex">\(AIC = n \log \hat{\sigma_{e}}^{2} + 2M\)</span>$</p>
+<h4 id="schwarzs-bayesian-criterion-sbcbic">Schwarz's Bayesian Criterion (SBC/BIC)<a class="headerlink" href="#schwarzs-bayesian-criterion-sbcbic" title="Permanent link">¶</a></h4>
+<p>Introduced in 1978, the <strong>Bayesian Information Criterion (BIC)</strong> imposes a heavier penalty on additional parameters as the sample size <span class="arithmatex">\(n\)</span> increases, making it more conservative than AIC.<br>
+$<span class="arithmatex">\(SBC = n \log \hat{\sigma_{e}}^{2} + M \log n\)</span>$</p>
+<h4 id="hannan-quinn-information-criterion-hqic">Hannan-Quinn Information Criterion (HQIC)<a class="headerlink" href="#hannan-quinn-information-criterion-hqic" title="Permanent link">¶</a></h4>
+<p>Developed in 1989, this criterion uses a penalty term involving a double logarithm. While statistically sound, AIC and SBC remain more popular due to their simplicity.<br>
+$<span class="arithmatex">\(HQIC = n \log \hat{\sigma_{e}}^{2} + 2M \log(\log n)\)</span>$</p>
+<hr>
+<h3 id="3-advanced-identification-techniques">3. Advanced Identification Techniques<a class="headerlink" href="#3-advanced-identification-techniques" title="Permanent link">¶</a></h3>
+<p>Beyond standard <abbr title="Autocorrelation Function">ACF</abbr>/<abbr title="Partial Autocorrelation Function">PACF</abbr> plots, several advanced tools help refine model selection:</p>
+<ul>
+<li><strong>Sample Inverse Autocorrelation Function (SIACF):</strong> Often captures orders in seasonal models more effectively than <abbr title="Partial Autocorrelation Function">PACF</abbr> and is highly useful for detecting <strong>over-differencing</strong>.</li>
+<li><strong>Extended Sample Autocorrelation Function (ESACF):</strong> Can tentatively identify orders for both stationary and non-stationary ARMA processes. Unlike criteria based on Maximum Likelihood Estimation (MLE), ESACF relies on <strong>iterated least squares estimates</strong>.</li>
+<li><strong>Minimum Information Criterion (MINIC):</strong> This method automates selection by creating a grid of AIC or SBC values for various combinations of <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768982729123.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768982729123.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768982729123.webp"></a><br>
+    The goal is to identify the specific cell that yields the <strong>minimum value</strong>, which indicates the optimal orders for the model.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L16__Model%20Identification-1768982767711.webp" data-desc-position="bottom"><img alt="L16__Model Identification-1768982767711.webp" src="../../../../assets/images/2026/01/L16__Model%20Identification-1768982767711.webp"></a></li>
+</ul>
+<hr>
 
 
 

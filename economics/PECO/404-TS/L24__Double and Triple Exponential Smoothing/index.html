@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9494,10 +9494,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#double-exp-smoothing-holts-method" class="md-nav__link">
+  <a href="#1-double-exponential-smoothing-holts-method" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Double Exp. Smoothing (Holt's Method)
+        1. Double Exponential Smoothing (Holt's Method)
       
     </span>
   </a>
@@ -9505,10 +9505,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#triple-exp-smoothing-holt-winters-method" class="md-nav__link">
+  <a href="#2-triple-exponential-smoothing-holt-winters-method" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Triple Exp. Smoothing (Holt Winter's Method)
+        2. Triple Exponential Smoothing (Holt-Winters Method)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementation-and-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Implementation and Visualization
       
     </span>
   </a>
@@ -9850,7 +9861,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10938,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12757,93 +12768,67 @@
 
 <!-- Markdown content -->
 <h1 id="double-triple-exponential-smoothing">Double &amp; Triple Exponential Smoothing<a class="headerlink" href="#double-triple-exponential-smoothing" title="Permanent link">¶</a></h1>
-<h3 id="double-exp-smoothing-holts-method">Double Exp. Smoothing (Holt's Method)<a class="headerlink" href="#double-exp-smoothing-holts-method" title="Permanent link">¶</a></h3>
+<h3 id="1-double-exponential-smoothing-holts-method">1. Double Exponential Smoothing (Holt's Method)<a class="headerlink" href="#1-double-exponential-smoothing-holts-method" title="Permanent link">¶</a></h3>
+<p>Double Exponential Smoothing, also known as <strong>Second Order (SO) Exponential Smoothing</strong> or Holt's trend-corrected smoothing, is applied when a time series exhibits a <strong>linear trend</strong> but has <strong>no seasonal pattern</strong>. It introduces a second smoothing constant, <span class="arithmatex">\(\beta\)</span>, to account for the trend component (<span class="arithmatex">\(b_{t}\)</span>).</p>
+<p><strong>Mathematical Formulation:</strong><br>
+* <strong>Initialization:</strong><br>
+   $<span class="arithmatex">\(s_{0} = y_{0}\)</span>$<br>
+* <strong>Level Equation (<span class="arithmatex">\(s_{t}\)</span>):</strong><br>
+  $<span class="arithmatex">\(s_{t} = \alpha y_{t} + (1-\alpha)(s_{t-1} + b_{t-1})\)</span>$<br>
+* <strong>Trend Equation (<span class="arithmatex">\(b_{t}\)</span>):</strong><br>
+  $<span class="arithmatex">\(b_{t} = \beta(s_{t}-s_{t-1}) + (1-\beta)b_{t-1}\)</span>$</p>
+<p>Where:<br>
+* <span class="arithmatex">\(b_{t}\)</span> is the best estimate of the trend at time <span class="arithmatex">\(t\)</span>.<br>
+* <span class="arithmatex">\(0 &lt; \beta &lt; 1\)</span> is the trend smoothing factor.</p>
+<hr>
+<h3 id="2-triple-exponential-smoothing-holt-winters-method">2. Triple Exponential Smoothing (Holt-Winters Method)<a class="headerlink" href="#2-triple-exponential-smoothing-holt-winters-method" title="Permanent link">¶</a></h3>
+<p>This method is utilized for forecasting time series data that contains both a <strong>linear trend</strong> and a <strong>seasonal pattern</strong>.</p>
+<h4 id="key-notations">Key Notations:<a class="headerlink" href="#key-notations" title="Permanent link">¶</a></h4>
 <ul>
-<li>When TS has<ul>
-<li>linear trend</li>
-<li>no seasonal pattern</li>
+<li><span class="arithmatex">\(s_{t}\)</span>: Smoothed statistic (level).</li>
+<li><span class="arithmatex">\(b_{t}\)</span>: Best estimate of trend.</li>
+<li><span class="arithmatex">\(c_{t}\)</span>: Sequence of seasonal correction factors.</li>
+<li><span class="arithmatex">\(\alpha, \beta, \gamma\)</span>: Smoothing factors for level, trend, and seasonality respectively (all between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span>).</li>
+<li><span class="arithmatex">\(L\)</span>: Length of the seasonal cycle (e.g., <span class="arithmatex">\(L=12\)</span> for monthly data).</li>
 </ul>
-</li>
-<li>aka Holt's trend corrected or <abbr title="Second Order">SO</abbr> Exponential smoothing</li>
-<li>Introduce a term, <span class="arithmatex">\(b_{t}\)</span> to take care of trend</li>
-</ul>
-<div class="arithmatex">\[
-s_{0} = y_{0}
-\]</div>
-<p>and for <span class="arithmatex">\(t\gt 0\)</span></p>
-<div class="arithmatex">\[
-s_{t} = \alpha y_{t} + (1-\alpha)(s_{t-1} + b_{t-1})
-\]</div>
-<p>and</p>
-<div class="arithmatex">\[
-b_{t} = \beta(s_{t}-s_{t-1}) + (1-\beta)b_{t-1}
-\]</div>
-<p>where,</p>
+<h4 id="seasonality-types">Seasonality Types:<a class="headerlink" href="#seasonality-types" title="Permanent link">¶</a></h4>
 <ul>
-<li><span class="arithmatex">\(b_{t}\)</span> is the best estimate of trend at <span class="arithmatex">\(t\)</span></li>
-<li><span class="arithmatex">\(0 \lt \beta \lt 1\)</span> is the trend smoothing factor</li>
+<li><strong>Additive Seasonality:</strong> The seasonal effect remains roughly constant as the trend changes (<span class="arithmatex">\(Y_{t} = T_{t} + S_{t} + e_{t}\)</span>).</li>
+<li><strong>Multiplicative Seasonality:</strong> Seasonal fluctuations increase or decrease in proportion to the level of the time series (<span class="arithmatex">\(Y_{t} = T_{t} \times S_{t} \times e_{t}\)</span>).</li>
 </ul>
-<h3 id="triple-exp-smoothing-holt-winters-method">Triple Exp. Smoothing (Holt Winter's Method)<a class="headerlink" href="#triple-exp-smoothing-holt-winters-method" title="Permanent link">¶</a></h3>
-<ul>
-<li>Forecast the TS when data has<ul>
-<li>Linear trend</li>
-<li>Seasonal pattern</li>
-</ul>
-</li>
-<li>Involved notations<ul>
-<li><span class="arithmatex">\(s_{t}:\)</span> smoothed statistic</li>
-<li><span class="arithmatex">\(\alpha:\)</span> smoothing or weighing param <span class="arithmatex">\((0,1)\)</span></li>
-<li><span class="arithmatex">\(b_{t}:\)</span> best estimate of trend</li>
-<li><span class="arithmatex">\(\beta:\)</span> trend smoothing factor <span class="arithmatex">\((0,1)\)</span></li>
-<li><span class="arithmatex">\(c_{t}:\)</span> sequence of seasonal correction factor</li>
-<li><span class="arithmatex">\(\gamma:\)</span> seasonal change smoothing factor <span class="arithmatex">\((0,1)\)</span></li>
-</ul>
-</li>
-<li>
-<p>Further notations</p>
-<ul>
-<li><span class="arithmatex">\(L\)</span> = length of cycle of seasonal change. Monthly data → <span class="arithmatex">\(L=12\)</span></li>
-<li><span class="arithmatex">\(N\)</span> = number of cycles. For 10 years, <span class="arithmatex">\(N = 10\)</span> (120 months)</li>
-</ul>
-</li>
-<li>
-<p>Additive seasonality = seasonal effect is roughly constant over time</p>
-</li>
-</ul>
-<div class="arithmatex">\[
-Y_{t} = T_{t} + S_{t} + e_{t}
-\]</div>
-<ul>
-<li>Multiplicative seasonality = larger seasonal fluctuations when time series is at a higher level</li>
-</ul>
-<div class="arithmatex">\[
-Y_{t} = T_{t} \times S_{t} \times e_{t}
-\]</div>
-<p>Multiplicative Seasonality</p>
-<div class="arithmatex">\[
-\begin{align*}
-s_{0} &amp;  = y_{0} \\
-s_{t} &amp; = \alpha \dfrac{y_{t}}{c_{t-L}} + (1-\alpha)(s_{t-1}+b_{t-1}) \\
-b_{t}  &amp; = \beta(s_{t}-s_{t-1}) + (1-\beta)b_{t-1}  \\
-c_{t} &amp; = \gamma \dfrac{y_{t}}{s_{t}}  + (1-\gamma) c_{t-L}
-\end{align*}
-\]</div>
-<p>Additive Seasonality</p>
-<div class="arithmatex">\[
-\begin{align*}
-s_{0} &amp;  = y_{0} \\
-s_{t} &amp; = \alpha + (y_{t} - c_{t-L}) + (1-\alpha)(s_{t-1}+b_{t-1}) \\
-b_{t}  &amp; = \beta(s_{t} - s_{t-1}) + (1-\beta)b_{t-1}  \\
-c_{t} &amp; = \gamma(y_{t} - s_{t-1} - b_{t-1})  + (1-\gamma) c_{t-L}
-\end{align*}
-\]</div>
-<blockquote>
-<p>Holt's Filtering (same as Smoothing) on the Data </p>
-</blockquote>
-<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">HoltWinters</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AirPassengers</span><span class="p">,</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span>
-</span></code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L24__Double%20and%20Triple%20Exponential%20Smoothing-1769077684971.webp" data-desc-position="bottom"><img alt="L24__Double and Triple Exponential Smoothing-1769077684971.webp" src="../../../../assets/images/2026/01/L24__Double%20and%20Triple%20Exponential%20Smoothing-1769077684971.webp"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L24__Double%20and%20Triple%20Exponential%20Smoothing-1769077693072.webp" data-desc-position="bottom"><img alt="L24__Double and Triple Exponential Smoothing-1769077693072.webp" src="../../../../assets/images/2026/01/L24__Double%20and%20Triple%20Exponential%20Smoothing-1769077693072.webp"></a></p>
+<h4 id="recursive-equations">Recursive Equations:<a class="headerlink" href="#recursive-equations" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Multiplicative Seasonality</th>
+<th style="text-align: left;">Additive Seasonality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Level (<span class="arithmatex">\(s_{t}\)</span>)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(s_{t} = \alpha \frac{y_{t}}{c_{t-L}} + (1-\alpha)(s_{t-1}+b_{t-1})\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(s_{t} = \alpha(y_{t} - c_{t-L}) + (1-\alpha)(s_{t-1}+b_{t-1})\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Trend (<span class="arithmatex">\(b_{t}\)</span>)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(b_{t} = \beta(s_{t}-s_{t-1}) + (1-\beta)b_{t-1}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(b_{t} = \beta(s_{t} - s_{t-1}) + (1-\beta)b_{t-1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Season (<span class="arithmatex">\(c_{t}\)</span>)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(c_{t} = \gamma \frac{y_{t}}{s_{t}} + (1-\gamma) c_{t-L}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(c_{t} = \gamma(y_{t} - s_{t-1} - b_{t-1}) + (1-\gamma) c_{t-L}\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-implementation-and-visualization">3. Implementation and Visualization<a class="headerlink" href="#3-implementation-and-visualization" title="Permanent link">¶</a></h3>
+<p>In practice, Holt-Winters filtering (another term for smoothing) can be implemented using statistical software like R.</p>
+<p>```r</p>
+<h1 id="example-applying-holt-winters-without-seasonal-component-gamma-f">Example: Applying Holt-Winters without seasonal component (gamma = F)<a class="headerlink" href="#example-applying-holt-winters-without-seasonal-component-gamma-f" title="Permanent link">¶</a></h1>
+<p>HoltWinters(x = AirPassengers, gamma = F)</p>
 
 
 

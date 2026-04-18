@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10721,10 +10721,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#benefits-of-regime-models" class="md-nav__link">
+  <a href="#benefits-challenges-of-regime-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Benefits of Regime Models
+        Benefits &amp; Challenges of Regime Models
       
     </span>
   </a>
@@ -10732,43 +10732,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenges-of-regime-models" class="md-nav__link">
+  <a href="#the-tar-threshold-autoregressive-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Challenges of Regime Models
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tar-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TAR model
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Features
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-formulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Model Formulation
+        The TAR (Threshold Autoregressive) Model
       
     </span>
   </a>
@@ -10787,32 +10754,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advantages-of-tar-models" class="md-nav__link">
+  <a href="#applications" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advantages of TAR Models
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#challenges" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Challenges
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#applicaations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Applicaations
+        Applications
       
     </span>
   </a>
@@ -11026,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12845,161 +12790,95 @@
 
 <!-- Markdown content -->
 <h1 id="regimes-nonlinear-models">Regimes &amp; Nonlinear Models<a class="headerlink" href="#regimes-nonlinear-models" title="Permanent link">¶</a></h1>
-<ul>
-<li>Regimes = states (any two are not the same) (they are divided by thresholds)</li>
-</ul>
+<p>Regimes are essentially distinct "states" of a system. In nonlinear modeling, we assume that any two states are not necessarily governed by the same rules, and they are typically divided by thresholds or transition mechanisms.</p>
 <h3 id="modelling-regimes">Modelling Regimes<a class="headerlink" href="#modelling-regimes" title="Permanent link">¶</a></h3>
-<h4 id="threshold-based-regimes">Threshold based regimes<a class="headerlink" href="#threshold-based-regimes" title="Permanent link">¶</a></h4>
+<h4 id="1-threshold-based-regimes">1. Threshold-Based Regimes<a class="headerlink" href="#1-threshold-based-regimes" title="Permanent link">¶</a></h4>
+<p>Regimes are defined by a hard cutoff.<br>
+$$<br>
+\begin{align}<br>
+\text{Regime 1:} &amp; \quad y_{t-d} \le \gamma \<br>
+\text{Regime 2:} &amp; \quad y_{t-d} &gt; \gamma \<br>
+\end{align}<br>
+$$<br>
+- <strong><span class="arithmatex">\(y_{t-d}\)</span></strong>: The lagged value of the same or another variable.<br>
+- <strong><span class="arithmatex">\(\gamma\)</span></strong>: The threshold value.<br>
+- <strong>Example</strong>: <abbr title="Threshold Autoregressive">TAR</abbr>, <abbr title="Self-Exciting TAR">SETAR</abbr>.</p>
+<h4 id="2-smooth-transition-regimes">2. Smooth Transition Regimes<a class="headerlink" href="#2-smooth-transition-regimes" title="Permanent link">¶</a></h4>
+<p>Instead of a hard switch, the system moves gradually between states using a transition function.<br>
+$<span class="arithmatex">\(G(z_{t-d}; \gamma, c) = \dfrac{1}{1+e^{ -\gamma(z_{t-d}-c) }}\)</span>$<br>
+- <strong><span class="arithmatex">\(z_{t-d}\)</span></strong>: Threshold variable.<br>
+- <strong><span class="arithmatex">\(\gamma\)</span></strong>: Slope parameter (determines the speed of transition).<br>
+- <strong><span class="arithmatex">\(c\)</span></strong>: Threshold value (location of the transition).<br>
+- <strong>Example</strong>: <abbr title="Smooth Transition Autoregressive">STAR</abbr> model.</p>
+<h4 id="3-latent-state-based-regimes">3. Latent State-Based Regimes<a class="headerlink" href="#3-latent-state-based-regimes" title="Permanent link">¶</a></h4>
+<p>Regimes are governed by an unobserved (latent) Markov process.<br>
+$<span class="arithmatex">\(P = \begin{bmatrix} p_{11} &amp; p_{12} \\ p_{21} &amp; p_{22} \end{bmatrix}\)</span>$<br>
+- <strong><span class="arithmatex">\(p_{ij}\)</span></strong>: Probability of transitioning from state <span class="arithmatex">\(i\)</span> to state <span class="arithmatex">\(j\)</span>.<br>
+- <strong>Example</strong>: Markov switching models like <abbr title="Markov Switching Autoregressive">MSAR</abbr>.</p>
+<hr>
+<h3 id="benefits-challenges-of-regime-models">Benefits &amp; Challenges of Regime Models<a class="headerlink" href="#benefits-challenges-of-regime-models" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Benefits</th>
+<th style="text-align: left;">Challenges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Improved Forecasting</strong>: Better accuracy for systems with abrupt changes (e.g., market crashes).</td>
+<td style="text-align: left;"><strong>Threshold Selection</strong>: Finding the "best" <span class="arithmatex">\(\gamma\)</span> is computationally intensive.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Interpretability</strong>: Clearly defined states (e.g., "Expansion" vs "Recession").</td>
+<td style="text-align: left;"><strong>Overfitting</strong>: Too many regimes make the model overly complex and poor at generalizing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Flexibility</strong>: Can capture a wide variety of nonlinear behaviors that linear models miss.</td>
+<td style="text-align: left;"><strong>Data Sufficiency</strong>: Each regime requires a sufficient number of data points for valid estimation.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-tar-threshold-autoregressive-model">The <abbr title="Threshold Autoregressive">TAR</abbr> (Threshold Autoregressive) Model<a class="headerlink" href="#the-tar-threshold-autoregressive-model" title="Permanent link">¶</a></h3>
+<p>The <abbr title="Threshold Autoregressive">TAR</abbr> model is a specific class of nonlinear models where behavior switches between regimes depending on whether a threshold variable exceeds a predefined value.</p>
+<h4 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">¶</a></h4>
 <ul>
-<li>Regime definition</li>
+<li><strong>Regime Switching</strong>: The model assumes different <strong>dynamics</strong> in different states.</li>
+<li><strong>AR Modeling</strong>: Each regime is modeled by its own specific Autoregressive (AR) process.</li>
+<li><strong>Piecewise Linearity</strong>: While the overall system is nonlinear, it remains linear <em>within</em> each regime, aiding in estimation.</li>
+<li><strong>Threshold Variable</strong>: Commonly a lagged value of the series itself (<span class="arithmatex">\(y_{t-d}\)</span>).</li>
 </ul>
-<div class="arithmatex">\[
-\begin{align}
-\text{Regime 1:}  &amp;  y_{t-d} \lt \gamma \\
-\text{Regime 2:}  &amp;  y_{t-d} \gt \gamma \\
-\end{align}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(y_{t-d}\)</span> is the lagged value of (another/same)  variable</li>
-<li><span class="arithmatex">\(\gamma:\)</span> threshold value</li>
-<li>Example: <abbr title="Threshold Autoregressive">TAR</abbr>, <abbr title="Self-Exciting TAR">SETAR</abbr></li>
-</ul>
-<h4 id="smooth-transition-regimes">Smooth Transition regimes<a class="headerlink" href="#smooth-transition-regimes" title="Permanent link">¶</a></h4>
-<ul>
-<li>Transition function</li>
-</ul>
-<div class="arithmatex">\[
-G(z_{t-d}; \gamma,c) = \dfrac{1}{1+e^{ -\gamma(z_{t-d}-c) }}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(z_{t-d}:\)</span> threshold variable</li>
-<li><span class="arithmatex">\(\gamma:\)</span> slope parameter</li>
-<li><span class="arithmatex">\(c:\)</span> threshold value</li>
-<li>Example: <abbr title="Smooth Transition Autoregressive">STAR</abbr> model</li>
-</ul>
-<h4 id="latent-state-based-regimes">Latent state based regimes<a class="headerlink" href="#latent-state-based-regimes" title="Permanent link">¶</a></h4>
-<ul>
-<li>Markov transition matrix</li>
-</ul>
-<div class="arithmatex">\[
-P = \begin{bmatrix}
-p_{11} &amp; p_{12} \\
-p_{21} &amp; p_{22}
-\end{bmatrix}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(p_{ij}:\)</span>  probability of transitioning from <span class="arithmatex">\(i\)</span> to <span class="arithmatex">\(j\)</span></li>
-<li>Example: Markov switching models like <abbr title="Markov Switching Autoregressive">MSAR</abbr></li>
-</ul>
-<h3 id="benefits-of-regime-models">Benefits of Regime Models<a class="headerlink" href="#benefits-of-regime-models" title="Permanent link">¶</a></h3>
-<ul>
-<li>Improved forecasting<ul>
-<li>accuracy for systems with abrupt changes</li>
-<li>we can capture the entire system properly if we differentiate the regimes by using different models</li>
-</ul>
-</li>
-<li>Interpretability: <ul>
-<li>clearly defined regimes</li>
-</ul>
-</li>
-<li>Flexibility:<ul>
-<li>can capture a wide variety of nonlinear behavior</li>
-</ul>
-</li>
-</ul>
-<h3 id="challenges-of-regime-models">Challenges of Regime Models<a class="headerlink" href="#challenges-of-regime-models" title="Permanent link">¶</a></h3>
-<ul>
-<li>Threshold Selection<ul>
-<li>How to select <span class="arithmatex">\(\gamma\)</span>?</li>
-<li>Computationally intensive</li>
-</ul>
-</li>
-<li>Overfitting<ul>
-<li>Too many regimes <span class="arithmatex">\(\implies\)</span> overly complex</li>
-<li>generalize poorly</li>
-</ul>
-</li>
-<li>Data sufficiency<ul>
-<li>Each regime requires sufficient data points</li>
-</ul>
-</li>
-</ul>
-<h3 id="tar-model"><abbr title="Threshold Autoregressive">TAR</abbr> model<a class="headerlink" href="#tar-model" title="Permanent link">¶</a></h3>
-<ul>
-<li>A class of nonlinear time series models<ul>
-<li>behavior switches between regimes</li>
-<li>depending on whether threshold variable exceeds a predefined value</li>
-</ul>
-</li>
-<li>This structure is good for capturing regime shifts in TS data</li>
-</ul>
-<h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">¶</a></h3>
-<ul>
-<li>Regime Switching<ul>
-<li>Model assumes different <strong>dynamics</strong> in different regimes</li>
-<li>Each regime is modelled by its own AR process</li>
-</ul>
-</li>
-<li>Threshold value: determines the regime (commonly, <span class="arithmatex">\(y_{t-d}\)</span>)</li>
-<li>Piecewise linearity: overall nonlinear, it is linear within each regime</li>
-<li>Flexibility: handles systems where relationship between variables change depending on the regime they are in</li>
-</ul>
-<h3 id="model-formulation">Model Formulation<a class="headerlink" href="#model-formulation" title="Permanent link">¶</a></h3>
-<ul>
-<li>Model formulation</li>
-</ul>
-<div class="arithmatex">\[
-y_{t} = \begin{cases}
-\phi_{1,0} + \phi_{1,1} y_{t-1} + \dots \phi_{1,p} y_{t-p} + e_{t},  &amp; \text{if } y_{t-d} \le \gamma \\
-\phi_{2,0} + \phi_{2,1} y_{t-1} + \dots \phi_{2,p} y_{t-p} + e_{t},  &amp; \text{if } y_{t-d} \le \gamma \\
-\end{cases}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(\phi_{i,j}:\)</span> AR coefficient for regime <span class="arithmatex">\(i\)</span> and lag <span class="arithmatex">\(j\)</span></li>
-<li><span class="arithmatex">\(y_{t-d}:\)</span> threshold variable</li>
-<li><span class="arithmatex">\(\gamma:\)</span> threshold value</li>
-</ul>
+<h4 id="model-formulation">Model Formulation<a class="headerlink" href="#model-formulation" title="Permanent link">¶</a></h4>
+<p>$$<br>
+y_{t} = \begin{cases} <br>
+\phi_{1,0} + \phi_{1,1} y_{t-1} + \dots \phi_{1,p} y_{t-p} + e_{t}, &amp; \text{if } y_{t-d} \le \gamma \<br>
+\phi_{2,0} + \phi_{2,1} y_{t-1} + \dots \phi_{2,p} y_{t-p} + e_{t}, &amp; \text{if } y_{t-d} &gt; \gamma <br>
+\end{cases}<br>
+$$<br>
+- <strong><span class="arithmatex">\(\phi_{i,j}\)</span></strong>: AR coefficient for regime <span class="arithmatex">\(i\)</span> and lag <span class="arithmatex">\(j\)</span>.<br>
+- <strong><span class="arithmatex">\(\gamma\)</span></strong>: The threshold value.</p>
+<hr>
 <h3 id="steps-in-model-building">Steps in Model Building<a class="headerlink" href="#steps-in-model-building" title="Permanent link">¶</a></h3>
 <ol>
-<li>Specify threshold variable <span class="arithmatex">\((y_{t-d})\)</span></li>
-<li>Determine lag structure (<span class="arithmatex">\(p\)</span> in AR for each regime)</li>
-<li>Estimate threshold (<span class="arithmatex">\(\gamma\)</span> using grid search, minimize residual variance or information criteria)</li>
-<li>Estimate parameters: (Fit the AR processes using methods like least squares, for each regime)</li>
-<li>Diagnostics<ul>
-<li>Residual autocorrelation, stationarity</li>
-<li>Model accuracy</li>
-<li>Hypothesis test for nonlinearity (e.g., Hansen's test)</li>
+<li><strong>Specify Threshold Variable</strong>: Usually <span class="arithmatex">\(y_{t-d}\)</span>.</li>
+<li><strong>Determine Lag Structure</strong>: Choose the order <span class="arithmatex">\(p\)</span> for the AR process in each regime.</li>
+<li><strong>Estimate Threshold (<span class="arithmatex">\(\gamma\)</span>)</strong>: Typically done using <strong>grid search</strong> to minimize residual variance or information criteria.</li>
+<li><strong>Estimate Parameters</strong>: Fit the AR processes for each regime (usually via Least Squares).</li>
+<li><strong>Diagnostics</strong>:<ul>
+<li>Check residual autocorrelation and stationarity.</li>
+<li>Use hypothesis tests for nonlinearity, such as <strong>Hansen’s test</strong>.</li>
 </ul>
 </li>
 </ol>
-<h3 id="advantages-of-tar-models">Advantages of <abbr title="Threshold Autoregressive">TAR</abbr> Models<a class="headerlink" href="#advantages-of-tar-models" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">¶</a></h3>
 <ul>
-<li>Interpretability</li>
-<li>Flexibity</li>
-<li>Stationarity in Regimes: Each regime can be stationary even if overall is not</li>
+<li><strong>Economics</strong>: Modeling business cycles (Expansion vs. Recession) or inflation dynamics using unemployment rates as the threshold <span class="arithmatex">\(\gamma\)</span>.</li>
+<li><strong>Climatology</strong>: Representing sudden shifts in climate variables or weather patterns.</li>
+<li><strong>Engineering</strong>: Identifying operational thresholds in load-bearing structures or machinery to predict failure.</li>
 </ul>
-<h3 id="challenges">Challenges<a class="headerlink" href="#challenges" title="Permanent link">¶</a></h3>
-<ul>
-<li>Threshold estimation</li>
-<li>Overfitting</li>
-<li>Boundary issues (sparse data near <span class="arithmatex">\(\gamma\)</span> can make estimation difficult)</li>
-</ul>
-<h3 id="applicaations">Applicaations<a class="headerlink" href="#applicaations" title="Permanent link">¶</a></h3>
-<ul>
-<li>Economics<ul>
-<li>Business cycles</li>
-<li>inflation dynamics with unemployment rates as <span class="arithmatex">\(\gamma\)</span></li>
-</ul>
-</li>
-<li>Climatology<ul>
-<li>Representing shift in climate variables</li>
-</ul>
-</li>
-<li>Engineering<ul>
-<li>operational thresholds, load-bearing structures or machinery</li>
-</ul>
-</li>
-</ul>
+<hr>
 
 
 

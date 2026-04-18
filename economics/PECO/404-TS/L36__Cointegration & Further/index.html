@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10971,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12790,79 +12790,50 @@
 
 <!-- Markdown content -->
 <h1 id="cointegration-further">Cointegration &amp; Further<a class="headerlink" href="#cointegration-further" title="Permanent link">¶</a></h1>
+<p>Cointegration is a fundamental concept in multivariate time series that addresses the relationship between non-stationary variables. It allows us to distinguish between misleading correlations and genuine long-term equilibrium relationships.</p>
 <h3 id="spurious-regression">Spurious Regression<a class="headerlink" href="#spurious-regression" title="Permanent link">¶</a></h3>
-<p>Two independent <span class="arithmatex">\(I(1)\)</span> processes:</p>
-<div class="arithmatex">\[
-x_{t} = x_{t-1} +v_{t},\quad v_{t} \sim WN(0,1)
-\]</div>
-<div class="arithmatex">\[
-y_{t} = y_{t-1} +u_{t},\quad u_{t} \sim WN(0,1)
-\]</div>
-<p>Even though they are generated from independent families, there is a correlation <span class="arithmatex">\(\implies\)</span> Spurious regression</p>
+<p>Consider two independent <span class="arithmatex">\(I(1)\)</span> processes:<br>
+$<span class="arithmatex">\(x_{t} = x_{t-1} +v_{t},\quad v_{t} \sim WN(0,1)\)</span>$<br>
+$<span class="arithmatex">\(y_{t} = y_{t-1} +u_{t},\quad u_{t} \sim WN(0,1)\)</span>$</p>
+<p>Even though they are generated from independent families, there is a correlation <span class="arithmatex">\(\implies\)</span> <strong>Spurious regression</strong>. This means the relationship is just a mathematical artifact of the trends rather than a real connection.</p>
 <h3 id="non-spurious-regression">Non-spurious regression<a class="headerlink" href="#non-spurious-regression" title="Permanent link">¶</a></h3>
-<p>Two dependent <span class="arithmatex">\(I(1)\)</span> processes</p>
-<div class="arithmatex">\[
-x_{t} = 0.6I_{t} + v_{t},\quad v_{t} \sim WN(0,1)
-\]</div>
-<div class="arithmatex">\[
-y_{t} = 0.6I_{t} + u_{t},\quad u_{t} \sim WN(0,1)
-\]</div>
-<p>where <span class="arithmatex">\(I_{t} =I_{t-1} + w_{t}\)</span> and <span class="arithmatex">\(w_{t} \sim WN(0,1)\)</span> which is an <span class="arithmatex">\(I(1)\)</span> process.</p>
-<p>Thus, <span class="arithmatex">\(I_{t}\)</span> is a common stochastic trend in both <span class="arithmatex">\(\{ x_{t} \}\)</span> and <span class="arithmatex">\(\{ y_{t} \}\)</span>.</p>
-<p>Since, <span class="arithmatex">\(x_{t}\)</span> and <span class="arithmatex">\(y_{t}\)</span> are <span class="arithmatex">\(I(1)\)</span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, to remove the stochastic trend, we take the first difference of both and then we note than the relationship is not significant (<span class="arithmatex">\(v_{t}\)</span> and <span class="arithmatex">\(u_{t}\)</span> are independent).</p>
+<p>Now consider two dependent <span class="arithmatex">\(I(1)\)</span> processes:<br>
+$<span class="arithmatex">\(x_{t} = 0.6I_{t} + v_{t},\quad v_{t} \sim WN(0,1)\)</span>$<br>
+$<span class="arithmatex">\(y_{t} = 0.6I_{t} + u_{t},\quad u_{t} \sim WN(0,1)\)</span>$<br>
+where <span class="arithmatex">\(I_{t} =I_{t-1} + w_{t}\)</span> and <span class="arithmatex">\(w_{t} \sim WN(0,1)\)</span> which is an <span class="arithmatex">\(I(1)\)</span> process.</p>
+<p>Thus, <span class="arithmatex">\(I_{t}\)</span> is a <strong>common stochastic trend</strong> in both <span class="arithmatex">\(\{ x_{t} \}\)</span> and <span class="arithmatex">\(\{ y_{t} \}\)</span>. Since <span class="arithmatex">\(x_{t}\)</span> and <span class="arithmatex">\(y_{t}\)</span> are <span class="arithmatex">\(I(1)\)</span> (because if a process contains an <span class="arithmatex">\(I(1)\)</span> process, it itself will become <span class="arithmatex">\(I(1)\)</span>), to remove the stochastic trend, we take the first difference of both. After differencing, we note that the relationship is not significant because <span class="arithmatex">\(v_{t}\)</span> and <span class="arithmatex">\(u_{t}\)</span> are independent.</p>
 <h3 id="cointegrated">Cointegrated<a class="headerlink" href="#cointegrated" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-y_{t} - \dfrac{x_{t}}{0.6} = u_{t}^*, \quad u_{t}^* \sim WN(0, 1+0.6^{-2})
-\]</div>
-<p>There exists a <span class="arithmatex">\(\beta = (1,-(0.6)^{-1})\)</span> such that,</p>
-<div class="arithmatex">\[
-\beta'\begin{pmatrix}
-y_{t} \\
-x_{t}
-\end{pmatrix} \sim I(0)
-\]</div>
-<p>Then <span class="arithmatex">\(x_{t}\)</span> and <span class="arithmatex">\(y_{t}\)</span> are said to be cointegrated. </p>
-<ul>
-<li>The series should be transformed so that they can be considered as realizations of weakly stationary processes (<span class="arithmatex">\(I(0)\)</span>)</li>
-</ul>
-<blockquote>
-<p>When the linear combination (<span class="arithmatex">\(\beta'(y_{t}\ x_{t})'\)</span>) of two <span class="arithmatex">\(I(1)\)</span> processes is weakly stationary <span class="arithmatex">\(I(0)\)</span> <span class="arithmatex">\(\implies\)</span> cointegration.</p>
-</blockquote>
-<ul>
-<li>Existence of long-run equilibrium</li>
-<li>Common stochastic trend exists</li>
-<li>Separate the short- and long- run relationships</li>
-<li>help improve long-run forecast accuracy (how?)</li>
-<li>improve estimation efficiency by implying restrictions on the model (what?)</li>
-</ul>
+<p>In the non-spurious example, we can see:<br>
+$<span class="arithmatex">\(y_{t} - \dfrac{x_{t}}{0.6} = u_{t}^*, \quad u_{t}^* \sim WN(0, 1+0.6^{-2})\)</span>$</p>
+<p>There exists a vector <span class="arithmatex">\(\beta = (1,-(0.6)^{-1})\)</span> such that:<br>
+$<span class="arithmatex">\(\beta'\begin{pmatrix} y_{t} \\ x_{t} \end{pmatrix} \sim I(0)\)</span>$</p>
+<p>When this happens, <span class="arithmatex">\(x_{t}\)</span> and <span class="arithmatex">\(y_{t}\)</span> are said to be <strong>cointegrated</strong>. The series should be transformed so that they can be considered as realizations of weakly stationary processes (<span class="arithmatex">\(I(0)\)</span>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Definition</p>
+<p>When the linear combination (<span class="arithmatex">\(\beta'(y_{t}, x_{t})'\)</span>) of two <span class="arithmatex">\(I(1)\)</span> processes is weakly stationary <span class="arithmatex">\(I(0)\)</span>, it implies cointegration.</p>
+</div>
+<p><strong>Why is this important?</strong><br>
+- <strong>Existence of long-run equilibrium</strong>: They move together.<br>
+- <strong>Common stochastic trend exists</strong>: One trend drives both.<br>
+- <strong>Separation of relationships</strong>: It helps separate the short- and long-run relationships.<br>
+- <strong>Improved Forecasts</strong>: It helps improve long-run forecast accuracy because the model knows they must stay together.<br>
+- <strong>Estimation Efficiency</strong>: It improves efficiency by implying restrictions on the model parameters.</p>
 <h3 id="multivariate-situations">Multivariate Situations<a class="headerlink" href="#multivariate-situations" title="Permanent link">¶</a></h3>
+<p>Elements of a <span class="arithmatex">\(k\)</span>-dimensional vector <span class="arithmatex">\(Y\)</span> are cointegrated of order <span class="arithmatex">\((d,c)\)</span> if:<br>
+- All <span class="arithmatex">\(Y\)</span> elements are <span class="arithmatex">\(I(d)\)</span>.<br>
+- There exists a <strong>non-trivial</strong> linear combination <span class="arithmatex">\(z\)</span>:<br>
+$<span class="arithmatex">\(\beta'y_{t} = z_{t} \sim I(d-c)\)</span>$</p>
 <ul>
-<li>Elements of <span class="arithmatex">\(k\)</span>-dimensional vector <span class="arithmatex">\(Y\)</span>, are cointegrated of order <span class="arithmatex">\((d,c)\)</span></li>
-<li>if all <span class="arithmatex">\(Y\)</span> elements are <span class="arithmatex">\(I(d)\)</span></li>
-<li>There exists a <em>non-trivial</em> linear combination <span class="arithmatex">\(z\)</span></li>
-<li>which is <span class="arithmatex">\(I(d-c)\)</span></li>
-</ul>
-<div class="arithmatex">\[
-\beta'y_{t} = z_{t} \sim I(d-c)
-\]</div>
-<ul>
-<li><span class="arithmatex">\(\beta\)</span> is called the cointegration vector</li>
-<li>There can be multiple <em>non-trivial</em> linear combinations (need not be unique).</li>
-<li>The number of such linearly independent cointegration vectors is called cointegration rank.</li>
+<li><span class="arithmatex">\(\beta\)</span> is called the <strong>cointegration vector</strong>.</li>
+<li>There can be multiple non-trivial linear combinations (they need not be unique).</li>
+<li>The number of such linearly independent cointegration vectors is called the <strong>cointegration rank</strong>.</li>
 </ul>
 <h3 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">¶</a></h3>
 <ul>
-<li>Pairs Trading in finance: individually assets are not stationary. Linear combination is! There will be some long-run equilibrium between two assets. So one can capture the deviations from the long-run equilibrium in the short-term, and take decisions accordingly (By taking long- and short- positions appropriately)</li>
-<li>Energy markets: prices of energy commodities are non-stationary</li>
+<li><strong>Pairs Trading in finance</strong>: Individually assets are not stationary, but their linear combination is! There will be some long-run equilibrium between two assets. One can capture the deviations from the long-run equilibrium in the short-term and take decisions accordingly (by taking long- and short- positions appropriately).</li>
+<li><strong>Energy markets</strong>: Prices of energy commodities are non-stationary but often move together.</li>
 </ul>
-<div class="footnote">
 <hr>
-<ol>
-<li id="fn:1">
-<p>If a process contains an <span class="arithmatex">\(I(1)\)</span> process, it, itself will become <span class="arithmatex">\(I(1)\)</span>.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-</ol>
-</div>
 
 
 

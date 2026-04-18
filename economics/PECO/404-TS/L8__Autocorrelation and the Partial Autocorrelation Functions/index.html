@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8721,7 +8721,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8749,7 +8749,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8830,10 +8830,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#properties-of-acf" class="md-nav__link">
+  <a href="#1-fundamental-notation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Properties of ACF
+        1. Fundamental Notation
       
     </span>
   </a>
@@ -8841,10 +8841,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acf-of-a-white-noise-process" class="md-nav__link">
+  <a href="#2-properties-of-acf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ACF of a White Noise Process
+        2. Properties of ACF
       
     </span>
   </a>
@@ -8852,10 +8852,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-acf-of-lag-k" class="md-nav__link">
+  <a href="#3-acf-of-a-white-noise-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sample ACF of Lag \(k\)
+        3. ACF of a White Noise Process
       
     </span>
   </a>
@@ -8863,10 +8863,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#correlogram-of-acf-plot" class="md-nav__link">
+  <a href="#4-sample-acf-and-the-correlogram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Correlogram of ACF plot
+        4. Sample ACF and the Correlogram
       
     </span>
   </a>
@@ -8874,10 +8874,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partial-autocorrelation-function-pacf" class="md-nav__link">
+  <a href="#5-partial-autocorrelation-function-pacf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partial Autocorrelation Function (PACF)
+        5. Partial Autocorrelation Function (PACF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-moments-of-an-ar1-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Moments of an AR(1) Process
       
     </span>
   </a>
@@ -8907,7 +8918,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -9035,7 +9046,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -9063,7 +9074,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -9091,7 +9102,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9331,7 +9342,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9883,7 +9894,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10971,7 +10982,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12789,77 +12800,48 @@
 
 
 <!-- Markdown content -->
-<h1 id="acf-pacf"><abbr title="Autocorrelation Function">ACF</abbr> &amp; PACF<a class="headerlink" href="#acf-pacf" title="Permanent link">¶</a></h1>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../L3__Stationarity%20in%20Time%20Series/#0a3745" data-desc-position="bottom"><img alt="L3__Stationarity in Time Series#^0a3745" src="../L3__Stationarity%20in%20Time%20Series/#0a3745"></a></p>
-<p>Different notations</p>
-<div class="arithmatex">\[
-\gamma_{k}(t) = Cov(Y_{t},Y_{t-k}) = E(Y_{t}Y_{t+k}) - \mu_{t}\mu_{t+k}
-\]</div>
-<p>gives the covariance between value at <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(t+k\)</span>.</p>
-<p>Similarly,</p>
-<div class="arithmatex">\[
-\rho_{k} = Corr(Y_{t},Y_{t+k})
-\]</div>
-<h3 id="properties-of-acf">Properties of <abbr title="Autocorrelation Function">ACF</abbr><a class="headerlink" href="#properties-of-acf" title="Permanent link">¶</a></h3>
-<ol>
-<li><span class="arithmatex">\(\rho_{k} = \rho_{-k}\)</span></li>
-<li><span class="arithmatex">\(\lvert \rho_{k} \rvert \leq 1\)</span></li>
-<li><strong>Non-uniqueness of <abbr title="Autocorrelation Function">ACF</abbr></strong>: A stationary normal process is completely determined by its mean, variance and <abbr title="Autocorrelation Function">ACF</abbr>.<ul>
-<li>It is possible to find several non-normal processes with the same <abbr title="Autocorrelation Function">ACF</abbr>.</li>
-</ul>
-</li>
-</ol>
-<h3 id="acf-of-a-white-noise-process"><abbr title="Autocorrelation Function">ACF</abbr> of a White Noise Process<a class="headerlink" href="#acf-of-a-white-noise-process" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-\rho_{k} = \begin{cases}
-1 &amp;  \text{if } k=0 \\
-0 &amp; \text{otherwise}
-\end{cases}
-\]</div>
-<h3 id="sample-acf-of-lag-k">Sample <abbr title="Autocorrelation Function">ACF</abbr> of Lag <span class="arithmatex">\(k\)</span><a class="headerlink" href="#sample-acf-of-lag-k" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>Sample version of the correlation function</p>
-</blockquote>
-<p>Sample <abbr title="Autocorrelation Function">ACF</abbr> at lag <span class="arithmatex">\(1\)</span> is given by</p>
-<div class="arithmatex">\[
-r_{1} = \dfrac{\sum_{t=1}^{n-1}(y_{t}-\bar{y})(y_{t+1}-\bar{y})}{\sum_{t=1}^n(y_{t}-\bar{y})^{2}}
-\]</div>
-<p>Sample <abbr title="Autocorrelation Function">ACF</abbr> at lag <span class="arithmatex">\(k\)</span> is given by</p>
-<div class="arithmatex">\[
-r_{1} = \dfrac{\sum_{t=1}^{n-k}(y_{t}-\bar{y})(y_{t+k}-\bar{y})}{\sum_{t=1}^n(y_{t}-\bar{y})^{2}}
-\]</div>
-<h3 id="correlogram-of-acf-plot">Correlogram of <abbr title="Autocorrelation Function">ACF</abbr> plot<a class="headerlink" href="#correlogram-of-acf-plot" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>Graph of <span class="arithmatex">\(r_{k}\)</span> against <span class="arithmatex">\(k\)</span> is called as a <em>Correlogram</em>.</p>
-</blockquote>
-<h3 id="partial-autocorrelation-function-pacf">Partial Autocorrelation Function (PACF)<a class="headerlink" href="#partial-autocorrelation-function-pacf" title="Permanent link">¶</a></h3>
-<p>PACF of any order <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(\alpha_{k}\)</span> is the partial correlation coefficient between <span class="arithmatex">\(Y_{t}, Y_{t-k}\)</span> <em>conditional on the intermediate values</em>.</p>
-<div class="arithmatex">\[
-\alpha_{k} = Corr(Y_{t},kY_{t-k}\vert Y_{t-1},Y_{t-2},\dots,Y_{t-k+1})
-\]</div>
-<p>For an <span class="arithmatex">\(AR(p)\)</span> process, we assume <span class="arithmatex">\(E(Y_{t})=  E(Y_{t-k})\)</span> for all <span class="arithmatex">\(k\)</span>. Applying expectation to the <span class="arithmatex">\(AR(p)\)</span> form, we will get</p>
-<div class="arithmatex">\[
-\mu = \dfrac{c}{1-\phi_{1}-\phi_{2}\dots-\phi_{p}}
-\]</div>
-<p>Thus, given <span class="arithmatex">\(Y_{t-1}\)</span>, <span class="arithmatex">\(Y_{t}\)</span> becomes independent of past lags.</p>
+<h1 id="acf-pacf"><abbr title="Autocorrelation Function">ACF</abbr> &amp; <abbr title="Partial Autocorrelation Function">PACF</abbr><a class="headerlink" href="#acf-pacf" title="Permanent link">¶</a></h1>
+<p>The <strong>Autocorrelation Function (<abbr title="Autocorrelation Function">ACF</abbr>)</strong> and <strong>Partial Autocorrelation Function (<abbr title="Partial Autocorrelation Function">PACF</abbr>)</strong> are essential tools for identifying the internal structure and dependencies within a time series.</p>
+<h3 id="1-fundamental-notation">1. Fundamental Notation<a class="headerlink" href="#1-fundamental-notation" title="Permanent link">¶</a></h3>
+<p>For a stationary process, the covariance and correlation depend only on the lag <span class="arithmatex">\(k\)</span>, rather than the specific time <span class="arithmatex">\(t\)</span>:</p>
 <ul>
-<li>This is called the <strong>Markovian property</strong>, when the mean of the time variable is dependent on only on one of its past lags.</li>
+<li><strong>Auto-covariance Function (<span class="arithmatex">\(\gamma_{k}\)</span>):</strong> $<span class="arithmatex">\(\gamma_{k} = Cov(Y_{t}, Y_{t+k}) = E[Y_{t}Y_{t+k}] - \mu_{t}\mu_{t+k}\)</span>$<br>
+    This measures the linear relationship between observations at <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(t+k\)</span>.</li>
+<li><strong>Autocorrelation Function (<span class="arithmatex">\(\rho_{k}\)</span>):</strong> $<span class="arithmatex">\(\rho_{k} = Corr(Y_{t}, Y_{t+k}) = \frac{\gamma_{k}}{\gamma_{0}}\)</span>$<br>
+    This normalizes the covariance by the variance (<span class="arithmatex">\(\gamma_{0}\)</span>).</li>
 </ul>
-<p>The process is variance stationary.</p>
-<div class="arithmatex">\[
-\gamma_{0} = V(Y_{t}) = V(Y_{t-1}) = \dots = \sigma_{y}^{2}
-\]</div>
-<p>And,  </p>
-<div class="arithmatex">\[
-\sigma_{y}^{2} = E[\phi_{1}Y_{t-1} + e_{t}]^2 = \phi_{1}^{2}E(Y_{t-1}^{2}) + E(e_{t}^{2}) + 2\phi_{1}E(Y_{t-1}e_{t}) 
-\]</div>
-<div class="arithmatex">\[
-= \phi_{1}^{2}\sigma_{y}^{2} + \sigma_{e}^{2}
-\]</div>
-<p>So,</p>
-<div class="arithmatex">\[
-\sigma_{y}^{2} = \dfrac{\sigma_{e}^{2}}{(1-\phi_{1}^{2})}
-\]</div>
+<h3 id="2-properties-of-acf">2. Properties of <abbr title="Autocorrelation Function">ACF</abbr><a class="headerlink" href="#2-properties-of-acf" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Symmetry:</strong> <span class="arithmatex">\(\rho_{k} = \rho_{-k}\)</span>. The correlation between <span class="arithmatex">\(Y_{t}\)</span> and <span class="arithmatex">\(Y_{t+k}\)</span> is the same as between <span class="arithmatex">\(Y_{t}\)</span> and <span class="arithmatex">\(Y_{t-k}\)</span>.</li>
+<li><strong>Boundaries/Limits:</strong> <span class="arithmatex">\(|\rho_{k}| \leq 1\)</span>.</li>
+<li><strong>Non-uniqueness:</strong> While a stationary <strong>Normal (Gaussian)</strong> process is completely determined by its mean, variance, and <abbr title="Autocorrelation Function">ACF</abbr>, it is possible to find several <strong>non-normal</strong> processes that share the exact same <abbr title="Autocorrelation Function">ACF</abbr>.</li>
+</ul>
+<h3 id="3-acf-of-a-white-noise-process">3. <abbr title="Autocorrelation Function">ACF</abbr> of a White Noise Process<a class="headerlink" href="#3-acf-of-a-white-noise-process" title="Permanent link">¶</a></h3>
+<p>For a white noise process, there is no correlation between different time points:<br>
+$<span class="arithmatex">\(\rho_{k} = \begin{cases} 1 &amp; \text{if } k=0 \\ 0 &amp; \text{otherwise} \end{cases}\)</span>$</p>
+<h3 id="4-sample-acf-and-the-correlogram">4. Sample <abbr title="Autocorrelation Function">ACF</abbr> and the Correlogram<a class="headerlink" href="#4-sample-acf-and-the-correlogram" title="Permanent link">¶</a></h3>
+<p>In practice, we estimate the theoretical <abbr title="Autocorrelation Function">ACF</abbr> using observed data:<br>
+* <strong>Sample <abbr title="Autocorrelation Function">ACF</abbr> (<span class="arithmatex">\(r_{k}\)</span>):</strong> The sample version of the correlation at lag <span class="arithmatex">\(k\)</span> is calculated as:<br>
+    $<span class="arithmatex">\(r_{k} = \frac{\sum_{t=1}^{n-k}(y_{t}-\bar{y})(y_{t+k}-\bar{y})}{\sum_{t=1}^n(y_{t}-\bar{y})^{2}}\)</span>$<br>
+* <strong>Correlogram:</strong> A plot of the sample autocorrelation coefficients <span class="arithmatex">\(r_{k}\)</span> against the lag <span class="arithmatex">\(k\)</span>. This visual aid helps identify which lags have significant correlations.</p>
+<h3 id="5-partial-autocorrelation-function-pacf">5. Partial Autocorrelation Function (<abbr title="Partial Autocorrelation Function">PACF</abbr>)<a class="headerlink" href="#5-partial-autocorrelation-function-pacf" title="Permanent link">¶</a></h3>
+<p>The <abbr title="Partial Autocorrelation Function">PACF</abbr> of order <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(\alpha_{k}\)</span>) represents the correlation between <span class="arithmatex">\(Y_{t}\)</span> and <span class="arithmatex">\(Y_{t-k}\)</span> after removing the linear influence of the intermediate variables (<span class="arithmatex">\(Y_{t-1}, Y_{t-2}, \dots, Y_{t-k+1}\)</span>).<br>
+$<span class="arithmatex">\(\alpha_{k} = Corr(Y_{t}, Y_{t-k} \mid Y_{t-1}, Y_{t-2}, \dots, Y_{t-k+1})\)</span>$</p>
+<div class="admonition tip">
+<p class="admonition-title">The Markovian Property</p>
+<p>In an <span class="arithmatex">\(AR(1)\)</span> process, once <span class="arithmatex">\(Y_{t-1}\)</span> is known, <span class="arithmatex">\(Y_{t}\)</span> becomes independent of all previous lags (like <span class="arithmatex">\(Y_{t-2}\)</span>). This "memoryless" behavior where the future depends only on the present is known as the <strong>Markovian property</strong>.</p>
+</div>
+<h3 id="6-moments-of-an-ar1-process">6. Moments of an AR(1) Process<a class="headerlink" href="#6-moments-of-an-ar1-process" title="Permanent link">¶</a></h3>
+<p>Assuming the process is stationary (<span class="arithmatex">\(E[Y_{t}] = E[Y_{t-k}]\)</span>), we can derive the mean and variance for an <span class="arithmatex">\(AR(p)\)</span> process:</p>
+<ul>
+<li><strong>Mean (<span class="arithmatex">\(\mu\)</span>):</strong><br>
+    $<span class="arithmatex">\(\mu = \frac{c}{1-\phi_{1}-\phi_{2}-\dots-\phi_{p}}\)</span>$</li>
+<li><strong>Variance (<span class="arithmatex">\(\sigma_{y}^{2}\)</span>):</strong> For an <span class="arithmatex">\(AR(1)\)</span> model <span class="arithmatex">\(Y_{t} = \phi_{1}Y_{t-1} + e_{t}\)</span>, the variance is:<br>
+    $<span class="arithmatex">\(\sigma_{y}^{2} = E[\phi_{1}Y_{t-1} + e_{t}]^2 = \phi_{1}^{2}\sigma_{y}^{2} + \sigma_{e}^{2}\)</span>$<br>
+    Solving for <span class="arithmatex">\(\sigma_{y}^{2}\)</span>, we get:<br>
+    $<span class="arithmatex">\(\sigma_{y}^{2} = \frac{\sigma_{e}^{2}}{1-\phi_{1}^{2}}\)</span>$</li>
+</ul>
+<hr>
 
 
 
@@ -12895,7 +12877,7 @@ r_{1} = \dfrac{\sum_{t=1}^{n-k}(y_{t}-\bar{y})(y_{t+k}-\bar{y})}{\sum_{t=1}^n(y_
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L7_Basic%20Time%20Seires%20Processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basic TS Processes">
+          <a href="../L7_Basic%20Time%20Seires%20Processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basic Time Series Processes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12905,20 +12887,20 @@ r_{1} = \dfrac{\sum_{t=1}^{n-k}(y_{t}-\bar{y})(y_{t+k}-\bar{y})}{\sum_{t=1}^n(y_
                 Previous
               </span>
               <div class="md-ellipsis">
-                Basic TS Processes
+                Basic Time Series Processes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../L9__ACF%20and%20PACF%20for%20Some%20Time%20Series%20Processes/" class="md-footer__link md-footer__link--next" aria-label="Next: ACF &amp;amp; PACF for some TS processes">
+          <a href="../L9__ACF%20and%20PACF%20for%20Some%20Time%20Series%20Processes/" class="md-footer__link md-footer__link--next" aria-label="Next: ACF &amp;amp; PACF for Specific TS Processes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ACF &amp; PACF for some TS processes
+                ACF &amp; PACF for Specific TS Processes
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9466,10 +9466,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#simple-moving-average-smoothing-sma" class="md-nav__link">
+  <a href="#1-simple-moving-average-smoothing-sma" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simple Moving Average Smoothing (SMA)
+        1. Simple Moving Average Smoothing (SMA)
       
     </span>
   </a>
@@ -9477,10 +9477,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exponential-smoothing-ema" class="md-nav__link">
+  <a href="#2-exponential-smoothing-ema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exponential Smoothing (EMA)
+        2. Exponential Smoothing (EMA)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-advanced-smoothing-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Advanced Smoothing Methods
       
     </span>
   </a>
@@ -9850,7 +9861,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10938,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12756,65 +12767,41 @@
 
 
 <!-- Markdown content -->
-<h1 id="smoothing-techniques-sma-ema">Smoothing Techniques (SMA, <abbr title="Exponential Moving Average">EMA</abbr>)<a class="headerlink" href="#smoothing-techniques-sma-ema" title="Permanent link">¶</a></h1>
-<ul>
-<li>Simple Moving Average</li>
-<li>Exponential Smoothing</li>
-<li>Double Exponential - Holt's</li>
-<li>Triple Exponential - Holt Winter's </li>
-</ul>
-<hr>
-<h4 id="why-do-we-need-smoothing">Why do we need smoothing?<a class="headerlink" href="#why-do-we-need-smoothing" title="Permanent link">¶</a></h4>
-<p>To reduce the noise (random variations) in the data. They will reveal the underlying trend for better forecasting. </p>
-<p>May also reveal any other important patterns in the data.</p>
-<h3 id="simple-moving-average-smoothing-sma">Simple Moving Average Smoothing (SMA)<a class="headerlink" href="#simple-moving-average-smoothing-sma" title="Permanent link">¶</a></h3>
-<p>Smoothed series is derived from the average of the last <span class="arithmatex">\(k\)</span> (order) elements of the series.</p>
-<div class="arithmatex">\[
-S_{t} = \dfrac{Y_{t}+Y_{t-1} + \dots + Y_{t-k+1}}{k}
-\]</div>
+<h1 id="smoothing-techniques-sma-ema">Smoothing Techniques (<abbr title="Simple Moving Average">SMA</abbr>, <abbr title="Exponential Moving Average">EMA</abbr>)<a class="headerlink" href="#smoothing-techniques-sma-ema" title="Permanent link">¶</a></h1>
+<p>Smoothing techniques are essential for reducing noise—the random variations in a time series—to reveal the underlying trend and important patterns for better forecasting.</p>
+<h3 id="1-simple-moving-average-smoothing-sma">1. Simple Moving Average Smoothing (<abbr title="Simple Moving Average">SMA</abbr>)<a class="headerlink" href="#1-simple-moving-average-smoothing-sma" title="Permanent link">¶</a></h3>
+<p>The smoothed series is derived by taking the arithmetic average of the last <span class="arithmatex">\(k\)</span> (order) elements of the series.<br>
+$<span class="arithmatex">\(S_{t} = \dfrac{Y_{t}+Y_{t-1} + \dots + Y_{t-k+1}}{k}\)</span>$</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L23__Smoothing%20Techniques%20%28SMA%2CEMA%29-1769073506840.webp" data-desc-position="bottom"><img alt="L23__Smoothing Techniques (SMA,EMA)-1769073506840.webp" src="../../../../assets/images/2026/01/L23__Smoothing%20Techniques%20%28SMA%2CEMA%29-1769073506840.webp"></a></p>
 <ul>
-<li>More the order, more the smoothening</li>
+<li><strong>Order Influence:</strong> Increasing the order <span class="arithmatex">\(k\)</span> results in more significant smoothing of the data.</li>
 </ul>
-<h3 id="exponential-smoothing-ema">Exponential Smoothing (<abbr title="Exponential Moving Average">EMA</abbr>)<a class="headerlink" href="#exponential-smoothing-ema" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="2-exponential-smoothing-ema">2. Exponential Smoothing (<abbr title="Exponential Moving Average">EMA</abbr>)<a class="headerlink" href="#2-exponential-smoothing-ema" title="Permanent link">¶</a></h3>
+<p>Unlike <abbr title="Simple Moving Average">SMA</abbr>, Exponential Smoothing uses a weighted average where weights decrease exponentially as observations get older, placing more importance on recent data.</p>
+<h4 id="mathematical-structure">Mathematical Structure<a class="headerlink" href="#mathematical-structure" title="Permanent link">¶</a></h4>
 <ul>
-<li>Uses a weighted average (exponentially decreasing)</li>
-<li>Pure more weight on more recent observations</li>
-<li><span class="arithmatex">\(S_{0} = Y_{0}\)</span> (starting point) and we write the following <em>recursive</em> structure.</li>
+<li><strong>Initialization:</strong> <span class="arithmatex">\(S_{0} = Y_{0}\)</span>.</li>
+<li><strong>Recursive Formula:</strong> <span class="arithmatex">\(S_{t} = \alpha Y_{t-1} + (1-\alpha)S_{t-1}\)</span>, where <span class="arithmatex">\(0 &lt; \alpha &lt; 1\)</span> is the smoothing factor.</li>
 </ul>
-<div class="arithmatex">\[
-S_{t} = \alpha Y_{t-1} + (1-\alpha)S_{t-1}
-\]</div>
-<p>Where, <span class="arithmatex">\(0 \lt \alpha \lt 1\)</span> is the smoothing factor.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L23__Smoothing%20Techniques%20%28SMA%2CEMA%29-1769073775918.webp" data-desc-position="bottom"><img alt="L23__Smoothing Techniques (SMA,EMA)-1769073775918.webp" src="../../../../assets/images/2026/01/L23__Smoothing%20Techniques%20%28SMA%2CEMA%29-1769073775918.webp"></a></p>
+<h4 id="characteristics-of-alpha">Characteristics of <span class="arithmatex">\(\alpha\)</span><a class="headerlink" href="#characteristics-of-alpha" title="Permanent link">¶</a></h4>
 <ul>
-<li>Low <span class="arithmatex">\(\alpha\)</span> <span class="arithmatex">\(\implies\)</span> Lower influence of each observation. Less responsive to recent changes.</li>
-<li>Larger <span class="arithmatex">\(\alpha\)</span> <span class="arithmatex">\(\implies\)</span> Reduces the effect of smoothing.</li>
-<li>Exponentially weighted average of past observations</li>
-<li>More recent values to have greater influence on forecast.<ul>
-<li>Exponential decay of influence of past data.</li>
+<li><strong>Low <span class="arithmatex">\(\alpha\)</span>:</strong> Observations have lower influence; the model is less responsive to recent changes and results in more smoothing.</li>
+<li><strong>High <span class="arithmatex">\(\alpha\)</span>:</strong> Reduces the effect of smoothing, making the model highly sensitive to recent data points.</li>
 </ul>
-</li>
-<li>Simple, computational efficiency, ease of adjusting changes in process.</li>
-</ul>
-<div class="arithmatex">\[
-S_{t} = \hat{Y}_{t+1}, \quad S_{t-1} = \hat{Y}_{t}
-\]</div>
-<p>Thus,</p>
-<div class="arithmatex">\[
-\hat{Y}_{t+1} = \alpha Y_{t} + (1-\alpha)\hat{Y}_{t}
-\]</div>
-<p>By recursive substitution,</p>
-<div class="arithmatex">\[
-\hat{y}_{t+1} = \alpha \sum_{j=1}^{t-1}(1-\alpha)^j y_{t-j}
-\]</div>
+<h4 id="forecast-representation">Forecast Representation<a class="headerlink" href="#forecast-representation" title="Permanent link">¶</a></h4>
+<p>The current smoothed value serves as the forecast for the next period (<span class="arithmatex">\(S_{t} = \hat{Y}_{t+1}\)</span>), leading to the recursive forecast structure:<br>
+$<span class="arithmatex">\(\hat{Y}_{t+1} = \alpha Y_{t} + (1-\alpha)\hat{Y}_{t}\)</span>$<br>
+Through recursive substitution, this shows the exponential decay of past data's influence:<br>
+$<span class="arithmatex">\(\hat{Y}_{t+1} = \alpha \sum_{j=1}^{t-1}(1-\alpha)^j y_{t-j}\)</span>$</p>
+<h4 id="selecting-alpha">Selecting <span class="arithmatex">\(\alpha\)</span><a class="headerlink" href="#selecting-alpha" title="Permanent link">¶</a></h4>
+<p>Since the choice of <span class="arithmatex">\(\alpha\)</span> is critical, it is usually selected on a case-by-case basis by simulating values between 0 and 1 to minimize error metrics like <strong><abbr title="Mean Squared Error">MSE</abbr></strong> or <strong><abbr title="Root Mean Squared Error">RMSE</abbr></strong>.</p>
+<hr>
+<h3 id="3-advanced-smoothing-methods">3. Advanced Smoothing Methods<a class="headerlink" href="#3-advanced-smoothing-methods" title="Permanent link">¶</a></h3>
 <ul>
-<li>How to select appropriate <span class="arithmatex">\(\alpha\)</span>?<ul>
-<li>Use MSE or RMSE</li>
-<li>Simulate all values of <span class="arithmatex">\(0 \lt \alpha \lt 1\)</span>, to minimize (R)MSE</li>
-<li>Select <span class="arithmatex">\(\alpha\)</span> based on the data (case-by-case basis).</li>
-</ul>
-</li>
+<li><strong>Double Exponential (Holt's):</strong> Suitable for data with a trend.</li>
+<li><strong>Triple Exponential (Holt-Winter's):</strong> Suitable for data exhibiting both trend and seasonality.</li>
 </ul>
 
 

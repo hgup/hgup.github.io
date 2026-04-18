@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10869,7 +10869,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -10954,6 +10954,17 @@
     <span class="md-ellipsis">
       
         k-Nearest Neighbors (KNN)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-pattern-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Pattern Recognition
       
     </span>
   </a>
@@ -12757,103 +12768,87 @@
 
 <!-- Markdown content -->
 <h1 id="other-ml-models-for-ts">Other ML Models for TS<a class="headerlink" href="#other-ml-models-for-ts" title="Permanent link">¶</a></h1>
+<p>While advanced deep learning captures the headlines, simpler neighbor-based and probabilistic models like <abbr title="k-Nearest Neighbors">KNN</abbr> and Naive Bayes remain highly effective for specific tasks like pattern recognition and rapid anomaly detection.</p>
 <h3 id="k-nearest-neighbors-knn">k-Nearest Neighbors (<abbr title="k-Nearest Neighbors">KNN</abbr>)<a class="headerlink" href="#k-nearest-neighbors-knn" title="Permanent link">¶</a></h3>
-<ul>
-<li>adapted for TS forecasting or classification</li>
-<li>primarily used to identify the most similar historical patterns (neighbors)</li>
-<li>use their outcomes to predict future values</li>
-</ul>
-<h4 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h4>
+<p><abbr title="k-Nearest Neighbors">KNN</abbr> is a non-parametric method adapted for time series forecasting or classification. Instead of learning a global model, it identifies the most similar historical patterns (<strong>neighbors</strong>) and uses their known outcomes to predict future values.</p>
+<h4 id="implementation-steps">Implementation Steps<a class="headerlink" href="#implementation-steps" title="Permanent link">¶</a></h4>
 <ol>
-<li>Convert TS to a supervised problem<ul>
-<li>essentially <em>label</em> each datapoint</li>
-<li><strong>lagged features</strong></li>
+<li><strong>Supervised Transformation</strong>: Convert the time series into a supervised learning problem by "labeling" data points using <strong>lagged features</strong>.</li>
+<li><strong>Similarity Measurement</strong>: Calculate the similarity between segments. Usually, each time step (row) is treated as a vector in <span class="arithmatex">\(p\)</span>-dimensional space.<ul>
+<li><strong>Euclidean Distance</strong>: <span class="arithmatex">\(d(x, y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}\)</span> is the standard metric used to find the "closeness" of patterns.</li>
 </ul>
 </li>
-<li>Similarity measure<ul>
-<li>Euclidean distance (similarity between TS segment is calculated)</li>
-<li>Each time step (row) is treated as a vector in <span class="arithmatex">\(p\)</span>-dimensional space</li>
-</ul>
-</li>
-<li>Prediction<ul>
-<li>For a given test point, algorithm finds the <span class="arithmatex">\(k\)</span> nearest neighbors from the training set</li>
-<li>Output is the<ul>
-<li>average (for regression)</li>
-<li>majority class (for classification)</li>
-</ul>
-</li>
+<li><strong>Prediction</strong>: For a given test point, the algorithm finds the <span class="arithmatex">\(k\)</span> nearest neighbors from the training set.<ul>
+<li><strong>Regression</strong>: Output is the average of the neighbors' values.</li>
+<li><strong>Classification</strong>: Output is the majority class among the neighbors.</li>
 </ul>
 </li>
 </ol>
 <h4 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">¶</a></h4>
-<ol>
-<li>Feature Engineering<ul>
-<li>Lagged features</li>
-<li>Optionally, include rolling statistics (moving averages)</li>
-</ul>
-</li>
-<li>Hyperparameters (strike a balance)<ul>
-<li><span class="arithmatex">\(k\)</span> → number of neighbors to consider</li>
-<li>Distance metric → Euclidean distance / Manhattan distance</li>
-</ul>
-</li>
-<li>Normalization<ul>
-<li>To ensure all features contribute equally to the distance calculation</li>
-</ul>
-</li>
-<li>Model evaluation<ul>
-<li>Regression: MSE (Mean Squared Error), MAE (Mean Absolute Error)</li>
-<li>Classification: Precision, Recall, Accuracy</li>
-</ul>
-</li>
-</ol>
-<h4 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">¶</a></h4>
 <ul>
-<li>simplicity</li>
-<li>non-parametric</li>
-<li>handles non-linearity</li>
-</ul>
-<h4 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h4>
-<ul>
-<li>Computational cost: high for large datasets (for computing distances)</li>
-<li>Curse of Dimensionality: (carefully select the number of lagged features, and normalize data)</li>
-<li>No explicit model: (memory-based, doesn't create a model) <span class="arithmatex">\(\implies\)</span>  less efficient for frequent predictions</li>
-</ul>
-<h4 id="example-pattern-recognition">Example - Pattern Recognition<a class="headerlink" href="#example-pattern-recognition" title="Permanent link">¶</a></h4>
-<ul>
-<li>Recurring events, anomaly detection</li>
-<li>This pattern can be spotted and identify which subgroup of the time series is similar to this pattern</li>
-<li>e.g. Stock price movements, vibrations etc</li>
-<li>Brief steps<ol>
-<li>Define a reference pattern</li>
-<li>Segment the time series into (non) overlapping windows to capture local patterns</li>
-<li>Extract features<ul>
-<li>Compute features (mean, variance, slopes, Fourier coefficients) to represent sub-sequences</li>
+<li><strong>Feature Engineering</strong>: Critical for <abbr title="k-Nearest Neighbors">KNN</abbr>. Includes lagged features (<span class="arithmatex">\(y_{t-1}, y_{t-2}\)</span>) and optionally rolling statistics like moving averages to smooth noise.</li>
+<li><strong>Hyperparameters</strong>:<ul>
+<li><span class="arithmatex">\(k\)</span>: The number of neighbors. Small <span class="arithmatex">\(k\)</span> is sensitive to noise; large <span class="arithmatex">\(k\)</span> may blur local patterns.</li>
+<li><strong>Distance Metric</strong>: Euclidean is standard, but Manhattan or Dynamic Time Warping (DTW) can be used for time-shifted series.</li>
 </ul>
 </li>
-<li>Train <abbr title="k-Nearest Neighbors">KNN</abbr><ul>
-<li>"Pattern Found" vs "No Pattern"</li>
+<li><strong>Normalization</strong>: <strong>Essential</strong> for <abbr title="k-Nearest Neighbors">KNN</abbr>. Since it is distance-based, features must be scaled to ensure one lag doesn't dominate the distance calculation due to its magnitude.</li>
+<li><strong>Model Evaluation</strong>:<ul>
+<li><strong>Regression</strong>: <abbr title="Mean Squared Error">MSE</abbr> (Mean Squared Error), <abbr title="Mean Absolute Error">MAE</abbr> (Mean Absolute Error).</li>
+<li><strong>Classification</strong>: Precision, Recall, F1-Score, and Accuracy.</li>
 </ul>
 </li>
-<li>Test on unseen data</li>
-</ol>
-</li>
 </ul>
-<h4 id="other-applications-of-pattern-recognition">Other Applications of Pattern Recognition<a class="headerlink" href="#other-applications-of-pattern-recognition" title="Permanent link">¶</a></h4>
+<h4 id="advantages-limitations">Advantages &amp; Limitations<a class="headerlink" href="#advantages-limitations" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Advantages</th>
+<th style="text-align: left;">Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Simplicity</strong>: Easy to implement and interpret.</td>
+<td style="text-align: left;"><strong>Computational Cost</strong>: High for large datasets as it must calculate distances to every training point.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Non-parametric</strong>: Makes no assumptions about the underlying data distribution.</td>
+<td style="text-align: left;"><strong>Curse of Dimensionality</strong>: Performance degrades as the number of lags (dimensions) increases.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Non-linearity</strong>: Naturally handles complex, non-linear patterns.</td>
+<td style="text-align: left;"><strong>Memory-based</strong>: No explicit model is created, making it less efficient for frequent, real-time predictions.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="example-pattern-recognition">Example: Pattern Recognition<a class="headerlink" href="#example-pattern-recognition" title="Permanent link">¶</a></h3>
+<p><abbr title="k-Nearest Neighbors">KNN</abbr> excels at spotting recurring events or anomalies by identifying which subgroup of a time series is similar to a reference pattern.</p>
+<p><strong>Brief Steps for Recognition:</strong><br>
+1.  <strong>Define Reference</strong>: Identify a specific pattern of interest (e.g., a "head-and-shoulders" trend).<br>
+2.  <strong>Segmentation</strong>: Use sliding, non-overlapping windows to capture local sub-sequences.<br>
+3.  <strong>Feature Extraction</strong>: Compute summary stats (mean, variance, slopes) or Fourier coefficients to represent the sub-sequences compactly.<br>
+4.  <strong>Training</strong>: Classify segments as "Pattern Found" vs. "No Pattern."<br>
+5.  <strong>Testing</strong>: Deploy on unseen data to trigger alerts when a neighbor matches the reference.</p>
+<div class="admonition note">
+<p class="admonition-title">Other Applications</p>
 <ul>
-<li>Abnormal vibration or temperature fluctuations in machine sensor data</li>
-<li>Head-and-shoulders or cup-and-handle patterns in stock prices</li>
-<li>Specific patterns in ECG signals (arrhythmias)</li>
-<li>Detect rainfall patterns in weather TS</li>
+<li><strong>Industrial</strong>: Detecting abnormal vibrations or temperature fluctuations in machinery.</li>
+<li><strong>Finance</strong>: Identifying technical chart patterns (cup-and-handle) in stock prices.</li>
+<li><strong>Healthcare</strong>: Recognizing arrhythmias in <abbr title="Electrocardiogram">ECG</abbr> signals.</li>
+<li><strong>Meteorology</strong>: Detecting specific rainfall patterns in weather data.</li>
 </ul>
+</div>
+<hr>
 <h3 id="naive-bayes-for-ts">Naive Bayes for TS<a class="headerlink" href="#naive-bayes-for-ts" title="Permanent link">¶</a></h3>
+<p>Naive Bayes addresses classification by applying Bayes' Theorem under the "naive" assumption that lagged values are <strong>conditionally independent</strong> given the class label.</p>
+<div class="arithmatex">\[P(Class \mid Lags) = \frac{P(Lags \mid Class) \cdot P(Class)}{P(Lags)}\]</div>
 <ul>
-<li>Classification problem based on Bayes theorem<ul>
-<li>lagged values are conditionally independent given the class label</li>
+<li><strong>Primary Use</strong>: Often used for binary classification to identify if a time segment belongs to a "normal" or "anomalous" class.</li>
+<li><strong>Suitability</strong>: Works well for high-dimensional data and serves as a fast, baseline probabilistic classifier, even if the independence assumption is technically violated in sequential data.</li>
 </ul>
-</li>
-<li>To identify if a given time segment belongs to a "normal" or "anomalous" class</li>
-</ul>
+<hr>
 
 
 
@@ -12889,7 +12884,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L57__Linear%20Regression%20for%20TS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linear Regression in TS">
+          <a href="../L57__Linear%20Regression%20for%20TS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linear Regression &amp;amp; Classical ML in TS">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12899,7 +12894,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Linear Regression in TS
+                Linear Regression &amp; Classical ML in TS
               </div>
             </div>
           </a>

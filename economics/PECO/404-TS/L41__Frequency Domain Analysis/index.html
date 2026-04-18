@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10272,7 +10272,7 @@
   <a href="#trigonometry-refresher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Trigonometry refresher
+        Trigonometry Refresher
       
     </span>
   </a>
@@ -10294,7 +10294,7 @@
   <a href="#practical-applications-of-fourier-transform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practical applications of Fourier Transform
+        Practical Applications of Fourier Transform
       
     </span>
   </a>
@@ -10960,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12780,113 +12780,75 @@
 <!-- Markdown content -->
 <h1 id="frequency-domain-analysis">Frequency Domain Analysis<a class="headerlink" href="#frequency-domain-analysis" title="Permanent link">¶</a></h1>
 <h3 id="spectral-analysis">Spectral Analysis<a class="headerlink" href="#spectral-analysis" title="Permanent link">¶</a></h3>
+<p>Spectral analysis involves decomposing a Time Series (TS) into <span class="arithmatex">\(\sin\)</span> and <span class="arithmatex">\(\cos\)</span> functions of different frequencies. This approach is particularly appropriate when you observe <strong>cycle dynamics</strong>, such as periodicity or cyclicity.</p>
+<p><strong>Examples:</strong><br>
+- <strong>Infectious disease data</strong>: Identifying the periodicity of immunity.<br>
+- <strong>Business cycles</strong>: Identifying the periodicity of economic cycles.</p>
+<p>The goal is to decompose a stationary TS <span class="arithmatex">\(\{ Y_{t} \}\)</span> into a combination of sinusoids<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> with uncorrelated random coefficients:</p>
+<div class="arithmatex">\[Y_{t} = \phi_{1}\sin(A_{1}) + \phi_{2}\cos(A_{2})\]</div>
+<p>where <span class="arithmatex">\(A_{1}\)</span> and <span class="arithmatex">\(A_{2}\)</span> are frequencies. Our task is to identify those frequencies which are particularly important or "strong" in the data.</p>
+<h4 id="time-domain-vs-frequency-domain">Time Domain vs. Frequency Domain<a class="headerlink" href="#time-domain-vs-frequency-domain" title="Permanent link">¶</a></h4>
 <ul>
-<li>Decomposing a TS into <span class="arithmatex">\(\sin\)</span> and <span class="arithmatex">\(\cos\)</span> functions of different frequencies.</li>
-<li>Appropriate when you observe cycle dynamics (periodicity, cyclicity)<ul>
-<li>Infectious disease data (periodicity of immunity)</li>
-<li>Business cycles (periodicity of cycles)</li>
+<li><strong>Time Domain approach</strong>: Focuses on regression on past values of TS (<span class="arithmatex">\(y_{t-i}\)</span>) and shocks (<span class="arithmatex">\(e_{t}\)</span>).</li>
+<li><strong>Frequency Domain (Spectral) approach</strong>: Considers regression on sinusoids. To do this, a <strong>spectral density function</strong> is required.</li>
 </ul>
-</li>
-<li>Decompose stationary TS <span class="arithmatex">\(\{ Y_{t} \}\)</span> into combination of sinusoids<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> with uncorrelated random coefficients</li>
-</ul>
-<div class="arithmatex">\[
-Y_{t} = \phi_{1}\sin(A_{1}) + \phi_{2}\cos(A_{2})
-\]</div>
-<p>where <span class="arithmatex">\(A_{1}\)</span> and <span class="arithmatex">\(A_{2}\)</span> are frequencies. We have to identify those frequencies which are particularly important (strong).</p>
+<hr>
+<h3 id="trigonometry-refresher">Trigonometry Refresher<a class="headerlink" href="#trigonometry-refresher" title="Permanent link">¶</a></h3>
+<p>To work effectively in the frequency domain, we utilize several key trigonometric identities:</p>
 <ul>
-<li>Till now, time domain approach<ul>
-<li>Regression on past values of TS (<span class="arithmatex">\(y_{t-i}\)</span>) and shocks (<span class="arithmatex">\(e_{t}\)</span>)</li>
-</ul>
-</li>
-<li>Regression approach considers regression on sinusiods<ul>
-<li>Spectral density function is required</li>
-</ul>
-</li>
-</ul>
-<h3 id="trigonometry-refresher">Trigonometry refresher<a class="headerlink" href="#trigonometry-refresher" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-\sin A \pm \sin B = 2 \sin \dfrac{A\pm B}{2} \cos \dfrac{A\mp B}{2}
-\]</div>
-<div class="arithmatex">\[
-\cos A + \cos B = 2 \cos \dfrac{A+ B}{2} \cos \dfrac{A- B}{2}
-\]</div>
-<div class="arithmatex">\[
-\cos A - \cos B = -2 \sin \dfrac{A+ B}{2} \sin \dfrac{A- B}{2}
-\]</div>
-<ul>
+<li><span class="arithmatex">\(\sin A \pm \sin B = 2 \sin \dfrac{A\pm B}{2} \cos \dfrac{A\mp B}{2}\)</span></li>
+<li><span class="arithmatex">\(\cos A + \cos B = 2 \cos \dfrac{A+ B}{2} \cos \dfrac{A- B}{2}\)</span></li>
+<li><span class="arithmatex">\(\cos A - \cos B = -2 \sin \dfrac{A+ B}{2} \sin \dfrac{A- B}{2}\)</span></li>
 <li><span class="arithmatex">\(\sin k\pi = 0\)</span> for all <span class="arithmatex">\(k = \pm 1,\pm 2,\dots\)</span></li>
-<li><span class="arithmatex">\(\cos k\pi = (-1)^{|k-1|}|\)</span> for all <span class="arithmatex">\(k = \pm 1,\pm 2,\dots\)</span></li>
+<li><span class="arithmatex">\(\cos k\pi = (-1)^{|k-1|}\)</span> for all <span class="arithmatex">\(k = \pm 1,\pm 2,\dots\)</span></li>
 <li><span class="arithmatex">\(\sin(-A) = -\sin A\)</span></li>
 <li><span class="arithmatex">\(\cos (-A) = \cos A\)</span></li>
 </ul>
+<hr>
 <h3 id="fourier-and-inverse-fourier-transforms">Fourier and Inverse Fourier Transforms<a class="headerlink" href="#fourier-and-inverse-fourier-transforms" title="Permanent link">¶</a></h3>
-<ul>
-<li><abbr title="Discrete Fourier Transform">DFT</abbr> of a function <span class="arithmatex">\(h(t)\)</span> for <span class="arithmatex">\(t \in \{ \dots, -1, 0, 1,\dots \}\)</span> is</li>
-</ul>
-<div class="arithmatex">\[
-H(\omega) = \sum_{t=-\infty}^{\infty} h(t)e^{ -i \omega t } \quad (-\pi \leq \omega \leq \pi)
-\]</div>
-<p>Inverse Fourier Transform of <span class="arithmatex">\(H(\omega)\)</span> is given by,</p>
-<div class="arithmatex">\[
-h(t) = \dfrac{1}{2\pi}\int_{-\pi}^{\pi} H(\omega) e^{ -\omega t } \, d\omega 
-\]</div>
+<p>The <strong>Discrete Fourier Transform (<abbr title="Discrete Fourier Transform">DFT</abbr>)</strong> of a function <span class="arithmatex">\(h(t)\)</span> for <span class="arithmatex">\(t \in \{ \dots, -1, 0, 1,\dots \}\)</span> is:</p>
+<div class="arithmatex">\[H(\omega) = \sum_{t=-\infty}^{\infty} h(t)e^{ -i \omega t } \quad (-\pi \leq \omega \leq \pi)\]</div>
+<p>The <strong>Inverse Fourier Transform</strong> of <span class="arithmatex">\(H(\omega)\)</span> is given by:</p>
+<div class="arithmatex">\[h(t) = \dfrac{1}{2\pi}\int_{-\pi}^{\pi} H(\omega) e^{ -\omega t } \, d\omega\]</div>
 <h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h4>
-<p>If <span class="arithmatex">\(h(t) = h(-t)\)</span></p>
-<p>$$<br>
-H(\omega) = h(0) + \sum_{t=1}^{\infty} h(t) (e^{ -\omega t } + e^{ i \omega t})<br>
-$$<br>
-or</p>
-<div class="arithmatex">\[
-H(\omega) = h(0) + 2 \sum_{t=1}^{\infty}  h(t) \cos \omega t, (-\pi \leq \omega \leq \pi)
-\]</div>
-<p>Thus, <span class="arithmatex">\(h(t) = \dfrac{1}{\pi} = \int_{0}^{\pi}H(\omega) \cos(\omega t)\ d\omega\)</span> </p>
-<h4 id="notation">Notation<a class="headerlink" href="#notation" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-y_{t} = R \cos t(\omega t + \nu) + u_{t}
-\]</div>
+<p>If the function is symmetric, <span class="arithmatex">\(h(t) = h(-t)\)</span>, the transform simplifies:</p>
+<div class="arithmatex">\[H(\omega) = h(0) + \sum_{t=1}^{\infty} h(t) (e^{ -\omega t } + e^{ i \omega t})$$
+or
+$$H(\omega) = h(0) + 2 \sum_{t=1}^{\infty}  h(t) \cos \omega t, \quad (-\pi \leq \omega \leq \pi)\]</div>
+<p>Consequently, <span class="arithmatex">\(h(t) = \dfrac{1}{\pi} \int_{0}^{\pi}H(\omega) \cos(\omega t)\ d\omega\)</span>.</p>
+<h4 id="notation-for-a-periodic-process">Notation for a Periodic Process<a class="headerlink" href="#notation-for-a-periodic-process" title="Permanent link">¶</a></h4>
+<p>A typical periodic process can be represented as:<br>
+$<span class="arithmatex">\(y_{t} = R \cos (\omega t + \nu) + u_{t}\)</span>$</p>
 <ul>
-<li><span class="arithmatex">\(\omega:\)</span> frequency of periodic variation <span class="arithmatex">\((0 \leq \omega \leq 2\pi)\)</span></li>
-<li><span class="arithmatex">\(R:\)</span> amplitude of variation</li>
-<li><span class="arithmatex">\(\nu\)</span> phase</li>
-<li><span class="arithmatex">\(\{ u_{t} \}:\)</span> purely random process</li>
+<li><strong><span class="arithmatex">\(\omega\)</span></strong>: Frequency of periodic variation <span class="arithmatex">\((0 \leq \omega \leq 2\pi)\)</span>.</li>
+<li><strong><span class="arithmatex">\(R\)</span></strong>: Amplitude of variation.</li>
+<li><strong><span class="arithmatex">\(\nu\)</span></strong>: Phase.</li>
+<li><strong><span class="arithmatex">\(\{ u_{t} \}\)</span></strong>: Purely random process.</li>
 </ul>
-<p>If <span class="arithmatex">\(R, \nu\)</span> are constants</p>
-<div class="arithmatex">\[
-E(y_{t} ) = R \cos (\omega t + \nu)
-\]</div>
-<ul>
-<li>Assume, <span class="arithmatex">\(R\)</span> has 0 mean and finite variance, or <span class="arithmatex">\(\mu \sim Uniform(0,2\pi)\)</span> then <span class="arithmatex">\(E(y_{t})=0\)</span>. Thus the process is stationary.</li>
-</ul>
-<h3 id="practical-applications-of-fourier-transform">Practical applications of Fourier Transform<a class="headerlink" href="#practical-applications-of-fourier-transform" title="Permanent link">¶</a></h3>
+<p><strong>Stationarity Note:</strong><br>
+- If <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(\nu\)</span> are constants, <span class="arithmatex">\(E(y_{t}) = R \cos (\omega t + \nu)\)</span>, which is <span class="arithmatex">\(t\)</span>-dependent and thus becomes <strong>non-stationary</strong>.<br>
+- However, if we assume <span class="arithmatex">\(R\)</span> has a 0 mean and finite variance, or if the phase <span class="arithmatex">\(\nu \sim \text{Uniform}(0,2\pi)\)</span>, then <span class="arithmatex">\(E(y_{t})=0\)</span>. In this specific case, the process becomes <strong>stationary</strong>.</p>
+<hr>
+<h3 id="practical-applications-of-fourier-transform">Practical Applications of Fourier Transform<a class="headerlink" href="#practical-applications-of-fourier-transform" title="Permanent link">¶</a></h3>
 <ol>
-<li>Signal procesing<ul>
-<li>Audio processing<ul>
-<li>Noise Reduction</li>
-<li>Equalization (adjust the balance of frequency components)</li>
-<li>Compression (represent audio signals more compactly by prioritizing significant frequency components)</li>
+<li><strong>Signal Processing</strong><ul>
+<li><strong>Audio processing</strong>: Noise reduction, equalization (adjusting the balance of frequency components), and compression (representing signals compactly by prioritizing significant frequencies).</li>
+<li><strong>Image processing</strong>: Edge detection (detecting outliers) and image compression (JPEG uses the <strong>Discrete Cosine Transform/<abbr title="Discrete Cosine Transform">DCT</abbr></strong>).</li>
 </ul>
 </li>
-<li>Image processing<ul>
-<li>Edge detection (detect outlier)</li>
-<li>Image compression (JPEG uses <abbr title="Discrete Cosine Transform">DCT</abbr>)</li>
+<li><strong>Communications</strong><ul>
+<li>Modulation and Demodulation.</li>
+<li>Spectrum Analysis.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Communications<ul>
-<li>Modulation</li>
-<li>Demodulation</li>
-<li>Spectrum Analysis</li>
-</ul>
-</li>
-<li>Physics and Engineering<ul>
-<li>Wave Analysis</li>
-<li>Optics</li>
-<li>Structural Analysis</li>
+<li><strong>Physics and Engineering</strong><ul>
+<li>Wave Analysis.</li>
+<li>Optics.</li>
+<li>Structural Analysis (e.g., studying vibrations).</li>
 </ul>
 </li>
 </ol>
-<p>which is <span class="arithmatex">\(t\)</span>-dependent and thus becomes non-stationary.</p>
+<hr>
 <div class="footnote">
 <hr>
 <ol>

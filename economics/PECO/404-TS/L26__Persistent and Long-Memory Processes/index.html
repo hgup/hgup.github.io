@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9622,10 +9622,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#persistence" class="md-nav__link">
+  <a href="#1-characteristics-of-persistence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Persistence
+        1. Characteristics of Persistence
       
     </span>
   </a>
@@ -9633,10 +9633,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anti-persistent-time-series" class="md-nav__link">
+  <a href="#2-domain-examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Anti-persistent Time Series
+        2. Domain Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-deep-dive-financial-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Deep Dive: Financial Markets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-environmental-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Environmental Persistence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-anti-persistent-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Anti-persistent Time Series
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-importance-in-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Importance in Modeling
       
     </span>
   </a>
@@ -9850,7 +9894,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10938,7 +10982,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12757,106 +12801,58 @@
 
 <!-- Markdown content -->
 <h1 id="persistent-long-memory-processes">Persistent &amp; Long-Memory Processes<a class="headerlink" href="#persistent-long-memory-processes" title="Permanent link">¶</a></h1>
-<h3 id="persistence">Persistence<a class="headerlink" href="#persistence" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong>Persistence</strong> in time series: Tendency of past values to have a long-lasting influence on future values.</li>
-<li>It's the <strong>degree of memory</strong> a TS has, i.e. how long shocks or disturbances to the system affect future observations.</li>
-</ul>
-<blockquote>
-<p>If the influence of a shock (a spike in the stock price) has a long-lasting effect on the stock of the price in the future.</p>
-</blockquote>
-<h4 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">¶</a></h4>
+<p>Persistence describes the tendency of past values in a time series to exert a long-lasting influence on future observations. It measures the "degree of memory" within a system—specifically, how long a shock (like a sudden price spike or a weather event) continues to affect the series.</p>
+<h3 id="1-characteristics-of-persistence">1. Characteristics of Persistence<a class="headerlink" href="#1-characteristics-of-persistence" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Characteristic</th>
-<th></th>
+<th style="text-align: left;">Characteristic</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Long Term Impact</td>
-<td>Shock will have an influence that <strong>decays slowly over time</strong></td>
+<td style="text-align: left;"><strong>Long-Term Impact</strong></td>
+<td style="text-align: left;">Shocks do not disappear immediately; their influence <strong>decays slowly over time</strong>.</td>
 </tr>
 <tr>
-<td>Autocorrelation decay</td>
-<td>Short-memory process (ARMA): ACF drops off rapidly. Vs here.</td>
+<td style="text-align: left;"><strong>Autocorrelation Decay</strong></td>
+<td style="text-align: left;">Unlike short-memory processes (standard ARMA) where the <abbr title="Autocorrelation Function">ACF</abbr> drops off rapidly, persistent processes show significant correlation even at large lags.</td>
 </tr>
 <tr>
-<td>Long vs short memory</td>
-<td>Long-memory (persistent) process: like that modelled by <abbr title="Autoregressive Fractional Integrated Moving Average">ARFIMA</abbr> → slow, hyperbolic decay in ACF.<br>VS<br>short-memory → Quickly approaches zero.</td>
+<td style="text-align: left;"><strong>Long vs. Short Memory</strong></td>
+<td style="text-align: left;"><strong>Long-memory (persistent)</strong> processes, often modeled by <strong><abbr title="Autoregressive Fractional Integrated Moving Average">ARFIMA</abbr></strong>, exhibit a slow, hyperbolic decay in the <abbr title="Autocorrelation Function">ACF</abbr>. In contrast, <strong>short-memory</strong> processes approach zero exponentially and quickly.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h4>
+<h3 id="2-domain-examples">2. Domain Examples<a class="headerlink" href="#2-domain-examples" title="Permanent link">¶</a></h3>
 <ul>
-<li>Financial markets: sharp rise → continue to be influenced by the rise</li>
-<li>Environmental data: yesterday was rain <span class="arithmatex">\(\implies\)</span> today would also be rain</li>
-<li>Economics → GDP rise. Economic shocks have long-lasting effects</li>
+<li><strong>Financial Markets:</strong> A sudden surge in stock price due to an earnings report may keep the price elevated for a prolonged period, suggesting a <strong>momentum effect</strong>.</li>
+<li><strong>Environmental Data:</strong> Weather patterns often show persistence; for example, a rainy day significantly increases the probability that tomorrow will also be rainy.</li>
+<li><strong>Economics:</strong> Shocks to the GDP often have long-lasting effects on the growth trajectory of a nation.</li>
 </ul>
-<h4 id="importance">Importance<a class="headerlink" href="#importance" title="Permanent link">¶</a></h4>
+<hr>
+<h3 id="3-deep-dive-financial-markets">3. Deep Dive: Financial Markets<a class="headerlink" href="#3-deep-dive-financial-markets" title="Permanent link">¶</a></h3>
+<p>Persistence is a cornerstone of modern financial theory and risk management:</p>
 <ul>
-<li><strong>Forecasting</strong>: persistent series require <abbr title="Autoregressive Fractional Integrated Moving Average">ARFIMA</abbr> (which account for long memory)</li>
-<li><strong>Risk Management</strong>: large fluctuations are likely to persist.</li>
+<li><strong>Volatility Clustering:</strong> High-volatility periods (like a financial crisis) tend to be followed by more high-volatility periods. Large price swings are rarely isolated events; they "cluster" together. This is a primary reason for the complexity in pricing options accurately.</li>
+<li><strong>Momentum vs. Mean Reversion:</strong> Persistent markets exhibit momentum where trends continue. In contrast, non-persistent markets are <strong>mean-reverting</strong>, where price movements quickly reverse toward the average.</li>
+<li><strong>Interest Rates:</strong> Long-term yields (e.g., 10-year Government of India bonds) exhibit high persistence. Central bank policy shifts influence borrowing costs and savings decisions for years, making long-term forecasting significantly more complex.</li>
 </ul>
-<h4 id="in-financial-markets">In Financial Markets<a class="headerlink" href="#in-financial-markets" title="Permanent link">¶</a></h4>
+<h3 id="4-environmental-persistence">4. Environmental Persistence<a class="headerlink" href="#4-environmental-persistence" title="Permanent link">¶</a></h3>
 <ul>
-<li>Stock Market returns<ul>
-<li>Sudden surge in price due to a positive earning report (information)</li>
-<li>This effect would last for some time and remain elevated for a longer time.</li>
+<li><strong>Global Warming:</strong> Temperature data shows that higher-than-average years are frequently followed by similar elevations, impacting ecosystems and weather patterns globally.</li>
+<li><strong>Hydrology:</strong> Precipitation often exhibits "runs." Below-average rainfall in one year often signals a higher probability of continued drought in the following years.</li>
 </ul>
-</li>
-<li>Prolonged period of positive (or negative) return</li>
-<li>This suggests momentum effect. Trends continue for some time.</li>
-<li>
-<p>Conversely, in non-persistent markets, price movements quickly reverse → <strong>mean reverting process</strong></p>
-</li>
-<li>
-<p>Volatility Clustering</p>
+<hr>
+<h3 id="5-anti-persistent-time-series">5. Anti-persistent Time Series<a class="headerlink" href="#5-anti-persistent-time-series" title="Permanent link">¶</a></h3>
+<p>An <strong>anti-persistent</strong> (or mean-reverting) time series behaves in the opposite manner. An increase in the series is statistically likely to be followed by a decrease, and vice versa. <br>
+* <strong>Key Feature:</strong> These series are characterized by a <strong>negative autocorrelation</strong> structure.</p>
+<hr>
+<h3 id="6-importance-in-modeling">6. Importance in Modeling<a class="headerlink" href="#6-importance-in-modeling" title="Permanent link">¶</a></h3>
 <ul>
-<li>during a financial crisis → market volatility suddenly increases</li>
-<li>large price movements <span class="arithmatex">\(\implies\)</span>  more large movements in the future</li>
-</ul>
-</li>
-<li>Crucial for risk management</li>
-<li>Periods of high risk (large price swings) are not isolated. They last.</li>
-<li>
-<p>This also has an impact on option pricing <span class="arithmatex">\(\implies\)</span>  Complexity in accurately pricing options.</p>
-</li>
-<li>
-<p>Interest Rates</p>
-<ul>
-<li>This exhibit persistence, in long-term yields</li>
-<li>Effect of a policy by central bank on interest rates, will persist for a long time, influence borrowing costs, savings and decisions.</li>
-</ul>
-</li>
-<li>This is also critical for bond pricing, bonds are sensitive to changes in interest rates.</li>
-<li>Long-term rates (10-year government of India bond) can complicate forecasting.</li>
-</ul>
-<h4 id="in-environmental-data">In Environmental Data<a class="headerlink" href="#in-environmental-data" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p>Temperature Persistence (Global Warming)</p>
-<ul>
-<li>Higher-than-average temperatures in one year are followed by the same.</li>
-<li>Affects ecosystems, weather patterns and human health.</li>
-</ul>
-</li>
-<li>
-<p>Precipitation and drought persistence</p>
-<ul>
-<li>below-average precipitation continues</li>
-<li>dry years followed by more dry years</li>
-</ul>
-</li>
-</ul>
-<h3 id="anti-persistent-time-series">Anti-persistent Time Series<a class="headerlink" href="#anti-persistent-time-series" title="Permanent link">¶</a></h3>
-<ul>
-<li>Anti-persistent or mean reverting TS<ul>
-<li>increase will be followed by a decrease and vice versa</li>
-</ul>
-</li>
-<li>Characterized by a negative autocorrelation structure.</li>
+<li><strong>Forecasting:</strong> Standard ARIMA models may fail to capture the long-term dependencies of persistent data. In such cases, <strong><abbr title="Autoregressive Fractional Integrated Moving Average">ARFIMA</abbr></strong> (Autoregressive Fractional Integrated Moving Average) models are required to account for the fractional integration.</li>
+<li><strong>Risk Management:</strong> Understanding persistence is vital because it implies that large fluctuations are likely to persist rather than dissipate, requiring more robust capital buffers.</li>
 </ul>
 
 

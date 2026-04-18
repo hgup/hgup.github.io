@@ -24,7 +24,7 @@
     
     
       
-        <title>L19 Diagnostic Checking 2 - Hursh Gupta</title>
+        <title>Detecting Heteroscedasticity - Hursh Gupta</title>
       
     
     
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              L19  Diagnostic Checking   2
+              Detecting Heteroscedasticity
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9228,6 +9228,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -9236,7 +9238,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9254,7 +9256,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9270,6 +9272,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -9278,10 +9282,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#detecting-heteroscedasticity" class="md-nav__link">
+  <a href="#1-graphical-detection-acf-and-pacf-of-squared-residuals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Detecting Heteroscedasticity
+        1. Graphical Detection: ACF and PACF of Squared Residuals
       
     </span>
   </a>
@@ -9289,10 +9293,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consequences-of-heteroscedasticity" class="md-nav__link">
+  <a href="#2-statistical-tests-for-heteroscedasticity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Consequences of Heteroscedasticity
+        2. Statistical Tests for Heteroscedasticity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-consequences-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Consequences and Solutions
       
     </span>
   </a>
@@ -9846,7 +9861,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10934,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12750,64 +12765,34 @@
   as the main headline.
 -->
 
-  <h1>L19  Diagnostic Checking   2</h1>
-
 
 <!-- Markdown content -->
-<h3 id="detecting-heteroscedasticity">Detecting Heteroscedasticity<a class="headerlink" href="#detecting-heteroscedasticity" title="Permanent link">¶</a></h3>
+<h1 id="detecting-heteroscedasticity">Detecting Heteroscedasticity<a class="headerlink" href="#detecting-heteroscedasticity" title="Permanent link">¶</a></h1>
+<p>Heteroscedasticity refers to the presence of <strong>changing variance</strong> within the residuals (<span class="arithmatex">\(\hat{e}_{t}\)</span>) of a model, rather than the variance of the actual time series process itself. In a heteroscedastic model, the variance of the error term is time-dependent:<br>
+$<span class="arithmatex">\(Var(e_{t}) = \sigma_{t}^{2}\)</span>$</p>
+<h3 id="1-graphical-detection-acf-and-pacf-of-squared-residuals">1. Graphical Detection: <abbr title="Autocorrelation Function">ACF</abbr> and <abbr title="Partial Autocorrelation Function">PACF</abbr> of Squared Residuals<a class="headerlink" href="#1-graphical-detection-acf-and-pacf-of-squared-residuals" title="Permanent link">¶</a></h3>
+<p>A common way to detect non-constant variance is to examine the Autocorrelation Function (<abbr title="Autocorrelation Function">ACF</abbr>) and Partial Autocorrelation Function (<abbr title="Partial Autocorrelation Function">PACF</abbr>) plots of the <strong>squared residuals</strong> (<span class="arithmatex">\(e_{t}^{2}\)</span>).</p>
 <ul>
-<li>changing variance for the residuals (not the actual time series process)</li>
+<li><strong>Why squared residuals?</strong> Since we assume the mean of the errors is zero (<span class="arithmatex">\(E(e_{t})=0\)</span>), the variance simplifies to the expectation of the squared errors: <span class="arithmatex">\(V(e_{t}) = E(e_{t}^{2}) - [E(e_{t})]^{2} = E(e_{t}^{2})\)</span>.</li>
+<li><strong>Identification:</strong> If the variance is constant (homoscedastic), the <abbr title="Autocorrelation Function">ACF</abbr> and <abbr title="Partial Autocorrelation Function">PACF</abbr> spikes of the squared residuals should remain within the 95% confidence limits, reflecting a completely random and stationary structure.</li>
 </ul>
-<div class="arithmatex">\[
-Var(e_{t}) = \sigma_{t}^{2}
-\]</div>
-<h4 id="using-acf-pacf-plots-for-squared-residuals">Using ACF-PACF plots (for Squared residuals)<a class="headerlink" href="#using-acf-pacf-plots-for-squared-residuals" title="Permanent link">¶</a></h4>
-<ul>
-<li>Why for squared residuals and not actual time series?<ul>
-<li>First, <span class="arithmatex">\(E(e_{t})=0\)</span></li>
-<li>Second <span class="arithmatex">\(V(e_{t}) = E(e_{t}^{2})- E^{2}(e_{t})= E(e_{t}^{2})= e_{t}^{2}\)</span></li>
-</ul>
-</li>
-<li>If variance of errors are constant<ul>
-<li>ACF and PACF should be within 95% limits</li>
-<li>completely random and stationary structure in the <span class="arithmatex">\(e_{t}^{2}\)</span> vs <span class="arithmatex">\(t\)</span> plot</li>
-</ul>
-</li>
-</ul>
+<hr>
+<h3 id="2-statistical-tests-for-heteroscedasticity">2. Statistical Tests for Heteroscedasticity<a class="headerlink" href="#2-statistical-tests-for-heteroscedasticity" title="Permanent link">¶</a></h3>
 <h4 id="whites-general-test">White's General Test<a class="headerlink" href="#whites-general-test" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-H_{0}: Var(e_{t}) = E(e_{t}^{2}|Y_{t-1}, Y_{t-2},\dots) = \sigma_{e}^{2}
-\]</div>
-<div class="arithmatex">\[
-\begin{align}
-e_{t}^{2}  &amp; =  \alpha_{0} + \alpha_{1}Y_{t-1} + \alpha_{2} Y_{t-2} + \dots \\
- &amp; + \gamma_{1} Y_{t-1}^{2} + \gamma_{2}Y_{t-2}^{2} + \dots  \\
- &amp; + \delta_{1}Y_{t-1}Y_{t-2} + \dots + u_{t}
-\end{align}
-\]</div>
-<p>These are all the terms on which <span class="arithmatex">\(e_{t}^{2}\)</span> may be dependent if they are time dependent.</p>
-<p>Thus, under homoscedastic case</p>
-<div class="arithmatex">\[
-\alpha_{1} = \alpha_{2} = \dots = \gamma_{1} = \gamma_{2} = \dots = \delta_{1} = \delta_{2} = 0
-\]</div>
-<h4 id="breusch-pagan-test">Breusch Pagan Test<a class="headerlink" href="#breusch-pagan-test" title="Permanent link">¶</a></h4>
-<p>Same as <a href="#whites-general-test">#White's General Test</a> but, we base it on simple <span class="arithmatex">\(Y_{t-1}, Y_{t-2}\dots, Y_{t-m}\)</span>  terms instead of including second degree terms (squares and products).</p>
-<blockquote>
-<p>Tests if all slope coefficients are equal to 0 or not.</p>
-</blockquote>
-<h3 id="consequences-of-heteroscedasticity">Consequences of Heteroscedasticity<a class="headerlink" href="#consequences-of-heteroscedasticity" title="Permanent link">¶</a></h3>
+<p>This test evaluates the null hypothesis (<span class="arithmatex">\(H_{0}\)</span>) that the variance of the error term is constant (<span class="arithmatex">\(\sigma_{e}^{2}\)</span>) given past information. It utilizes a regression of the squared residuals on the original lags, their squares, and their cross-products:<br>
+$<span class="arithmatex">\(e_{t}^{2} = \alpha_{0} + \alpha_{1}Y_{t-1} + \alpha_{2} Y_{t-2} + \dots + \gamma_{1} Y_{t-1}^{2} + \gamma_{2}Y_{t-2}^{2} + \dots + \delta_{1}Y_{t-1}Y_{t-2} + \dots + u_{t}\)</span>$</p>
 <ul>
-<li>If Heteroscedasticity<ul>
-<li>Parameter estimates are unbiased but not efficient</li>
-<li>GLS or WLS has to be used (OLS invalid)</li>
-<li>estimate of variance is also biased</li>
+<li><strong>Under Homoscedasticity:</strong> All coefficients except the intercept (<span class="arithmatex">\(\alpha_{0}\)</span>) should be zero (<span class="arithmatex">\(\alpha_{i} = \gamma_{i} = \delta_{i} = 0\)</span>).</li>
 </ul>
-</li>
-<li>What to do?<ul>
-<li>We need to model volatility (ARCH, GARCH)</li>
+<h4 id="breusch-pagan-test">Breusch-Pagan Test<a class="headerlink" href="#breusch-pagan-test" title="Permanent link">¶</a></h4>
+<p>This is a simpler version of White's test. It tests if the squared residuals are dependent on a linear combination of past terms (<span class="arithmatex">\(Y_{t-1}, Y_{t-2}, \dots, Y_{t-m}\)</span>) without including the higher-degree squared or product terms. It essentially tests if all slope coefficients in the auxiliary regression are equal to zero.</p>
+<hr>
+<h3 id="3-consequences-and-solutions">3. Consequences and Solutions<a class="headerlink" href="#3-consequences-and-solutions" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Consequences:</strong> If heteroscedasticity is present, standard Ordinary Least Squares (<abbr title="Ordinary Least Squares">OLS</abbr>) estimates remain unbiased but are no longer <strong>efficient</strong> (they are not the Best Linear Unbiased Estimator). Additionally, the standard estimates of variance become biased, rendering <abbr title="Ordinary Least Squares">OLS</abbr> invalid for inference.</li>
+<li><strong>Required Action:</strong> To correct for this, Generalized Least Squares (<abbr title="Generalized Least Squares">GLS</abbr>) or Weighted Least Squares (<abbr title="Weighted Least Squares">WLS</abbr>) must be employed. Furthermore, you will need to model the volatility explicitly using <strong><abbr title="Autoregressive Conditional Heteroscedasticity">ARCH</abbr></strong> (Autoregressive Conditional Heteroscedasticity) or <strong><abbr title="Generalized Autoregressive Conditional Heteroscedasticity">GARCH</abbr></strong> models.</li>
 </ul>
-</li>
-</ul>
+<hr>
 
 
 

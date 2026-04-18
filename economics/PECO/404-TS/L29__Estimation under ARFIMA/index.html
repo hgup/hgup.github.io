@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9706,10 +9706,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#spectral-density-of-a-ts" class="md-nav__link">
+  <a href="#1-spectral-density-of-a-time-series" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Spectral Density of a TS
+        1. Spectral Density of a Time Series
       
     </span>
   </a>
@@ -9717,10 +9717,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estimation-under-the-arfima-model" class="md-nav__link">
+  <a href="#2-estimation-under-the-arfima-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estimation under the ARFIMA Model
+        2. Estimation under the ARFIMA Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-other-estimation-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Other Estimation Techniques
       
     </span>
   </a>
@@ -9850,7 +9861,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10938,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12756,94 +12767,43 @@
 
 
 <!-- Markdown content -->
-<h1 id="estimation-under-arfima">Estimation under ARFIMA<a class="headerlink" href="#estimation-under-arfima" title="Permanent link">¶</a></h1>
-<h3 id="spectral-density-of-a-ts">Spectral Density of a TS<a class="headerlink" href="#spectral-density-of-a-ts" title="Permanent link">¶</a></h3>
+<h1 id="estimation-under-arfima">Estimation under <abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr><a class="headerlink" href="#estimation-under-arfima" title="Permanent link">¶</a></h1>
+<p>Estimating parameters for an <abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr> model is more complex than standard ARIMA because of the fractional differencing parameter <span class="arithmatex">\(d\)</span>. Most techniques rely on understanding the process in the <strong>frequency domain</strong> rather than the time domain.</p>
+<h3 id="1-spectral-density-of-a-time-series">1. Spectral Density of a Time Series<a class="headerlink" href="#1-spectral-density-of-a-time-series" title="Permanent link">¶</a></h3>
+<p>Spectral density provides a way to understand how the variation in data is distributed across different frequencies. Instead of looking at a sequence of points in time, we look at the series as a combination of sine and cosine waves.</p>
 <ul>
-<li>
-<p>Spectral density = a way to understand how the variation in data is distributed across various frequencies.</p>
-<ul>
-<li>Super-impose a frequency → A combination of a sine-wave or cos-wave. Frequency-based plot.</li>
-<li>Rather than a time-based approach</li>
+<li><strong>Time Series:</strong> The raw, observed sequence of data.</li>
+<li><strong>Frequency:</strong> How often a specific cycle repeats.</li>
+<li><strong>Spectral Density (<span class="arithmatex">\(S(f)\)</span>):</strong> Measures "how much" of the variance happens at different frequencies, revealing which cycles are dominant.</li>
 </ul>
-</li>
-<li>
-<p>Time Series: The actual data which is observed</p>
-</li>
-<li>Frequency: How often something offers</li>
-<li>Spectral density: "How much of it" happens at different frequencies<ul>
-<li>Also telling us which cycles are present and how strong or weak they are.</li>
-</ul>
-</li>
-</ul>
-<h4 id="use">Use?<a class="headerlink" href="#use" title="Permanent link">¶</a></h4>
-<ul>
-<li>Helps us identify repeating patterns</li>
-<li>Helps us make predictions. By knowing the heights of the cycles/repetitions</li>
-<li>Model the underlying frequencies and repetitions of TS</li>
-</ul>
-<h4 id="spectral-density-formula">Spectral Density Formula<a class="headerlink" href="#spectral-density-formula" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-S(f) = \lim_{ T \to \infty } \dfrac{1}{T} \left\lvert  \sum_{t=0}^{T-1} y_{t}e^{ -i2\pi ft }  \right\rvert ^{2}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(S(f)\)</span> = spectral density</li>
-<li><span class="arithmatex">\(f\)</span> = frequency</li>
-<li><span class="arithmatex">\(T\)</span> = total number of observations in the series</li>
-</ul>
-<p>We evaluate the spectral density at the frequency, <span class="arithmatex">\(f\)</span>. The exponential term takes care of the cosine and sine functions.</p>
-<ul>
-<li>The practical estimator of the spectral density is given by the periodogram with the form</li>
-</ul>
-<div class="arithmatex">\[
-I(f) = \dfrac{1}{T} \left\lvert  \sum_{t=0}^{T-1} y_{t}e^{ -i2\pi ft }  \right\rvert ^{2}
-\]</div>
-<h3 id="estimation-under-the-arfima-model">Estimation under the ARFIMA Model<a class="headerlink" href="#estimation-under-the-arfima-model" title="Permanent link">¶</a></h3>
-<h4 id="geweke-and-porter-hudak-estimation-gph">Geweke and Porter-Hudak Estimation (GPH)<a class="headerlink" href="#geweke-and-porter-hudak-estimation-gph" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>Use the log periodogram of the time series.</p>
-</blockquote>
+<h4 id="the-spectral-density-formula">The Spectral Density Formula<a class="headerlink" href="#the-spectral-density-formula" title="Permanent link">¶</a></h4>
+<p>The theoretical spectral density is defined as:<br>
+$<span class="arithmatex">\(S(f) = \lim_{ T \to \infty } \dfrac{1}{T} \left\lvert  \sum_{t=0}^{T-1} y_{t}e^{ -i2\pi ft }  \right\rvert ^{2}\)</span>$</p>
+<p>In practice, we use the <strong>Periodogram (<span class="arithmatex">\(I(f)\)</span>)</strong> as an estimator of the spectral density for a finite series of length <span class="arithmatex">\(T\)</span>.</p>
+<hr>
+<h3 id="2-estimation-under-the-arfima-model">2. Estimation under the <abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr> Model<a class="headerlink" href="#2-estimation-under-the-arfima-model" title="Permanent link">¶</a></h3>
+<p>The primary goal in <abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr> estimation is to isolate and estimate <span class="arithmatex">\(d\)</span>, the fractional differencing parameter, before calculating the standard AR (<span class="arithmatex">\(\phi\)</span>) and MA (<span class="arithmatex">\(\theta\)</span>) parameters.</p>
+<h4 id="geweke-and-porter-hudak-gph-estimation">Geweke and Porter-Hudak (<abbr title="Geweke and Porter-Hudak">GPH</abbr>) Estimation<a class="headerlink" href="#geweke-and-porter-hudak-gph-estimation" title="Permanent link">¶</a></h4>
+<p>The <abbr title="Geweke and Porter-Hudak">GPH</abbr> method is a popular semi-parametric approach that uses the <strong>log-periodogram</strong> of the time series.</p>
 <ol>
-<li>Let <span class="arithmatex">\(\lambda = 2\pi f\)</span>. Compute and obtain <span class="arithmatex">\(\log(I(\lambda_{k}))\)</span></li>
-<li>Regress <span class="arithmatex">\(\log(I(\lambda_{k}))= a + b\log(\lambda_{k}) + \epsilon_{k}\)</span></li>
+<li>Calculate the periodogram <span class="arithmatex">\(I(\lambda_{k})\)</span> at frequencies <span class="arithmatex">\(\lambda_{k} = 2\pi f\)</span>.</li>
+<li>Perform a simple linear regression: <br>
+    $<span class="arithmatex">\(\log(I(\lambda_{k})) = a + b\log(\lambda_{k}) + \epsilon_{k}\)</span>$</li>
+<li>The slope <span class="arithmatex">\(b\)</span> is directly related to the fractional parameter <span class="arithmatex">\(d\)</span> by the relationship:<br>
+    $<span class="arithmatex">\(b = -2d \implies \hat{d} = -\dfrac{b}{2}\)</span>$</li>
 </ol>
-<p>We have to estimate <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>. Interestingly, <span class="arithmatex">\(b\)</span> is related to the <strong>fractional differencing parameter</strong> as follows:</p>
-<div class="arithmatex">\[
-b = -2d
-\]</div>
-<p>Thus, we can estimate, <span class="arithmatex">\(\hat{d} = -\dfrac{b}{2}\)</span>.</p>
-<p>Then we can estimate AR and MA parameters as usual.</p>
-<h5 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">¶</a></h5>
-<ol>
-<li>Robustness (to noise)</li>
-<li>Applicability (can be applied to wide range of TS (say, different <span class="arithmatex">\(H\)</span> values))</li>
-</ol>
-<h5 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h5>
-<ol>
-<li>Sensitivity to bandwidth → Biased estimates</li>
-<li>
-<p>Assumption of Stationarity → Assumes stationary after differencing (which may not always hold)</p>
-<h4 id="other-estimation-techniques">Other Estimation Techniques<a class="headerlink" href="#other-estimation-techniques" title="Permanent link">¶</a></h4>
-</li>
-<li>
-<p>MLE</p>
-</li>
-<li>Yule Walker equations (method of moments)<ul>
-<li><span class="arithmatex">\(d\)</span> can be estimated using sample ACF</li>
-<li>AR can be obtained by YW equations</li>
+<p><strong>Pros and Cons of <abbr title="Geweke and Porter-Hudak">GPH</abbr>:</strong><br>
+* <strong>Advantages:</strong> It is highly robust to noise and applicable to a wide range of long-memory processes.<br>
+* <strong>Limitations:</strong> It is sensitive to the choice of <strong>bandwidth</strong> (the range of frequencies used), which can lead to biased estimates. It also assumes the series is stationary after the fractional differencing.</p>
+<hr>
+<h3 id="3-other-estimation-techniques">3. Other Estimation Techniques<a class="headerlink" href="#3-other-estimation-techniques" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Maximum Likelihood Estimation (<abbr title="Maximum Likelihood Estimation">MLE</abbr>):</strong> An exact but computationally intensive method that maximizes the likelihood function in either the time or frequency domain.</li>
+<li><strong>Whittle Estimation:</strong> A popular frequency-domain approach that uses a quasi-likelihood function. It is generally more computationally efficient than exact <abbr title="Maximum Likelihood Estimation">MLE</abbr>.</li>
+<li><strong>Local Whittle Estimation:</strong> A variation that focuses only on a local range of frequencies near zero, making it more robust to short-run dynamics.</li>
+<li><strong>Yule-Walker (Method of Moments):</strong> Estimates <span class="arithmatex">\(d\)</span> using the sample Autocorrelation Function (<abbr title="Autocorrelation Function">ACF</abbr>) and then solves for AR parameters using the standard Yule-Walker equations.</li>
 </ul>
-</li>
-<li>Whittle estimation<ul>
-<li>Quasi-likelihood approach to estimate parameter</li>
-</ul>
-</li>
-<li>Local Whittle estimation<ul>
-<li>Focuses on local frequency range</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>The main focus is to estimate <span class="arithmatex">\(d\)</span>, the fractional difference parameter.</p>
-</blockquote>
+<hr>
 
 
 
@@ -12896,13 +12856,13 @@ b = -2d
         
         
           
-          <a href="../L31__Multivariate%20Time%20Series%20Analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Multivariate TS Analysis">
+          <a href="../L31__Multivariate%20Time%20Series%20Analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Multivariate Time Series Analysis">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Multivariate TS Analysis
+                Multivariate Time Series Analysis
               </div>
             </div>
             <div class="md-footer__button md-icon">

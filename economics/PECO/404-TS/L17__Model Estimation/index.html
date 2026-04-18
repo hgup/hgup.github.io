@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9226,6 +9226,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#assumptions-for-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions for Estimation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#estimation-techniques" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9287,7 +9298,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9839,7 +9850,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10927,7 +10938,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12746,67 +12757,30 @@
 
 <!-- Markdown content -->
 <h1 id="model-estimation">Model Estimation<a class="headerlink" href="#model-estimation" title="Permanent link">¶</a></h1>
-<ul>
-<li>After specifying the model orders, estimate the underlying parameters <span class="arithmatex">\(\phi_{1},\phi_{2}\dots, \theta_{1},\theta_{2},\dots\)</span></li>
-<li>Assume<ul>
-<li>We know the order, <span class="arithmatex">\((p,q)\)</span></li>
-<li>Model has 0 mean (if not, subtract <span class="arithmatex">\(\bar{Y}\)</span> and fit a 0 mean ARMA process, <span class="arithmatex">\(X_{t}\)</span> and get back <span class="arithmatex">\(Y_{t} = X_{t} + \bar{Y}\)</span>)</li>
-</ul>
-</li>
-</ul>
-<h3 id="estimation-techniques">Estimation Techniques<a class="headerlink" href="#estimation-techniques" title="Permanent link">¶</a></h3>
-<h4 id="method-of-moments-mome">Method of Moments (MoME)<a class="headerlink" href="#method-of-moments-mome" title="Permanent link">¶</a></h4>
-<ul>
-<li>a.k.a. "Yule Walker Estimation"</li>
-<li>works for only AR models for large <span class="arithmatex">\(n\)</span></li>
-<li>Not efficient</li>
-</ul>
-<blockquote>
-<p>Equate population moments to sample moments and solve for parameters.</p>
-</blockquote>
-<ul>
-<li>Yule Walkter estimation for AR(1)<ul>
-<li><span class="arithmatex">\(\rho_{1} = \phi\)</span></li>
-<li>error variance (<span class="arithmatex">\(\sigma_{e}^{2}\)</span>) can be found by its relationship with <span class="arithmatex">\(\gamma_{1}\)</span></li>
-</ul>
-</li>
-</ul>
-<h4 id="maximum-likelihood-methodology-mle">Maximum Likelihood Methodology (MLE)<a class="headerlink" href="#maximum-likelihood-methodology-mle" title="Permanent link">¶</a></h4>
-<p>Assume <span class="arithmatex">\(e_{t} \sim \mathcal{N}(0,\sigma_{e}^{2})\)</span> IID</p>
-<ul>
-<li>We cannot use the joint density of the actual time series observations <span class="arithmatex">\(f(y_{1}, y_{2},\dots,y_{n})\)</span> since they cannot be broken down into product of marginals (not independent <em>haire</em>). Thus we make use of residuals,</li>
-</ul>
-<div class="arithmatex">\[
-f(e_{1},e_{2},\dots,e_{n}) = f(e_{1})\times\dots \times f(e_{n})
-\]</div>
-<ul>
-<li>since all errors are independent according to the assumption.</li>
-<li>take the conditional<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> log-likelihood function</li>
-</ul>
-<div class="arithmatex">\[
-\ln L(\mu, \phi, \theta, \sigma_{e}^{2}) = -\dfrac{n}{2} \ln(2\pi \sigma_{e}^{2}) - \dfrac{S_{*}(\mu,\phi, \theta)}{2\sigma_{e}^{2}}
-\]</div>
-<ul>
-<li>Have to use some numerical approximation techniques.</li>
-</ul>
-<p>MLE have many advantages.</p>
-<h4 id="conditional-least-squares-technique">Conditional Least Squares Technique<a class="headerlink" href="#conditional-least-squares-technique" title="Permanent link">¶</a></h4>
-<p>For an AR(1) model,</p>
-<div class="arithmatex">\[
-e_{t} = Y_{t} - \phi_{1}Y_{t-1}
-\]</div>
-<p>Thus, <span class="arithmatex">\(SSE = \sum_{t=1}^n e_{t}^{2}\)</span> and finally we get,</p>
-<div class="arithmatex">\[
-\hat{\phi} = \dfrac{\sum Y_{t}Y_{t-1}}{\sum Y_{t-1}^{2}}
-\]</div>
-<div class="footnote">
+<p>Once the model orders <span class="arithmatex">\((p, q)\)</span> are specified, the next step is to estimate the underlying parameters <span class="arithmatex">\(\phi_{1}, \phi_{2}, \dots\)</span> and <span class="arithmatex">\(\theta_{1}, \theta_{2}, \dots\)</span>.</p>
+<h3 id="assumptions-for-estimation">Assumptions for Estimation<a class="headerlink" href="#assumptions-for-estimation" title="Permanent link">¶</a></h3>
+<p>To simplify the estimation process, we generally assume:<br>
+* <strong>Known Orders:</strong> The model orders <span class="arithmatex">\((p, q)\)</span> have already been identified.<br>
+* <strong>Zero Mean:</strong> The model is assumed to have a zero mean. If the original series has a non-zero mean, we subtract the sample mean (<span class="arithmatex">\(\bar{Y}\)</span>) to fit a zero-mean ARMA process (<span class="arithmatex">\(X_{t}\)</span>) and later transform it back using <span class="arithmatex">\(Y_{t} = X_{t} + \bar{Y}\)</span>.</p>
 <hr>
-<ol>
-<li id="fn:1">
-<p>Because numerical approximation techniques require an initial values, so the likelihood function is conditional.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<h3 id="estimation-techniques">Estimation Techniques<a class="headerlink" href="#estimation-techniques" title="Permanent link">¶</a></h3>
+<h4 id="1-method-of-moments-mome">1. Method of Moments (<abbr title="Method of Moments">MoME</abbr>)<a class="headerlink" href="#1-method-of-moments-mome" title="Permanent link">¶</a></h4>
+<p>Also known as <strong>Yule-Walker Estimation</strong>, this technique involves equating population moments to sample moments and solving for the parameters.<br>
+* <strong>Scope:</strong> It primarily works for AR models when the sample size <span class="arithmatex">\(n\)</span> is large.<br>
+* <strong>Efficiency:</strong> It is generally considered not very efficient compared to other methods.<br>
+* <strong>Example (AR(1)):</strong> For an <span class="arithmatex">\(AR(1)\)</span> process, the parameter estimate is simply <span class="arithmatex">\(\hat{\phi} = \rho_{1}\)</span>. The error variance (<span class="arithmatex">\(\sigma_{e}^{2}\)</span>) is determined through its relationship with the auto-covariance <span class="arithmatex">\(\gamma_{1}\)</span>.</p>
+<h4 id="2-maximum-likelihood-methodology-mle">2. Maximum Likelihood Methodology (<abbr title="Maximum Likelihood Estimation">MLE</abbr>)<a class="headerlink" href="#2-maximum-likelihood-methodology-mle" title="Permanent link">¶</a></h4>
+<p><abbr title="Maximum Likelihood Estimation">MLE</abbr> is a powerful technique that assumes the residuals follow a specific distribution, typically <span class="arithmatex">\(e_{t} \sim \mathcal{N}(0, \sigma_{e}^{2})\)</span> and are IID.<br>
+* <strong>Residual-Based Approach:</strong> Since time series observations <span class="arithmatex">\((y_{1}, \dots, y_{n})\)</span> are dependent, their joint density cannot be broken into simple marginal products. Instead, we utilize the joint density of the independent residuals: <span class="arithmatex">\(f(e_{1}, \dots, e_{n}) = f(e_{1}) \times \dots \times f(e_{n})\)</span>.<br>
+* <strong>Conditional Log-Likelihood:</strong> Because numerical approximation techniques require initial values, a conditional log-likelihood function is used:<br>
+  $<span class="arithmatex">\(\ln L(\mu, \phi, \theta, \sigma_{e}^{2}) = -\dfrac{n}{2} \ln(2\pi \sigma_{e}^{2}) - \dfrac{S_{*}(\mu, \phi, \theta)}{2\sigma_{e}^{2}}\)</span>$<br>
+* <strong>Computation:</strong> This method often requires numerical approximation techniques to find the maximum.</p>
+<h4 id="3-conditional-least-squares-technique">3. Conditional Least Squares Technique<a class="headerlink" href="#3-conditional-least-squares-technique" title="Permanent link">¶</a></h4>
+<p>This technique focuses on minimizing the Sum of Squared Errors (<abbr title="Sum of Squared Errors">SSE</abbr>).<br>
+* <strong>Example (AR(1)):</strong> Since the error is defined as <span class="arithmatex">\(e_{t} = Y_{t} - \phi_{1}Y_{t-1}\)</span>, we calculate the <abbr title="Sum of Squared Errors">SSE</abbr> as <span class="arithmatex">\(\sum e_{t}^{2}\)</span>.<br>
+* <strong>Resulting Estimator:</strong> The parameter estimate for an <span class="arithmatex">\(AR(1)\)</span> model is:<br>
+  $<span class="arithmatex">\(\hat{\phi} = \dfrac{\sum Y_{t}Y_{t-1}}{\sum Y_{t-1}^{2}}\)</span>$</p>
+<hr>
 
 
 

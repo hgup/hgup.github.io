@@ -24,7 +24,7 @@
     
     
       
-        <title>TS Decomposition - Hursh Gupta</title>
+        <title>Time Series Decomposition - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ts-decomposition" class="md-skip">
+        <a href="#time-series-decomposition" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TS Decomposition
+              Time Series Decomposition
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8730,7 +8730,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8748,7 +8748,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8774,10 +8774,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#time-series-decomposition" class="md-nav__link">
+  <a href="#1-the-four-components-of-time-series" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Time Series Decomposition
+        1. The Four Components of Time Series
       
     </span>
   </a>
@@ -8785,10 +8785,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decomposition-trend" class="md-nav__link">
+  <a href="#2-case-study-nottem-dataset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Decomposition: Trend
+        2. Case Study: "Nottem" Dataset
       
     </span>
   </a>
@@ -8796,10 +8796,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decomposition-seasonality" class="md-nav__link">
+  <a href="#3-detailed-component-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Decomposition: Seasonality
+        3. Detailed Component Analysis
       
     </span>
   </a>
@@ -8807,32 +8807,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decomposition-cyclical-component" class="md-nav__link">
+  <a href="#4-types-of-decomposition-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Decomposition: Cyclical component
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decomposition-irregular-component" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decomposition: Irregular component
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-decomposition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Types of Decomposition
+        4. Types of Decomposition Models
       
     </span>
   </a>
@@ -8862,7 +8840,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8918,7 +8896,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -9046,7 +9024,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -9074,7 +9052,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -9102,7 +9080,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9342,7 +9320,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9894,7 +9872,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10982,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12800,111 +12778,85 @@
 
 
 <!-- Markdown content -->
-<h1 id="ts-decomposition">TS Decomposition<a class="headerlink" href="#ts-decomposition" title="Permanent link">¶</a></h1>
-<h3 id="time-series-decomposition">Time Series Decomposition<a class="headerlink" href="#time-series-decomposition" title="Permanent link">¶</a></h3>
-<p>Any time series can be decomposed into the following four aspects/groups:</p>
-<ol>
-<li>Secular Trend (<span class="arithmatex">\(T_{t}\)</span>)<ul>
-<li>Long term movement (doesn't happen in a shorter time-span)</li>
+<h1 id="time-series-decomposition">Time Series Decomposition<a class="headerlink" href="#time-series-decomposition" title="Permanent link">¶</a></h1>
+<h3 id="1-the-four-components-of-time-series">1. The Four Components of Time Series<a class="headerlink" href="#1-the-four-components-of-time-series" title="Permanent link">¶</a></h3>
+<p>Any time series can be decomposed into four distinct aspects or groups:</p>
+<ul>
+<li><strong>Secular Trend (<span class="arithmatex">\(T_{t}\)</span>):</strong> Represents the long-term movement of the series that does not occur within a short time span.</li>
+<li><strong>Seasonal Component (<span class="arithmatex">\(S_{t}\)</span>):</strong> Refers to regular periodic variations where the cycle repeats after a certain time point (with a <em>period <span class="arithmatex">\(\leq\)</span> 1 year</em>).<ul>
+<li><em>Example:</em> Monthly temperature fluctuations (Summer vs. Winter) within a single year.</li>
 </ul>
 </li>
-<li>Seasonal Component (<span class="arithmatex">\(S_{t}\)</span>), repeats after a certain time-point<ul>
-<li><strong>Regular</strong> periodic variation (period of cycle <span class="arithmatex">\(\leq 1\)</span> year)</li>
-<li>E.g. Summer and Winter (monthly temperature within an year)</li>
+<li><strong>Cyclical Component (<span class="arithmatex">\(C_{t}\)</span>):</strong> Characterized by repetitions where the cycle is <em>longer than one year</em> and occurs at <strong>irregular</strong> intervals.<ul>
+<li><em>Example:</em> Business cycles involving gradual, long-term upward and downward movements.</li>
 </ul>
 </li>
-<li>Cyclical Component (<span class="arithmatex">\(C_{t}\)</span>)<ul>
-<li>Repetition cycle is longer than 1 year (and NOT at <strong>regular</strong> intervals)</li>
-<li>E.g. Business Cycle </li>
-<li>Gradual and relatively long term up and down movements of a series</li>
+<li><strong>Random/Irregular Component (<span class="arithmatex">\(I_{t}\)</span>):</strong> Purely random and unpredictable fluctuations.</li>
 </ul>
-</li>
-<li>Random/irregular Component (<span class="arithmatex">\(I_{t}\)</span>) <ul>
-<li>Purely random and irregular</li>
-</ul>
-</li>
-</ol>
 <blockquote>
-<p>(1), (2) and (3) are due to permanent causes and are predictable → Systematic Components. (4) is due to "noise" → Unsystematic components.</p>
+<p><strong>Note:</strong> The Trend, Seasonal, and Cyclical components are considered <strong>Systematic Components</strong> as they are driven by permanent, predictable causes. The Irregular component is considered an <strong>Unsystematic Component</strong> or "noise."</p>
 </blockquote>
-<h4 id="example-nottem-dataset">Example: "Nottem" Dataset<a class="headerlink" href="#example-nottem-dataset" title="Permanent link">¶</a></h4>
-<p>Contains 20 years of monthly temperature in Nottingham Castle (UK)</p>
+<h3 id="2-case-study-nottem-dataset">2. Case Study: "Nottem" Dataset<a class="headerlink" href="#2-case-study-nottem-dataset" title="Permanent link">¶</a></h3>
+<p>The "Nottem" dataset contains 20 years of monthly temperature data from Nottingham Castle, UK.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803322272.webp" data-desc-position="bottom"><img alt="L6__Time Series Decomposition-1768803322272.webp" src="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803322272.webp"></a></p>
-<ol>
-<li>No trend</li>
-<li>Seasonality is dominant</li>
-</ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803387672.webp" data-desc-position="bottom"><img alt="L6__Time Series Decomposition-1768803387672.webp" src="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803387672.webp"></a></p>
 <ul>
-<li>Remainder is what remains after all others have been isolated, here we see that the remainder is indeed <span class="arithmatex">\(I_{t}\)</span> is completely random.</li>
+<li><strong>Observations:</strong> The series shows no overall trend, but <strong>Seasonality</strong> is the dominant feature.</li>
+<li><strong>Remainder:</strong> Once the seasonal and trend components are isolated, the "remainder" (<span class="arithmatex">\(I_{t}\)</span>) appears completely random, confirming the decomposition logic.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803387672.webp" data-desc-position="bottom"><img alt="L6__Time Series Decomposition-1768803387672.webp" src="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803387672.webp"></a></li>
 </ul>
-<h3 id="decomposition-trend">Decomposition: Trend<a class="headerlink" href="#decomposition-trend" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="3-detailed-component-analysis">3. Detailed Component Analysis<a class="headerlink" href="#3-detailed-component-analysis" title="Permanent link">¶</a></h3>
+<h4 id="secular-trend">Secular Trend<a class="headerlink" href="#secular-trend" title="Permanent link">¶</a></h4>
 <ul>
-<li>Only upward or downward (not upward in summer and downward in winter) → Without calendar related influences</li>
-<li>Without random movement</li>
+<li>Focuses purely on the upward or downward direction without calendar-related influences or random movements.</li>
+<li>It reflects a change in the average or mean level of the series over time.</li>
 </ul>
-<blockquote>
-<p>The average/mean level changes</p>
-</blockquote>
-<h3 id="decomposition-seasonality">Decomposition: Seasonality<a class="headerlink" href="#decomposition-seasonality" title="Permanent link">¶</a></h3>
+<h4 id="seasonality">Seasonality<a class="headerlink" href="#seasonality" title="Permanent link">¶</a></h4>
 <ul>
-<li>Seasonal Effect<ul>
-<li>systematic, calendar related effect</li>
-<li>higher sales during festive season</li>
-</ul>
-</li>
-<li>Complex seasonal effect<ul>
-<li>weekly sales of last week</li>
-<li>number of trading days in a month effect (irregular repetitions)</li>
+<li><strong>Seasonal Effect:</strong> A systematic, calendar-related effect (e.g., higher sales during festive seasons).</li>
+<li><strong>Complex Seasonal Effect:</strong> Includes patterns like specific weekly sales or the "number of trading days in a month" effect, which can lead to irregular repetitions.</li>
+<li><strong>Causes:</strong> * <em>Natural Conditions:</em> Water consumption in summer or milk production in winter.<ul>
+<li><em>Business/Admin Processes:</em> Increased travel during summer breaks.</li>
+<li><em>Social/Cultural Behavior:</em> Gold purchases during Dhanteras.</li>
 </ul>
 </li>
 </ul>
-<p>Causes of seasonality</p>
+<h4 id="cyclical-component">Cyclical Component<a class="headerlink" href="#cyclical-component" title="Permanent link">¶</a></h4>
 <ul>
-<li>Natural conditions<ul>
-<li>water consumption during summer</li>
-<li>milk production during winter</li>
+<li>Visualized as a wave-shaped curve representing expansions and contractions.</li>
+<li>Unlike seasonality, these repetitions are <strong>irregular</strong>; the peaks are not equal in height and are spaced at irregular intervals.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803728238.webp" data-desc-position="bottom"><img alt="L6__Time Series Decomposition-1768803728238.webp" src="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803728238.webp"></a></li>
 </ul>
-</li>
-<li>Business Admin process<ul>
-<li>Higher traveling during summer</li>
-</ul>
-</li>
-<li>Social/ cultural behavior<ul>
-<li>Dhanteras gold purchase</li>
-</ul>
-</li>
-</ul>
-<h3 id="decomposition-cyclical-component">Decomposition: Cyclical component<a class="headerlink" href="#decomposition-cyclical-component" title="Permanent link">¶</a></h3>
+<h4 id="irregular-component">Irregular Component<a class="headerlink" href="#irregular-component" title="Permanent link">¶</a></h4>
 <ul>
-<li>Long term variations</li>
-<li>Wave shaped curve (Expansion and contractions)</li>
+<li>Also known as the residual or random component.</li>
+<li>It is what remains after removing the seasonal and trend components. The differences between its peaks and troughs are completely random.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803728238.webp" data-desc-position="bottom"><img alt="L6__Time Series Decomposition-1768803728238.webp" src="../../../../assets/images/2026/01/L6__Time%20Series%20Decomposition-1768803728238.webp"></a></p>
-<ul>
-<li>Repetitions are irregular (peaks are not equal, and spaced irregularly)</li>
-</ul>
-<h3 id="decomposition-irregular-component">Decomposition: Irregular component<a class="headerlink" href="#decomposition-irregular-component" title="Permanent link">¶</a></h3>
-<ul>
-<li>Residual or random component.</li>
-<li>What remains after removing seasonal and trend component.</li>
-<li>Difference between peaks and troughs are completely random</li>
-</ul>
-<h2 id="types-of-decomposition">Types of Decomposition<a class="headerlink" href="#types-of-decomposition" title="Permanent link">¶</a></h2>
-<ul>
-<li>Additive Decomposition<ul>
-<li><span class="arithmatex">\(Y_{t} = T_{t} + S_{t}+C_{t}+I_{t}\)</span></li>
-<li>Represents an absolute amount. (What is the absolute change?)</li>
-<li>e.g. Manufacturer produces 10,000 more machine parts</li>
-</ul>
-</li>
-<li>Multiplicative decomposition<ul>
-<li><span class="arithmatex">\(Y_{t} = T_{t} \times S_{t} \times C_{t}\times I_{t}\)</span></li>
-<li>Represents a relative amount. (What is the relative change?)</li>
-<li>e.g. Manufacturer produces 20% more machine parts</li>
-</ul>
-</li>
-</ul>
+<hr>
+<h3 id="4-types-of-decomposition-models">4. Types of Decomposition Models<a class="headerlink" href="#4-types-of-decomposition-models" title="Permanent link">¶</a></h3>
+<p>The way these components interact determines the type of model used:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Model Type</th>
+<th style="text-align: left;">Mathematical Formula</th>
+<th style="text-align: left;">Representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Additive</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(Y_{t} = T_{t} + S_{t} + C_{t} + I_{t}\)</span></td>
+<td style="text-align: left;">Represents an <strong>absolute amount</strong> of change (e.g., producing 10,000 more parts).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Multiplicative</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(Y_{t} = T_{t} \times S_{t} \times C_{t} \times I_{t}\)</span></td>
+<td style="text-align: left;">Represents a <strong>relative amount</strong> or percentage change (e.g., producing 20% more parts).</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
 
 
@@ -12940,7 +12892,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L4__Weak%20vs%20strong%20stationarity/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Weak Vs Strong Stationarity">
+          <a href="../L4__Weak%20vs%20strong%20stationarity/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Weak vs. Strong Stationarity">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12950,20 +12902,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Weak Vs Strong Stationarity
+                Weak vs. Strong Stationarity
               </div>
             </div>
           </a>
         
         
           
-          <a href="../L7_Basic%20Time%20Seires%20Processes/" class="md-footer__link md-footer__link--next" aria-label="Next: Basic TS Processes">
+          <a href="../L7_Basic%20Time%20Seires%20Processes/" class="md-footer__link md-footer__link--next" aria-label="Next: Basic Time Series Processes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Basic TS Processes
+                Basic Time Series Processes
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9781,7 +9781,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -9890,10 +9890,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#linear-filtering" class="md-nav__link">
+  <a href="#1-linear-filtering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linear Filtering
+        1. Linear Filtering
       
     </span>
   </a>
@@ -9901,10 +9901,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#wold-ma-representation-of-the-series" class="md-nav__link">
+  <a href="#2-wold-ma-representation-of-the-series" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Wold (MA) representation of the Series
+        2. Wold (MA) representation of the Series
       
     </span>
   </a>
@@ -9912,10 +9912,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vector-autoregressive-moving-average-varma" class="md-nav__link">
+  <a href="#3-vector-autoregressive-moving-average-varma" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vector Autoregressive Moving Average (VARMA)
+        3. Vector Autoregressive Moving Average (VARMA)
       
     </span>
   </a>
@@ -9923,10 +9923,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vma-order-q" class="md-nav__link">
+  <a href="#4-vector-moving-average-vma" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VMA (order \(q\))
+        4. Vector Moving Average (VMA)
       
     </span>
   </a>
@@ -9934,21 +9934,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vector-ma1" class="md-nav__link">
+  <a href="#5-autocovariance-matrix-of-a-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vector MA(1)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autocovariance-matrix-of-a-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autocovariance Matrix of a Process
+        5. Autocovariance Matrix of a Process
       
     </span>
   </a>
@@ -10982,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12801,125 +12790,77 @@
 
 <!-- Markdown content -->
 <h1 id="some-specific-multivariate-ts-models">Some Specific Multivariate TS models<a class="headerlink" href="#some-specific-multivariate-ts-models" title="Permanent link">¶</a></h1>
-<h3 id="linear-filtering">Linear Filtering<a class="headerlink" href="#linear-filtering" title="Permanent link">¶</a></h3>
+<p>Multivariate models expand the concepts of univariate time series into a vector-matrix framework, allowing for the modeling of systems where variables influence each other across time.</p>
+<h3 id="1-linear-filtering">1. Linear Filtering<a class="headerlink" href="#1-linear-filtering" title="Permanent link">¶</a></h3>
+<p>A multivariate linear time-invariant filter relates an <span class="arithmatex">\(r\)</span>-dimensional input series <span class="arithmatex">\(X_{t}\)</span> to a <span class="arithmatex">\(k\)</span>-dimensional output series <span class="arithmatex">\(Y_{t}\)</span>.</p>
+<div class="arithmatex">\[Y_{t} = \sum_{j=-\infty}^\infty \Psi_{j} X_{t-j}\]</div>
+<p>Where <span class="arithmatex">\(\Psi_{j}\)</span> are <span class="arithmatex">\(k \times r\)</span> matrices for all <span class="arithmatex">\(j\)</span>.</p>
 <ul>
-<li><span class="arithmatex">\(X_{t}\)</span> is a "r" dimensional input series</li>
-<li><span class="arithmatex">\(Y_{t}\)</span> is a "k" dimensional output series</li>
-</ul>
-<p>Multivariate <em>linear</em> (Time invariant) filter relating <span class="arithmatex">\(X_{t}\)</span> and <span class="arithmatex">\(Y_{t}\)</span></p>
-<div class="arithmatex">\[
-Y_{t} = \sum_{j=-\infty}^\infty  \Psi_{j} X_{t-j}
-\]</div>
-<p>where, <span class="arithmatex">\(\Psi_{j}\)</span> are <span class="arithmatex">\(k\times r\)</span> matrices for all <span class="arithmatex">\(j\)</span>.</p>
-<p>If <span class="arithmatex">\(\Psi_{j}=0\)</span> for all <span class="arithmatex">\(j \lt 0\)</span></p>
-<div class="arithmatex">\[
-Y_{t} = \sum_{j=0}^\infty \Psi_{j} X_{t-j}
-\]</div>
-<p><span class="arithmatex">\(Y_{t}\)</span> is expressible only in terms of <em>present</em> and <em>past</em> values of the input series <span class="arithmatex">\(X_{t}\)</span>.</p>
-<ul>
-<li>Let <span class="arithmatex">\(\lVert A \rVert^{2}\)</span> denote the "norm" of <span class="arithmatex">\(A\)</span> = <span class="arithmatex">\(tr(A'A)\)</span></li>
-<li>Linear filter is "stable" <span class="arithmatex">\(\impliedby\)</span> <span class="arithmatex">\(\sum_{j=0}^\infty \lVert \Psi_{j} \rVert \lt \infty\)</span></li>
+<li><strong>Causality:</strong> If <span class="arithmatex">\(\Psi_{j}=0\)</span> for all <span class="arithmatex">\(j &lt; 0\)</span>:<br>
+  $<span class="arithmatex">\(Y_{t} = \sum_{j=0}^\infty \Psi_{j} X_{t-j}\)</span>$<br>
+  In this case, <span class="arithmatex">\(Y_{t}\)</span> is expressible only in terms of the <strong>present and past</strong> values of the input series <span class="arithmatex">\(X_{t}\)</span>.</li>
+<li><strong>Stability:</strong> Let <span class="arithmatex">\(\lVert A \rVert^{2}\)</span> denote the "norm" of <span class="arithmatex">\(A\)</span>, defined as <span class="arithmatex">\(tr(A'A)\)</span>. A linear filter is "stable" if <span class="arithmatex">\(\sum_{j=0}^\infty \lVert \Psi_{j} \rVert &lt; \infty\)</span>.</li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Theorem</p>
-<p>If</p>
-<ul>
-<li>Linear filter is stable</li>
-<li>Input random vectors <span class="arithmatex">\(\{ X_{t} \}\)</span> have finite second moments</li>
-</ul>
-<p>Then</p>
-<ul>
-<li>Filtering representations exists uniquely and converges to mean square</li>
-</ul>
+<p class="admonition-title">Theorem: Convergence and Stationarity</p>
+<p>If the linear filter is <strong>stable</strong> and the input random vectors <span class="arithmatex">\(\{ X_{t} \}\)</span> have <strong>finite second moments</strong>, then:</p>
+<ol>
+<li>
+<p>Filtering representations exist uniquely and converge in the mean square:<br>
+   $<span class="arithmatex">\(E\left( Y_{t} - \sum_{j=-n}^n \Psi_{j} X_{t-j} \right)\left( Y_{t} - \sum_{j=-n}^n \Psi_{j}X_{t-j} \right)' \to 0,\quad \text{as } n\to \infty\)</span>$</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(X_{t}\)</span> is stationary with cross covariances <span class="arithmatex">\(\Gamma_{x}(l)\)</span>, then <span class="arithmatex">\(Y_{t}\)</span> is stationary with cross covariances:<br>
+   $<span class="arithmatex">\(\Gamma_{y}(l) = Cov(Y_{t}, Y_{t+l}) = \sum_{i=-\infty}^\infty \sum_{j=-\infty}^\infty \Psi_{i}\Gamma_{x}(l+i-j)\Psi_{j}'\)</span>$</p>
+</li>
+</ol>
 </div>
-<div class="arithmatex">\[
-E\left( Y_{t} - \sum_{j=-n}^n \Psi_{j} X_{t-j} \right)\left( Y_{t} - \sum_{j=-n}^n \Psi_{j}X_{t-j} \right)' \to 0,\quad \text{as } n\to \infty
-\]</div>
-<p>If the linear filter is stable and <span class="arithmatex">\(X_{t}\)</span> is stationary with cross covariances <span class="arithmatex">\(\Gamma_{x}(l)\)</span>, then <span class="arithmatex">\(Y_{t}\)</span> is stationary with cross covariances,</p>
-<div class="arithmatex">\[
-\Gamma_{y}(l) = Cov(Y_{t}Y_{t+l}) = \sum_{i=-\infty}^\infty \sum_{j=-\infty}^\infty \Psi_{j}\Gamma_{x}(l+i-j)\Psi_{j}
-\]</div>
-<h3 id="wold-ma-representation-of-the-series">Wold (MA) representation of the Series<a class="headerlink" href="#wold-ma-representation-of-the-series" title="Permanent link">¶</a></h3>
-<ul>
-<li>"infinite MA representation of a stationary vector process"</li>
-</ul>
-<p>Let <span class="arithmatex">\(\{ Y_{t} \}\)</span> be a multivariate stationary process with mean <span class="arithmatex">\(\mu\)</span></p>
-<div class="arithmatex">\[
-Y_{t} - \mu = \sum_{j=0}^\infty \Psi_{j}e_{t-j}
-\]</div>
-<div class="arithmatex">\[
-Y_{t} = \mu + \sum_{j=0}^\infty \Psi(B)e_{t}
-\]</div>
-<p>Where <span class="arithmatex">\(\Psi(B)\)</span> is a <span class="arithmatex">\(k \times k\)</span> matrix of backward shift operator. (= <span class="arithmatex">\(\sum_{j=0}^\infty \Psi_{j}B^j\)</span>)</p>
-<h3 id="vector-autoregressive-moving-average-varma">Vector Autoregressive Moving Average (VARMA)<a class="headerlink" href="#vector-autoregressive-moving-average-varma" title="Permanent link">¶</a></h3>
-<p><span class="arithmatex">\(VARMA(p,q)\)</span> process</p>
-<div class="arithmatex">\[
-\Phi_{p}(B)(Y_{t}-\mu) = \Theta_{q}(B)e_{t}
-\]</div>
-<p>where,</p>
-<ul>
-<li><span class="arithmatex">\(\Phi_{p}(B)= \Phi_{0} - \Phi_{1}(B) - \dots \Phi_{p}B^p\)</span><ul>
-<li>and <span class="arithmatex">\(\Phi_{i}\)</span> here are matrices and not single quantities (parameters)</li>
-</ul>
-</li>
-<li><span class="arithmatex">\(\Theta_{q}(B)= \Theta_{0} - \Theta_{1}(B) - \dots \Theta_{q}B^q\)</span><ul>
-<li>and <span class="arithmatex">\(\Theta_{i}\)</span> here are matrices and not single quantities (parameters)</li>
-</ul>
-</li>
-<li><span class="arithmatex">\(q=0\)</span> <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(VAR(p)\)</span></li>
-<li><span class="arithmatex">\(p=0\)</span> <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(VMA(q)\)</span></li>
-</ul>
+<hr>
+<h3 id="2-wold-ma-representation-of-the-series">2. Wold (MA) representation of the Series<a class="headerlink" href="#2-wold-ma-representation-of-the-series" title="Permanent link">¶</a></h3>
+<p>This represents the "infinite MA representation of a stationary vector process." Let <span class="arithmatex">\(\{ Y_{t} \}\)</span> be a multivariate stationary process with mean <span class="arithmatex">\(\mu\)</span>:</p>
+<div class="arithmatex">\[Y_{t} - \mu = \sum_{j=0}^\infty \Psi_{j}e_{t-j}$$
+$$Y_{t} = \mu + \Psi(B)e_{t}\]</div>
+<p>Where <span class="arithmatex">\(\Psi(B)\)</span> is a <span class="arithmatex">\(k \times k\)</span> matrix of backward shift operators, defined as <span class="arithmatex">\(\Psi(B) = \sum_{j=0}^\infty \Psi_{j}B^j\)</span>.</p>
+<hr>
+<h3 id="3-vector-autoregressive-moving-average-varma">3. Vector Autoregressive Moving Average (<abbr title="Vector Autoregressive Moving Average">VARMA</abbr>)<a class="headerlink" href="#3-vector-autoregressive-moving-average-varma" title="Permanent link">¶</a></h3>
+<p>The <span class="arithmatex">\(VARMA(p,q)\)</span> process is defined as:</p>
+<div class="arithmatex">\[\Phi_{p}(B)(Y_{t}-\mu) = \Theta_{q}(B)e_{t}\]</div>
+<p>Where:<br>
+* <strong><span class="arithmatex">\(\Phi_{p}(B) = \Phi_{0} - \Phi_{1}B - \dots - \Phi_{p}B^p\)</span></strong>: Autoregressive matrix polynomial. Note that <span class="arithmatex">\(\Phi_{i}\)</span> are <strong>matrices</strong>, not single parameter quantities.<br>
+* <strong><span class="arithmatex">\(\Theta_{q}(B) = \Theta_{0} - \Theta_{1}B - \dots - \Theta_{q}B^q\)</span></strong>: Moving average matrix polynomial. These are also matrices.<br>
+* <strong>Special Cases:</strong><br>
+    * <span class="arithmatex">\(q=0 \implies VAR(p)\)</span><br>
+    * <span class="arithmatex">\(p=0 \implies VMA(q)\)</span></p>
+<h4 id="stationarity-and-the-vma-link">Stationarity and the <abbr title="Vector Moving Average">VMA</abbr> link<a class="headerlink" href="#stationarity-and-the-vma-link" title="Permanent link">¶</a></h4>
+<p>A process is stationary if we can represent it as a convergent vector moving average process of infinite order:<br>
+$<span class="arithmatex">\(Y_{t} = \mu + e_{t} + \sum_{j=1}^\infty \Psi_{j}e_{t-j} = \mu + \Psi(B)e_{t}\)</span>$</p>
+<p>Isolating <span class="arithmatex">\(Y_{t} - \mu\)</span>:<br>
+$<span class="arithmatex">\(Y_{t} - \mu = \Psi(B)e_{t} = \Phi_{p}(B)^{-1}\Theta_{q}(B)e_{t}\)</span>$<br>
+Thus, <span class="arithmatex">\(\Psi(B) = I + \sum_{j=1}^\infty \Psi_{j}B^j = \Phi_{p}(B)^{-1}\Theta_{q}(B)\)</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Note on Stationarity</p>
+<p>While the RHS above looks like a <abbr title="Vector Moving Average">VMA</abbr> (no <span class="arithmatex">\(Y_{t-i}\)</span> terms), it is a representation of the <abbr title="Vector Autoregressive Moving Average">VARMA</abbr>. For stationarity, we use the property <span class="arithmatex">\(\Phi(z)^{-1} = \det(\Phi(z))^{-1}\Phi^*(z)\)</span>, where <span class="arithmatex">\(\Phi^*(z) = \text{adj}(\Phi(z))\)</span>.<br>
+The process is stationary if <span class="arithmatex">\(\{\det(\Phi(z))^{-1}\}\)</span> is convergent for <span class="arithmatex">\(|z| \leq 1\)</span>.</p>
+</div>
+<hr>
+<h3 id="4-vector-moving-average-vma">4. Vector Moving Average (<abbr title="Vector Moving Average">VMA</abbr>)<a class="headerlink" href="#4-vector-moving-average-vma" title="Permanent link">¶</a></h3>
+<p>A <span class="arithmatex">\(VMA(q)\)</span> process:<br>
+$<span class="arithmatex">\(Y_{t} = \mu + e_{t} + \sum_{j=1}^q \Theta_{j}e_{t-j} = \mu + \Theta(B)e_{t}\)</span>$<br>
+Where <span class="arithmatex">\(\Theta(B) = I_{k} + \Theta_{1}B + \Theta_{2}B^{2} + \dots + \Theta_{q}B^q\)</span>.</p>
+<h4 id="vector-ma1-case">Vector MA(1) Case<a class="headerlink" href="#vector-ma1-case" title="Permanent link">¶</a></h4>
+<p>Assume <span class="arithmatex">\(\mu = 0\)</span>:<br>
+$<span class="arithmatex">\(Y_{t} = e_{t} + \Theta_{1}e_{t-1}\)</span>$<br>
+By recursive substitution, this can be viewed as an infinite autoregressive process (<span class="arithmatex">\(VAR(\infty)\)</span>):<br>
+$<span class="arithmatex">\(e_{t} = Y_{t} - \Theta_{1}e_{t-1} = Y_{t} - \Theta_{1}(Y_{t-1} - \Theta_{1}e_{t-2}) = \dots\)</span>$<br>
+$<span class="arithmatex">\(Y_{t} = \Theta_{1}Y_{t-1} - \Theta_{1}^{2}Y_{t-2} + \dots + e_{t}\)</span>$</p>
 <blockquote>
-<p>A process is stationary if we can represent this as a convergent vector moving average process of infinite order.</p>
+<p>This proves that an invertible Vector Moving Average process can be rewritten as a <span class="arithmatex">\(VAR(\infty)\)</span>.</p>
 </blockquote>
-<div class="arithmatex">\[
-Y_{t} = \mu + e_{t} + \sum_{j=1}^\infty \Psi_{j}e_{t-j} = \mu + \Phi(B)e_{t}
-\]</div>
-<p>By taking <span class="arithmatex">\(Y_{t}-\mu\)</span> on one side we get</p>
-<div class="arithmatex">\[
-Y_{t} - \mu = \Phi(B)e_{t} = \Phi_{p}(B)^{-1}\Theta_{q}(B)e_{t}
-\]</div>
-<p>And so,</p>
-<p>$$<br>
-\Phi(B) = 1 + \sum_{j=1}^\infty \Phi_{j}B^j = \Phi_{p}(B)^{-1}\Theta_{q}(B)<br>
-$$<br>
-- This is not V<strong>AR</strong>MA because it doesn't have any <span class="arithmatex">\(Y_{t-i}\)</span> terms on the RHS. It is just VMA.<br>
-- If we can write this as VMA, it is stationary.</p>
-<div class="arithmatex">\[
-\Phi(z)^{-1} = \det(\Phi(z))^{-1}\Phi^*(B)
-\]</div>
-<ul>
-<li>where <span class="arithmatex">\(\Phi^*(z) =\text{adj}(\Phi(z))\)</span></li>
-</ul>
-<p>Thus the process is</p>
-<div class="arithmatex">\[
-Y_{t} = \mu + \det(\Phi(B))^{-1} \Phi^*(B) \Theta_{q}(B)e_{t}
-\]</div>
-<p>The process is stationary if <span class="arithmatex">\(\{ \det(\Phi(z))^{-1} \}\)</span> is convergent for <span class="arithmatex">\(\lvert z \rvert \lt 1\)</span>.</p>
-<h3 id="vma-order-q">VMA (order <span class="arithmatex">\(q\)</span>)<a class="headerlink" href="#vma-order-q" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Y_{t} = \mu + e_{t} + \sum_{j=1}^q \Theta_{j}e_{t-j} = \mu + \Theta(B)e_{t}
-\]</div>
-<p>where</p>
-<div class="arithmatex">\[
-\Theta(B) = I_{k} + \Theta_{1}B + \Theta_{2}B^{2} + \dots + \Theta_{q}B^q
-\]</div>
-<h3 id="vector-ma1">Vector MA(1)<a class="headerlink" href="#vector-ma1" title="Permanent link">¶</a></h3>
-<p>Assume, <span class="arithmatex">\(\mu = 0\)</span></p>
-<div class="arithmatex">\[
-Y_{t} = e_{t} + \Theta_{1}e_{t-1}
-\]</div>
-<p>By recursive substitution,</p>
-<div class="arithmatex">\[
-\Theta_{1}Y_{t-1} + \Theta_{1}^{2}Y_{t-2} + \dots + e_{t} \equiv VAR(\infty)
-\]</div>
-<blockquote>
-<p>A Vector Infinite autoregressive process can be rewritten as VMA(1)</p>
-</blockquote>
-<h3 id="autocovariance-matrix-of-a-process">Autocovariance Matrix of a Process<a class="headerlink" href="#autocovariance-matrix-of-a-process" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-\Gamma(l) = E(Y_{t}Y_{t+l})
-\]</div>
+<hr>
+<h3 id="5-autocovariance-matrix-of-a-process">5. Autocovariance Matrix of a Process<a class="headerlink" href="#5-autocovariance-matrix-of-a-process" title="Permanent link">¶</a></h3>
+<p>In a multivariate context, the autocovariance is a matrix that captures dependencies across all constituent series at lag <span class="arithmatex">\(l\)</span>:<br>
+$<span class="arithmatex">\(\Gamma(l) = E[(Y_{t}-\mu)(Y_{t+l}-\mu)']\)</span>$</p>
+<hr>
 
 
 

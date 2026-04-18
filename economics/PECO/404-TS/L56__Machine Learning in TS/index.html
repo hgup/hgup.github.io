@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10894,10 +10894,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#classical-machine-learning-models" class="md-nav__link">
+  <a href="#1-classical-machine-learning-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Classical Machine Learning Models
+        1. Classical Machine Learning Models
       
     </span>
   </a>
@@ -10905,10 +10905,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#neural-networks" class="md-nav__link">
+  <a href="#2-neural-networks-deep-learning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Neural Networks
+        2. Neural Networks (Deep Learning)
       
     </span>
   </a>
@@ -10916,10 +10916,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#probabilistic-bayesian-models" class="md-nav__link">
+  <a href="#3-probabilistic-bayesian-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Probabilistic &amp; Bayesian Models
+        3. Probabilistic &amp; Bayesian Models
       
     </span>
   </a>
@@ -10927,10 +10927,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#specialized-models-for-ts" class="md-nav__link">
+  <a href="#4-specialized-models-for-ts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Specialized Models for TS
+        4. Specialized Models for TS
       
     </span>
   </a>
@@ -10938,10 +10938,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ensemble-learning" class="md-nav__link">
+  <a href="#5-ensemble-learning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ensemble Learning
+        5. Ensemble Learning
       
     </span>
   </a>
@@ -10971,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12790,101 +12790,80 @@
 
 <!-- Markdown content -->
 <h1 id="machine-learning-in-ts">Machine Learning in <abbr title="Time Series">TS</abbr><a class="headerlink" href="#machine-learning-in-ts" title="Permanent link">¶</a></h1>
+<p>Machine Learning (ML) serves as an extension of traditional time series analysis, offering flexibility and the ability to capture complex patterns that linear models often miss.</p>
+<div class="admonition warning">
+<p class="admonition-title">Black-Box Models</p>
+<p>ML often relates to <strong>black-box models</strong>. We don't always know exactly what goes into the decision-making process inside the model, unlike the explicit coefficients in an ARIMA or GARCH model.</p>
+</div>
+<h3 id="1-classical-machine-learning-models">1. Classical Machine Learning Models<a class="headerlink" href="#1-classical-machine-learning-models" title="Permanent link">¶</a></h3>
+<p>These models rely on <strong>structured feature engineering</strong> to transform the sequential nature of <abbr title="Time Series">TS</abbr> into a tabular format suitable for standard algorithms.</p>
 <ul>
-<li>Why use it in <abbr title="Time Series">TS</abbr>?<ul>
-<li>flexibility</li>
-<li>ability to capture complex patterns</li>
+<li><strong>Linear Regression</strong>: The basic benchmark for trend analysis.</li>
+<li><strong>Support Vector Machines (SVMs)</strong>: Useful for both <abbr title="Time Series">TS</abbr> classification and regression tasks, especially with non-linear relationships.</li>
+<li><strong>Random Forests and Gradient Boosting</strong>: Tree-based ensembles that excel at handling non-linearities and interactions between lagged variables.</li>
 </ul>
-</li>
-<li>Choose between models, each with its own strengths and weakness</li>
-</ul>
-<blockquote>
-<p>ML relates to black-box models. So, we don't know what exactly goes into it.</p>
-</blockquote>
-<h3 id="classical-machine-learning-models">Classical Machine Learning Models<a class="headerlink" href="#classical-machine-learning-models" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="2-neural-networks-deep-learning">2. Neural Networks (Deep Learning)<a class="headerlink" href="#2-neural-networks-deep-learning" title="Permanent link">¶</a></h3>
+<h4 id="recurrent-neural-networks-rnns">Recurrent Neural Networks (RNNs)<a class="headerlink" href="#recurrent-neural-networks-rnns" title="Permanent link">¶</a></h4>
 <ul>
-<li>Linear Regression</li>
-<li>Support Vector Machines (SVMs)<ul>
-<li><abbr title="Time Series">TS</abbr> classification and regression tasks</li>
-<li>non-linear relationships</li>
-</ul>
+<li>
+<p><strong>LSTMs (Long Short-Term Memory)</strong>: Designed to handle long-term dependencies in sequential data, overcoming the "vanishing gradient" problem.</p>
 </li>
-<li>Random Forests and Gradient Boosting</li>
-</ul>
-<h3 id="neural-networks">Neural Networks<a class="headerlink" href="#neural-networks" title="Permanent link">¶</a></h3>
-<p>Deep learning model</p>
-<ol>
-<li>Recurrent Neural Networks (RNNs)<ul>
-<li>LSTMs (Long Short-Term Memory)<ul>
-<li>Long-term dependencies in sequential data</li>
-</ul>
-</li>
-<li>GRUs (Gated Recurrent Units)<ul>
-<li>simpler alternative with comparable performance</li>
-</ul>
+<li>
+<p><strong>GRUs (Gated Recurrent Units)</strong>: A simpler alternative to LSTMs with comparable performance and fewer parameters.</p>
 </li>
 </ul>
-</li>
-<li>Convolutional Neural networks (CNNs)<ul>
-<li>Useful for extracting local patterns (small batches) from <abbr title="Time Series">TS</abbr>, in combination with RNNs</li>
-<li><strong>Transformers</strong><ul>
-<li><strong>Attention Mechanism</strong> (effective for long sequence modelling)</li>
-<li><strong>Time Series Transformers</strong> (TST) (adaptations of transformer architecture for <abbr title="Time Series">TS</abbr> forecasting &amp; classification)</li>
-</ul>
-</li>
-<li><strong>Autoencoders</strong>: anomaly detection and feature extraction in <abbr title="Time Series">TS</abbr></li>
-</ul>
-</li>
-<li>Hybrid Models<ul>
-<li>Combine a traditional statistical models/machine learning techniques with Neural networks</li>
-<li>ARIMA + Neural networks<ul>
-<li>ARIMA for mean relationship</li>
-<li><abbr title="Neural Networks">NN</abbr> to capture residual patterns</li>
-</ul>
-</li>
-<li>CNN-RNN Hybrids<ul>
-<li>Use CNNs to extract the features from input</li>
-<li>RNNs for temporal (<abbr title="Time Series">TS</abbr>) modelling</li>
-</ul>
-</li>
-<li>DeepAR<ul>
-<li>Probabilistic forecasting model developed by Amazon using RNNs</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="probabilistic-bayesian-models">Probabilistic &amp; Bayesian Models<a class="headerlink" href="#probabilistic-bayesian-models" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>Provide uncertainty estimates in forecasts</p>
-</blockquote>
+<h4 id="specialized-architectures">Specialized Architectures<a class="headerlink" href="#specialized-architectures" title="Permanent link">¶</a></h4>
 <ul>
-<li>Gaussian Process<ul>
-<li>non-parametric models for smaller datasets</li>
-</ul>
-</li>
-<li>Bayesian Structural Time Series<ul>
-<li>Useful for modelling trends, seasonality and causal inference</li>
-</ul>
-</li>
-</ul>
-<h3 id="specialized-models-for-ts">Specialized Models for <abbr title="Time Series">TS</abbr><a class="headerlink" href="#specialized-models-for-ts" title="Permanent link">¶</a></h3>
+<li><strong>Convolutional Neural Networks (CNNs)</strong>: Useful for extracting <strong>local patterns</strong> from small batches of <abbr title="Time Series">TS</abbr> data, often used in combination with RNNs.</li>
+<li>
+<p><strong>Transformers</strong>:</p>
 <ul>
-<li>Facebook Prophet → designed for business forecasting, <em>seasonality, holidays and trends</em> are handled</li>
-<li><abbr title="Neural Basis Expansion Analysis for Interpretable Forecasting">N-BEATS</abbr><ul>
+<li>
+<p><strong>Attention Mechanism</strong>: Highly effective for long sequence modelling, allowing the model to "focus" on relevant past time steps.</p>
+</li>
+<li>
+<p><strong>Time Series Transformers (TST)</strong>: Specific adaptations of the transformer architecture for <abbr title="Time Series">TS</abbr> forecasting and classification.</p>
+</li>
+<li><strong>Autoencoders</strong>: Primarily used for anomaly detection and feature extraction by learning a compressed representation of the series.</li>
+</ul>
+</li>
+</ul>
+<h4 id="hybrid-models">Hybrid Models<a class="headerlink" href="#hybrid-models" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>ARIMA + Neural Networks</strong>: ARIMA models the linear mean relationship, while the <abbr title="Neural Networks">NN</abbr> captures the complex residual patterns.</li>
+<li><strong>CNN-RNN Hybrids</strong>: CNNs extract features from the input, while RNNs handle the temporal (<abbr title="Time Series">TS</abbr>) modelling.</li>
+<li><strong>DeepAR</strong>: A probabilistic forecasting model developed by Amazon that uses RNNs to predict value distributions.</li>
+</ul>
+<hr>
+<h3 id="3-probabilistic-bayesian-models">3. Probabilistic &amp; Bayesian Models<a class="headerlink" href="#3-probabilistic-bayesian-models" title="Permanent link">¶</a></h3>
+<p>These are essential because they provide <strong>uncertainty estimates</strong> in forecasts.</p>
+<ul>
+<li><strong>Gaussian Process</strong>: Non-parametric models effective for smaller datasets.</li>
+<li><strong>Bayesian Structural Time Series</strong>: Useful for modelling trends, seasonality, and conducting causal inference.</li>
+</ul>
+<hr>
+<h3 id="4-specialized-models-for-ts">4. Specialized Models for <abbr title="Time Series">TS</abbr><a class="headerlink" href="#4-specialized-models-for-ts" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Facebook Prophet</strong>: Designed specifically for business forecasting; handles <strong>seasonality, holidays, and trends</strong> automatically.</li>
+<li>
+<p><strong><abbr title="**N**eural **B**asis **E**xpansion *for* interpre**T**able foreca**S**ting">N-BEATS</abbr></strong>:</p>
+<ul>
 <li><strong>N</strong>eural <strong>B</strong>asis <strong>E</strong>xpansion <em>for</em> interpre<strong>T</strong>able foreca<strong>S</strong>ting.</li>
+<li>Decomposes the signal into interpretable components like trend and seasonality blocks.</li>
 </ul>
 </li>
-<li><abbr title="Temporal Fusion Trasnform">TFT</abbr> → combine attention mechanism with interpretable forecasting</li>
+<li>
+<p><strong><abbr title="Temporal Fusion Transformer">TFT</abbr> (Temporal Fusion Transformer)</strong>: Combines the attention mechanism with features that provide interpretable forecasting results.</p>
+</li>
 </ul>
-<h3 id="ensemble-learning">Ensemble Learning<a class="headerlink" href="#ensemble-learning" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="5-ensemble-learning">5. Ensemble Learning<a class="headerlink" href="#5-ensemble-learning" title="Permanent link">¶</a></h3>
 <ul>
-<li>Bagging and boosting: aggregating prediction from multiple models</li>
-<li>Stacking: layering models. predictions of one serve as input to another</li>
+<li><strong>Bagging and Boosting</strong>: Aggregating predictions from multiple models to reduce variance or bias.</li>
+<li><strong>Stacking</strong>: Layering models where the predictions of one model serve as input to another (the meta-model).</li>
 </ul>
-<blockquote>
-<p>Classical ML models rely on <strong>structured feature engineering</strong> to transform sequential nature of <abbr title="Time Series">TS</abbr> into tabular format, suitable for algorithms.</p>
-</blockquote>
+<hr>
 
 
 
@@ -12937,13 +12916,13 @@
         
         
           
-          <a href="../L57__Linear%20Regression%20for%20TS/" class="md-footer__link md-footer__link--next" aria-label="Next: Linear Regression in TS">
+          <a href="../L57__Linear%20Regression%20for%20TS/" class="md-footer__link md-footer__link--next" aria-label="Next: Linear Regression &amp;amp; Classical ML in TS">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Linear Regression in TS
+                Linear Regression &amp; Classical ML in TS
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9410,10 +9410,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#forecasting" class="md-nav__link">
+  <a href="#1-arma-model-forecasting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Forecasting
+        1. ARMA Model Forecasting
       
     </span>
   </a>
@@ -9421,21 +9421,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arma-model-forecasting" class="md-nav__link">
+  <a href="#2-forecast-error-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ARMA Model forecasting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forecast-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Forecast Error
+        2. Forecast Error Analysis
       
     </span>
   </a>
@@ -9861,7 +9850,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10949,7 +10938,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12768,74 +12757,54 @@
 
 <!-- Markdown content -->
 <h1 id="forecasting-basics">Forecasting Basics<a class="headerlink" href="#forecasting-basics" title="Permanent link">¶</a></h1>
-<h3 id="forecasting">Forecasting<a class="headerlink" href="#forecasting" title="Permanent link">¶</a></h3>
-<p>There is a subtle difference between the three:</p>
+<p>In time series analysis, there is a crucial distinction between estimation, prediction, and forecasting:</p>
 <ul>
-<li><strong>Estimation</strong>: Unknown parameters. <em>eg. Estimating <span class="arithmatex">\(\phi_{1}\)</span></em></li>
-<li><strong>Prediction</strong>: Value of random process, using estimated value of parameters. <span class="arithmatex">\(Y_{t} = c + \phi_{1}y_{t} +e_{t}\)</span> (replacing the model params with estimated ones)</li>
-<li><strong>Forecasting</strong>: Value of any future random process, which is not observed by sample. Using the fitted model (with estimated parameters) to predict something in the future (outside the sample).</li>
+<li><strong>Estimation</strong>: Focuses on finding unknown model parameters (e.g., estimating <span class="arithmatex">\(\hat{\phi}_{1}\)</span> from data).</li>
+<li><strong>Prediction</strong>: Calculating the value of a random process within the sample period using estimated parameters (e.g., <span class="arithmatex">\(\hat{Y}_{t} = c + \hat{\phi}_{1}y_{t-1} + e_{t}\)</span>).</li>
+<li><strong>Forecasting</strong>: Determining the value of a future random process that has not yet been observed in the sample. This uses the fitted model to project values outside the sample period.</li>
 </ul>
-<p><span class="arithmatex">\(Y_{t} = \phi Y_{t-1} + a_{t}\)</span> → Estimation of <span class="arithmatex">\(\hat{\phi}\)</span> → Prediction off <span class="arithmatex">\(\hat{Y}_{t} = \hat{\phi}Y_{t-1}\)</span>  → Forecasting of <span class="arithmatex">\(\hat{Y}_{t+1}\)</span></p>
-<h3 id="arma-model-forecasting">ARMA Model forecasting<a class="headerlink" href="#arma-model-forecasting" title="Permanent link">¶</a></h3>
-<h4 id="minimum-mean-squared-error-forecasts">Minimum Mean Squared Error Forecasts<a class="headerlink" href="#minimum-mean-squared-error-forecasts" title="Permanent link">¶</a></h4>
-<ul>
-<li>Using the observed time series <span class="arithmatex">\(y_{1},y_{2},\dots,y_{n}\)</span> forecasting unobserved values <span class="arithmatex">\(y_{n+1}, y_{n+2},\dots\)</span></li>
-<li><span class="arithmatex">\(n\)</span> is the forecast origin</li>
-<li><span class="arithmatex">\(\hat{Y}_{n}(l)\)</span>: forecast value of <span class="arithmatex">\(Y_{n+l}\)</span>  = <span class="arithmatex">\(l\)</span>-step ahead forecast, obtained using the <em>minimum MSE criteria</em>.</li>
-</ul>
-<div class="arithmatex">\[
-\hat{Y}_{n}(l) = E(Y_{n+l}| Y_{n},Y_{n-1},\dots,Y_{1})
-\]</div>
-<p>is a conditional expectation given the known data.</p>
 <blockquote>
-<p><span class="arithmatex">\(a_{t}\)</span> is the same as <span class="arithmatex">\(e_{t}\)</span> in the previous lectures (the errors) as we will use <span class="arithmatex">\(e_{t}\)</span> to denote something else.</p>
+<p><strong>Workflow Example</strong>:<br>
+<span class="arithmatex">\(Y_{t} = \phi Y_{t-1} + a_{t}\)</span> <span class="arithmatex">\(\rightarrow\)</span> <strong>Estimation</strong> of <span class="arithmatex">\(\hat{\phi}\)</span> <span class="arithmatex">\(\rightarrow\)</span> <strong>Prediction</strong> of <span class="arithmatex">\(\hat{Y}_{t} = \hat{\phi}Y_{t-1}\)</span> <span class="arithmatex">\(\rightarrow\)</span> <strong>Forecasting</strong> of <span class="arithmatex">\(\hat{Y}_{n+1}\)</span>.</p>
 </blockquote>
-<div class="arithmatex">\[
-\phi_{p}(B) Y_{t} = \theta_{0} + \theta_{q}(B)a_{t}
-\]</div>
-<ul>
-<li>This is rewritten as polynomials of coefficients</li>
-</ul>
-<p>Considering the random shock form (by cross multiplying the <span class="arithmatex">\(\phi_{p}(B)\)</span>) </p>
-<div class="arithmatex">\[
-Y_{n+l} =  \theta_{0} + \dfrac{\theta_{q}(B)}{\phi_{p}(B)}a_{t} = \theta_{0} + \psi(B)a_{t}
-\]</div>
-<p>where</p>
-<div class="arithmatex">\[
-E(a_{n+j}|Y_{n},\dots,Y_{1}) = \begin{cases}
-0, &amp; j \gt 0 \\
-a_{n+j}, &amp; j \leq 0
-\end{cases}
-\]</div>
-<ul>
-<li>We already know the <span class="arithmatex">\(a_{n+j}\)</span> errors for <span class="arithmatex">\(j\leq 0\)</span> but we don't know the future errors, so their expected value would be <span class="arithmatex">\(0\)</span>.</li>
-</ul>
-<h3 id="forecast-error">Forecast Error<a class="headerlink" href="#forecast-error" title="Permanent link">¶</a></h3>
-<p>Please #verify this on your own</p>
-<div class="arithmatex">\[
-e_{n}(l) = Y_{n+l} - \hat{Y}_{n}(l) = \sum_{i=0}^{l-1} \psi_{i}a_{n+l-i}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(E(e_{n}(l)) = 0\)</span> for <span class="arithmatex">\(l \gt 0\)</span></li>
-</ul>
+<hr>
+<h3 id="1-arma-model-forecasting">1. ARMA Model Forecasting<a class="headerlink" href="#1-arma-model-forecasting" title="Permanent link">¶</a></h3>
+<h4 id="minimum-mean-squared-error-mse-forecasts">Minimum Mean Squared Error (<abbr title="Mean Squared Error">MSE</abbr>) Forecasts<a class="headerlink" href="#minimum-mean-squared-error-mse-forecasts" title="Permanent link">¶</a></h4>
+<p>We use observed data <span class="arithmatex">\(\{y_{1}, y_{2}, \dots, y_{n}\}\)</span> to forecast unobserved values <span class="arithmatex">\(\{y_{n+1}, y_{n+2}, \dots\}\)</span>.<br>
+* <strong>Forecast Origin (<span class="arithmatex">\(n\)</span>)</strong>: The last observed time point.<br>
+* <strong><span class="arithmatex">\(l\)</span>-step Ahead Forecast (<span class="arithmatex">\(\hat{Y}_{n}(l)\)</span>)</strong>: The forecast for time <span class="arithmatex">\(n+l\)</span> obtained using the minimum <abbr title="Mean Squared Error">MSE</abbr> criteria.<br>
+* <strong>Conditional Expectation</strong>: The forecast is calculated as the expected value of the future point given the known history:<br>
+    $<span class="arithmatex">\(\hat{Y}_{n}(l) = E(Y_{n+l} \mid Y_{n}, Y_{n-1}, \dots, Y_{1})\)</span>$</p>
+<div class="admonition note">
+<p class="admonition-title">Notation Change</p>
+<p>In these derivations, we use <span class="arithmatex">\(a_{t}\)</span> to represent random shocks (errors) to distinguish them from the forecast error, which is denoted by <span class="arithmatex">\(e_{t}\)</span>.</p>
+</div>
+<h4 id="random-shock-form">Random Shock Form<a class="headerlink" href="#random-shock-form" title="Permanent link">¶</a></h4>
+<p>By expressing the ARMA model in its random shock form (using the backshift operator polynomials), we can write the future value as:<br>
+$<span class="arithmatex">\(Y_{n+l} = \theta_{0} + \psi(B)a_{t}\)</span>$</p>
+<p>When taking the expectation of errors (<span class="arithmatex">\(a_{n+j}\)</span>), the following rules apply:<br>
+* <strong><span class="arithmatex">\(j \leq 0\)</span></strong>: The error is known (<span class="arithmatex">\(a_{n+j}\)</span>), as it occurred in the past or present.<br>
+* <strong><span class="arithmatex">\(j &gt; 0\)</span></strong>: The error is a future shock; its expected value is <span class="arithmatex">\(0\)</span>.</p>
+<hr>
+<h3 id="2-forecast-error-analysis">2. Forecast Error Analysis<a class="headerlink" href="#2-forecast-error-analysis" title="Permanent link">¶</a></h3>
+<p>The forecast error <span class="arithmatex">\(e_{n}(l)\)</span> is the difference between the actual future value and our forecast:<br>
+$<span class="arithmatex">\(e_{n}(l) = Y_{n+l} - \hat{Y}_{n}(l) = \sum_{i=0}^{l-1} \psi_{i}a_{n+l-i}\)</span>$<br>
+For any lead time <span class="arithmatex">\(l &gt; 0\)</span>, the expected forecast error <span class="arithmatex">\(E(e_{n}(l))\)</span> is <span class="arithmatex">\(0\)</span>.</p>
 <h4 id="1-step-ahead-forecast">1-step Ahead Forecast<a class="headerlink" href="#1-step-ahead-forecast" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-\begin{align}
-Y_{n+1}  &amp; = \theta_{0} + a_{n+1} + \psi_{1}a_{n} + \psi_{2}a_{n-1} + \dots \\
-\hat{Y}_{n}(1)  &amp; = \theta_{0} + \psi_{1}a_{n} + \psi_{2}a_{n-1} + \dots \\
-e_{n}(1)  &amp; = Y_{n+1} - \hat{Y}_{n}(1) = a_{n+1} \\
-V(e_{n}(1)) &amp; = \sigma^{2}_{a}
-\end{align}
-\]</div>
+<ul>
+<li><strong>Actual</strong>: <span class="arithmatex">\(Y_{n+1} = \theta_{0} + a_{n+1} + \psi_{1}a_{n} + \psi_{2}a_{n-1} + \dots\)</span></li>
+<li><strong>Forecast</strong>: <span class="arithmatex">\(\hat{Y}_{n}(1) = \theta_{0} + \psi_{1}a_{n} + \psi_{2}a_{n-1} + \dots\)</span></li>
+<li><strong>Error</strong>: <span class="arithmatex">\(e_{n}(1) = Y_{n+1} - \hat{Y}_{n}(1) = a_{n+1}\)</span></li>
+<li><strong>Error Variance</strong>: <span class="arithmatex">\(V(e_{n}(1)) = \sigma^{2}_{a}\)</span></li>
+</ul>
 <h4 id="2-step-ahead-forecast">2-step Ahead Forecast<a class="headerlink" href="#2-step-ahead-forecast" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-\begin{align}
-Y_{n+2}  &amp; = \theta_{0} + a_{n+2} + \psi_{1}a_{n+1} + \psi_{2}a_{n} + \dots \\
-\hat{Y}_{n}(2)  &amp; = \theta_{0} + \psi_{2}a_{n} + \psi_{3}a_{n-1} + \dots \\
-e_{n}(1)  &amp; = Y_{n+1} - \hat{Y}_{n}(1) = a_{n+1} \\
-V(e_{n}(1)) &amp; = \sigma^{2}_{a}
-\end{align}
-\]</div>
+<ul>
+<li><strong>Actual</strong>: <span class="arithmatex">\(Y_{n+2} = \theta_{0} + a_{n+2} + \psi_{1}a_{n+1} + \psi_{2}a_{n} + \dots\)</span></li>
+<li><strong>Forecast</strong>: <span class="arithmatex">\(\hat{Y}_{n}(2) = \theta_{0} + \psi_{2}a_{n} + \psi_{3}a_{n-1} + \dots\)</span></li>
+<li><strong>Error</strong>: <span class="arithmatex">\(e_{n}(2) = Y_{n+2} - \hat{Y}_{n}(2) = a_{n+2} + \psi_{1}a_{n+1}\)</span></li>
+<li><strong>Error Variance</strong>: <span class="arithmatex">\(V(e_{n}(2)) = \sigma^{2}_{a}(1 + \psi_{1}^{2})\)</span></li>
+</ul>
+<hr>
 
 
 
@@ -12871,7 +12840,7 @@ V(e_{n}(1)) &amp; = \sigma^{2}_{a}
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L19__Diagnostic%20Checking%20-%202/" class="md-footer__link md-footer__link--prev" aria-label="Previous: L19  Diagnostic Checking   2">
+          <a href="../L19__Diagnostic%20Checking%20-%202/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Detecting Heteroscedasticity">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12881,7 +12850,7 @@ V(e_{n}(1)) &amp; = \sigma^{2}_{a}
                 Previous
               </span>
               <div class="md-ellipsis">
-                L19  Diagnostic Checking   2
+                Detecting Heteroscedasticity
               </div>
             </div>
           </a>

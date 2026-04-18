@@ -24,7 +24,7 @@
     
     
       
-        <title>Weak Vs Strong Stationarity - Hursh Gupta</title>
+        <title>Weak vs. Strong Stationarity - Hursh Gupta</title>
       
     
     
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Weak Vs Strong Stationarity
+              Weak vs. Strong Stationarity
             
           </span>
         </div>
@@ -8537,7 +8537,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8565,7 +8565,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8602,7 +8602,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8620,7 +8620,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8646,10 +8646,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#strong-vs-weak-stationary" class="md-nav__link">
+  <a href="#1-weak-covariance-stationarity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Strong Vs Weak Stationary
+        1. Weak (Covariance) Stationarity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-examples-of-stationarity-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Examples of Stationarity Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-comparing-strong-and-weak-stationarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Comparing Strong and Weak Stationarity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-non-stationarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Non-stationarity
       
     </span>
   </a>
@@ -8779,7 +8812,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8807,7 +8840,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8863,7 +8896,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8991,7 +9024,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -9019,7 +9052,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -9047,7 +9080,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9287,7 +9320,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9839,7 +9872,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10927,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12745,100 +12778,77 @@
 
 
 <!-- Markdown content -->
-<h1 id="weak-vs-strong-stationarity">Weak Vs Strong Stationarity<a class="headerlink" href="#weak-vs-strong-stationarity" title="Permanent link">¶</a></h1>
-<ul>
-<li>Weak (Covariance) stationarity</li>
-<li>Stationarity in a wide sense</li>
-</ul>
+<h1 id="weak-vs-strong-stationarity">Weak vs. Strong Stationarity<a class="headerlink" href="#weak-vs-strong-stationarity" title="Permanent link">¶</a></h1>
+<h3 id="1-weak-covariance-stationarity">1. Weak (Covariance) Stationarity<a class="headerlink" href="#1-weak-covariance-stationarity" title="Permanent link">¶</a></h3>
+<p>Weak stationarity, also known as <strong>stationarity in a wide sense</strong>, is the most practical assumption in time series analysis. It focuses on the first two moments (mean and variance) rather than the entire distribution.</p>
+<p><strong>Core Requirements:</strong><br>
+A process is weakly stationary if its first and second moments are unaffected by a change of time origin. Specifically:<br>
+* <strong>Constant Mean:</strong> <span class="arithmatex">\(E(Y_{t}) = \mu\)</span> for all <span class="arithmatex">\(t\)</span>.<br>
+* <strong>Constant Variance:</strong> <span class="arithmatex">\(Var(Y_{t}) = \sigma^{2} &lt; \infty\)</span> for all <span class="arithmatex">\(t\)</span>.<br>
+* <strong>Lag-Dependent Covariance:</strong> <span class="arithmatex">\(Cov(Y_{t}, Y_{t+k}) = \gamma_{k}\)</span> for all <span class="arithmatex">\(t\)</span>. The covariance must depend only on the lag <span class="arithmatex">\(k\)</span> and be completely free from the specific time point <span class="arithmatex">\(t\)</span>.<br>
+* <strong>Lag-Dependent Correlation:</strong> <span class="arithmatex">\(Corr(Y_{t}, Y_{t+k}) = \rho_{k}\)</span> for all <span class="arithmatex">\(t\)</span>.</p>
 <blockquote>
-<p>If its first and second moments are unaffected by a change of time origin.</p>
+<p><strong>Note:</strong> When a researcher says, "I am analyzing a stationary time series," they are almost always referring to a <strong>weakly stationary</strong> series.</p>
 </blockquote>
+<hr>
+<h3 id="2-examples-of-stationarity-testing">2. Examples of Stationarity Testing<a class="headerlink" href="#2-examples-of-stationarity-testing" title="Permanent link">¶</a></h3>
+<p><strong>Example 2: White Noise Process</strong><br>
+Let <span class="arithmatex">\(Y_{t} = e_{t}\)</span>, where <span class="arithmatex">\(e_{t} \sim \text{IID}(0, \sigma^{2})\)</span>.<br>
+* <span class="arithmatex">\(E(Y_{t}) = E(e_{t}) = 0\)</span> (Constant)<br>
+* <span class="arithmatex">\(Var(Y_{t}) = Var(e_{t}) = \sigma^{2}\)</span> (Constant)<br>
+* <span class="arithmatex">\(Cov(e_{t}, e_{t+k}) = 0\)</span> for <span class="arithmatex">\(k \neq 0\)</span> due to the <abbr title="Independent and Identically Distributed.">IID</abbr> property.<br>
+* <strong>Result:</strong> <span class="arithmatex">\(Y_{t} = e_{t}\)</span> is <strong>stationary</strong>.</p>
+<p><strong>Example 3: Moving Average Process</strong><br>
+Let <span class="arithmatex">\(Y_{t} = e_{t} + 0.5 e_{t-1}\)</span>, where <span class="arithmatex">\(e_{t} \sim \text{IID}(0, \sigma^{2})\)</span>.<br>
+* <span class="arithmatex">\(E(Y_{t}) = E(e_{t}) + 0.5 E(e_{t-1}) = 0\)</span><br>
+* <span class="arithmatex">\(Var(Y_{t}) = Var(e_{t}) + 0.25 Var(e_{t-1}) + 2 Cov(e_{t}, 0.5e_{t-1}) = \sigma^{2} + 0.25\sigma^{2} + 0 = 1.25\sigma^{2}\)</span>.<br>
+* The variance is finite and free from <span class="arithmatex">\(t\)</span>. <br>
+* <strong>Result:</strong> This process is <strong>stationary</strong> (as the covariance <span class="arithmatex">\(Cov(Y_t, Y_{t+k})\)</span> will also be independent of <span class="arithmatex">\(t\)</span>).</p>
+<p><strong>Example 4: Random Walk</strong><br>
+Let <span class="arithmatex">\(Y_{t} = e_{1} + e_{2} + \dots + e_{t}\)</span>.<br>
+* <span class="arithmatex">\(E(Y_{t}) = 0\)</span>.<br>
+* <span class="arithmatex">\(Var(Y_{t}) = t\sigma^{2}\)</span>.<br>
+* <strong>Result:</strong> Since the variance is <strong>time-dependent</strong>, <span class="arithmatex">\(Y_{t}\)</span> is <strong>not stationary</strong>.</p>
+<p><strong>Example 5: Deterministic Trend</strong><br>
+Let <span class="arithmatex">\(Y_{t} = a + bt + e_{t}\)</span>.<br>
+* <span class="arithmatex">\(E(Y_{t}) = E(a + bt + e_{t}) = a + bt\)</span>.<br>
+* <strong>Result:</strong> Since the mean is <strong>time-dependent</strong>, <span class="arithmatex">\(Y_{t}\)</span> is <strong>not stationary</strong>.</p>
+<hr>
+<h3 id="3-comparing-strong-and-weak-stationarity">3. Comparing Strong and Weak Stationarity<a class="headerlink" href="#3-comparing-strong-and-weak-stationarity" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Strict (Strong) Stationarity</th>
+<th style="text-align: left;">Weak (Covariance) Stationarity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Requirement</strong></td>
+<td style="text-align: left;">Joint Distribution is time-invariant.</td>
+<td style="text-align: left;">First two moments are time-invariant.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Focus</strong></td>
+<td style="text-align: left;">Distributional sense.</td>
+<td style="text-align: left;">Moment sense.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="key-relationships">Key Relationships:<a class="headerlink" href="#key-relationships" title="Permanent link">¶</a></h4>
 <ul>
-<li>We are not putting any assumption in a distribution sense.</li>
+<li><strong>Strong <span class="arithmatex">\(\not\implies\)</span> Weak:</strong> A process can be strictly stationary but not weakly stationary. For example, an <strong><abbr title="Independent and Identically Distributed.">IID</abbr> Cauchy process</strong> is strictly stationary, but because its <em>mean and variance are undefined</em> (do not exist), it cannot be weakly stationary.</li>
+<li><strong>Functions of Processes:</strong> A nonlinear function of a strictly stationary variable is still strictly stationary. However, it may not be weakly stationary; if <span class="arithmatex">\(Y_{t}\)</span> is strictly stationary, <span class="arithmatex">\(Y_{t}^{2}\)</span> is also strictly stationary, but its variance may not exist.</li>
+<li><strong>Weak <span class="arithmatex">\(\implies\)</span> Strong (The Gaussian Exception):</strong> For a <strong>Gaussian Time Series</strong>, weak stationarity <em>does</em> imply strong stationarity. This is because a multivariate normal distribution is completely characterized by its first two moments.</li>
 </ul>
-<div class="arithmatex">\[
-Cov(Y_{t},Y_{t+k}) = \gamma_{t,t+k} \simeq Y_{k}
-\]</div>
-<p>Should only depend on the lag, <span class="arithmatex">\(k\)</span>. Should be completely free from <span class="arithmatex">\(t\)</span></p>
-<ul>
-<li><span class="arithmatex">\(E(Y_{t}) = \mu, \forall t\)</span></li>
-<li><span class="arithmatex">\(Var(Y_{t}) = \sigma^{2} \lt \infty, \forall t\)</span></li>
-<li><span class="arithmatex">\(Cov(Y_{t},Y_{t+k}) = \gamma_{k}, \forall t\)</span></li>
-<li><span class="arithmatex">\(Corr(Y_{t},Y_{t+k}) = \rho_{k}, \forall t\)</span></li>
-</ul>
-<blockquote>
-<p>When one says, "I am analyzing a stationary time series" they are actually referring to a weak stationary series.</p>
-</blockquote>
-<h4 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-Y_{t} = e_{t}
-\]</div>
-<p><span class="arithmatex">\(e_{t} \sim i.i.d(0,\sigma^{2})\)</span> , which is the error.</p>
-<ol>
-<li><span class="arithmatex">\(E(Y_{t})= E(e_{t}) = 0\)</span></li>
-<li><span class="arithmatex">\(Var(Y_{t})= Var(e_{t}) =\sigma^{2}\)</span></li>
-<li><span class="arithmatex">\(Cov(e_{t},e_{t+k}) = 0\)</span>, <span class="arithmatex">\(k \neq 0\)</span> since <abbr title="Independent and Identically Distributed.">IID</abbr></li>
-</ol>
-<p>So, <span class="arithmatex">\(Y_{t} = e_{t}\)</span> is indeed stationary.</p>
-<h4 id="example-3">Example 3<a class="headerlink" href="#example-3" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-Y_{t} = e_{t} + 0.5 e_{t-1}
-\]</div>
-<p><span class="arithmatex">\(e_{t} \sim i.i.d(0,\sigma^{2})\)</span> , which is the error. Is the process stationary?</p>
-<ol>
-<li><span class="arithmatex">\(E(Y_t) = E(e_{t}) + 0.5 E(E_{t-1}) = 0\)</span></li>
-<li><span class="arithmatex">\(Var(Y_t) = Var(e_{t}) + 0.25 Var(E_{t-1}) + 2 Cov(e_{t, 0.5e_{t-1}}) = 0\)</span>  which gives <span class="arithmatex">\(\sigma^{2} + 0.25 \sigma^{2} + 0 = 1.25 \sigma^{2}\)</span> which is free from <span class="arithmatex">\(t\)</span>.</li>
-<li><span class="arithmatex">\(Cov(e_{t} + 0.5e_{t-1}, e_{t+k} + 0.5e_{t+k-1})\)</span>… is?</li>
-</ol>
-<h4 id="example-4">Example 4<a class="headerlink" href="#example-4" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-Y_{t} = e_{1} + e_{2} + e_{3} + \dots + e_{t}
-\]</div>
-<ol>
-<li><span class="arithmatex">\(E(Y_{t}) = 0\)</span></li>
-<li><span class="arithmatex">\(Var(Y_{t}) = t\sigma^{2}\)</span> which is time dependent… thus, <span class="arithmatex">\(Y_{t}\)</span> is not stationary.</li>
-</ol>
-<h4 id="example-5">Example 5<a class="headerlink" href="#example-5" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-Y_{t} = a + bt + e_{t}
-\]</div>
-<ol>
-<li><span class="arithmatex">\(E(Y_{t}) = E(a+bt+ e_{t}) = a + bt\)</span> which is time dependent…, thus, <span class="arithmatex">\(Y_{t}\)</span> is not stationary.</li>
-</ol>
-<h3 id="strong-vs-weak-stationary">Strong Vs Weak Stationary<a class="headerlink" href="#strong-vs-weak-stationary" title="Permanent link">¶</a></h3>
-<ul>
-<li>Strict stationarity → <strong>Joint Distribution</strong> should be time-invariant.</li>
-<li>Weak stationarity → Only two <strong>moments</strong> should be time-invariant.</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Strong <span class="arithmatex">\(\not\implies\)</span> weak</p>
-<p>Strong stationary <span class="arithmatex">\(\not\implies\)</span> weak stationary. </p>
-<ul>
-<li>There is a <abbr title="Independent and Identically Distributed.">IID</abbr> Cauchy process, which is strictly stationary but its first two moments don't exist, thus it is not weak stationary.</li>
-<li>Nonlinear function of a strict stationary variable is still strictly stationary, but not weak (e.g. if <span class="arithmatex">\(Y_{t}\)</span> is strictly stationary then <span class="arithmatex">\(Y_{t}^{2}\)</span> is strict but not weak stationary as the variance of <span class="arithmatex">\(Y_{t}^{2}\)</span> may not exist.)</li>
-</ul>
-</div>
-<ul>
-<li>
-<p>Weak Stationary <span class="arithmatex">\(\implies\)</span> strong stationarity</p>
-<ul>
-<li>Since for a multivariate normal distribution, the first two moments characterize the entire distribution. Knowing that the first two moments are time invariant will imply that the entire joint distribution is also time invariant.</li>
-<li>Thus, if the process <span class="arithmatex">\(\{ X_{t} \}\)</span> is a Gaussian TS, then weak stationary <span class="arithmatex">\(\implies\)</span>  string stationary.</li>
-</ul>
-</li>
-<li>
-<p>Non-stationarity</p>
-<ul>
-<li>If a process lacks stationary or <strong>statistical equilibrium</strong> <span class="arithmatex">\(\implies\)</span>  Non-stationary</li>
-<li>Three points amount to this<ul>
-<li>Trend</li>
-<li>Seasonality (cyclicality)</li>
-<li>Heteroscedasticity (changing variance)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<hr>
+<h3 id="4-non-stationarity">4. Non-stationarity<a class="headerlink" href="#4-non-stationarity" title="Permanent link">¶</a></h3>
+<p>A process is non-stationary if it lacks statistical equilibrium. This usually stems from three main issues:<br>
+1.  <strong>Trend:</strong> Long-term upward or downward movement.<br>
+2.  <strong>Seasonality:</strong> Cyclical or repetitive patterns over fixed periods.<br>
+3.  <strong>Heteroscedasticity:</strong> Changing variance over time.</p>
+<hr>
 
 
 
@@ -12874,7 +12884,7 @@ Y_{t} = a + bt + e_{t}
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L3__Stationarity%20in%20Time%20Series/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Stationarity in TS">
+          <a href="../L3__Stationarity%20in%20Time%20Series/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Stationarity in Time Series">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12884,20 +12894,20 @@ Y_{t} = a + bt + e_{t}
                 Previous
               </span>
               <div class="md-ellipsis">
-                Stationarity in TS
+                Stationarity in Time Series
               </div>
             </div>
           </a>
         
         
           
-          <a href="../L6__Time%20Series%20Decomposition/" class="md-footer__link md-footer__link--next" aria-label="Next: TS Decomposition">
+          <a href="../L6__Time%20Series%20Decomposition/" class="md-footer__link md-footer__link--next" aria-label="Next: Time Series Decomposition">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                TS Decomposition
+                Time Series Decomposition
               </div>
             </div>
             <div class="md-footer__button md-icon">

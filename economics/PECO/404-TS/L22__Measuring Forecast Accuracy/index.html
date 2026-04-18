@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9387,6 +9387,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measuring Forecast Accuracy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -9403,6 +9421,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-behavior-of-arma-forecasts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Behavior of ARMA Forecasts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prediction-intervals-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Prediction Intervals (PI)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-model-and-data-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Model and Data Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-measures-of-forecast-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Measures of Forecast Accuracy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9791,7 +9872,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10879,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12698,95 +12779,72 @@
 
 <!-- Markdown content -->
 <h1 id="measuring-forecast-accuracy">Measuring Forecast Accuracy<a class="headerlink" href="#measuring-forecast-accuracy" title="Permanent link">¶</a></h1>
+<p>Evaluating the performance of a model is essential for determining its reliability in real-world applications. This involves analyzing the behavior of forecasts, the impact of data volume, and specific mathematical metrics.</p>
+<h3 id="1-behavior-of-arma-forecasts">1. Behavior of ARMA Forecasts<a class="headerlink" href="#1-behavior-of-arma-forecasts" title="Permanent link">¶</a></h3>
+<p>Long-term forecasts from stationary ARMA models exhibit specific convergence properties:<br>
+* <strong>Mean Convergence:</strong> <span class="arithmatex">\(\lim_{l \to \infty} \hat{Y}_{n}(l) = \mu\)</span>. The forecast eventually reverts to the process mean, which is why ARMA/ARIMA models are generally preferred for short-term forecasts.<br>
+* <strong>Variance Convergence:</strong> <span class="arithmatex">\(\lim_{l \to \infty} V(e_{n}(l)) = \gamma_{0} &lt; \infty\)</span>. The forecast error variance eventually converges to the total variance of the process.</p>
+<h3 id="2-prediction-intervals-pi">2. Prediction Intervals (<abbr title="Prediction Interval">PI</abbr>)<a class="headerlink" href="#2-prediction-intervals-pi" title="Permanent link">¶</a></h3>
+<p>A <strong>Prediction Interval</strong> provides a range within which the actual future value is expected to fall with a certain probability (e.g., 95%):<br>
+* <strong>General <span class="arithmatex">\(l\)</span>-step Ahead <abbr title="Prediction Interval">PI</abbr>:</strong> <span class="arithmatex">\(\hat{Y}_{n}(l) \pm 1.96 \sqrt{ \sum_{i=0}^{l-1} \psi^{2}_{i} }\)</span>.<br>
+* <strong>1-step Ahead <abbr title="Prediction Interval">PI</abbr>:</strong> <span class="arithmatex">\(\hat{Y}_{n}(1) \pm 1.96 \sigma_{a}\)</span>.</p>
+<h3 id="3-model-and-data-strategy">3. Model and Data Strategy<a class="headerlink" href="#3-model-and-data-strategy" title="Permanent link">¶</a></h3>
+<p>The quality of a forecast is heavily influenced by the amount of data available and the complexity of the model used.</p>
+<h4 id="advantages-of-long-realizations-large-datasets">Advantages of Long Realizations (Large Datasets)<a class="headerlink" href="#advantages-of-long-realizations-large-datasets" title="Permanent link">¶</a></h4>
 <ul>
-<li>
-<p>Forecasting from an ARMA model</p>
-<ul>
-<li><span class="arithmatex">\(\lim_{ n \to \infty } \hat{Y}_{n}(l) =\mu\)</span> (disadvantage, it converges to mean)</li>
-<li><span class="arithmatex">\(\lim_{ n \to \infty } V(e_{n}(l))=\gamma_{0} \lt \infty\)</span> (converge to actual variance)</li>
-<li><span class="arithmatex">\(\implies\)</span> Use ARMA or ARIMA model only for short-term forecasts</li>
+<li><strong>Statistical Rigor:</strong> Provides more accurate standard errors for the correlation structure and produces better prediction intervals.</li>
+<li><strong>Estimation Stability:</strong> The likelihood function is better behaved, making parameter estimation more reliable.</li>
+<li><strong>Validation:</strong> Allows for withholding recent data for a <strong>train-test split</strong> and checking model stability by analyzing separate parts of the data.</li>
 </ul>
-</li>
-<li>
-<p>Prediction Intervals?</p>
-<ul>
-<li>95% <abbr title="Prediction Interval">PI</abbr> for <span class="arithmatex">\(Y_{n+l}\)</span> is <span class="arithmatex">\(\hat{Y}_{n}(l) \pm 1.96 \sqrt{ \sum_{i=0}^{l-1} \psi^{2}_{i} }\)</span></li>
-<li>For 1-step ahead forecast would be <span class="arithmatex">\(\hat{Y}_{n}(l) \pm 1.96a_{n}\)</span></li>
-</ul>
-</li>
-<li>
-<p>Advantages of having Long Realizations (more data)</p>
-<ul>
-<li>Correlation structure get accurate standard errors</li>
-<li>Better Prediction intervals</li>
-<li>Likelihood function better behaved</li>
-<li>Withholding recent data (train-test split)</li>
-<li>Check model stability by dividing data into parts (analyze separately)</li>
-</ul>
-</li>
-<li>
-<p>Advantages of Parsimonious Models</p>
-<ul>
-<li>Fewer numerical problems in estimation</li>
-<li>Easier to understand the model</li>
-<li>Fewer parameters, less sensitive to deviations between parameters and estimates.</li>
-<li>Applied more generally to similar processes (complex is niche)</li>
-<li>Rapid real-time computations</li>
-<li>If realization is large → parsimony not so important.</li>
-</ul>
-</li>
-<li>
-<p>Notation</p>
-<ul>
-<li><span class="arithmatex">\(a_{t}\)</span> is actual value</li>
-<li><span class="arithmatex">\(f_{t}\)</span> is forecast value</li>
-</ul>
-</li>
-<li>
-<p>Measures of Forecast accuracy</p>
-<ul>
-<li>MSE (Squared)<ul>
-<li><span class="arithmatex">\(MSE = \dfrac{1}{n}\sum_{t=1}^n (a_{t}- f_{t})^{2}\)</span></li>
-</ul>
-</li>
-<li>ME</li>
-<li>MPE (Percentage)<ul>
-<li><span class="arithmatex">\(MPE = \dfrac{1}{n}\sum_{t=1}^{n} \dfrac{a_{t}-f_{t}}{a_{t}} \times 100\)</span></li>
-</ul>
-</li>
-<li>MAE (Absolute)<ul>
-<li><span class="arithmatex">\(MAE = \dfrac{1}{n}\sum_{t=1}^{n} \lvert  a_{t}-f_{t}\rvert \times 100\)</span></li>
-</ul>
-</li>
-<li>MAPE (Absolute Percentage)<ul>
-<li><span class="arithmatex">\(MAPE = \dfrac{1}{n}\sum_{t=1}^{n} \dfrac{\lvert a_{t}-f_{t} \rvert}{a_{t}} \times 100\)</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Naive Forecast (GUESSING)</p>
-<ul>
-<li>Last period actuals are used as this period's forecast without adjusting them (no causal factors applied)</li>
-<li>Use only for comparing with forecast generated by other sophisticated models.</li>
-</ul>
-</li>
-<li>
-<p>Theil's <span class="arithmatex">\(U\)</span> Statistics</p>
-<ul>
-<li><span class="arithmatex">\(U_{1} = \dfrac{\sqrt{ \sum_{t=1}^n (a_{t}- f_{t})^{2} }}{\sqrt{ \sum_{t=1}^n a_{t}^{2} } + \sqrt{ \sum_{t=1}^n f_{t}^{2} }}\)</span><ul>
-<li>Closer to 0 <span class="arithmatex">\(\implies\)</span> Better forecasting accuracy</li>
-</ul>
-</li>
-<li><span class="arithmatex">\(U_{2}= \sqrt{ \dfrac{\sum_{t=1}^{n-1} \left(\dfrac{f_{t+1}-a_{t+1}}{a_{t}}\right)}{\sum_{t=1}^{n-1} \left(\dfrac{a_{t+1}-a_{t}}{a_{t}}\right)} }\)</span><ul>
-<li><span class="arithmatex">\(=1\)</span> <span class="arithmatex">\(\implies\)</span> same as Naive</li>
-<li><span class="arithmatex">\(\lt 1\)</span> <span class="arithmatex">\(\implies\)</span> better than Naive</li>
-<li><span class="arithmatex">\(\gt 1\)</span> <span class="arithmatex">\(\implies\)</span> worse than Naive</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h4 id="advantages-of-parsimonious-models">Advantages of Parsimonious Models<a class="headerlink" href="#advantages-of-parsimonious-models" title="Permanent link">¶</a></h4>
+<p>Parsimony—the principle of using the simplest model that fits the data—offers several benefits:<br>
+* <strong>Numerical Efficiency:</strong> Results in fewer numerical problems during estimation and allows for rapid real-time computations.<br>
+* <strong>Interpretability:</strong> Simplifies the understanding of the model's dynamics.<br>
+* <strong>Generalization:</strong> Fewer parameters mean the model is less sensitive to estimation deviations and can be applied more generally to similar processes.<br>
+* <em>Note: If the realization is very large, parsimony becomes less critical</em>.</p>
+<h3 id="4-measures-of-forecast-accuracy">4. Measures of Forecast Accuracy<a class="headerlink" href="#4-measures-of-forecast-accuracy" title="Permanent link">¶</a></h3>
+<p>To quantify accuracy, we compare actual values (<span class="arithmatex">\(a_{t}\)</span>) against forecasted values (<span class="arithmatex">\(f_{t}\)</span>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><abbr title="Mean Squared Error">MSE</abbr></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(MSE = \dfrac{1}{n}\sum_{t=1}^n (a_{t}- f_{t})^{2}\)</span></td>
+<td style="text-align: left;">Mean Squared Error; penalizes larger errors more heavily.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><abbr title="Mean Absolute Error">MAE</abbr></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(MAE = \dfrac{1}{n}\sum_{t=1}^{n} \lvert a_{t}-f_{t}\rvert\)</span></td>
+<td style="text-align: left;">Mean Absolute Error; gives the average absolute deviation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><abbr title="Mean Absolute Percentage Error">MAPE</abbr></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(MAPE = \dfrac{1}{n}\sum_{t=1}^{n} \dfrac{\lvert a_{t}-f_{t} \rvert}{a_{t}} \times 100\)</span></td>
+<td style="text-align: left;">Mean Absolute <em>Percentage</em> Error; provides error relative to the scale of data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MPE</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(MPE = \dfrac{1}{n}\sum_{t=1}^{n} \dfrac{a_{t}-f_{t}}{a_{t}} \times 100\)</span></td>
+<td style="text-align: left;">Mean <em>Percentage</em> Error; helps detect systematic bias.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="naive-forecast-the-baseline">Naive Forecast (The Baseline)<a class="headerlink" href="#naive-forecast-the-baseline" title="Permanent link">¶</a></h4>
+<p>A <strong>Naive Forecast</strong> uses the last observed value as the forecast for the next period without any adjustments. It serves strictly as a benchmark to compare against sophisticated models.</p>
+<h4 id="theils-u-statistics">Theil’s <span class="arithmatex">\(U\)</span> Statistics<a class="headerlink" href="#theils-u-statistics" title="Permanent link">¶</a></h4>
+<p>These statistics help evaluate model performance relative to a zero-error or naive benchmark:<br>
+* <strong><span class="arithmatex">\(U_{1}\)</span>:</strong> Ranges between 0 and 1; a value closer to 0 indicates higher forecasting accuracy.<br>
+* <strong><span class="arithmatex">\(U_{2}\)</span>:</strong> Compares the model to a Naive Forecast:<br>
+    * <strong><span class="arithmatex">\(U_{2} = 1\)</span>:</strong> Same accuracy as Naive.<br>
+    * <strong><span class="arithmatex">\(U_{2} &lt; 1\)</span>:</strong> Better than Naive.<br>
+    * <strong><span class="arithmatex">\(U_{2} &gt; 1\)</span>:</strong> Worse than Naive.</p>
+<hr>
 
 
 

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10982,7 +10982,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12801,112 +12801,90 @@
 
 <!-- Markdown content -->
 <h1 id="tests-for-cointegration">Tests for Cointegration<a class="headerlink" href="#tests-for-cointegration" title="Permanent link">¶</a></h1>
-<ul>
-<li>Determine whether "stable long-term relationship" exists</li>
-<li>Cointegrated <span class="arithmatex">\(\implies\)</span> although they may drift, they move together in the long term</li>
-</ul>
+<p>Cointegration tests are used to determine whether a "stable long-term relationship" exists between variables. When variables are cointegrated, it implies that although they may drift apart in the short term, they move together in the long term.</p>
 <h3 id="engle-granger-two-step-test">Engle Granger Two Step Test<a class="headerlink" href="#engle-granger-two-step-test" title="Permanent link">¶</a></h3>
 <ul>
-<li>One of the first methods (2 variables)</li>
-<li>Steps<ol>
-<li>Estimate long run relationship: Regress <span class="arithmatex">\(Y_{t} = \alpha + \beta X_{t} +\epsilon_{t}\)</span> and obtain residuals<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li>Test for stationarity of residuals: ADF. If residuals are <span class="arithmatex">\(I(0)\)</span> then the residuals are cointegrated</li>
+<li>This was one of the first methods developed and is primarily used for <strong>2 variables</strong>.</li>
+<li><strong>The Steps involve:</strong><ol>
+<li><strong>Estimate long run relationship</strong>: Regress <span class="arithmatex">\(Y_{t} = \alpha + \beta X_{t} + \epsilon_{t}\)</span> (or include other <span class="arithmatex">\(X_{t}\)</span> variables as needed) and obtain the residuals <span class="arithmatex">\(\hat{\epsilon}_{t}\)</span>.</li>
+<li><strong>Test for stationarity of residuals</strong>: Use the Augmented Dickey-Fuller (ADF) test. If the residuals are found to be <span class="arithmatex">\(I(0)\)</span>, then the variables are cointegrated.</li>
 </ol>
 </li>
 </ul>
-<div class="arithmatex">\[
-\begin{align}
-H_{0}: &amp;  \text{Residuals are non-stationary} \implies \text{Cointegrated} \\
-H_{1}: &amp;  \text{Resdiausl are stationary} \implies \text{Cointegrated}
-\end{align}
-\]</div>
+<p><strong>Hypothesis Setup:</strong><br>
+$$<br>
+\begin{align}<br>
+H_{0}: &amp; \text{ Residuals are non-stationary } \implies \text{ No Cointegration} \<br>
+H_{1}: &amp; \text{ Residuals are stationary } \implies \text{ Cointegrated}<br>
+\end{align}<br>
+$$</p>
 <ul>
-<li>Limitation: only suitable for two variables<ul>
-<li>lacks power if more than two variables are involved</li>
+<li><strong>Limitation</strong>: This test is only suitable for two variables and lacks statistical power if more than two variables are involved in the system.</li>
 </ul>
-</li>
-</ul>
+<hr>
 <h3 id="johansen-test">Johansen Test<a class="headerlink" href="#johansen-test" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>"You-han-sen"</p>
+<p>Pronounced: "You-han-sen"</p>
 </blockquote>
 <ul>
-<li>More comprehensive test that can handle <em>multiple variables</em></li>
-<li>Based on <abbr title="Vector Autoregression Model">VAR</abbr> model</li>
+<li>This is a more comprehensive test that can handle <strong>multiple variables</strong> at once.</li>
+<li>It is based on a Vector Autoregression (<abbr title="Vector Autoregression Model">VAR</abbr>) model.</li>
 <li>
-<p>Examines the rank of the <strong>cointegration matrix</strong> (to determine the number of cointegrating relationships)</p>
+<p>It examines the rank of the <strong>cointegration matrix</strong> to determine the actual number of cointegrating relationships (rank <span class="arithmatex">\(r\)</span>).</p>
 </li>
 <li>
-<p>Two approaches</p>
+<p><strong>Two specific approaches within the test:</strong></p>
 <ol>
-<li>Trace Test: number of <abbr title="Cointegrating Vectors">CV</abbr> <span class="arithmatex">\(\le r\)</span> against <span class="arithmatex">\(\geq r\)</span></li>
-<li>Maximum Eigenvalue Test: number of <abbr title="Cointegrating Vectors">CV</abbr> <span class="arithmatex">\(=r\)</span> against <span class="arithmatex">\(r+1\)</span></li>
+<li><strong>Trace Test</strong>: Tests the null hypothesis that the number of cointegrating vectors (<abbr title="Cointegrating Vectors">CV</abbr>) is <span class="arithmatex">\(\le r\)</span> against the alternative that it is <span class="arithmatex">\(&gt; r\)</span>.</li>
+<li><strong>Maximum Eigenvalue Test</strong>: Tests the null hypothesis that the number of <abbr title="Cointegrating Vectors">CV</abbr> <span class="arithmatex">\(= r\)</span> against the alternative that it is <span class="arithmatex">\(r+1\)</span>.</li>
 </ol>
 </li>
 </ul>
-<div class="arithmatex">\[
-\begin{align}
- H_{1} &amp;  \\
-H_{2} &amp; 
-\end{align}
-\]</div>
+<hr>
 <h3 id="phillips-ouliaris-cointegration-test">Phillips-Ouliaris Cointegration Test<a class="headerlink" href="#phillips-ouliaris-cointegration-test" title="Permanent link">¶</a></h3>
 <ul>
-<li>Residual-based like <a href="#engle-granger-two-step-test">#Engle Granger Two Step Test</a></li>
-<li>Uses different tests statistics (more robust)</li>
+<li>This is a residual-based test, similar to the <a href="#engle-granger-two-step-test">#Engle Granger Two Step Test</a>.</li>
+<li>However, it uses different, more robust test statistics to determine the relationship.</li>
 </ul>
 <div class="arithmatex">\[
 \begin{align}
-H_{0} &amp;:  \text{No cointegration} \\
-H_{1} &amp;: \text{Cointegration exists}
+H_{0} &amp;: \text{ No cointegration} \\
+H_{1} &amp;: \text{ Cointegration exists}
 \end{align}
 \]</div>
 <blockquote>
-<p>Phillips-Ouliaris test statistic</p>
+<p>It relies on the Phillips-Ouliaris test statistic for the decision.</p>
 </blockquote>
+<hr>
 <h3 id="durbin-watson-cointegration-test">Durbin-Watson Cointegration Test<a class="headerlink" href="#durbin-watson-cointegration-test" title="Permanent link">¶</a></h3>
 <ul>
-<li>Not a direct cointegration test. Helps in testing for spurious relationships<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
-<li>DW static <span class="arithmatex">\(\approx 0\)</span>  <span class="arithmatex">\(\implies\)</span>  possibility of spurious regression <span class="arithmatex">\(\implies\)</span> may not be cointegrated</li>
-<li>DW <span class="arithmatex">\(\gt 1.5-2\)</span> <span class="arithmatex">\(\implies\)</span>  Cointegration relationship might exist</li>
+<li>This is not a direct cointegration test itself. Instead, it helps in testing for <strong>spurious relationships</strong> (where two unrelated variables show a strong correlation just because of their trends).</li>
+<li><strong>DW statistic <span class="arithmatex">\(\approx 0\)</span></strong>: Suggests the possibility of spurious regression, meaning the variables may not be cointegrated.</li>
+<li><strong>DW <span class="arithmatex">\(&gt; 1.5 - 2\)</span></strong>: Suggests that a cointegration relationship might actually exist.</li>
 </ul>
+<hr>
 <h3 id="auto-regressive-distributed-lag-ardl-bounds-test">Auto-Regressive Distributed Lag (ARDL) Bounds Test<a class="headerlink" href="#auto-regressive-distributed-lag-ardl-bounds-test" title="Permanent link">¶</a></h3>
 <ul>
-<li>When underlying series are of mixed integration order (some <span class="arithmatex">\(I(0)\)</span> and some <span class="arithmatex">\(I(1)\)</span>)</li>
+<li>This test is used when the underlying series are of <strong>mixed integration order</strong> (for example, if some are <span class="arithmatex">\(I(0)\)</span> and some are <span class="arithmatex">\(I(1)\)</span>).</li>
 </ul>
 <div class="arithmatex">\[
 \begin{align}
-H_{0} &amp;:  \text{No cointegration} \\
-H_{1} &amp;: \text{Cointegration exists}
+H_{0} &amp;: \text{ No cointegration} \\
+H_{1} &amp;: \text{ Cointegration exists}
 \end{align}
 \]</div>
 <ul>
-<li>compatible with various sample sizes</li>
+<li>A major benefit is that it is compatible with various sample sizes, including smaller ones.</li>
 </ul>
+<hr>
 <h3 id="practical-examples">Practical Examples<a class="headerlink" href="#practical-examples" title="Permanent link">¶</a></h3>
 <ul>
-<li>House Prices and Rent Prices</li>
-<li>Commercial Real Estate Prices and Economic Indicators</li>
-<li>Healthcare Spending and GDP<ul>
-<li>spending grows with economy</li>
+<li><strong>House Prices and Rent Prices</strong>: These usually move together over long periods despite short-term fluctuations.</li>
+<li><strong>Commercial Real Estate Prices and Economic Indicators</strong>: Property values drift along with broader economic health.</li>
+<li><strong>Healthcare Spending and GDP</strong>: As the economy grows, healthcare spending generally grows with it, maintaining a long-run balance.</li>
+<li><strong>Drug Prices and R&amp;D Costs</strong>: Used to validate cost determination practices by checking if prices and research costs are actually linked in the long run.</li>
 </ul>
-</li>
-<li>Drug Prices and R&amp;D Costs<ul>
-<li>validate the cost determination practices</li>
-</ul>
-</li>
-</ul>
-<div class="footnote">
 <hr>
-<ol>
-<li id="fn:1">
-<p>Or other <span class="arithmatex">\(X_{t}\)</span> variables&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-<li id="fn:2">
-<p>Spurious: Two unrelated variables having strong correlation&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
-</ol>
-</div>
 
 
 

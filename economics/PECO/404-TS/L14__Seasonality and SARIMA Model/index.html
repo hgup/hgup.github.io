@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8933,7 +8933,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8961,7 +8961,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8989,7 +8989,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9070,10 +9070,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#textsarima-model" class="md-nav__link">
+  <a href="#1-types-of-seasonality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        \(\text{SARIMA}\) model
+        1. Types of Seasonality
       
     </span>
   </a>
@@ -9081,10 +9081,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pros-cons-of-sarima" class="md-nav__link">
+  <a href="#2-the-sarima-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pros &amp; Cons of SARIMA
+        2. The SARIMA Model
       
     </span>
   </a>
@@ -9092,10 +9092,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-cases-of-arima-and-sarima-models" class="md-nav__link">
+  <a href="#3-pros-cons-of-sarima" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Use Cases of ARIMA and SARIMA Models
+        3. Pros &amp; Cons of SARIMA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Use Cases
       
     </span>
   </a>
@@ -9309,7 +9320,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9861,7 +9872,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10949,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12767,90 +12778,71 @@
 
 
 <!-- Markdown content -->
-<h1 id="seasonality-sarima-model">Seasonality &amp; SARIMA Model<a class="headerlink" href="#seasonality-sarima-model" title="Permanent link">¶</a></h1>
-<ul>
-<li>
-<p>Types of seasonality</p>
+<h1 id="seasonality-sarima-model">Seasonality &amp; <abbr title="Seasonal AutoRegressive Integrated Moving Average">SARIMA</abbr> Model<a class="headerlink" href="#seasonality-sarima-model" title="Permanent link">¶</a></h1>
+<h3 id="1-types-of-seasonality">1. Types of Seasonality<a class="headerlink" href="#1-types-of-seasonality" title="Permanent link">¶</a></h3>
+<p>Seasonality can manifest in different ways depending on how the periodic component behaves over time:</p>
 <ol>
-<li>Seasonality is deterministic<ul>
-<li>Last period of seasonality is <span class="arithmatex">\(s\)</span></li>
-<li><span class="arithmatex">\(S_{t}^{(s)} = S_{t+ks}^{(s)}\)</span>, <span class="arithmatex">\(k = \pm_{1}, \pm 2 \pm 3,\dots\)</span></li>
-<li>We can determine the trend in the future as it just repeats.</li>
-<li><span class="arithmatex">\(S_{t}^{12} = S_{t+12}^{(12)}\)</span></li>
-</ul>
-</li>
-<li>Seasonality evolves over time as a <strong>stationary</strong> process<ul>
-<li><span class="arithmatex">\(S_{t}^{(s)} = \mu^{(s)}+v_{t}\)</span> where <span class="arithmatex">\(E(v_{t})= 0\)</span></li>
-<li>stationary factor is oscillating around <span class="arithmatex">\(\mu^{(s)}\)</span>, the deterministic effect depending on <span class="arithmatex">\(s\)</span></li>
-<li>while <span class="arithmatex">\(v_{t}\)</span> is a <strong>stationary</strong> process bringing variability in the stationary factor <span class="arithmatex">\(S_{t}^{(s)}\)</span> and is time dependent and not season dependent.</li>
-</ul>
-</li>
-<li>Seasonality evolves over time as a <strong>stationary</strong> process<ul>
-<li><span class="arithmatex">\(S_{t}^{(s)}\)</span> may follow a non-stationary process.</li>
-<li>E.g. random walk, <span class="arithmatex">\(S_{t}^{(s)} = S_{t-s}^{(s)}+v_{t}\)</span> where <span class="arithmatex">\(E(v_{t})= 0\)</span></li>
-</ul>
-</li>
+<li><strong>Deterministic Seasonality:</strong> The seasonal effect is constant and repeats exactly every <span class="arithmatex">\(s\)</span> periods, such that <span class="arithmatex">\(S_{t}^{(s)} = S_{t+ks}^{(s)}\)</span> for <span class="arithmatex">\(k = \pm 1, \pm 2, \dots\)</span>. Since the pattern simply repeats, the future seasonal component can be determined exactly.</li>
+<li><strong>Stationary Evolving Seasonality:</strong> The seasonal factor oscillates around a deterministic mean <span class="arithmatex">\(\mu^{(s)}\)</span>, expressed as <span class="arithmatex">\(S_{t}^{(s)} = \mu^{(s)} + v_{t}\)</span>, where <span class="arithmatex">\(v_{t}\)</span> is a stationary process. Here, <span class="arithmatex">\(v_{t}\)</span> introduces time-dependent variability around the seasonal effect.</li>
+<li><strong>Non-Stationary Evolving Seasonality:</strong> The seasonal component <span class="arithmatex">\(S_{t}^{(s)}\)</span> follows a non-stationary process, such as a random walk: <span class="arithmatex">\(S_{t}^{(s)} = S_{t-s}^{(s)} + v_{t}\)</span>.</li>
 </ol>
-</li>
-<li>
-<p>Applying a seasonal difference corrects for seasonality in all cases.</p>
-</li>
-</ul>
-<h3 id="textsarima-model"><span class="arithmatex">\(\text{SARIMA}\)</span> model<a class="headerlink" href="#textsarima-model" title="Permanent link">¶</a></h3>
-<ul>
-<li>We use seasonal differencing <span class="arithmatex">\(Y_{t} - Y_{t-s}\)</span>, with lag <span class="arithmatex">\(s\)</span>.</li>
-</ul>
-<div class="arithmatex">\[
-Z_{t} = (1-B^S)^D (1-B)^d Y_{t}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(D\)</span> is number of seasonal differences (usually 0 or 1) → <span class="arithmatex">\((1-B^S)\)</span></li>
-<li><span class="arithmatex">\(d\)</span> is number of times needed to take the regular difference → <span class="arithmatex">\((1-B)\)</span></li>
-</ul>
-<p>The SARIMA model takes the following structure</p>
-<div class="arithmatex">\[
-\Phi_{P}(B^S)\phi_{p}(B)(1-B^S)^D(1-B)^dY_{t} = \Theta_{Q}(B^S)\theta_{q}(B)e_{t}
-\]</div>
-<p>there are four parts</p>
-<ul>
-<li><span class="arithmatex">\(\Phi_{P}(B^S)\)</span>: seasonal AR op. of order <span class="arithmatex">\(P\)</span></li>
-<li><span class="arithmatex">\(\phi_{p}(B)\)</span>: regular AR op. of order <span class="arithmatex">\(p\)</span></li>
-<li><span class="arithmatex">\(\Theta_{Q}(B^S)\)</span>: seasonal MA op. of order <span class="arithmatex">\(Q\)</span></li>
-<li><span class="arithmatex">\(\theta_{q}(B)\)</span>: regular MA op. of order <span class="arithmatex">\(q\)</span></li>
-</ul>
-<div class="arithmatex">\[
-\text{SARIMA}(p,d,q) \times (P,D,Q)_{S}
-\]</div>
-<ul>
-<li>Two individual triplets of orders.</li>
-</ul>
-<h3 id="pros-cons-of-sarima">Pros &amp; Cons of SARIMA<a class="headerlink" href="#pros-cons-of-sarima" title="Permanent link">¶</a></h3>
-<ul>
-<li>Pros<ul>
-<li>Easy to understand: simplicity and interpretibility</li>
-<li>Limited variables: fewer parameters to estimate</li>
-</ul>
-</li>
-<li>Cons<ul>
-<li>Exponential time complexity: as <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span> increases</li>
-<li>Complex data: no optional solution for <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span></li>
-<li>Amount of data required is considerable.</li>
-</ul>
-</li>
-</ul>
-<h3 id="use-cases-of-arima-and-sarima-models">Use Cases of ARIMA and SARIMA Models<a class="headerlink" href="#use-cases-of-arima-and-sarima-models" title="Permanent link">¶</a></h3>
-<ol>
-<li>Forecast the Dynamics of COVID-19 Epidemic in India</li>
-<li>Prediction of Daily and Monthly Average Global Solar Radiation (Seoul, South Korea)</li>
-<li>Disease management (spread of a disease, requirement of beds in Singapore)</li>
-<li>
-<p>Forecasting of demand (food company)</p>
-</li>
-<li>
-<p>In ARIMA, you can capture the trend part.</p>
-</li>
-<li>In case seasonality is also present, use SARIMA.</li>
-</ol>
+<div class="admonition tip">
+<p class="admonition-title">Universal Correction</p>
+<p>Applying a <strong>seasonal difference</strong> is effective in correcting for seasonality in all three of the cases mentioned above.</p>
+</div>
+<hr>
+<h3 id="2-the-sarima-model">2. The <abbr title="Seasonal AutoRegressive Integrated Moving Average">SARIMA</abbr> Model<a class="headerlink" href="#2-the-sarima-model" title="Permanent link">¶</a></h3>
+<p>The <strong>Seasonal AutoRegressive Integrated Moving Average (<abbr title="Seasonal AutoRegressive Integrated Moving Average">SARIMA</abbr>)</strong> model extends ARIMA by explicitly supporting seasonal components through seasonal differencing and seasonal operators.</p>
+<h4 id="mathematical-structure">Mathematical Structure<a class="headerlink" href="#mathematical-structure" title="Permanent link">¶</a></h4>
+<p>The model is defined by the following equation:<br>
+$<span class="arithmatex">\(\Phi_{P}(B^S)\phi_{p}(B)(1-B^S)^D(1-B)^dY_{t} = \Theta_{Q}(B^S)\theta_{q}(B)e_{t}\)</span>$</p>
+<p>This structure consists of four distinct operational parts:<br>
+* <strong><span class="arithmatex">\(\Phi_{P}(B^S)\)</span>:</strong> Seasonal Autoregressive (AR) operator of order <span class="arithmatex">\(P\)</span>.<br>
+* <strong><span class="arithmatex">\(\phi_{p}(B)\)</span>:</strong> Regular Autoregressive (AR) operator of order <span class="arithmatex">\(p\)</span>.<br>
+* <strong><span class="arithmatex">\(\Theta_{Q}(B^S)\)</span>:</strong> Seasonal Moving Average (MA) operator of order <span class="arithmatex">\(Q\)</span>.<br>
+* <strong><span class="arithmatex">\(\theta_{q}(B)\)</span>:</strong> Regular Moving Average (MA) operator of order <span class="arithmatex">\(q\)</span>.</p>
+<h4 id="notation">Notation<a class="headerlink" href="#notation" title="Permanent link">¶</a></h4>
+<p>A <abbr title="Seasonal AutoRegressive Integrated Moving Average">SARIMA</abbr> model is typically denoted as:<br>
+$<span class="arithmatex">\(\text{SARIMA}(p,d,q) \times (P,D,Q)_{S}\)</span>$<br>
+* <strong><span class="arithmatex">\((p,d,q)\)</span>:</strong> Represents the non-seasonal part of the model.<br>
+* <strong><span class="arithmatex">\((P,D,Q)_{S}\)</span>:</strong> Represents the seasonal part of the model with a period <span class="arithmatex">\(S\)</span>.<br>
+* <strong><span class="arithmatex">\(D\)</span>:</strong> Number of seasonal differences (usually 0 or 1).<br>
+* <strong><span class="arithmatex">\(d\)</span>:</strong> Number of regular differences.</p>
+<hr>
+<h3 id="3-pros-cons-of-sarima">3. Pros &amp; Cons of <abbr title="Seasonal AutoRegressive Integrated Moving Average">SARIMA</abbr><a class="headerlink" href="#3-pros-cons-of-sarima" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pros</th>
+<th style="text-align: left;">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Simplicity:</strong> The model is relatively easy to understand and interpret.</td>
+<td style="text-align: left;"><strong>Time Complexity:</strong> Computational requirements can grow exponentially as orders <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span> increase.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parsimony:</strong> Requires a limited number of variables and parameters to estimate.</td>
+<td style="text-align: left;"><strong>Optimization Difficulty:</strong> Finding an optimal solution for <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span> can be difficult with complex data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Data Intensity:</strong> A considerable amount of historical data is required for effective modeling.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="4-use-cases">4. Use Cases<a class="headerlink" href="#4-use-cases" title="Permanent link">¶</a></h3>
+<p><abbr title="Seasonal AutoRegressive Integrated Moving Average">SARIMA</abbr> is used when both a trend and seasonality are present in the data:<br>
+1.  <strong>Epidemiology:</strong> Forecasting the dynamics of the COVID-19 epidemic in India or bed requirements in Singapore.<br>
+2.  <strong>Renewable Energy:</strong> Predicting daily and monthly average global solar radiation (e.g., in South Korea).<br>
+3.  <strong>Supply Chain:</strong> Forecasting demand for food companies to manage inventory.</p>
+<div class="admonition note">
+<p class="admonition-title">Model Selection</p>
+<p>Use <strong>ARIMA</strong> if you only need to capture the trend component; use <strong><abbr title="Seasonal AutoRegressive Integrated Moving Average">SARIMA</abbr></strong> if seasonality is also present.</p>
+</div>
+<hr>
 
 
 
@@ -12886,7 +12878,7 @@ Z_{t} = (1-B^S)^D (1-B)^d Y_{t}
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L13__Cyclicity%20and%20Test%20for%20Stationarity/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cyclicity and test for Stationarity">
+          <a href="../L13__Cyclicity%20and%20Test%20for%20Stationarity/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cyclicity and Tests for Stationarity">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12896,7 +12888,7 @@ Z_{t} = (1-B^S)^D (1-B)^d Y_{t}
                 Previous
               </span>
               <div class="md-ellipsis">
-                Cyclicity and test for Stationarity
+                Cyclicity and Tests for Stationarity
               </div>
             </div>
           </a>

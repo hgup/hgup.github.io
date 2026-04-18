@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10869,7 +10869,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -11011,10 +11011,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#activation-function" class="md-nav__link">
+  <a href="#activation-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Activation Function
+        Activation Functions
       
     </span>
   </a>
@@ -11022,21 +11022,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#no-hidden-layers" class="md-nav__link">
+  <a href="#hidden-layers-complexity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        No Hidden Layers?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extension" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extension
+        Hidden Layers &amp; Complexity
       
     </span>
   </a>
@@ -11055,10 +11044,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#batch-iterations-epoch" class="md-nav__link">
+  <a href="#training-mechanics-batch-iterations-epoch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Batch, Iterations &amp; Epoch
+        Training Mechanics: Batch, Iterations &amp; Epoch
       
     </span>
   </a>
@@ -12823,106 +12812,82 @@
 
 <!-- Markdown content -->
 <h1 id="neural-networks-for-ts">Neural Networks for TS<a class="headerlink" href="#neural-networks-for-ts" title="Permanent link">¶</a></h1>
-<ul>
-<li>Artificial Neural Networks = simple mathematical models of the brain</li>
-</ul>
+<p>Artificial Neural Networks (ANNs) are simple mathematical models inspired by the biological brain. In the context of time series, they are used to approximate complex, non-linear functions that relate past observations to future forecasts.</p>
 <h3 id="network-architecture">Network Architecture<a class="headerlink" href="#network-architecture" title="Permanent link">¶</a></h3>
-<ul>
-<li>Network of neurons organized in layers</li>
-<li>Bottom layer: Predictors (inputs) </li>
-<li>Intermediate layers:  "hidden neurons"</li>
-<li>Top layer: forecasts</li>
-<li>Loosely mimic the way our brain solves the problem</li>
-</ul>
+<p>The network consists of neurons organized into distinct layers:<br>
+* <strong>Input Layer (Bottom)</strong>: These are the predictors or lags (e.g., <span class="arithmatex">\(y_{t-1}, y_{t-2}\)</span>).<br>
+* <strong>Hidden Layers (Intermediate)</strong>: These contain "hidden neurons" that perform non-linear transformations.<br>
+* <strong>Output Layer (Top)</strong>: This layer produces the final forecasts.</p>
+<p>The structure loosely mimics the way our brain solves problems by passing signals through layers of interconnected nodes.</p>
+<hr>
 <h3 id="the-perceptron">The "Perceptron"<a class="headerlink" href="#the-perceptron" title="Permanent link">¶</a></h3>
-<ul>
-<li>Network of nodes sending signals</li>
-<li>"Feed forward" network (one direction)</li>
-<li>A neuron connected with <span class="arithmatex">\(n\)</span> other neurons and thus receives <span class="arithmatex">\(n\)</span> inputs (<span class="arithmatex">\(x_{1,}x_{2},\dots,x_{n}\)</span>)</li>
-</ul>
+<p>A Perceptron is the simplest form of a neural network node. It is a <strong>"feed-forward"</strong> system, meaning the signal moves in only one direction—from input to output. <br>
+* A neuron receives <span class="arithmatex">\(n\)</span> inputs (<span class="arithmatex">\(x_{1}, x_{2}, \dots, x_{n}\)</span>).<br>
+* Each input is adjusted by a weight.</p>
 <h3 id="weights">Weights<a class="headerlink" href="#weights" title="Permanent link">¶</a></h3>
+<p>Weights represent the "importance" of a specific input. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We don't manually tell the network which conditions (like weather or weekdays) are important; it learns the optimal weights for itself from the training data.</p>
+</div>
+<h4 id="training-the-perceptron">Training the Perceptron<a class="headerlink" href="#training-the-perceptron" title="Permanent link">¶</a></h4>
+<p>The weights are updated iteratively to reduce the error between the forecast (<span class="arithmatex">\(A\)</span>) and the actual target (<span class="arithmatex">\(T\)</span>). For each input <span class="arithmatex">\(i\)</span>:</p>
+<div class="arithmatex">\[W(i) = W(i) + a \times g'(\text{sum of inputs}) \times (T-A) \times P(i)\]</div>
+<p>Where:<br>
+* <span class="arithmatex">\(g'\)</span>: The derivative of the activation function.<br>
+* <span class="arithmatex">\(a\)</span>: The learning rate (step size of the update).<br>
+* <span class="arithmatex">\(P(i)\)</span>: The input vector.<br>
+* <span class="arithmatex">\((T-A)\)</span>: The error (Target minus Actual).</p>
+<hr>
+<h3 id="activation-functions">Activation Functions<a class="headerlink" href="#activation-functions" title="Permanent link">¶</a></h3>
+<p>Activation functions are mathematical equations that determine whether a neuron should "fire" based on its inputs. This is the <strong>"secret ingredient"</strong> that allows neural networks to model complex, non-linear relationships.</p>
 <ul>
-<li>Do you want to go to work?<ul>
-<li>Weather? 0 or 1</li>
-<li>Weekday? 0 or 1</li>
+<li><strong>Sigmoid</strong>: <span class="arithmatex">\(f(x) = \dfrac{1}{1+e^{-x}}\)</span><ul>
+<li>Range: <span class="arithmatex">\((0, 1)\)</span>. </li>
+<li>Use Case: Binary classification or output layers for probabilities.</li>
 </ul>
 </li>
-<li>We cannot tell the neural network these conditions, it learns them for itself</li>
-<li>It does so by applying weights</li>
-<li>A higher weight <span class="arithmatex">\(\implies\)</span> the input is more important</li>
-<li>It computes weight form the data</li>
-</ul>
-<h4 id="training-in-perceptron">Training in Perceptron<a class="headerlink" href="#training-in-perceptron" title="Permanent link">¶</a></h4>
-<ul>
-<li>For all inputs <span class="arithmatex">\(i\)</span></li>
-</ul>
-<div class="arithmatex">\[
-W(i) = W(i) + a \times g'(\text{sum of inputs}) \times (T-A) \times P(i)
-\]</div>
-<ul>
-<li><span class="arithmatex">\(g'\)</span> → derivative of the activation function</li>
-<li><span class="arithmatex">\(a\)</span> → learning rate</li>
-<li><span class="arithmatex">\(P\)</span> → Input vector</li>
-<li><span class="arithmatex">\(T\)</span> → Correct Output</li>
-<li><span class="arithmatex">\(A\)</span> → Output given by perceptron</li>
-</ul>
-<h3 id="activation-function">Activation Function<a class="headerlink" href="#activation-function" title="Permanent link">¶</a></h3>
-<ul>
-<li>Mathematical equations</li>
-<li>Determine the output of <abbr title="Neural Network">NN</abbr> layer given its inputs</li>
-<li>This is the secret ingredient that enables it to learn complex patterns in the data</li>
-</ul>
-<h4 id="types-of-activation-functions">Types of Activation Functions<a class="headerlink" href="#types-of-activation-functions" title="Permanent link">¶</a></h4>
-<ul>
-<li>Sigmoid: <span class="arithmatex">\(f(x) = \dfrac{1}{1+e^{ -x }}\)</span> for binary classification</li>
-<li>Tan-h: <span class="arithmatex">\(f(x) = \dfrac{e^{ x }-e^{ -x }}{e^{ x} + e^{ -x }}\)</span> for hidden layer where output needs to be 0 centered</li>
-</ul>
-<h3 id="no-hidden-layers">No Hidden Layers?<a class="headerlink" href="#no-hidden-layers" title="Permanent link">¶</a></h3>
-<ul>
-<li>Then the model reduces to a <strong>regression</strong>.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L59__Neural%20Networks%20for%20TS-1769507113462.webp" data-desc-position="bottom"><img alt="L59__Neural Networks for TS-1769507113462.webp" src="../../../../assets/images/2026/01/L59__Neural%20Networks%20for%20TS-1769507113462.webp"></a></p>
-<h3 id="extension">Extension<a class="headerlink" href="#extension" title="Permanent link">¶</a></h3>
-<ul>
-<li>Multilayer feed-forward</li>
-<li>The inputs to each node are combined using a weighted linear combination.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L59__Neural%20Networks%20for%20TS-1769507138125.webp" data-desc-position="bottom"><img alt="L59__Neural Networks for TS-1769507138125.webp" src="../../../../assets/images/2026/01/L59__Neural%20Networks%20for%20TS-1769507138125.webp"></a></p>
-<ul>
-<li>More the number of hidden layers, the more complicated the neural network</li>
-</ul>
-<h3 id="neural-network-autoregression-nnar">Neural Network Autoregression (<abbr title="Neural network Autoregression">NNAR</abbr>)<a class="headerlink" href="#neural-network-autoregression-nnar" title="Permanent link">¶</a></h3>
-<ul>
-<li>lagged values of TS used as inputs</li>
-<li>only consider<ul>
-<li>feed-forward networks</li>
-<li>one hidden layer</li>
-</ul>
-</li>
-<li><span class="arithmatex">\(NNAR(p,k)\)</span><ul>
-<li><span class="arithmatex">\(p\)</span> lagged inputs</li>
-<li><span class="arithmatex">\(k\)</span> nodes in the hidden layer</li>
-</ul>
-</li>
-<li><span class="arithmatex">\(NNAR(p,0)\)</span> is equivalent to <span class="arithmatex">\(AR(p)\)</span></li>
-</ul>
-<h3 id="batch-iterations-epoch">Batch, Iterations &amp; Epoch<a class="headerlink" href="#batch-iterations-epoch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Big dataset (we cannot pass everything to the <abbr title="Neural Network">NN</abbr> at once)</li>
-<li>divide datasets into "batches"</li>
-<li>Batch size is a hyper parameter</li>
-<li>Iterations it the number of batches needed to compute one <strong>epoch</strong></li>
-<li>One Epoch = the ENTIRE dataset is passed forward and backward through the neural network only ONCE</li>
-</ul>
-<h4 id="use-of-more-than-one-epoch">Use of More Than one Epoch<a class="headerlink" href="#use-of-more-than-one-epoch" title="Permanent link">¶</a></h4>
-<ul>
-<li>Use gradient descent to update weights</li>
-<li>As the # of epochs increases,<ul>
-<li>the weights are changed in <abbr title="Neural Network">NN</abbr></li>
-<li>from <strong>Underfitting</strong> to <strong>Optimal</strong> to <strong>Overfitting</strong></li>
+<li><strong>Tan-h</strong>: <span class="arithmatex">\(f(x) = \dfrac{e^x - e^{-x}}{e^x + e^{-x}}\)</span><ul>
+<li>Range: <span class="arithmatex">\((-1, 1)\)</span>.</li>
+<li>Use Case: Hidden layers where the output needs to be <strong>zero-centered</strong>.</li>
 </ul>
 </li>
 </ul>
+<hr>
+<h3 id="hidden-layers-complexity">Hidden Layers &amp; Complexity<a class="headerlink" href="#hidden-layers-complexity" title="Permanent link">¶</a></h3>
+<p>The number of hidden layers determines the "depth" and complexity of the model. </p>
+<ul>
+<li><strong>No Hidden Layers?</strong><ul>
+<li>If there are no hidden layers and the output activation is linear, the model reduces to a standard <strong>Linear Regression</strong>.</li>
+</ul>
+</li>
+<li><strong>Multilayer Feed-forward</strong>: <ul>
+<li>Inputs to each node are combined using a weighted linear combination and then passed through an activation function.</li>
+<li>Increasing the number of hidden layers allows the network to capture increasingly complicated dynamics, but also increases the risk of overfitting.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="neural-network-autoregression-nnar">Neural Network Autoregression (<abbr title="Neural Network Autoregression">NNAR</abbr>)<a class="headerlink" href="#neural-network-autoregression-nnar" title="Permanent link">¶</a></h3>
+<p><abbr title="Neural Network Autoregression">NNAR</abbr> specifically uses lagged values of a time series as inputs to a feed-forward neural network.<br>
+* <strong><span class="arithmatex">\(NNAR(p, k)\)</span></strong>:<br>
+    - <strong><span class="arithmatex">\(p\)</span></strong>: Number of lagged inputs (e.g., <span class="arithmatex">\(y_{t-1}, \dots, y_{t-p}\)</span>).<br>
+    - <strong><span class="arithmatex">\(k\)</span></strong>: Number of nodes in the single hidden layer.<br>
+* <strong>Special Case</strong>: <span class="arithmatex">\(NNAR(p, 0)\)</span> is equivalent to a linear <span class="arithmatex">\(AR(p)\)</span> model.</p>
+<hr>
+<h3 id="training-mechanics-batch-iterations-epoch">Training Mechanics: Batch, Iterations &amp; Epoch<a class="headerlink" href="#training-mechanics-batch-iterations-epoch" title="Permanent link">¶</a></h3>
+<p>Large datasets cannot be processed by the <abbr title="Neural Network">NN</abbr> all at once due to memory constraints.</p>
+<ul>
+<li><strong>Batch</strong>: A subset of the dataset. Batch size is a hyperparameter.</li>
+<li><strong>Iterations</strong>: The number of batches needed to complete one full pass of the data.</li>
+<li><strong>Epoch</strong>: One Epoch occurs when the <strong>ENTIRE</strong> dataset has been passed forward and backward through the network exactly <strong>ONCE</strong>.</li>
+</ul>
+<h4 id="the-training-curve">The Training Curve<a class="headerlink" href="#the-training-curve" title="Permanent link">¶</a></h4>
+<p>Neural networks use gradient descent to update weights across multiple epochs. As the number of epochs increases, the model transitions through three phases:<br>
+1. <strong>Underfitting</strong>: The model hasn't learned the patterns yet.<br>
+2. <strong>Optimal</strong>: The model has learned the general trends.<br>
+3. <strong>Overfitting</strong>: The model has memorized the noise in the data, leading to poor out-of-sample performance.</p>
+<hr>
 
 
 

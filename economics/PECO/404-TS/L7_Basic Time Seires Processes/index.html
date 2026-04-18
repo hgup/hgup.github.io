@@ -24,7 +24,7 @@
     
     
       
-        <title>Basic TS Processes - Hursh Gupta</title>
+        <title>Basic Time Series Processes - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-ts-processes" class="md-skip">
+        <a href="#basic-time-series-processes" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basic TS Processes
+              Basic Time Series Processes
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8721,7 +8721,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8758,7 +8758,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8776,7 +8776,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8802,10 +8802,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#white-noise-process" class="md-nav__link">
+  <a href="#1-white-noise-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        White Noise Process
+        1. White Noise Process
       
     </span>
   </a>
@@ -8813,10 +8813,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moving-average-process" class="md-nav__link">
+  <a href="#2-moving-average-ma-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Moving Average Process
+        2. Moving Average (MA) Process
       
     </span>
   </a>
@@ -8824,10 +8824,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#random-walk" class="md-nav__link">
+  <a href="#3-random-walk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Random Walk
+        3. Random Walk
       
     </span>
   </a>
@@ -8835,10 +8835,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#linear-trend" class="md-nav__link">
+  <a href="#4-linear-trend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linear Trend
+        4. Linear Trend
       
     </span>
   </a>
@@ -8846,10 +8846,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#autoregressive-process-arp" class="md-nav__link">
+  <a href="#5-autoregressive-process-arp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Autoregressive Process: \(AR(p)\)
+        5. Autoregressive Process: AR(p)
       
     </span>
   </a>
@@ -8857,10 +8857,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moving-average-process-maq" class="md-nav__link">
+  <a href="#6-moving-average-process-maq" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Moving Average Process: MA(q)
+        6. Moving Average Process: MA(q)
       
     </span>
   </a>
@@ -8868,10 +8868,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#armapq" class="md-nav__link">
+  <a href="#7-armap-q" class="md-nav__link">
     <span class="md-ellipsis">
       
-        \(ARMA(p,q)\)
+        7. ARMA(p, q)
       
     </span>
   </a>
@@ -8929,7 +8929,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -9057,7 +9057,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -9085,7 +9085,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -9113,7 +9113,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9353,7 +9353,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9905,7 +9905,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10993,7 +10993,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12811,97 +12811,51 @@
 
 
 <!-- Markdown content -->
-<h1 id="basic-ts-processes">Basic TS Processes<a class="headerlink" href="#basic-ts-processes" title="Permanent link">¶</a></h1>
-<ul>
-<li>These are the building blocks to any kinds of advanced models.</li>
-</ul>
-<h3 id="white-noise-process">White Noise Process<a class="headerlink" href="#white-noise-process" title="Permanent link">¶</a></h3>
-<p>Let <span class="arithmatex">\(e_{1},e_{2},\dots\)</span>  be sequence of random errors IID <span class="arithmatex">\(N(0,\sigma_{e}^{2})\)</span></p>
-<div class="arithmatex">\[
-Y_{t} = e_{t}
-\]</div>
-<ul>
-<li>Neither the mean nor the variance depends on <span class="arithmatex">\(t\)</span></li>
-</ul>
+<h1 id="basic-time-series-processes">Basic Time Series Processes<a class="headerlink" href="#basic-time-series-processes" title="Permanent link">¶</a></h1>
+<p>These fundamental stochastic processes serve as the building blocks for constructing and understanding advanced time series models.</p>
+<h3 id="1-white-noise-process">1. White Noise Process<a class="headerlink" href="#1-white-noise-process" title="Permanent link">¶</a></h3>
+<p>A white noise process is the simplest form of a stationary time series.<br>
+* <strong>Definition:</strong> Let <span class="arithmatex">\(e_{1}, e_{2}, \dots\)</span> be a sequence of random errors such that <span class="arithmatex">\(e_{t} \sim \text{IID } N(0, \sigma_{e}^{2})\)</span>. The process is defined as:<br>
+  $<span class="arithmatex">\(Y_{t} = e_{t}\)</span>$<br>
+* <strong>Stationarity:</strong> Neither the mean (<span class="arithmatex">\(E[Y_t] = 0\)</span>) nor the variance (<span class="arithmatex">\(Var(Y_t) = \sigma_e^2\)</span>) depends on the time point <span class="arithmatex">\(t\)</span>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Why "white noise"?</p>
-<p>A white light thrown on some surface that distributes it into 7 colors, the fluctuation of that white light resembles this noise.</p>
+<p>Much like white light contains all visible frequencies of the spectrum, this noise process contains equal power across all frequencies in its spectral density. A white light thrown on some surface that distributes it into 7 colors results in fluctuations that resemble this noise.</p>
 </div>
-<h3 id="moving-average-process">Moving Average Process<a class="headerlink" href="#moving-average-process" title="Permanent link">¶</a></h3>
-<p>Let <span class="arithmatex">\(e_{1},e_{2},\dots\)</span>  be sequence of random errors IID <span class="arithmatex">\(N(0,\sigma_{e}^{2})\)</span></p>
-<div class="arithmatex">\[
-Y_{t} = e_{t} + 0.5e_{t-1}
-\]</div>
-<p>The <span class="arithmatex">\(0.5e_{t-1}\)</span> is like an average, since it moves with <span class="arithmatex">\(t\)</span>, this is called a moving average process.</p>
-<h3 id="random-walk">Random Walk<a class="headerlink" href="#random-walk" title="Permanent link">¶</a></h3>
-<p>Let <span class="arithmatex">\(e_{1},e_{2},\dots\)</span>  be sequence of random errors IID <span class="arithmatex">\(N(0,\sigma_{e}^{2})\)</span></p>
-<div class="arithmatex">\[
-\begin{align}
-Y_{1}  &amp; = e_{1} \\
-Y_{2}  &amp; = e_{1} + e_{2} \\
-\end{align}
-\]</div>
-<p>and so on…</p>
-<div class="arithmatex">\[
-Y_{t} = \sum_{i=1}^t e_{i}
-\]</div>
-<p>It is the sum of all errors up until time point, <span class="arithmatex">\(t\)</span>.</p>
-<p>We can also write,</p>
-<div class="arithmatex">\[
-\boxed{
-Y_{t} = Y_{t-1} + e_{t}
-}
-\]</div>
-<ul>
-<li>Current state that depends on a previous state + one additional random error.</li>
-<li>Drunkard's walk: Cause a drunk person doesn't know his/her next step.</li>
-</ul>
-<h3 id="linear-trend">Linear Trend<a class="headerlink" href="#linear-trend" title="Permanent link">¶</a></h3>
-<p>Let <span class="arithmatex">\(e_{1},e_{2},\dots\)</span>  be sequence of random errors IID <span class="arithmatex">\(N(0,\sigma_{e}^{2})\)</span></p>
-<div class="arithmatex">\[
-Y_{1} = a + bt + e_{t}
-\]</div>
-<p>where <span class="arithmatex">\(a, b\)</span> are constants.</p>
-<ul>
-<li>The mean shifts up.</li>
-</ul>
-<h3 id="autoregressive-process-arp">Autoregressive Process: <span class="arithmatex">\(AR(p)\)</span><a class="headerlink" href="#autoregressive-process-arp" title="Permanent link">¶</a></h3>
-<p>Forecast a variable using a <em>linear combination of the past values of the variable itself</em>.</p>
-<div class="arithmatex">\[
-Y_{t} = c + \phi_{1}Y_{t-1} + \phi_{2}Y_{t-2} + \dots + \phi_{p} Y_{t-p} + e_{t}
-\]</div>
-<ul>
-<li>Regress the observation with its own past values (lags).</li>
-<li>Auto? Because <span class="arithmatex">\(Y_{t}\)</span> corresponds to only one random variable.</li>
-</ul>
-<h4 id="ar1-model"><span class="arithmatex">\(AR(1)\)</span> model<a class="headerlink" href="#ar1-model" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-Y_{t} = c + \phi_{1}Y_{t-1} + e_{t}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(AR(1)\)</span> model is stationary if <span class="arithmatex">\(\lvert \phi_{1} \rvert \lt 1\)</span></li>
-<li>e.g. <span class="arithmatex">\(Y_{t} = 10 + 0.4 Y_{t-1} + e_{t}\)</span> is stationary, since <span class="arithmatex">\(0.4 \lt 1\)</span></li>
-</ul>
-<h4 id="ar2-model"><span class="arithmatex">\(AR(2)\)</span> model<a class="headerlink" href="#ar2-model" title="Permanent link">¶</a></h4>
-<div class="arithmatex">\[
-Y_{t} = c + \phi_{1}Y_{t-1} + \phi_{2}Y_{t-2} + e_{t}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(AR(2)\)</span> model is stationary if <span class="arithmatex">\(\lvert \phi_{2} \rvert \lt 1\)</span> and <span class="arithmatex">\(\phi_{1} + \phi_{2} \lt 1\)</span> </li>
-</ul>
-<h3 id="moving-average-process-maq">Moving Average Process: MA(q)<a class="headerlink" href="#moving-average-process-maq" title="Permanent link">¶</a></h3>
-<p>MA model uses the past errors in a regression. It uses the last <span class="arithmatex">\(q\)</span> errors.</p>
-<div class="arithmatex">\[
-Y_{t} = c + e_{t} + \theta_{1} + \dots + \theta_{q}e_{t-q}
-\]</div>
-<ul>
-<li>Each value of <span class="arithmatex">\(Y_{t}\)</span> can be considered as weighted moving average of past forecast errors.</li>
-<li>MA model is suitable for an irregular component, <span class="arithmatex">\(I_{t}\)</span>.</li>
-</ul>
-<h3 id="armapq"><span class="arithmatex">\(ARMA(p,q)\)</span><a class="headerlink" href="#armapq" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Y_{t} = \phi_{1}Y_{t-1} + \dots + \phi_{p}Y_{t-p} + \theta_{1}e_{t-1} + \dots \theta_{q}e_{t-q} + e_{t}
-\]</div>
+<h3 id="2-moving-average-ma-process">2. Moving Average (MA) Process<a class="headerlink" href="#2-moving-average-ma-process" title="Permanent link">¶</a></h3>
+<p>The MA process suggests that the current observation is a function of current and past "shocks" or errors.<br>
+* <strong>Simple Example:</strong> <span class="arithmatex">\(Y_{t} = e_{t} + 0.5e_{t-1}\)</span>.<br>
+* <strong>Mechanism:</strong> The term <span class="arithmatex">\(0.5e_{t-1}\)</span> acts like an average of sorts. Because this influence moves forward with <span class="arithmatex">\(t\)</span>, it is called a moving average process.</p>
+<h3 id="3-random-walk">3. Random Walk<a class="headerlink" href="#3-random-walk" title="Permanent link">¶</a></h3>
+<p>The Random Walk represents a process where the current value is the accumulation of all past random shocks.<br>
+* <strong>Mathematical Form:</strong> <span class="arithmatex">\(Y_{t} = \sum_{i=1}^t e_{i}\)</span>.<br>
+* <strong>Recursive Form:</strong> $<span class="arithmatex">\(Y_{t} = Y_{t-1} + e_{t}\)</span>$<br>
+* <strong>Characteristics:</strong> The current state depends entirely on the previous state plus one additional random error.</p>
+<div class="admonition quote">
+<p class="admonition-title">The Drunkard's Walk</p>
+<p>This is often called the "Drunkard’s Walk" because a drunk person doesn't know their next step; each step starts from the previous position but moves in a completely random direction.</p>
+</div>
+<h3 id="4-linear-trend">4. Linear Trend<a class="headerlink" href="#4-linear-trend" title="Permanent link">¶</a></h3>
+<p>A linear trend model describes a process where the mean level of the series changes systematically over time.<br>
+* <strong>Equation:</strong> <span class="arithmatex">\(Y_{t} = a + bt + e_{t}\)</span> (where <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are constants).<br>
+* <strong>Behavior:</strong> Unlike stationary processes, the mean shifts up (or down) linearly with <span class="arithmatex">\(t\)</span>.</p>
+<h3 id="5-autoregressive-process-arp">5. Autoregressive Process: AR(p)<a class="headerlink" href="#5-autoregressive-process-arp" title="Permanent link">¶</a></h3>
+<p>Autoregressive models forecast a variable using a linear combination of its own past values.<br>
+* <strong>General Form:</strong> <span class="arithmatex">\(Y_{t} = c + \phi_{1}Y_{t-1} + \phi_{2}Y_{t-2} + \dots + \phi_{p} Y_{t-p} + e_{t}\)</span><br>
+* <strong>Concept:</strong> This involves regressing the observation against its own "lags." It is "Auto" because <span class="arithmatex">\(Y_{t}\)</span> relates only to its own historical values.<br>
+* <strong>AR(1) Model:</strong> <span class="arithmatex">\(Y_{t} = c + \phi_{1}Y_{t-1} + e_{t}\)</span>.<br>
+    * <strong>Stationarity Condition:</strong> An AR(1) process is stationary if and only if <span class="arithmatex">\(|\phi_{1}| &lt; 1\)</span>.<br>
+    * <em>Example:</em> <span class="arithmatex">\(Y_{t} = 10 + 0.4 Y_{t-1} + e_{t}\)</span> is stationary since <span class="arithmatex">\(|0.4| &lt; 1\)</span>.<br>
+* <strong>AR(2) Model:</strong> <span class="arithmatex">\(Y_{t} = c + \phi_{1}Y_{t-1} + \phi_{2}Y_{t-2} + e_{t}\)</span>.<br>
+    * <strong>Stationarity Condition:</strong> Requires <span class="arithmatex">\(|\phi_{2}| &lt; 1\)</span> and <span class="arithmatex">\(\phi_{1} + \phi_{2} &lt; 1\)</span>.</p>
+<h3 id="6-moving-average-process-maq">6. Moving Average Process: MA(q)<a class="headerlink" href="#6-moving-average-process-maq" title="Permanent link">¶</a></h3>
+<p>While AR models use past <em>values</em>, MA models use past <em>forecast errors</em> in a regression, looking back <span class="arithmatex">\(q\)</span> errors.<br>
+* <strong>General Form:</strong> <span class="arithmatex">\(Y_{t} = c + e_{t} + \theta_{1}e_{t-1} + \dots + \theta_{q}e_{t-q}\)</span><br>
+* <strong>Utility:</strong> Each value of <span class="arithmatex">\(Y_{t}\)</span> is essentially a weighted moving average of past forecast errors. This model is particularly suitable for modeling the irregular component (<span class="arithmatex">\(I_{t}\)</span>) of a time series.</p>
+<h3 id="7-armap-q">7. ARMA(p, q)<a class="headerlink" href="#7-armap-q" title="Permanent link">¶</a></h3>
+<p>The ARMA model combines both Autoregressive and Moving Average components to capture complex dependencies in a parsimonious way.<br>
+* <strong>Equation:</strong> $<span class="arithmatex">\(Y_{t} = \phi_{1}Y_{t-1} + \dots + \phi_{p}Y_{t-p} + e_{t} + \theta_{1}e_{t-1} + \dots + \theta_{q}e_{t-q}\)</span>$</p>
+<hr>
 
 
 
@@ -12937,7 +12891,7 @@ Y_{t} = \phi_{1}Y_{t-1} + \dots + \phi_{p}Y_{t-p} + \theta_{1}e_{t-1} + \dots \t
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L6__Time%20Series%20Decomposition/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TS Decomposition">
+          <a href="../L6__Time%20Series%20Decomposition/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Time Series Decomposition">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12947,7 +12901,7 @@ Y_{t} = \phi_{1}Y_{t-1} + \dots + \phi_{p}Y_{t-p} + \theta_{1}e_{t-1} + \dots \t
                 Previous
               </span>
               <div class="md-ellipsis">
-                TS Decomposition
+                Time Series Decomposition
               </div>
             </div>
           </a>

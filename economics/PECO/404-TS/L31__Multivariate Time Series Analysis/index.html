@@ -24,7 +24,7 @@
     
     
       
-        <title>Multivariate TS Analysis - Hursh Gupta</title>
+        <title>Multivariate Time Series Analysis - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multivariate-ts-analysis" class="md-skip">
+        <a href="#multivariate-time-series-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Multivariate TS Analysis
+              Multivariate Time Series Analysis
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9790,7 +9790,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -9808,7 +9808,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -9834,10 +9834,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#motivation" class="md-nav__link">
+  <a href="#1-motivation-and-objectives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Motivation
+        1. Motivation and Objectives
       
     </span>
   </a>
@@ -9845,10 +9845,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+  <a href="#2-domain-applications" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectives
+        2. Domain Applications
       
     </span>
   </a>
@@ -9856,10 +9856,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#3-key-analytical-questions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        3. Key Analytical Questions
       
     </span>
   </a>
@@ -9867,10 +9867,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#potentially-interesting-question" class="md-nav__link">
+  <a href="#4-mathematical-foundation-matrix-algebra-refresher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Potentially Interesting Question
+        4. Mathematical Foundation: Matrix Algebra Refresher
       
     </span>
   </a>
@@ -9878,21 +9878,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#refresher-on-matrix-algebra" class="md-nav__link">
+  <a href="#5-random-vector-properties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Refresher on Matrix Algebra
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#random-vector-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Random Vector properties
+        5. Random Vector Properties
       
     </span>
   </a>
@@ -10982,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12800,97 +12789,54 @@
 
 
 <!-- Markdown content -->
-<h1 id="multivariate-ts-analysis">Multivariate <abbr title="Time Series">TS</abbr> Analysis<a class="headerlink" href="#multivariate-ts-analysis" title="Permanent link">¶</a></h1>
-<h3 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">¶</a></h3>
+<h1 id="multivariate-time-series-analysis">Multivariate Time Series Analysis<a class="headerlink" href="#multivariate-time-series-analysis" title="Permanent link">¶</a></h1>
+<p>Multivariate time series (<abbr title="Multivariate Time Series">MTS</abbr>) analysis involves the study of multiple related time series observed simultaneously. Unlike univariate analysis, which focuses on a single variable's past to predict its future, <abbr title="Multivariate Time Series">MTS</abbr> explores the dependencies and interactions between different variables.</p>
+<h3 id="1-motivation-and-objectives">1. Motivation and Objectives<a class="headerlink" href="#1-motivation-and-objectives" title="Permanent link">¶</a></h3>
+<p>The primary goal is to shift from a scalar perspective to a <strong>Vector Process</strong>.<br>
+* <strong>Inter-relationships:</strong> Understanding how <span class="arithmatex">\(Y_{t}\)</span> and <span class="arithmatex">\(X_{t}\)</span> move together.<br>
+* <strong>Cross-relationships:</strong> Identifying lead-lag effects, such as how <span class="arithmatex">\(X_{t-2}\)</span> might influence the current value of <span class="arithmatex">\(Y_{t}\)</span>.<br>
+* <strong>Improved Forecasting:</strong> Leveraging the information in auxiliary series (<span class="arithmatex">\(X_{t}\)</span>) to produce more accurate forecasts for the target series (<span class="arithmatex">\(Y_{t}\)</span>).</p>
+<hr>
+<h3 id="2-domain-applications">2. Domain Applications<a class="headerlink" href="#2-domain-applications" title="Permanent link">¶</a></h3>
+<p><abbr title="Multivariate Time Series">MTS</abbr> is essential in fields where variables are deeply interconnected:</p>
 <ul>
-<li>Multivariate/Vector processes<ul>
-<li>Several related <abbr title="Time Series">TS</abbr> processes observed simultaneously over time</li>
-</ul>
-</li>
-<li>Interested in inter relationships (e.g. <span class="arithmatex">\(Y_{t}\)</span> and <span class="arithmatex">\(X_{t}\)</span>)</li>
-<li>Interested in Cross relationships between the series (<span class="arithmatex">\(Y_{t}\)</span> and <span class="arithmatex">\(X_{t-2}\)</span> for example)</li>
-</ul>
-<h3 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">¶</a></h3>
-<ul>
-<li>Understand <em>Dynamic Relationships</em> over time</li>
-<li>Utilize additional information from other time series (<span class="arithmatex">\(X_{t}\)</span>) to <strong>improve forecasts</strong> for <span class="arithmatex">\(y_{t}\)</span>.</li>
-</ul>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
-<h4 id="finance">Finance<a class="headerlink" href="#finance" title="Permanent link">¶</a></h4>
-<ul>
-<li>Price movements in one market spread easily and instantly to another market.<ul>
-<li>E.g. Bitcoin and Ethereum prices</li>
-<li>Consider them jointly to understand the dynamic structure of global market</li>
-</ul>
-</li>
-<li>For an investor holding multiple assets, making investment decisions</li>
-</ul>
-<h4 id="economics">Economics<a class="headerlink" href="#economics" title="Permanent link">¶</a></h4>
-<ul>
-<li>Simultaneous behaviors<ul>
-<li>Interrelationships between different variables</li>
-</ul>
-</li>
-</ul>
-<h4 id="environmental-sciences-and-agriculture">Environmental sciences and agriculture<a class="headerlink" href="#environmental-sciences-and-agriculture" title="Permanent link">¶</a></h4>
-<ul>
-<li>Joint study Min max temperature, humidity, wind speed and direction → Total production of wheat</li>
-</ul>
-<h4 id="health-and-environment-related-studies">Health and Environment related studies<a class="headerlink" href="#health-and-environment-related-studies" title="Permanent link">¶</a></h4>
-<ul>
-<li>Air pollution level, number of asthma patients, registered cars etc.</li>
+<li><strong>Finance:</strong> Analyzing Bitcoin and Ethereum jointly to understand global market dynamics. Information in one market often spreads instantly to others, which is vital for portfolio management.</li>
+<li><strong>Economics:</strong> Studying the simultaneous behaviors of inflation, interest rates, and GDP.</li>
+<li><strong>Environmental Science:</strong> Modeling the joint impact of temperature, humidity, and wind speed on agricultural yields (e.g., wheat production).</li>
+<li><strong>Public Health:</strong> Tracking the relationship between air pollution levels, traffic volume, and hospital admissions for respiratory issues.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L31__Multivariate%20Time%20Series%20Analysis-1769149238997.webp" data-desc-position="bottom"><img alt="L31__Multivariate Time Series Analysis-1769149238997.webp" src="../../../../assets/images/2026/01/L31__Multivariate%20Time%20Series%20Analysis-1769149238997.webp"></a></p>
+<hr>
+<h3 id="3-key-analytical-questions">3. Key Analytical Questions<a class="headerlink" href="#3-key-analytical-questions" title="Permanent link">¶</a></h3>
+<p>When dealing with multiple series, we look beyond simple correlations:<br>
+* <strong>Causality:</strong> Is there a specific direction of influence (e.g., does <span class="arithmatex">\(X\)</span> cause <span class="arithmatex">\(Y\)</span>)?<br>
+* <strong>Feedback Loops:</strong> Do the series influence each other bidirectionally?<br>
+* <strong>Impulse Response:</strong> How does a shock in one series (e.g., a sudden oil price hike) transfer to and affect the other series over time?<br>
+* <strong>Common Factors:</strong> Are there underlying "latent" variables causing disturbances across all observed series?</p>
+<hr>
+<h3 id="4-mathematical-foundation-matrix-algebra-refresher">4. Mathematical Foundation: Matrix Algebra Refresher<a class="headerlink" href="#4-mathematical-foundation-matrix-algebra-refresher" title="Permanent link">¶</a></h3>
+<p>To handle vector processes, we represent the systems using matrices. For an <span class="arithmatex">\(n \times n\)</span> matrix <span class="arithmatex">\(A\)</span>:</p>
 <ul>
-<li>
-<p>We note that there are dependencies between the different indices</p>
+<li><strong>Eigenvalues (<span class="arithmatex">\(\lambda_{i}\)</span>):</strong> The <span class="arithmatex">\(n\)</span> roots of the characteristic equation <span class="arithmatex">\(|A - \lambda I_{n}| = 0\)</span>.</li>
+<li><strong>Eigenvectors (<span class="arithmatex">\(q_{i}\)</span>):</strong> Non-zero vectors satisfying <span class="arithmatex">\(Aq_{i} = \lambda_{i} q_{i}\)</span>.</li>
+<li><strong>Diagonalization:</strong> If <span class="arithmatex">\(Q\)</span> is a matrix of eigenvectors, then <span class="arithmatex">\(Q^{-1}AQ = \Lambda\)</span>, where <span class="arithmatex">\(\Lambda\)</span> is the diagonal matrix of eigenvalues.</li>
+</ul>
+<p><strong>Important Properties:</strong><br>
+* <strong>Determinant:</strong> <span class="arithmatex">\(|A| = \prod \lambda_{i}\)</span> (Product of eigenvalues).<br>
+* <strong>Trace:</strong> <span class="arithmatex">\(trace(A) = \sum \lambda_{i}\)</span> (Sum of eigenvalues).<br>
+* <strong>Matrix Powers:</strong> <span class="arithmatex">\(A^m = Q \Lambda^m Q^{-1}\)</span> (Useful for calculating long-term stability in vector models).</p>
+<hr>
+<h3 id="5-random-vector-properties">5. Random Vector Properties<a class="headerlink" href="#5-random-vector-properties" title="Permanent link">¶</a></h3>
+<p>In <abbr title="Multivariate Time Series">MTS</abbr>, we treat the observation at time <span class="arithmatex">\(t\)</span> as a <span class="arithmatex">\(p \times 1\)</span> random vector <span class="arithmatex">\(X_{t} = [X_{1t}, X_{2t}, \dots, X_{pt}]'\)</span>.</p>
+<ul>
+<li><strong>Mean Vector:</strong> Contains the expected value <span class="arithmatex">\(E(X_{it})\)</span> for each series.</li>
+<li><strong>Variance-Covariance Matrix (<span class="arithmatex">\(\Sigma\)</span>):</strong><ul>
+<li><strong>Diagonal elements (<span class="arithmatex">\(\sigma_{ii}\)</span>):</strong> The variance of each individual series.</li>
+<li><strong>Off-diagonal elements (<span class="arithmatex">\(\sigma_{ij}\)</span>):</strong> The covariance between series <span class="arithmatex">\(i\)</span> and series <span class="arithmatex">\(j\)</span>.</li>
+</ul>
 </li>
-<li>
-<p>Another example is Nottem temperatures and "heating demand"</p>
-</li>
-<li>Another one "population", "employment" etc</li>
 </ul>
-<h3 id="potentially-interesting-question">Potentially Interesting Question<a class="headerlink" href="#potentially-interesting-question" title="Permanent link">¶</a></h3>
-<ul>
-<li>Is there a causal direction?</li>
-<li>Are there feedback between the different series?</li>
-<li>How do impulses (shocks) transfer between the series?</li>
-<li>What are the common factors that cause disturbances across series?</li>
-</ul>
-<h3 id="refresher-on-matrix-algebra">Refresher on Matrix Algebra<a class="headerlink" href="#refresher-on-matrix-algebra" title="Permanent link">¶</a></h3>
-<ul>
-<li><span class="arithmatex">\(A\)</span> = <span class="arithmatex">\(n \times n\)</span> matrix</li>
-<li><span class="arithmatex">\(f(\lambda) = \lvert A - \lambda I_{n} \rvert\)</span> is a polynomial in <span class="arithmatex">\(\{ \lambda_{i} \}\)</span> are the <span class="arithmatex">\(n\)</span> roots of <span class="arithmatex">\(\lvert A - \lambda I_{n} \rvert =0\)</span></li>
-</ul>
-<p>Thus,</p>
-<div class="arithmatex">\[
-(A - \lambda_{i}I_{n})q_{i} = 0 \quad \text{or} \quad Aq_{i} = \lambda_{i} q_{i}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(\lambda_{i}\)</span> are the <span class="arithmatex">\(n\)</span> eigenvalues of <span class="arithmatex">\(A\)</span></li>
-<li><span class="arithmatex">\(q_{i}\)</span> are the <span class="arithmatex">\(n\)</span> eigenvectors of <span class="arithmatex">\(A\)</span>. Let <span class="arithmatex">\(Q = (q_{1},q_{2},\dots,q_{n})\)</span></li>
-</ul>
-<p>Then,</p>
-<div class="arithmatex">\[
-AQ = (\lambda_{1}q_{1},\lambda_{2}q_{2},\dots,\lambda_{n}q_{n}) = Q\Lambda
-\]</div>
-<p>Where <span class="arithmatex">\(\Lambda = diag(\lambda_{1},\lambda_{2},\dots,\lambda_{n})\)</span></p>
-<div class="arithmatex">\[
-Q^{-1} A Q = \Lambda
-\]</div>
-<p>Some properties:</p>
-<ul>
-<li><span class="arithmatex">\(\lvert A \rvert = \Pi \lambda_{i}\)</span></li>
-<li><span class="arithmatex">\(trace(A) = \sum\lambda_{i}\)</span></li>
-<li><span class="arithmatex">\(A^m = Q \Lambda^m Q^{-1}\)</span></li>
-</ul>
-<h3 id="random-vector-properties">Random Vector properties<a class="headerlink" href="#random-vector-properties" title="Permanent link">¶</a></h3>
-<p>Let <span class="arithmatex">\(X\)</span> be a <span class="arithmatex">\(p\times 1\)</span> random vector</p>
-<ul>
-<li>Mean: <span class="arithmatex">\(E(X_{i})\)</span></li>
-<li>Variance: <span class="arithmatex">\(E(X_{i}-\mu_{i})^{2}=\sigma_{ii}\)</span></li>
-<li>Covariance: <span class="arithmatex">\(E(X_{i}-\mu_{i})(X_{j}-\mu_{j})=\sigma_{ij}\)</span></li>
-</ul>
+<hr>
 
 
 

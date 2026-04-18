@@ -24,7 +24,7 @@
     
     
       
-        <title>Seasonality &amp; its Features - Hursh Gupta</title>
+        <title>Seasonality &amp; Its Features - Hursh Gupta</title>
       
     
     
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Seasonality &amp; its Features
+              Seasonality &amp; Its Features
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8933,7 +8933,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8970,7 +8970,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8988,7 +8988,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -9014,10 +9014,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#graphical-techniques-to-detect-seasonality" class="md-nav__link">
+  <a href="#1-key-notations-and-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Graphical Techniques to detect Seasonality
+        1. Key Notations and Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-understanding-seasonality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Understanding Seasonality
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-graphical-techniques-to-detect-seasonality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Graphical Techniques to Detect Seasonality
       
     </span>
   </a>
@@ -9047,7 +9069,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9287,7 +9309,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9839,7 +9861,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10927,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12745,86 +12767,46 @@
 
 
 <!-- Markdown content -->
-<h1 id="seasonality-its-features">Seasonality &amp; its Features<a class="headerlink" href="#seasonality-its-features" title="Permanent link">¶</a></h1>
+<h1 id="seasonality-its-features">Seasonality &amp; Its Features<a class="headerlink" href="#seasonality-its-features" title="Permanent link">¶</a></h1>
+<h3 id="1-key-notations-and-operations">1. Key Notations and Operations<a class="headerlink" href="#1-key-notations-and-operations" title="Permanent link">¶</a></h3>
+<p>It is important to distinguish between the types of differencing operators used to stabilize a time series:</p>
 <ul>
-<li>
-<p>Note, there is a difference between</p>
+<li><strong>Lag <span class="arithmatex">\(d\)</span> Difference (<span class="arithmatex">\(\nabla_{d} Y_{t}\)</span>):</strong> Used to remove seasonality with a period <span class="arithmatex">\(d\)</span>.</li>
+<li><strong><span class="arithmatex">\(d\)</span>-th Difference (<span class="arithmatex">\(\nabla^d Y_{t}\)</span>):</strong> If the trend <span class="arithmatex">\(m_{t}\)</span> is a polynomial of order <span class="arithmatex">\(d\)</span>, then applying the <span class="arithmatex">\(d\)</span>-th difference will make the series stationary.</li>
+</ul>
+<h3 id="2-understanding-seasonality">2. Understanding Seasonality<a class="headerlink" href="#2-understanding-seasonality" title="Permanent link">¶</a></h3>
+<p>Seasonality refers to regular periodic variations where the cycle period is <span class="arithmatex">\(\leq 1\)</span> year. It is usually predictable, as seasonal factors show repeating behavior.</p>
 <ul>
-<li>lag <span class="arithmatex">\(d\)</span> difference: <span class="arithmatex">\(\nabla_{d} Y_{t}\)</span> and,</li>
-<li><span class="arithmatex">\(d\)</span>-th difference: <span class="arithmatex">\(\nabla^d Y_{t}\)</span></li>
-<li>If the trend <span class="arithmatex">\(m_{t}\)</span> is a polynomial of order <span class="arithmatex">\(d\)</span> then <span class="arithmatex">\(\nabla^dY_{t}\)</span> is stationary</li>
-<li>if the data is seasonal with period <span class="arithmatex">\(d\)</span> then <span class="arithmatex">\(\nabla_{d}Y_{t}\)</span> will remove seasonality.</li>
+<li><strong>Causes:</strong> The cycle of seasons, holidays (e.g., Diwali), regular changes in human behavior, or biological rhythms.</li>
+<li><strong>Examples:</strong><ul>
+<li><strong>Biological:</strong> Animal migration patterns.</li>
+<li><strong>Retail:</strong> Increased sales of coffee and warm clothes in winter; fans and ACs in summer.</li>
+<li><strong>Cultural:</strong> Spikes in sales for clothes and firecrackers during Diwali.</li>
+<li><strong>Economic:</strong> Unemployment peaks often seen in June.</li>
 </ul>
 </li>
-<li>
-<p>Seasonality</p>
-<ul>
-<li>= regular periodic variation where period of cycle <span class="arithmatex">\(\leq 1\)</span> </li>
-<li>usually predictable</li>
-<li>seasonal factors show repeating behavior</li>
-<li>Caused by cycle of seasons, holidays, regular changes in behavior, biological rhythms</li>
+<li><strong>Purpose of Study:</strong> Studying these patterns allows for better planning regarding temporal changes and helps eliminate non-stationarity for more accurate modeling.</li>
 </ul>
-</li>
-<li>
-<p>Examples of seasonality</p>
-<ul>
-<li>Animal migration</li>
-<li>increase in sales<ul>
-<li>coffee/warm clothes during winter</li>
-<li>fans/ACs during summer</li>
-</ul>
-</li>
-<li>clothes and fire crackers' during Diwali</li>
-<li>Unemployment in June</li>
-</ul>
-</li>
-<li>
-<p>Reason to study seasonality</p>
-<ul>
-<li>Better planning for temporal channges</li>
-<li>Eliminate non-stationarity</li>
-</ul>
-</li>
-</ul>
-<h3 id="graphical-techniques-to-detect-seasonality">Graphical Techniques to detect Seasonality<a class="headerlink" href="#graphical-techniques-to-detect-seasonality" title="Permanent link">¶</a></h3>
-<h4 id="simple-ts-or-run-sequence-plot">Simple TS or Run Sequence Plot<a class="headerlink" href="#simple-ts-or-run-sequence-plot" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972165959.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972165959.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972165959.webp"></a></p>
-<ul>
-<li>The mean indicated by horizontal line</li>
-<li>Quarterly data</li>
-<li>Identify<ul>
-<li>Seasonality</li>
-<li>Shift in location (local behavior of drifting away from the mean)</li>
-<li>Shift in variation</li>
-</ul>
-</li>
-</ul>
+<h3 id="3-graphical-techniques-to-detect-seasonality">3. Graphical Techniques to Detect Seasonality<a class="headerlink" href="#3-graphical-techniques-to-detect-seasonality" title="Permanent link">¶</a></h3>
+<h4 id="simple-ts-run-sequence-plot">Simple TS (Run Sequence) Plot<a class="headerlink" href="#simple-ts-run-sequence-plot" title="Permanent link">¶</a></h4>
+<p>This is a standard plot of observations against time.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972165959.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972165959.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972165959.webp"></a><br>
+* <strong>Mean Line:</strong> Often indicated by a horizontal line to visualize the central tendency.<br>
+* <strong>Identification:</strong> Helps identify seasonality, shifts in location (local behavior drifting from the mean), and shifts in variation (heteroscedasticity).</p>
 <h4 id="seasonal-plot">Seasonal Plot<a class="headerlink" href="#seasonal-plot" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972322813.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972322813.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972322813.webp"></a></p>
-<ul>
-<li>Each color corresponds to one year</li>
-<li>The graph gives us behavior across years</li>
-<li>Observe<ul>
-<li>August (2021 (black) &gt; 2023 (blue))</li>
-</ul>
-</li>
-</ul>
-<p>If we observe the Airline Passengers data</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972433818.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972433818.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972433818.webp"></a></p>
+<p>In this plot, each color typically corresponds to one year, with months or quarters on the x-axis.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972322813.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972322813.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972322813.webp"></a><br>
+* <strong>Comparative Behavior:</strong> This allows you to observe behavior across different years for the same period (e.g., comparing August 2021 vs. August 2023).<br>
+* <strong>Airline Data Example:</strong> Useful for visualizing data with strong growth and repeating monthly patterns, such as international airline passengers.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972433818.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972433818.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972433818.webp"></a></p>
 <h4 id="seasonal-sub-series-plot">Seasonal Sub-series Plot<a class="headerlink" href="#seasonal-sub-series-plot" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972528832.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972528832.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972528832.webp"></a></p>
-<ul>
-<li>Evolution over time is more clearer <ul>
-<li>Extent: From min to max (the range of values)</li>
-<li>Mean: Blue lines show the mean of the month</li>
-</ul>
-</li>
-<li>One can't compare the number between two months</li>
-</ul>
+<p>This plot groups the data by the seasonal period (e.g., all Januaries, all Februaries) to show evolution over time more clearly.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972528832.webp" data-desc-position="bottom"><img alt="L12__Seasonality and its Features-1768972528832.webp" src="../../../../assets/images/2026/01/L12__Seasonality%20and%20its%20Features-1768972528832.webp"></a><br>
+* <strong>Extent:</strong> Shows the range from minimum to maximum values within that specific period.<br>
+* <strong>Mean:</strong> Horizontal blue lines often indicate the mean for that specific month or quarter across all years.<br>
+* <strong>Constraint:</strong> Note that while it shows trends within a month, it is not primarily designed for comparing absolute numbers between two different months.</p>
 <h4 id="box-plot">Box-plot<a class="headerlink" href="#box-plot" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>Same as <a href="#seasonal-sub-series-plot">#Seasonal Sub-series Plot</a> but also gives the idea of spread by talking about quartiles.</p>
-</blockquote>
+<p>The box-plot serves a similar purpose to the <a href="#seasonal-sub-series-plot">#Seasonal Sub-series Plot</a>, but provides a more detailed look at the spread of the data by visualizing quartiles and potential outliers for each seasonal period.</p>
 
 
 
@@ -12860,7 +12842,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L11__Non-stationary%20Time%20Series/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Non-stationary TS">
+          <a href="../L11__Non-stationary%20Time%20Series/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Non-stationary Time Series">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12870,20 +12852,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Non-stationary TS
+                Non-stationary Time Series
               </div>
             </div>
           </a>
         
         
           
-          <a href="../L13__Cyclicity%20and%20Test%20for%20Stationarity/" class="md-footer__link md-footer__link--next" aria-label="Next: Cyclicity and test for Stationarity">
+          <a href="../L13__Cyclicity%20and%20Test%20for%20Stationarity/" class="md-footer__link md-footer__link--next" aria-label="Next: Cyclicity and Tests for Stationarity">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Cyclicity and test for Stationarity
+                Cyclicity and Tests for Stationarity
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10290,6 +10290,17 @@
     <span class="md-ellipsis">
       
         Spectral Representation Theorem (SRT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectral-density-function-sdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spectral Density Function (SDF)
       
     </span>
   </a>
@@ -10938,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12760,93 +12771,82 @@
 <h3 id="spectral-representation-theorem-srt">Spectral Representation Theorem (<abbr title="Spectral Representation Theorem">SRT</abbr>)<a class="headerlink" href="#spectral-representation-theorem-srt" title="Permanent link">¶</a></h3>
 <div class="admonition quote">
 <p class="admonition-title">Theorem</p>
-<p>Any stationary time series can be expressed as a <strong>combination of sinusoidal functions</strong> of different frequencies, each with its own <em>amplitude</em> and <em>phase</em></p>
+<p>Any stationary time series can be expressed as a <strong>combination of sinusoidal functions</strong> of different frequencies, each with its own <em>amplitude</em> and <em>phase</em>.</p>
 </div>
 <div class="arithmatex">\[
 y_{t} = \int_{-\infty}^{\infty} e^{ i \omega t } Z(d\omega)
 \]</div>
 <ul>
-<li><span class="arithmatex">\(y_{t}\)</span> → stationary time series</li>
-<li><span class="arithmatex">\(\omega\)</span> → angular frequency</li>
-<li><span class="arithmatex">\(Z(d\omega)\)</span> → complex valued stochastic process which determines the contribution of frequency <span class="arithmatex">\(\omega\)</span> to <span class="arithmatex">\(y_{t}\)</span></li>
+<li><span class="arithmatex">\(y_{t}\)</span> → Stationary time series.</li>
+<li><span class="arithmatex">\(\omega\)</span> → Angular frequency.</li>
+<li><span class="arithmatex">\(Z(d\omega)\)</span> → A complex-valued stochastic process (with orthogonal increments) which determines the contribution of frequency <span class="arithmatex">\(\omega\)</span> to <span class="arithmatex">\(y_{t}\)</span>.</li>
 </ul>
+<hr>
+<h3 id="spectral-density-function-sdf">Spectral Density Function (<abbr title="Spectral Density Function">SDF</abbr>)<a class="headerlink" href="#spectral-density-function-sdf" title="Permanent link">¶</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition of <abbr title="Spectral Density Function">SDF</abbr></p>
-<p><span class="arithmatex">\(S(\omega)\)</span> describes how the variance of the TS is distributed across different frequencies.</p>
+<p><span class="arithmatex">\(S(\omega)\)</span> describes how the variance of the time series is distributed across different frequencies.</p>
 </div>
 <ul>
-<li><abbr title="Spectral Density Function">SDF</abbr> provides insight into periodic components</li>
-<li>widely used in signal processing, finance and other fields</li>
+<li><abbr title="Spectral Density Function">SDF</abbr> provides insight into the periodic components of the data.</li>
+<li>It is widely used in signal processing, finance, and various other fields.</li>
 </ul>
-<p>For a weakly stationary time series <span class="arithmatex">\(y_{t}\)</span>, <abbr title="Spectral Density Function">SDF</abbr> is the Fourier transform of the ACF <span class="arithmatex">\(\gamma(h)\)</span></p>
+<p>For a weakly stationary time series <span class="arithmatex">\(y_{t}\)</span>, the <abbr title="Spectral Density Function">SDF</abbr> is the Fourier transform of the Autocovariance Function (ACF) <span class="arithmatex">\(\gamma(h)\)</span>:</p>
 <div class="arithmatex">\[
 S(\omega) = \dfrac{1}{2\pi}\sum_{h=-\infty}^{\infty}  \gamma(h) e^{ -i \omega h }
 \]</div>
-<ul>
-<li><span class="arithmatex">\(\gamma(h)= E(y_{t}y_{t+h})\)</span></li>
-</ul>
+<p>where <span class="arithmatex">\(\gamma(h)= E(y_{t}y_{t+h})\)</span>.</p>
 <h4 id="properties-of-sdf">Properties of <abbr title="Spectral Density Function">SDF</abbr><a class="headerlink" href="#properties-of-sdf" title="Permanent link">¶</a></h4>
 <ul>
-<li>For a real valued TS, <span class="arithmatex">\(S(\omega)\)</span> is symmetric.</li>
+<li><strong>Symmetry</strong>: For a real-valued TS, <span class="arithmatex">\(S(\omega)\)</span> is symmetric: <span class="arithmatex">\(S(\omega) = S(-\omega)\)</span>.</li>
+<li><strong>Non-negativity</strong>: <span class="arithmatex">\(S(\omega) \geq 0\)</span> for all <span class="arithmatex">\(\omega\)</span>.</li>
+<li><strong>Total Variance</strong>: The integral of the <abbr title="Spectral Density Function">SDF</abbr> over the fundamental frequency range gives the total variance of the TS:<br>
+  $<span class="arithmatex">\(Var(y_{t}) = \gamma(0) = \int_{-\pi}^{\pi} S(\omega) d\omega\)</span>$</li>
+<li><strong>Periodicity</strong>: <span class="arithmatex">\(S(\omega)\)</span> repeats itself every <span class="arithmatex">\(2\pi\)</span> length.</li>
+<li><strong>Inverse Relationship</strong>: An inverse relationship exists between the ACF <span class="arithmatex">\(\gamma(h)\)</span> and the <abbr title="Spectral Density Function">SDF</abbr> <span class="arithmatex">\(S(\omega)\)</span>:<br>
+  $<span class="arithmatex">\(\gamma(h) = \int_{-\pi}^{\pi} S(\omega) e^{ i \omega h } d\omega\)</span>$</li>
 </ul>
-<div class="arithmatex">\[
-S(\omega) = S(-\omega)
-\]</div>
-<ul>
-<li>Non-negativity: <span class="arithmatex">\(S(\omega) \geq 0\)</span> for all <span class="arithmatex">\(\omega\)</span></li>
-<li>Total variance: Total variance of TS</li>
-</ul>
-<div class="arithmatex">\[
-Var(y_{t}) = \sum_{h=-\infty}^{\infty} \gamma(h) = \int_{-\pi}^{\pi} S(\omega) d\omega
-\]</div>
-<ul>
-<li>Periodicity is <span class="arithmatex">\(2\pi\)</span><ul>
-<li><span class="arithmatex">\(S(\omega)\)</span> repeats itself every <span class="arithmatex">\(2\pi\)</span> length</li>
-</ul>
-</li>
-<li>Inverse relationship exists between ACF <span class="arithmatex">\(\gamma(h) \cap mkS(\omega)\)</span></li>
-</ul>
-<div class="arithmatex">\[
-\gamma(h) = \int_{-\pi}^{\pi} S(\omega) e^{ i \omega h } d\omega
-\]</div>
 <h4 id="interpretation">Interpretation<a class="headerlink" href="#interpretation" title="Permanent link">¶</a></h4>
 <ul>
-<li>Low frequencies (<span class="arithmatex">\(\omega \approx 0\)</span>) correspond to long-term trends (slow-moving components in the TS)</li>
-<li>High frequency (<span class="arithmatex">\(\omega \approx \pi\)</span>) → Noise (rapid fluctuations)</li>
-<li>Peaks in <span class="arithmatex">\(S(\omega)\)</span> indicate dominant period components at specific frequencies.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Low frequencies (<span class="arithmatex">\(\omega \approx 0\)</span>):</strong> Correspond to long-term trends or slow-moving components in the TS.</li>
+<li><strong>High frequencies (<span class="arithmatex">\(\omega \approx \pi\)</span>):</strong> Correspond to noise or rapid fluctuations.</li>
+<li><strong>Peaks in <span class="arithmatex">\(S(\omega)\)</span>:</strong> Indicate dominant periodic components at specific frequencies.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
+<hr>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h3>
 <h4 id="white-noise">White Noise<a class="headerlink" href="#white-noise" title="Permanent link">¶</a></h4>
 <ul>
-<li><span class="arithmatex">\(y_{t} \sim N(0, \sigma^{2})\)</span></li>
-<li>ACF: <span class="arithmatex">\(\gamma(h) = \begin{cases} \sigma^2 &amp; h=0 \\ 0  &amp; \text{ow} \end{cases}\)</span></li>
-<li><abbr title="Spectral Density Function">SDF</abbr>: <span class="arithmatex">\(S(\omega)= \dfrac{\sigma^{2}}{2\pi}\)</span> <span class="arithmatex">\(\implies\)</span>  constant for all <span class="arithmatex">\(\omega\)</span>. So, the white noise has equal power across all frequencies.</li>
+<li><span class="arithmatex">\(y_{t} \sim WN(0, \sigma^{2})\)</span></li>
+<li><strong>ACF</strong>: <span class="arithmatex">\(\gamma(h) = \begin{cases} \sigma^2 &amp; h=0 \\ 0 &amp; \text{otherwise} \end{cases}\)</span></li>
+<li><strong><abbr title="Spectral Density Function">SDF</abbr></strong>: <span class="arithmatex">\(S(\omega)= \dfrac{\sigma^{2}}{2\pi}\)</span></li>
+<li><strong>Observation</strong>: The <abbr title="Spectral Density Function">SDF</abbr> is constant for all <span class="arithmatex">\(\omega\)</span>. This implies that white noise has equal power across all frequencies (analogous to "white light" containing all visible colors).</li>
 </ul>
-<h4 id="ar1-process">AR(1) process<a class="headerlink" href="#ar1-process" title="Permanent link">¶</a></h4>
+<h4 id="ar1-process">AR(1) Process<a class="headerlink" href="#ar1-process" title="Permanent link">¶</a></h4>
 <ul>
-<li><span class="arithmatex">\(y_{t} = \phi y_{t-1} + \epsilon_{t}\)</span>, where <span class="arithmatex">\(|\phi| \lt 1\)</span>, <span class="arithmatex">\(e_{t} \sim N(0, \sigma^{2})\)</span></li>
-<li>ACF: <span class="arithmatex">\(\gamma(h) = \dfrac{\sigma^{2}}{1-\phi^{2}}\phi^{|h|}\)</span></li>
-<li><abbr title="Spectral Density Function">SDF</abbr>: <span class="arithmatex">\(S(\omega) = \dfrac{\sigma^{2}}{2\pi} \dfrac{1}{ | 1 - \phi e^{ -i\omega }|^{2}}\)</span></li>
-<li>Low frequencies dominate for <span class="arithmatex">\(\phi\)</span> close to 1 <span class="arithmatex">\(\implies\)</span>  slow moving behavior.</li>
+<li><span class="arithmatex">\(y_{t} = \phi y_{t-1} + \epsilon_{t}\)</span>, where <span class="arithmatex">\(|\phi| \lt 1\)</span> and <span class="arithmatex">\(e_{t} \sim WN(0, \sigma^{2})\)</span>.</li>
+<li><strong>ACF</strong>: <span class="arithmatex">\(\gamma(h) = \dfrac{\sigma^{2}}{1-\phi^{2}}\phi^{|h|}\)</span></li>
+<li><strong><abbr title="Spectral Density Function">SDF</abbr></strong>: <span class="arithmatex">\(S(\omega) = \dfrac{\sigma^{2}}{2\pi} \dfrac{1}{ | 1 - \phi e^{ -i\omega }|^{2}}\)</span></li>
+<li><strong>Observation</strong>: If <span class="arithmatex">\(\phi\)</span> is close to 1 (high persistence), the low frequencies dominate, resulting in a "slow-moving" behavior.</li>
 </ul>
-<h4 id="maq-process">MA(q) process<a class="headerlink" href="#maq-process" title="Permanent link">¶</a></h4>
+<h4 id="maq-process">MA(q) Process<a class="headerlink" href="#maq-process" title="Permanent link">¶</a></h4>
 <ul>
-<li>limited to frequencies below a certain level, determined by <span class="arithmatex">\(q\)</span></li>
-<li>Smoother than an AR process of similar order since it is based on past shocks.</li>
+<li>The spectral power is limited to frequencies below a certain level, determined by <span class="arithmatex">\(q\)</span>.</li>
+<li>These are generally smoother than an AR process of a similar order because the series is based on a finite window of past shocks.</li>
 </ul>
-<h4 id="random-walk">Random Walk<a class="headerlink" href="#random-walk" title="Permanent link">¶</a></h4>
+<h4 id="random-walk-non-stationary">Random Walk (Non-stationary)<a class="headerlink" href="#random-walk-non-stationary" title="Permanent link">¶</a></h4>
 <ul>
-<li><abbr title="Spectral Density Function">SDF</abbr>: <span class="arithmatex">\(S(\omega) = \dfrac{\sigma^{2}}{2\pi} \dfrac{1}{ | 1 - \phi e^{ -i\omega }|^{2}}\)</span></li>
-<li>The <abbr title="Spectral Density Function">SDF</abbr> diverges as <span class="arithmatex">\(\omega\to 0\)</span> <span class="arithmatex">\(\implies\)</span>  non-stationary process dominated by low frequencies.</li>
+<li><strong><abbr title="Spectral Density Function">SDF</abbr></strong>: <span class="arithmatex">\(S(\omega) = \dfrac{\sigma^{2}}{2\pi} \dfrac{1}{ | 1 - e^{ -i\omega }|^{2}}\)</span> (Note: <span class="arithmatex">\(\phi = 1\)</span>).</li>
+<li><strong>Observation</strong>: The <abbr title="Spectral Density Function">SDF</abbr> diverges (<span class="arithmatex">\(S(\omega) \to \infty\)</span>) as <span class="arithmatex">\(\omega \to 0\)</span>. This indicates a non-stationary process heavily dominated by low-frequency (infinite-horizon) components.</li>
 </ul>
+<hr>
 <blockquote>
-<p>What would happen to <span class="arithmatex">\(S(\omega)\)</span> for different values of <span class="arithmatex">\(h\)</span></p>
+<p><strong>Question to consider:</strong> What would happen to the shape of <span class="arithmatex">\(S(\omega)\)</span> as the lag <span class="arithmatex">\(h\)</span> increases in the summation, and how does it affect the resolution of the peaks?</p>
 </blockquote>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p>We can curve out the path of an <abbr title="Spectral Density Function">SDF</abbr>. There will be peaks in specific points in the <abbr title="Spectral Density Function">SDF</abbr>. Those peaks represent the dominant periodic components&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>We can carve out the path of an <abbr title="Spectral Density Function">SDF</abbr>. There will be peaks in specific points in the <abbr title="Spectral Density Function">SDF</abbr>. Those peaks represent the dominant periodic components.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>

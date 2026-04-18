@@ -24,7 +24,7 @@
     
     
       
-        <title>Cyclicity and test for Stationarity - Hursh Gupta</title>
+        <title>Cyclicity and Tests for Stationarity - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cyclicity-and-test-for-stationarity" class="md-skip">
+        <a href="#cyclicity-and-tests-for-stationarity" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cyclicity and test for Stationarity
+              Cyclicity and Tests for Stationarity
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8933,7 +8933,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8961,7 +8961,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8998,7 +8998,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9016,7 +9016,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9042,10 +9042,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#unit-roots" class="md-nav__link">
+  <a href="#1-cyclical-variations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unit Roots
+        1. Cyclical Variations
       
     </span>
   </a>
@@ -9053,10 +9053,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tests-of-stationarity" class="md-nav__link">
+  <a href="#2-seasonality-vs-cyclicality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tests of Stationarity
+        2. Seasonality vs. Cyclicality
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-unit-roots-and-non-stationarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Unit Roots and Non-Stationarity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tests-of-stationarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tests of Stationarity
       
     </span>
   </a>
@@ -9298,7 +9320,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9850,7 +9872,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10938,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12756,129 +12778,87 @@
 
 
 <!-- Markdown content -->
-<h1 id="cyclicity-and-test-for-stationarity">Cyclicity and test for Stationarity<a class="headerlink" href="#cyclicity-and-test-for-stationarity" title="Permanent link">¶</a></h1>
-<ul>
-<li>Cyclical variations<ul>
-<li>gradual, long-term, up-and-down irregular repetitive movements</li>
-<li>rise and fall are not of fixed frequency</li>
-<li>period usually extends beyond a single year</li>
-</ul>
-</li>
-<li>6 phases (Business Cycle)<ul>
-<li>Expansion</li>
-<li>Peak</li>
-<li>Recession</li>
-<li>Depression</li>
-<li>Trough</li>
-<li>Recovery</li>
-</ul>
-</li>
-</ul>
+<h1 id="cyclicity-and-tests-for-stationarity">Cyclicity and Tests for Stationarity<a class="headerlink" href="#cyclicity-and-tests-for-stationarity" title="Permanent link">¶</a></h1>
+<h3 id="1-cyclical-variations">1. Cyclical Variations<a class="headerlink" href="#1-cyclical-variations" title="Permanent link">¶</a></h3>
+<p>Cyclicality refers to gradual, long-term, and irregular repetitive movements in a time series. Unlike seasonality, these fluctuations do not have a fixed frequency, and the period usually extends beyond a single year.</p>
+<p><strong>The 6 Phases of a Business Cycle:</strong></p>
+<ol>
+<li><strong>Expansion</strong></li>
+<li><strong>Peak</strong></li>
+<li><strong>Recession</strong></li>
+<li><strong>Depression</strong></li>
+<li><strong>Trough</strong></li>
+<li><strong>Recovery</strong></li>
+</ol>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L13__Cyclicity%20and%20Test%20for%20Stationarity-1768972967531.webp" data-desc-position="bottom"><img alt="L13__Cyclicity and Test for Stationarity-1768972967531.webp" src="../../../../assets/images/2026/01/L13__Cyclicity%20and%20Test%20for%20Stationarity-1768972967531.webp"></a></p>
-<ul>
-<li>Examples<ul>
-<li>Business cycle</li>
-<li>Price cycle : production decision</li>
-<li>Solar cycle: Sun's magnetic field (every 11 years, Sun's north and south poles shift entirely)</li>
-</ul>
-</li>
-</ul>
+<p><strong>Examples:</strong><br>
+* <strong>Business Cycles:</strong> Periodic economic growth and contraction.<br>
+* <strong>Price Cycles:</strong> Influenced by production decisions and supply-demand lags.<br>
+* <strong>Solar Cycles:</strong> Every 11 years, the Sun's magnetic poles shift entirely, impacting solar activity.</p>
+<h3 id="2-seasonality-vs-cyclicality">2. Seasonality vs. Cyclicality<a class="headerlink" href="#2-seasonality-vs-cyclicality" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Seasonality</th>
-<th>Cyclicality</th>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Seasonality</th>
+<th style="text-align: left;">Cyclicality</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Calendar Efffects</td>
-<td>Fluctuations not of fixed frequency</td>
+<td style="text-align: left;"><strong>Origin</strong></td>
+<td style="text-align: left;">Calendar Effects</td>
+<td style="text-align: left;">Irregular fluctuations</td>
 </tr>
 <tr>
-<td>Average length is smaller</td>
-<td></td>
+<td style="text-align: left;"><strong>Frequency</strong></td>
+<td style="text-align: left;">Fixed frequency</td>
+<td style="text-align: left;">No fixed frequency</td>
 </tr>
 <tr>
-<td></td>
-<td>Magnitude of cycles are higher</td>
+<td style="text-align: left;"><strong>Length</strong></td>
+<td style="text-align: left;">Average length is smaller (<span class="arithmatex">\(\le 1\)</span> year)</td>
+<td style="text-align: left;">Usually longer than 1 year</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Magnitude</strong></td>
+<td style="text-align: left;">Generally lower magnitude</td>
+<td style="text-align: left;">Magnitude of cycles is higher</td>
 </tr>
 </tbody>
 </table>
-<h3 id="unit-roots">Unit Roots<a class="headerlink" href="#unit-roots" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Y_{t} - 1.9 Y_{t-1} + 0.9 Y_{t-2} = e_{t} - 0.5 e_{t-1}
-\]</div>
-<p>can be REwritten as</p>
-<div class="arithmatex">\[
-(1- 1.9B + 0.9B^{2}) Y_{t}
-\]</div>
-<p>The roots of this equation are <span class="arithmatex">\(1\)</span> and <span class="arithmatex">\(\dfrac{10}{9}\)</span>. Thus, this model has a unit (1) root.</p>
-<blockquote>
-<p>Unit roots make the process non-stationary.</p>
-</blockquote>
-<p>But why?</p>
-<p>Difference once: <span class="arithmatex">\(W_{t} = \nabla Y_{t}\)</span></p>
-<div class="arithmatex">\[
-w_{t} - 0.9 w_{t-1} = e_{t} - 0.5e_{t-1}
-\]</div>
-<p>which is a stationary ARMA(1,1). Thus the original model is ARIMA(1,1,1) which is non-stationary.</p>
-<p>Why is Unit Root a problem?</p>
-<p>Unit roots imply that the model structure is <span class="arithmatex">\((1-B)Y_{t} = Y_{t} - Y_{t-1}= f(e_{t})\)</span>, implying that the current value is same as the past value <em>plus</em> some function of random errors. Thus, our model will never converge to a mean.</p>
-<ul>
-<li>Causes of Non-stationary<ul>
-<li>Unit roots present</li>
-<li>Deterministic polynomial trend present (<span class="arithmatex">\(+b\)</span> exact structure can be determined)</li>
-<li>Stochastic trend present (<span class="arithmatex">\(+bt\)</span> exact structure cannot be determined, time dependent.)</li>
-</ul>
-</li>
-</ul>
-<h3 id="tests-of-stationarity">Tests of Stationarity<a class="headerlink" href="#tests-of-stationarity" title="Permanent link">¶</a></h3>
-<h4 id="augmented-dicky-fuller-adf-test">Augmented Dicky Fuller (ADF) Test<a class="headerlink" href="#augmented-dicky-fuller-adf-test" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>Is a <strong>unit root</strong> present?</p>
-</blockquote>
-<div class="arithmatex">\[
-\begin{matrix}
-H_{0}: &amp; \text{series is non-stationary} \\
-H_{\alpha}: &amp; \text{series is stationary}
-\end{matrix}
-\]</div>
+<hr>
+<h3 id="3-unit-roots-and-non-stationarity">3. Unit Roots and Non-Stationarity<a class="headerlink" href="#3-unit-roots-and-non-stationarity" title="Permanent link">¶</a></h3>
+<p>A unit root exists when one of the characteristic roots of the model equation is equal to 1.</p>
+<div class="admonition warning">
+<p class="admonition-title">Unit Root Impact</p>
+<p>Unit roots make a process non-stationary because the model will never converge to a constant mean.</p>
+</div>
+<p><strong>Example:</strong><br>
+Consider the model: <span class="arithmatex">\(Y_{t} - 1.9 Y_{t-1} + 0.9 Y_{t-2} = e_{t} - 0.5 e_{t-1}\)</span>.<br>
+This can be rewritten using the backshift operator as: <span class="arithmatex">\((1 - 1.9B + 0.9B^{2}) Y_{t} = (1 - B)(1 - 0.9B)Y_{t}\)</span>.<br>
+The roots are <span class="arithmatex">\(1\)</span> and <span class="arithmatex">\(\frac{10}{9}\)</span>. Because of the unit root (<span class="arithmatex">\(1\)</span>), the original model is an <span class="arithmatex">\(ARIMA(1,1,1)\)</span> and is non-stationary. Once differenced (<span class="arithmatex">\(W_t = \nabla Y_t\)</span>), it becomes a stationary <span class="arithmatex">\(ARMA(1,1)\)</span>.</p>
+<p><strong>Why are Unit Roots a problem?</strong><br>
+A unit root implies the structure <span class="arithmatex">\((1-B)Y_{t} = f(e_{t})\)</span>, or <span class="arithmatex">\(Y_{t} = Y_{t-1} + f(e_{t})\)</span>. This means the current value is simply the past value plus some random error. Consequently, the variance grows over time, and the series does not return to a long-run mean.</p>
+<hr>
+<h3 id="4-tests-of-stationarity">4. Tests of Stationarity<a class="headerlink" href="#4-tests-of-stationarity" title="Permanent link">¶</a></h3>
+<p>Statistical tests help determine if a series is stationary or if transformations are needed.</p>
+<h4 id="augmented-dickey-fuller-adf-test">Augmented Dickey-Fuller (ADF) Test<a class="headerlink" href="#augmented-dickey-fuller-adf-test" title="Permanent link">¶</a></h4>
+<p>This test checks for the presence of a <strong>unit root</strong>.<br>
+* <strong><span class="arithmatex">\(H_{0}\)</span>:</strong> Series is non-stationary (Unit root exists).<br>
+* <strong><span class="arithmatex">\(H_{a}\)</span>:</strong> Series is stationary.</p>
 <h4 id="kwiatkowski-phillips-schmidt-shin-kpss-test">Kwiatkowski-Phillips-Schmidt-Shin (KPSS) Test<a class="headerlink" href="#kwiatkowski-phillips-schmidt-shin-kpss-test" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>Is there a <strong>deterministic trend</strong> (or mean)?</p>
-</blockquote>
-<div class="arithmatex">\[
-\begin{matrix}
-H_{0}: &amp; \text{series is stationary} \\
-H_{\alpha}: &amp; \text{series is non-stationary}
-\end{matrix}
-\]</div>
+<p>This test checks for a <strong>deterministic trend</strong> or mean stationarity. Unlike the ADF, the null hypothesis is stationarity.<br>
+* <strong><span class="arithmatex">\(H_{0}\)</span>:</strong> Series is stationary.<br>
+* <strong><span class="arithmatex">\(H_{a}\)</span>:</strong> Series is non-stationary.</p>
 <h4 id="phillips-perron-pp-test">Phillips-Perron (PP) Test<a class="headerlink" href="#phillips-perron-pp-test" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>Goal and Hypothesis setup same as <a href="#augmented-dicky-fuller-adf-test">#Augmented Dicky Fuller (ADF) Test</a></p>
-</blockquote>
-<ul>
-<li>Different assumptions about error terms</li>
-<li>More robust in the presence of <ul>
-<li>autocorrelation</li>
-<li>heteroskedasticity</li>
-</ul>
-</li>
-</ul>
+<p>The PP test shares the same goal and hypothesis setup as the ADF test but uses different assumptions about error terms.<br>
+* <strong>Robustness:</strong> It is more robust in the presence of autocorrelation and heteroskedasticity.</p>
 <h4 id="variance-ratio-test">Variance Ratio Test<a class="headerlink" href="#variance-ratio-test" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>Test for <strong>random walk</strong>.</p>
-</blockquote>
-<div class="arithmatex">\[
-\begin{matrix}
-H_{0}: &amp; \text{series is non-stationary} \\
-H_{\alpha}: &amp; \text{series is stationary}
-\end{matrix}
-\]</div>
-<ul>
-<li>Ratio significantly different from <span class="arithmatex">\(1\)</span> <span class="arithmatex">\(\implies\)</span> Not a random walk</li>
-</ul>
+<p>This is a specific test for a <strong>random walk</strong>.<br>
+* <strong><span class="arithmatex">\(H_{0}\)</span>:</strong> Series is non-stationary.<br>
+* <strong><span class="arithmatex">\(H_{a}\)</span>:</strong> Series is stationary.<br>
+* <strong>Logic:</strong> If the calculated ratio is significantly different from <span class="arithmatex">\(1\)</span>, the series is not a random walk.</p>
 
 
 
@@ -12914,7 +12894,7 @@ H_{\alpha}: &amp; \text{series is stationary}
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L12__Seasonality%20and%20its%20Features/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Seasonality &amp;amp; its Features">
+          <a href="../L12__Seasonality%20and%20its%20Features/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Seasonality &amp;amp; Its Features">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12924,7 +12904,7 @@ H_{\alpha}: &amp; \text{series is stationary}
                 Previous
               </span>
               <div class="md-ellipsis">
-                Seasonality &amp; its Features
+                Seasonality &amp; Its Features
               </div>
             </div>
           </a>

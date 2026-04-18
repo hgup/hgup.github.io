@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9781,7 +9781,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -9929,10 +9929,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-varpp-process" class="md-nav__link">
+  <a href="#example-varp-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example: \(VARP(p)\) process
+        Example: \(VAR(p)\) process
       
     </span>
   </a>
@@ -9940,10 +9940,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further" class="md-nav__link">
+  <a href="#further-observations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Further
+        Further Observations
       
     </span>
   </a>
@@ -10960,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12780,6 +12780,7 @@
 <!-- Markdown content -->
 <h1 id="further-extensions-use-cases">Further Extensions &amp; Use Cases<a class="headerlink" href="#further-extensions-use-cases" title="Permanent link">¶</a></h1>
 <h3 id="example-bivariate-ma1-process">Example: Bivariate <span class="arithmatex">\(MA(1)\)</span> process<a class="headerlink" href="#example-bivariate-ma1-process" title="Permanent link">¶</a></h3>
+<p>A bivariate Moving Average process of order 1 involves two interrelated series. Consider the following specification:</p>
 <div class="arithmatex">\[
 \begin{pmatrix}
 Y_{1t} \\
@@ -12794,84 +12795,67 @@ e_{2t}
 0.2  &amp; -0.4 \\
 -0.2 &amp; 0.6
 \end{pmatrix}\begin{pmatrix}
-e_{1t-1} \\
-e_{2t-2}
+e_{1,t-1} \\
+e_{2,t-1}
 \end{pmatrix};\quad \Sigma = \begin{pmatrix}
 4 &amp; 1 \\
 1 &amp; 4
 \end{pmatrix}
 \]</div>
-<p>Compute:</p>
+<p>To analyze the dependence structure, we compute the following matrices:</p>
 <ul>
-<li><span class="arithmatex">\(\Gamma(0) = \Theta_{1} \Sigma \Theta_{1}'\)</span> </li>
-<li><span class="arithmatex">\(\Gamma(1)= \Sigma \Theta_{1}'\)</span></li>
-<li><span class="arithmatex">\(\Gamma(2+)=0\)</span></li>
-<li><span class="arithmatex">\(\rho(0)\)</span></li>
-<li><span class="arithmatex">\(\rho(1)\)</span></li>
+<li><strong><span class="arithmatex">\(\Gamma(0)\)</span>:</strong> The variance-covariance matrix of the process, calculated as <span class="arithmatex">\(\Gamma(0) = \Sigma + \Theta_{1} \Sigma \Theta_{1}'\)</span>.</li>
+<li><strong><span class="arithmatex">\(\Gamma(1)\)</span>:</strong> The cross-covariance matrix at lag 1, calculated as <span class="arithmatex">\(\Gamma(1) = -\Sigma \Theta_{1}'\)</span>.</li>
+<li><strong><span class="arithmatex">\(\Gamma(l)\)</span> for <span class="arithmatex">\(l \geq 2\)</span>:</strong> For an <span class="arithmatex">\(MA(1)\)</span> process, all covariances at lags greater than the order <span class="arithmatex">\(q\)</span> are zero (<span class="arithmatex">\(\Gamma(2+) = 0\)</span>).</li>
+<li><strong><span class="arithmatex">\(\rho(0)\)</span> and <span class="arithmatex">\(\rho(1)\)</span>:</strong> The contemporaneous and lag-1 correlation matrices, derived by normalizing the covariances.</li>
 </ul>
-<h3 id="example-varpp-process">Example: <span class="arithmatex">\(VARP(p)\)</span> process<a class="headerlink" href="#example-varpp-process" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="example-varp-process">Example: <span class="arithmatex">\(VAR(p)\)</span> process<a class="headerlink" href="#example-varp-process" title="Permanent link">¶</a></h3>
+<p>The Vector Autoregressive process of order <span class="arithmatex">\(p\)</span> is defined as:<br>
+$<span class="arithmatex">\(\Phi(B)Y_{t} = \delta + e_{t}\)</span>$</p>
+<p>Where:<br>
+* <strong><span class="arithmatex">\(\Phi_{i}\)</span></strong>: <span class="arithmatex">\(k\)</span>-dimensional square matrices of parameters.<br>
+* <strong><span class="arithmatex">\(e_{t}\)</span></strong>: <span class="arithmatex">\(k\)</span>-dimensional vector of residuals (a purely random process/Vector White Noise).<br>
+* <strong><span class="arithmatex">\(\delta\)</span></strong>: A vector of constants.</p>
+<p><strong>Duality of Representations:</strong><br>
+* <strong><span class="arithmatex">\(VMA(1) \equiv VAR(\infty)\)</span></strong>: An invertible Vector Moving Average process can be expressed as an infinite Autoregressive process.<br>
+* <strong><span class="arithmatex">\(VAR(p) \equiv VMA(\infty)\)</span></strong>: A stationary Vector Autoregressive process can be expressed as an infinite Moving Average process of random shocks.</p>
+<h3 id="further-observations">Further Observations<a class="headerlink" href="#further-observations" title="Permanent link">¶</a></h3>
 <ul>
-<li><span class="arithmatex">\(\Phi_{i}\)</span> = k-dim square matrices</li>
-<li><span class="arithmatex">\(e_{t}\)</span> = k-dim vector of residuals (purely random process)</li>
-<li><span class="arithmatex">\(\delta\)</span> = vector of constants</li>
+<li>We continue to look at <strong>Covariance Matrices</strong> and <strong>Correlation Matrices</strong> to understand the system.</li>
+<li>The underlying expressions and formulae remain conceptually identical to univariate cases, but we utilize the corresponding <strong>multivariate notation and forms</strong> (vectors and matrices) to account for inter-series dependencies.</li>
 </ul>
-<div class="arithmatex">\[
-\Phi(B)Y_{t} = \delta + e_{t}
-\]</div>
-<ul>
-<li>We can express <span class="arithmatex">\(VMA(1) \equiv VAR(\infty)\)</span> </li>
-<li>We can express <span class="arithmatex">\(VAR(p) \equiv VMA(\infty)\)</span> </li>
-</ul>
-<h3 id="further">Further<a class="headerlink" href="#further" title="Permanent link">¶</a></h3>
-<ul>
-<li>We look at the covariance matrices</li>
-<li>Correlation matrices</li>
-<li>The expression and formulae remain the same, but we are having corresponding notation and forms for multivariate notation.</li>
-</ul>
+<hr>
 <h2 id="application-areas">Application Areas<a class="headerlink" href="#application-areas" title="Permanent link">¶</a></h2>
 <h4 id="macroeconomics">Macroeconomics<a class="headerlink" href="#macroeconomics" title="Permanent link">¶</a></h4>
 <ol>
-<li>Monetary policy analysis: interest rate changes, inflation and monetary policies → GDP, unemployment, exchange rages</li>
-<li>Economic forecasting: VARMA is used to forecast GDP growth, inflation employment, considering interactions. </li>
+<li><strong>Monetary Policy Analysis</strong>: Examining how interest rate changes, inflation, and monetary policies impact GDP, unemployment, and exchange rates.</li>
+<li><strong>Economic Forecasting</strong>: Using VARMA to forecast GDP growth and employment while accounting for the complex interactions between these variables.</li>
 </ol>
-<h4 id="supply-chain-an-operations">Supply chain an operations<a class="headerlink" href="#supply-chain-an-operations" title="Permanent link">¶</a></h4>
+<h4 id="supply-chain-and-operations">Supply Chain and Operations<a class="headerlink" href="#supply-chain-and-operations" title="Permanent link">¶</a></h4>
 <ol>
-<li>Inventory Managements:<ul>
-<li>Improve inventory management</li>
-<li>reduce stockouts, excess inventory</li>
-</ul>
-</li>
-<li>Logistics and shipping:<ul>
-<li>forecast shipping demand and lead times</li>
-<li>interrelated demand taken into account</li>
-</ul>
-</li>
+<li><strong>Inventory Management</strong>: Improving inventory levels to reduce stockouts and excess inventory by understanding interrelated demand.</li>
+<li><strong>Logistics and Shipping</strong>: Forecasting shipping demand and lead times by taking interrelated demand factors into account.</li>
 </ol>
-<h4 id="financial-markets">Financial markets<a class="headerlink" href="#financial-markets" title="Permanent link">¶</a></h4>
+<h4 id="financial-markets">Financial Markets<a class="headerlink" href="#financial-markets" title="Permanent link">¶</a></h4>
 <ol>
-<li>Asset Pricing<ul>
-<li>co-movements between assets</li>
-</ul>
-</li>
-<li>Volatility Forecasting</li>
+<li><strong>Asset Pricing</strong>: Analyzing the co-movements between different assets to price risk.</li>
+<li><strong>Volatility Forecasting</strong>: Modeling how volatility in one asset or market spills over into another.</li>
 </ol>
 <h4 id="energy-markets">Energy Markets<a class="headerlink" href="#energy-markets" title="Permanent link">¶</a></h4>
 <ol>
-<li>Electricity Load Forecasting<ul>
-<li>Overloads</li>
-</ul>
-</li>
-<li>Oil and Gas</li>
+<li><strong>Electricity Load Forecasting</strong>: Predicting demand to prevent system overloads.</li>
+<li><strong>Oil and Gas</strong>: Modeling price and supply dependencies across different energy sectors.</li>
 </ol>
 <h4 id="healthcare">Healthcare<a class="headerlink" href="#healthcare" title="Permanent link">¶</a></h4>
 <ol>
-<li>Epidemiology</li>
-<li>Hospital Resource planning</li>
+<li><strong>Epidemiology</strong>: Tracking the spread of diseases across different regions or demographics simultaneously.</li>
+<li><strong>Hospital Resource Planning</strong>: Forecasting patient loads across different departments to optimize resource allocation.</li>
 </ol>
 <h4 id="climate-science">Climate Science<a class="headerlink" href="#climate-science" title="Permanent link">¶</a></h4>
 <ol>
-<li>Temperature &amp; Weather Forecasting</li>
-<li>Air Quality Monitoring</li>
+<li><strong>Temperature &amp; Weather Forecasting</strong>: Jointly modeling variables like pressure, temperature, and wind.</li>
+<li><strong>Air Quality Monitoring</strong>: Analyzing the relationship between different pollutants (e.g., <span class="arithmatex">\(PM_{2.5}\)</span>, <span class="arithmatex">\(NO_{2}\)</span>) across various geographical sensors.</li>
 </ol>
 
 

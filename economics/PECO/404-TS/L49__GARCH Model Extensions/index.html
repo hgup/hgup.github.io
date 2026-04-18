@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9779,7 +9779,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10565,10 +10565,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#egarch" class="md-nav__link">
+  <a href="#egarch-exponential-garch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        EGARCH
+        EGARCH (Exponential GARCH)
       
     </span>
   </a>
@@ -10576,10 +10576,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tgarch" class="md-nav__link">
+  <a href="#tgarch-threshold-garch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TGARCH
+        TGARCH (Threshold GARCH)
       
     </span>
   </a>
@@ -10587,10 +10587,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ararch" class="md-nav__link">
+  <a href="#aparch-asymmetric-power-arch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ARARCH
+        APARCH (Asymmetric Power ARCH)
       
     </span>
   </a>
@@ -10598,10 +10598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#figarch" class="md-nav__link">
+  <a href="#figarch-fractionally-integrated-garch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FIGARCH
+        FIGARCH (Fractionally Integrated GARCH)
       
     </span>
   </a>
@@ -10609,10 +10609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mgarch" class="md-nav__link">
+  <a href="#mgarch-multivariate-garch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MGARCH
+        MGARCH (Multivariate GARCH)
       
     </span>
   </a>
@@ -10620,10 +10620,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ngarch" class="md-nav__link">
+  <a href="#specialized-garch-variants" class="md-nav__link">
     <span class="md-ellipsis">
       
-        NGARCH
+        Specialized GARCH Variants
       
     </span>
   </a>
@@ -10631,32 +10631,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#harch" class="md-nav__link">
+  <a href="#arma-garch-framework" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HARCH
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#egarch-xgarch-x" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EGARCH-X/GARCH-X
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arma-garch-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ARMA + GARCH Models
+        ARMA + GARCH Framework
       
     </span>
   </a>
@@ -11026,7 +11004,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12845,147 +12823,78 @@
 
 <!-- Markdown content -->
 <h1 id="extensions-of-the-garch-model">Extensions of the GARCH Model<a class="headerlink" href="#extensions-of-the-garch-model" title="Permanent link">¶</a></h1>
-<ul>
-<li>Specific variance of GARCH model<ul>
-<li>tailored to capture different characteristics in TS, particularly volatility dynamics</li>
-</ul>
-</li>
-</ul>
+<p>Standard GARCH models assume that positive and negative shocks of the same magnitude have the same effect on volatility. However, real-world financial data often exhibits <strong>asymmetric effects</strong>. These extensions are tailored to capture specific volatility dynamics like the leverage effect, long memory, and multivariate co-movements.</p>
 <h3 id="gjr-garch">GJR-GARCH<a class="headerlink" href="#gjr-garch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Glosten, Jagannathan and Runkle GARCH</li>
-<li>Asymmetric effects in volatility</li>
-</ul>
+<p>Developed by <strong>Glosten, Jagannathan, and Runkle</strong>, this model specifically targets <strong>asymmetric effects</strong> in volatility.</p>
 <div class="arithmatex">\[
 \sigma_{t} ^{2} = \omega + \alpha \epsilon_{t-1}^{2} + \gamma\epsilon_{t-1}^{2}I(\epsilon_{t-1}\lt 0) + \beta \sigma_{t-1}^{2}
 \]</div>
 <ul>
-<li><span class="arithmatex">\(I(x &lt;0)=\begin{cases}1, &amp;  x \lt 0 \\ 0,  &amp; ow\end{cases}\)</span></li>
-<li><span class="arithmatex">\(\gamma \gt 0\)</span> captures impact of negative shocks</li>
-<li><strong>Applications</strong>: Financial markets (bad news tends to increase volatility more than good news)</li>
+<li><span class="arithmatex">\(I(\epsilon_{t-1} &lt; 0)\)</span> is an indicator function that equals 1 if the shock is negative (bad news) and 0 otherwise.</li>
+<li><span class="arithmatex">\(\gamma &gt; 0\)</span> captures the additional impact of negative shocks.</li>
+<li><strong>Application</strong>: Financial markets, where "bad news" typically increases volatility much more than "good news."</li>
 </ul>
-<h3 id="egarch">EGARCH<a class="headerlink" href="#egarch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Handles Leverage effects without requiring non-negativity constraints on the parameters <em>ensures that conditional variance is always positive</em>.</li>
-</ul>
+<h3 id="egarch-exponential-garch">EGARCH (Exponential GARCH)<a class="headerlink" href="#egarch-exponential-garch" title="Permanent link">¶</a></h3>
+<p>The EGARCH model handles leverage effects without requiring non-negativity constraints on the parameters, as it models the <strong>logarithm</strong> of variance. This ensures that conditional variance is always positive.</p>
 <div class="arithmatex">\[
-\log(\sigma_{t}^{2}) = \omega + \beta \log(\sigma_{t-1}^{2}) + \alpha  \dfrac{\epsilon_{t-1}}{\alpha_{t-1}} + \gamma\left(\lvert \dfrac{\epsilon_{t-1}}{\sigma_{t-1}} \rvert - E\left[\lvert \dfrac{\epsilon_{t-1}}{\sigma_{t-1}} \rvert \right]  \right)
+\log(\sigma_{t}^{2}) = \omega + \beta \log(\sigma_{t-1}^{2}) + \alpha \dfrac{\epsilon_{t-1}}{\sigma_{t-1}} + \gamma\left(\lvert \dfrac{\epsilon_{t-1}}{\sigma_{t-1}} \rvert - E\left[\lvert \dfrac{\epsilon_{t-1}}{\sigma_{t-1}} \rvert \right] \right)
 \]</div>
 <ul>
-<li>log transformation ensures <span class="arithmatex">\(\sigma_{t}^{2}\)</span> stays positive, while</li>
-<li>
-<p><span class="arithmatex">\(\gamma \gt 0\)</span> captures the impact of negative shocks.</p>
-</li>
-<li>
-<p>Application: financial assets with pronounced </p>
-</li>
+<li>The log transformation guarantees <span class="arithmatex">\(\sigma_{t}^{2} &gt; 0\)</span>.</li>
+<li><span class="arithmatex">\(\gamma &gt; 0\)</span> captures the impact of negative shocks.</li>
+<li><strong>Application</strong>: Financial assets with pronounced leverage effects.</li>
 </ul>
-<h3 id="tgarch">TGARCH<a class="headerlink" href="#tgarch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Threshold GARCH is similar to GJR-GARCH</li>
-<li>Difference = standard deviation instead of variance</li>
-</ul>
+<hr>
+<h3 id="tgarch-threshold-garch">TGARCH (Threshold GARCH)<a class="headerlink" href="#tgarch-threshold-garch" title="Permanent link">¶</a></h3>
+<p>Similar to GJR-GARCH, but it models the <strong>standard deviation</strong> (<span class="arithmatex">\(\sigma_t\)</span>) instead of the variance (<span class="arithmatex">\(\sigma_t^2\)</span>).</p>
 <div class="arithmatex">\[
-\sigma_{t} ^{2} = \omega + \alpha \epsilon_{t-1} + \gamma\epsilon_{t-1}I(\epsilon_{t-1}\lt 0) + \beta \sigma_{t-1}^{2}
+\sigma_{t} = \omega + \alpha |\epsilon_{t-1}| + \gamma |\epsilon_{t-1}| I(\epsilon_{t-1}\lt 0) + \beta \sigma_{t-1}
 \]</div>
-<h3 id="ararch">ARARCH<a class="headerlink" href="#ararch" title="Permanent link">¶</a></h3>
+<h3 id="aparch-asymmetric-power-arch">APARCH (Asymmetric Power ARCH)<a class="headerlink" href="#aparch-asymmetric-power-arch" title="Permanent link">¶</a></h3>
+<p>A highly flexible model that allows the data to determine the power transformation (<span class="arithmatex">\(\delta\)</span>) of the volatility.</p>
+<div class="arithmatex">\[\sigma_{t}^\delta = \omega + \alpha(|\epsilon_{t-1}| - \gamma \epsilon_{t-1})^{\delta} + \beta \sigma_{t-1}^{\delta}\]</div>
 <ul>
-<li>Asymmetric Power ARCH</li>
+<li><span class="arithmatex">\(\delta\)</span>: Power parameter for the transformation.</li>
+<li><span class="arithmatex">\(\gamma\)</span>: Asymmetry parameter.</li>
+<li><strong>Application</strong>: Markets with non-linear and asymmetric patterns, such as energy and commodity markets.</li>
 </ul>
-<div class="arithmatex">\[
-\sigma_{t}^\delta = \omega + \alpha(|\epsilon_{t-1}| - \gamma e_{t-1})^{\delta} + \beta \sigma_{t-1}^{\delta}
-\]</div>
+<hr>
+<h3 id="figarch-fractionally-integrated-garch">FIGARCH (Fractionally Integrated GARCH)<a class="headerlink" href="#figarch-fractionally-integrated-garch" title="Permanent link">¶</a></h3>
+<p>This model accounts for the <strong>long memory property</strong> of volatility, where the impact of shocks decays at a slow, hyperbolic rate rather than exponentially.</p>
+<div class="arithmatex">\[\phi(L)(1-L)^{d} \sigma_{t}^{2} = \omega + (1- \beta(L))\epsilon_{t}^{2}\]</div>
 <ul>
-<li>where<ul>
-<li><span class="arithmatex">\(\delta\)</span> = power parameter, determines transformation of conditional volatility</li>
-<li><span class="arithmatex">\(\gamma\)</span> = asymmetry parameter</li>
+<li><span class="arithmatex">\((1-L)^{d}\)</span> is the fractional differencing operator (<span class="arithmatex">\(0 &lt; d &lt; 1\)</span>).</li>
+<li><strong>Application</strong>: Capturing persistent volatility in bond yields and exchange rates.</li>
+</ul>
+<hr>
+<h3 id="mgarch-multivariate-garch">MGARCH (Multivariate GARCH)<a class="headerlink" href="#mgarch-multivariate-garch" title="Permanent link">¶</a></h3>
+<p>Used when analyzing multiple time series simultaneously to capture <strong>co-movements in volatilities</strong>.</p>
+<ul>
+<li><strong>VEC Model</strong>: Directly models the variance-covariance matrix (suffers from overparameterization).</li>
+<li><strong>BEKK Model</strong>: Imposes a structure that ensures the covariance matrix is always positive definite.</li>
+<li><strong>DCC-GARCH (Dynamic Conditional Correlation)</strong>: A two-step approach that models individual volatilities first, then time-dependent correlations.</li>
+</ul>
+<hr>
+<h3 id="specialized-garch-variants">Specialized GARCH Variants<a class="headerlink" href="#specialized-garch-variants" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>NGARCH (Nonlinear GARCH)</strong>: Captures complex non-linear interactions via a term multiplying the shock and the standard deviation (<span class="arithmatex">\(\lambda\epsilon_{t-1}\sigma_{t-1}\)</span>).</li>
+<li><strong>HARCH (Heterogenous ARCH)</strong>: Based on the <strong>Heterogenous Market Hypothesis</strong>, it aggregates returns over multiple time horizons (e.g., daily, weekly, monthly). <ul>
+<li><em>Logic</em>: Market participants react to news over different time horizons.</li>
 </ul>
 </li>
-<li>Markets with non-linear and asymmetric volatility patterns: energy/commodity markets</li>
+<li><strong>GARCH-X</strong>: Incorporates an <strong>exogenous covariate</strong> <span class="arithmatex">\(X_t\)</span> (like a news sentiment index or macroeconomic indicator) directly into the variance equation.</li>
 </ul>
-<h3 id="figarch">FIGARCH<a class="headerlink" href="#figarch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Fractionally Integrated GARCH</li>
-<li><strong>Long memory property</strong> of volatility, capturing persistence that decays slowly over time</li>
-</ul>
-<div class="arithmatex">\[
-\phi(L)(1-L)^{d} \sigma_{t}^{2} = \omega + (1- \beta(L))\epsilon_{t}^{2}
-\]</div>
-<ul>
-<li><span class="arithmatex">\((1-L)^{d}\)</span> is the fractional differencing operator with <span class="arithmatex">\(0 \lt d \lt 1\)</span></li>
-<li>Application: persistence in bond yields and exchange rates</li>
-</ul>
-<h3 id="mgarch">MGARCH<a class="headerlink" href="#mgarch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Multivariate GARCH</li>
-<li>Multiple time series capturing co-movements in volatilities</li>
-<li>Popular Specifications<ul>
-<li>VARCH Model. Directly models <code>varcov</code> matrix but overparameterization</li>
-<li>BEKK Model: Imposes structure to <code>varcov</code> for more parsimonious modeling</li>
-<li>DCC-GARCH (Dynamic Conditional Correlation) → Models time-dependent correlations alongside volatilities.</li>
-</ul>
-</li>
-</ul>
-<h3 id="ngarch">NGARCH<a class="headerlink" href="#ngarch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Nonlinear GARCH: capture complex non-linearity</li>
-</ul>
-<div class="arithmatex">\[
-\sigma_{t}^{2} = \omega + \alpha\epsilon_{t-1}^{2} + \beta \sigma_{t-1}^{2} + \lambda\epsilon_{t-1}\sigma_{t-1}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(\lambda:\)</span> Captures non-linear interactions by multiplication term <span class="arithmatex">\(\epsilon_{t-1}\sigma_{t-1}\)</span></li>
-<li>Application: High-frequency financial data with complex volatility behavior.</li>
-</ul>
-<h3 id="harch">HARCH<a class="headerlink" href="#harch" title="Permanent link">¶</a></h3>
-<ul>
-<li>Heterogenous ARCH explains volatility using returns aggregated over multiple time horizons</li>
-</ul>
-<div class="arithmatex">\[
-\sigma_{t}^{2} = \omega + \sum_{k=1}^K  \alpha_{k} \left( \dfrac{1}{k}\sum_{i=1}^{k} \epsilon_{t-i}^{2} \right)
-\]</div>
-<ul>
-<li>Captures the idea that market participants operate over <strong>heterogenous time scales</strong></li>
-<li>Application: Markets with participants <em>reacting to news</em> <strong>over different horizons</strong></li>
-</ul>
-<h3 id="egarch-xgarch-x">EGARCH-X/GARCH-X<a class="headerlink" href="#egarch-xgarch-x" title="Permanent link">¶</a></h3>
-<ul>
-<li>Extends GARCH by incorporating exogenous covariate <span class="arithmatex">\(X_{t}\)</span>, affecting volatility</li>
-</ul>
-<div class="arithmatex">\[
-\sigma_{t}^{2} = \omega + \sum_{i=1}^{q} \alpha_{i}\epsilon_{t-i}^{2} + \sum_{j=1}^{p} \beta_{j}\sigma_{t-j}^{2} X_{t}
-\]</div>
-<ul>
-<li>Application: Modeling volatility with macroeconomic indicators, news sentiment or financial stress indices</li>
-</ul>
-<h3 id="arma-garch-models">ARMA + GARCH Models<a class="headerlink" href="#arma-garch-models" title="Permanent link">¶</a></h3>
-<ul>
-<li>ARMA for the mean (serial correlation)</li>
-<li>
-<p>GARCH for modelling conditional variance (time varying volatility)</p>
-</li>
-<li>
-<p>Mean: <span class="arithmatex">\(ARMA(p,q)\)</span></p>
-<ul>
-<li>Get residuals from this equation</li>
-</ul>
-</li>
-<li>
-<p>Variance: <span class="arithmatex">\(GARCH(r,s)\)</span></p>
-<ul>
-<li>Use them to model variance</li>
-</ul>
-</li>
-<li>
-<p>Application</p>
-<ul>
-<li>Stock returns</li>
-<li>VaR</li>
-<li>GDP growth and interest rates</li>
-<li>Commodity prices: oil/electricity</li>
-</ul>
-</li>
-</ul>
+<hr>
+<h3 id="arma-garch-framework">ARMA + GARCH Framework<a class="headerlink" href="#arma-garch-framework" title="Permanent link">¶</a></h3>
+<p>In practice, these are combined. We use an <strong>ARMA</strong> model to capture serial correlation in the <strong>mean</strong>, and a <strong>GARCH</strong> model to capture the <strong>conditional variance</strong>.</p>
+<ol>
+<li><strong>Mean Equation</strong>: <span class="arithmatex">\(y_t = \text{ARMA}(p,q) + \epsilon_t\)</span></li>
+<li><strong>Variance Equation</strong>: <span class="arithmatex">\(\sigma_t^2 = \text{GARCH}(r,s)\)</span></li>
+</ol>
+<p><strong>Applications</strong>:<br>
+- Stock returns and <strong>Value-at-Risk (VaR)</strong> calculations.<br>
+- Modeling the relationship between GDP growth and interest rate volatility.<br>
+- Pricing energy commodities (Oil/Electricity).</p>
 
 
 

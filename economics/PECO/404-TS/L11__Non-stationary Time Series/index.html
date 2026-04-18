@@ -24,7 +24,7 @@
     
     
       
-        <title>Non-stationary TS - Hursh Gupta</title>
+        <title>Non-stationary Time Series - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#non-stationary-ts" class="md-skip">
+        <a href="#non-stationary-time-series" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Non-stationary TS
+              Non-stationary Time Series
             
           </span>
         </div>
@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8942,7 +8942,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8960,7 +8960,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8986,10 +8986,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#example-1-linear-trend" class="md-nav__link">
+  <a href="#1-mathematical-operators" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example 1: Linear Trend
+        1. Mathematical Operators
       
     </span>
   </a>
@@ -8997,10 +8997,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-2-quadratic-trend" class="md-nav__link">
+  <a href="#2-eliminating-trends-through-differencing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example 2: Quadratic Trend
+        2. Eliminating Trends through Differencing
       
     </span>
   </a>
@@ -9008,10 +9008,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#random-walk-model" class="md-nav__link">
+  <a href="#3-random-walk-as-a-non-stationary-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Random Walk Model
+        3. Random Walk as a Non-Stationary Process
       
     </span>
   </a>
@@ -9019,10 +9019,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seasonal-models" class="md-nav__link">
+  <a href="#4-seasonal-models-and-decomposition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seasonal Models
+        4. Seasonal Models and Decomposition
       
     </span>
   </a>
@@ -9030,10 +9030,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arimapdq-process" class="md-nav__link">
+  <a href="#5-the-arimapdq-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        \(ARIMA(p,d,q)\) Process
+        5. The \(ARIMA(p,d,q)\) Process
       
     </span>
   </a>
@@ -9063,7 +9063,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -9091,7 +9091,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9331,7 +9331,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9883,7 +9883,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10971,7 +10971,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12789,82 +12789,64 @@
 
 
 <!-- Markdown content -->
-<h1 id="non-stationary-ts">Non-stationary TS<a class="headerlink" href="#non-stationary-ts" title="Permanent link">¶</a></h1>
+<h1 id="non-stationary-time-series">Non-stationary Time Series<a class="headerlink" href="#non-stationary-time-series" title="Permanent link">¶</a></h1>
+<p>In real-world applications, time series data usually exhibits <strong>Trend, Seasonality, or Cyclicality</strong>, making it inherently non-stationary. To analyze such data, we must transform it into a stationary series using mathematical operators.</p>
+<h3 id="1-mathematical-operators">1. Mathematical Operators<a class="headerlink" href="#1-mathematical-operators" title="Permanent link">¶</a></h3>
+<p>Two primary operators are used to manipulate and stabilize time series data:</p>
 <ul>
-<li>Trend/seasonality/cyclicality → Non-stationary data which is what is usually expected</li>
-<li>Backshift operator: <span class="arithmatex">\(B^dY_{t} = Y_{t-d}\)</span></li>
-<li>Differencing Operator (Box &amp; Jenkins <em>ka</em> technique): <span class="arithmatex">\(\nabla^dY_{t}\)</span> is the <span class="arithmatex">\(d\)</span>-th difference of <span class="arithmatex">\(Y_t\)</span> for all <span class="arithmatex">\(t\)</span>.<ul>
-<li><span class="arithmatex">\(\nabla Y_{t}=Y_{t}-Y_{t-1}\)</span></li>
-<li><span class="arithmatex">\(\nabla^2 Y_{t} = \nabla(\nabla Y_{t})=\nabla(Y_{t}-Y_{t-1}) = Y_{t} - 2Y_{t-1} + Y_{t-2}\)</span></li>
-<li><span class="arithmatex">\(\nabla Y_{t} = (1-B)Y_{t}\)</span></li>
-<li>lag <span class="arithmatex">\(d\)</span> difference: <span class="arithmatex">\(\nabla_{d}Y_{t} = Y_{t} - Y_{t-d}\)</span></li>
+<li><strong>Backshift Operator (<span class="arithmatex">\(B\)</span>):</strong> Shifts the observation back by <span class="arithmatex">\(d\)</span> time units.<br>
+    $<span class="arithmatex">\(B^dY_{t} = Y_{t-d}\)</span>$</li>
+<li><strong>Differencing Operator (<span class="arithmatex">\(\nabla\)</span>):</strong> A technique popularized by Box &amp; Jenkins to remove non-stationary components.<ul>
+<li><strong>First Difference:</strong> <span class="arithmatex">\(\nabla Y_{t} = Y_{t} - Y_{t-1} = (1-B)Y_{t}\)</span></li>
+<li><strong>Second Difference:</strong> <span class="arithmatex">\(\nabla^2 Y_{t} = \nabla(\nabla Y_{t}) = Y_{t} - 2Y_{t-1} + Y_{t-2}\)</span></li>
+<li><strong>Lag <span class="arithmatex">\(d\)</span> Difference:</strong> <span class="arithmatex">\(\nabla_{d}Y_{t} = Y_{t} - Y_{t-d}\)</span> (Used primarily for removing seasonality).</li>
 </ul>
 </li>
 </ul>
-<h3 id="example-1-linear-trend">Example 1: Linear Trend<a class="headerlink" href="#example-1-linear-trend" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Y_{t} = bt + S_{t}
-\]</div>
+<hr>
+<h3 id="2-eliminating-trends-through-differencing">2. Eliminating Trends through Differencing<a class="headerlink" href="#2-eliminating-trends-through-differencing" title="Permanent link">¶</a></h3>
+<h4 id="example-1-linear-trend">Example 1: Linear Trend<a class="headerlink" href="#example-1-linear-trend" title="Permanent link">¶</a></h4>
+<p>Consider a model with a linear trend: <span class="arithmatex">\(Y_{t} = bt + S_{t}\)</span>. It is non-stationary because the mean is time-dependent. Applying a first difference:<br>
+$<span class="arithmatex">\(\nabla Y_{t} = bt + S_{t} - (b(t-1) + S_{t-1}) = S_{t} + b - S_{t-1}\)</span>$<br>
+The result is now stationary as the time-dependent term <span class="arithmatex">\(t\)</span> is eliminated.</p>
+<h4 id="example-2-quadratic-trend">Example 2: Quadratic Trend<a class="headerlink" href="#example-2-quadratic-trend" title="Permanent link">¶</a></h4>
+<p>For a stronger trend like <span class="arithmatex">\(Y_{t} = bt^{2} + S_{t}\)</span>, a single differencing is insufficient. We apply the second difference operator:<br>
+$<span class="arithmatex">\(W_{t} = \nabla^{2}Y_{t} = Y_{t} - 2Y_{t-1} + Y_{t-2}\)</span>$<br>
+This eventually simplifies to:<br>
+$<span class="arithmatex">\(W_{t} = 2b + S_{t} - 2S_{t-1} + S_{t-2}\)</span>$<br>
+The quadratic growth is neutralized, resulting in a stationary process.</p>
+<hr>
+<h3 id="3-random-walk-as-a-non-stationary-process">3. Random Walk as a Non-Stationary Process<a class="headerlink" href="#3-random-walk-as-a-non-stationary-process" title="Permanent link">¶</a></h3>
+<p>The Random Walk model is <span class="arithmatex">\(Y_{t} = Y_{t-1} + e_{t}\)</span>. If viewed as an <span class="arithmatex">\(AR(1)\)</span> process:<br>
+$<span class="arithmatex">\(Y_{t} = c + \phi_{1} Y_{t-1} + e_{t}\)</span>$<br>
+Here, <span class="arithmatex">\(c=0\)</span> and <span class="arithmatex">\(\phi_{1} = 1\)</span>. Recall that for an <span class="arithmatex">\(AR(1)\)</span> process to be stationary, we require <span class="arithmatex">\(|\phi_{1}| &lt; 1\)</span>. Since <span class="arithmatex">\(\phi_{1} = 1\)</span> (often called a <strong>Unit Root</strong>), the random walk is fundamentally non-stationary.</p>
+<hr>
+<h3 id="4-seasonal-models-and-decomposition">4. Seasonal Models and Decomposition<a class="headerlink" href="#4-seasonal-models-and-decomposition" title="Permanent link">¶</a></h3>
+<p>In the classical decomposition model, a series is expressed as:<br>
+$<span class="arithmatex">\(Y_{t} = m_{t} + s_{t} + S_{t}\)</span>$<br>
+* <span class="arithmatex">\(m_{t}:\)</span> Trend component.<br>
+* <span class="arithmatex">\(s_{t}:\)</span> Seasonal component with period <span class="arithmatex">\(d\)</span>.<br>
+* <span class="arithmatex">\(S_{t}:\)</span> Stationary process (noise).</p>
+<div class="admonition tip">
+<p class="admonition-title">Transformation Rules</p>
 <ul>
-<li>It is not stationary because mean is time dependent.</li>
+<li><strong>Lag <span class="arithmatex">\(d\)</span> difference (<span class="arithmatex">\(\nabla_d\)</span>):</strong> Removes seasonality of period <span class="arithmatex">\(d\)</span>.</li>
+<li><strong>Lag 1 difference (<span class="arithmatex">\(\nabla\)</span>):</strong> Applied multiple times, it removes the trend aspect of the series.</li>
 </ul>
-<div class="arithmatex">\[
-\nabla Y_{t} = bt + S_{t} - (b(t-1) + S_{t-1}) = S_{t} + b - S_{t-1}
-\]</div>
-<p>which is now stationary.</p>
-<h3 id="example-2-quadratic-trend">Example 2: Quadratic Trend<a class="headerlink" href="#example-2-quadratic-trend" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Y_{t} = bt^{2} + S_{t}
-\]</div>
-<div class="arithmatex">\[
-\nabla Y_{t} = bt^{2} + S_{t} - (b(t-1)^{2} + S_{t-1})
-\]</div>
-<ul>
-<li>The trend is strong, one differencing is not enough.</li>
-</ul>
-<div class="arithmatex">\[
-W_{t} = \nabla^{2}Y_{t} = Y_{t} - 2Y_{t-1} + Y_{t-2}
-\]</div>
-<p>which then eventually becomes</p>
-<div class="arithmatex">\[
-W_{t} = 2b + S_{t} - 2S_{t-1} + S_{t-2}
-\]</div>
-<p>which is now stationary.</p>
-<h3 id="random-walk-model">Random Walk Model<a class="headerlink" href="#random-walk-model" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[
-Y_{t} = Y_{t-1} + e_{t}
-\]</div>
-<p>Let's look at it as an <span class="arithmatex">\(AR(1)\)</span> model, thus we will get </p>
-<div class="arithmatex">\[
-Y_{t} = c + \phi_{1} Y_{t-1} + e_{t}
-\]</div>
-<ul>
-<li>here, <span class="arithmatex">\(c=0\)</span> and <span class="arithmatex">\(\phi_{1} = 1\)</span></li>
-<li>But for an <span class="arithmatex">\(AR(1)\)</span> process to be stationary, we need <span class="arithmatex">\(\phi_{1} &lt; 1\)</span> which is not the case here. Thus, this (random walk) model is non-stationary</li>
-</ul>
-<h3 id="seasonal-models">Seasonal Models<a class="headerlink" href="#seasonal-models" title="Permanent link">¶</a></h3>
-<p>Classical decomposition model:</p>
-<div class="arithmatex">\[
-Y_{t} = m_{t} + s_{t} + S_{t}
-\]</div>
-<p>where,<br>
-- <span class="arithmatex">\(m_{t}:\)</span> trend component<br>
-- <span class="arithmatex">\(s_{t} :\)</span>  seasonal component with period <span class="arithmatex">\(d\)</span><br>
-- <span class="arithmatex">\(S_{t}:\)</span> stationary process</p>
-<blockquote>
-<ul>
-<li>Lag <span class="arithmatex">\(d\)</span> difference removes seasonality of period <span class="arithmatex">\(d\)</span></li>
-<li>Lag 1 difference (multiple times) remove the trend aspect</li>
-</ul>
-</blockquote>
-<h3 id="arimapdq-process"><span class="arithmatex">\(ARIMA(p,d,q)\)</span> Process<a class="headerlink" href="#arimapdq-process" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>ARIMA if <span class="arithmatex">\(W_{t} = \nabla^d Y_{t} = (1-B)^d Y_{t}\)</span>, produced by differencing <span class="arithmatex">\(Y_{t}\)</span> 'd' times, is a stationary <span class="arithmatex">\(ARMA(p,q)\)</span> process.</p>
-</blockquote>
+</div>
+<hr>
+<h3 id="5-the-arimapdq-process">5. The <span class="arithmatex">\(ARIMA(p,d,q)\)</span> Process<a class="headerlink" href="#5-the-arimapdq-process" title="Permanent link">¶</a></h3>
+<p>The <strong>AutoRegressive Integrated Moving Average (<abbr title="AutoRegressive Integrated Moving Average">ARIMA</abbr>)</strong> model is used when a series becomes stationary after being differenced <span class="arithmatex">\(d\)</span> times.</p>
+<p><strong>Definition:</strong><br>
+If <span class="arithmatex">\(W_{t} = \nabla^d Y_{t} = (1-B)^d Y_{t}\)</span> is a stationary <span class="arithmatex">\(ARMA(p,q)\)</span> process, then the original series <span class="arithmatex">\(Y_t\)</span> is an <span class="arithmatex">\(ARIMA(p,d,q)\)</span> process.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/2026/01/L11__Non-stationary%20Time%20Series-1768971841710.webp" data-desc-position="bottom"><img alt="L11__Non-stationary Time Series-1768971841710.webp" src="../../../../assets/images/2026/01/L11__Non-stationary%20Time%20Series-1768971841710.webp"></a></p>
 <ul>
-<li>ARIMA(1,1,1) with <span class="arithmatex">\(\phi_{1} = 0.7, \theta_{1} = 0.2\)</span></li>
+<li><strong>p:</strong> Order of the Autoregressive part.</li>
+<li><strong>d:</strong> Degree of differencing involved.</li>
+<li><strong>q:</strong> Order of the Moving Average part.</li>
 </ul>
+<p><em>Example:</em> An <span class="arithmatex">\(ARIMA(1,1,1)\)</span> with <span class="arithmatex">\(\phi_{1} = 0.7\)</span> and <span class="arithmatex">\(\theta_{1} = 0.2\)</span> implies the first difference of the data follows an <span class="arithmatex">\(ARMA(1,1)\)</span> structure.</p>
+<hr>
 
 
 
@@ -12900,7 +12882,7 @@ Y_{t} = m_{t} + s_{t} + S_{t}
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L9__ACF%20and%20PACF%20for%20Some%20Time%20Series%20Processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ACF &amp;amp; PACF for some TS processes">
+          <a href="../L9__ACF%20and%20PACF%20for%20Some%20Time%20Series%20Processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ACF &amp;amp; PACF for Specific TS Processes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12910,20 +12892,20 @@ Y_{t} = m_{t} + s_{t} + S_{t}
                 Previous
               </span>
               <div class="md-ellipsis">
-                ACF &amp; PACF for some TS processes
+                ACF &amp; PACF for Specific TS Processes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../L12__Seasonality%20and%20its%20Features/" class="md-footer__link md-footer__link--next" aria-label="Next: Seasonality &amp;amp; its Features">
+          <a href="../L12__Seasonality%20and%20its%20Features/" class="md-footer__link md-footer__link--next" aria-label="Next: Seasonality &amp;amp; Its Features">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Seasonality &amp; its Features
+                Seasonality &amp; Its Features
               </div>
             </div>
             <div class="md-footer__button md-icon">

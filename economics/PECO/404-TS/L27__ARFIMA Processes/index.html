@@ -8535,7 +8535,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8563,7 +8563,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8591,7 +8591,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8719,7 +8719,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8747,7 +8747,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8803,7 +8803,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -8931,7 +8931,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -8959,7 +8959,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -8987,7 +8987,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9227,7 +9227,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9650,10 +9650,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#fractionally-integrated-noise" class="md-nav__link">
+  <a href="#1-beyond-arima-the-need-for-fractional-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fractionally Integrated Noise
+        1. Beyond ARIMA: The Need for Fractional Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fractionally-integrated-noise-arfima0-d-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fractionally Integrated Noise: \(ARFIMA(0, d, 0)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-role-of-the-fractional-parameter-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Role of the Fractional Parameter \(d\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-general-arfima-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. General ARFIMA Structure
       
     </span>
   </a>
@@ -9839,7 +9872,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10927,7 +10960,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12745,51 +12778,72 @@
 
 
 <!-- Markdown content -->
-<h1 id="arfima-processes"><abbr title="Autoregressive Fractionally Integrated Moving Average Process">ARFIMA</abbr> Processes<a class="headerlink" href="#arfima-processes" title="Permanent link">¶</a></h1>
-<blockquote>
-<p>Autoregressive Fractionally Integrated Moving Average Process</p>
-</blockquote>
+<h1 id="arfima-processes"><abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr> Processes<a class="headerlink" href="#arfima-processes" title="Permanent link">¶</a></h1>
+<p>The <strong>Autoregressive Fractionally Integrated Moving Average (<abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr>)</strong> process is a generalized version of the ARIMA model. It is specifically designed to model time <em>series that exhibit long-range dependence</em>, where the <em>effects of shocks decay much more slowly</em> than in standard ARMA models.</p>
+<h3 id="1-beyond-arima-the-need-for-fractional-integration">1. Beyond ARIMA: The Need for Fractional Integration<a class="headerlink" href="#1-beyond-arima-the-need-for-fractional-integration" title="Permanent link">¶</a></h3>
+<p>Standard <a href="../L11__Non-stationary%20Time%20Series/">L11__Non-stationary Time Series</a> models (ARIMA) require a finite integer number of differences (usually <span class="arithmatex">\(d=1\)</span> or <span class="arithmatex">\(d=2\)</span>) to achieve stationarity. However, they struggle to capture <strong>persistence</strong>.</p>
 <ul>
-<li>Persistence and Anti-persistence (mean-reverting) processes</li>
-<li>Integrated ARMA models reduce to stationary after short range dependence <em>after a finite number of differences</em>.</li>
-<li>ARMA cannot capture long term dependence (persistence)</li>
-<li>Whereas <abbr title="Autoregressive Fractionally Integrated Moving Average Process">ARFIMA</abbr> ACF decays slowly.</li>
+<li><strong>ARMA/ARIMA:</strong> Features short-memory where the <abbr title="Autocorrelation Function">ACF</abbr> drops off exponentially.</li>
+<li><strong><abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr>:</strong> Features long-memory where the <abbr title="Autocorrelation Function">ACF</abbr> decays hyperbolically (slowly), allowing the model to "remember" shocks from the distant past.</li>
 </ul>
-<h3 id="fractionally-integrated-noise">Fractionally Integrated Noise<a class="headerlink" href="#fractionally-integrated-noise" title="Permanent link">¶</a></h3>
-<p><span class="arithmatex">\(ARFIMA(0,d,,0)\)</span> process.</p>
-<p><span class="arithmatex">\(Y_{t}\)</span> is fractionally integrated noise or fractionally integrated ARMA process of the order <span class="arithmatex">\((0,d,0)\)</span> with <span class="arithmatex">\(-0.5 \lt d \lt 0.5\)</span>.</p>
-<p><span class="arithmatex">\(y_{t}\)</span> is a stationary solution of <span class="arithmatex">\((1-B)^dy_{t} = e_{t}\)</span> where <span class="arithmatex">\(e_{t}\)</span> is white noise (with variance <span class="arithmatex">\(\sigma_{e}^{2}\)</span>)</p>
-<p>Thus,</p>
-<div class="arithmatex">\[
-y_{t} = (1-B)^{-d} e_{t}
-\]</div>
-<p>What values of <span class="arithmatex">\(d\)</span> will it have a long lasting impact?</p>
-<p>Redefine,</p>
-<div class="arithmatex">\[
-(1-B)^{-d} = \sum_{j=0}^\infty \psi_{j}B^j
-\]</div>
-<p>where, <span class="arithmatex">\(\psi_{j} = \dfrac{\Gamma(j+d)}{\Gamma(j+1)\Gamma(d)}\)</span>. And, <span class="arithmatex">\(\Gamma(\alpha) = (\alpha-1)!\)</span></p>
-<p>If <span class="arithmatex">\((-0.5 \lt d \lt 0.5)\)</span>,</p>
-<div class="arithmatex">\[
-y_{t} = \sum_{j=0}^\infty \psi_{j} e_{t-j}
-\]</div>
-<blockquote>
-<p>Use Stirling's approximation for <span class="arithmatex">\(\Gamma(x)\)</span> as <span class="arithmatex">\(x\to\infty\)</span></p>
-</blockquote>
-<ul>
-<li>If <span class="arithmatex">\(d \sim 0.5\)</span>, <span class="arithmatex">\(\rho_{k}\)</span> decays very slowly → Long Memory</li>
-<li>If <span class="arithmatex">\(d \sim -0.5\)</span>, <span class="arithmatex">\(\rho_{k}\)</span> decays rapidly → short memory</li>
-<li><span class="arithmatex">\(d\lt 0\)</span> <span class="arithmatex">\(\implies\)</span> Process is an intermediate memory process</li>
-<li><span class="arithmatex">\(0 \lt d\lt 0.5\)</span> <span class="arithmatex">\(\implies\)</span> Process is an long memory process</li>
-</ul>
-<p><abbr title="Autoregressive Fractionally Integrated Moving Average Process">ARFIMA</abbr> model structure</p>
-<div class="arithmatex">\[
-(1-B)^d Y_{t} = \phi(B)Y_{t} + \theta(B)e_{t}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(d=0\)</span> <span class="arithmatex">\(\implies\)</span>  ARMA model</li>
-<li><span class="arithmatex">\(d=1\)</span> <span class="arithmatex">\(\implies\)</span>  ARIMA model</li>
-</ul>
+<hr>
+<h3 id="2-fractionally-integrated-noise-arfima0-d-0">2. Fractionally Integrated Noise: <span class="arithmatex">\(ARFIMA(0, d, 0)\)</span><a class="headerlink" href="#2-fractionally-integrated-noise-arfima0-d-0" title="Permanent link">¶</a></h3>
+<p>A series <span class="arithmatex">\(Y_{t}\)</span> is considered fractionally integrated noise if it is a stationary solution to:<br>
+$<span class="arithmatex">\((1-B)^d Y_{t} = e_{t}\)</span>$<br>
+Where <span class="arithmatex">\(-0.5 &lt; d &lt; 0.5\)</span> and <span class="arithmatex">\(e_{t}\)</span> is white noise with variance <span class="arithmatex">\(\sigma_{e}^{2}\)</span>. </p>
+<h4 id="infinite-moving-average-representation">Infinite Moving Average Representation<a class="headerlink" href="#infinite-moving-average-representation" title="Permanent link">¶</a></h4>
+<p>We can express the process as an infinite sum of past shocks:<br>
+$<span class="arithmatex">\(Y_{t} = (1-B)^{-d} e_{t} = \sum_{j=0}^\infty \psi_{j} e_{t-j}\)</span>$<br>
+The weights <span class="arithmatex">\(\psi_{j}\)</span> are determined using the Gamma function <span class="arithmatex">\(\Gamma\)</span>:<br>
+$<span class="arithmatex">\(\psi_{j} = \dfrac{\Gamma(j+d)}{\Gamma(j+1)\Gamma(d)}\)</span>$</p>
+<hr>
+<h3 id="3-the-role-of-the-fractional-parameter-d">3. The Role of the Fractional Parameter <span class="arithmatex">\(d\)</span><a class="headerlink" href="#3-the-role-of-the-fractional-parameter-d" title="Permanent link">¶</a></h3>
+<p>The value of <span class="arithmatex">\(d\)</span> determines the "memory" and stationarity of the process:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Value of <span class="arithmatex">\(d\)</span></th>
+<th style="text-align: left;">Process Characteristic</th>
+<th style="text-align: left;">Memory Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(0 &lt; d &lt; 0.5\)</span></strong></td>
+<td style="text-align: left;"><strong>Persistent / Long Memory</strong></td>
+<td style="text-align: left;">Shocks decay very slowly (hyperbolically).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(d = 0\)</span></strong></td>
+<td style="text-align: left;"><strong>ARMA Process</strong></td>
+<td style="text-align: left;">Short memory; standard stationarity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(-0.5 &lt; d &lt; 0\)</span></strong></td>
+<td style="text-align: left;"><strong>Anti-persistent / Intermediate</strong></td>
+<td style="text-align: left;">Mean-reverting; negative autocorrelations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(d \geq 0.5\)</span></strong></td>
+<td style="text-align: left;"><strong>Non-stationary</strong></td>
+<td style="text-align: left;">Variance increases with time.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(d = 1\)</span></strong></td>
+<td style="text-align: left;"><strong>ARIMA Process</strong></td>
+<td style="text-align: left;">Unit root process (Random Walk).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Stirling's Approximation</p>
+<p>Using Stirling’s approximation (<span class="arithmatex">\(\Gamma(x) \approx \sqrt{2\pi} x^{x-1/2} e^{-x}\)</span> as <span class="arithmatex">\(x \to \infty\)</span>), we can show that for large lags <span class="arithmatex">\(k\)</span>, the autocorrelation <span class="arithmatex">\(\rho_{k}\)</span> is proportional to <span class="arithmatex">\(k^{2d-1}\)</span>. This power-law decay is exactly what defines a long-memory process.</p>
+</div>
+<hr>
+<h3 id="4-general-arfima-structure">4. General <abbr title="Autoregressive Fractionally Integrated Moving Average">ARFIMA</abbr> Structure<a class="headerlink" href="#4-general-arfima-structure" title="Permanent link">¶</a></h3>
+<p>The complete <span class="arithmatex">\(ARFIMA(p, d, q)\)</span> model combines fractional integration with standard autoregressive and moving average components to capture both short-term dynamics and long-term persistence simultaneously:<br>
+$<span class="arithmatex">\((1-B)^d \Phi(B) Y_{t} = \Theta(B) e_{t}\)</span>$</p>
+<hr>
 
 
 

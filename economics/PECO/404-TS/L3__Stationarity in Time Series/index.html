@@ -24,7 +24,7 @@
     
     
       
-        <title>Stationarity in TS - Hursh Gupta</title>
+        <title>Stationarity in Time Series - Hursh Gupta</title>
       
     
     
@@ -267,7 +267,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stationarity-in-ts" class="md-skip">
+        <a href="#stationarity-in-time-series" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stationarity in TS
+              Stationarity in Time Series
             
           </span>
         </div>
@@ -8537,7 +8537,7 @@
   <span class="md-ellipsis">
     
   
-    Examples of TS Data
+    Examples and Goals of Time Series Data
   
 
     
@@ -8574,7 +8574,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8592,7 +8592,7 @@
   <span class="md-ellipsis">
     
   
-    Stationarity in TS
+    Stationarity in Time Series
   
 
     
@@ -8618,10 +8618,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#notation" class="md-nav__link">
+  <a href="#1-fundamental-notation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notation
+        1. Fundamental Notation
       
     </span>
   </a>
@@ -8629,10 +8629,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stationarity" class="md-nav__link">
+  <a href="#2-the-concept-of-stationarity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stationarity
+        2. The Concept of Stationarity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-strict-strong-stationarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Strict (Strong) Stationarity
       
     </span>
   </a>
@@ -8662,7 +8673,7 @@
   <span class="md-ellipsis">
     
   
-    Weak Vs Strong Stationarity
+    Weak vs. Strong Stationarity
   
 
     
@@ -8790,7 +8801,7 @@
   <span class="md-ellipsis">
     
   
-    TS Decomposition
+    Time Series Decomposition
   
 
     
@@ -8818,7 +8829,7 @@
   <span class="md-ellipsis">
     
   
-    Basic TS Processes
+    Basic Time Series Processes
   
 
     
@@ -8874,7 +8885,7 @@
   <span class="md-ellipsis">
     
   
-    ACF &amp; PACF for some TS processes
+    ACF &amp; PACF for Specific TS Processes
   
 
     
@@ -9002,7 +9013,7 @@
   <span class="md-ellipsis">
     
   
-    Non-stationary TS
+    Non-stationary Time Series
   
 
     
@@ -9030,7 +9041,7 @@
   <span class="md-ellipsis">
     
   
-    Seasonality &amp; its Features
+    Seasonality &amp; Its Features
   
 
     
@@ -9058,7 +9069,7 @@
   <span class="md-ellipsis">
     
   
-    Cyclicity and test for Stationarity
+    Cyclicity and Tests for Stationarity
   
 
     
@@ -9298,7 +9309,7 @@
   <span class="md-ellipsis">
     
   
-    L19  Diagnostic Checking   2
+    Detecting Heteroscedasticity
   
 
     
@@ -9850,7 +9861,7 @@
   <span class="md-ellipsis">
     
   
-    Multivariate TS Analysis
+    Multivariate Time Series Analysis
   
 
     
@@ -10938,7 +10949,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Regression in TS
+    Linear Regression &amp; Classical ML in TS
   
 
     
@@ -12756,76 +12767,46 @@
 
 
 <!-- Markdown content -->
-<h1 id="stationarity-in-ts">Stationarity in TS<a class="headerlink" href="#stationarity-in-ts" title="Permanent link">¶</a></h1>
-<h3 id="notation">Notation<a class="headerlink" href="#notation" title="Permanent link">¶</a></h3>
+<h1 id="stationarity-in-time-series">Stationarity in Time Series<a class="headerlink" href="#stationarity-in-time-series" title="Permanent link">¶</a></h1>
+<h3 id="1-fundamental-notation">1. Fundamental Notation<a class="headerlink" href="#1-fundamental-notation" title="Permanent link">¶</a></h3>
+<p>To analyze the behavior of a time series, we define its moments (mean, variance, and covariance) as functions of time:</p>
 <ul>
-<li>Mean function: <span class="arithmatex">\(\mu_{t} = E[Y_{t}]\)</span> (also includes the time point, <span class="arithmatex">\(t\)</span>)<br>
-    &gt; At a particular time point <span class="arithmatex">\(t\)</span> what is the expected value of the variable?</li>
-<li>Variance Function<ul>
-<li><span class="arithmatex">\(\sigma_{t}^{2} =\gamma_{0}\)</span></li>
-<li>Assumption: Variance should be finite <span class="arithmatex">\(\lt \infty\)</span></li>
+<li><strong>Mean Function:</strong> <span class="arithmatex">\(\mu_{t} = E[Y_{t}]\)</span>. This represents the expected value of the variable at a specific time point <span class="arithmatex">\(t\)</span>.</li>
+<li><strong>Variance Function:</strong> <span class="arithmatex">\(\sigma_{t}^{2} = \gamma_{t,t}\)</span>. We typically assume that the variance is finite (<span class="arithmatex">\(\sigma_{t}^{2} &lt; \infty\)</span>).</li>
+<li><strong>Auto-covariance Function:</strong> <span class="arithmatex">\(\gamma_{t,s} = Cov(Y_{t}, Y_{s})\)</span>. This measures the linear dependence between values at two different time points, <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(s\)</span>. <br>
+    &gt; <strong>Note:</strong> The term "Auto" signifies that the covariance is calculated between elements of the <em>same</em> series, unlike standard statistics which usually looks at two different variables (e.g., <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>).</li>
+<li><strong>Auto-correlation Function (ACF):</strong> <span class="arithmatex">\(\rho_{t,s} = Corr(Y_{t}, Y_{s}) = \dfrac{\gamma_{t,s}}{\sigma_{t}\sigma_{s}}\)</span>. This normalizes the auto-covariance to a range between -1 and 1.</li>
 </ul>
-</li>
-<li>Auto-covariance Function<ul>
-<li><span class="arithmatex">\(\gamma_{t,s} = Cov(Y_{t},Y_{s})\)</span>: Covariance between value at two time points <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(s\)</span>.</li>
-<li>Auto → comes from the same series (vs two different variables <span class="arithmatex">\(X,Y\)</span> in rest of statistics… here both the variables come from the same time series)</li>
-</ul>
-</li>
-<li>Auto-correlation Function ^0a3745<ul>
-<li><span class="arithmatex">\(\rho_{t,s}=C\cup(Y_{t},Y_{s}) = \dfrac{\gamma_{t,s}}{\sigma_{t}\sigma _{s}}\)</span></li>
-</ul>
-</li>
-</ul>
-<h3 id="stationarity">Stationarity<a class="headerlink" href="#stationarity" title="Permanent link">¶</a></h3>
+<h3 id="2-the-concept-of-stationarity">2. The Concept of Stationarity<a class="headerlink" href="#2-the-concept-of-stationarity" title="Permanent link">¶</a></h3>
+<p>In time series analysis, we deal with joint probability distributions. For a sequence <span class="arithmatex">\(X_{1}, X_{2}, \dots, X_{n}\)</span>:<br>
+* <span class="arithmatex">\(F_{X_{1}}(x_{1})\)</span> represents the marginal Cumulative Distribution Function (CDF).<br>
+* <span class="arithmatex">\(f_{X_{1}}(x_{1})\)</span> represents the marginal Probability Density Function (PDF).<br>
+* <strong>Joint PDF:</strong> Because time series observations are <strong>not independent</strong>, the joint PDF <span class="arithmatex">\(f_{Y_{t}, Y_{s}}(y_{t}, y_{s})\)</span> is generally not equal to the product of their marginals (<span class="arithmatex">\(f_{Y_{t}}(y_{t}) \times f_{Y_{s}}(y_{s})\)</span>).</p>
+<p><strong>The Problem:</strong> Handling joint PDFs is difficult because the distribution (or its moments) can change at every time point <span class="arithmatex">\(t\)</span>, making it nearly impossible to estimate parameters from a single realization of the data.</p>
+<p><strong>The Solution:</strong> We introduce <strong>Stationarity</strong>, the most common assumption in time series analysis. It assumes the process is in a state of "<em>statistical equilibrium</em>," meaning the <em>underlying probability laws governing the process do not change over time</em>.</p>
+<h3 id="3-strict-strong-stationarity">3. Strict (Strong) Stationarity<a class="headerlink" href="#3-strict-strong-stationarity" title="Permanent link">¶</a></h3>
+<p>A stochastic process <span class="arithmatex">\(Y(w, t)\)</span> is considered strictly stationary if its joint distribution remains invariant under a shift in time.</p>
 <ul>
-<li>
-<p>Joint PDF of a Time series</p>
-<ul>
-<li><span class="arithmatex">\(F_{X_{1}}(x_{1})\)</span> = marginal CDF</li>
-<li><span class="arithmatex">\(f_{X_{1}}(x_{1})\)</span> = marginal PDF</li>
-<li>Joint CDF/PDF for multiple variables <span class="arithmatex">\(X_{1},X_{2},\dots,X_{n}\)</span></li>
-<li><span class="arithmatex">\(f_{Y_{t},Y_{s}}(y_{t},y_{s}) \neq f_{Y_{t}(y_{t})}\times f_{Y_{s}}(y_{s})\)</span> because the variables are NOT independent!</li>
+<li><strong>First-order Stationarity in Distribution:</strong> The marginal distribution stays the same regardless of the time shift <span class="arithmatex">\(k\)</span>:<br>
+    $<span class="arithmatex">\(F_{Y_{t_{1}}}(y_{1}) = F_{Y_{t_{1}+k}}(y_{1})\)</span>$</li>
+<li><strong>Second-order Stationarity in Distribution:</strong> The joint distribution of any two observations depends only on the lag between them, not the absolute time:<br>
+    $<span class="arithmatex">\(F_{Y_{t_{1}}, Y_{t_{2}}}(y_{1}, y_{2}) = F_{Y_{t_{1}+k}, Y_{t_{2}+k}}(y_{1}, y_{2})\)</span>$</li>
+<li><strong><span class="arithmatex">\(n\)</span>-th Order (Strict) Stationarity:</strong> For any set of time points <span class="arithmatex">\(\{t_{1}, t_{2}, \dots, t_{n}\}\)</span>, the joint CDF remains identical when the entire set is shifted by any value <span class="arithmatex">\(k\)</span>:<br>
+    $<span class="arithmatex">\(F_{Y_{t_{1}}, \dots, Y_{t_{n}}}(y_{1}, \dots, y_{n}) = F_{Y_{t_{1}+k}, \dots, Y_{t_{n}+k}}(y_{1}, \dots, y_{n})\)</span>$</li>
 </ul>
+<p>In essence, <strong>Strong Stationarity</strong> implies that the entire <strong>joint distribution</strong> remains unchanged even if the time origin (the timestamp) is shifted.</p>
+<hr>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p><abbr title="Independent and Identical">IID</abbr> means Identical observations (random variable) come from some distribution and Independent observations (doesn't depend on observations).&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
-<li>
-<p>Problems in Handling Joint PDF</p>
-<ul>
-<li>Putting a single distribution on the entire structure is difficult (since distributions (or moments) may change for all <span class="arithmatex">\(t\)</span>)</li>
-<li>A simplification to solve this problem → STATIONARITY</li>
-</ul>
+<li id="fn:2">
+<p>Trend = upward or downward movement of an entity.&nbsp;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
-<li>Stationarity<ul>
-<li>Most common assumption in TS analysis</li>
-<li>Probability laws do not change with time (?)</li>
-<li>Process is in Statistical equilibrium</li>
-</ul>
-</li>
-<li>Types of Stationarity<ul>
-<li>Strict (or Strong)<ul>
-<li>Observed sample: <span class="arithmatex">\(\{ Y_{t_{1}}, Y_{t_{2}},\dots, Y_{t_{n}} \}\)</span></li>
-<li>Stochastic process: <span class="arithmatex">\(Y(w,t)\)</span></li>
-<li>We defined the joint CDF <span class="arithmatex">\(F_{Y_{t_{1}},Y_{t_{2}},\dots, Y_{t_{n}}}\)</span></li>
-<li>First order stationary in distribution<ul>
-<li><span class="arithmatex">\(F_{Y_{t_{1}}}(y_{1}) = F_{Y_{t_{1}+k}}(y_{1})\)</span> for any <span class="arithmatex">\(t_{1}\)</span> and <span class="arithmatex">\(k\)</span></li>
-</ul>
-</li>
-<li>Second order stationary<ul>
-<li><span class="arithmatex">\(F_{Y_{t_{1}},Y_{t_{2}}}(y_{1},y_{2}) = F_{Y_{t_{1}+k},Y_{t_{2}+k}}(y_{1},y_{2})\)</span></li>
-<li>for any <span class="arithmatex">\(t_{1},t_{2}\)</span> and <span class="arithmatex">\(k\)</span></li>
-</ul>
-</li>
-<li><span class="arithmatex">\(n\)</span>-th order stationary<ul>
-<li>for any <span class="arithmatex">\(t_{1},\dots, t_{n}\)</span></li>
-<li>should hold true if you shift the time origin by <span class="arithmatex">\(k\)</span></li>
-</ul>
-</li>
-<li>For any of the above, it should remain consistent if the time origin is shifted.</li>
-<li>STRONG → JOINT DISTRIBUTION stays the same even if the time origin (time stamp) is shifted by <span class="arithmatex">\(k\)</span>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+</ol>
+</div>
 
 
 
@@ -12861,7 +12842,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../L2__Examples%20of%20Time%20Series%20Data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples of TS Data">
+          <a href="../L2__Examples%20of%20Time%20Series%20Data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples and Goals of Time Series Data">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg>
@@ -12871,20 +12852,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Examples of TS Data
+                Examples and Goals of Time Series Data
               </div>
             </div>
           </a>
         
         
           
-          <a href="../L4__Weak%20vs%20strong%20stationarity/" class="md-footer__link md-footer__link--next" aria-label="Next: Weak Vs Strong Stationarity">
+          <a href="../L4__Weak%20vs%20strong%20stationarity/" class="md-footer__link md-footer__link--next" aria-label="Next: Weak vs. Strong Stationarity">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Weak Vs Strong Stationarity
+                Weak vs. Strong Stationarity
               </div>
             </div>
             <div class="md-footer__button md-icon">
